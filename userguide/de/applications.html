@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2017, Haiku. All rights reserved.
+ * Copyright 2008-2021, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -56,9 +56,9 @@
 <li><a href="../jp/applications.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="workshop-filetypes+attributes.html">Workshop</a> 
+ «  <a href="tracker.html">Tracker</a> 
 ::  <a href="contents.html" class="uplink">Inhalt</a> 
-::  <a href="desktop-applets.html"><acronym title="Desktop applets">Desktop-Apps</acronym></a>  »
+::  <a href="workspaces.html"><acronym title="Arbeitsflächen">Workspaces</acronym></a>  »
 </span></div>
 </div>
 
@@ -67,13 +67,13 @@
 
 <h1>Anwendungen</h1>
 
-<p>Vor der Beschreibung all der von Haiku mitgelieferten Anwendungen, eine Erklärung wie Programme installiert und deinstalliert werden. Am einfachsten geht das suchen, installieren, updaten und deinstallieren von Anwendungen mit Haikus Paketmanagement. Da Haiku allerdings auch weitgehend binär- und source-kompatibel zu seinem Vorfahren BeOS ist, stößt man vielleicht ab und zu auch noch auf alte Archive (.zip und .pkg), die immer noch installiert werden können.</p>
-<div class="box-info">Nachfolgend ist immer die <tt>/system/</tt> Hierarchie beschrieben. Falls Pakete nur für einen einzigen Benutzern installiert werden sollen (sobald Haiku mehrbenutzerfähig wird), muss die entsprechend gespiegelte Hierarchie i Home-Ordner benutzt werden: <tt>~/config/</tt>. Für mehr Infos, siehe <a href="filesystem-layout.html">Dateisystem Layout</a>.</div>
+<p>Vor der Beschreibung all der von Haiku mitgelieferten Anwendungen, eine Erklärung wie Programme installiert und deinstalliert werden. Am einfachsten geht suchen, installieren, updaten und deinstallieren von Anwendungen mit Haikus Paketmanagement. Da Haiku allerdings auch weitgehend binär- und source-kompatibel zu seinem Vorfahren BeOS ist, stößt man vielleicht ab und zu auch noch auf alte Archive (.zip und .pkg), die immer noch installiert werden können.</p>
+<div class="box-info">Nachfolgend ist immer die <tt>/system/</tt> Hierarchie beschrieben. Falls Pakete nur für einen einzigen Benutzern installiert werden sollen (sobald Haiku mehrbenutzerfähig wird), muss die entsprechend gespiegelte Hierarchie im Home-Ordner benutzt werden: <tt>~/config/</tt>. Für mehr Infos, siehe <a href="filesystem-layout.html">Dateisystem Layout</a>.</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="hpkg" name="hpkg">Haiku Pakete (.hpkg)</a></h2>
-<p>Am einfachsten benutzt man <a href="applications/haikudepot.html">HaikuDepot</a> um ein Paket zu finden, installieren und zu deinstallieren. Wurde ein Paket von irgendwo anders heruntergeladen — vielleicht weil es (noch) nicht in einem öffentlichen Repository ist — öffnet man es einfach per Doppelklick in HaikuDepot und installiert es von dort.</p>
+<p>Am einfachsten benutzt man <a href="applications/haikudepot.html">HaikuDepot</a> um ein Paket zu finden, installieren und zu deinstallieren. Wurde ein Paket von irgendwo anders heruntergeladen — vielleicht weil es (noch) nicht in einem öffentlichen Repository ist — öffnet man es einfach per Doppelklick in HaikuDepot und installiert es von dort.</p>
 <p>Die neu installierte Anwendung taucht in <tt>/system/apps/</tt> auf oder, im Falle eines Konsolen-Programms, in <tt>/system/bin/</tt>. Alle anderen Dateien, die das Programm benötigt (Bibliotheken, Daten, Add-Ons etc.) erscheinen automatisch an den richtigen Orten im Dateisystem.</p>
 <p>In den Kapiteln <a href="deskbar.html">Deskbar</a> und <a href="desktop-applets/launchbox.html">LaunchBox</a> ist beschrieben wie man Verknüpfungen zu den neu installierten Anwendung herstellt.</p>
 <div class="box-info">Obwohl man eine .hpkg Datei wie jedes andere Archiv entpacken kann, macht das das Paketmanagement beim Installieren eines Pakets gerade nicht. Es sieht nur so aus, als würde das darunterliegende Dateisystem die Dateien in die entsprechenden Ordner verteilen. In Wahrheit findet eben kein physisches Herumverteilen statt, weswegen das Installieren/Deinstalliern auch so schnell und sauber funktionert.</div>
@@ -90,7 +90,7 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list-of-apps" name="list-of-apps">Haikus Anwendungen</a></h2>
-<p>Mit Haiku werden einige meist kleine, aber nützliche Anwendungen geliefert. Sie liegen alle in <span class="path">/boot/system/apps/</span>. Anwendungen, die normalerweise nicht per Doppelklick auf eine Datendatei gestartet werden (wie z.B. <acronym title="ShowImage">Bildbetrachter</acronym> für Bilddateien), befinden sich im Menü <span class="menu"><acronym title="Applications">Anwendungen</acronym></span> der Deskbar.</p>
+<p>Mit Haiku werden einige meist kleine, aber nützliche Anwendungen geliefert. Sie liegen alle in <span class="path">/boot/system/apps/</span>. Anwendungen, die normalerweise nicht per Doppelklick auf eine Datendatei gestartet werden (wie z.B. ShowImage für Bilddateien), befinden sich im Menü <span class="menu"><acronym title="Applications">Anwendungen</acronym></span> der Deskbar.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td style="width:24px;"><img src="../images/apps-images/activitymonitor-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/activitymonitor.html">ActivityMonitor</a></td><td style="width:10px;"> </td>
 		<td valign="top">Ein Programm zur Anzeige unterschiedlicher Systemressourcen wie CPU-Auslastung oder Speicherverbrauch.</td></tr>
@@ -185,9 +185,9 @@
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="workshop-filetypes+attributes.html">Workshop</a> 
+ «  <a href="tracker.html">Tracker</a> 
 ::  <a href="contents.html" class="uplink">Inhalt</a> 
-::  <a href="desktop-applets.html"><acronym title="Desktop applets">Desktop-Apps</acronym></a>  »
+::  <a href="workspaces.html"><acronym title="Arbeitsflächen">Workspaces</acronym></a>  »
 </span></div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -55,10 +55,9 @@
 <li><a href="../uk/bootloader.html">Українська</a></li>
 </ul>
 <span>
-    <!-- «  <a href="installation.html">Installing Haiku</a> 
-::  -->
-    <a href="contents.html" class="uplink">目次</a> 
-::  <a href="filesystem-layout.html">ファイルシステムレイアウト</a>  »
+ «  <a href="bash-scripting.html">Bash とスクリプト処理</a> 
+::  <a href="contents.html" class="uplink">目次</a> 
+<!-- ::  <a href="filesystem-layout.html">ファイルシステムレイアウト</a>  » -->
 </span></div>
 </div>
 
@@ -141,8 +140,8 @@
 <li><p><span class="menu">Use fail-safe graphics driver</span> の有効化で、VESA グラフィックへの代替によりトラブルが解決するなら、テキストファイル <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span> 内の<i>#fail_safe_video_mode true</i> 行の<tt>#</tt> を削除すると設定を永続的にできます。</p></li>
 <li><p>問題のあるドライバー、アドオンなどが、システム階層にインストールされている場合は、もう少し複雑になります。なぜなら、そこは読み取り専用だからです。ここで、<span class="menu">Disable system components</span> オプションが出てきます。それにより、システム階層全体を検索して、それから <span class="key">SPACE</span> または <span class="key">RETURN</span> キーでチェックすれば、状況を混乱させるコンポーネントを無効にします。<span class="key">ESC</span> はひとつ上の親ディレクトリーへ戻ります。</p>
 <p>オンラインで、<a href="http://www.haiku-os.org/blog/barrett/2013-12-15_how_permanently_blacklist_package_file">Disabling components of packages</a> という記事があります。これには、コンポーネントの無効化設定を固定する方法が説明されています。</p></li>
-<li><p><span class="menu">Select boot volume</span> の下では、Haiku の以前の "バージョン" を指定して起動できます。パッケージをアンインストール / インストールするたびに、以前の状態は保存されます。ブートローダーオプション内のリストから選択すれば、それを起動できます。<br />
-つまり、あるパッケージをインストールした後に起動時の問題が発生したら、問題が起きる前の Haiku のバージョンを起動して、問題となるパッケージをアンインストールしてください。</p></li>
+<li><p><span class="menu">Select boot volume</span> の下で、起動する Haiku の以前の "バージョン" を指定できます。パッケージをアンインストール / インストールするたびに、以前の状態は保存されます。ブートローダーオプション内に表示されるリストから選択すれば、それを起動できます。<br />
+つまり、あるパッケージをインストールした後に起動時の問題が発生したら、問題が起きる前の Haiku のバージョンを起動して、問題となるパッケージをアンインストールしてください。<a href="applications/softwareupdater.html#downgrading">ソフトウェアの更新</a>のトピックに書かれているように、永続的に特定のHaikuバージョンに戻すこともできます。</p></li>
 </ul>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -167,10 +166,9 @@
 
 <div class="nav">
 <div class="inner"><span>
-    <!-- «  <a href="installation.html">Installing Haiku</a> 
-::  -->
-    <a href="contents.html" class="uplink">目次</a> 
-::  <a href="filesystem-layout.html">ファイルシステムレイアウト</a>  »
+ «  <a href="bash-scripting.html">Bash とスクリプト処理</a> 
+::  <a href="contents.html" class="uplink">目次</a> 
+<!-- ::  <a href="filesystem-layout.html">ファイルシステムレイアウト</a>  » -->
 </span></div>
 </div>
 

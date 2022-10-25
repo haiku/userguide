@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2018, Haiku. All rights reserved.
+ * Copyright 2018-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -74,6 +74,18 @@
 <p>Nach dem Start sucht SoftwareUpdater nach aktualisierten Paketen und zeigt sie in einer Liste mit den jeweiligen neuen Versionsnummern und einer kurzen Beschreibung. Ist <span class="menu">Details anzeigen</span> aktiviert,  wird auch noch die jeweilige Paketquelle, sowie alte und neue Versionsnummer angezeigt.</p>
 <p>Mit <span class="button">Jetzt aktualisieren</span> wird der Download aller Pakete und ihre anschließende Installation gestartet.</p>
 <p>Je nachdem welche Pakete aktuslisiert wurden, kann es sein, dass Haiku neu gestartet werden muss, um den Updateprozess abzuschließen. Aktualisierte Anwendungen müssen in der Regel einfach nur neu gestartet werden, während Änderungen an Haiku selbst meist einen Neustart erfordern.</p>
+<div class="box-info"><p>Jedesmal wenn Pakete aktualisiert, installiert oder deinstalliert werden (mittels SoftwareUpdater/HaikuDepot oder im Terminal mit <tt>pkgman</tt>), wird ein neuer "state" unter <span class="path">/system/packages/administrative/</span> angelegt. Dadurch kann man von den <a href="../bootloader.html">Boot Options</a> aus einfach in einen alten "state" booten, falls mal ein installiertes/aktualisiertes Paket nicht so funktioniert wie es soll.</p>
+<p>Da diese "state" Ordner Kopien der aktualisierten/deinstallierten Pakete enthalten, kann der "administrative" Ordner mit der Zeit ordentlich anschwellen. Solange es noch keine Möglichkeit der automatischen Bereinigung gibt, empfiehlt es sich ab und an die Größe des "administrative" Ordners zu prüfen und gegebenenfalls einige alte "state" Ordner zu löschen, in die man sowieso nicht mehr booten wird.</p>
+</div>
+<h2>
+<a id="downgrading" name="downgrading">Zurück zu früheren Haiku Versionen</a></h2>
+<p>Es kommt selten vor, aber es ist möglich, dass ein Haiku Update Fehler enthält, mit denen man sich nicht bis zu deren Beseitigung abfinden will. Von den Boot Loader Optionen aus lässt sich in einen funktionierenden älteren Zustand booten, siehe <a href="../bootloader.html#troubleshooting">Boot Loader - Fehlersuche</a>. </p>
+<p>Um fest zu dieser Haiku Version ("Haiku revision = hrev") zurückzukehren, muss man die 'Haiku' Paketquelle fest auf diese 'hrev' einstellen. Die aktuelle 'hrev' findet sich im "Über Haiku" in der Deskbar. Um beispielsweise zur hrev56231 zurückzukehren, gibt man folgendes im Terminal ein:</p>
+<pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231
+pkgman full-sync</pre>
+<p>Achtung: Haiku bekommt nun keine neuen Updates mehr, man bleibt fest auf der eingestellten 'hrev'. Man sollte den festgestellten Fehler also mitteilen und wenn möglich bei dessen Beseitigung mithelfen. Wenn das geschehen ist - man kann dazu die watch the <a href="http://cgit.haiku-os.org/haiku/log/">Commit Logs</a> verfolgen -  kann man wieder zur aktuellen ("current") Paketquelle zurückkehren:</p>
+<pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/r1beta3/$(getarch)/current
+pkgman full-sync</pre>
 </div>
 </div>
 

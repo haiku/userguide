@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2018, Haiku. All rights reserved.
+ * Copyright 2018-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -74,6 +74,18 @@
 <p>Käynnistämisen jälkeen Ohjelmistopäivittäjä tarkistaa pakkausten päivitykset ja näyttää ne luettelossa, jossa on niiden uusi versio ja lyhyt kuvaus. Voit valita valikosta <span class="menu">Näytä lisää yksityiskohtia</span> sisällyttämään jokaisen pakkauksen tietovaraston nimen ja näyttämään sekä vanhan että uuden pakkausversion.</p>
 <p><span class="button">Päivitä nyt</span> käynnistää kaikkien pakkausten latauksen ja sitä seuraavan asennuksen.</p>
 <p>Päivitettävästä pakkauksesta riippuen sinun on ehkä käynnistettävä Haiku uudelleen päivitysprosessin saattamiseksi loppuun. Päivitetyt sovellukset tarvitsee tavallisesti vain käynnistää uudelleen kun taas muutokset itse Haikuun saattavat vaatia järjestelmän uudelleenkäynnistyksen, jotta muutokset astuvat voimaan.</p>
+<div class="box-info"><p>Joka kerta kun pakkauksia päivitetään, asennetaan tai poistetaan (joko Ohjelmistopäivittäjällä/HaikuVarastolla tai Pääteikkunassa komennolla <tt>pkgman</tt>), uusi "tila" tallennetaan osoitteeseen <span class="path">/system/packages/administrative/</span>. Tämä mahdollistaa käynnistämiseen kaikkiin aikaisempiin tiloihin <a href="../bootloader.html">Käynnistyvalinnoista</a>, mikä helpottaa ratkaisemaan pakkausten asentamisen/päivittämisen aiheuttamia pulmia silloin kun pakkaukset eivät toimi odotetulla tavalla.</p>
+<p>Koska nämä "tila"-kansiot pitävät kopioita päivitetyistä/poistetuista pakkauksista, "administrative"-kansio voi kasvaa ajan mittaa merkittävästi. Ellei tämä valinta ole automaattisesti siivottu, on hyvä tarkistaa "administrative"-kansion koko aika ajoin ja poistaa vanhimmat tilat, joita ei todennäköisesti enää tarvitse käynnistämiseen.</p>
+</div>
+<h2>
+<a id="downgrading" name="downgrading">Päivitä aikaisempaan Haiku-versioon</a></h2>
+<p>On harvinaista, mutta mahdollista, että päivitys viimeisimpään Haiku-versioon ("hrev") esittelee taantumisen, jonka kanssa et halua elää. Käynnistysvalikoista voi ladata aikaisemman, toimivan tilan (katso <a href="../bootloader.html#troubleshooting">Käynnistyslataaja - Vianetsintä</a>). Etsi viimeinen toimiva tila ja käynnistä siihen.</p>
+<p>Päivittämiseksi alaspäin pysyvästi tähän versioon sinun on osoitettava siihen 'Haiku'-hrev-tietovarastoon. Löydät nykyisen version Työpöytäpalkin kohdasta "Haikusta". Esimerkiksi päivittäminen alaspäin versioon hrev56231, avaa Pääteikkuna ja kirjoita:</p>
+<pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231
+pkgman full-sync</pre>
+<p>Huomaa, että olet nyt juuttunut tähän versioon ja Haiku ei hae mitään uusia päivityksiä. Sinun pitäisi ilmoittaa taantumisesta ja auttaa sen korjaamisessa. Sitten kun se on korjattu, niin katso <a href="http://cgit.haiku-os.org/haiku/log/">commit-lokitiedostoja</a> -  voit vaihtaa takaisin "nykyiseen" tietovarastoon komennolla:</p>
+<pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/r1beta3/$(getarch)/current
+pkgman full-sync</pre>
 </div>
 </div>
 

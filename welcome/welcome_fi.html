@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -60,25 +60,24 @@
 
 <div id="content">
 <div>
-<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Hakemisto</td></tr>
 <tr class="index"><td>
-	<a href="#welcome">Welcome to Haiku!</a><br />
-	<a href="#system">Getting to know the system</a><br />
-	<a href="#bugreport">Beware of Bugs</a><br />
-	<a href="#software">Installing new software</a><br />
-	<a href="#update">Updating Haiku</a><br />
-	<a href="#wifi">Wifi in Haiku</a><br />
-	<a href="#api">Getting to know the API</a><br />
-	<a href="#contact">Getting in contact</a>
-</td></tr>
+	<a href="#welcome">Tervetuloa Haikuun!</a><br />
+	<a href="#system">Järjestelmään tutustuminen</a><br />
+	<a href="#bugreport">Varo ohjelmistovikoja</a><br />
+	<a href="#update">Haikun asentaminen ja päivittäminen</a><br />
+	<a href="#software">Uuden ohjelmiston asentaminen</a><br />
+	<a href="#localized">Paikallistettu Haiku</a><br />  
+	<a href="#wifi">Wifi-verkot Haikussa</a><br />
+	<a href="#api">Tutustuminen sovellusohjelmointirajapintaan</a><br />
+	<a href="#contact">Yhteydenotot</a></td></tr>
 </table>
 
 <h1>
 <a id="welcome" name="welcome">Tervetuloa Haikuun!</a></h1>
-<p>Thanks for checking out Haiku! This is our seventh public release. We hope to attract new developers to our project and give users a chance to check out Haiku. While this third <i>beta release</i> includes all major features planned for the final Haiku release, it still has bugs and a few rough edges that need further polishing. However, we think that this release is quite usable and hope it lets you discover Haiku's great potential and that you share our excitement.</p>
+<p>Kiitoksia, että latasit Haiku-käyttöjärjestelmän! Tämä on seitsemäs julkinen julkaisumme. Toivomme houkuttelevamme uusia kehittäjiä hankkeeseemme ja antavamme käyttäjille mahdollisuuden tutustua Haikuun. Vaikka tämä kolmas <i>beeta-julkaisu</i> sisältää kaikki pääominaisuudet, jotka on suunniteltu lopulliseen Haiku-julkaisuun, siinä on yhä monia ohjelmointivirheitä ja muutamia karkeita reunoja, jotka on hiottava sileäksi. Ajattelemme kuitenkin, että tämä julkaisu on aivan käyttökelpoinen ja toivomme, että se sallii sinun löytää Haikun suuren potentiaalin ja että jaat meidän innostuksemme.</p>
 <p>Vieraile projektimme kotisivulla <a hrf="https://www.haiku-os.org">Haiku-os.org</a> saadaksesi viimeisimmät uutiset ja tiedonannot.</p>
 
 <h2>
@@ -86,11 +85,11 @@
 <a id="system" name="system">Järjestelmään tutustuminen</a></h2>
 <p>Vaikka Haikun ensimmäiset julkaisut ovat paljolti kuin BeOS R5, käyttöjärjestelmä on toteutettu uudelleen: siinä on monia lisäyksiä ja parannuksia, jotka Haiku-ryhmä on kehittänyt vuosien kuluessa. Joten jos olen palaava BeOS-käyttäjä tai uusi käyttäjä, vilkaise näitä linkkejä:</p>
 <table cellspacing="16" border="0">
-<tr><td align="center"><a href="fi/quicktour.html"><img src="images/quicktour_icon_96.png" /></a><p><a href="fi/quicktour.html">Haiku Quick Tour</a></p></td>
+<tr><td align="center"><a href="fi/quicktour.html"><img src="images/quicktour_icon_96.png" /></a><p><a href="fi/quicktour.html">Tervetuloa Haikun pikaoppaaseen</a></p></td>
 <td width="24"></td>
-<td align="center"><a href="../userguide/fi/contents.html"><img src="images/userguide_icon_96.png" /></a><p><a href="../userguide/fi/contents.html">Haiku User Guide</a></p></td></tr>
+<td align="center"><a href="../userguide/fi/contents.html"><img src="images/userguide_icon_96.png" /></a><p><a href="../userguide/fi/contents.html">Tervetuloa Haiku-käyttäjäoppaaseen</a></p></td></tr>
 </table>
-<p>For more interactive help and support, become part of the <a href="https://www.haiku-os.org/community/" class="printurl">Haiku community</a> and join our forums and chat channel.</p>
+<p>Saadaksesi lisää vuorovaikutteista opastetta ja tukea liity osaksi <a href="https://www.haiku-os.org/community/" class="printurl">Haiku-yhteisö</a>ä ja liity foorumeillemme ja juttukanavallemme.</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -106,16 +105,23 @@
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="update" name="update">Haikun asentaminen ja päivittäminen</a></h2>
+<p>Jos et ole vielä ehtinyt, verkko-osoitteemme <a href="https://www.haiku-os.org/get-haiku/installation-guide/">Asennusohje</a> selittää, kuinka valmistella osio ja asentaa Haiku kiintolevyllesi.</p>
+<p>Haikun kuten myös kolmansien osapuolten pakkausten päivittäminen tehdään sovelluksella <a href="../userguide/fi/applications/softwareupdater.html">Ohjelmistopäivittäjä</a>. Kun päivitys on valmis, käynnistä järjestelmä uudelleen.<br />
+Lisätietoja varten katso ohje <a href="https://www.haiku-os.org/guides/daily-tasks/updating-system”">Järjestelmäsi päivittäminen</a> webbisivustollamme.</p>
+
+<h2>
+<a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="software" name="software">Lisäohjelmistojen asentaminen</a></h2>
-<p>Useimmat saatavilla olevat ohjelmistot voidaan ladata ja asentaa <a href="../userguide/fi/applications/haikudepot.html">HaikuDepot</a> -sovelluksella, joka tulee Haikun mukana.<br />
+<p>Useimmat saatavilla olevat ohjelmistot voidaan ladata ja asentaa <a href="../userguide/fi/applications/haikudepot.html">HaikuVarasto</a> -sovelluksella, joka tulee Haikun mukana.<br />
 Binaari- ja lähdekoodiyhteensopivuuden vuoksi useimpia BeOS-sovelluksia voidaan suorittaa Haikussa. Monet niistä on pakattu uudelleen Haikua varten tai ne suoritetaan yhä muokkaamattomina. Löydät lisätietoja uusien ohjelmien asentamisesta käyttöoppaan kappaleesta <a href="../userguide/fi/applications.html">Sovellukset</a>.</p>
 <p>On olemassa useita yhteisöpohjaisia ohjelmistokokoelmia. Katso <a href="https://www.haiku-os.org/community/software">Ohjelmistosivustot</a>-sivua webbisivustollamme.</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="update" name="update">Haikun päivittäminen</a></h2>
-<p>Haikun kuten myös kolmansien osapuolten pakkausten päivittäminen tehdään sovelluksella <a href="../userguide/fi/applications/softwareupdater.html">Ohjelmistopäivittäjä</a>. Kun päivitys on valmis, käynnistä järjestelmä uudelleen.<br />
-Lisätietoja varten katso ohje <a href="https://www.haiku-os.org/guides/daily-tasks/updating-system”">Järjestelmäsi päivittäminen</a> webbisivustollamme.</p>
+<a id="localized" name="localized">Paikallistettu Haiku</a></h2>
+<p>Haiku on käännetty yli tusinalle kielelle ja tukee lukuisia näppäimistökuvauksia. Käynnistettäessä Haikua ensimmäisen kerran voit asettaa kielen ja näppäimistökuvauksen. Näitä asetuksia voidaan muuttaa koska tahansa <a href="../userguide/fi/preferences/locale.html">Paikallisasetukset</a> and <a href="../userguide/fi/preferences/keymap.html">Näppäimistökuvaus</a>-asetuksissa.<br />
+<a href="../userguide/fi/applications/haikudepot.html">HaikuVarasto</a>-sovellus tarjoaa lukuisia syötemetodeja kiinaksi, japaniksi ja koreaksi ladattavaksi ja asennettavaksi.</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>

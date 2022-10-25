@@ -10,8 +10,9 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
- *		Victor Widell
+ *		Jorma Karvonen
  *		Jimmy Olsson
+ *		Victor Widell
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -61,19 +62,18 @@
 
 <div id="content">
 <div>
-<div class="box-info">Översättningen av denna sida är inte komplett. Delar av innehållet kommer därför att visas på engelska.</div>
 
 <h2><img src="../../images/prefs-images/virtualmemory-icon_64.png" alt="virtualmemory-icon_64.png" width="64" height="64" />VirtualMemory</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Inställningar</span></td></tr>
-<tr><td>Location:</td><td></td><td><span class="path">/boot/system/preferences/VirtualMemory</span></td></tr>
-<tr><td>Settings:</td><td></td><td><span class="path">~/config/settings/kernel/drivers/virtual_memory</span><br />
+<tr><td>Position:</td><td></td><td><span class="path">/boot/system/preferences/VirtualMemory</span></td></tr>
+<tr><td>Inställningar:</td><td></td><td><span class="path">~/config/settings/kernel/drivers/virtual_memory</span><br />
 <span class="path">~/config/settings/VM_data</span> - Lagrar panelens fönsterposition.</td></tr>
 </table>
 <p>Virtuellt minne låter systemet temporärt lägga ut data på hårddisken om RAM-minnet kan utnyttjas bättre till något annat. Så även om du har massor av RAM är det aldrig en dålig idé att avsätta virtuellt minne.</p>
 <img src="../images/prefs-images/virtualmemory.png" alt="virtualmemory.png" />
-<p>Normally, the swap file is written to the boot partition. If you're running low on free memory there, you can deactivate the <span class="menu">Automatic swap management</span> and choose another mounted partition from the popup menu. The swap file size is set with the slider below.<br />
-If you often run into disk thrashing due to the virtual memory system swapping memory in and out, you can try to use a separate harddisk for you swap file to avoid I/O congestion. Simply another partition on the same harddisk with your system/data won't help. Upgrading your RAM is of course the most effective way to go...</p>
+<p>Normalt lagras den temporära filen på din startpartition. If you're running low on free memory there, you can deactivate the <span class="menu">Automatic swap management</span> and choose another mounted partition from the popup menu. The swap file size is set with the slider below.<br />
+Om du ofta råkar ut för att hårddisken rasslar långa stunder när systemet för virtuellt minne skriver och läser data kan du prova att använda en separat hårddisk till den temporära filen. Det räcker inte att bara använda en annan partition på samma hårddisk. Att uppgradera RAM-minnet är självklart den mest effektiva lösningen.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="button">Förval</span></td><td> </td><td>återställer allt till standardinställningarna.</td></tr>
 <tr><td><span class="button">Återställ</span></td><td> </td><td>ställer tillbaka inställningarna som de var när du startade intällningarna för VirtualMemory. </td></tr>

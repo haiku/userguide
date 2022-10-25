@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2016, Haiku. All rights reserved.
+ * Copyright 2008-2021, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -66,8 +66,8 @@
 <h2><img src="../../images/prefs-images/screen-icon_64.png" alt="screen-icon_64.png" width="64" height="64" />Skärm</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Inställningar</span></td></tr>
-<tr><td>Location:</td><td></td><td><span class="path">/boot/system/preferences/Screen</span></td></tr>
-<tr><td>Settings:</td><td></td><td><span class="path">~/config/settings/system/app_server/workspaces</span><br />
+<tr><td>Position:</td><td></td><td><span class="path">/boot/system/preferences/Screen</span></td></tr>
+<tr><td>Inställningar:</td><td></td><td><span class="path">~/config/settings/system/app_server/workspaces</span><br />
 <span class="path">~/config/settings/kernel/drivers/vesa</span> - Endast vid VESA-läge.<br />
 <span class="path">~/config/settings/Screen_data</span> - Lagrar panelens fönsterposition.</td></tr>
 </table>
@@ -78,8 +78,11 @@
 <p>There's a key combination that always works, not only when the Screen preferences are open: <span class="key">SHIFT</span> <span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">ESC</span> sets a fall-back video safe mode. Handy if your monitor doesn't report its capabilities correctly and your settings result in a distorted or black screen. Here too, an alert pops up and if you do nothing for 12 seconds or press <span class="key">ESC</span> you'll revert back.</p>
 <p>Till vänster kan du ange antalet arbetsytor och arrangera dom i rader och kolumner. Du kan också öppna panelen <a href="backgrounds.html">Bakgrunder</a>.</p>
 <div class="box-info">While Haiku's VESA mode performs very well, you may experience some limitations. You may not be able to drive your widescreen display in its native resolution, resulting in a somewhat blurred picture. There may also be limitations with regard to available color depths and refresh rates.</div>
+<p>Clicking on the screen representation opens the <a href="backgrounds.html">Backgrounds</a> preferences.</p>
+<p>Below is a slider to set the screen's <span class="menu">Brightness</span>, if you're running on a notebook and the graphics driver supports it. In Terminal, <span class="cli">screenmode --help</span> shows how to control brightness and other options from the command line.</p>
+<p>To the bottom left you can set the number of workspaces and arrange them in columns and rows.</p>
 <p><span class="button">Återställ</span> återställer inställningarna till det läget som var innan du startade skärminställningarna.</p>
-<p>To the bottom left you can set the number of workspaces and arrange them in columns and rows and open the <a href="backgrounds.html">Backgrounds</a> preferences.</p>
+
 </div>
 </div>
 

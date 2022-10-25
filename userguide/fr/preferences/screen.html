@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2016, Haiku. All rights reserved.
+ * Copyright 2008-2021, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -65,9 +65,9 @@
 
 <h2><img src="../../images/prefs-images/screen-icon_64.png" alt="screen-icon_64.png" width="64" height="64" />Screen</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar :</td><td style="width:15px;"></td><td><span class="menu">Preferences</span></td></tr>
-<tr><td>Localisation :</td><td></td><td><span class="path">/boot/system/preferences/Screen</span></td></tr>
-<tr><td>Réglages :</td><td></td><td><span class="path">~/config/settings/system/app_server/workspaces</span><br />
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Preferences</span></td></tr>
+<tr><td>Location:</td><td></td><td><span class="path">/boot/system/preferences/Screen</span></td></tr>
+<tr><td>Settings:</td><td></td><td><span class="path">~/config/settings/system/app_server/workspaces</span><br />
 <span class="path">~/config/settings/kernel/drivers/vesa</span> - Seulement quand vous êtes en mode VESA.<br />
 <span class="path">~/config/settings/Screen_data</span> - Conserve la position de la fenêtre du panneau de configuration.</td></tr>
 </table>
@@ -79,8 +79,11 @@ Les deux autres listes déroulantes contiennent les résolutions et les profonde
 <p>There's a key combination that always works, not only when the Screen preferences are open: <span class="key">SHIFT</span> <span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">ESC</span> sets a fall-back video safe mode. Handy if your monitor doesn't report its capabilities correctly and your settings result in a distorted or black screen. Here too, an alert pops up and if you do nothing for 12 seconds or press <span class="key">ESC</span> you'll revert back.</p>
 <p>À gauche, vous voyez une représentation de votre écran avec le nom du fabriquant et du modèle trouvé ainsi que la résolution en points par pouces (dpi). En passant dessus, la souris fait apparaitre une bulle avec le nom de la carte graphique si un pilote est présent. Dans le cas contraire, elle affiche VESA", une solution de repli compatible avec presque tous les adaptateurs graphiques.</p>
 <div class="box-info">Même si le mode VESA d'Haiku fonctionne très bien, il souffre de certaines limites. Vous pourriez ne pas être en mesure d'accéder à votre écran large dans sa résolution native, ce qui produirait une image un peu floue et déformée. Les profondeurs de couleurs et les vitesse de rafraîchissement pourraient également être réduites.</div>
+<p>Clicking on the screen representation opens the <a href="backgrounds.html">Backgrounds</a> preferences.</p>
+<p>Below is a slider to set the screen's <span class="menu">Brightness</span>, if you're running on a notebook and the graphics driver supports it. In Terminal, <span class="cli">screenmode --help</span> shows how to control brightness and other options from the command line.</p>
+<p>To the bottom left you can set the number of workspaces and arrange them in columns and rows.</p>
 <p><span class="button">Revert</span> restaure les paramètres qui étaient actifs lorsque vous avez démarré le panneau de préférences de l'écran.</p>
-<p>En bas à gauche, vous pouvez régler le nombre de bureaux virtuels et les réarranger en ligne ou en colonnes, ou bien ouvrir les préférences du <a href="backgrounds.html">Fond d'écran</a>.</p>
+
 </div>
 </div>
 

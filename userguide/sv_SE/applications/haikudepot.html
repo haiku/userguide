@@ -10,6 +10,8 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  *		Andrew Lindesay <apl@lindesay.co.nz>
+ * Translators:
+ *		Jorma Karvonen
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -77,13 +79,13 @@
 
 <h2><img src="../../images/apps-images/haikudepot-icon_64.png" alt="haikudepot-icon_64.png" width="64" height="64" />HaikuDepot</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications</span></td></tr>
-<tr><td>Location:</td><td></td><td><span class="path">/boot/system/apps/HaikuDepot</span></td></tr>
-<tr><td>Settings:</td><td></td><td><span class="path">~/config/settings/HaikuDepot/main_settings</span><br />
-<span class="path">~/config/cache/HaikuDepot/</span> - Cached icons, screenshots, descriptions etc.</td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Program</span></td></tr>
+<tr><td>Position:</td><td></td><td><span class="path">/boot/system/apps/HaikuDepot</span></td></tr>
+<tr><td>Inställningar:</td><td></td><td><span class="path">~/config/settings/HaikuDepot/main_settings</span><br />
+<span class="path">~/config/cache/HaikuDepot/</span> - Ikoner i cacheminne, skärmbilder, beskrivningar osv.</td></tr>
 </table>
 <p><br /></p>
-<p>HaikuDepot is the central application when it comes to managing your software packages. With it you can browse and search through package repositories and install and uninstall packages. By default, HaikuDepot starts up with a list of "<i>Featured packages</i>", software that's deemed interesting to many users.</p>
+<p>HaikuDepot är ett centralt program för att hantera dina programvara paketen. With it you can browse and search through package repositories and install and uninstall packages. By default, HaikuDepot starts up with a list of "<i>Featured packages</i>", software that's deemed interesting to many users.</p>
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
 <p>The second tab shows <span class="menu">All packages</span>, the display changes to smaller icons and more information arranged in columns:</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
@@ -100,7 +102,8 @@
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list" name="list">The List</a></h2>
 <p>Like in any Tracker window, you can choose from a context menu which columns to display by right-clicking the column heading. A left-click sorts the list according to that column. Of course, you can rearrange the columns by dragging them to a new position.</p>
-<p>The status column of a package can have one of several states:</p>
+<p>The <span class="menu">Date</span> column shows when a packge was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
+<p>The <span class="menu">Status</span> column of a package can have one of several states:</p>
 <ul>
 <li><p><span class="menu">Active</span>: The package is currently installed and ready to be used.</p></li>
 <li><p><span class="menu">Available</span>: The package exists in that repository and can be downloaded and installed. If there are any dependencies on other packages, you'll be informed of that while installing and get the choice of downloading/installing all that's necessary.</p></li>
@@ -131,7 +134,7 @@ In the middle are user comments with their nickname, the number of stars they ga
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">HaikuDepot and Show menu</a></h2>
+<a id="menu" name="menu">HaikuDepot och Visa-meny</a></h2>
 <p>In the <span class="menu">HaikuDepot</span> menu at the top of the window, you'll find an item to <span class="menu">Refresh repositories</span>. This will request an up-to-date list of all available packages from the repositories.<br />
 The second item is to <span class="menu">Manage repositories...</span>. It opens the <a href="../preferences/repositories.html">Repositories</a> preferences, to add/remove or disable and enable repositories.<br />
 <span class="menu">Check for updates...</span> opens the <a href="../apps/softwareupdater.html">SoftwareUpdater</a> to search and install updated packages.<br />
@@ -171,7 +174,7 @@ After you click <span class="button">Send</span> the data is transmitted to the 
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tips" name="tips">Tips</a></h2>
-<p>Not directly from within the HaikuDepot application, but there is a way to keep track of new and updated packages. For that, you need to create an RSS ATOM feed at the <a href="https://depot.haiku-os.org">Haiku Depot Server</a> website. Click the "hamburger" widget at the top right, and choose <span class="menu">Build Feed URL</span> under Data.<br />
+<p>There is another way to keep track of new and updated packages besides sorting the <span class="menu">Date</span> column of the list of packages. For that, you need to create an RSS ATOM feed at the <a href="https://depot.haiku-os.org">Haiku Depot Server</a> website. Click the "hamburger" widget at the top right, and choose <span class="menu">Build Feed URL</span> under Data.<br />
 Most interesting of the few settings on that page: Besides getting a feed for all new/updated packages, you are also able to add just the names of the packages you're interested in. Click the <span class="button">Build Feed URL</span> button and you get an RSS URL that you can paste into an RSS feed reader like BePodder, QuiteRSS, fRiSS etc.</p>
 </div>
 </div>

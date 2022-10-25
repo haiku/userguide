@@ -80,9 +80,9 @@
 
 <h2><img src="../../images/apps-images/haikudepot-icon_64.png" alt="haikudepot-icon_64.png" width="64" height="64" />HaikuDépôt</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar :</td><td style="width:15px;"></td><td><span class="menu">Applications</span></td></tr>
-<tr><td>Localisation :</td><td></td><td><span class="path">/boot/system/apps/HaikuDepot</span></td></tr>
-<tr><td>Réglages :</td><td></td><td><span class="path">~/config/settings/HaikuDepot/</span>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications</span></td></tr>
+<tr><td>Location:</td><td></td><td><span class="path">/boot/system/apps/HaikuDepot</span></td></tr>
+<tr><td>Settings:</td><td></td><td><span class="path">~/config/settings/HaikuDepot/</span>
 
 <span class="path">~/config/settings/HaikuDepot/main_settings</span><br />
 <span class="path">~/config/cache/HaikuDepot/</span> -mise en cache des icônes, des captures d'écrans, des descriptions, etc.</td></tr>
@@ -105,7 +105,8 @@
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list" name="list">La liste</a></h2>
 <p>Comme dans une fenêtre du Tracker, il est possible de choisir quels colonnes afficher avec un clic droit sur l’entête de la colonne. Un clic gauche trie la liste en fonction de la colonne. Bien sûr, il est possible de réorganiser les colonnes en les glissant vers une nouvelle position.</p>
-<p>La colonne de statut d’un paquet peut avoir pour valeur :</p>
+<p>The <span class="menu">Date</span> column shows when a packge was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
+<p>The <span class="menu">Status</span> column of a package can have one of several states:</p>
 <ul>
 <li><p><span class="menu">Active</span>: le paquet est déjà installé et prêt à être utilisé.</p></li>
 <li><p><span class="menu">Available</span>: The package exists in that repository and can be downloaded and installed. If there are any dependencies on other packages, you'll be informed of that while installing and get the choice of downloading/installing all that's necessary.</p></li>
@@ -177,7 +178,7 @@ After you click <span class="button">Send</span> the data is transmitted to the 
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tips" name="tips">Tips</a></h2>
-<p>Not directly from within the HaikuDepot application, but there is a way to keep track of new and updated packages. For that, you need to create an RSS ATOM feed at the <a href="https://depot.haiku-os.org">Haiku Depot Server</a> website. Click the "hamburger" widget at the top right, and choose <span class="menu">Build Feed URL</span> under Data.<br />
+<p>There is another way to keep track of new and updated packages besides sorting the <span class="menu">Date</span> column of the list of packages. For that, you need to create an RSS ATOM feed at the <a href="https://depot.haiku-os.org">Haiku Depot Server</a> website. Click the "hamburger" widget at the top right, and choose <span class="menu">Build Feed URL</span> under Data.<br />
 Most interesting of the few settings on that page: Besides getting a feed for all new/updated packages, you are also able to add just the names of the packages you're interested in. Click the <span class="button">Build Feed URL</span> button and you get an RSS URL that you can paste into an RSS feed reader like BePodder, QuiteRSS, fRiSS etc.</p>
 </div>
 </div>

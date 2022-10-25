@@ -107,17 +107,17 @@ Bir bağlantı yapılmasını ister misiniz?" "Masaüstü'nde" "Masaüstü Çubu
 <td valign="top"><p><span class="cli">hey</span>, uygulamalara BMessage gönderen ve yanıtlarını yazdıran ufak bir yardımcı izlencedir. Bir uygulamayı betik yardımıyla veya komut satırından kullanılmasına (diğer bir tanımla uzaktan denetimine) izin verir. Kullanımı biraz karmaşık gelebilir; ancak <a href="https://www.haiku-os.org/blog/humdinger/2017-11-05_scripting_the_gui_with_hey/">Humdinger'in günlük yazısı</a> iyi bir başlangıç materyali olabilir. Chris Herborth tarafından yazılan çok daha ayrıntılı bir <a href="http://www.birdhouse.org/beos/bible/bos/ch_scripting6.html">hey öğreticisi</a> de BeBook içinde bulunmaktadır.</p>
 </td></tr>
 <tr><td><p><span class="cli">notify</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">notify</span> shows a notification panel with a message. There are various parameters that are described when you call <span class="cli">notify --help</span>. A notification can also be used to show the progress of some action. When doing that, it's important to set a <i>messageID</i> and always use it when you update the progress (a float between 0.0 and 1.0 that's printed as percent). Otherwise you'll see several notification panels if you update quicker then the set timeout.<br />
-An example:</p>
+		<td valign="top"><p><span class="cli">notify</span>, bir ileti içeren bir bildirim paneli gösterir. <span class="cli">notify --help</span> komutunu çalıştırdığınızda çeşitli parametrelerin açıklamalarını görebilirsiniz. Bir bildirim, çeşitli ilerlemelerin durumunu göstermek için kullanılabilir. Bunu yaparken bir <i>messageID</i> ayarlamak ve ilerlemeyi (0,0 ve 1,0 arasında yüzde olarak gösterilen bir kayan noktalı değer) güncellerken kullanmak önemlidir. Yoksa ayarlanan zaman aşımından daha hızlı güncellerseniz birden çok bildirim paneli görebilirsiniz.<br />
+Örnek:</p>
 <pre class="terminal">notify --type progress --group "--group" --title "--title" --icon /boot/home/bebook.hvif \
 --messageID MyMessageID --progress .75 "Keep waiting"</pre>
 <p><img src="../images/apps-images/cli-notification.png" alt="cli-notification.png" /></p>
 </td></tr>
 <tr><td><p><span class="cli">query</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">query</span> is the commandline version of the Find panel. In fact, a quick way to generate the search term is to build a query in the Find panel, switch to <span class="menu">by formula</span>, add double quotes (<tt>"</tt>) in front and back and paste the whole string after your <span class="cli">query</span> command in Terminal or your script.</p>
+		<td valign="top"><p><span class="cli">query</span>, Bul panelinin komut satırı sürümüdür. İsterseniz Bul panelinde hazırladığınız <span class="cli">query</span>'yi <span class="menu">işlev ile</span> seçeneğini kullanıp başına ve sonuna çift tırnak ekleyip (<tt>"</tt>) uçbirime yapıştırabilir veya yazdığınız betikte kullanabilirsiniz.</p>
 </td></tr>
 <tr><td><p><span class="cli">waitfor</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">waitfor</span> is a nice way to wait for a particular application or thread to be started or to have ended.</p>
+		<td valign="top"><p><span class="cli">waitfor</span>, bir uygulamaya veya iş parçacığına başlamasını veya sonlanmasını söylemenin güzel bir yoludur.</p>
 </td></tr></table>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -125,17 +125,17 @@ An example:</p>
 
 <table summary="scripting cli tools" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><p><span class="cli">checkfs</span></p></td><td style="width:10px;"> </td>
-		<td><p><span class="cli">checkfs</span> is an important tool to check for errors in your file system. Simply add a volume name like <span class="path">/Haiku</span> or device path and it'll run through every file and correct inconsistencies where possible.</p>
+		<td><p><span class="cli">checkfs</span>, dosya sistemindeki hataları denetlemek için önemli bir araçtır. Yalnızca <span class="path">/Haiku</span> gibi bir bölüm adı veya aygıt adı ekleyin ve olası her yerdeki tutarsızlıkları denetleyecektir.</p>
 </td></tr>
 <tr><td><p><span class="cli">desklink</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">desklink</span> can install an icon for any file, folder, query or application in the Deskbar tray. It also offers the option to provide a context menu when right-clicking an icon to execute special actions. As an example, try this to add the commandline app <span class="app">screenshot</span> with various options (the "<tt>\</tt>" in the first line is just for the line break in Terminal):</p>
+		<td valign="top"><p><span class="cli">desklink</span>, herhangi bir dosya, klasör, sorgu veya uygulama için Masaüstü Çubuğu tepsisinde bir simge kurabilir. Aynı zamanda, özel eylemler yürütmek için bir bağlam menüsü sunma özelliği de vardır. Örnek olarak, komut satırı <span class="app">screenshot</span> uygulamasını çeşitli seçeneklerle eklemeyi deneyelim (ilk satırdaki "<tt>\</tt>", yalnızca Uçbirim'deki satır sonu içindir):</p>
 <pre class="terminal"> desklink "cmd=Active window (2s):/bin/screenshot --window --border --delay 2" \
 "cmd=Remove replicant:desklink --remove=screenshot" /bin/screenshot
 </pre>
 <p><img src="../images/apps-images/cli-desklink.png" alt="cli-alert.png" /></p>
 </td></tr>
 <tr><td><p><span class="cli">diskimage</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">diskimage</span> lets you register a regular file as disk device. For example, you can register a Haiku anyboot image, mount it in Tracker and copy, edit or remove files there before using it as source in the Installer.</p>
+		<td valign="top"><p><span class="cli">diskimage</span>, normal bir dosyayı bir disk aygıtı plank kaydetmenize izin verir. Örneğin, bir Haiku any boot kalıbını İzleyici'de bağlayabilir, Haiku Kur ile kullanmadan önce içindeki dosyaları değiştirebilir veya yeni dosyalar ekleyebilirsiniz.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.c  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
@@ -151,19 +151,19 @@ mount -t nfs4 -p "192.168.178.3:volume1" /DiskStation</pre></td></tr>
 		<td valign="top"><p><span class="cli">open</span> is a very handy little tool. With it you open any file with its preferred application, or start a specific application by its signature without the need to know its exact path. It also works with URLs and even with the "virtual" directories <tt>.</tt> for the current directory and <tt>..</tt> for the parent, opening the folder in Tracker.</p>
 </td></tr>
 <tr><td><p><span class="cli">ramdisk</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>A ramdisk is like a harddisk running only in the computer's memory. That makes it very fast but also volatile, because its contents vanishes when you shut down the computer, or it crashes or you experience a blackout.<br />
-To create a ramdisk of 1 GiB, format to the name "RAMses" and mount it, you enter this in Terminal or create a script of it:</p>
+		<td valign="top"><p>Bir ramdisk, bilgisayarın belleğinde çalışan bir sabit disk gibidir. Bundan dolayı çok hızlıdır; ancak kırılgandır; çünkü bilgisayar kapatıldığında, çöktüğünde veya elektrikler kesildiğinde bellek kaybolur.<br /><br />
+1 GiB'lık bir ramdisk yaratmak için şu komutu Uçbirim'de çalıştırın veya bir betiğe ekleyin:</p>
 <pre class="terminal">ramdisk create -s 1gb
 mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMses
-mountvolume RAMses</pre>
-<p>Note: When creating a ramdisk, the <span class="cli">ramdisk</span> command prints out the path to it. If you create several disks, that path <span class="path">/dev/disk/virtual/ram/0/raw</span> will change!</p>
-<p>To preserve the contents, at least if no calamity like a blackout etc. strikes, a ramdisk can be set up to read/write an image on the harddisk. For that, you need to supply a file of the desired size that will be read from every time you start your ramdisk, and written to when you unmount it. To create an image file "RAMimage" of 500MiB and format it, do this:</p>
-<pre class="terminal">dd if=/dev/zero of=RAMimage bs=500M count=1
-mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMimage</pre>
-<p>From now on, you start the ramdisk like this:</p>
-<pre class="terminal">ramdisk create RAMimage
-mountvolume RAMimage</pre>
-<p>It's very important to always cleanly unmount you ramdisk, either from Tracker or with <span class="cli">unmount /RAMimage</span>, or the changes won't be written back to the image file!</p>
+mountvolume RamdiskAdı</pre>
+<p>Not: Bir ramdisk yaratırken, <span class="cli">ramdisk</span> komutu, ona olan yolu yazdırır. Birden çok disk yaratırsanız <span class="path">/dev/disk/virtual/ram/0/raw</span> yolu değişecektir!</p>
+<p>İçeriği korumak için, ramdisk'ler, sabit diskteki bir yazılabilir/okunabilir kalıba bağlanabilir. Bunun için, ramdisk'i her başlattığınızda okunmaya ve her kapattığınızda yazılmaya hazır bir dosya sağlamak zorundasınız. Bir kalıp dosyası yaratmak ve 500MiB yer ayırıp biçimlendirmek için şu komutu kullanın:</p>
+<pre class="terminal">dd if=/dev/zero of=RAMKalıbıAdı bs=500M count=1
+mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMKalıbıAdı</pre>
+<p>ramdisk'i çalıştırmak için:</p>
+<pre class="terminal">ramdisk create RAMKalıbıAdı
+mountvolume RAMKalıbıAdı</pre>
+<p>Değişikliklerin korunması için her zaman İzleyici'den düzgünce bağlantıyı kesmeli veya <span class="cli">unmount /RAMKalıbıAdı</span> komutunu kullanmalısınız; yoksa değişiklikler dosyaya geri yazılmaz!</p>
 </td></tr>
 </table>
 </div>

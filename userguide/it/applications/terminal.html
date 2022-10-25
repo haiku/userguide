@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -95,7 +95,8 @@ Via <span class="menu">Settings | Window title...</span> the Terminal window's t
 <br />
 <p>Most of the offered settings speak for themselves. Not entirely obvious though, the font size is set in the submenu of the <span class="menu">Font</span> popup menu.<br />
 Hover your mouse over the "formulas" for naming tab and window titles to get tooltips for the available variables. <br />
-You can choose pre-defined color schema like <span class="menu">Midnight</span> or <span class="menu">Retro</span> or create a <span class="menu">Custom</span> one by selecting which color you want to change (<span class="menu">Text</span>, <span class="menu">Background</span>, <span class="menu">Cursor</span> etc.) and then use  the color picker below.</p>
+You can choose pre-defined color schema like <span class="menu">Midnight</span> or <span class="menu">Retro</span> or create a <span class="menu">Custom</span> one by selecting which <span class="menu">Color</span> you want to change (<span class="menu">Text</span>, <span class="menu">Background</span>, <span class="menu">Cursor</span> etc.) and then use  the color picker below.</p>
+<p>You can also configure "ANSI colors" with the <span class="menu">Color</span> menu. Those are the first 8 named colors in the color palette of terminal applications. You choose a color, for example "<i>ANSI red color</i>", and then adjust it with the color picker below. The effect is not visible unless you run a terminal application that makes use of that color. The exact colors used in various places are documented at <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
 <p>A few more options follow: you can have a <span class="menu">Blinking cursor</span> and choose to <span class="menu">Allow bold text</span>.<br />
 <span class="menu">Use left Option as Meta key</span> if you work with certain UNIX software that relies on accessing an extended portion of the ASCII character set, like e.g. GNU Emacs and  the GNU readline library.<br />
 Activate the checkbox to <span class="menu">Confirm exit if active programs exist</span> and you'll be warned when trying to close a Terminal window while an app is still being executed.</p>
@@ -144,9 +145,9 @@ Both files can be created in the <span class="path">/boot/home/config/settings/<
 <tr><td><span class="menu">Copy here</span></td><td> </td><td>Copies the dragged file into the current working directory of the Terminal.</td></tr>
 </table></li>
 <li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
 </li></ul>
-
 
 </div>
 </div>

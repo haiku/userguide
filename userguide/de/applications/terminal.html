@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -97,7 +97,8 @@ Mittels <span class="menu">Einstellungen | Fenstertitel...</span> kann der Fenst
 <br />
 <p>Die meisten Einstellungen sind selbsterklärend. Nicht so das Einstellen der Schriftgröße - dies erfolgt im Untermenü der ausgewählten <span class="menu">Schriftart</span>.<br />
 Lässt man den Maszeiger über den "Formeln" für Reiter- und Fenstertitel schweben, werden die verschiedenen Variablen durch einen Tooltip erklärt.<br />
-Entweder verwendet man vordefinierte Farbschema wie <span class="menu">Mitternacht</span> oder <span class="menu">Retro</span> oder erstellt ein Schema <span class="menu">Benutzerdefiniert</span>, indem man die zu ändernde Farbe wählt (<span class="menu">Text</span>, <span class="menu">Hintergrund</span>, <span class="menu">Cursor</span> etc.) und den Farbregler darunter benutzt.</p>
+Entweder verwendet man vordefinierte Farbschema wie <span class="menu">Mitternacht</span> oder <span class="menu">Retro</span> oder erstellt ein Schema <span class="menu">Benutzerdefiniert</span>, indem man die zu ändernde <span class="menu">Farbe</span> wählt (<span class="menu">Text</span>, <span class="menu">Hintergrund</span>, <span class="menu">Cursor</span> etc.) und den Farbregler darunter benutzt.</p>
+<p>Mit dem <span class="menu">Farbe</span> Menü lassen sich auch die ANSI-Farben ändern. Das sind die ersten 8 benannten Farben in der Farbpalette von Terminalanwendungen. Dazu wählt man eine Farbe, beispielsweise "<i>ANSI-Farbe Rot</i>" und ändert sie mit dem Farbregler darunter. Den Effekt sieht man erst, wenn man eine Terminalanwendung startet, die diese Farbe benutzt. Welche Farben wo benutzt werden, ist bei <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a> zu lesen.</p>
 <p>Es folgen noch ein paar weitere Einstellungen: Man kann einen <span class="menu">Blinkenden Cursor</span> haben und <span class="menu">Text in Fettschrift zulassen</span>.<br />
 Man kann die <span class="menu">Linke Option-Taste als Meta-Taste verwenden</span>, falls man mit UNIX Software arbeitet, die Zugriff auf einen erweiterten ASCII Bereich benötigt, wie beispielsweise GNU Emacs und die GNU Readline Bibliothek.<br />
 Wird die Option <span class="menu">Beenden bestätigen, falls noch aktive Programme laufen</span> aktiviert, erscheint eine Warnung wenn man ein Terminal-Fenster schließen möchte, in dem gerade noch ein Programm ausgeführt wird.</p>
@@ -147,8 +148,9 @@ Werden diese beiden Dateien im <span class="path">/boot/home/config/settings/</s
 </table></li>
 <li><p>Vom Terminal aus kann auch jede Datei mit ihrem bevorzugten Programm gestartet werden. Der Befehl hierfür ist <span class="cli">open <i>[Dateiname]</i></span>. Dies funktioniert auch mit den Repräsentanten für das aktuelle ("<span class="cli">.</span>") und übergeordnete ("<span class="cli">..</span>") Verzeichnis. Um also ein Tracker-Fenster mit dem aktuellen Verzeichnis zu öffnen wäre dies einzugeben: </p>
 <pre class="terminal">open .</pre>
+</li>
+<li><p>Produziert ein Befehl viele Ausgaben, scrollt alles ziemlich schnell vorbei. Benutzt man mehrere solcher Befehle hintereinander, wird es schwierig den Anfang der Ausgabe des letzten Befehls zu finden. Mittels  <span class="menu">Bearbeiten | Bildschirm leeren</span> oderr <span class="key">ALT</span> <span class="key">L</span> kann man den Scroll-Puffer leeren, befor man einen Befehl ausführt. Schon hat man einen leeren Scroll-Puffer und man kann direkt ganz nach oben springen, um zum Anfang der Ausgabe zu kommen.</p>
 </li></ul>
-
 
 </div>
 </div>

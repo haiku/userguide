@@ -9,12 +9,14 @@
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
+ * Translators:
+ *		Jorma Karvonen
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Workshop: Wireless networking</title>
+	<title>Verkstad: Trådlös nätverksanslutning</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
@@ -66,13 +68,13 @@
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Index</td></tr>
 <tr class="index"><td>
-	<a href="#gui">Joining a wireless network</a><br />
-	<a href="#commandline">Joining from the command line</a><br />
+	<a href="#gui">Anslutning till trådlös nätverksanslutning</a><br />
+	<a href="#commandline">Anslutning från kommandotolken</a><br />
 	<a href="#firmware">Getting supported hardware to work</a>
 </td></tr>
 </table>
 
-<h1>Workshop: Wireless networking</h1>
+<h1>Verkstad: Trådlös nätverksanslutning</h1>
 
 <p>Getting the networking to run is essential in today's need for permanent internet connection. As keeping up to date with all the different and ever changing hardware and drivers is quite impossible for a small project, Haiku relies on a <a href="http://www.freebsd.org">FreeBSD</a> compatibility layer for its networking drivers.<br />
 This ensures a massive amount of supported hardware, though probably not 100% of what's out there. See <a href="https://www.freebsd.org/releases/13.0R/hardware#wlan">FreeBSD 13.0's release hardware notes</a> for a list of supported models.</p>
@@ -81,17 +83,18 @@ PCMCIA, CardBus, ExpressCard, USB and ISA devices still need more work to become
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="gui" name="gui">Joining a wireless network</a></h2>
+<a id="gui" name="gui">Anslutning till trådlös nätverksanslutning</a></h2>
 <p>By default, Haiku will join the first unencrypted wireless network it finds after booting up. To connect to a specific network, you use the Desktop applet <a href="desktop-applets/networkstatus.html">NetworkStatus</a>.</p>
 <p>Right-click on its icon in the Deskbar and choose the network's public name (which is the "SSID" it broadcasts) from the context menu.</p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
-<p>A window opens where you enter the type of authentication (probably WPA/WPA2, WEP is not a secure encryption anymore!) and the password for that wireless network. Click <span class="button">OK</span> to start the login process.<br /> Depending on your hardware and network configuration this may take a while. You'll be kept informed of the progress by notifications:</p>
+<p>A window opens where you enter the type of authentication (probably WPA/WPA2, WEP is not a secure encryption anymore!) and the password for that wireless network. Tick the checkbox below to <span class="menu">Store this configuration</span> so you don't have to enter all the information again next time you connect to this network.<br />
+Click <span class="button">OK</span> to start the login process.<br /> Depending on your hardware and network configuration this may take a while. You'll be kept informed of the progress by notifications:</p>
 <img src="images/workshop-wlan-images/join-status.gif" alt="join-network.gif" />
 <p>Once it reads "Ready" and the NetworkStatus icon in the Deskbar shows a green round light, the connection is established. If the notifications end in "No link" and a yellow triangle, something went wrong, probably an incorrect password.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="commandline" name="commandline">Joining from the command line</a></h2>
+<a id="commandline" name="commandline">Anslutning från kommandotolken</a></h2>
 <p>If you prefer to use the command line or would like to use scripting or the <span class="path">~/config/settings/boot/UserBootscript</span> to automate things to join a specific network on bootup, there's the command <tt>ifconfig</tt>.</p>
 <p>Start a Terminal and enter the first line to scan for available wireless networks:</p>
 <pre class="terminal">ifconfig /dev/net/iprowifi3945/0 scan
@@ -110,7 +113,7 @@ The output shows the public name (SSID), MAC address, signal strength and authen
 <p>All supported modern wireless hardware works out of the box and you don't have to download/install any additional firmware.</p>
 
 <p>Only a few quite old chipsets (Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) require binary firmware modules that Haiku cannot include due to licensing issues, though. To get these wireless cards to work, a simple script is included which will retrieve and install all of the needed proprietary bits for you.</p>
-<p>Open a Terminal and type:</p>
+<p>Öppna kommandotolken och skriv:</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
 <p>Now review the licenses and accept them to install all of the available firmware files.</p>
 

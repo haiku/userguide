@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -60,6 +60,16 @@
 <div id="content">
 <div>
 
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td>
+				<a href="#audiosettings">Audio settings</a><br />
+                <a href="#audiomixer">Audio mixer</a><br />
+                <a href="#hdaudio">HD audio</a><br />
+				<a href="#midi">MIDI</a><br />
+				<a href="#videosettings">Video settings</a></td></tr>
+</table>
+
 <h2><img src="../../images/prefs-images/media-icon_64.png" alt="media-icon_64.png" width="64" height="64" />Media</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Preferences</span></td></tr>
@@ -68,7 +78,90 @@
 <span class="path">~/config/settings/System Audio Mixer</span><br />
 <span class="path">~/config/settings/MediaPrefs Settings</span> - Stores the panel's window position.</td></tr>
 </table>
-<p>Documentation is still missing. If you want to work on it, please announce it on the <a href="http://www.freelists.org/list/haiku-doc">Documentation mailing list</a> to avoid duplication.</p>
+
+<p>The Media preferences control the system's audio and video settings. Those range from everyday tasks like adjusting the volume, to quite low level tweaking that most users won't ever need. The various settings are grouped in categories.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="audiosettings" name="audiosettings">Audio settings</a></h2>
+
+<img src="../images/prefs-images/media-audio-settings.png" alt="Audio settings" />
+
+<p>In case your computer is equipped with more that one audio interface, you can choose the <span class="menu">Audio input</span>, <span class="menu">Audio output</span> and which <span class="menu">Channel</span> to use. In the rare case something derails audio/video in your system, try to <span class="button">Restart media services</span>.</p>
+
+<p>With the checkmark you can <span class="button">Show volume control on Deskbar</span>. That adds a little icon to the Deskbar tray:</p>
+
+<img src="../images/prefs-images/media-replicant.png" alt="Volume control of the Deskbar" />
+
+<p>A left-click on the tray icon pops up a volume slider that controls the master output. Alternatively, using the mouse wheel directly on the icon also changes the volume.
+As you can see from the little <a href="../gui.html#replicants">Replicant handle</a> at the bottom right, you can embed this slider, for example on the Desktop.</p>
+
+<p>A right-click opens a menu with shortcuts to the <span class="menu">Media preferences</span>, <span class="menu">Sounds preferences</span> and to open the <span class="menu">MediaPlayer</span>.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="audiomixer" name="audiomixer">Audio mixer</a></h2>
+
+<p>The audio mixer allows you to control the volume of the different audio streams in the system, e.g. the audio output of currently running applications.</p>
+
+<img src="../images/prefs-images/media-audio-mixer-1.png" alt="Gain controls" />
+
+<p>Here we see the master output, and the volume sliders of the currently running MediaPlayer and a game that's using SDL Audio. With those sliders you can mix their audio output so that, for example, the game sounds don't drown out your music coming from a MediaPlayer playlist.</p>
+
+<p>The 'double-knobs' of the sliders represent left/right stereo. They normally move in unison, but you can control the balance by moving just one of them with the right mouse button.<br />
+Use the checkmark to <span class="menu">Mute</span> a stream.</p>
+
+<p>The <span class="menu">Setup</span> tab provides mostly low level settings:</p>
+
+<img src="../images/prefs-images/media-audio-mixer-2.png" alt="Setup" />
+
+<p>Among all these low level tweaking parameters — that you will likely only experiment with if Haiku doesn't quite support your audio hardware out of the box — there are a few setting you might be interested in.</p>
+
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Attenuate mixer output by 3 dB</span></td><td width="15"> </td><td>gives a little more headroom to avoid clipping.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Display balance control in stereo connections</span></td><td> </td><td>adds a balance slider below the volume sliders on the <span class="menu">Gain control</span> tab instead of the 'double-knobs'.</td></tr>
+<tr><td><span class="menu">Allow output/input channel remapping</span></td><td> </td><td>opens new tabs to map one channel to one or more others and adjust their volumes. For example, you could assign the left output channel to front-left, rear-left and center and set different volumes.</td></tr>
+<tr><td><span class="menu">Resampling algorithm</span></td><td> </td><td>has options for <span class="menu">Low quality</span> (low CPU usage and latency) and <span class="menu">High quality</span> (slightly higher CPU usage and latency).</td></tr>
+</table>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hdaudio" name="hdaudio">HD audio (naming depends on the hardware)</a></h2>
+
+<p>Where the Audio mixer deals with the different audio streams running through Haiku, this controls the physical in/output.</p>
+
+<img src="../images/prefs-images/media-hdaudio.png" alt="HD Audio, input" />
+
+<p>There are three tabs:</p>
+
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">General</span></td><td width="15"> </td><td>sets the <span class="menu">Input frequency</span> and <span class="menu">Output frequency</span>.</td></tr>
+<tr><td><span class="menu">Output</span></td><td> </td><td>sets the output levels for speakers and headphones.</td></tr>
+<tr><td><span class="menu">Input</span></td><td> </td><td>sets the input levels for line-in and microphone.</td></tr>
+</table>
+
+<p>It has to be said that these hardware level settings can appear a bit haphazard...<br />
+Haiku probes the hardware and tries to make sense of what it gets back. You may see various duplicate sliders with the same label etc. You'll have to experiment a bit to find the one you're looking for.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="midi" name="midi">MIDI</a></h2>
+
+<p>The MIDI settings show all installed SoundFonts, i.e. instrument definitions. Just select the one you like. Double-clicking an entry opens its parent folder.</p>
+
+<img src="../images/prefs-images/media-midi.png" alt="MIDI SoundFonts" />
+
+<p>You'll find a few SoundFonts in HaikuDepot; those appear automatically after installation.
+SoundFonts downloaded from the web need to be manually moved to <span class="cli">/boot/system/non-packaged/data/synth/</span> (or the equivalent Home hierarchy, see topic <a href="../filesystem-layout.html">Filesystem layout</a>).</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="videosettings" name="videosettings">Video settings</a></h2>
+
+<img src="../images/prefs-images/media-video-settings.png" alt="Video settings" />
+
+<p>Depending on your hardware and driver support, you can select the <span class="menu">Video input</span> and <span class="menu">Video output</span>.<br />
+As with the audio settings, clicking <span class="button">Restart media services</span> might fix the odd hiccup.</p>
 
 </div>
 </div>

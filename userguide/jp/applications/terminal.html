@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -79,7 +79,7 @@
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="windows-tabs" name="windows-tabs">ウィンドウとタブ</a></h2>
-<p>必要に応じていくつでもターミナルを開けます。すでに実行中のターミナルから、<span class="key">ALT</span> <span class="key">N</span> で新しいウィンドウを開くか、<span class="key">ALT</span> <span class="key">T</span> で新しいタブを開きます。</p>
+<p>単純に多くのターミナルを起動するか、すでに実行中のターミナルから、<span class="key">ALT</span> <span class="key">N</span> で新しいウィンドウを開くことで、必要に応じていくつでもターミナルを開けます。また、ターミナルのタブビューを使って <span class="key">ALT</span> <span class="key">T</span> で新しいタブを開けます。</p>
 <img src="../images/apps-images/terminal.png" alt="terminal.png" />
 <br />
 <p>タブの空白部分をダブルクリックすると新しいタブが開き、タブをダブルクリックするとタイトルを編集するダイアログが開きます。% で指定された変数はいくつかあり、テキストフィールド上にマウスを移動させると説明がツールチップで表示されます。<br />
@@ -95,7 +95,8 @@
 <br />
 <p>用意された設定のほとんどは見ればわかるものですが、すべてが明らかなものではありません。フォントサイズは<span class="menu">フォント (Font)</span> ポップアップメニューのサブメニューで設定されます。<br />
 マウスポインターでタブとウィンドウタイトルの命名用の "式" を指すと、利用可能な変数についてのツールチップが表示されます。<br />
-<span class="menu">ミッドナイト (Midnight)</span> や<span class="menu">レトロ (Retro)</span> のような設定済み配色パターンを選択できます。また、変更する色 (<span class="menu">テキスト (Text)</span>、<span class="menu">背景 (Background)</span>、<span class="menu">カーソル (Cursor)</span> など) を選び、下にあるカラーピッカーで、<span class="menu">カスタム (Custom)</span> 配色を作成できます。</p>
+<span class="menu">ミッドナイト (Midnight)</span> や<span class="menu">レトロ (Retro)</span> のような設定済み配色パターンを選択できます。また、<span class="menu">カラー (Color)</span> メニューで、変更する部位 (<span class="menu">テキスト (Text)</span>、<span class="menu">背景 (Background)</span>、<span class="menu">カーソル (Cursor)</span> など) を選び、下にあるカラーピッカーで、<span class="menu">カスタム (Custom)</span> 配色を作成できます。</p>
+<p>また、<span class="menu">カラー (Color)</span> メニューで "ANSI カラー" を構成できます。これらはターミナルアプリケーションのカラーパレット内の最初の 8 個の名前付きの色です。たとえば、"<i>ANSI レッドカラー</i>"を下のカラーピッカーで調整します。その効果は、その色を使用するターミナルアプリケーションを試用するまで見えません。いろいろな場所で使用されている正確な色は <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a> で文書化されています。</p>
 <p>続けて、いくつかのオプションについて: <span class="menu">カーソルを点滅させる (Blinking cursor)</span> を使用でき、<span class="menu">太字を有効にする (Allow bold text)</span> を選択できます。<br />
 <span class="menu">左オプションキーをメタキーとして使う (Use left Option as Meta key)</span> GNU Emacs や GNU readline ライブラリのような ASCII キャラクタセットの拡張部分へのアクセスに依存する特定のUNIXソフトワエアと作業する場合。<br />
 <span class="menu">実行中のプログラムがある場合、終了時に確認する (Confirm exit if active programs exist)</span> チェックボックスを有効にすると、アプリケーションがまだ実行されている時に、ターミナルウィンドウを閉じようとすると警告されるでしょう。</p>
@@ -144,10 +145,10 @@
 <tr><td><span class="menu">カレントディレクトリへ移動 (Move here)</span></td><td> </td><td>ドラッグされたファイルをカレントディレクトリへ移動。</td></tr>
 <tr><td><span class="menu">カレントディレクトリへコピー (Copy here)</span></td><td> </td><td>ドラッグされたファイルをカレントディレクトリにコピー。</td></tr>
 </table></li>
-<li><p><span class="cli">open <i>[filename]</i></span> コマンドでどのファイルも標準アプリケーションで開けます。これは現在 ("<span class="cli">.</span>") と親 ("<span class="cli">..</span>") のフォルダー表現でも動作可能で、Tracker ウィンドウで開かれます。現在作業中のディレクトリを開くには、</p>
-<pre class="terminal">open .</pre> <p>と入力してください。</p>
-</li></ul>
-
+<li><p><span class="cli">open <i>[filename]</i></span> コマンドであらゆるファイルも優先アプリケーションで開けます。これは現在の ("<span class="cli">.</span>") フォルダーと親 ("<span class="cli">..</span>") フォルダーの表現でも動作可能で、Tracker ウィンドウ内に開かれます。現在作業中のディレクトリを開くには以下のように入力してください。</p>
+<pre class="terminal">open .</pre>
+</li>
+<li><p>コマンドが大量の出力を生成すると、いろいろなものがどんどんスクロールします。これらのコマンドをいくつか使用すると、スクロールバックして最新の出力のスタート地点を探すのが難しくなります。<span class="menu">編集 | すべてをクリア (Edit | Clear all)</span> または <span class="key">ALT</span> <span class="key">L</span> で、コマンドが問題を起こす前にスクロールバックバッファーをクリアできます。すぐに、まっさらなスクロールバッファーにより、スクロールバーを上にスクロールするだけで出力のスタート地点を見つけられます。</p></li></ul>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -16,7 +16,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Media</title>
+	<title>Media-asetukset</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
@@ -62,7 +62,17 @@
 <div id="content">
 <div>
 
-<h2><img src="../../images/prefs-images/media-icon_64.png" alt="media-icon_64.png" width="64" height="64" />Media</h2>
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Hakemisto</td></tr>
+<tr class="index"><td>
+				<a href="#audiosettings">Audioasetukset</a><br />
+                <a href="#audiomixer">Audiomikseri</a><br />
+                <a href="#hdaudio">HD audio</a><br />
+				<a href="#midi">MIDI</a><br />
+				<a href="#videosettings">Videoasetukset</a></td></tr>
+</table>
+
+<h2><img src="../../images/prefs-images/media-icon_64.png" alt="media-icon_64.png" width="64" height="64" />Media-asetukset</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Työpöytäpalkki:</td><td style="width:15px;"></td><td><span class="menu">Asetukset</span></td></tr>
 <tr><td>Sijainti:</td><td></td><td><span class="path">/boot/system/preferences/Media</span></td></tr>
@@ -70,7 +80,89 @@
 <span class="path">~/config/settings/System Audio Mixer</span><br />
 <span class="path">~/config/settings/MediaPrefs Settings</span> - Tallentaa paneelin ikkunasijainnin.</td></tr>
 </table>
-<p>Dokumentaatio puuttuu yhä. Jos haluat työstää sitä, ilmoita siitä <a href="http://www.freelists.org/list/haiku-doc">Dokumentaatiopostituslistalla</a> kaksinkertaisen työn välttämiseksi.</p>
+
+<p>Media-asetukset ohjaa järjestelmän audio- ja videoasetuksia. Nuo ulottuvat jokapäiväisistä tehtävistä kuten äänenvoimakkuuden säätäminen aivan alimman tason säätämisestä joita useimmat käyttäjät eivät koskaan tarvitse. Eri asetukset on ryhmitetty luokkiin.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="audiosettings" name="audiosettings">Audioasetukset</a></h2>
+
+<img src="../images/prefs-images/media-audio-settings.png" alt="Audio settings" />
+
+<p>Siinä tapauksessa, että tietokoneessasi on useampi kuin yksi audioliitäntä, voit valita arvon valikoista <span class="menu">Audiosyöte</span>, <span class="menu">Audiolähtö</span> ja mitä <span class="menu">Kanava</span>a käytetään. Niissä harvinaisissa tapauksissa kun jotain järjestetään uudelleen jonoon audio-/videojärjestelmässäsi, kokeile napsauttaa <span class="button">Käynnistä mediapalvelut uudelleen</span>-painiketta.</p>
+
+<p>Voit myös valita <span class="button">Näytä voimakkuusohjaus Työpöydällä</span>-valinnan. Se lisää pienen kuvakkeen Työpöytäpalkkiin:</p>
+
+<img src="../images/prefs-images/media-replicant.png" alt="Volume control of the Deskbar" />
+
+<p>Työpöytäpalkin kuvakkeen vasemman eli ykköspainikkeen napsaus ponnauttaa näkyviin voimakkuuden liukusäätimen, jolla ohjataan master-lähtöä. Vaihtoehtoisesti hiiren rullan käyttö suoraan kuvakkeen päällä muuttaa myös äänenvoimakkuuden. Kuten näet pienestä oikean alakulman <a href="../gui.html#replicants">Kopiot-kahvasta</a> voit upottaa tämän liukusäätimen esimerkiksi Työpöydälle.</p>
+
+<p>Työpöytäpalkin oikean eli kakkospainikkeen napsauttaminen avaa valikon pikakuvakkeilla <span class="menu">Media-asetukset</span>, <span class="menu">Ääniasetukset</span> ja avaa <span class="menu">MediaSoitin</span>-sovellus.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="audiomixer" name="audiomixer">Audiomikseri</a></h2>
+
+<p>Audiomikseri sallii sinun ohjata järjestelmän eri audiovirtojen voimakkuutta, esimerkiksi nykyisen suoritettavan sovelluksen audiolähtöä.</p>
+
+<img src="../images/prefs-images/media-audio-mixer-1.png" alt="Gain controls" />
+
+<p>Tässä näemme master-lähdön ja parhaillaan suoritettavan MediaSoitin-sovelluksen äänenvoimakkuusliukusäätimen ja SDL-audiota käyttävän pelin. Näiden liukusäätimien avulla voit yhdistellä niiden audiolähtöjä niin että esimerkiksi peliäänet eivät vaimenna MediaSoittimen soittolistalta tulevaa musiikkia.</p>
+
+<p>Liukusäätimien 'kaksoisnupit' edustavat stereon vasenta/oikeaa kanavaa. Niitä siirretään normaalisti samanaikaisesti, mutta voit ohjata tasapainoa liikuttamalla vain yhtä nuppia hiiren oikealla eli kakkospainikkeella.<br />
+Virran vaimennus valikosta <span class="menu">Mykistä</span>.</p>
+
+<p>Valikon <span class="menu">Asetukset</span>-välilehti tarjoaa kaikkein alimman tason asetukset:</p>
+
+<img src="../images/prefs-images/media-audio-mixer-2.png" alt="Setup" />
+
+<p>Näiden alimman tason säätöparametrien joukossa — joita luultavasti kokeilet, jos Haiku ei suoraan tue audiolaitteistoasi — on muutamia asetuksia, joista saatat kiinnostua.</p>
+
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Vaimenna mikserilähtöä 3:lla dB:llä</span></td><td width="15"> </td><td>antaa hiukan lisää häiriötöntä tilaa särön välttämiseksi.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Näytä balanssiohjaus stereoyhteyksissä</span></td><td> </td><td>lisää balanssiliukusäätimen voimakkuusliukusäätimen alapuolelle <span class="menu">Voimakkuusohjaus</span>-välilehteen 'kaksoisnuppien' sijasta.</td></tr>
+<tr><td><span class="menu">Salli lähtö-/syötekanavien uudelleenkuvaus</span></td><td> </td><td>avaa uudet välilehdet yhden kanavan sijoittamiseksi yhteen tai useampaan ja niiden voimakkuuden säätämiseksi. Esimerkiksi voit liittää vasemman lähtökanavat eteen vasemmalle ja keskelle ja asettaa eri voimakkuudet.</td></tr>
+<tr><td><span class="menu">Uudellenäytteytysalgoritmi</span></td><td> </td><td>on valitsimet <span class="menu">Alhainen laatu</span> (alhainen prosessorikäyttö ja viive) ja <span class="menu">Korkea laatu</span> (lievästi korkeampi prosessorikäyttö ja viive).</td></tr>
+</table>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hdaudio" name="hdaudio">HD-audio (nimeäminen riippuu laitteistosta)</a></h2>
+
+<p>Kun audiomikseri käsittelee eri audiovirtojen suoritusta kautta Haikun, tämä ohjaa fyysistä syötettä/lähtöä.</p>
+
+<img src="../images/prefs-images/media-hdaudio.png" alt="HD Audio, input" />
+
+<p>Siinä on kolme välilehteä:</p>
+
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Yleinen</span></td><td width="15"> </td><td>asettaa valikot <span class="menu">Syötetaajuus</span> ja <span class="menu">Lähtötaajuus</span>.</td></tr>
+<tr><td><span class="menu">Lähtö</span></td><td> </td><td>asettaa kaiuttimien ja kuulokkeiden lähtötasot.</td></tr>
+<tr><td><span class="menu">Syöte</span></td><td> </td><td>asettaa linjaliittimen ja mikrofonin syötetasot.</td></tr>
+</table>
+
+<p>On sanottava, että nämä laitteistotasoasetukset voivat näyttää hiukan huolimattomilta...<br />
+Haiku koestaa laitteistoa ja yrittää saada järkeä tiedosta, jotka tulevat vastaukseksi. Saatat nähdä eri kaksoiskappaleliukusäätimiä samalla otsakkeella jne. Sinun on kokeiltava hiukan löytääksesi sen mitä etsit.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="midi" name="midi">MIDI</a></h2>
+
+<p>MIDI-asetukset näyttävät kaikki asennetut Äänikirjasimet, toisin sanoen instrumenttimäärittelyt. Valitse vain yksi, josta pidät. Kohteen kaksoisnapsautus avaa yläpuolella olevan kansion.</p>
+
+<img src="../images/prefs-images/media-midi.png" alt="MIDI SoundFonts" />
+
+<p>Löydät muutamia Äänikirjasimia HaikuVarastosta; ne näkyvät automaattisesti asennuksen jälkeen.
+Netistä ladatut Äänikirjasimet on siirrettävä manuaalisesti kohteeseen <span class="cli">/boot/system/non-packaged/data/synth/</span> (tai vastaavaan Home-hierarkiaan, katso aihe <a href="../filesystem-layout.html">Tiedostojärjestelmäsijoittelu</a>).</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="videosettings" name="videosettings">Videoasetukset</a></h2>
+
+<img src="../images/prefs-images/media-video-settings.png" alt="Video settings" />
+
+<p>Laitteisto- ja ajurituestasi riippuen voit valita arvot valikoista <span class="menu">Videosyöte</span> ja <span class="menu">Videolähtö</span>.<br />
+Kuten audioasetuksissa, painikkeen <span class="button">Käynnistä mediapalvelut uudelleen</span> napsauttamien saattaa korjata oudot takeltelut.</p>
 
 </div>
 </div>

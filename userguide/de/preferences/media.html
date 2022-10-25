@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -18,7 +18,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Media</title>
+	<title><acronym title="Media">Audio &amp; Video</acronym></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
@@ -55,7 +55,7 @@
 <li><a href="../../jp/preferences/media.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="locale.html">Locale</a> 
+ «  <a href="locale.html">Sprache</a> 
 ::  <a href="../preferences.html" class="uplink">Einstellungen</a> 
 ::  <a href="network.html">Netzwerk</a>  »
 </span></div>
@@ -63,6 +63,16 @@
 
 <div id="content">
 <div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td>
+				<a href="#audiosettings">Audio-Einstellungen</a><br />
+                <a href="#audiomixer">Audiomixer</a><br />
+                <a href="#hdaudio">HD Audio</a><br />
+				<a href="#midi">MIDI</a><br />
+				<a href="#videosettings">Video-Einstellungen</a></td></tr>
+</table>
 
 <h2><img src="../../images/prefs-images/media-icon_64.png" alt="media-icon_64.png" width="64" height="64" /><acronym title="Media">Audio &amp; Video</acronym></h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
@@ -72,14 +82,96 @@
 <span class="path">~/config/settings/System Audio Mixer</span><br />
 <span class="path">~/config/settings/MediaPrefs Settings</span> - Speichert die Position des Programmfensters.</td></tr>
 </table>
-<p>Dieses Thema wurde noch nicht beschrieben. Wer daran arbeiten möchte, meldet sich bitte auf der <a href="http://www.freelists.org/list/haiku-doc">Documentation Mailingliste</a>.</p>
+
+<p>Mit den <acronym title="Media">Audio &amp; Video</acronym> Einstellungen lassen sich eben diese im Systems steuern. Das geht vom oft genutzten Anpassen der Lautstärke bis zu recht hardware-nahen Optionen, die die meisten Nutzer wahrscheinlich nie brauchen werden. Die verschiedenen Einstellungsmöglichkeiten sind in Gruppen gegliedert.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="audiosettings" name="audiosettings">Audio-Einstellungen</a></h2>
+
+<img src="../images/prefs-images/media-audio-settings.png" alt="Audio settings" />
+
+<p>Befinden sich mehrere Audio-Schnittstellen im Rechner, lässt sich einstellen welcher <span class="menu">Audio-Eingang</span>, <span class="menu">Audio-Ausgang</span> und welcher <span class="menu">Kanal</span> benutzt werden soll. Sollte mal etwas mit Audio/Video im System schief laufen, kann man es mit <span class="button">Mediadienste neustarten</span> probieren.</p>
+
+<p>Aktiviert man <span class="button">Lautstärkeregelung in Deskbar</span> erscheint ein entsprechendes Icon im Tray der Deskbar.</p>
+
+<img src="../images/prefs-images/media-replicant.png" alt="Volume control of the Deskbar" />
+
+<p>Ein Linksklick darauf blendet einen Schieberegler ein, der die Lautstärke des Master-Ausgangs steuert. Alternativ lässt sich die Lautstärke auch direkt per Mausrad auf dem Icon ändern. Wie man an dem kleinen <a href="../gui.html#replicants">Replikant-Symbol</a> unten rechts erkennt, kann der Schieberegler beispielsweise auch auf dem Desktop eingebettet werden.</p>
+
+<p>Ein Rechtsklick öffnet ein Menü für den Schnellzugrff auf die Einstellungspanels von <span class="menu">Audio &amp; Video</span> und <span class="menu">Klänge</span>, außerdem kann man den <span class="menu">MediaPlayer öffnen</span>.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="audiomixer" name="audiomixer">Audiomixer</a></h2>
+
+<p>Mit dem Audiomixer können die Lautstärken der vorhandenen Audio-Streams gesteuert werden, beispielsweise die Audioausgabe der gerade laufenden Programme.</p>
+
+<img src="../images/prefs-images/media-audio-mixer-1.png" alt="Gain controls" />
+
+<p>Hier sehen wir den "Master-Ausgang" und die Lautstärkeregler des gerade laufenden MediaPlayers und eines Spiels das 'SDL Audio" nutzt. Mit diesen Reglern lassen sich die einzelnen Audioausgaben so mixen, dass z. B. der Sound des Spiels nicht die Musik übertönt, die von MediaPlayers Playliste kommt.</p>
+
+<p>Die 'Doppelknöpfe' der Schieberegler repräsentieren Links/Rechts eines Stereosignals. Sie bewegen sich normalerweise gemeinsam, benutzt man jedoch die rechte Maustaste, können sie einzeln bewegt und so die Balance geändert werden.<br />
+Ein Häkchen bei <span class="menu">Stumm</span> schaltet die Ausgabe des Streams ganz ab.</p>
+
+<p>Unter dem Reiter <span class="menu">Einstellungen</span> befinden sich die zumeist hardware-nahe Optionen:</p>
+
+<img src="../images/prefs-images/media-audio-mixer-2.png" alt="Setup" />
+
+<p>Unter all diesen low-level Parametern — mit denen man wahrscheinlich nur experimentiert, falls Haiku die eigene Audio-Hardware nicht schon mit den Standardwerten unterstützt — gibt ein paar eventuell interessante Optionen.</p>
+
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Mixerausgang um 3 dB dämpfen</span></td><td width="15"> </td><td>gewährt etwas mehr Spielraum, um 'Clipping' zu vermeiden.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Balance-Regler für Stereo-Verbindungen anzeigen</span></td><td> </td><td>zeigt Balanceregler unter den Lautstärkereglern im  <span class="menu">Lautstärke</span> Reiter anstatt der 'Doppelknöpfe'.</td></tr>
+<tr><td><span class="menu">Neuzuordnung der Aus/Eingabekanäle erlauben</span></td><td> </td><td>zeigt weitere Reiter, in denen ein Kanal einem oder mehreren anderen Kanälen zugeordnet und deren Lautstärke angepasst werden können. Beispielsweise lässt sich der linke Ausgabekanal auf vorn-links, hinten-links und Mitte aufteilen und jeweils unterschiedliche Lautstärken zuweisen.</td></tr>
+<tr><td><span class="menu">Resample Algorithmus</span></td><td> </td><td>hat Optionen für <span class="menu">Geringe Qualität</span> (geringe CPU-Auslastung und Latenz) und <span class="menu">Hohe Qualität</span> (etwas höhere CPU-Auslastung und Latenz).</td></tr>
+</table>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hdaudio" name="hdaudio">HD Audio (Benennung ist abhängig von der Hardware)</a></h2>
+
+<p>Während der Audiomixer die verschiedenen Audio-Streams im System steuert, werden hier die physischen Ein/Ausgaben konfiguriert.</p>
+
+<img src="../images/prefs-images/media-hdaudio.png" alt="HD Audio, input" />
+
+<p>Es gibt drei Reiter:</p>
+
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Allgemein</span></td><td width="15"> </td><td>konfiguriert die <span class="menu">Eingangsfrequenz</span> und <span class="menu">Ausgangsfrequenz</span>.</td></tr>
+<tr><td><span class="menu">Ausgang</span></td><td> </td><td>steuert die Ausgangslautstärke von Lautsprecher und Kopfhörer.</td></tr>
+<tr><td><span class="menu">Eingang</span></td><td> </td><td>steuert die Eingangslautstärke für Line-in und Mikrofon.</td></tr>
+</table>
+
+<p>Zugegebenermaßen kann die Lautstärkeregelung der Hardware etwas chaotisch erscheinen...<br /> 
+Haiku fragt die Hardware ab und versucht das Beste aus dem zu machen was da zurückkommt. Beispielsweise können dabei manchmal Regler mit derselben Beschriftung mehrmals erscheinen. Da muss man dann etwas experimentieren bis man den Richtigen findet.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="midi" name="midi">MIDI</a></h2>
+
+<p>Die MIDI-Einstellungen zeigen alle installierten SoundFonts (Sammlungen von Instrumentendefinitionen). Aus der Liste einfach den auswählen, der verwendet werden soll. Ein Doppelklick auf einen SoundFont öffnet dessen Ordner.</p>
+
+<img src="../images/prefs-images/media-midi.png" alt="MIDI SoundFonts" />
+
+<p>Einige SoundFonts finden sich in HaikuDepot; sie erscheinen nach der Installation automatisch in der Liste. Selbst aus dem Web heruntergeladene SoundFonts müssen erst von Hand nach <span class="cli">/boot/system/non-packaged/data/synth/</span> verschoben werden (oder dem entsprechenden Ort in der Home-Hierarchie, siehe Kapitel <a href="../filesystem-layout.html">Dateisystem Layout</a>).</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="videosettings" name="videosettings">Video-Einstellungen</a></h2>
+
+<img src="../images/prefs-images/media-video-settings.png" alt="Video settings" />
+
+<p>Je nach verwendeter Hardware und Treiberunterstützung, lässt sich hier 
+<span class="menu">Video-Eingang</span> and <span class="menu">Video-Ausgang</span> wählen.<br />
+Wie bei den Audio-Einstellungen kann man probieren per <span class="button">Mediadienste neustarten</span> eventuelle Probleme zu beheben.</p>
 
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="locale.html">Locale</a> 
+ «  <a href="locale.html">Sprache</a> 
 ::  <a href="../preferences.html" class="uplink">Einstellungen</a> 
 ::  <a href="network.html">Netzwerk</a>  »
 </span></div>

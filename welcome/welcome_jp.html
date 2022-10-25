@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,15 +62,15 @@
 
 <div id="content">
 <div>
-<div class="box-info">このページの翻訳はまだ完全ではありません。完成するまでは、未完成の部分はオリジナルの英文を使用します。</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>インデックス</td></tr>
 <tr class="index"><td>	<a href="#welcome">Haiku へようこそ!</a><br />
 	<a href="#system">システムを把握する</a><br />
 	<a href="#bugreport">バグに注意</a><br />
-	<a href="#software">ソフトウェアをインストールする</a><br />
-	<a href="#update">Haiku を更新する</a><br />
+	<a href="#update">Haiku のインストールと更新</a><br />
+	<a href="#software">新しいソフトウェアをインストールする</a><br />
+	<a href="#localized">Haiku の国際化</a><br />
 	<a href="#wifi">Haiku で Wifi を使用する</a><br />
 	<a href="#api">API を理解する</a><br />
 	<a href="#contact">連絡を取る</a>
@@ -85,13 +85,13 @@
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">システムを把握する</a></h2>
-<p>最初の Haiku のリリースは BeOS R5 によく似た、それを再実装するオペレーティングシステムになる予定ですが、長年 Haiku チームによって開発された多くの追加項目や改良があります。そのため、読者が戻ってきた BeOS ユーザーか新規ユーザーならこれらのリンクを見てください:</p>
+<p>Haiku の最初のリリースは BeOS R5 によく似た、それを再実装するオペレーティングシステムになる予定ですが、長年 Haiku チームによって開発された多くの追加項目や改良があります。そのため、読者が復帰した BeOS ユーザーや新規ユーザーなら次のリンクを見てください:</p>
 <table cellspacing="16" border="0">
-<tr><td align="center"><a href="jp/quicktour.html"><img src="images/quicktour_icon_96.png" /></a><p><a href="jp/quicktour.html">Haiku Quick Tour</a></p></td>
+<tr><td align="center"><a href="jp/quicktour.html"><img src="images/quicktour_icon_96.png" /></a><p><a href="jp/quicktour.html">Haiku クイックツアー</a></p></td>
 <td width="24"></td>
-<td align="center"><a href="../userguide/jp/contents.html"><img src="images/userguide_icon_96.png" /></a><p><a href="../userguide/jp/contents.html">Haiku User Guide</a></p></td></tr>
+<td align="center"><a href="../userguide/jp/contents.html"><img src="images/userguide_icon_96.png" /></a><p><a href="../userguide/jp/contents.html">Haiku ユーザーガイド</a></p></td></tr>
 </table>
-<p>For more interactive help and support, become part of the <a href="https://www.haiku-os.org/community/" class="printurl">Haiku community</a> and join our forums and chat channel.</p>
+<p>より対話的なヘルプやサポートは、<a href="https://www.haiku-os.org/community/" class="printurl">Haiku コミュニティ</a> の一部なので、フォーラムやチャットチャンネルに参加してください。</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -107,15 +107,22 @@
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="update" name="update">Haiku のインストールと更新</a></h2>
+<p>インストールがまだであれば、私たちのオンライン<a href="https://www.haiku-os.org/get-haiku/installation-guide/">インストールガイド</a>でパーティションの作成とハードドライブへの Haiku のインストールについて説明しています。</p>
+<p>Haiku の更新は、サードパーティパッケージのアップデートと同様に、<a href="../userguide/jp/applications/softwareupdater.html">ソフトウェアの更新 (SoftwareUpdater)</a> アプリケーションで行います。アップデート終了後、再起動します。<br />
+さらに詳しくは、ウェブサイトのガイド、<a href="https://www.haiku-os.org/guides/daily-tasks/updating-system">システムのアップデートとダウングレード</a> を参照ください。</p>
+
+<h2>
+<a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="software" name="software">ソフトウェアを追加する</a></h2>
 <p>ほとんどの利用可能なソフトウェアは、Haiku に付属のアプリケーション、<a href="../userguide/jp/applications/haikudepot.html">HaikuDepot</a> でダウンロードおよびインストールできます。<br />ほとんどの BeOS 向けアプリケーションはバイナリとソースコードの互換性から Haiku でも動作します。その多くは Haiku 用に再パッケージされているか、修正なしに動作します。新しいアプリケーションのインストールに関する追加の情報はユーザーガイドの<a href="../userguide/jp/applications.html">アプリケーション</a>の章に見つかります。</p>
 <p>コミュニティベースのソフトウェアコレクションがいくつかあります。ウェブサイトの<a href="https://www.haiku-os.org/community/software">ソフトウェアサイト (Software Sites)</a> ページを参照ください。</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="update" name="update">Haiku を更新する</a></h2>
-<p>Haiku の更新は、サードパーティパッケージのアップデートと同様に、<a href="../userguide/jp/applications/softwareupdater.html">ソフトウェアの更新 (SoftwareUpdater)</a> アプリケーションで行います。アップデート終了後、再起動します。<br />
-さらに詳しくは、ウェブサイトのガイド、<a href="https://www.haiku-os.org/guides/daily-tasks/updating-system">システムのアップデートとダウングレード</a> を参照ください。</p>
+<a id="localized" name="localized">Haiku の国際化</a></h2>
+<p>Haiku は数十の言語に翻訳されており、たくさんのキーマップをサポートします。Haiku を最初に起動する際に、言語とキーマップを設定できます。これらの設定は <a href="../userguide/jp/preferences/locale.html">言語と書式 (Locale)</a> および <a href="../userguide/jp/preferences/keymap.html">キーマップ (Keymap)</a> プリファレンスを使っていつでも変更できます。<br />
+The <a href="../userguide/jp/applications/haikudepot.html">HaikuDepot</a> アプリケーションは、ダウンロードおよびインストールできる中国語、日本語、および韓国語のインプットメソッドをいくつか提供します。</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -125,7 +132,7 @@
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="api" name="api">API を理解する</a></h2>
-<p>Haiku は再実装のため、API は BeOS R5 とまだ同じです (少しの追加があります)。そのため、Be Book にあるドキュメントはまだ有用な情報です。かつての Be Inc. の所有物の権利を持つ ACCESS に感謝します。私たちは Be Book のコピーを提供することを許可されています。<br />BeOS API から離れたところ、および Haiku 特有の追加事項は Haiku Book に集められています。</p>
+<p>Haiku は再実装のため、API は BeOS R5 とまだ同じです (少しの追加があります)。そのため、Be Book にあるドキュメントはまだ有用な情報です。かつての Be Inc. の所有物の権利を持つ ACCESS に感謝します。私たちは Be Book のコピーを提供することを許可されています。<br />BeOS API から離れたところ、および Haiku 特有の追加事項は Haiku Book にまとめられています。</p>
 
 <p>以下は、始める際に手助けになるいくつかのドキュメントです。</p>
 <ul>

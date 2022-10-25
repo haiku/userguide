@@ -62,7 +62,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Hakemisto</td></tr>
@@ -101,7 +100,8 @@
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list" name="list">Luettelo</a></h2>
 <p>Kuten missä tahansa Seuraaja-ikkunassa, voit valita asiayhteysvalikosta mitkä sarakkeet näytetään napsauttamalla sarakeotsaketta hiiren kakkospainikkeella. Ykköspainike lajittelee luettelon tuon sarakkeen mukaiseksi. Tietysti voit järjestää sarakkeet uudelleen raahaamalla ne uuteen paikkaan.</p>
-<p>Pakkauksen tilasarakkeessa voi olla yksi seuraavista tiloista:</p>
+<p>Sarake <span class="menu">Päivämäärä</span> näyttää milloin pakkaus on lisätty tai päivitetty. Tämän sarakkeen lajittelulla nähdään luettelon yläpäässä, että mikä on uutta tai päivitettyä.</p>
+<p>Pakkauksen sarakkeessa <span class="menu">Tila</span> voi olla yksi seuraavista tiloista:</p>
 <ul>
 <li><p><span class="menu">Aktiivi</span>: Pakkaus on asennettu ja valmiina käytettäväksi.</p></li>
 <li><p><span class="menu">Saatavilla</span>: Pakkaus on tässä tietovarastossa ja se voidaan ladata ja asentaa. Jos pakkauksella on riippuvuuksia muihin pakkauksiin, sinulle kerrotaan siitä asennuksen aikana ja tarjotaan mahdollisuus ladata/asentaa kaikki välttämätön.</p></li>
@@ -132,11 +132,11 @@ Keskellä on käyttäjäkommentteja käyttäjätunnuksilla, heidän antamiensa t
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">HaikuDepot and Show menu</a></h2>
-<p>In the <span class="menu">HaikuDepot</span> menu at the top of the window, you'll find an item to <span class="menu">Refresh repositories</span>. This will request an up-to-date list of all available packages from the repositories.<br />
-The second item is to <span class="menu">Manage repositories...</span>. It opens the <a href="../preferences/repositories.html">Repositories</a> preferences, to add/remove or disable and enable repositories.<br />
-<span class="menu">Check for updates...</span> opens the <a href="../apps/softwareupdater.html">SoftwareUpdater</a> to search and install updated packages.<br />
-<span class="menu">Settings...</span> opens a window with the currently only option: <span class="menu">Share anonymous usage data with HaikuDepotServer</span>. The data is used to, for example, increase a counter on how often a package is viewed and installed, which then can determine if a package is promoted to the "Featured packages" list.</p>
+<a id="menu" name="menu">HaikuVarasto- ja Näytä-valikko</a></h2>
+<p><span class="menu">HaikuVarasto</span>-valikosta ikkunan yläosassa löydät rivin <span class="menu">Päivitä tietovarastot</span>. Tämä pyytää tietovarastoista ajantasaisen luettelon kaikista saatavilla olevista pakkauksista.<br />
+Toinen rivi on <span class="menu">Hallinnoi tietovarastoja...</span>. Se avaa <a href="../preferences/repositories.html">Tietovarastot</a>-asetusohjelman tietovarastojen lisäämiseksi/poistamiseksi tai tietovarastojen ottamiseksi käyttöön tai niiden poistamiseksi käytöstä.<br />
+<span class="menu">Tarkista päivitykset</span> avaa <a href="../apps/softwareupdater.html">Ohjelmistopäivittäjän</a> päivitettyjen pakkausten etsimiseksi ja asentamiseksi.<br />
+<span class="menu">Asetukset...</span> avaa ikkunan nykyisin vain yhteen valitsimeen: <span class="menu">Jaa anonyymeja käyttäjätietoja HaikuDepotServer-palvelimen kanssa</span>.  Tietoja käytetään esimerkiksi kasvattamaan laskuria siitä, että kuinka usein pakkausta katsotaan ja asennetaan, mitä voidaan silloin käyttää, jos pakkaus ylennetään "Jakeluversiopakkaukset"-luetteloon.</p>
 <p>Valikosta <span class="menu">Näytä</span> voit valita pakkausten luettelosta <span class="menu">Kehityspakkaukset</span> ja <span class="menu">Lähdekoodipakkaukset</span>. Normaalikäyttäjille ne eivät ole kiinnostavia ja vain sekoittaisivat luetteloa. Ne ovat kuitenkin tärkeitä ihmisille, jotka tarvitsevat pakkausten kirjastoja, otsaketiedostoja jne. niistä riippuvien ohjelmien kehittämiseksi ja kääntämiseksi ohjelmakielistä toimivaksi ohjelmiksi.</p>
 <p>Kiinnostavampia ovat valitsimet, jotka näyttävät vain <span class="menu">Saatavilla olevat pakkaukset</span> ja <span class="menu">Asennetut pakkaukset</span>.</p>
 
@@ -149,9 +149,9 @@ The second item is to <span class="menu">Manage repositories...</span>. It opens
 <li>käytettävä salasanaa, jossa on vähintään 8 merkkiä, joista vähintään 2 on suuria kirjaimia ja 2 numeroita</li>
 <li>tarjottava sähköpostiosoite (jos haluat uuden salasana lähetettäväksi siinä tapauksessa että unohdat sen)</li>
 <li>ratkaistava captcha-kuva-arvoitus</li>
-<li>tick the checkboxes to confirm you're over 16 and have read the usage conditions linked below them.</li></ul>
+<li>ruksaa valintoja vahvistaaksesi, että olet yli 16-vuotias ja olet lukenut niiden alapuolella linkitetyt käyttöehdot.</li></ul>
 <p>Kirjautumisen jälkeen HaikuVaraston valikon yläoikealla lukee <span class="menu">Kirjautuneena tunnuksella (...)</span>, mikä näyttää käyttäjätunnuksesi. Valikko tarjoaa nyt sinulle <span class="menu">Vaihda tiliä...</span> tai <span class="menu">Kirjaudu ulos</span>.</p>
-<p>As a reminder of what you actually agreed to when you ticked the above mentioned checkbox, there are menu items to <span class="menu">View latest/agreed usage conditions...</span></p>
+<p>Muistutuksena siitä mitä itse asiassa hyväksyit, kun ruksasit yllä mainittuja valintaruutuja, näkyvissä on valikkorivejä <span class="menu">Katso viimeisimmät/hyväksytyt käyttöehdot...</span></p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="rating" name="rating">Arvosanat ja kommentointi</a></h2>
@@ -163,7 +163,7 @@ The second item is to <span class="menu">Manage repositories...</span>. It opens
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="logs" name="logs">Diagnostiikkalokitiedostot</a></h2>
-<p>Kun HaikuVarastoa käytetään, se keskustelee niin verkon kuin paikallisten palvelujen kanssa. Asiat voivat mennä pieleen, joskus tavoilla, joita ei odoteta, kun sovellusta kirjoitetaan. Niissä tapauksissa virheilmoitus on aivan määrittelemätön. Tietyn pulman diagnostoimisen helpottamiseksi HaikuVarasto voi tarjota lokitiedoston siitä, mitä sovellus tekee.</p>
+<p>Kun HaikuVarastoa käytetään, se keskustelee niin verkon kuin paikallisten palvelujen kanssa. Asiat voivat mennä pieleen, joskus tavoilla, joita ei odoteta, kun sovellusta koodataan. Niissä tapauksissa virheilmoitus on aivan määrittelemätön. Tietyn pulman diagnostoimisen helpottamiseksi HaikuVarasto voi tarjota lokitiedoston siitä, mitä sovellus tekee.</p>
 <p>Virheilmoitus saattaa suositella katsomaan lokitiedostosta lisätietoja tai sinua saatetaan pyytää tarjoamaan lokitiedosto, kun teet vikailmoituksen Haikun <a href="https://dev.haiku-os.org/">vianjäljitysjärjestelmässä</a>.</p>
 <p>Diagnostiikkalokitiedostojen katsomiseksi HaikuVarasto on käynnistettävä <a href="terminal.html">Pääteikkuna</a>-sovelluksesta:</p>
 <pre>HaikuDepot -v debug</pre>
@@ -172,7 +172,7 @@ The second item is to <span class="menu">Manage repositories...</span>. It opens
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tips" name="tips">Vihjeet</a></h2>
-<p>Tämä ei onnistu suoraan HaikuVarasto-sovelluksesta, mutta on yksi tapa seurata uusia ja päivittyjä pakkauksia. Sitä varten sinun on luotava RSS ATOM-syöte <a href="https://depot.haiku-os.org">Haiku Depot Server</a>-webbisivulla. Napsauta ”hamburger”-pienoisohjelmaa oikeassa yläkulmassa ja valitse syöteverkko-osoite <span class="menu">Build Feed URL</span> kohdan Data alta.<br />
+<p>Sarakkeen <span class="menu">Päivämäärä</span> lajittelun lisäksi on toinen tapa pysyä ajantasalla uusista ja päivitetyistä pakkauksista. Sitä varten sinun on luotava RSS ATOM-syöte <a href="https://depot.haiku-os.org">Haiku Depot Server</a>-webbisivulla. Napsauta ”hamburger”-pienoisohjelmaa oikeassa yläkulmassa ja valitse syöteverkko-osoite <span class="menu">Build Feed URL</span> kohdan Data alta.<br />
 Sivulla muutamat mielenkiintoisimmat asetukset: sen lisäksi, että saat uusia/päivitettyjä pakkauksia, voit myös lisätä sinua kiinnostavien pakkausten nimiä. Napsauta painiketta <span class="button">Build Feed URL</span> ja saat RSS-verkko-osoitteen, jonka voit liittää RSS-syötteen lukijaan kuten BePodder, QuiteRSS, fRiSS jne.</p>
 </div>
 </div>

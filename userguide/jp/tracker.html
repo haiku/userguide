@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -54,9 +54,9 @@
 <li><a href="../uk/tracker.html">Українська</a></li>
 </ul>
 <span>
- «  <a href="teammonitor.html">チームモニター</a> 
+ «  <a href="deskbar.html">Deskbar</a> 
 ::  <a href="contents.html" class="uplink">目次</a> 
-::  <a href="tracker-add-ons.html">Tracker アドオン</a>  »
+::  <a href="applications.html">アプリケーション</a>  »
 </span></div>
 </div>
 
@@ -78,15 +78,15 @@
 
 <h1>Tracker</h1>
 
-<p>Tracker はすべてのファイルへのグラフィカルインターフェースです。それは新しいファイルおよびフォルダーの作成や、検索、起動や名前の編集のほかに、既存のファイルのコピーや削除も行います。</p>
+<p>Tracker はあらゆるファイルへのグラフィカルインターフェースです。それは新しいファイルおよびフォルダーの作成や、検索、起動や名前の編集のほかに、既存のファイルのコピーや削除も行います。</p>
 <p>ほかのアプリケーションと同様に (アイコンを備えたデスクトップは実際には背面にある単なるフルスクリーンウィンドウです)、Tracker はそのウィンドウとともに Deskbar 上に現れ、終了および再起動ができます。クラッシュやフリーズした Tracker (あるいは不安定な Deskbar) を終了して再起動するもっとも簡単な方法は、<a href="teammonitor.html">チームモニター</a>を呼び出すことです。</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="mounting-volumes" name="mounting-volumes">ボリュームのマウント</a></h2>
-<p>ハードディスク、CD、USB スティック等にアクセスするためには、まずボリュームをマウントしなければなりません、すなわち、システムにそれがそこにあることを知らせます。ボリュームをマウントするには、デスクトップあるいはマウント済のボリューム (ブートディスク等) を右クリックして <span class="menu">マウント (Mount)</span> サブメニューからボリュームを選択します。Deskbar に同様のマウントメニューが見つかります。</p>
+<p>ハードディスク、CD、USB スティック等にアクセスするには、まずボリュームをマウントしなければなりません、すなわち、システムにそれが存在することを知らせます。ボリュームをマウントするには、デスクトップあるいはマウント済のボリューム (ブートディスク等) を右クリックして <span class="menu">マウント (Mount)</span> サブメニューからボリュームを選択します。Deskbar に同様のマウントメニューが見つかります。</p>
 <img src="images/tracker-images/mount-settings.png" alt="drill-down.png" />
-<p><span class="menu">設定 (Settings)</span> もあるため、起動のたびにすべてを手動でマウントする必要はありません。上図の設定は、接続や挿入されたあらゆる記憶装置を自動的にマウントし、以前にマウントされたすべてのディスクを起動時にマウントするでしょう。</p>
+<p><span class="menu">設定 (Settings)</span> もあるので、起動毎にすべてを手動でマウントする必要はありません。上図の設定は、接続や挿入されたあらゆる記憶装置を自動的にマウントし、以前にマウントされたすべてのディスクを起動時にマウントするでしょう。</p>
 <div class="box-warning">ハードドライブや USB スティック等を取り外す前に、ボリュームが正しくアンマウントされ、アイコンが消えていることを確かめてください。これはデータ転送がすべて終了したことを保証します。そうしないと、データを失うか、あるいはディスクを破損するかもしれません。</div>
 <div class="box-warning">Haiku は、BFS フォーマット以外のボリュームをマウントできます。しかし、これら BFS 以外のファイルシステムは詳しくテストされていないことに注意してください。これらのボリュームへの書き込みは場合によってはデータ破損の原因になるかもしれません。大事を取るなら、マウント時は常に <span class="button">読み取り専用 (Mount read-only)</span> を選んでください!</div>
 
@@ -96,7 +96,7 @@
 <p>デフォルトでは、フォルダーをダブルクリックすると、Tracker は親ウィンドウを開いたままで新しいウィンドウを開きます。これではすぐに散らかったデスクトップになってしまいます。<br />
 これを防ぐには、<span class="key">OPT</span> キーを押します。それにより、自動的に親ウィンドウを閉じます。<br />
 これはまた、キーボードナビゲーションでも当てはまります。さらに詳しくは、<a href="keyboard-shortcuts.html">ショートカットやキーの組み合わせ</a>のトピックを見てください。</p>
-<p>Tracker の主な目的の 1 つは、ほかのプラットフォーム上のファイルマネージャーと同様にフォルダーを移動することです。Haiku の Tracker には、効率的に移動を支援するいくつかの独自の特徴があります。</p>
+<p>Tracker の主目的の 1 つは、ほかのプラットフォーム上のファイルマネージャーと同様にフォルダーを移動することです。Haiku の Tracker には、効率的に移動を支援するいくつかの独自の特徴があります。</p>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a><a id="drill-down" name="drill-down">サブメニューのドリルダウン</a></h3>
@@ -147,7 +147,9 @@
 <li><p><span class="menu">閉じる (Close)</span> (<span class="key">ALT</span> <span class="key">W</span>) - ウィンドウを閉じます。<span class="key">SHIFT</span> を押しながら選択すると、メニューは<span class="menu">すべて閉じる (Close all)</span> となり、すべての Tracker ウィンドウを閉じます。</p></li>
 <li><p><span class="menu">ワークスペース内のすべてを閉じる (Close all in workspace)</span> (<span class="key">ALT</span> <span class="key">Q</span>) - 現在のワークスペース中のすべての Tracker ウィンドウを閉じます。フォルダーをクリックする時に <span class="key">OPT</span> キーを押し忘れ、結果として開いた Tracker ウィンドウでワークスペースが散らかった場合に便利です。</p></li>
 </ul>
-<p>しばしば、完全な<span class="menu">アイコンの整列 (Clean up)</span> (<span class="key">ALT</span> <span class="key">K</span>) を使わずに少しのアイコンを再整列したい場合があります。その場合、アイコンを選択して、新しい場所へドラッグします。アイコンをドロップする前に <span class="key">ALT</span> キーを押し続けます。これによりアイコンは見えないグリッドに整列されます。</p>
+<div class="box-info"><p _translation_id="4341">完全な <span class="menu">アイコンの整列 (Clean up)</span> (<span class="key">ALT</span> <span class="key">K</span>)を用いずにいくつかのアイコンを再配列したいことがあります。その場合、これらのアイコンを選択して新しい場所へドラッグを開始し、ドロップする前に <span class="key">ALT</span> を押したままにします。これによりアイコンは見えないグリッドに整列されます。</p>
+<p><span class="menu">一覧表示</span>モードの最初の列は、<span class="menu">ミニアイコン表示</span>および<span class="menu">アイコン表示</span>モードのアイコンラベルを決定します。普通は、それはファイル名です。しかし、<span class="menu">一覧表示</span>に変更して、<span class="menu">サイズ (Size)</span> 列を左にドラッグすると<span class="menu">アイコン表示</span>モードに戻ったときアイコンラベルがサイズ表示になります。Neato!</p>
+</div>
 <p>その他の機能は、Tracker 設定を除いて説明を要しないものです。</p>
 
 <h3>
@@ -158,7 +160,7 @@
 <ul>
 <li><p><span class="menu">デスクトップ (Desktop)</span> - マウントされたディスクを、すべてデスクトップに表示するか、またはデスクトップ上の単独のディスク (Disks) アイコンをクリックして表示されるウィンドウ中に表示するかを決めます。</p></li>
 <li><p><span class="menu">ウィンドウ (Windows)</span> - <span class="menu">シングルウィンドウナビゲーション (Single window navigation)</span> を設定できます。つまり、フォルダーをダブルクリックすると、それ自身のウィンドウを開く代わりにすでに開いているウィンドウの中に開きます。これは上記の <span class="key">OPT</span> キーを押しながらクリックするのとは違います。なぜなら、ウィンドウごとに保存された位置やサイズを失うからです。<br /><br /></p>
-<img src="images/tracker-images/tracker-preferences-navigator.png" alt="tracker-preferences-navigator.png" />
+<img src="../en/images/tracker-images/tracker-preferences-navigator.png" alt="tracker-preferences-navigator.png" />
 <p>Tracker を<span class="menu">シングルウィンドウナビゲーション</span>へ切り替える前に、より慣れているかもしれないので、まずはメニューベースのブラウジングを試して見ることを勧めます。メニューベースに慣れた後では、実際にはるかに速く動作するかもしれません。一方、シングルウィンドウブラウズは<i>ナビゲーター</i>を提供します。そこでは、パス名の入力や、コピー＆ペーストができます。また、戻る、進む、および上の階層へ移動のボタンを使用できます。</p> 
 <p> <span class="menu">先行入力フィルターを有効にする (Enable type-ahead filtering)</span>  を有効にすると、入力している間、入力文字列がファイル名または表示されている属性にマッチするファイルだけを表示するように、Tracker ウィンドウの内容をフィルタリングします。<a href="#type-ahead-filter">上記を</a>見てください。</p></li>
 <li><p><span class="menu">ディスクアイコン (Volume icons)</span> - ディスクアイコンの横に表示される空き容量表示の有無や色を設定します。</p></li>
@@ -174,16 +176,16 @@
 <ul>
 <li><p><span class="menu">検索… (Find...)</span> - ファイルまたはフォルダーを検索します。より多くの情報を得るために<a href="queries.html">クエリ</a>のトピックを見てください。</p></li>
 <li><p><span class="menu">新規作成 (New)</span> - 新しいフォルダー、または<i>テンプレート</i>に基づいたファイルを作成します。<br /><br /></p>
-<img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
+<img src="../en/images/tracker-images/new-menu.png" alt="new-menu.png" />
 <p><span class="menu">雛形を編集… (Edit templates...)</span> を選択すると、<span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span> フォルダーを開きます。そのフォルダーにファイルを作成すると、<span class="menu">新規作成 (New)</span> メニューのテンプレートとしてファイルの名前およびほかの属性を持ったファイルタイプを提供するでしょう。ここでは、ファイルタイプが <tt>text/plain</tt> であるファイル "Text" があります。より多くの情報については、<a href="filetypes.html">ファイルタイプ</a>のトピックを見てください。</p></li>
 <li><p><span class="menu">指定アプリケーションで開く… (Open with...)</span> - このサブメニューは、このファイルタイプを扱えるアプリケーションをすべて表示します。<br /><br /></p>
-<img src="images/tracker-images/open-with.png" alt="open-with.png" /><p>ファイルがダブルクリックされた時にファイルを開く優先アプリケーションにチェックマークがつきます。このサブメニューは最初に正確なファイルタイプ (この場合、タイプ <tt>text/plain</tt> であるテキストファイル) を扱えるアプリケーションをリストします。次に、一般にそのスーパータイプ (ここでは <tt>text/*</tt>) を扱えるすべてのアプリケーションが、最後に、任意のファイルを処理できるものがリストに入ります。サブメニュー中のアプリケーション名ではなく、<span class="menu">指定アプリケーションで開く… (Open with...)</span> をクリックすると、代わりにパネルが開きます。</p>
+<img src="../en/images/tracker-images/open-with.png" alt="open-with.png" /><p>ファイルがダブルクリックされた時にファイルを開く優先アプリケーションにチェックマークがつきます。このサブメニューは最初に正確なファイルタイプ (この場合、タイプ <tt>text/plain</tt> であるテキストファイル) を扱えるアプリケーションをリストします。次に、一般にそのスーパータイプ (ここでは <tt>text/*</tt>) を扱えるすべてのアプリケーションが、最後に、任意のファイルを処理できるものがリストに入ります。サブメニュー中のアプリケーション名ではなく、<span class="menu">指定アプリケーションで開く… (Open with...)</span> をクリックすると、代わりにパネルが開きます。</p>
 <br /><br />
-<img src="images/tracker-images/open-with-preferred.png" alt="open-with-preferred" />
+<img src="../en/images/tracker-images/open-with-preferred.png" alt="open-with-preferred" />
 <p>ここで、再びサブメニューにプログラムのリストを見つけるでしょう。1 つのファイルを選択して、<span class="button">関連づけて開く (Open and make preferred)</span> ボタンをクリックすると、そのファイルタイプ (ここでは <tt>text/plain</tt>) を持つすべてのファイルに対する優先アプリケーションを変更できます。</p></li>
 <li><span class="menu">詳細情報</span>
 <p>これは、ファイルのメタデータを表示し、アクセス権を編集するパネルを開きます。ファイルをリネームするには、一番上のファイル名上でクリックします。</p>
-<img src="images/tracker-images/get-info.png" alt="get-info" />
+<img src="../en/images/tracker-images/get-info.png" alt="get-info" />
 <p>パネルは3つのタブに別れます:</p>
 <ul>
 <li><span class="menu">情報 (Information)</span>: サイズ、作成日 / 更新日、ファイルタイプおよび場所のようないつものデータを表示します。 ロケーションパスをクリックすると、ファイルの親フォルダーが開きます。<span class="menu">指定アプリケーションで開く (Open with)</span> メニューは、この特定のファイルを開く推奨のアプリケーションを設定します。</li>
@@ -209,9 +211,9 @@
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="teammonitor.html">チームモニター</a> 
+ «  <a href="deskbar.html">Deskbar</a> 
 ::  <a href="contents.html" class="uplink">目次</a> 
-::  <a href="tracker-add-ons.html">Tracker アドオン</a>  »
+::  <a href="applications.html">アプリケーション</a>  »
 </span></div>
 </div>
 

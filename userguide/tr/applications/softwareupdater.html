@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2018, Haiku. All rights reserved.
+ * Copyright 2018-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Bu sayfanın çevrilmesi henüz tamamlanmamıştır. Tamamlanana kadar henüz bitirilmeyen kısımlar İngilizce metni kullanır.</div>
 
 <h2><img src="../../images/apps-images/softwareupdater-icon_64.png" alt="softwareupdater-icon_64.png" width="64" height="64" />Yazılım Güncelleyici</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -74,6 +75,18 @@
 <p>Çalıştırdıktan sonra Yazılım Güncelleyici güncellemeleri denetler ve onları yeni sürümleri ve kısa bir açıklama ile listeler. <span class="menu">Ayrıntıları göster</span> seçeneğini kullanarak her paketin bulunduğu depoyu ve hem eski hem yeni paket sürümlerini de görüntüleyebilirsiniz.</p>
 <p><span class="button">Şimdi güncelle</span> bütün paketlerin indirmesini ve izleyen yüklemesini başlatır.</p>
 <p>Güncellenen paketlerin türüne bağlı olarak güncelleme işlemini tamamlamak için Haiku'yu yeniden başlatmanız gerekebilir. Güncellenen uygulamaları kapatıp yeniden açmak güncellemelerin tamamlanması için yeterliyken, Haiku sistem güncellemeleri için bilgisayarınızı yeniden başlatmalısınız.</p>
+<div class="box-info"><p>Every time packages are updated, installed or uninstalled (either with SoftwareUpdater/HaikuDepot or in Terminal via <tt>pkgman</tt>), a new "state" is saved at <span class="path">/system/packages/administrative/</span>. This makes it possible to boot into any past state from the <a href="../bootloader.html">Boot Options</a>, making it easy to solve issues that may arise from having installed/updated a package that doesn't work as expected.</p>
+<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time. Until there's an option for an automatic clean-up, it's a good idea to check the size of the "administrative" folder from time to time and remove the oldest states, that you probably won't have to boot into again.</p>
+</div>
+<h2>
+<a id="downgrading" name="downgrading">Downgrading to a previous Haiku revision</a></h2>
+<p>It's rare but possible that an update to the latest Haiku revision ("hrev") introduced a regression you're not willing to live with. From the boot options menu you can load a former, working state (see <a href="../bootloader.html#troubleshooting">Boot Loader - Troubleshooting</a>). Find the last working state and boot into it.</p>
+<p>To permanently downgrade to this revision, you have to point the 'Haiku' repository to that hrev. You find the current revision under "About Haiku" from the Deskbar. As example, to downgrade to hrev56231, open a Terminal and enter:</p>
+<pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231
+pkgman full-sync</pre>
+<p>Note, that you're now stuck with that revision, Haiku won't get any new updates. You should report the regression and help to fix it, if you can. Once fixed - watch the <a href="http://cgit.haiku-os.org/haiku/log/">commit logs</a> -  you can change back to the "current" repo with:</p>
+<pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/r1beta3/$(getarch)/current
+pkgman full-sync</pre>
 </div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2018, Haiku. All rights reserved.
+ * Copyright 2018-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -74,6 +74,17 @@
 <p>起動後、ソフトウェアの更新はパッケージの更新をチェックし、それらの新しいバージョンと簡潔な説明と共にリスト内に表示します。<span class="menu">より詳しい表示 (Show more details)</span> を選択して、それぞれのパッケージに対するリポジトリ名を表示に含めることができ、さらに新旧のパッケージバージョンを表示できます。</p>
 <p><span class="button">ただちに更新 (Update now)</span> は、すべてのパッケージのダウンロードとその後のインストール作業を開始します。</p>
 <p>更新されるパッケージによっては、実質的に更新プロセスを完了するため、Haiku を再起動する必要があるかもしれません。更新されたアプリケーションは通常それを再起動するだけですが、しかし Haiku 自身への変更は、有効にするためにシステムの再起動を必要とするかもしれません。</p>
+<div class="box-info"><p>パッケージが更新、インストールまたはアンインストール (SoftwareUpdater/HaikuDepot 経由またはターミナル内から <tt>pkgman</tt> 経由で) されるたびに、新しい "state" が <span class="path">/system/packages/administrative/</span> に保存されます。これにより、<a href="../bootloader.html">Boot Options</a> からどんな過去の state からでも起動でき、また、インストール済/更新済パッケージが期待通りに動作しなかったことにより生じる問題の解決を容易にします。</p>
+<p>これらの "state" フォルダーは更新済/アンインストール済パッケージのコピーを含むので、時間と共に "administrative" フォルダーはとても大きくなります。自動的にクリーンアップするオプションができるまでは、時々 "administrative" フォルダーのサイズをチェックして、おそらく再び起動しない古い state を削除するのが良い考えです。</p></div>
+<h2>
+<a id="downgrading" name="downgrading">以前の Haiku リビジョンへのダウングレード</a></h2>
+<p>最新の Haiku リビジョン ("hrev") が我慢できない不具合をもたらすことは珍しいですが可能性としてはあります。ブートオプションメニューから、以前動いていた state (<a href="../bootloader.html#troubleshooting">ブートローダー - トラブルシューティング</a>を参照ください) をロードできます。最後に動いていた state を探して起動します。</p>
+<p>永続的にこのリビジョンにダウングレードするには、'Haiku' リポジトリがその hrev を指すようにする必要があります。現在のリビジョンは Deskbar の "Haiku について" で見つかります。例として、hrev56231 にダウングレードするには、ターミナルを開いて以下を入力します:</p>
+<pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231
+pkgman full-sync</pre>
+<p>そのリビジョンで固定されるので、Haiku 新しいアップデートを一切受け取らないことに注意してください。可能であれば、不具合を報告してそれを修正する手助けができます。修正されたら - <a href="http://cgit.haiku-os.org/haiku/log/">コミットログ</a>を観察してください -  次の入力で、"current" repo に戻せます:</p>
+<pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/r1beta3/$(getarch)/current
+pkgman full-sync</pre>
 </div>
 </div>
 

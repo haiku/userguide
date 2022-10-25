@@ -4,14 +4,15 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2021, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
- *		deejam
  *		Humdinger
+ *		Jorma Karvonen
+ *		deejam
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -54,9 +55,9 @@
 <li><a href="../jp/deskbar.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="tracker-add-ons.html">Tracker-tillägg</a> 
+ «  <a href="gui.html">Haiku's grafiska miljö</a> 
 ::  <a href="contents.html" class="uplink">Innehållsförteckning</a> 
-::  <a href="filetypes.html">Filetyper</a>  »
+::  <a href="tracker.html">Tracker</a>  »
 </span></div>
 </div>
 
@@ -77,8 +78,8 @@
 
 <p>Deskbar är den lilla panelen som som standard är placerad i det övre högra hörnet på skärmen. Det är Haiku's version av Windows aktivitetsfält med startknappen. Deskbar innehåller en meny från vilken du kan starta program och inställningar, ett verktygsfält med en klocka och längst ner en lista över de program som är aktiva.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position.<br />
-You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
+<p>Du kan flytta Deskbar till vilket hörn som helst, eller placera det som en list överst eller underst på Skrivbordet. Du flyttar Deskbar genom att greppa vid den knottriga fältet bredvid verktygsfältet och sedan dra och släppa Deskbar på dess nya position.<br />
+Du kan också fälla ihop Deskbar till en mer kompakt utformning genom att dra det knottriga fältet och släppa det på Deskbar's meny. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>By gripping the other knobbly widget of the tray, you can change the width of the Deskbar by dragging the mouse left or right:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
 <p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons.</p>
@@ -105,33 +106,34 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>The Deskbar preference panel is divided into three sections.</p>
 
-<h4>Applications</h4>
+<h4>Program</h4>
 <p>The following settings don't apply to your installed applications, but to the behavior and visuals of the list of running applications.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Sort running applications</span></td><td> </td><td>Sorts the list of running programs alphabetically.</td></tr>
-<tr><td><span class="menu">Tracker always first</span></td><td> </td><td>Even if you sort alphabetically, the Tracker entry always stays first in the list.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Show application expander</span></td><td> </td><td>Provides a small widget to show/hide all windows of a program directly under its entry in the Deskbar.</td></tr>
-<tr><td><span class="menu">Expand new applications</span></td><td> </td><td>Newly launched programs have their windows automatically expanded under their entry in the Deskbar.</td></tr>
+<tr><td><span class="menu">Sortera aktiva program</span></td><td> </td><td>Sorterar listan över aktiva program i alfabetisk ordning.</td></tr>
+<tr><td><span class="menu">Visa Tracker först</span></td><td> </td><td>Även om du sorterar efter alfabetet så kommer Tracker att vara först i listan.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Visa program-expanderare</span></td><td> </td><td>Visar en pil som kan visa/gömma alla fönster som tillhör ett program.</td></tr>
+<tr><td><span class="menu">Expandera nya program</span></td><td> </td><td>Visar ett programs alla fönster vid start.</td></tr>
 <tr><td><span class="menu">Hide application names</span></td><td> </td><td>Removes the text labels of running applications.</td></tr>
 <tr><td><span class="menu">Icon size</span></td><td> </td><td>Adjusts the icon size of running applications. </td></tr>
 </table>
 
-<h4>Menu</h4>
-<p>While the first couple of menu items of the Deskbar are fixed, you can customized the ones below <span class="menu">Shutdown...</span>.<br />
-Here you can set the number of recent documents, folders and applications that are shown in their menu in the Deskbar, or if you want to see them at all.<br />
-The button <span class="button">Edit in Tracker...</span> opens the folder <span class="path">~/config/settings/deskbar/menu/</span>. In it you'll find the files and folders that appear in the Deskbar, by default these are <span class="menu">Applications</span>, <span class="menu">Demos</span>, <span class="menu">Deskbar applets</span>, and <span class="menu">Preferences</span>.<br />
-You can delete or add entries like links to applications, documents or even queries by simply copying/deleting them to/from this folder.</p>
+<h4>Meny</h4>
+<p><p><b>Meny</b><br />
+Här kan du ange hur många senaste dokument, appar och program som skall visas i Deskbar's meny, eller om du inte vill se dom över huvud taget.<br />
+Knappen <span class="button">Redigera meny...</span> öppnar mappen <span class="path">~/config/settings/deskbar/menu/</span>. I den hittar du filerna och mapparna som syns i Deskbar; <span class="menu">Program</span>, <span class="menu">Exempelprogram</span>, <span class="menu">Skrivbordsprogram</span>, och <span class="menu">Inställningar</span>.<br />
+Du kan ta bort eller lägga till länkar till program, dokument eller till och med sökningar genom att kopiera/ta bort dom från denna mapp.</p>
+<p>Det är till och med enklare att dra en fil, mapp eller en sparad sökning och släppa den där du vill ha den i Deskbar.</p></p>
 <!-- <p _translation_id="432">It's even easier to simply drag a file, folder or saved query and drop it where you want it into the Deskbar.</p> -->
 <div class="box-info"><p>Programs installed from a package automatically put an entry into the Deskbar. Depending on the number of packages you have installed, this can become a bit crowded. If you prefer to have total control, and only want to see applications you link there yourself (possibly in categorizing sub-folders), here's how to do it:<br />
 You create a link of the <span class="path">menu</span> folder in <span class="path">~/config/settings/deskbar/</span> and rename to <span class="path">menu_entries</span>. From Terminal that is achieved with:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Window</h4>
+<h4>Fönster</h4>
 <p>Finally, the preferences for the Deskbar window.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td class="onelinetop"><span class="menu">Always on top</span></td><td> </td><td>The Deskbar always stays above all other windows.</td></tr>
-<tr><td><span class="menu">Auto-raise</span></td><td> </td><td>The Deskbar pops to the front when the mouse pointer touches where the Deskbar meets the screen edge, and is lowered when it leaves the Deskbar area.</td></tr>
-<tr><td><span class="menu">Auto-hide</span></td><td> </td><td>The Deskbar is reduced to only a few pixels and only pops up if the mouse pointer touches them.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Alltid överst</span></td><td> </td><td>Deskbar håller sig alltid högst upp bland alla andra fönster.</td></tr>
+<tr><td><span class="menu">Höj vid närkontakt</span></td><td> </td><td>Höjer upp Deskbar när musen är ovanför.</td></tr>
+<tr><td><span class="menu">Göm automatiskt</span></td><td> </td><td>The Deskbar is reduced to only a few pixels and only pops up if the mouse pointer touches them.</td></tr>
 </table>
 
 <h2>
@@ -145,7 +147,7 @@ You create a link of the <span class="path">menu</span> folder in <span class="p
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list-of-apps" name="list-of-apps">Listan över aktiva program</a></h2>
 <img src="images/deskbar-images/list-of-apps.png" alt="list-of-apps.png" />
-<p>You can change to a specific running application by clicking on its entry in the Deskbar and choosing (one of) its windows from the submenu. By right-clicking you can <span class="menu">Hide/Show all</span> windows or <span class="menu">Close all</span> and with them the entire application.</p>
+<p>Du kan växla till ett aktivt program genom att klicka på dess fält i Deskbar och i menyn välja (en av) dess fönster. Genom att höger-klicka kan du <span class="menu">Gömma/Visa alla</span> fönstren eller <span class="menu">Stänga alla</span> och med dem hela programmet.</p>
 <p>A <span class="key">SHIFT</span> <span class="key">CTRL</span> click on an application hides all its windows, a <span class="key">CTRL</span> click shows them again.</p>
 <p>When using the "expander" setting to show all windows of an application, you can middle-click on a window or app to start a new instance. For example, middle-clicking a running StyledEdit will open a new document window.<br />
 Maybe more useful: while holding <span class="key">SHIFT</span>, a middle-click on a window closes it. Handy when you'd like to close some of many open Tracker windows, for example.</p>
@@ -158,9 +160,9 @@ Maybe more useful: while holding <span class="key">SHIFT</span>, a middle-click 
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="tracker-add-ons.html">Tracker-tillägg</a> 
+ «  <a href="gui.html">Haiku's grafiska miljö</a> 
 ::  <a href="contents.html" class="uplink">Innehållsförteckning</a> 
-::  <a href="filetypes.html">Filetyper</a>  »
+::  <a href="tracker.html">Tracker</a>  »
 </span></div>
 </div>
 

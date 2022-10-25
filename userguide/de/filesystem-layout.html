@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2013, Haiku. All rights reserved.
+ * Copyright 2008-2021, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -54,9 +54,9 @@
 <li><a href="../jp/filesystem-layout.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="bootloader.html">Boot Loader</a> 
+ «  <a href="index.html">Index</a> 
 ::  <a href="contents.html" class="uplink">Inhalt</a> 
-::  <a href="gui.html">Haikus Benutzeroberfläche</a>  »
+::  <a href="workshop-filetypes+attributes.html">Workshop: Attribute</a>  »
 </span></div>
 </div>
 
@@ -74,14 +74,14 @@
 <tr><td><span class="path">/boot/system/</span></td><td> </td><td>Hier liegen die Systemdateien und die Anwendungen/Pakete, auf die alle Benutzer Zugriff haben.</td></tr>
 <tr><td><span class="path">/boot/home/</span></td><td> </td><td>Das ist der persönliche Ordner des Benutzers mit all seinen Daten und Einstellungen. Außerdem liegen hier die Anwendungen/Pakete auf die andere Benutzer <i>keinen</i> Zugriff haben.</td></tr>
 </table>
-<p>Solange Haiku noch nicht mehrbenutzerfähig ist, hat diese Aufteilung in gemeinsame und persönliche Anwendungen/Pakete keine Auswrkungen. Schließlich gibt es nur einen Benutzer mit nur einem Home Ordner. Weil Haiku aber irgendwann auch mehrere Benutzerkonten unterstützen wird, ist es sinnvoll sich schon jetzt daran zu gewöhnen.</p>
+<p>Solange Haiku noch nicht mehrbenutzerfähig ist, hat diese Aufteilung in gemeinsame und persönliche Anwendungen/Pakete keine Auswrkungen. Schließlich gibt es nur einen Benutzer mit nur einem Home-Ordner. Weil Haiku aber irgendwann auch mehrere Benutzerkonten unterstützen wird, ist es sinnvoll sich schon jetzt daran zu gewöhnen.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="system" name="system">Der System Ordner - <span class="path">/boot/system/</span></a></h2>
+<a id="system" name="system">Der System-Ordner - <span class="path">/boot/system/</span></a></h2>
 <p>Bei Haikus Vorgänger BeOS hieß dieser Ordner <span class="path">/boot/beos/</span>. Ihn trifft man immer mal wieder in älterer Dokumentation an (z.B. im original BeBook).
 <br />
-Die meisten Ordner in <span class="path"><acronym title="/boot/system/">/boot/System/</acronym></span> sind schreibgeschützt. Das ist auch vernünftig, schließlich befinden sich hier Dateien, die wichtig für das funktionieren von Haiku sind und daher für (zufälligen) Änderungen geschützt werden müssen. Die einzigen vom Benutzer veränderbaren Ordner sind:</p>
+Die meisten Ordner in <span class="path">/boot/system/</span> sind schreibgeschützt. Das ist auch vernünftig, schließlich befinden sich hier Dateien, die wichtig für das funktionieren von Haiku sind und daher für (zufälligen) Änderungen geschützt werden müssen. Die einzigen vom Benutzer veränderbaren Ordner sind:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Enthält Cache-Dateien und den Ordner für temporäre Dateien, auf den <span class="path">/tmp/</span> verlinkt ist.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Enthält die Ordner-Hierarchie für Dateien, die nicht Teil eines .hpkg sind (wahrscheinlich aus einem alten BeOS Archiv).</td></tr>
@@ -93,13 +93,13 @@ Die meisten Ordner in <span class="path"><acronym title="/boot/system/">/boot/Sy
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="home" name="home">Der Home Ordner - <span class="path">/boot/home/</span></a></h2>
-<p>Dieser Ordner gehört dem Benutzer. Hier können Ordner und Dateien nach Lust und Laune erstellt und gelöscht werden. (Übrigens, die Tilde ("<tt>~</tt>") ist eine Abkürung für den Home Ordner, damit man im Terminal nicht immer "<span class="path">/boot/home/</span>" schreiben muss).<br />
+<a id="home" name="home">Der Home-Ordner - <span class="path">/boot/home/</span></a></h2>
+<p>Dieser Ordner gehört dem Benutzer. Hier können Ordner und Dateien nach Lust und Laune erstellt und gelöscht werden. (Übrigens, die Tilde ("<tt>~</tt>") ist eine Abkürung für den Home-Ordner, damit man im Terminal nicht immer "<span class="path">/boot/home/</span>" schreiben muss).<br />
 Dateien, auf die später mal in einer Mehrbenutzer-Umgebung die anderen Benutzer zugreifen können sollen, müssen außerhalb von <span class="path">/boot/home/</span> angelegt werden. Zum Beispiel könnte man einen Ordner <span class="path">/boot/alle-Benutzer/</span> anlegen und die Sachen dort ablegen.</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/Desktop/</span></td><td style="width:10px;"> </td>
-<td>Hier befinden sich die Dateien, die auf dem Desktop liegen. Ein Doppelklick öffnet den Ordner nicht, weil er ja bereits geöffnet ist. Falls die Datei-Icons mal von Fenstern verdeckt sind, kann man einfach mal schnell die <a href="workspaces.html">Arbeitsfläche</a> wechseln. Natürlich ist auch eine <a href="tracker.html#drill-down">Navigation über Untermenüs</a> per Rechtsklick möglich.</td></tr>
+<td>Hier befinden sich die Dateien, die auf dem Desktop liegen. Ein Doppelklick öffnet den Ordner nicht, weil er ja bereits geöffnet ist. Falls die Datei-Icons mal von Fenstern verdeckt sind, kann man einfach mal schnell den <a href="workspaces.html">Workspace</a> wechseln. Natürlich ist auch eine <a href="tracker.html#drill-down">Navigation über Untermenüs</a> per Rechtsklick möglich.</td></tr>
 <tr><td><span class="path">~/mail/</span></td><td style="width:10px;"> </td>
 <td>Standardmäßig werden hier alle Mails abgelegt.</td></tr>
 <tr><td><span class="path">~/people/</span></td><td style="width:10px;"> </td>
@@ -157,9 +157,9 @@ Dateien, auf die später mal in einer Mehrbenutzer-Umgebung die anderen Benutzer
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="bootloader.html">Boot Loader</a> 
+ «  <a href="index.html">Index</a> 
 ::  <a href="contents.html" class="uplink">Inhalt</a> 
-::  <a href="gui.html">Haikus Benutzeroberfläche</a>  »
+::  <a href="workshop-filetypes+attributes.html">Workshop: Attribute</a>  »
 </span></div>
 </div>
 

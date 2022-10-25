@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008, Haiku. All rights reserved.
+ * Copyright 2008-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,16 @@
 <div id="content">
 <div>
 
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>インデックス</td></tr>
+<tr class="index"><td>
+				<a href="#audiosettings">オーディオ設定</a><br />
+                <a href="#audiomixer">オーディオミキサー</a><br />
+                <a href="#hdaudio">HD オーディオ</a><br />
+				<a href="#midi">MIDI</a><br />
+				<a href="#videosettings">ビデオ設定</a></td></tr>
+</table>
+
 <h2><img src="../../images/prefs-images/media-icon_64.png" alt="media-icon_64.png" width="64" height="64" />メディア (Media)</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Preferences</span></td></tr>
@@ -71,7 +81,92 @@
 <span class="path">~/config/settings/System Audio Mixer</span><br />
 <span class="path">~/config/settings/MediaPrefs Settings</span> - パネルのウィンドウ位置を保存します。</td></tr>
 </table>
-<p>ドキュメントはまだ存在しません。重複を避けるため、ドキュメントについて作業するときは<a href="http://www.freelists.org/list/haiku-doc">ドキュメンテーションメーリングリスト</a>でお知らせください。</p>
+
+<p>Media プレファレンスはシステムのオーディオとビデオ設定を制御します。それらは、ボリュームの設定のような日常のタスクから殆どのユーザーが必要としないとても低レベルの調整まで及びます。様々な設定はカテゴリー毎にグループ化されています。</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="audiosettings" name="audiosettings">オーディオ設定</a></h2>
+
+<img src="../images/prefs-images/media-audio-settings.png" alt="Audio settings" />
+
+<p>コンピューターがひとつ以上のオーディオインターフェースを備えている場合、<span class="menu">オーディオ入力 (Audio input)</span>、<span class="menu">オーディオ出力 (Audio output)</span> および使用する<span class="menu">チャンネル (Channel)</span> を選択できます。まれに、何かがシステムのオーディオ/ビデオを乱すときは、<span class="button">メディアサービスを再起動 (Restart media services)</span> を試してください。</p>
+
+<p>チェックマークで<span class="button">音量コントロールを Deskbar に表示 (Show volume control on Deskbar)</span> できます。これは Deskbar トレイに小さなアイコンを追加します。</p>
+
+<img src="../images/prefs-images/media-replicant.png" alt="Volume control of the Deskbar" />
+
+<p>トレイアイコン上で左クリックすると、音量スライダーがポップアップして、マスター主力を制御します。もう一つの方法として、アイコン上でマウスホイールを直接使うことでも音量を変化します。上図からおわかりのように、右下にある小さな<a href="../gui.html#replicants">レプリカントハンドル</a> からスライダーを埋め込めます。例としてデスクトップ上にできます。
+</p>
+
+<p>右クリックで <span class="menu">メディアプレファレンス (Media preferences)</span>、<span class="menu">サウンドプレファレンス (Sounds preferences)</span> への近道となり、<span class="menu">メディアプレーヤー (MediaPlayer)</span>を起動するメニューを開きます。</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="audiomixer" name="audiomixer">オーディオミキサー</a></h2>
+
+<p>オーディオミキサーによって、現在動作中の複数アプリケーションの出力のようなシステム内の異なったオーディオストリームの音量を制御できます。</p>
+
+<img src="../images/prefs-images/media-audio-mixer-1.png" alt="Gain controls" />
+
+<p>ここでは、マスター出力と現在実行中のメディアプレイヤーおよび SDL オーディオを使用しているゲームの音量スライダーが見られます。これらのスライダーで、 例えばゲームの音がメディアプレイヤーのプレイリストからの音楽をかき消さないように音声出力をミックスできます。</p>
+
+<p>スライダーの '2つのつまみ' は、左右のステレオを表現しています。通常は同時に動きますが、右マウスボタンでどちらかのつまみを動かすだけでバランスを調節できます。<br />
+チェックマークを使って、音声ストリームを<span class="menu">ミュート (Mute)</span> します。</p>
+
+<p><span class="menu">設定 (Setup)</span> タブは、おもに低レベルの設定を提供します:
+</p>
+
+<img src="../images/prefs-images/media-audio-mixer-2.png" alt="Setup" />
+
+<p>これらすべての低レベルの調整パラメーターは — Haiku が箱から出したオーディオハードウェアを充分サポートしない場合のみ試みるでしょうが — 2，3 の興味を引くであろう設定があります。
+</p>
+
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">ミキサー出力を 3 dB 減衰<br />(Attenuate mixer output by 3 dB)</span></td><td width="15"> </td><td>クリッピングを避けるために、ヘッドルームをもう少し追加します。</td></tr>
+<tr><td class="onelinetop"><span class="menu">ステレオ接続にバランスコントロールを表示<br />(Display balance control in stereo connections)</span></td><td> </td><td><span class="menu">ゲインコントロール (Gain control)</span> タブの音量スライダーに、'2重のつまみ (double-knobs)' に代わってバランススタイダーを追加します。</td></tr>
+<tr><td><span class="menu">入力/出力チャンネルの再マッピングを許可<br />(Allow output/input channel remapping)</span></td><td> </td><td>ひとつのチャンネルをひとつ以上の他のチャンネルに割り当て、音量を調整するためのタブを開きます。例として、左出力を左前、左後、中央に割り当てて異なる音量を設定できます。</td></tr>
+<tr><td><span class="menu">リサンプリングアルゴリズム<br />(Resampling algorithm)</span></td><td> </td><td><span class="menu">低品質 (Low quality)</span> (低 CPU 使用率およびレイテンシ) と <span class="menu">高品質 (High quality)</span> (わずかに高い CPU 使用率とレイテンシ) へのオプションがあります。</td></tr>
+</table>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hdaudio" name="hdaudio">HD audio (名称はハードウェアで決まります)</a></h2>
+
+<p>オーディオミキサーが Haiku を流れる様々なオーディオストリームを扱うのに対して、これは物理的な入出力を扱います。
+</p>
+
+<img src="../images/prefs-images/media-hdaudio.png" alt="HD Audio, input" />
+
+<p>３ つのタブがあります:</p>
+
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">一般 (General)</span></td><td width="15"> </td><td><span class="menu">入力周波数 (Input frequency)</span> および <span class="menu">出力周波数 (Output frequency)</span> を設定します。</td></tr>
+<tr><td><span class="menu">出力 (Output)</span></td><td> </td><td>スピーカーやヘッドホンの出力レベルを設定します。</td></tr>
+<tr><td><span class="menu">入力 (Input)</span></td><td> </td><td>line-in とマイクロホンの入力レベルを設定します。</td></tr>
+</table>
+
+<p>これらのハードウェアレベルの設定は少し適当に見えることを言わなければなりません……<br />
+Haiku はハードウェアを調べて、それが返すものを理解するように務めます。同じラベルなどのついた重複するスライダーを見るかもしれません。求めるスライダーを見つけるために少し試して見る必要があるでしょう。</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="midi" name="midi">MIDI</a></h2>
+
+<p>MIDI 設定はインストール済のサウンドフォント (楽器の定義) をすべて表示します。好きなものをひとつクリックするだけです。エントリーをダブルクリックすると親フォルダーを開きます。</p>
+
+<img src="../images/prefs-images/media-midi.png" alt="MIDI SoundFonts" />
+
+<p>HaikuDepot 内でわずかなサウンドフォントが見つかります。それらはインストール後自動的に表示されます。ウェブからダウンロードしたサウンドフォントは手動で <span class="cli">/boot/system/non-packaged/data/synth/</span> (または同等の Home 階層。<a href="../filesystem-layout.html">ファイルシステムレイアウト</a>のトピックを参照ください) へ移動する必要があります。</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="videosettings" name="videosettings">ビデオ設定</a></h2>
+
+<img src="../images/prefs-images/media-video-settings.png" alt="Video settings" />
+
+<p>ハードウェアとドライバーのサポート次第で、<span class="menu">ビデオ入力 (Video input)</span> および<span class="menu">ビデオ出力 (Video output)</span>.を選択できます。<br />
+オーディオ設定と同様に、<span class="button">メディアサービスを再起動 (Restart media services)</span> をクリックすると奇妙な問題を修正できるかもしれません。</p>
 
 </div>
 </div>

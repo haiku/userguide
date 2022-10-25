@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2011, Haiku. All rights reserved.
+ * Copyright 2009-2021, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -16,7 +16,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Yükleyici</title>
+	<title>Haiku Kur</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
@@ -61,36 +61,35 @@
 
 <div id="content">
 <div>
-<div class="box-info">Bu sayfanın çevrilmesi henüz tamamlanmamıştır. Tamamlanana kadar henüz bitirilmeyen kısımlar İngilizce metni kullanır.</div>
 
-<h2><img src="../../images/apps-images/installer-icon_64.png" alt="installer-icon_64.png" width="64" height="64" />Yükleyici</h2>
+<h2><img src="../../images/apps-images/installer-icon_64.png" alt="installer-icon_64.png" width="64" height="64" />Haiku Kur</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Masaüstü Çubuğu:</td><td style="width:15px;"></td><td><span class="menu">Uygulamalar</span></td></tr>
 <tr><td>Konum:</td><td></td><td><span class="path">/boot/system/apps/Installer</span></td></tr>
 <tr><td>Ayarlar:</td><td></td><td><i>yok</i></td></tr>
 </table>
 <p><br /></p>
-<p>The Installer is used to copy Haiku onto another volume.<br />
-Upon launch it displays a start window with important information. It's not a mindless EULA you're used to click away in the blink of an eye, it states:</p>
+<p>Haiku Kur, Haiku'yu başka bir bölüme kopyalamak için kullanılır. Geçerli kurulumunuzu tüm ayarlar ve uygulamalarla birlikte başka bir disk bölümüne kolayca klonlayabilirsiniz. Elbette, Haiku'yu ilk kez kurarken de bu uygulamadan yararlanacaksınız. Ayrıntılı bilgi için çevrimiçi <a href="https://www.haiku-os.org/get-haiku/installation-guide/">Kurulum Kılavuzu</a>'na bakın.</p>
+<p>Başlatıldıktan sonra, Haiku Kur, önemli bilgiler içeren bir başlangıç ekranı görüntüler. Normalde okumadan geçilecek bir metin değildir, önemli bilgiler verir:</p>
 <ul>
-<li><p>This is beta-quality software. Make backups or suffer the consequences!</p></li>
-<li><p>The Installer needs a prepared partition. You can use <a href="drivesetup.html">DriveSetup</a> to create and format a partition, but cannot yet resize existing partitions. For that you'll have to use a <a href="http://gparted.sourceforge.net/livecd.php">GParted LiveCD</a> or a similar tool for now.</p></li>
-<li>Haiku can be added manually to the bootmanager <a href="http://www.gnu.org/software/grub/manual/grub.html">GRUB</a>. How that is done exactly is available as an <a href="http://www.haiku-os.org/get-haiku/installation-guide">online guide</a>.</li>
+<li><p>Beta sürümde olan bir yazılım kullanıyorsunuz. Düzenli yedekler alın, yoksa sonuçlarına katlanırsınız!</p></li>
+<li><p>Haiku Kur, önceden hazırlanmış bir disk bölümüne gereksinim duyar. Bir disk bölümü hazırlamak ve biçimlendirmek için <a href="drivesetup.html">Disk İzlencesi</a> uygulamasını kullanabilirsiniz; ancak henüz var olan bölümleri yeniden boyutlandıramazsınız. Bunun için şimdilik <a href="http://gparted.sourceforge.net/livecd.php">GParted LiveCD</a> veya benzer bir araç kullanmalısınız.</p></li>
+<li>Haiku, <a href="http://www.gnu.org/software/grub/manual/grub.html">GRUB</a> önyükleme yöneticisine el ile eklenebilir. Bunun nasıl yapılacağını <a href="http://www.haiku-os.org/get-haiku/installation-guide">çevrimiçi kılavuzdan</a> öğrenebilirsiniz.</li>
 </ul>
 <p><br /><br /></p>
-<p>Once you acknowledged with <span class="button">Continue</span>, you're presented with the main window:</p>
+<p><span class="button">Sürdür</span>'e basarak anladığınızı belirttikten sonra aşağıdaki pencere ile karşılaşacaksınız:</p>
 <img src="../images/apps-images/installer.png" alt="installer.png" />
-<p>In the first pop-up menu you choose the source for the installation. It can be a currently installed Haiku or can come from an install CD or USB drive, etc.<br />
-The second pop-up menu specifies the target for the installation. This target partition/volume will be completely overwritten and has to be set aside beforehand by a partitioning tool like GParted.</p>
-<p>Clicking the little expander widget will <i>Show optional packages</i>, if available, that you can choose to install in addition to the basic Haiku.</p>
-<p>You should do a last check if you really picked the right target before starting the installation process. Click on <span class="button">Setup partitions...</span> to open <a href="drivesetup.html">DriveSetup</a> and have a look at the naming and layout of the available volumes and partitions.</p>
-<p><span class="button">Begin</span> starts the installation procedure, which basically copies the <span class="path">/home/</span> and <span class="path">/system/</span> folder onto the target volume and makes it bootable.</p>
+<p>İlk açılır menüde kurulum kaynağını belirtin. Geçerli bir Haiku kurulumu veya bir kurulum CD'si veya USB'si olabilir.<br />
+İkinci açılır menü kurulum hedefini seçmenizi ister. Hedef bölümün tümüyle üzerine yazılacaktır; dolayısıyla önceden bölümlendirmesinin yapılmış olması gerekmektedir.</p>
+<p><i>İsteğe bağlı paketleri göster</i> çekmecesini açarsanız temel Haiku kurulumuna kurabileceğiniz ek paketleri görebilirsiniz.</p>
+<p>Kurulum işlemine başlamadan önce son bir kez seçtiğiniz kaynak/hedef bölümlerin doğru olduğunu denetleyin. <span class="button">Bölümleri ayarla…</span> menü girdisine tıklayarak <a href="drivesetup.html">Disk İzlencesi</a> uygulamasını açın ve kullanılabilir bölümlerin yerleşimlerini ve adlandırmalarını denetleyin.</p>
+<p><span class="button">Başlat</span>, kurulum prosedürlerini başlatır; özünde yaptığı şey <span class="path">/home/</span> ve <span class="path">/system/</span> dizinlerini hedef disk bölümüne kopyalar ve önyüklenebilir yapar.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="tools" name="tools">Tools</a></h2>
-<p>At the end of the installation procedure, the partition is automatically made bootable. However, it can happen that some other operating system or partitioning tool (accidentally) overwrites the boot sector of your Haiku volume. In this case, boot your installation CD and start the Installer. Select your Haiku boot partition from the <span class="menu">Onto: Please choose target</span> menu and select <span class="menu">Write boot sector</span> from the <span class="menu">Tools</span> menu to make it bootable again.</p>
-<p>The other item in the <span class="menu">Tools</span> menu is used to <span class="menu">Set up a boot menu</span> that puts a menu in the boot sector to choose what operating system to boot. See topic <a href="bootmanager.html">BootManager</a> for more information.<br />
- You don't need to run the <span class="app">BootManager</span> if you already use a bootmanager like GRUB, in which case you have to add Haiku manually (see above), or Haiku runs exclusively on your machine.</p>
+<a id="tools" name="tools">Araçlar</a></h2>
+<p>Kurulum işleminin sonunda, disk bölümü kendiliğinden önyüklenebilir yapılır. Ancak bazen kimi işletim sistemleri veya bölümlendirme araçları (kazayla) Haiku önyükleme sektörünün üzerine yazabilir. Böyle bir durumda kurulum ortamından Haiku'yu başlatın ve Haiku Kur'u çalıştırın. Yeniden önyüklenebilir yapmak için <span class="menu">Araçlar</span> menüsünden <span class="menu">Şuraya: Lütfen hedef seçin</span>, <span class="menu">Önyükleme alanını yaz</span>'ı seçin.</p>
+<p>The other item in the <span class="menu">Araçlar</span> menüsündeki diğer öge, hangi işletim sisteminden önyüklemek istediğinizi seçmek için <span class="menu">bir önyükleme menüsü ayarlamak</span> için kullanılır. Daha fazla bilgi için <a href="bootmanager.html">Önyükleme Yöneticisi</a> konusuna bakın.<br />
+GRUB gibi bir önyükleme yöneticisi kullanıyarsanız veya Haiku makinenizdeki tek işletim sistemiyse <span class="app">Önyükleme Yöneticisi</span> uygulamasına gereksiniminiz yoktur.</p>
 
 
 </div>
