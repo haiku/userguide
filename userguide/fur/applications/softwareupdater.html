@@ -61,7 +61,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <h2><img src="../../images/apps-images/softwareupdater-icon_64.png" alt="softwareupdater-icon_64.png" width="64" height="64" />SoftwareUpdater</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -75,16 +74,16 @@
 <p>Dopo che si lu à inviât, SoftwareUpdater al controle se a esistin inzornaments pai pachets e ju mostre intune  cu lis lôr gnovis versions e une curte descrizion. Tu puedis dîsi: <span class="menu">Mostre plui detais</span> par includi il non dal dipuesit par ogni pachet e mostrâ dutis dôs lis versions dai pachets, chê vecje e chê gnove.</p>
 <p><span class="button">Inzorne cumò</span> al tacarà a discjariâ ducj i pachets e la lôr consecuente instalazion.</p>
 <p>In base ai pachets che a son stâts inzornâts, si varà di tornâ a inviâ Haiku par fâ in mût che si completi il procès di inzornament. Par ce che al rivuarde lis aplicazions, al baste dome tornâ a inviâlis, invezit lis modifichis a Haiku stes par deventâ efetivis, a podaressin vê bisugne che il sisteme si torni a inviâ.</p>
-<div class="box-info"><p>Every time packages are updated, installed or uninstalled (either with SoftwareUpdater/HaikuDepot or in Terminal via <tt>pkgman</tt>), a new "state" is saved at <span class="path">/system/packages/administrative/</span>. This makes it possible to boot into any past state from the <a href="../bootloader.html">Boot Options</a>, making it easy to solve issues that may arise from having installed/updated a package that doesn't work as expected.</p>
-<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time. Until there's an option for an automatic clean-up, it's a good idea to check the size of the "administrative" folder from time to time and remove the oldest states, that you probably won't have to boot into again.</p>
+<div class="box-info"><p>Ogni volte che i pachets a vegnin inzornâts, instalâts o disinstalâts (o cun SoftwareUpdater/HaikuDepot o tal Terminâl vie <tt>pkgman</tt>), al ven salvât un gnûf "stât" su <span class="path">/system/packages/administrative/</span>. Chest al rint pussibil inviâ il sisteme intun cualsisei stât precedent da lis <a href="../bootloader.html">Opzions di inviament</a>, rindint plui sempliç risolvi problemis che a puedin vignî fûr dal vê instalât/Inzornât un pachet che nol funzione in regule.</p>
+<p>Viodût che cheste cartele di "stât" e ten copiis dai pachets inzornâts/disinstalâts, cul lâ dal timp la cartele "administrative" e pues cressi in maniere significative. Fintremai che no varìn une funzion par une netisie automatiche, e je une buine idee chê di controlâ ogni tant la dimension de cartele "administrative" e gjavâ vie i stâts plui vielis, che cun plui probabilitât no tu varâs plui di inviâju.</p>
 </div>
 <h2>
-<a id="downgrading" name="downgrading">Downgrading to a previous Haiku revision</a></h2>
-<p>It's rare but possible that an update to the latest Haiku revision ("hrev") introduced a regression you're not willing to live with. From the boot options menu you can load a former, working state (see <a href="../bootloader.html#troubleshooting">Boot Loader - Troubleshooting</a>). Find the last working state and boot into it.</p>
-<p>To permanently downgrade to this revision, you have to point the 'Haiku' repository to that hrev. You find the current revision under "About Haiku" from the Deskbar. As example, to downgrade to hrev56231, open a Terminal and enter:</p>
+<a id="downgrading" name="downgrading">Regredî a une revision precedente di Haiku</a></h2>
+<p>Al è râr ma al è pussibil che un inzornament a une ultime revision di Haiku ("hrev") al introdusedi un regression che ti da fastidi. Dal menù des opzions di inviament tu puedis cjamâ un stât precedent che al funzionave (Viôt <a href="../bootloader.html#troubleshooting">Il Boot Loader - Risoluzion dai problemis</a>). Cjate l'ultin stât funzionant e inviilu.</p>
+<p>Par regredî in mût permanent a cheste revision, tu âs di pontâ il dipuesit di 'Haiku' a chê hrev. Tu cjatis la revision corinte sot di "Informazion su Haiku" dal Deskbar. Tant che esempli: par regredî ae revision hrev56231, vierç un Terminâl e scrîf:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231
 pkgman full-sync</pre>
-<p>Note, that you're now stuck with that revision, Haiku won't get any new updates. You should report the regression and help to fix it, if you can. Once fixed - watch the <a href="http://cgit.haiku-os.org/haiku/log/">commit logs</a> -  you can change back to the "current" repo with:</p>
+<p>Fâs câs che cumò tu sês blocât cun chê revision, Haiku nol varà nissun gnûf inzornament. Tu varessis di segnalâ la regression e judâ a comedâle, se tu puedis. Une volte comedade - ten di voli i <a href="http://cgit.haiku-os.org/haiku/log/">regjistris di consegne</a> -  tu puedis tornâ a passâ al dipuesit "current" cun:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/r1beta3/$(getarch)/current
 pkgman full-sync</pre>
 </div>

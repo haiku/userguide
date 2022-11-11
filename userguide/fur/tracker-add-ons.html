@@ -14,7 +14,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Tracker Add-Ons</title>
+	<title>Components adizionâi di Tracker</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
@@ -59,34 +59,33 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
-<h1>Tracker Add-Ons</h1>
+<h1>Components adizionâi di Tracker</h1>
 
-<p>Applications can install add-ons so they can be invoked easily on a selection of files from Tracker. Only the add-ons that can handle a specific filetype are presented under <span class="menu">Add-Ons</span> from the context menu or the <span class="menu">File</span> menu of a Tracker window. Some add-ons don't necessarily need a file to work on and are thus always present.</p>
-<p>New Tracker add-ons that don't come as part of a regular .hpkg package, can be installed by copying them into their respective non-packaged folder (see topic <a href="filesystem-layout.html">Filesystem layout</a>):</p>
+<p>Lis aplicazions a puedin instalâ components adizionâi, cussì che a puedin vignî invocadis cun facilitât suntune selezion di files dal Tracker. Dal menù contestuâl <span class="menu">Components adizionâi</span>, o dal menù <span class="menu">File</span> di un barcon Tracker, a vegnin presentâts dome i components adizionâi che a puedin gjestî un specific gjenar di file. Cualchi component adizionâl nol à bisugne di un file par funzionâ e duncje al sarà simpri presint.</p>
+<p>Al è pussibil instalâ i gnûfs components adizionâi di Tracker, che no fasin part di un regolâr pachet .hpkg, copiantju te lôr rispetîve cartele non-packaged (viôt l'argoment <a href="filesystem-layout.html">Disposizion dal filesystem</a>):</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="path">/boot/system/non-packaged/add-ons/Tracker/</span></td><td>   </td><td> for add-ons available to every user.</td></tr>
-<tr><td><span class="path">/boot/home/config/non-packaged/add-ons/Tracker/</span></td><td>   </td><td> for add-ons only available to yourself.</td></tr>
+<tr><td><span class="path">/boot/system/non-packaged/add-ons/Tracker/</span></td><td>   </td><td> par components adizionâi disponibii a ducj i utents.</td></tr>
+<tr><td><span class="path">/boot/home/config/non-packaged/add-ons/Tracker/</span></td><td>   </td><td> par components adizionâi disponibii dome a te stes.</td></tr>
 </table>
-<p>The file name of an add-on can be suffixed with a dash and capital letter, and is then available via keyboard shortcut. For example, <span class="app">Open Target Folder-O</span> opens with <span class="key">ALT</span> <span class="key">OPT</span> <span class="key">O</span>.<br />
-Of course, you have to take care of possible shortcut collisions when deciding on a shortcut. You can't have the same for different add-ons.</p>
+<p>Il non dal vile di un component adizionâl al pues vê un sufìs cuntun tratut e une letare maiuscule, cussì al sarà disponibil midiant une scurte di tastiere. Par esempli, <span class="app">Vierç cartele di destinazion-V</span> si vierç cun <span class="key">ALT</span> <span class="key">OPZ</span> <span class="key">O</span>.<br />
+Logjic che cuant che tu decidis une scurte tu âs di tignî di cont i pussibii conflits cun altris scurtis. No tu puedis vê la stesse scurte par diviers components adizionâi.</p>
 
-<h2><a id="system-add-ons" name="system-add-ons">Haiku's Tracker Add-Ons</a></h2>
-<p>These Tracker Add-Ons come with every Haiku installation:</p>
+<h2><a id="system-add-ons" name="system-add-ons">Components adizionâi dal Tracker di Haiku</a></h2>
+<p>Chescj components adizionâi di Tracker a rivin cun ogni instalazion di Haiku:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="4"> 
-	<tr><td class="onelinetop"><b>Background</b><i>-B</i></td>
-		<td valign="top">Opens the <a href="preferences/backgrounds.html">Background</a> preferences to change the color or image of the Desktop or any folder. Invoked on an image file the Background panel is launched with that image already loaded as a potential background.</td></tr>
+	<tr><td class="onelinetop"><b>Fonts</b><i>-B</i></td>
+		<td valign="top">Al vierç lis preferencis pal <a href="preferences/backgrounds.html">Fonts</a> par cambiâ il colôr o la imagjin dal Scritori o di cualsisei cartele. Clamât suntun file di imagjin il panel Fonts al ven inviât cun chê imagjin za cjamade tant che potenziâl fonts.</td></tr>
 	<tr><td class="onelinetop"><b>DiskUsage</b><i>-I</i></td>
-		<td valign="top">Starts the <a href="applications/diskusage.html">DiskUsage</a> application with the according folder as basis.</td></tr>
+		<td valign="top">Al invie la aplicazion <a href="applications/diskusage.html">DiskUsage</a> cu la relative cartele tant che base di partence.</td></tr>
 	<tr><td class="onelinetop"><b>FileType</b><i>-F</i></td>
-		<td valign="top">Invoked on a file, opens its specific <a href="filetypes.html">FileType</a> panel, otherwise the general FileTypes preferences are launched.</td></tr>
+		<td valign="top">Invocât suntun file, al vierç il so specific panel <a href="filetypes.html">Gjenar di file</a>, in câs contrari a vegnin inviadis lis preferencis dai Gjenars di file.</td></tr>
 	<tr><td class="onelinetop"><b>Open Target Folder</b><i>-O</i></td>
-		<td valign="top">Can only be used on a linked file and opens the folder that file lives in.</td></tr>
-	<tr><td class="onelinetop"><b>TextSearch</b><i>-G</i></td>
-		<td valign="top">Starts the <a href="applications/textsearch.html">TextSearch</a> application to look for a string in the selected folder (and its subfolders).</td></tr>
+		<td valign="top">Si pues doprâ dome suntun file di colegament e al vierç la cartele dulà che al sta il file.</td></tr>
+	<tr><td class="onelinetop"><b>Ricercje test</b><i>-G</i></td>
+		<td valign="top">Al fâs partî la aplicazion <a href="applications/textsearch.html">TextSearch</a> par cirî une stringhe te cartele selezionade (e lis sôs sot-cartelis).</td></tr>
 	<tr><td class="onelinetop"><b>ZipOMatic</b><i>-Z</i></td>
-		<td valign="top">A selection of files will be added to a zip archive, invoked without a selection opens a panel to create an archive via drag &amp; drop.</td></tr>
+		<td valign="top">Une selezion di files e vignarà zontade a un file zip, invocât cence une selezion al vierç un panel par creâ un archivi midiant la funzion strissine-e-mole cul mouse.</td></tr>
 </table>
 
 </div>

@@ -78,22 +78,22 @@
 
 <h1>Segnalazion erôrs</h1>
 
-<p>Since our developers are unable to test every hardware combination, nor every different way of interacting with the operating system, we are relying on users to give us some input on how things work at their end. Since Haiku is still quite young, it's very likely that you will encounter bugs. We thank you for taking the time to report these. Together we can improve Haiku, bit by bit.</p>
-<p>To keep our bugtracker effective, it's essential to abide by the <a href="http://dev.haiku-os.org/wiki/BugTrackerEtiquette">Bug Tracker Etiquette</a>.</p>
+<p>Viodût che i nestris disvilupadôrs no rivin a provâ dutis lis cumbinazions di hardware, ni ogni diferente maniere di interagjî cul sisteme operatîf, o fasìn afidament ai utent par otignî cualchi informazion su cemût che al funzione de lôr bande. Viodût che Haiku al è ancjemò zovin, al è facil che tu cjatarâs erôrs. Ti ringraciìn se tu pierdis un pôc di timp tal segnalâju. Adun o podìn miorâ Haiku, un pôc a la volte.</p>
+<p>Par tignî il nestri sisteme di segnalazion erôrs eficient, al è fondamentâl rispietâ la <a href="http://dev.haiku-os.org/wiki/BugTrackerEtiquette">Etichete pe segnalazion erôrs</a>.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="account" name="accout">Otignî un account Trac</a></h2>
-<p>To file a ticket, you need to have an account at <a href="http://dev.haiku-os.org/register" title="Register at Haiku's Bugtracker">Haiku's Bugtracker</a>.<br />
-When creating a new account, be certain to <b>provide your email address</b> as it is necessary to obtain basic ticket modification privileges. Be sure to <b>check your spam folder</b> shortly afterwards, as the all important verification mail often ends up there.</p>
+<p>Par vierzi un cartelin, ti covente vê un account su <a href="http://dev.haiku-os.org/register" title="Register at Haiku's Bugtracker">Segnalazion erôrs di Haiku</a>.<br />
+Cuant che tu creis un gnûf account, controle di <b>indicâ la tô direzion e-mail</b> viodût che e je necessarie par otignî i privileçs di base pe modifiche dai cartelins. Subite dopo, siguriti di <b>controlâ la cartele de pueste malvolude</b>, viodût che dute la pueste di verifiche impuartante dispès a finìs lì.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="report" name="report">Creâ une segnalazion di erôr</a></h2>
-<p>Before reporting a bug, please <a href="http://dev.haiku-os.org/query?status=new&amp;status=assigned&amp;status=reopened&amp;status=closed&amp;summary=%7Etext+you+want+to+search+for&amp;order=priority">make sure</a> that it does not yet exist. You can also use the <a href="http://dev.haiku-os.org/search?q=&amp;noquickjump=1&amp;ticket=on">search</a> function for this.<br />
-After you have established that it's a unique bug, make your information as accurate as possible:</p>
+<p>Prime di segnalâ un erôr, par plasê <a href="http://dev.haiku-os.org/query?status=new&amp;status=assigned&amp;status=reopened&amp;status=closed&amp;summary=%7Etext+you+want+to+search+for&amp;order=priority">controle</a> che nol esisti za. Tu puedis ancje doprâ la funzion <a href="http://dev.haiku-os.org/search?q=&amp;noquickjump=1&amp;ticket=on">cîr</a> par fâlu.<br />
+Dopo vê apurât che al è un erôr unic, furnìs lis informazions tal mût plui precîs pussibil:</p>
 <ul>
-	<li><p>Attempt to reproduce your issue on the current revision of Haiku. Pre-built images for testing purposes are  <a href="http://download.haiku-os.org">available</a> online.</p></li>
-	<li><p>Include basic information such as how you are testing Haiku (on real hardware, on VMWare, on QEMU, etc.).</p></li>
-	<li><p>Mention which revision you are running. You can find this information in <span class="menu">About Haiku...</span> from the Deskbar menu. Also mention what kind of Haiku build you are testing (x86_gcc2, x86_64). The downloadable images are named accordingly, for a self-built image you should know how you built it.</p></li>
+	<li><p>Cîr di riprodusi il probleme te revision corinte di Haiku. Lis imagjins pre-compiladis par finalitâts di prove a son <a href="http://download.haiku-os.org">disponibilis</a> in rêt.</p></li>
+	<li><p>Inclût informazions di base su cemût che tu stâs provant Haiku (su hardware reâl, su VMWare, su QEMU e v.i.).</p></li>
+	<li><p>Nomene cuale revision tu stâs eseguint. Tu puedis cjatâ cheste informazion in <span class="menu">Informazions su Haiku...</span> dal menù dal Deskbar. Nomene ancje ce gjenar di compilazion di Haiku tu stâs provant (x86_gcc2, x86_64). Lis imagjins discjamabilis a son clamadis in acuardi, pe imagjin compilade di bessoi tu âs di savê cemût che tu le âs compilade.</p></li>
 	<li><p>Describe the problem you are experiencing. Try to be as accurate as you can: describe the actual behavior, and the behavior you expected.</p></li>
 	<li><p>Describe what steps you need to perform in order to expose the bug. This will help developers reproduce the bug.</p></li>
 	<li><p>Attach as much information as you have. If it is a GUI bug, or a bug in one of the applications, try to take a screenshot by pressing the <span class="key">PRINT</span> key.</p></li>
@@ -146,7 +146,7 @@ If you're not able to boot to get to the previous_syslog, you have to enter the 
 In the boot loader's <span class="menu">Debug menu</span> you should find the entries <span class="menu">Display syslog from previous session</span> and <span class="menu">Save syslog from previous session</span>. The former displays the syslog on screen, the latter allows you to save it as a file to disk. Note that at the moment only FAT32 volumes are supported for saving the file. If you want to use a USB stick, but have plugged it in too late so that it isn't recognized yet, you can reset the machine and re-enter the boot loader menu. Note: Don't accidentally boot any operating system or the data will be lost.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="onscreen" name="onscreen">Jessude dal debug sul schermi</a></h3>
+<a id="onscreen" name="onscreen">Jessude su schermi dal debug</a></h3>
 <p><b>The on-screen debug output is useful only for debugging very specific issues and is known to have (timing) issues. Don't use it, if you don't have to.</b><br />
 This is only relevant when Haiku fails to boot on your machine and the <span class="menu">Debug syslog</span> option doesn't work for some reason. Before the Haiku boot logo appears, hold <span class="key">SHIFT</span> to enter the boot loader menu. Select <span class="menu">Select safe mode options</span>. Near the bottom, <span class="menu">[ ] Enable on screen debug output</span> will be listed. (Note: The other options could be enabled in an attempt to boot Haiku. If Haiku will boot only when one or more options are activated, be sure to mention which ones.)<br />
 Finally select <span class="menu">Return to main menu</span> and then <span class="menu">Continue booting</span>.<br />

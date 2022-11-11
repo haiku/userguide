@@ -61,7 +61,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">Bu sayfanın çevrilmesi henüz tamamlanmamıştır. Tamamlanana kadar henüz bitirilmeyen kısımlar İngilizce metni kullanır.</div>
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Haiku komut satırı uygulamaları</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -138,17 +137,17 @@ Bir bağlantı yapılmasını ister misiniz?" "Masaüstü'nde" "Masaüstü Çubu
 		<td valign="top"><p><span class="cli">diskimage</span>, normal bir dosyayı bir disk aygıtı plank kaydetmenize izin verir. Örneğin, bir Haiku any boot kalıbını İzleyici'de bağlayabilir, Haiku Kur ile kullanmadan önce içindeki dosyaları değiştirebilir veya yeni dosyalar ekleyebilirsiniz.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.c  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
-Without parameter, <span class="cli">launch_roster</span> lists all apps/services that are under its control.<br />
-For example, this will stop the re-launching of the Deskbar:</p>
+		<td valign="top"><p>launch_daemon, önyükleme sırasında her türden servisi başlatır. Bazı servisler, eğer onlardan çıkılırsa yeniden başlatılırlar. Bunu yapmak istemiyorsanız; örneğin değiştirilmiş bir İzleyici'yi sınamak isterseniz <span class="cli">launch_roster</span> kullanarak uygulamanın yeniden başlatılmasını <tt>durdurabilirsiniz</tt>. Buna benzer olarak, onu <tt>başlatabilir</tt> veya hakkında <tt>bilgi</tt> alabilirsiniz. <tt>log</tt> parametresi, tüm launch_daemon ilgili olayların bir günlüğünü döker.<br />
+Parametre kullanılmadan, <span class="cli">launch_roster</span>, denetiminde olan tüm hizmetlerin/uygulamaların bir listesini çıkarır.<br />
+Örneğin, bu komut, Masaüstü Çubuğu'nun yeniden başlatılmasını engeller:</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">mountvolume</span> is preferred by many to mount local partitions and disks, because its usage is so easy: just call it with the name of the partition and you're done. Try <tt>--help</tt> for more options.</p>
-<p><span class="cli">mount</span> can additionally mount remote disks by using a network filesystem, like NFS4. You specify the used filesystem with the <tt>-t</tt> parameter and the remote location with the <tt>-p</tt> parameter. As filesystem parameter you can use anything you find in <span class="path">/system/add-ons/kernel/file_system</span> (and corresponding file hierarchies under <span class="path">~/config</span> or "<span class="path">non-packaged</span>", of course). You also have to create a folder as mountpoint. Here's an example:</p>
-<pre class="terminal">mkdir -p /DiskStation
-mount -t nfs4 -p "192.168.178.3:volume1" /DiskStation</pre></td></tr>
+		<td valign="top"><p><span class="cli">mountvolume</span> komutunu bir çok kişi yerel disk bölümlerini ve diskleri bağlamak için kullanır; çünkü kullanımı çok kolaydır: Disk bölümünün adını verin, bu kadar basit. Daha fazla seçenek için <tt>--help</tt> argümanıyla çalıştırın.</p>
+<p><span class="cli">mount</span> komutu, ek olarak bir ağ dosya sistemi kullanarak (örn. NFS4), uzak diskleri bağlamanıza izin verir. Kullanılan dosya sistemini <tt>-t</tt> parametresiyle, uzak konumu da <tt>-p</tt> parametresiyle verin. Dosya sistemi parametresi olarak <span class="path">/system/add-ons/kernel/file_system</span> konumundaki herhangi bir dosya sistemini (ve <span class="path">~/config</span> veya "<span class="path">non-packaged</span>" altındakiler de) kullanabilirsiniz. Bağlama noktası olarak bir klasör oluşturmalısınız. Örnek:</p>
+<pre class="terminal">mkdir -p /Diskİstasyonu
+mount -t nfs4 -p "192.168.178.3:volume1" /Diskİstasyonu </pre></td></tr>
 <tr><td><p><span class="cli">open</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">open</span> is a very handy little tool. With it you open any file with its preferred application, or start a specific application by its signature without the need to know its exact path. It also works with URLs and even with the "virtual" directories <tt>.</tt> for the current directory and <tt>..</tt> for the parent, opening the folder in Tracker.</p>
+		<td valign="top"><p><span class="cli">open</span>, çok kullanışlı ufak tefek bir araçtır. Bu komut ile, herhangi bir dosyası, yeğlenen uygulaması ile doğrudan açabilirsiniz veya tam yolunu bilmenize gerek kalmadan herhangi bir uygulamayı imzasını kullanarak açabilirsiniz. URL'ler ve sanal dizinlerle da çalışır. Geçerli dizin için <tt>.</tt> ve üst dizin için <tt>..</tt>, klasörü İzleyici'de açar.</p>
 </td></tr>
 <tr><td><p><span class="cli">ramdisk</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p>Bir ramdisk, bilgisayarın belleğinde çalışan bir sabit disk gibidir. Bundan dolayı çok hızlıdır; ancak kırılgandır; çünkü bilgisayar kapatıldığında, çöktüğünde veya elektrikler kesildiğinde bellek kaybolur.<br /><br />
