@@ -120,6 +120,23 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Conseils pour travailler dans le Terminal</a></h2>
+<ul><li><p>Déplacer un fichier ou dossier d’une fenêtre Tracker vers le Terminal insèrera son chemin à la position du curseur.
+Si le bouton droit de la souris est utilisé, un menu contextuel s’affichera, offrant des options additionnelles :</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Insert Path</span></td><td> </td><td>Insère l’emplacement du fichier, comme pour un glisser-déposer avec le bouton gauche de la souris</td></tr>
+<tr><td><span class="menu">Change Directory</span></td><td> </td><td>Règle le dossier courant du shell sur le dossier déposé</td></tr>
+<tr><td><span class="menu">Create Link Here</span></td><td> </td><td>Crée un lien vers le fichier déposé dans le dossier courant du shell.</td></tr>
+<tr><td><span class="menu">Move Here</span></td><td> </td><td>Déplace le fichier déposé dans le dossier courant du shell.</td></tr>
+<tr><td><span class="menu">Copy Here</span></td><td> </td><td>Copie le fichier déposé dans le dossier courant du shell.</td></tr>
+</table></li>
+<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Personnalisation du Bash</a></h2>
 <p>Issu du monde Unix, les possibilités de personnalisation du shell bash sont infinies. Deux fichiers sont particulièrement importants pour l'utilisateur : <span class="cli">profile</span> et <span class="cli">inputrc</span><br />
 Ces deux fichiers peuvent être créés dans votre dossier <span class="path">/boot/home/config/settings/</span> pour se substituer aux valeurs par défaut du système qui sont configurées dans <span class="path">/boot/system/etc/</span>.</p>
@@ -138,23 +155,6 @@ vous ouvrez un nouveau Terminal. Il configure divers alias et variables qui affe
 
 <h3>inputrc</h3>
 <p>Le fichier <span class="cli">inputrc</span> permet de configurer des équivalents claviers. Haiku fournit déjà des valeurs par défaut, vous n’aurez donc probablement pas à vous occupez de ces réglages plus compliqués. Si vous avez des besoins spécifiques, consultez des ressources en ligne, comme <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Library</a>.</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Conseils pour travailler dans le Terminal</a></h2>
-<ul><li><p>Déplacer un fichier ou dossier d’une fenêtre Tracker vers le Terminal insèrera son chemin à la position du curseur.
-Si le bouton droit de la souris est utilisé, un menu contextuel s’affichera, offrant des options additionnelles :</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Insert Path</span></td><td> </td><td>Insère l’emplacement du fichier, comme pour un glisser-déposer avec le bouton gauche de la souris</td></tr>
-<tr><td><span class="menu">Change Directory</span></td><td> </td><td>Règle le dossier courant du shell sur le dossier déposé</td></tr>
-<tr><td><span class="menu">Create Link Here</span></td><td> </td><td>Crée un lien vers le fichier déposé dans le dossier courant du shell.</td></tr>
-<tr><td><span class="menu">Move Here</span></td><td> </td><td>Déplace le fichier déposé dans le dossier courant du shell.</td></tr>
-<tr><td><span class="menu">Copy Here</span></td><td> </td><td>Copie le fichier déposé dans le dossier courant du shell.</td></tr>
-</table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
-</li></ul>
 
 </div>
 </div>

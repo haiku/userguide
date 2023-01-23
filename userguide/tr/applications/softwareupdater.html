@@ -79,7 +79,7 @@
 <p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time. Until there's an option for an automatic clean-up, it's a good idea to check the size of the "administrative" folder from time to time and remove the oldest states, that you probably won't have to boot into again.</p>
 </div>
 <h2>
-<a id="downgrading" name="downgrading">Downgrading to a previous Haiku revision</a></h2>
+<a id="downgrading" name="downgrading">Önceki bir Haiku revizyonuna geri dönüş</a></h2>
 <p>It's rare but possible that an update to the latest Haiku revision ("hrev") introduced a regression you're not willing to live with. From the boot options menu you can load a former, working state (see <a href="../bootloader.html#troubleshooting">Boot Loader - Troubleshooting</a>). Find the last working state and boot into it.</p>
 <p>To permanently downgrade to this revision, you have to point the 'Haiku' repository to that hrev. You find the current revision under "About Haiku" from the Deskbar. As example, to downgrade to hrev56231, open a Terminal and enter:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231

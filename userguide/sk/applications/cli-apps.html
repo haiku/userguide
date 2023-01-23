@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2018, Haiku. All rights reserved.
+ * Copyright 2010-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -135,10 +135,10 @@ An example:</p>
 <tr><td><p><span class="cli">diskimage</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p><span class="cli">diskimage</span> vám umožňuje zaregistrovať obyčajný súbor ako diskové zariadenia. Napríklad môžete sa zaregistrovať obraz Haiku vo formáte anyboot, pripojiť ho v Trackeri a kopírovať, upravovať alebo odstraňovať súbory na ňom predtým, než ho použijete ho ako zdroj v Inštalátore.</p></td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.c  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
-Without parameter, <span class="cli">launch_roster</span> lists all apps/services that are under its control.<br />
-For example, this will stop the re-launching of the Deskbar:</p>
-<pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
+		<td valign="top"><p>launch_daemon spúšťa rôzne služby a aplikácie pri štarte systému. Je nastavený tak, aby niektoré z nich znovu spustil ak sa zastavia. Ak si to neželáte (napríklad by ste chceli vyskúšať upravený Tracker), použite <span class="cli">launch_roster</span> na <tt>stop</tt> reštartovanie aplikácie pred jej ukončením. Podobne ju môžete znova spustiť (<tt>start</tt>) alebo zistiť informácie o nej (<tt>info</tt>). Bez parametra <span class="cli">launch_roster</span> vypíše všetky aplikácie a služby, ktoré riadi.<br />
+Napríklad takto zastavíte spúšťanie zastavenej aplikácie Panel:</p>
+<pre class="terminal">launch_roster stop x-vnd.be-tskb</pre>
+</td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p><span class="cli">mountvolume</span> mnohí používatelia preferujú na pripájanie lokálnych oblastí a diskov, pretože sa tak jednoducho používa: stačí ho zavolať s názvom diskovej oblasti a hotovo. Skúste si prečítať o ďalších voľbých zadaním <tt>--help</tt>.</p>
 <p><span class="cli">mount</span> môže naviac pripájať vzdialené pevné disky pomocou sieťového súborového systému ako je NFS4. Používaná súborový systém zadáte parametrom <tt>-t</tt> a vzdialené umiestnenie parametrom <tt>-p</tt>. Ako parameter súborového systému môžete použiť čokoľvek, čo nájdete v <span class="path">/system/add-ons/kernel/file_system</span> (a zodpovedajúcich hierarchiách súborov v priečinku <span class="path">~/config</span> alebo „<span class="path">non-packaged</span>“). Tiež musíte vytvoriť priečinok ako bod pripojenia. Napríklad:</p>
@@ -162,6 +162,11 @@ mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMobraz</pre>
 mountvolume RAMimage</pre>
 <p>Je veľmi dôležité, aby ste váš ramdisk vždy správne odpojili, buď z Trackera alebo príkazom <span class="cli">unmount /RAMobraz</span>, inak sa zmeny nezapíšu späť do súboru s obrazom disku!</p>
 </td></tr>
+<tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>This command sets the screen mode (resolution, bit depth, refresh rate). Normally, you'd set that in the Screen preferences. Another parameter makes it useful in combination with the Shortcuts preferences: e.g. <span class="cli">--brightness +3</span> increases the brightness by "3". Useful to change the backlight with a key combination.</p>
+</td></tr>
+<tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>This command sets the volume of the system master output. Besides specific values in dB, you can <span class="cli">--togglemute</span>, <span class="cli">--mute</span> or <span class="cli">--unmute</span> and <span class="cli">--increase</span> or <span class="cli">--decrease</span> the volume. Useful to assign key combinations with the Shortcuts preferences.</p></td></tr>
 </table>
 </div>
 </div>

@@ -117,6 +117,22 @@ A Terminál tartalmaz egy remek funkciót, ami több, mint egy egér-billentyű 
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Javaslatok a Terminállal való munkához</a></h2>
+<ul><li><p>Egy fájl vagy mappa a Terminál ablakba húzásakor a program annak útvonalát illeszti a jelenlegi pozícióba. Ha a jobb gombbal húzzuk azt az ablakba, akkor további lehetőségünk is van a megjelenő helyi menüből:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Útvonal beszúrása</span></td><td> </td><td>A behúzott fájl/mappa útvonalának beillesztése (megyegyezik a fájl/mappa bal gombbal való behúzásával).</td></tr>
+<tr><td><span class="menu">Mappa váltása</span></td><td> </td><td>A jelnlegi mappa módosítása a behúzott fájl/mappa útvonalával.</td></tr>
+<tr><td><span class="menu">Hivatkozás létrehozása</span></td><td> </td><td>Hivatkozás létrehozása a Terminál jelenlegi mappájába.</td></tr>
+<tr><td><span class="menu">Mozgatás</span></td><td> </td><td>A behúzott fájl/mappa a Terminál jelenlegi mappájába mozgatása.</td></tr>
+<tr><td><span class="menu">Másolás</span></td><td> </td><td>A behúzott fájl/mappa a Terminál jelenlegi mappájába másolása.</td></tr>
+</table></li>
+<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Bash személyre szabása</a></h2>
 <p>Számtalan lehetőség van a bash konfigurálására. Két fájl kifejezetten fontos a felhasználók számára: <span class="cli">profile</span> és <span class="cli">inputrc</span><br />
 Mind a kettőt a <span class="path">/boot/home/config/settings/</span> mappában kell létrehozni, és a <span class="path">/boot/system/settings/etc/</span> mappában lévő eredeti fájlok tartalmát átmásolni az újonnan létrehozottakba.</p>
@@ -134,22 +150,6 @@ Mind a kettőt a <span class="path">/boot/home/config/settings/</span> mappában
 
 <h3>inputrc</h3>
 <p>Az <span class="cli">inputrc</span>-vel billentyű-módosításokat hajthatunk végre. Mivel a Haiku a leghasznosabb alap beállításokat használja, így valószínű, hogy nem kell ezzel foglalkoznunk. Ha valami speciális dologra van szükségünk, akkor az interneten kapunk információt, például a <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Library</a> oldalon.</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Javaslatok a Terminállal való munkához</a></h2>
-<ul><li><p>Egy fájl vagy mappa a Terminál ablakba húzásakor a program annak útvonalát illeszti a jelenlegi pozícióba. Ha a jobb gombbal húzzuk azt az ablakba, akkor további lehetőségünk is van a megjelenő helyi menüből:</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Útvonal beszúrása</span></td><td> </td><td>A behúzott fájl/mappa útvonalának beillesztése (megyegyezik a fájl/mappa bal gombbal való behúzásával).</td></tr>
-<tr><td><span class="menu">Mappa váltása</span></td><td> </td><td>A jelnlegi mappa módosítása a behúzott fájl/mappa útvonalával.</td></tr>
-<tr><td><span class="menu">Hivatkozás létrehozása</span></td><td> </td><td>Hivatkozás létrehozása a Terminál jelenlegi mappájába.</td></tr>
-<tr><td><span class="menu">Mozgatás</span></td><td> </td><td>A behúzott fájl/mappa a Terminál jelenlegi mappájába mozgatása.</td></tr>
-<tr><td><span class="menu">Másolás</span></td><td> </td><td>A behúzott fájl/mappa a Terminál jelenlegi mappájába másolása.</td></tr>
-</table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
-</li></ul>
 
 </div>
 </div>

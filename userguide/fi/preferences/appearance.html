@@ -60,7 +60,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <h2><img src="../../images/prefs-images/appearance-icon_64.png" alt="appearance-icon_64.png" width="64" height="64" />Ulkoasuasetukset</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
@@ -80,7 +79,7 @@
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="installing_fonts" name="installing_fonts">Uusien kirjasimien asentaminen</a></h3>
-<p>Uudet kirjasimet, jotka eivät tule osana normaalia .hpkg-pakkausta, voidaan asentaa kopioimalla ne alikansioon kirjasintyypin mukaisesti (<tt>psfonts</tt> tai <tt>ttfonts</tt>) niiden vastaavaan <tt>non-packaged</tt>-kansioon (katso aihe <a href="../filesystem-layout.html">Tiedostojärjestelmasettelu</a>). TrueType-kirjasimille se olisi:</p>
+<p>Uudet kirjasimet, jotka eivät tule osana normaalia .hpkg-pakkausta, voidaan asentaa kopioimalla ne alikansioon kirjasintyypin mukaisesti (<tt>otfonts</tt>, <tt>psfonts</tt> tai <tt>ttfonts</tt>) niiden vastaavaan <tt>non-packaged</tt>-kansioon (katso aihe <a href="../filesystem-layout.html">Tiedostojärjestelmäasettelu</a>). TrueType-kirjasimille se olisi:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td> kirjasimet jokaiselle käyttäjälle.</td></tr>
 <tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td> kirjasimet vain sinulle itsellesi.</td></tr>
@@ -126,7 +125,7 @@ Reunanpehmennystapa</h3>
 <tr><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-off.png" alt="appearance-glyph-off.png" /><br />Harmaasävy, viimeistely: pois päältä</td><td style="width:15px;"></td><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-subpixel.png" alt="appearance-subpixel.png" /><br />LCD alipikseli, viimeistely: pois päältä</td></tr>
 </table>
 <p>Alipikseleihin perustuva reunanpehmennys lisää lievän värillisen hohdon objektiin. Kaikki eivät pidä siitä. Haikussa voit sekoittaa kaksi reunanpehmennystapaa ja löytää sinulle oikean asetuksen liukukytkimen avulla.</p>
-<p>This is how hinting with <span class="menu">LCD subpixel</span> compares to Grayscale:</p>
+<p>Näin <span class="menu">LCD alipikselirenderointi</span> vertautuu Harmaasävyyn:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-on.png" alt="appearance-glyph-on.png" /><br />Harmaasävy, viiimeistely: päällä</td><td style="width:15px;"></td><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-on-subpixel.png" alt="appearance-glyph-on-subpixel.png" /><br />LCD alipikseli, viimeistely: päällä</td></tr>
 </table>

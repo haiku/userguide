@@ -10,13 +10,14 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Workshop: E-mails verwalten</title>
+	<title>Workshop: E-Mails verwalten</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
@@ -73,55 +74,55 @@
 	<a href="#tips">Weitere Tipps</a></td></tr>
 </table>
 
-<h1>Workshop: E-mails verwalten</h1>
+<h1>Workshop: E-Mails verwalten</h1>
 
 <p>Dieser Workshop soll zeigen, wie man mit E-mails unter Haiku umgeht. Es wird davon ausgegangen, dass die E-Mail-Dienste mit den <a href="preferences/e-mail.html">E-Mail-Dienst</a> Einstellungen richtig konfiguriert sind und der Leser mit den Grundlagen der Anwendung <a href="applications/mail.html">E-Mail</a> vertraut ist.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="mailsystem" name="mailsystem">E-mails unter Haiku</a></h2>
-<p>Wer vor Haiku schon andere Betriebssysteme genutzt hat, ist wahrscheinlich große Anwendungen wie MS Outlook oder Thunderbird gewohnt. Man muss sie mit allen möglichen Daten wie Mailserver-Addressen und ähnlichem füttern und sie verwenden ihre eigene Kontakt-Datenbank. Sie übernehmen das Abrufen und Verschicken der E-mails und speichern sie in einer großen Datei in einem speziellen Format.<br />
+<a id="mailsystem" name="mailsystem">E-Mails unter Haiku</a></h2>
+<p>Wer vor Haiku schon andere Betriebssysteme genutzt hat, ist wahrscheinlich große Anwendungen wie MS Outlook oder Thunderbird gewohnt. Man muss sie mit allen möglichen Daten wie Mailserver-Addressen und ähnlichem füttern und sie verwenden ihre eigene Kontakt-Datenbank. Sie übernehmen das Abrufen und Verschicken der E-Mails und speichern sie in einer großen Datei in einem speziellen Format.<br />
 Ein Wechsel der E-Mail-Anwendung wird dadurch zu einem größeren Unterfangen, das einiges an Ex- und Import und Konvertieren von Daten erfordert. Möchte man mehrere Anwendungen gleichzeitig benutzen, um beispielsweise mal ein anderes Programm auszuprobieren, geht das auch kaum ohne Probleme.</p>
-<p>Haikus Umgang mit E-mails ist da anders; alles wird in kleine, separate Module aufgebrochen.</p>
-<p>Der <span class="app">mail_daemon</span> übernimmt die Kommunikation mit den Mailservern. Das <a href="preferences/e-mail.html">E-Mail-Dienst</a> Panel ist die Zentrale zur Konfiguration der E-Mail-Konten und beispielsweise in welchen Abständen sie abgerufen werden sollen.</p>
+<p>Haiku verwaltet E-Mails anders: Alles wird in kleine, separate Module aufgeteilt.</p>
+<p>Der <span class="app">mail_daemon</span> übernimmt die Kommunikation mit den Mailservern. Das Panel <a href="preferences/e-mail.html">E-Mail-Dienst</a> ist die Zentrale, um E-Mail-Konten zu konfigurieren - beispielsweise in welchen Abständen E-Mails abgerufen werden sollen.</p>
 <p>Jede heruntergeladene oder versendete Nachricht wird in einer einzelnen E-Mail-Datei gespeichert. Die Kopfdaten (Absender, Betreff, Datum etc.) und der Status (z. B. "New" - "Neu", "Replied" - "Beantwortet", "Sent" - "Gesendet") werden als BFS-Attibute an die Dateien gehängt, was das Suchen und Filtern mit Haikus schnellen Queries ermöglicht.</p>
 <img src="images/workshop-email-images/browsing.png" alt="browsing.png" /> 
-<p>Weil E-mails einzelne Dateien sind, können sie genauso einfach durchgeschaut werden wie das mit <a href="applications/showimage.html">Bildbetrachter</a> und einen Ordner (oder Query-Ergebnis) mit Bildern geht. Lässt man das Tracker-Fenster geöffnet, sieht man die sich bewegende Markierung der gerade geöffneten Datei während man mit den "Nächste"/"Vorherige" Symbolen durch die Dateiliste fährt.<br />
-Da es sich um normale Dateien handelt, ist es auch kein Problem zum Lesen der E-mails ein anderes Programm als Haikus <a href="applications/mail.html">E-Mail</a> zu benutzen.</p>
-<p>Genauso resultiert das Verfassen einer neuen Nachricht in einer normalen Datei, die dem mail_daemon zum Versand übergeben wird. Die Kontaktverwaltung wird der <a href="applications/people.html">Kontakte</a> Anwendung überlassen.</p>
-<p>Man kann also sagen, während woanders Mailprogramme alles erledigen müssen, von der Kommunikation mit Mailservern bis zur Darstellung der E-mails und Werkzeuge sie zu suchen und filtern, benutzt Haiku eine Kette kleinerer Werkzeuge und das normale Dateimanagement:</p>
+<p>Weil E-Mails einzelne Dateien sind, können sie genauso einfach durchgeschaut werden wie das mit <a href="applications/showimage.html">Bildbetrachter</a> und einen Ordner (oder Query-Ergebnis) mit Bildern geht. Lässt man das Tracker-Fenster geöffnet, sieht man die sich bewegende Markierung der gerade geöffneten Datei während man mit den "Nächste"/"Vorherige" Symbolen durch die Dateiliste fährt.<br />
+Da es sich um normale Dateien handelt, ist es auch kein Problem zum Lesen der E-Mails ein anderes Programm als Haikus <a href="applications/mail.html">E-Mail</a> zu benutzen.</p>
+<p>Genauso erstellt das Verfassen einer neuen Nachricht eine normale Datei, die dem mail_daemon zum Versand übergeben wird. Die Kontaktverwaltung wird der Anwendung <a href="applications/people.html">Kontakte</a> überlassen.</p>
+<p>Zusammengefasst kann man sagen: Während in anderen Betriebssystemen E-Mail-Programme alles erledigen, von der Kommunikation mit Mailservern bis zur Darstellung der E-Mails und Werkzeuge, sie zu suchen und filtern, benutzt Haiku eine Kette kleinerer Werkzeuge und das normale Dateimanagement:</p>
 <ul>
-<li><p>Der <span class="app">mail_daemon</span> holt und sendet E-mails und speichert sie als normale Dateien.</p></li>
-<li><p>Tracker-Fenster und Queries, um die E-Mail-Dateien zu finden und zu filtern.</p></li>
+<li><p>Der <span class="app">mail_daemon</span> holt und sendet E-Mails und speichert sie als normale Dateien.</p></li>
+<li><p>Tracker-Fenster und Queries, um die E-Mail-Dateien zu finden, anzuzeigen und zu filtern.</p></li>
 <li><p>Die Anwendung <span class="app">E-Mail</span> zum Lesen und Verfassen von Nachrichten, wobei für das systemweite Kontaktmanagement die Anwendung <span class="app">Kontakte</span> dient.</p></li>
 </ul>
-<p>Insbesondere die Verwendung von Tracker und Queries zur Verwaltung von E-mails ist ein weitreichendes Konzept. Die Erfahrung, die man dabei sammelt ist direkt übertragbar auf alle anderen Gebiete, die mit Dateimanagement zu tun haben. Der Tracker steht im Mittelpunkt, egal ob es dabei um Bilder, Musik, Videos, Kontakte oder irgendwelche anderen Dokumente geht.<br />
-Und wird eine dieser Systemkomponenten verbessert, profiteren alle Anwendungen davon, nicht nur diejenigen, die mit E-mail zu tun haben.</p>
+<p>Tracker und Queries zur Verwaltung von E-Mails zu verwenden, ist ein mächtiges Konzept. Die Erfahrung, die man dabei sammelt, ist direkt übertragbar auf alle anderen Bereiche, die mit Dateiverwaltung zu tun haben. Der Tracker steht im Mittelpunkt, ob es dabei um Bilder, Musik, Videos, Kontakte oder irgendwelche anderen Dokumente geht.<br />
+Und wird eine dieser Systemkomponenten verbessert, profiteren alle Anwendungen davon, nicht nur diejenigen, die mit E-Mail zu tun haben.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="status" name="status">Eigene Status nutzen</a></h2>
-<p>Während man seine E-mails durchsieht kommt es öfters vor, dass man sich mit einigen erst später in Ruhe befassen möchte. Durch Mails Befehl <span class="menu">Schließen und | Status "New" belassen</span> würde die E-mail in der Query für "<i>Neue Nachrichten</i>" bleiben, aber so sammeln sich schnell eine Menge E-mails an...</p>
-<p>Eine Möglichkeit ist natürlich einfach eine Antwort anzufangen und diese als Entwurf zu speichern. Aber wenn man eigentlich gar nicht antworten, sondern nur die E-mail später nochmal lesen wollte, ist auch das nicht ideal.</p>
+<p>Während man seine E-Mails durchsieht, kommt es öfters vor, dass man sich mit einigen erst später in Ruhe befassen möchte. Durch Mails Befehl <span class="menu">Schließen und | Status "New" belassen</span> würde die E-Mail in der Query für "<i>Neue Nachrichten</i>" bleiben, aber so sammeln sich schnell eine Menge ungelesener E-Mails an...</p>
+<p>Eine Möglichkeit wäre natürlich, einfach eine Antwort anzufangen und diese als Entwurf zu speichern. Aber wenn man eigentlich gar nicht antworten, sondern nur die E-Mail später nochmals lesen möchte, wäre auch das nicht ideal.</p>
 <img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>Am besten benutzt man <span class="menu">Schließen und | Status setzen...</span> um einen neuen Status anzulegen um damit E-mails zu kategorisieren. Man könnte so einen Status beispielsweise "<i>Später</i>" nennen und dann eine Query danach starten wenn man mehr Zeit hat.<br />
+<p>Am besten nutzt man <span class="menu">Schließen und | Status setzen...</span>, um einen neuen Status anzulegen  mit dem sich E-Mails kategorisieren lassen. Man könnte so einen Status beispielsweise "<i>Später</i>" nennen und dann ein Query danach starten, wenn man mehr Zeit hat.<br />
 Oder man legt sich für bestimmte Projekte jeweils einen eigenen Status an. Ich habe z. B. einen namens "<i>HUG</i>" (für "Haiku User Guide") angelegt, unter dem ich alle E-mails sammle, die den Inhalt des Userguides betreffen könnten, wie Commit-Mails über Codeänderungen, die ein Feature ändern oder neu einführen oder sonstige Mails, die den Userguide verbessern könnten.<br />
 Man sollte den Namen des Status auf alle Fälle kurz halten, damit er in die übliche Breite der Statusspalte im Tracker passt.</p>
-<p>Um den Status einer E-mail zu ändern, muss sie nicht unbedingt mit dem <span class="app">E-Mail</span> Programm geöffnet werden. Mit den Tracker Add-Ons <span class="app">Mark as Read </span> ("Auf 'Gelesen' setzen") und <span class="app">Mark as...</span> ("Setzen auf...") kann der Status der markierte E-mails in einem Rutsch gesetzt werden.</p>
+<p>Um den Status einer E-Mail zu ändern, muss sie nicht unbedingt mit dem <span class="app">E-Mail</span> Programm geöffnet werden. Mit den Tracker Add-Ons <span class="app">Mark as Read </span> ("Auf 'Gelesen' setzen") und <span class="app">Mark as...</span> ("Setzen auf...") kann der Status der markierte E-Mails in einem Rutsch gesetzt werden.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="queries" name="queries">Queries nutzen</a></h2>
-<p>Alle E-mails werden in einen vom Benutzer angegebenen Ordner gespeichert. Der lässt sich natürlich öffnen, et voilà, schon sieht man alle seine E-mails. Doch mit der Zeit wird dieser Ordner immer voller und es dauert immer länger, bis tausende Dateien und ohre Attribute eingelesen und sortiert sind. Außerdem kümmern einen nur selten zwei Jahre alte E-mails von nigerianischen Prinzen und ihren Erbschaftsangelegenheiten...</p>
-<div class="box-info">Eine Menge Zeit beim Einlesen eines Ordners geht beim Sortieren und Anzeigen der von der Platte gelesenen Dateien drauf. Möchte man wirklich einen Ordner mit einer riesigen Zahl an Dateien öffnen, kann man die Sache beschleunigen, indem man das Trackerfenster "unsichtbar" macht, es also entweder minimiert oder auf eine andere Arbeitsfläche wechselt. Der <a href="desktop-applets/processcontroller.html">Systemmonitor</a> zeigt den Einfluss auf die CPU-Last an.</div>
+<p>Alle E-Mails werden in einem vom Benutzer angegebenen Ordner gespeichert. Der lässt sich natürlich öffnen, et voilà, schon sieht man alle seine E-Mails. Doch mit der Zeit wird dieser Ordner immer voller und es dauert immer länger, bis tausende Dateien und ihre Attribute eingelesen und sortiert sind. Außerdem kümmern einen nur selten zwei Jahre alte E-Mails von nigerianischen Prinzen und ihren Erbschaftsangelegenheiten...</p>
+<div class="box-info">Eine Menge Zeit beim Einlesen eines Ordners geht beim Sortieren und Anzeigen der von der Platte gelesenen Dateien drauf. Möchte man wirklich einen Ordner mit einer riesigen Zahl an Dateien öffnen, kann man die Sache beschleunigen, indem man das Trackerfenster "unsichtbar" macht: Es also entweder minimiert oder auf eine andere Arbeitsfläche wechselt. Der <a href="desktop-applets/processcontroller.html">Systemmonitor</a> zeigt den Einfluss auf die CPU-Last an.</div>
 <p><a href="queries.html">Query</a> hilf!</p>
-<p>Mit dem Einsatz von Queries lässt sich die Anzahl der dargestellten E-mails schön einschränken. Sie werden übrigens auch vom Mailbox-Symbol in der Deskbar benutzt.</p>
+<p>Mit dem Einsatz von Queries lässt sich die Anzahl der dargestellten E-Mails einschränken. Sie werden übrigens auch vom Mailbox-Symbol in der Deskbar benutzt.</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
-<p><span class="menu">Open Draft</span> ("Entwurf öffnen") füllt sein Untermenü durch eine Query nach dem Status "<i>Draft</i>", der vom <span class="app">E-Mail</span> Programm beim Speichern einer Nachricht vergeben wird.</p>
-<p><span class="menu">Open Inbox Folder</span> ("Posteingang öffnen") und <span class="menu">Open Mail Folder</span> ("E-mail Ordner öffnen") sind einfach nur Verknüpfungen zu regulären Ordnern (und nicht mal wirklich nützlich...).</p>
-<p>Das Untermenü von <span class="menu"># neue Nachrichten</span> wird durch eine Query nach dem Status "<i>New</i>" befüllt (die gleiche Query wird übrigens benutzt um das Mailbox-Symbol mit Briefen gefüllt zu zeigen).</p>
+<p>Das Untermenü <span class="menu">Open Draft</span> ("Entwurf öffnen") führt eine Query nach dem Status "<i>Draft</i>" aus, der vom <span class="app">E-Mail</span> Programm beim Speichern einer Nachricht vergeben wird.</p>
+<p><span class="menu">Open Inbox Folder</span> ("Posteingang öffnen") und <span class="menu">Open Mail Folder</span> ("E-Mail Ordner öffnen") sind einfach nur Verknüpfungen zu regulären Ordnern (und nicht mal wirklich nützlich...).</p>
+<p>Das Untermenü von <span class="menu"># neue Nachrichten</span> wird durch eine Query nach dem Status "<i>New</i>" befüllt.  (Die gleiche Query wird übrigens benutzt, um das Mailbox-Symbol mit Briefen gefüllt zu zeigen.)</p>
 
-<p>In <span class="path">~/config/settings/Mail/Menu Links</span> können eigene Queries (oder Ordner, Anwendungen, Skripts etc.) abgelegt oder verlinkt werden, die dann in dem Mailbox-Kontextmenü auftauchen.</p>
+<p>In <span class="path">~/config/settings/Mail/Menu Links</span> können eigene Queries (oder Ordner, Anwendungen, Skripts etc.) abgelegt oder verlinkt werden, die dann im Mailbox-Kontextmenü auftauchen.</p>
 <div class="box-info">Die Query <span class="path">~/config/settings/Mail/mailbox</span> ist ein Sonderfall: Sie wird bei einem Linksklick auf das Mailbox-Symbol ausgeführt. Dieses Verhalten kann geändert werden, indem man sie mit einer anderen Datei (oder Verknüpfung zu einer Datei) ersetzt. Es muss keine Query sein, eine Verknüpfung auf einen Ordner mit Queries oder ein Skript oder eine Anwendung geht genauso. Nur der Name muss "<i>mailbox</i>" bleiben.</div>
 
 <h3>
@@ -130,12 +131,12 @@ Man sollte den Namen des Status auf alle Fälle kurz halten, damit er in die üb
 <p>Hier einige Bespiele nützlicher Queries:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="10">
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /><br />
-Findet alle E-mails mit dem Status "<i>Later</i>".</td>
+Findet alle E-Mails mit dem Status "<i>Later</i>".</td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /><br />
-Findet alle E-mails der letzten 2 Tage.</td></tr>
+Findet alle E-Mails der letzten 2 Tage.</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /><br />
-Findet alle E-mails der letzten 2 Wochen von Ingo Weinhold.</td>
+Findet alle E-Mails der letzten 2 Wochen von Ingo Weinhold.</td>
 <td><img src="images/workshop-email-images/query-4.png" alt="query-4.png" /><br />
 Findet alle Nachrichten von der Haiku Commit Mailingliste der letzten 12 Stunden.</td></tr>
 </table>
@@ -144,8 +145,8 @@ Findet alle Nachrichten von der Haiku Commit Mailingliste der letzten 12 Stunden
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tips" name="tips">Weitere Tipps</a></h2>
 <ul>
-<li><p>Wird eine Query nicht als "<i>Query</i>", sondern als "<i>Query Vorlage</i>" gespeichert, erscheint beim Aufruf nicht gleich das Ergebnisfenster, sondern das "Suchen..." Fenster. So lässt sich einfach der Suchbegriff für Betreff oder Absender ändern, oder beispielsweise ein Zeitraum von "<i>2 days</i>" auf "<i>3 days</i>" verlängern.</p></li>
-<li><p>Mit aktiviertem "Filtern während der Eingabe" in den<a href="tracker.html#tracker-preferences">Tracker Einstellungen</a> lassen sich Query-Ergebnisse sehr schnell noch weiter filtern. Oft reicht es ja eine Query nach allen E-mails der letzten 3 Tage zu machen und den Rest einfach per Eingabe zu filtern. Der große Vorteil dabei: Man muss nicht exakt vorgeben welche Attribute durchsucht werden sollen, da beim Filtern alle eingeblendeten berücksichtigt werden.</p></li>
+<li><p>Wird eine Query nicht als "<i>Query</i>", sondern als "<i>Query Vorlage</i>" gespeichert, erscheint beim Aufruf nicht gleich das Ergebnisfenster, sondern das "Suchen..."-Fenster. So lässt sich einfach der Suchbegriff für Betreff oder Absender ändern oder beispielsweise ein Zeitraum von "<i>2 days</i>" auf "<i>3 days</i>" verlängern.</p></li>
+<li><p>Mit aktiviertem "Filtern während der Eingabe" in den <a href="tracker.html#tracker-preferences">Tracker Einstellungen</a> lassen sich Query-Ergebnisse sehr schnell noch weiter filtern. Oft reicht es, eine Query nach allen E-Mails der letzten 3 Tage zu erstellen, und den Rest einfach per Eingabe zu filtern. Der große Vorteil dabei: Man muss nicht exakt vorgeben, welche Attribute durchsucht werden sollen. Beim Filtern werden alle eingeblendeten berücksichtigt.</p></li>
 <!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
 </ul>
 
@@ -156,7 +157,7 @@ Findet alle Nachrichten von der Haiku Commit Mailingliste der letzten 12 Stunden
 <div class="inner"><span>
  «  <a href="workshop-filetypes+attributes.html">Workshop: Attribute</a> 
 ::  <a href="contents.html" class="uplink">Inhalt</a> 
-::  <a href="workshop-wlan.html">Workshop: Wlan</a>  »
+::  <a href="workshop-wlan.html">Workshop: WLAN</a>  »
 </span></div>
 </div>
 

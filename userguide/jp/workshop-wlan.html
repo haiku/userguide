@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2012-2019, Haiku, Inc. All rights reserved.
+ * Copyright 2012-2022, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">このページの翻訳はまだ完全ではありません。完成するまでは、未完成の部分はオリジナルの英文を使用します。</div>
 
 
 <table class="index" id="index" summary="index">
@@ -79,8 +80,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">ワイヤレスネットワークに接続する</a></h2>
-<p>デフォルトでは、Haiku は起動後に最初に見つけた暗号化されていないワイヤレスネットワークにつながります。特定のネットワークに接続させるには、デスクトップアプレットの <a href="desktop-applets/networkstatus.html">NetworkStatus</a> を使用します。</p>
-<p>Deskbar 内の NetworkStatus アイコンを右クリックして、ネットワークの公開名 (public name) を選択します (それはネットワークが送信する "SSID" です)。
+<p>You can use the Desktop applet <a href="desktop-applets/networkstatus.html">NetworkStatus</a> to connect to a specific network.</p>
+<p>Deskbar 内のネットワークの状態アイコンを右クリックして、ネットワークの公開名 (public name) を選択します (それはネットワークが送信する "SSID" です)。
 </p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
 <p>ウィンドウが開きます。そこに、認証方式 (たぶん、WPA か WPA2 のどちらか。WEP はもはやセキュアな暗号ではありません!) とそのパスワードを入力します。次回このネットワークに再接続したときに同じ情報をすべて入れなくていいように、その下の <span class="menu">この構成を保存 (Store this configuration)</span> チェックボックスにチェックを入れます。<br />
@@ -93,7 +94,7 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="commandline" name="commandline">コマンドラインから接続する</a></h2>
-<p>コマンドラインを使うのを好むか、スクリプトを使いたいか、または <span class="path">~/config/settings/boot/UserBootscriptt</span> で起動時に特定のネットワークへの接続を自動化するなら、<tt>ifconfig</tt> コマンドがあります。</p>
+<p>コマンドラインを使うのを好むか、スクリプトを使いたいか、または <span class="path">~/config/settings/boot/UserBootscript</span> で起動時に特定のネットワークへの接続を自動化するなら、<tt>ifconfig</tt> コマンドがあります。</p>
 <p>ターミナルを起動して、以下の最初の行を入力して利用できるワイヤレスネットワークを検索します。</p>
 <pre class="terminal">ifconfig /dev/net/iprowifi3945/0 scan
 name                             address              signal  auth

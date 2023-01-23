@@ -61,7 +61,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 
 <table class="index" id="index" summary="index">
@@ -82,74 +81,74 @@
 
 <h1>Laboratori: gjenars di file, atribûts, tabele e interogazions</h1>
 
-<p>This is a workshop to show the use of <a href="attributes.html">Attributes</a>, <a href="queries.html">Queries</a>, the <a href="index.html">Index</a> and custom <a href="filetypes.html">Filetypes</a>. As an example, we build a database to keep track of our DVD library.</p>
+<p>Chest al è un laboratori par mostrâ cemût doprâ i <a href="attributes.html">Atribûts</a>, lis <a href="queries.html">Interogazions</a>, la <a href="index.html">Tabele</a> e i <a href="filetypes.html">Gjenars di file</a> personalizâts. Come esempli, o costruìn une base di dâts par tignî note de nestre scansie di DVDs.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="preparations" name="preparations">Preparazions</a></h2>
-<p>Let's first decide what filetype and attributes would serve our needs. Originally, I planned to use a bookmark file with a link to the movie's IMdB page, but since Haiku didn't have a "bookmarkable" browser like BeOS' <span class="app">NetPositive</span> at that time, I came up with this: The file itself will be a JPEG image for the movie cover.<br />
-With <span class="app">WebPositive</span>, Haiku now has a browser using bookmark files again, so you could as well use a bookmark file instead of an image as basic filetype for our database files.<br />
-In any case, to these files we add a couple of attributes. Here we have to decide if we want to query it later (then we have to add it to the index) and if so, what type of attribute it should be. Numbers (int, float) can be evaluated differently than text (&lt;/=/&gt; vs. is/contains/starts with).</p>
-<p>Here are the attributes I'd like to see for my DVDs:</p>
+<p>Prime di dut o decidarìn ce gjenar di file e cuâl atribût nus pues coventâ pal nestri lavôr. In origjin, o vevi planificât di doprâ un file-segnelibri cuntun colegament ae pagjine IMdB dal filmât, ma viodût che chê volte Haiku nol veve un navigadôr cui segnelibris come il <span class="app">NetPositive</span> di BeOS, mi soi inventât chê robe achì: il stes file al sarà une imagjin JPEG pe cuvierte dal filmât.<br />
+Cun <span class="app">WebPositive</span>, Haiku cumò al à di gnûf un navigadôr che al dopre i files-segnelibris, duncje tu puedis ancje doprâ un file-segnelibri invezit di une imagjin come gjenar di file di base pai nestris files de base di dâts.<br />
+Dut câs, a chescj files o zontìn un pâr di atribûts. Chi o vin di decidi  se o desiderìn interogâju plui indenant (alore o vin di zontâju ae tabele) e in câs, ce gjenar di atribût che al à di sei. I numars (int, float) a puedin jessi valutâts in maniere diferente rispiet al test (&lt;/=/&gt; vs. is/contains/starts with).</p>
+<p>Chi a son i atribûts che o desideri viodi pai miei DVDs:</p>
 <ul>
-<li>Movie title</li>
-<li>Genre</li>
-<li>URL to e.g. IMdB</li>
-<li>Director/Cast</li>
-<li>Plot</li>
-<li>My rating from 1 to 10</li>
-<li>Coordinates in my shelf, e.g. A2, B3, so I find the DVD also in Real Life :)</li>
-<li>If so, who's borrowed the disk...</li>
+<li>Titul dal film</li>
+<li>Gjenar</li>
+<li>URL a p.e. IMdB</li>
+<li>Regjist/Atôrs</li>
+<li>Trame</li>
+<li>Mê valutazion di 1 a 10</li>
+<li>Coordenadis te mê scansie, p.e. A2, B3, cussì o cjati il DVD ancje te vite reâl :)</li>
+<li>Tal câs, a cui che o ai prestât il disc...</li>
 </ul>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="custom-filetype" name="custom-filetype">Creâ un gjenar di file personalizât</a></h2>
-<p>Start the <span class="app">Filetypes</span> preferences, and click on the <span class="button">Add...</span> button below the hierarchical list on the left. A small dialog opens and you specify in which MIME Group your new filetype will reside. You can also create a completely new group. Let's put it into "<i>applications</i>" and set the "Internal name" to <i>DVDdb</i>.</p>
+<p>Invie lis preferencis dai <span class="app">Gjenars di file</span> e fâs clic sul boton <span class="button">Zonte...</span> sot de liste jerarchiche a çampe. Si vierç un piçul dialic e tu specifichis in cuâl Grup MIME al à di stâ il to gnûf gjenar di file. Tu puedis ancje creâ un grup gnûf dal dut. Metìnlu in "<i>applications</i>" e met "Non interni" tant che <i>DVDdb</i>.</p>
 <img src="images/workshop-filetypes+attributes-images/filetypes-new-file-type.png" alt="filetypes-new-file-type.png" />
-<p>Now, a panel for your new DVDdb filetype opens:</p>
+<p>Cumò, si vierç un panel pal to gnûf gjenar di file DVDdb:</p>
 <img src="images/workshop-filetypes+attributes-images/filetypes-dvddb.png" alt="filetypes-dvddb.png" />
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="icon" name="icon">Icone</a></h3>
-<p>Double-click the icon well to open  <a href="applications/icon-o-matic.html">Icon-O-Matic</a> to design an icon for your filetype. You can also drag &amp; drop an icon from the icon well of another type, maybe as starting point for a modified version.</p>
+<p>Fâs dopli clic sul ricuadri de icone par vierzi <a href="applications/icon-o-matic.html">Icon-O-Matic</a> cussì di dissegnâ une icone pal to gjenar di file. Tu puedis ancje strissinâ e molâ une icone che si cjate tal ricuadri de icone di un altri gjenar di file, magari come inizi par une version modificade.</p>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="file-recognition" name="file-recognition">Ricognossiment dal file</a></h3>
-<p>You can add suffixes like .txt, .jpg, .mp3 to recognize files by their extention. Useful when working with files from systems without MIME typing. We don't need that for our example.</p>
+<p>Tu puedis zontâ sufìs come .txt, .jpg, .mp3 par ricognossi i files midiant la lôr estension. Util cuant che si lavore cui files di altris sistemis cence i gjenars MIME. Pal nestri esempli no vin bisugne di chest.</p>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="description" name="description">Descrizion</a></h3>
 <ul>
-<li><i>Type name</i> - Appears e.g. in the"Attribute" menu of Tracker windows and the "Kind" attribute of a file.</li>
-<li><i>Description</i> - A bit more detailed description.</li>
+<li><i>Non dal gjenar</i> - Al ven fûr p.e. tal menù "Atribûts"  dai barcons Tracker e l'atribût "Gjenar" di un file.</li>
+<li><i>Descrizion</i> - Une descrizion un tic plui detaiade.</li>
 </ul>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="pref_app" name="pref_app">Aplicazion preferide</a></h3>
-<p>This pop-up menu shows a list of all applications that can handle this particular filetype. From here you can choose which program should open this specific file when it's double-clicked.</p>
+<p>Chest menù a tende al mostre une liste di dutis lis aplicazions che a puedin gjestî chest particolâr gjenar di file. Di chi tu puedis sielzi cuâl program al à di vierzi chest specific file cuant che al ricêf il dopli clic.</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="button">Selezione...</span></td><td> </td><td>opens a file dialog where you choose the application to open with this filetype. Here, we set <span class="app">ShowImage</span> to display the DVD's cover.</td></tr>
-<tr><td class="onelinetop"><span class="button">Il stes di...</span></td><td> </td><td>opens a file dialog where you choose any file that already has the preferred application set that you're looking for.</td></tr>
+<tr><td><span class="button">Selezione...</span></td><td> </td><td>al vierç un dialic dai files dulà che tu sielzis la aplicazion di vierzi cun chest gjenar di file. Chi o configurìn <span class="app">ShowImage</span> par visualizâ la cuvierte dal DVD.</td></tr>
+<tr><td class="onelinetop"><span class="button">Il stes di...</span></td><td> </td><td>al vierç un dialic dai files dulà che tu sielzis cualsisei file che al à za configurade la aplicazion preferide che tu stâs cirint.</td></tr>
 </table>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="extra_attribute" name="extra_attribute">Atribûts adizionâi</a></h3>
-<p>Here we enter all the custom attributes we decided on in our preparations. Clicking the <span class="button">Add...</span> button opens a panel to enter all the data for the new attribute. You can edit an existing attribute with a double-click.</p>
+<p>Chi o inserìn ducj i atribûts personalizâts che o vin decidût tai nestris preparatîfs. Fasint clic sul boton <span class="button">Zonte...</span> si vierç un panel par inserî ducj i dâts pal gnûf atribût. Tu puedis modificâ un atribût esistent cuntun dopli-clic.</p>
 <img src="images/workshop-filetypes+attributes-images/filetype-extra-attribute.png" alt="filetype-extra-attribute.png" />
 <ul>
-<li><p><i>Attribute name</i> - Appears e.g. as the column heading in Tracker windows.</p></li>
-<li><p><i>Internal name</i> - Is used for indexing and querying the attribute.</p></li>
-<li><i>Type</i> - Defines the value the attribute can hold and therefore how it can be queried.
+<li><p><i>Non atribût</i> - Al ven fûr p.e. come intestazion di colone tai barcons di Tracker.</p></li>
+<li><p><i>Non interni</i> - Al ven doprât pe tabele e par interogâ l'atribût.</p></li>
+<li><i>Gjenar</i> - Al definìs il valôr che l'atribût al à di tignî e duncje cemût che al pues jessi interogât.
     <ul>
-    <li><span class="menu">String</span> for normal text</li>
-    <li><span class="menu">Boolean</span> for binary data: 0 (false) or &gt;=1 (true)</li>
-    <li><span class="menu">Integer</span> for integer numbers with different ranges:
+    <li><span class="menu">Stringhe</span> pal test normâl</li>
+    <li><span class="menu">Boolean</span> pai dâts binaris: 0 (fals) o &gt;=1 (vêr)</li>
+    <li><span class="menu">Intîr</span> pai numars intîrs cun intervai diferents:
         <ul>
         <li><span class="menu">8 bit</span>: ± 255</li>
         <li><span class="menu">16 bit</span>: ± 65,535</li>
@@ -157,80 +156,80 @@ In any case, to these files we add a couple of attributes. Here we have to decid
         <li><span class="menu">64 bit</span>: ± 18,446,744,073,709,551,615</li>
         </ul>
     </li>
-    <li><span class="menu">Float</span> for floating-point numbers, single precision</li>
-    <li><span class="menu">Double</span> for floating-point numbers, double precision</li>
-    <li><span class="menu">Time</span> for time and date format</li>
+    <li><span class="menu">Numar in virgule mobile</span> pai numars in virgule mobile a singule precision</li>
+    <li><span class="menu">Numar in virgule mobile a dople precision</span> pai numars in virgule mobile a dople precision</li>
+    <li><span class="menu">Timp</span> pal formât date e ore</li>
     </ul>
 </li>
 </ul>
 <ul>
-<li><i>Visible</i> - This checkbox determines if the attribute is visible in a Tracker window at all. Since the Tracker will be the interface to our DVD database, we check it and define its appearance with:
+<li><i>Visibil</i> - Cheste casele di selezion e determine se l'atribût al è visibil dal dut intun barcon di Tracker. Viodût che il Tracker al sarà la interface pe nestre base di dâts dai DVDs, o vin di segnâle e definî il so aspiet cun:
 <ul>
-    <li><span class="menu">Display as</span> - Leave on "Default" if the values are to be displayed according to the attribute's "Type" (e.g. string/integer/float etc.). The other options are:
+    <li><span class="menu">Mostre come</span> - Lasse su "Predefinît" se si à di visualizâ i valôrs in base al "Gjenar" dal atribût (p.e. stringhe/intîr/virgule mobile e v.i.). Lis altris opzions a son:
 	<ul>
-		<li><span class="menu">Checkbox</span> - Can be used to show either one of two symbols, see <span class="menu">Special</span> below.</li>
-		<li><span class="menu">Duration</span> - Shows an integer as 1/60, e.g. "90" becomes "1:30".</li>
-		<li><span class="menu">Rating</span> - Shows a rating between 0 and 10 as star symbols.</li>
+		<li><span class="menu">Casele di selezion</span> - Tu puedis doprâlu par mostrâ un di doi simbui, viôt <span class="menu">Speciâl</span> chi sot.</li>
+		<li><span class="menu">Durade</span> - Al mostre un intîr tant che 1/60, p.e. "90" al devente "1:30".</li>
+		<li><span class="menu">Valutazion</span> - Al mostre une valutazion tra 0 e 10 come stelutis.</li>
 	</ul></li>
-    <li><span class="menu">Editable</span> - Determines if the attribute shall be editable in Tracker.</li>
-    <li><span class="menu">Special</span> - Defines the two symbols used for a checkbox display. For example, "xo" will show a "x" for all values &gt;0 and "o" for 0.</li>
-    <li><span class="menu">Width</span> - The default width of that attributes column in a Tracker window.</li>
-    <li><span class="menu">Alignment</span> - The attribute can be displayed left, center, or right aligned.</li>
+    <li><span class="menu">Modificabil</span> - Al determine se al è pussibil modificâ l'atribût in Tracker.</li>
+    <li><span class="menu">Speciâl</span> - Al definìs i doi simbui doprâts par une visualizazion di casele di selezion. Par esempli, "xo" al mostrarà une "x" par ducj i valôrs &gt;0 e "o" par 0.</li>
+    <li><span class="menu">Largjece</span> - La largjece predefinide de colone di chel atribût intai barcons Tracker.</li>
+    <li><span class="menu">Inliniament</span> - Al è pussibil visualizâ l'atribût inliniât a çampe, tal mieç e a drete.</li>
 </ul></li></ul>
-<p>Now, insert all the info for our attributes:</p>
+<p>Cumò, o inserìn dutis lis informazions pai nestris atribûts:</p>
 <table summary="DVDdb Attributes" cellpadding="10" border="1">
-<tr><th>Internal Name</th><th>Attribute type</th><th>indexed?</th><th>Description</th></tr>
-<tr><td>DVDdb:title</td>	<td>text</td>		<td>yes</td>	<td>Movie title</td></tr>
-<tr><td>DVDdb:genre</td>	<td>text</td>		<td>yes</td>	<td>Genre</td></tr>
-<tr><td>DVDdb:url</td>		<td>text</td>		<td>no</td>	<td>URL</td></tr>
-<tr><td>DVDdb:cast</td>		<td>text</td>		<td>yes</td>	<td>Director/Cast</td></tr>
-<tr><td>DVDdb:plot</td>		<td>text</td>		<td>no</td>	<td>Plot</td></tr>
-<tr><td>DVDdb:rating</td>	<td>int-32</td>		<td>yes</td>	<td>Rating 1 to 10</td></tr>
-<tr><td>DVDdb:coord</td>	<td>text</td>		<td>no</td>	<td>Shelf</td></tr>
-<tr><td>DVDdb:lent</td>		<td>text</td>		<td>yes</td>	<td>Lent to</td></tr>
+<tr><th>Non interni</th><th>Gjenar di atribût</th><th>te tabele?</th><th>Descrizion</th></tr>
+<tr><td>DVDdb:titul</td>	<td>test</td>		<td>sì</td>	<td>Titul dal film</td></tr>
+<tr><td>DVDdb:gjenar</td>	<td>test</td>		<td>sì</td>	<td>Gjenar</td></tr>
+<tr><td>DVDdb:url</td>		<td>test</td>		<td>no</td>	<td>URL</td></tr>
+<tr><td>DVDdb:atôrs</td>		<td>test</td>		<td>sì</td>	<td>Regjist/Atôrs</td></tr>
+<tr><td>DVDdb:trame</td>		<td>test</td>		<td>no</td>	<td>Trame</td></tr>
+<tr><td>DVDdb:valutazion</td>	<td>intîr-32</td>		<td>sì</td>	<td>Valutazion di 1 a 10</td></tr>
+<tr><td>DVDdb:coordenade</td>	<td>test</td>		<td>no</td>	<td>Scansie</td></tr>
+<tr><td>DVDdb:prestât</td>		<td>test</td>		<td>sì</td>	<td>Prestât a</td></tr>
 </table>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="indexing" name="indexing">Meti te tabele</a></h2>
-<p>Before we start entering data in our little DVD database, we should add certain attributes to the <a href="index.html">Index</a>. Only indexed attributes can use Haiku's fast <a href="queries.html">Queries</a>.<br />
-So, what will we be searching in the future? We probably won't ask "What's in the B4 coordinate in my shelf?" or "Does the IMdB URL or the plot of the movie contain the word 'pope-shenooda'?".</p>
-<p>This leaves these attributes:</p>
+<p>Prime di scomençâ a inserî i dâts te nestre piçule base di dâts dai DVDs, o vin di zontâ cierts atribûts ae <a href="index.html">Tabele</a>. Dome i atribûts metûts te tabele a puedin doprâ lis sveltis <a href="queries.html">Interogazions</a> di Haiku.<br />
+Duncje, ce cirarìno un doman? Probabilmentri no domandarìn "Ce isal te coordenade B4 te mê scansie?" o "L'URL dal IMdB o la trame dal film contegnino la peraule 'pape-shenouda'?".</p>
+<p>Chest nus lasse chescj atribûts:</p>
 <table summary="Attribute Type" cellpadding="10" border="1">
-<tr><th>Internal Name</th><th>Attribute type</th></tr>
-<tr><td>DVDdb:title</td><td>text</td></tr>
-<tr><td>DVDdb:genre</td><td>text</td></tr>
-<tr><td>DVDdb:cast</td><td>text</td></tr>
-<tr><td>DVDdb:rating</td><td>int-32</td></tr>
+<tr><th>Non interni</th><th>Gjenar di atribût</th></tr>
+<tr><td>DVDdb:titul</td><td>test</td></tr>
+<tr><td>DVDdb:gjenar</td><td>test</td></tr>
+<tr><td>DVDdb:atôrs</td><td>test</td></tr>
+<tr><td>DVDdb:valutazion</td><td>intîr-32</td></tr>
 </table>
 
-<p>To index them, we open a Terminal and simply add one attribute after the other:</p>
-<pre class="terminal">mkindex -t string DVDdb:title
-mkindex -t string DVDdb:genre
-mkindex -t string DVDdb:cast
-mkindex -t int DVDdb:rating</pre>
-<p>The <span class="cli">-t</span> option defines the type of attribute, which is "string" for all but the rating, which is an integer number.</p>
+<p>Par metiju te tabele, o vierzìn un Terminâl e semplicementri o zontìn par ordin i atribûts:</p>
+<pre class="terminal">mkindex -t string DVDdb:titul
+mkindex -t string DVDdb:gjenar
+mkindex -t string DVDdb:atôrs
+mkindex -t int DVDdb:valutazion</pre>
+<p>La opzion <span class="cli">-t</span> e definìs il gjenar di atribût, che al è par ducj "string" (stringhe) infûr di valutazion, che al è un numar intîr.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="filling-data" name="filling-data">Jemplâ cui dâts</a></h2>
-<p>Now, everything's set and we can begin putting some data into our base.<br />
-Since our basic file is a cover image, we go to some online resource like IMdB, look for our first movie and save the cover or movie poster in a new folder where we want to keep our DVDdb files.</p>
-<p>Opening that folder we see a typical Tracker window with one JPEG in it. Right-clicking it, we change its filetype to <tt>application/DVDdb</tt> with the <span class="app">Filetype Addon</span>. There's more info on this in the <a href="filetypes.html">Filetypes</a> document.</p>
-<p>Now, we activate all our DVDdb attributes from the <span class="menu">Attributes</span> menu of the Tracker window and rearrange the columns to our taste:</p>
+<p>Cumò, dut al è stât configurât e o podìn scomençâ a meti cualchi dât te nestre base di dâts.<br />
+Viodût che il nestri file di base al è une imagjin di cuvierte, o nin su cualchi risorse in rêt come IMdB, o cirìn il nestri prin film e o salvìn la cuvierte o il poster dal filmât intune gnove cartele, dulà che o desiderìn tignî i nestris files DVDdb.</p>
+<p>Vierzint chê cartele o viodìn un tipic barcon di Tracker cuntun JPEG dentri. Fasint clic diestri su di lui, o cambìn il so gjenar di file a <tt>application/DVDdb</tt> cul <span class="app">Component adizionâl Gjenar di file</span>. Tu âs plui informazions in merit tal document <a href="filetypes.html">Gjenars di file</a>.</p>
+<p>Cumò, o ativìn ducj i nestris atribûts DVDdb dal menù <span class="menu">Atribûts</span> dal barcon di Tracker e o metìn in ordin daûr dal nestri gust:</p>
 <img src="images/workshop-filetypes+attributes-images/filetypes-dvddb-empty.png" alt="filetypes-dvddb-empty.png" />
-<p>By clicking on a yet empty attribute (or pressing <span class="key">ALT</span> <span class="key">E</span>) we enter editing mode and fill each attribute. With <span class="key">TAB</span> and <span class="key">SHIFT</span> <span class="key">TAB</span> you can navigate between attributes.</p>
-<p>In our example, we usually start with a downloaded JPG cover and change its type to applications/DVDdb. There's another elegant way to produce a file to work with. Just copy an empty file of our filetype to <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span> and rename it to DVDdb.</p>
-<p>Right-clicking into a Tracker window, you'll find a new entry under <span class="menu">New...</span> besides the default "New folder".</p>
+<p>Fasint clic suntun atribût ancjemò vueit (o fracant <span class="key">ALT</span> <span class="key">E</span>) o jentrìn in modalitât modifiche e o jemplìn ducj i atribûts. Cun <span class="key">TAB</span> e <span class="key">MAIUSC</span> <span class="key">TAB</span>  tu puedis passâ di un atribût a chel altri.</p>
+<p>Tal nestri esempli, o scomencìn di solit cuntune cuvierte JPEG discjariade e o cambìn il so gjenar a applications/DVDdb. E je une altre maniere elegante par produsi un file e lavorâi sore. Al baste copiâ un file vueit dal nestri gjenar di file su <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span> e cambiâi non in DVDdb.</p>
+<p>Fasint clic diestri intun barcon di Tracker, tu cjatarâs une gnove vôs sot di <span class="menu">Gnûf...</span> dopo dal predefinît "Gnove cartele".</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="query-db" name="query-db">Interogâ la base di dâts</a></h2>
-<p>Several hours of grunt work later, we have a nice little database that you can query to find all your Christina Ricci movies that have a 7+ rating...  :)</p>
-<p>You can assign a sensible attribute layout for query results of a specific filetype.<br />
-Open the folder containing your DVDdb files and arrange the attributes how you'd like to have query results presented. Copy this layout with <span class="menu">Attributes | Copy layout</span>.</p>
-<p>Open <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates</span>, create a new folder and rename it to <i>group/filetype</i>, replacing slashes with underscores; in our case "application_DVDdb".</p>
-<p>Open the new folder and paste in the layout with <span class="menu">Attributes | Paste layout</span>. Voilà:</p>
+<p>Diviersis oris di dûr lavôr dopo, o vin une ninine base di dâts che tu puedis interogâ par cjatâ ducj i tiei films di Christina Ricci che a àn une valutazion di 7+...  :)</p>
+<p>Tu puedis assegnâ un scheme sensât pe disposizion dai atribûts tai risultâts des interogazions di un specific gjenar di file.<br />
+Vierç la cartele che e conten i tiei files DVDdb e met in ordin i atribûts come che ti plâs vê presentâts i risultâts des interogazions. Copie cheste disposizion cun <span class="menu">Atribûts | Copie disposizion</span>.</p>
+<p>Vierç <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates</span>, cree une gnove cartele e clamile <i>group/filetype</i>, sostituint lis sbaris cun liniutis bassis; tal nestri câs "application_DVDdb".</p>
+<p>Vierç la gnove cartele e tache dentri la disposizion cun <span class="menu">Atribûts | Tache disposizion</span>. Voilà:</p>
 <img src="images/workshop-filetypes+attributes-images/query-dvddb.png" alt="query-dvddb.png" />
 
 </div>

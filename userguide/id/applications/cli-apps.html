@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2018, Haiku. All rights reserved.
+ * Copyright 2010-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Terjemahan halaman ini belum lengkap. Sampai saat itu, bagian yang belum selesai menggunakan aslinya bahasa Inggris.</div>
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Aplikasi command-line khusus-haiku</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -139,11 +140,10 @@ An example:</p>
 <tr><td><p><span class="cli">diskimage</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p><span class="cli">diskimage</span> memungkinkan Anda mendaftarkan file biasa sebagai perangkat disk. Misalnya, Anda dapat mendaftarkan gambar Haiku anyboot, pasang di Tracker dan salin, edit atau hapus file di sana sebelum menggunakannya sebagai sumber di Installer.</p></td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>Launch_daemon memulai semua jenis layanan dan aplikasi saat boot-up. Untuk beberapa itu diinstruksikan untuk memulai kembali jika mereka keluar. Jika Anda tidak mau - mungkin Anda ingin menguji Tracker yang dimodifikasi, misalnya - Anda menggunakan <span class="cli">launch_roster</span> untuk <tt>stop</tt> memulai kembali  sebelum berhenti. Mirip, Anda dapat <tt>start</tt> lagi atau mendapatkan <tt>info</tt>hal itu.c  parameter <tt>log</tt> mencetak semua log yang berkaitan dengan launch_daemon.<br />
-Tanpa parameter, <span class="cli">launch_roster</span> mencantumkan semua aplikasi / layanan yang berada di bawah kendalinya.<br />
-Misalnya, ini akan menghentikan peluncuran kembali Deskbar:</p>
-<pre class="terminal">launch_roster stop x-vnd.be-tskb</pre>
-</td></tr>
+		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
+Without parameter, <span class="cli">launch_roster</span> lists all apps/services that are under its control.<br />
+For example, this will stop the re-launching of the Deskbar:</p>
+<pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p><span class="cli">mountvolume</span> lebih disukai oleh banyak orang untuk me-mount partisi dan disk lokal, karena penggunaannya sangat mudah: cukup panggil dengan nama partisi dan Anda selesai. Cobalah <tt>--help</tt> untuk opsi lainnya.</p>
 <p><span class="cli">mount</span> juga dapat me-mount disk remote dengan menggunakan sistem file jaringan, seperti NFS4. Anda menentukan filesystem yang digunakan dengan parameter <tt>-t</tt> dan lokasi remote dengan parameter <tt>-p</tt>. Sebagai parameter filesystem Anda dapat menggunakan apa pun yang Anda temukan di <span class="path">/system/add-ons/kernel/file_system</span> (and corresponding file hierarchies under <span class="path">~/config</span> or "<span class="path">non-packaged</span>" tentu saja). Anda juga harus membuat folder sebagai mountpoint. Berikut ini contohnya:</p>
@@ -166,6 +166,11 @@ mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMimage</pre>
 mountvolume RAMimage</pre>
 <p>Sangat penting untuk selalu melakukan unmount ramdisk dengan bersih, baik melalui Tracker atau dengan <span class="cli">unmount /RAMimage</span>, jika tidak perubahan anda tidak ditulis kembali ke berkas image!</p>
 </td></tr>
+<tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>This command sets the screen mode (resolution, bit depth, refresh rate). Normally, you'd set that in the Screen preferences. Another parameter makes it useful in combination with the Shortcuts preferences: e.g. <span class="cli">--brightness +3</span> increases the brightness by "3". Useful to change the backlight with a key combination.</p>
+</td></tr>
+<tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>This command sets the volume of the system master output. Besides specific values in dB, you can <span class="cli">--togglemute</span>, <span class="cli">--mute</span> or <span class="cli">--unmute</span> and <span class="cli">--increase</span> or <span class="cli">--decrease</span> the volume. Useful to assign key combinations with the Shortcuts preferences.</p></td></tr>
 </table>
 </div>
 </div>

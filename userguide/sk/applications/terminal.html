@@ -118,6 +118,22 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Tipy pri práci s Terminálom</a></h2>
+<ul><li><p>Pretiahnutia súboru alebo zložky z okna  Trackera  do terminálu vloží svoju cestu v mieste kurzora. Ťahaním s pravým tlačidlom myši ponúka ďalšie akcie v kontextovom menu:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Vložiť cestu</span></td><td> </td><td>Vloži umiestnenie súboru, rovnako ako ťahanie&amp;pustenie ľavým tlačidlom.</td></tr>
+<tr><td><span class="menu">Zmeniť adresár</span></td><td> </td><td>Zmeni priečinok ťahaného súboru.</td></tr>
+<tr><td><span class="menu">Vytvoriť tu odkaz</span></td><td> </td><td>Vytvára odkaz na ťahaný súbor v aktuálnom pracovnom adresári Terminálu.</td></tr>
+<tr><td><span class="menu">Presunúť sem</span></td><td> </td><td>Presunie ťahaný súbor do aktuálneho pracovného adresára Terminálu.</td></tr>
+<tr><td><span class="menu">Skopírovať sem</span></td><td> </td><td>Kopíruje ťahaný súbor do aktuálneho pracovného adresára Terminálu.</td></tr>
+</table></li>
+<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Prispôsobenie bashu</a></h2>
 <p>Pretože pochádza z unixových systémov, existuje nespočetné množstvo možností, ako upraviť samotný bash. Existujú dva súbory, ktoré sú pre používateľa obzvlášť dôležité: <span class="cli">profile</span> a <span class="cli">inputrc</span><br />
 Oba súbory môžu byť vytvorené v priečinku <span class="path">/boot/home/config/settings/</span> a pridať alebo prepísať predvolené nastavenia systému, ktoré sú definované v <span class="path">/boot/common/etc/</span>.</p>
@@ -135,22 +151,6 @@ Oba súbory môžu byť vytvorené v priečinku <span class="path">/boot/home/co
 
 <h3>inputrc</h3>
 <p><span class="cli">inputrc</span> sa zaoberá klávesovými skratkami. Vzhľadom k tomu, že Haiku poskytuje užitočné prednastavenia, pravdepodobne s tým nič viac nemusíte robiť. Ak máte zvláštne potreby tu vám poradí s jeden z mnohých online zdrojov, napr <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Knižnica</a>.</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Tipy pri práci s Terminálom</a></h2>
-<ul><li><p>Pretiahnutia súboru alebo zložky z okna  Trackera  do terminálu vloží svoju cestu v mieste kurzora. Ťahaním s pravým tlačidlom myši ponúka ďalšie akcie v kontextovom menu:</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Vložiť cestu</span></td><td> </td><td>Vloži umiestnenie súboru, rovnako ako ťahanie&amp;pustenie ľavým tlačidlom.</td></tr>
-<tr><td><span class="menu">Zmeniť adresár</span></td><td> </td><td>Zmeni priečinok ťahaného súboru.</td></tr>
-<tr><td><span class="menu">Vytvoriť tu odkaz</span></td><td> </td><td>Vytvára odkaz na ťahaný súbor v aktuálnom pracovnom adresári Terminálu.</td></tr>
-<tr><td><span class="menu">Presunúť sem</span></td><td> </td><td>Presunie ťahaný súbor do aktuálneho pracovného adresára Terminálu.</td></tr>
-<tr><td><span class="menu">Skopírovať sem</span></td><td> </td><td>Kopíruje ťahaný súbor do aktuálneho pracovného adresára Terminálu.</td></tr>
-</table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
-</li></ul>
 
 </div>
 </div>

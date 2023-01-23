@@ -115,6 +115,22 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Hints for working with the Terminal</a></h2>
+<ul><li><p>Dragging a file or folder from a Tracker window into the Terminal will insert its path at the location of the cursor. Dragging with the right mouse button offers additional actions in a context menu:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Insert path</span></td><td> </td><td>Inserts the location of the file, same as drag &amp; dropping with the left mouse button.</td></tr>
+<tr><td><span class="menu">Change directory</span></td><td> </td><td>Changes to the folder of the dragged file.</td></tr>
+<tr><td><span class="menu">Create link here</span></td><td> </td><td>Creates a link to the dragged file in the current working directory of the Terminal.</td></tr>
+<tr><td><span class="menu">Move here</span></td><td> </td><td>Moves the dragged file into the current working directory of the Terminal.</td></tr>
+<tr><td><span class="menu">Copy here</span></td><td> </td><td>Copies the dragged file into the current working directory of the Terminal.</td></tr>
+</table></li>
+<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Bash customization</a></h2>
 <p>Coming from Unix, there are countless possibilities to customize the bash itself. There are two files that are especially important to the user: <span class="cli">profile</span> and <span class="cli">inputrc</span><br />
 Both files can be created in the <span class="path">/boot/home/config/settings/</span> folder and add or override the system defaults that are defined in <span class="path">/boot/system/settings/etc/</span>.</p>
@@ -132,22 +148,6 @@ Both files can be created in the <span class="path">/boot/home/config/settings/<
 
 <h3>inputrc</h3>
 <p>The <span class="cli">inputrc</span> deals with keybindings. Since Haiku provides useful defaults, you probably don't have to mess with these more involved settings. If you do have special needs here, consult one of the many online resources, e.g. <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Library</a>.</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Hints for working with the Terminal</a></h2>
-<ul><li><p>Dragging a file or folder from a Tracker window into the Terminal will insert its path at the location of the cursor. Dragging with the right mouse button offers additional actions in a context menu:</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Insert path</span></td><td> </td><td>Inserts the location of the file, same as drag &amp; dropping with the left mouse button.</td></tr>
-<tr><td><span class="menu">Change directory</span></td><td> </td><td>Changes to the folder of the dragged file.</td></tr>
-<tr><td><span class="menu">Create link here</span></td><td> </td><td>Creates a link to the dragged file in the current working directory of the Terminal.</td></tr>
-<tr><td><span class="menu">Move here</span></td><td> </td><td>Moves the dragged file into the current working directory of the Terminal.</td></tr>
-<tr><td><span class="menu">Copy here</span></td><td> </td><td>Copies the dragged file into the current working directory of the Terminal.</td></tr>
-</table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
-</li></ul>
 
 </div>
 </div>

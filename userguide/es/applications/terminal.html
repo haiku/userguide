@@ -118,6 +118,22 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Pistas para trabajar con la Terminal</a></h2>
+<ul><li><p>Al arrastrar un archivo o carpeta desde una ventana de Tracker a la Terminal insertará su ruta en la posición del cursor. Arrastrar con el botón derecho del ratón ofrece acciones adicionales en un menú contextual:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Insert Path</span> (insertar ruta)</td><td> </td><td>Inserta la ubicación del archivo, igual que arrastrar y soltar con el botón izquierdo del ratón.</td></tr>
+<tr><td><span class="menu">Change Directory</span> (cambiar carpeta)</td><td> </td><td>Cambia a la carpeta del archivo arrastrado.</td></tr>
+<tr><td><span class="menu">Create Link Here</span> (crear enlace aquí)</td><td> </td><td>Crea un enlace al archivo arrastrado en la carpeta de trabajo actual de la Terminal.</td></tr>
+<tr><td><span class="menu">Move Here</span> (mover aquí)</td><td> </td><td>Mueve el archivo arrastrado dentro de la carpeta de trabajo actual de la Terminal.</td></tr>
+<tr><td><span class="menu">Copy Here</span> (copiar aquí)</td><td> </td><td>Copia el archivo arrastrado dentro de la carpeta de trabajo actual de la Terminal.</td></tr>
+</table></li>
+<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Personalización de Bash</a></h2>
 <p>Viniendo de Unix, hay incontables posibilidades para personalizar al propio Bash. Hay dos archivos que son especialmente importantes para el usuario: <span class="cli">profile</span> y <span class="cli">inputrc</span><br />
 Ambos archivos pueden crearse en la carpeta <span class="path">/boot/home/config/settings/</span> y agregar o sobrescribir los predeterminados del sistema que se definen en <span class="path">/boot/system/etc/</span>.</p>
@@ -135,22 +151,6 @@ Ambos archivos pueden crearse en la carpeta <span class="path">/boot/home/config
 
 <h3>inputrc</h3>
 <p>El archivo <span class="cli">inputrc</span> trata con teclas de acceso rápido. Ya que Haiku proporciona predeterminados útiles, probablemente no tenga que lidiar con estas selecciones más envueltas. Si tiene necesidades especiales aquí, consulte alguno de los vastos recursos en línea, p. ej., la <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">GNU Readline Library</a> (La biblioteca de lectura en línea de GNU, en inglés).</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Pistas para trabajar con la Terminal</a></h2>
-<ul><li><p>Al arrastrar un archivo o carpeta desde una ventana de Tracker a la Terminal insertará su ruta en la posición del cursor. Arrastrar con el botón derecho del ratón ofrece acciones adicionales en un menú contextual:</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Insert Path</span> (insertar ruta)</td><td> </td><td>Inserta la ubicación del archivo, igual que arrastrar y soltar con el botón izquierdo del ratón.</td></tr>
-<tr><td><span class="menu">Change Directory</span> (cambiar carpeta)</td><td> </td><td>Cambia a la carpeta del archivo arrastrado.</td></tr>
-<tr><td><span class="menu">Create Link Here</span> (crear enlace aquí)</td><td> </td><td>Crea un enlace al archivo arrastrado en la carpeta de trabajo actual de la Terminal.</td></tr>
-<tr><td><span class="menu">Move Here</span> (mover aquí)</td><td> </td><td>Mueve el archivo arrastrado dentro de la carpeta de trabajo actual de la Terminal.</td></tr>
-<tr><td><span class="menu">Copy Here</span> (copiar aquí)</td><td> </td><td>Copia el archivo arrastrado dentro de la carpeta de trabajo actual de la Terminal.</td></tr>
-</table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
-</li></ul>
 
 </div>
 </div>

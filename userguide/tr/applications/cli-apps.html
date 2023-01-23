@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2018, Haiku. All rights reserved.
+ * Copyright 2010-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Bu sayfanın çevrilmesi henüz tamamlanmamıştır. Tamamlanana kadar henüz bitirilmeyen kısımlar İngilizce metni kullanır.</div>
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Haiku komut satırı uygulamaları</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -137,9 +138,9 @@ Bir bağlantı yapılmasını ister misiniz?" "Masaüstü'nde" "Masaüstü Çubu
 		<td valign="top"><p><span class="cli">diskimage</span>, normal bir dosyayı bir disk aygıtı plank kaydetmenize izin verir. Örneğin, bir Haiku any boot kalıbını İzleyici'de bağlayabilir, Haiku Kur ile kullanmadan önce içindeki dosyaları değiştirebilir veya yeni dosyalar ekleyebilirsiniz.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>launch_daemon, önyükleme sırasında her türden servisi başlatır. Bazı servisler, eğer onlardan çıkılırsa yeniden başlatılırlar. Bunu yapmak istemiyorsanız; örneğin değiştirilmiş bir İzleyici'yi sınamak isterseniz <span class="cli">launch_roster</span> kullanarak uygulamanın yeniden başlatılmasını <tt>durdurabilirsiniz</tt>. Buna benzer olarak, onu <tt>başlatabilir</tt> veya hakkında <tt>bilgi</tt> alabilirsiniz. <tt>log</tt> parametresi, tüm launch_daemon ilgili olayların bir günlüğünü döker.<br />
-Parametre kullanılmadan, <span class="cli">launch_roster</span>, denetiminde olan tüm hizmetlerin/uygulamaların bir listesini çıkarır.<br />
-Örneğin, bu komut, Masaüstü Çubuğu'nun yeniden başlatılmasını engeller:</p>
+		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
+Without parameter, <span class="cli">launch_roster</span> lists all apps/services that are under its control.<br />
+For example, this will stop the re-launching of the Deskbar:</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p><span class="cli">mountvolume</span> komutunu bir çok kişi yerel disk bölümlerini ve diskleri bağlamak için kullanır; çünkü kullanımı çok kolaydır: Disk bölümünün adını verin, bu kadar basit. Daha fazla seçenek için <tt>--help</tt> argümanıyla çalıştırın.</p>
@@ -164,6 +165,11 @@ mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMKalıbıAdı</pre>
 mountvolume RAMKalıbıAdı</pre>
 <p>Değişikliklerin korunması için her zaman İzleyici'den düzgünce bağlantıyı kesmeli veya <span class="cli">unmount /RAMKalıbıAdı</span> komutunu kullanmalısınız; yoksa değişiklikler dosyaya geri yazılmaz!</p>
 </td></tr>
+<tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>Bu komut, ekran kipini ayarlar (çözünürlük, bit derinliği, yenileme hızı). Normalde, bu ayarlar Ekran tercihlerinden yapılır. Başka bir parametre ise bunu Kısayollar tercihleri ile birlikte kullanıldığında kullanışlı yapar: Örn. <span class="cli">--brightness +3</span>, parlaklığı "3" birim artırır. Parlaklığı bir düğme kombinasyonu ile değiştirmek için yararlıdır.</p>
+</td></tr>
+<tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>Bu komut, sistem ana ses düzeyini ayarlar. dB türünden belirli değerlerin dışında, ses düzeyini <span class="cli">--togglemute</span> (sessize al/aç), <span class="cli">--mute</span> (sessize al) veya <span class="cli">--unmute</span> (sesi aç) ve <span class="cli">--increase</span> (artır) veya <span class="cli">--decrease</span> (azalt) yapabilirsiniz. Kısayollar tercihlerinden düğme kombinasyonları ayarlamak için yararlıdır.</p></td></tr>
 </table>
 </div>
 </div>

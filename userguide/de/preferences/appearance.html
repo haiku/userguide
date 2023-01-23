@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Finest Bug
  *		Humdinger
  *		taos
@@ -70,35 +71,35 @@
 <tr><td>Einstellungen:</td><td></td><td><span class="path">~/config/settings/system/app_server/appearance</span><br />
 <span class="path">~/config/settings/system/app_server/fonts</span></td></tr>
 </table>
-<p>Im <acronym title="Appearance">Erscheinungsbild</acronym> Panel lassen sich einige Details von Haikus grafischer Oberfläche anpassen.</p>
+<p>Im Panel <acronym title="Appearance">Erscheinungsbild</acronym> lassen sich Details der grafischen Oberfläche anpassen.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="fonts" name="fonts">Schriftarten</a></h2>
 <img src="../images/prefs-images/appearance-fonts.png" alt="appearance-fonts.png" />
-<p>Haiku verwendet systemweit drei verschiedene Schriftarten. Sie können hier unter "Normal", "Fett" und "Feste Breite" (Schrift mit fester Buchstabenbreite) festgelegt werden. Daneben kann auch noch die Schriftart für Menüs eingestellt werden.</p>
+<p>Haiku verwendet systemweit drei verschiedene Schriftarten. Sie können hier unter "Normal", "Fett" und "Feste Breite" (Schrift mit fester Buchstabenbreite) festlegen. Daneben kann auch noch die Schriftart für Menüs eingestellt werden.</p>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="installing_fonts" name="installing_fonts">Installation neuer Schriftarten</a></h3>
-<p>Neue Schriften, die nicht als ordentliches .hpkg Paket vorliegen, können installiert werden, indem sie in einen ihrem Schrifttyp benannten Unterordner (<tt>psfonts</tt> oder <tt>ttfonts</tt>) in den entsprechenden <tt>non-packaged</tt> Ordner kopiert werden (siehe <a href="../filesystem-layout.html">Dateisystem Layout</a>). Bei TrueType Schriften wären das:</p>
+<p>Auch neue Schriften, die nicht als ordentliches .hpkg Paket vorliegen, können installiert werden, indem sie in einen Unterordner im <tt>non-packaged</tt>-Ordner abgelegt werden. Der Unterordner ist nach dem jeweiligen Schrifttyp (<tt>otfonts</tt>, <tt>psfonts</tt> oder <tt>ttfonts</tt>) benannt. Näheres dazu unter <a href="../filesystem-layout.html">Dateisystem-Layout</a>). Bei TrueType Schriften wären das:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>Schriften, die für jeden Benutzer verfügbar sind</td></tr>
-<tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>Schriften, die nur für einen selbst verfügbar sind</td></tr>
+<tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>Schriften, die für jeden Benutzer verfügbar sind.</td></tr>
+<tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>Schriften, die nur für einen selbst verfügbar sind.</td></tr>
 </table>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="colors" name="colors">Farben</a></h2>
 <img src="../images/prefs-images/appearance-colors.png" alt="appearance-colors.png" />
-<p>Im Reiter, <span class="menu">Farben</span> lassen sich die Farben einiger Teile der Oberfläche einstellen. In das Farbfeld können Farben per Drag &amp; Drop aus anderen Programmen, wie zum Beispiel <span class="app">WonderBrush</span>, <span class="app">Icon-O-Matic</span> oder dem <span class="app"><acronym title="Backgrounds">Hintergründe</acronym></span> Panel, gezogen werden.</p>
+<p>Im Reiter <span class="menu">Farben</span> lassen sich die Farben einiger Teile der Oberfläche einstellen. In die Farbfelder können Farben per Drag &amp; Drop aus anderen Programmen, wie zum Beispiel <span class="app">WonderBrush</span>, <span class="app">Icon-O-Matic</span> oder dem Panel <span class="app"><acronym title="Backgrounds">Hintergründe</acronym></span> gezogen werden.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="decorators" name="decorators">Dekorator</a></h2>
 <img src="../images/prefs-images/appearance-decorators.png" alt="appearance-decorators.png" />
 <p>Dekoratoren bestimmen Aussehen und Verhalten von Fenstern und all ihrer grafischen Elemente. Zur Zeit gibt es für Haiku allerdings nur einen einzigen Standard-Dekorator. Sollte man irgendwo einen alternativen Dekorator gefunden und installiert haben, ließe er sich hier auswählen.</p>
-<p>Bei Haikus Standard-Dekorator lässt sich die Art der Scroll-Pfeile einstellen: entweder einfache Pfeile am Ende von Scroll-Balken, um ein bisschen Platz zu sparen, oder doppelte Pfeile — der BeOS Tradition folgend — wodurch sich beim Rauf- und Runter- oder Links- und Rechts-Scrollen eventuell ein paar Mausbewegungen sparen lassen...</p>
+<p>Bei Haikus Standard-Dekorator lässt sich die Art der Scroll-Pfeile einstellen: Entweder einfache Pfeile am Ende von Scroll-Balken, um ein bisschen Platz zu sparen, oder doppelte Pfeile — der BeOS-Tradition folgend — wodurch sich beim Rauf- und Runter- oder Links- und Rechts-Scrollen eventuell ein paar Mausbewegungen sparen lassen.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -135,7 +136,7 @@ Kantenglättungstyp</h3>
 <p>Ganz unten im Fenster befinden sich zwei Buttons:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="button">Standardwerte</span></td><td> </td><td>Setzt alle Einstellungen auf die Standardwerte zurück.</td></tr>
-<tr><td><span class="button">Anfangswerte</span></td><td> </td><td>setzt wieder die Werte, die aktiv waren, als das <acronym title="Appearance">Erscheinungsbild</acronym> Panel gestartet wurde.</td></tr>
+<tr><td><span class="button">Anfangswerte</span></td><td> </td><td>Setzt wieder die Werte, die aktiv waren, als das Panel <acronym title="Appearance">Erscheinungsbild</acronym> gestartet wurde.</td></tr>
 </table>
 
 </div>

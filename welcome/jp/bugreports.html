@@ -145,7 +145,7 @@
 syslog (system log の略称) はシステムに発生した有益な情報を含んでいます。それは、KDL セッションの出力を含んでいます。それをカーネル関連の Trac チケットに添付することは良いことです。syslog は <span class="path">/boot/system/var/log/syslog</span> に記録されます。ファイルの書き込みには動作しているシステムが必要であり、直近の出力が書き込まれず、カーネルの問題が起きた瞬間を記録していないかもしれません (おもに突然のリブートや続行不能な KDL のセッションで)。</p>
 <p>ブートローダーの <span class="menu">Debug menu</span> にある <span class="menu">Enable debug syslog</span> オプションは syslog を記録します。<span class="menu">Save syslog from previous session during boot</span> オプションがブートローダーオプションで有効な場合 (実際デフォルトです)、最新のセッションの syslog は、<span class="path">/boot/system/var/log/previous_syslog</span>  に見つかるでしょう。<br />
 ブートしても、previous_syslog が得られない場合は、起動するときに <span class="key">SHIFT</span> を押したままにしてブートローダーメニューに入る必要があります。<br />
-ブートローダーメニューにある <span class="menu">Debug menu</span> の中には <span class="menu">Display syslog from previous session</span> と <span class="menu">Save syslog from previous session</span> があります。前者は syslog をスクリーンに表示し、後者はディスクに保存します。現時点では FAT32 フォーマットのみサポートされていることに注意してください。USB メモリーを使用する場合は、後から接続しても認識しないので 1 度再起動し、再度ブートローダーメニューに入る必要があります。注意: 誤ってほかのオペレーションシステムを実行しないようにしてください。syslog を失ってしまいます。</p>
+ブートローダーメニューにある <span class="menu">Debug menu</span> の中には <span class="menu">Display syslog from previous session</span> と <span class="menu">Save syslog from previous session</span> があります。前者は syslog をスクリーンに表示し、後者はディスクに保存します。現時点では FAT32 フォーマットのみサポートされていることに注意してください。USB メモリを使用する場合は、後から接続しても認識しないので 1 度再起動し、再度ブートローダーメニューに入る必要があります。注意: 誤ってほかのオペレーションシステムを実行しないようにしてください。syslog を失ってしまいます。</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">画面上でのデバッグ</a></h3>

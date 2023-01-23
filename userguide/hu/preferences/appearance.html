@@ -80,7 +80,7 @@
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="installing_fonts" name="installing_fonts">Új betűtípusok telepítése</a></h3>
-<p>Azok a betűtípusok, melyek nem egy .hpkg részeként érkeznek, azok a betűtípusnak megfelelő almappába (a <tt>non-packed</tt> mappán belül) másolással telepíthetőek (<tt>psfonts</tt> vagy <tt>ttfonts</tt>). További információk a <a href="../filesystem-layout.html">Fájlrendszer szerkezete</a> fejezetben. TrueType betűk esetében:</p>
+<p>New fonts that don't come as part of a regular .hpkg package, can be installed by copying them into a subfolder according to the font type (<tt>otfonts</tt>, <tt>psfonts</tt> or <tt>ttfonts</tt>) into their respective <tt>non-packaged</tt> folder (see topic <a href="../filesystem-layout.html">Filesystem layout</a>). For TrueType fonts that would be:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>minden felhasználó számára elérhető betűtípusok számára.</td></tr>
 <tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>csak a saját betűtípusok.</td></tr>
@@ -126,7 +126,7 @@ Az <span class="menu">LCD-szubpixel</span> ettől jobb munkát végez, különö
 <tr><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-off.png" alt="appearance-glyph-off.png" /><br />Szürkeányalat, körvonal: ki</td><td style="width:15px;"></td><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-subpixel.png" alt="appearance-subpixel.png" /><br />LCD-szubpixel, körvonal: ki</td></tr>
 </table>
 <p>A szubpixeles élsimítás színes fényt ad az objektumoknak, amit nem mindenki tolerál. Ezért a Haiku mind a két élsimítási módot tudja egyszerre használni, mindenki megtalálhatja a megfelelő kombinációt a csuszka mozgatásával.</p>
-<p>This is how hinting with <span class="menu">LCD subpixel</span> compares to Grayscale:</p>
+<p>Ha a körvonalakat az <span class="menu">LCD-szubpixel</span>el együtt használod akkor ezt kapod eredményül a szürkeárnyalatossal összehasonlítva:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-on.png" alt="appearance-glyph-on.png" /><br />Szürkeárnyalat, körvonal: be</td><td style="width:15px;"></td><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-on-subpixel.png" alt="appearance-glyph-on-subpixel.png" /><br />LCD-szubpixel, körvonal: be</td></tr>
 </table>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2012-2019, Haiku, Inc. All rights reserved.
+ * Copyright 2012-2022, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,7 +63,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 
 <table class="index" id="index" summary="index">
@@ -76,13 +75,14 @@
 
 <h1>Työpaja: Langaton verkko</h1>
 
-<p>Getting the networking to run is essential in today's need for permanent internet connection. As keeping up to date with all the different and ever changing hardware and drivers is quite impossible for a small project, Haiku relies on a compatibility layer to make use of <a href="http://www.freebsd.org">FreeBSD</a> and some <a href="https://www.openbsd.org/">OpenBSD</a> networking drivers. This ensures a massive amount of supported hardware, though probably not 100% of what's out there.</p>
+<p>Verkkoyhteyksien saaminen toimimaan on olennaista nykypäivän tarpeessa pysyvään internet-yhteyteen. Koska erilaisten ja jatkuvasti muuttuvien laitteistojen ja ajurien pitäminen ajan tasalla on aika mahdotonta pienelle projektille, Haiku käyttää <a href="http://www.freebsd.org">FreeBSD</a>-yhteensopivuuskerrosta ja joitakin <a href="https://www.openbsd.org/">OpenBSD</a>-verkkoajureita järjestelmässään.<br />
+Tämä takaa valtavan joukon tuettuja laitteita, vaikka se ei luultavasti kata 100 prosenttia markkinoilla olevista.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">Langattomaan verkkoon liittyminen</a></h2>
-<p>Oletuksena Haiku liittyy ensimmäiseen salaamattomaan verkkoon, jonka se löytää alkulatauksen jälken. Jotta voisit yhdistää tiettyyn verkkoon, käytä Työpöytä-sovelmaa <a href="desktop-applets/networkstatus.html">Verkkotila</a>.</p>
-<p>Napsauta sen kuvaketta Työpöytäpalkissa ja valitse verkon julkinen nimi (joka on "SSID", jonka se lähettää) asiayhteysvalikosta.</p>
+<p>Voit käyttää Työpöytä-sovelmaa <a href="desktop-applets/networkstatus.html">Verkkotila</a> yhdistämään tiettyyn verkkoon.</p>
+<p>Napsauta sen kuvaketta hiiren kakkospainikkeella Työpöytäpalkissa ja valitse verkon julkinen nimi (joka on "SSID", jonka se lähettää) asiayhteysvalikosta.</p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
 <p>Avautuu ikkuna, johon voit kirjoittaa todennustyypin (luultavasti WPA/WPA2, WEP ei ole enää turvallinen salausmenetelmä!) ja salasanan tuolle langattomalle verkolle. Napsauta valintaruutua valikkorivin <span class="menu">Tallenna tämä asetus</span> jolloin sinun ei tarvitse kirjoittaa tietoja uudelleen joka kerta verkkoon kirjautuessa.<br /> 
 Napsauta <span class="button">Valmis</span>-painiketta kirjautumisprosessin käynnistämiseksi.<br /> Laitteistostasi ja verkkoasetuksistasi riippuen tämä voi kestää hetken. Saat tiedon edistymisestä ilmoituksilla:</p>

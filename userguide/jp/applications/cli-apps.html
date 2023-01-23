@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2018, Haiku. All rights reserved.
+ * Copyright 2010-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">このページの翻訳はまだ完全ではありません。完成するまでは、未完成の部分はオリジナルの英文を使用します。</div>
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Haiku 特有のコマンドラインアプリケーション</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -137,7 +138,7 @@ Would you like a link to it?" "On Desktop" "In Deskbar" "No thanks"</pre>
 		<td valign="top"><p><span class="cli">diskimage</span> は、普通のファイルをディスクデバイスとして登録します。たとえば、Haiku anyboot イメージを登録して、Tracker 中にマウントし、インストーラーのソースとして使う前にそこに存在するファイルの編集 / コピー / 削除ができます。</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>launch_daemon は、起動時に各種サービスやアプリケーションを開始します。それらのいくつかに対しては、終了後再起動するように指示されています。それを望まないのであれば – たぶん、たとえば修正した Tracker をテストする場合、<span class="cli">launch_roster</span> を使って、アプリケーションの終了前に再起動を停止 <tt>(stop)</tt> させます。同様に、それを再び起動 <tt>(start)</tt> することや、それについての情報 <tt>(info)</tt> を得ることもできます。引数 <tt>log</tt> は、launch_daemon に関連するすべてのイベントのログを出力します。<br />引数がないと、<span class="cli">launch_roster</span> はコントロールしているすべてのアプリ / サービスの一覧を出力します。<br />
+		<td valign="top"><p>launch_daemon は、起動時に各種サービスやアプリケーションを開始します。いくつかの物に対しては、終了後再起動するように教えられています。それを望まないのであれば – たぶん、たとえば修正した Tracker をテストしたい場合、<span class="cli">launch_roster</span> を使って、アプリケーションの終了前に再起動を停止 <tt>(stop)</tt> させます。同様に、それを再び起動 <tt>(start)</tt> することや、それについての情報 <tt>(info)</tt> を得ることもできます。引数がないと、<span class="cli">launch_roster</span> はコントロールしているすべてのアプリ / サービスの一覧を出力します。<br />
 例として、以下は Deskbar の再起動を停止します。</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre>
 </td></tr>
@@ -163,6 +164,11 @@ mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMimage</pre>
 <pre class="terminal">ramdisk create RAMimage
 mountvolume RAMimage</pre>
 <p>Tracker からか、<span class="cli">unmount /RAMimage</span> のどちらかで、RAM ディスクを常に正常にアンマウントすることはとても重要です。そうしなければ、変更がイメージファイルに書き込まれないでしょう!</p></td></tr>
+<tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>This command sets the screen mode (resolution, bit depth, refresh rate). Normally, you'd set that in the Screen preferences. Another parameter makes it useful in combination with the Shortcuts preferences: e.g. <span class="cli">--brightness +3</span> increases the brightness by "3". Useful to change the backlight with a key combination.</p>
+</td></tr>
+<tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>This command sets the volume of the system master output. Besides specific values in dB, you can <span class="cli">--togglemute</span>, <span class="cli">--mute</span> or <span class="cli">--unmute</span> and <span class="cli">--increase</span> or <span class="cli">--decrease</span> the volume. Useful to assign key combinations with the Shortcuts preferences.</p></td></tr>
 </table>
 </div>
 </div>

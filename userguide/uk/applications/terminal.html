@@ -115,6 +115,23 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Поради для роботи у Терміналі</a></h2>
+<ul><li><p>Переміщення файлу або теки з вікна Tracker в Термінал буде вставляти свій шлях в місці розташування курсору. Перетягування правою кнопкою мишки запропонує додаткові дії в контекстному меню:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Вставити шлях (Insert path)</span></td><td> </td><td> вставить розташування файлу таке саме як хапання та кидання лівою кнопкою мишки.</td></tr>
+<tr><td><span class="menu">Змінити каталог (Change directory)</span></td><td> </td><td>каталог 
+зміниться до теки де буде хапатись файл.</td></tr>
+<tr><td><span class="menu">Створити посилання тут (Create link here)</span></td><td> </td><td>створить посилання на захоплюваний файл у поточній робочій директорії Терміналу.</td></tr>
+<tr><td><span class="menu">Перемістити сюди (Move here)</span></td><td> </td><td> перемістить захоплюваний файл до поточної робочої директорії Терміналу.</td></tr>
+<tr><td><span class="menu">Копіювати сюди (Copy here)</span></td><td> </td><td>зкопіює захоплюваний файл до поточної робочої директорії Терміналу.</td></tr>
+</table></li>
+<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Користувацькі налаштування Bash (Bash customization)</a></h2>
 <p>Виходячи з Unix, існує безліч можливостей для налаштування самого bash. Є два файли, які особливо важливі для користувача: <span class="cli">профіль (profile)</span> та <span class="cli">inputrc</span><br />
 Обидва файли можуть бути створені в теці <span class="path">/boot/home/config/settings/</span> та додані і перепризначені у теці <span class="path">/boot/system/settings/etc/</span>.</p>
@@ -132,23 +149,6 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h3>Файл inputrc</h3>
 <p>Файл <span class="cli">inputrc</span> має справу з комбінаціями клавіш. Оскільки Haiku надає корисні типові значення, Вам напевно не доведеться возитись з цими складними налаштуваннями. Якщо у Вас виникне особлива потреба зверніться до одного з онлайн-ресурсів, наприклад до <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Library</a>.</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Поради для роботи у Терміналі</a></h2>
-<ul><li><p>Переміщення файлу або теки з вікна Tracker в Термінал буде вставляти свій шлях в місці розташування курсору. Перетягування правою кнопкою мишки запропонує додаткові дії в контекстному меню:</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Вставити шлях (Insert path)</span></td><td> </td><td> вставить розташування файлу таке саме як хапання та кидання лівою кнопкою мишки.</td></tr>
-<tr><td><span class="menu">Змінити каталог (Change directory)</span></td><td> </td><td>каталог 
-зміниться до теки де буде хапатись файл.</td></tr>
-<tr><td><span class="menu">Створити посилання тут (Create link here)</span></td><td> </td><td>створить посилання на захоплюваний файл у поточній робочій директорії Терміналу.</td></tr>
-<tr><td><span class="menu">Перемістити сюди (Move here)</span></td><td> </td><td> перемістить захоплюваний файл до поточної робочої директорії Терміналу.</td></tr>
-<tr><td><span class="menu">Копіювати сюди (Copy here)</span></td><td> </td><td>зкопіює захоплюваний файл до поточної робочої директорії Терміналу.</td></tr>
-</table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
-</li></ul>
 
 </div>
 </div>

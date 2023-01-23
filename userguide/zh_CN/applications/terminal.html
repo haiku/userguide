@@ -117,6 +117,22 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">关于终端的提醒</a></h2>
+<ul><li><p>从文件浏览器窗口中拖拽文件或者文件夹到终端将会在光标的位置插入它的路径。而使用右键拖拽将会弹出一个右键菜单，显示附加的操作：</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">插入路径</span></td><td> </td><td>插入一个文件的路径，与左键拖拽文件到终端类似。</td></tr>
+<tr><td><span class="menu">切换目录</span></td><td> </td><td>切换到所拖拽文件所在的文件夹。</td></tr>
+<tr><td><span class="menu">创建链接到这里</span></td><td> </td><td>在终端当前工作的目录为拖拽的文件创建链接。</td></tr>
+<tr><td><span class="menu">移动到这里</span></td><td> </td><td>移动拖拽的文件到终端当前工作的目录。</td></tr>
+<tr><td><span class="menu">复制到这里</span></td><td> </td><td>复制拖拽的文件到终端当期工作的目录。</td></tr>
+</table></li>
+<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Bash的定制</a></h2>
 <p>bash 来自于 Unix，它具有无数的可定制的方式。对于用户来讲，有两个文件至关重要： <span class="cli">profile</span> 和 <span class="cli">inputrc</span> 。
 <br />
@@ -135,22 +151,6 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h3>inputrc</h3>
 <p> <span class="cli">inputrc</span> 用于处理键盘关联的配置。由于Haiku默认提供了非常有用的配置，您不需要修改相关的设置。如果您确实有特殊的需要，可以参考许多在线的资源，例如<a href="http://tiswww.case.edu/php/chet/readline/rluserman.html"> GNU 的命令行读取库</a> 。</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">关于终端的提醒</a></h2>
-<ul><li><p>从文件浏览器窗口中拖拽文件或者文件夹到终端将会在光标的位置插入它的路径。而使用右键拖拽将会弹出一个右键菜单，显示附加的操作：</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">插入路径</span></td><td> </td><td>插入一个文件的路径，与左键拖拽文件到终端类似。</td></tr>
-<tr><td><span class="menu">切换目录</span></td><td> </td><td>切换到所拖拽文件所在的文件夹。</td></tr>
-<tr><td><span class="menu">创建链接到这里</span></td><td> </td><td>在终端当前工作的目录为拖拽的文件创建链接。</td></tr>
-<tr><td><span class="menu">移动到这里</span></td><td> </td><td>移动拖拽的文件到终端当前工作的目录。</td></tr>
-<tr><td><span class="menu">复制到这里</span></td><td> </td><td>复制拖拽的文件到终端当期工作的目录。</td></tr>
-</table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
-</li></ul>
 
 </div>
 </div>

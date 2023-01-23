@@ -62,7 +62,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 
 <table class="index" id="index" summary="index">
@@ -77,77 +76,77 @@
 
 <h1>Laboratori: gjestion de pueste</h1>
 
-<p>This workshop takes a look on how to manage email under Haiku. It assumes that the email services are correctly configured with the <a href="preferences/e-mail.html">E-Mail</a> preferences and you're familiar with the basic features of the <a href="applications/mail.html">Mail</a> application.</p>
+<p>Chest laboratori al bute un voli su cemût gjestî la pueste sot di Haiku. Al presupon che i servizis di pueste a sedin configurâts ben cu lis preferencis <a href="preferences/e-mail.html">E-Mail</a> e che tu vedis familiaritât cu lis funzions di base de aplicazion <a href="applications/mail.html">Mail</a>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="mailsystem" name="mailsystem">Sisteme de pueste in Haiku</a></h2>
-<p>If you come to Haiku from other operating systems, you're probably used to big applications like MS Outlook or Mozilla's Thunderbird. You have to configure them by entering all the info on mail server addresses etc. and they use their own contacts database. They take care of sending and fetching email and store them in some big special file.<br />
-Changing you email client can be a hassle with quite some ex/importing and converting going on. Using more than one client in parallel to check out what else is available is also not without the occasional kerfuffle.</p>
-<p>Haiku's mail system is different. It breaks down into smaller separate modules.</p>
-<p>There's the <span class="app">mail_daemon</span> that takes care of the communication with your mail servers. The <a href="preferences/e-mail.html">E-Mail</a> preferences is the one central point to configure your email accounts and how often they're checked, for example.</p>
-<p>Every message that is fetched or sent is saved as one single email file, with its header information (like sender, subject, date) and status (like New, Replied, Sent) in BFS attributes. This enables searching/filtering them with Haiku's fast queries.</p>
+<p>Se tu rivis su Haiku di altris sistemis operatîfs, al è facil che tu sedis abituât a gruessis aplicazions come MS Outlook o Thunderbird di Mozilla. Tu âs di configurâlis inserint dutis lis informazions su direzions dai servidôr di pueste e vie indenant, e a dopraran lis lôr basis di dâts pai contats. A varan cure di inviâ e recuperâ la pueste e archiviâle in cualchi grues file speciâl.<br />
+Cambiâ il to client di pueste al pues jessi fastidiôs cu lis proceduris di es/importazion. Ancje doprâ plui di un client in paralêl par verificâ ce altri che al è disponibil, nol è cence comediis.</p>
+<p>Il sisteme de pueste di Haiku al è diferent. Al scompon dut in piçui modui separâts.</p>
+<p>Al è il <span class="app">mail_daemon</span> che si ocupe des comunicazions cui servidôrs di pueste. Lis preferencis <a href="preferences/e-mail.html">E-Mail</a> a son il pont centrât dulà configurâ i tiei accounts e-mail e trop dispès controlâju, par esempli.</p>
+<p>Ogni messaç che al ven recuperât o inviât al ven salvât come singul file di pueste, cu lis sôs informazions di intestazion (come mitent, ogjet, date) e il stât (come Gnûf, Rispuindût, Inviât) tai atribûts BFS. Chest al permet la lôr ricercje/filtrament cu lis sveltis interogazions di Haiku.</p>
 <img src="images/workshop-email-images/browsing.png" alt="browsing.png" /> 
-<p>With every email being in a separate file, viewing them becomes just as easy as browsing through a folder (or query result) of images with <a href="applications/showimage.html">ShowImage</a>. Leaving the Tracker window open, you'll see the moving selection of the currently viewed file while you use the previous/next button to move through them.<br />
-As they are independent files, using a viewer other than Haiku's <a href="applications/mail.html">Mail</a> causes no problems whatsoever.</p>
-<p>Similarly, creating a new message results in just another file that is handed to the mail_daemon that takes care of sending it off. Contact management is deferred to the <a href="applications/people.html">People</a> application.</p>
-<p>In a nutshell, where other mail clients do everything, from communicating with the mail servers to providing a view with all your mails and tools to search and filter them, Haiku uses a chain of smaller tools and general file management:</p>
+<p>Cun ogni e-mail intun file separât, visualizâlis al devente facil tant che navigâ intune cartele (o il risultât di une interogazion) di imagjins cun <a href="applications/showimage.html">ShowImage</a>. Se tu lassis viert il barcon dal Tracker, tu viodarâs che la selezion dal file si spostarà cuant che tu dopris i botons precedent/sucessîf su Mail.<br />
+Viodût che a son files indipendents, doprâ un visualizadôr diviers di <a href="applications/mail.html">Mail</a> di Haiku nol causarà nissun probleme.</p>
+<p>Te stesse maniere, la creazion di un gnûf messaç al prodûs dome un altri file che al ven consegnât al mail_daemon e chest si ocupe di inviâlu. La gjestion dai contats e ven lassade ae aplicazion <a href="applications/people.html">People</a>.</p>
+<p>In pocjis peraulis, dulà che altris clients di pueste a fasin dut, partint de comunicazion cui servidôrs di pueste passant pal furnî une visualizazion de pueste e struments par cirî e filtrâle, Haiku al dopre une cjadene di piçui struments e la gjestion dai file gjenerâl:</p>
 <ul>
-<li><p>The <span class="app">mail_daemon</span> to fetch/send mail and save them as normal files.</p></li>
-<li><p>Tracker windows and queries to find and show email files.</p></li>
-<li><p>The <span class="app">Mail</span> application to view email files and create new messages relying on system-wide contact management by the <span class="app">People</span> app.</p></li>
+<li><p>Il <span class="app">mail_daemon</span> par recuperâ/inviâ la pueste e salvâle tant che files normâi.</p></li>
+<li><p>I barcons di Tracker e lis interogazions par cjatâ e mostrâ i files des e-mails.</p></li>
+<li><p>La aplicazion <span class="app">Mail</span> par visualizâ i files di pueste e creâ gnûfs messaçs, fasint afidament ae gjestion dai contats a nivel di sisteme midiant la aplicazion <span class="app">People</span>.</p></li>
 </ul>
-<p>Especially using Tracker and queries to manage emails is a powerful idea. The experience you gain can be transferred to any other problem that is dealing with files. Be it images, music, video, contacts or any other documents, using Tracker is at the core of all file managing.<br />
-Also, improvements in any of these system areas benefit not just emailing, but all applications that make use of them.</p>
+<p>Soredut, doprâ il Tracker e lis interogazions par gjestî lis emails e je une idee vincente. Tu puedis trasferî il vuadagn di esperience a cualsisei probleme che tu puedis frontâ cui files. Sedino imagjins, musiche, videos, contats o cualsisei altri document, doprâ Tracker al è il cûr di dute la gjestion dai files.<br />
+Miorâsi in cualsisei di chestis areis dal sisteme al zove no nome pe gjestion de pueste, ma par dutis lis aplicazions che lis doprin.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="status" name="status">Doprâ i stâts personalizâts</a></h2>
-<p>When you browse through your newly arrived email, you may want to come back to some of them later to think about it in more depth. While you could use Mail's menu <span class="menu">Close and | Leave as New</span> to keep them in your "<i>New messages</i>" query, things tend to pile up that way...</p>
-<p>One solution is of course to just start a reply and save it as draft. But if you don't expect to write a reply and just want to re-read the mail later, that isn't ideal.</p>
+<p>Cuant che tu sgarfis tes tôs e-mails a pene rivadis, magari tu desideris tornâ a cualchidune di chês plui indenant, salacor par pensâ a fonts. Ma man a man che tu dopris il menù di Mail <span class="menu">Siere e | Lasse come Gnûf</span> par tignîlis te tô interogazion "<i>Gnûfs messaçs</i>", cul timp a lâ la robe e pues intassâsi in cheste maniere...</p>
+<p>Pal sigûr une soluzion e podarès sei chê di scomençâ une rispueste e salvâle come stampon. Ma se no tu programis di scrivi une rispueste e tu desideris dome tornâ a leile plui indenant, chest nol è ideâl.</p>
 <img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>Better use <span class="menu">Close and | Set to...</span> to create a new status and use that to categorize your mail. For example, you could call the status "<i>Later</i>", and then query for that when you find more time.<br />
-Or you use different statuses for specific projects. For example, I created a status "<i>HUG</i>" (for "Haiku user guide") under which I collect every mail that may influence the contents of the user guide, like commit messages about code changes that alter or introduce some feature or anything else I feel could improve the user guide.<br />
-In any case, try to keep the status name short. That way it always fits in a normally wide "Status" column in Tracker.</p>
-<p>You don't have to open an email with the <span class="app">Mail</span> application to set its status. With the Tracker add-ons <span class="app">Mark as Read </span> and <span class="app">Mark as...</span> you can select some email files and set their status in one go.</p>
+<p>Al è miôr doprâ <span class="menu">Siere e | Met a...</span> par creâ un gnûf stât e doprâ chel par categorizâ la tô pueste. Par esempli, tu podaressis clamâ il stât "<i>Aprofondî</i>", e cussì interogâ chel cuant che tu varâs plui timp.<br />
+Opûr tu puedis doprâ stâts diferents par specifics progjets. Par esempli, o ai creât un stât "<i>HUG</i>" (par "Haiku User Guide") e sot di chel o colezioni ogni e-mail che e pues influençâ i contignûts de vuide utent, come i messaçs di consegne (commit) su modifichis dal codiç sorzint, che magari al modifiche o al introdûs cualchi funzionalitât, o cualsisei altre robe che o sint che e podarès miorâ la vuide utent.<br />
+Dut câs, cîr di tignî il non dal stât curt. Cussì al sta simpri te largjece normâl de colone "Stât" in Tracker.</p>
+<p>No tu âs di vierzi une e-mail cu la aplicazion <span class="app">Mail</span> par cambiâ il so stât. Cui components adizionâi di Tracker <span class="app">Mark as Read </span> e <span class="app">Mark as...</span> tu puedis selezionâ cualchi file di pueste e cambiâ il lôr stât cence trai un colp.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="queries" name="queries">Doprâ lis interogazions</a></h2>
-<p>Sure, you specify a folder to store all your email, you can open it et voilà,  there's all you mail. But over time the folder becomes crowded and showing all will take longer and longer as thousands of files and their attributes have to be parsed and sorted. Also, most of the time you don't really care about two year old emails of Nigerian princes and their inheritory trouble ...</p>
-<div class="box-info">A lot of time when populating a folder is spent on putting files read from disk into the correct sorting order and displaying that in the window. If you do have to open a folder with a huge number of files, you can shorten the wait by making the Tracker window "invisible", i.e. either minimize it or change to another workspace. Watch <a href="desktop-applets/processcontroller.html">ProcessController</a> to see how it affects CPU usage.</div>
-<p><a href="queries.html">Queries</a>, to the rescue!</p>
-<p>By using queries, you can narrow down the view of your mails. Actually, the mailbox icon in the Deskbar uses queries.</p>
+<p>Sigûr, tu specifichis une cartele dulà archiviâ dute la tô pueste, tu puedis vierzile et voilà, lì e je dute la tô pueste. Ma cul timp a lâ la cartele e devente straplene, mostrâle dute al pues tirâle a dilunc par vie di miârs di files e dai lôr atribûts che a àn di sei analizâts e ordenâts. Cun di plui, la plui part des voltis no ti impuartarà pardabon di e-mails vecjis di doi agns di princips nigerians e dai lôr problemis di ereditât...</p>
+<div class="box-info">Tal popolâ une cartele, al ven pierdût une vore di timp te operazion di meti i files lets dal disc intal just ordin e visualizâlu tal barcon. Se tu âs di vierzi une cartele cuntun grant numar di files, tu puedis scurtâ il timp di spiete rindint il barcon di Tracker "invisibil", vâl a dî o minimizâlu o spostâlu suntun altri spazi di lavôr. Bute un voli a <a href="desktop-applets/processcontroller.html">Controlôr dai procès</a> par viodi cemût che al influìs sul ûs de CPU.</div>
+<p><a href="queries.html">Interogazions</a>, in socors!</p>
+<p>Doprant lis interogazions, tu puedis strenzi la visualizazion des tôs e-mails. In realtât, la icone de cassele postâl tal Deskbar e dopre lis interogazions.</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
-<p>The <span class="menu">Open Draft</span> submenu does a query for the status "<i>Draft</i>", which is set by <span class="app">Mail</span> when you save a message.</p>
-<p><span class="menu">Open Inbox Folder</span> and <span class="menu">Open Mail Folder</span> are just links to regular folders (and not very useful in my opinion).</p>
-<p>The <span class="menu"># new messages</span> submenu is populated by a query for email with the status "<i>New</i>" (that same query is used to change the mailbox icon to show some letters in it, by the way).</p>
+<p>Il sot-menù <span class="menu">Open Draft</span> al fâs une interogazion pal stât "<i>Draft</i>", Che al ven configurât di <span class="app">Mail</span> cuant che tu salvis un messaç.</p>
+<p><span class="menu">Open Inbox Folder</span> e <span class="menu">Open Mail Folder</span> a son dome colegaments a cartelis normâls (e no tant utii secont di me).</p>
+<p>Il sot-menù <span class="menu"># gnûfs messaçs</span> al è popolât di une interogazion pe pueste cul stât "<i>New</i>" vâl a dî Gnûf (a proposit, la stesse interogazion e ven doprade par cambiâ la icone de cassele di pueste, cussì di mostrâ cualchi letare dentri).</p>
 
-<p>You can add your own queries (or folders, applications, scripts etc.) to that context menu too, by putting them or links to them into <span class="path">~/config/settings/Mail/Menu Links</span>.</p>
-<div class="box-info">The query <span class="path">~/config/settings/Mail/mailbox</span> is a special case: It is executed when left-clicking the mailbox icon in the Deskbar. If you want to change that behavior, you can replace it with any other file (or link to a file), just name it "<i>mailbox</i>". It doesn't have to be a query, a link to a folder of queries or a script or application works just as well.</div>
+<p>Tu puedis ancje zontâ lis tôs interogazions personâls (o cartelis, aplicazions, scripts e v.i.) a chel menù contestuâl, metintlis o metint un lôr colegament in <span class="path">~/config/settings/Mail/Menu Links</span>.</p>
+<div class="box-info">La interogazion <span class="path">~/config/settings/Mail/mailbox</span> al è un câs speciâl: al ven eseguît cuant che si fâs un clic di çampe su la icone de cassele de pueste tal Deskbar. Se tu desideris cambiâ chel compuartament, tu puedis sostituîlu cun cualsisei altri file (o colegament a un file), al baste clamâlu "<i>mailbox</i>". Nol à di sei par fuarce une interogazion, al va ben ancje un colegament a une cartele di interogazions o un script o une aplicazion.</div>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="query-examples" name="query-examples">Esemplis di interogazions</a></h3>
-<p>Here are a few examples of useful queries:</p>
+<p>Achì al è cualchi esempli di interogazions utilis:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="10">
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /><br />
-This finds all mails with the custom status "<i>Later</i>".</td>
+Chest al cjate dutis lis e-mails cul stât personalizât "<i>Later</i>".</td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /><br />
-This finds all mails of the past 2 days.</td></tr>
+Chest al cjate dutis lis e-mails dai ultins doi dîs.</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /><br />
-This finds all mails by Ingo Weinhold of the past 2 weeks.</td>
+Chest al cjate dutis lis e-mails di Ingo Weinhold des ultimis dôs setemanis.</td>
 <td><img src="images/workshop-email-images/query-4.png" alt="query-4.png" /><br />
-This finds all posts from the Haiku commit list of the past 12 hours.</td></tr>
+Chest al cjate dutis lis publicazions che a rivin de liste des consegnis (commit) di Haiku des ultimis 12 oris.</td></tr>
 </table>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tips" name="tips">Altris sugjeriments</a></h2>
 <ul>
-<li><p>If you don't save a query as "<i>Query</i>" but as "<i>Query template</i>", invoking it won't show the result window, but the Find... window instead. That way you can easily exchange the search string for the subject or sender, for example, or change a "<i>2 days</i>" time limit to "<i>3 days</i>".</p></li>
-<li><p>Activating "type-ahead filtering" in <a href="tracker.html#tracker-preferences">Tracker's preferences</a> allows you to very quickly filter a query result even further. Often it's enough to query for all mails of the last 3 days and go with type-ahead filtering from there. The big advantage is, that you don't have to exactly specify which attribute to search for, as all displayed are considered when filtering.</p></li>
+<li><p>Se no tu salvis une interogazion tant che "<i>Query</i>" ma come "<i>Query template</i>", se tu le clamis no tu visualizarâs il barcon dai risultâts, ma il barcon Cjate... In cheste maniere tu puedis scambiâ cun facilitât la stringhe di ricercje pal ogjet o mitent, par esempli, o cambiâil limit di timp di "<i>2 days</i>" (2 dîs) a "<i>3 days</i>".</p></li>
+<li><p>Ativant il "filtri pe ricercje datilografant" tes <a href="tracker.html#tracker-preferences">preferencis di Tracker</a> ti permet di filtrâ ancjemò di plui il risultât di une interogazion in mût svelt. Dispès al baste interogâ une ricercje des e-mails dai ultins 3 dîs e filtrâ la ricercje datilografant partint di lì. Il grant vantaç al è che no tu âs di specificâ in maniere esate cuâl atribût cirî, viodût che ducj i visualizâts a vegnin considerâts dilunc il filtrament.</p></li>
 <!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
 </ul>
 

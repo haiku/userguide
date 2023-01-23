@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2018, Haiku. All rights reserved.
+ * Copyright 2010-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -137,8 +137,7 @@ Ein Beispiel:</p>
 		<td valign="top"><p>Mittels <span class="cli">diskimage</span> können normale Dateien als "Disk" angemeldet werden. So lässt dich beispielsweise ein Haiku Anyboot Image anmelden. Anschließend kann es per Tracker eingehängt werden, um Dateien darauf zu kopieren, zu ändern oder zu löschen, bevor man es als Quelle für den Installer benutzt.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>Der launch_daemon startet beim Hochfahren verschiedene Dienste und Anwendungen. Einige werden bei ihrer Beendigung automatisch neu gestartet. Soll das nicht geschehen – vielleicht will man einen veränderten Tracker ausprobieren – kann man per <span class="cli">launch_roster stop</span> den Neustart der Anwendung verhindern, bevor man sie beendet. Mittels <tt>start</tt> lässt sich der automatische Neustart wieder einschalten,  <tt>info</tt> gibt zusätzliche Informationen aus. Mit <tt>log</tt> werden alle den launch_daemon betreffenden Ereignisse ausgegeben.<br />
-Ohne Parameter zeigt <span class="cli">launch_roster</span> alle Anwendungen/Dienste an, die so gesteuert werden können.<br />
+		<td valign="top"><p>Der launch_daemon startet beim Hochfahren verschiedene Dienste und Anwendungen. Einige werden bei ihrer Beendigung automatisch neu gestartet. Soll das nicht geschehen – vielleicht will man einen veränderten Tracker ausprobieren – kann man per <span class="cli">launch_roster stop</span> den Neustart der Anwendung verhindern, bevor man sie beendet. Mittels <tt>start</tt> lässt sich der automatische Neustart wieder einschalten,  <tt>info</tt> gibt zusätzliche Informationen aus. Ohne Parameter zeigt <span class="cli">launch_roster</span> alle Anwendungen/Dienste an, die so gesteuert werden können.<br />
 So lässt sich zum Beispiel der Neustart der Deskbar anhalten:</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
@@ -164,6 +163,11 @@ mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMimage</pre>
 mountvolume RAMimage</pre>
 <p>Dabei ist es äußerst wichtig die Ramdisk immer sauber auszuhängen, entweder im Tracker oder per <span class="cli">unmount /RAMimage</span>. Ansonsten werden die Änderungen nicht zurück in die Imagedatei geschrieben!</p>
 </td></tr>
+<tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>Dieser Befehl setzt den Bildschirmmodus (Auflösung, Farbanzahl, Bildwiederholrate), was normalerweise in den <acronym title="Screen">Bildschirm</acronym> Einstellungen gemacht wird. Ein weiterer Parameter macht die Sache in Kombination mit den <acronym title="Shortcuts">Tastenkürzel</acronym> Einstellungen interessant: <span class="cli">--brightness +3</span> erhöht die Helligkeit beispielsweise um "3". Nützlich um die Hintergrundbeleuchtung per Tastenkombination zu ändern.</p>
+</td></tr>
+<tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>Mit diesem Befehl lässt sich die Systemlautstärke regeln. Neben konkreten Werten in dB kann man die Stummschaltung steuern (<span class="cli">--togglemute</span>, <span class="cli">--mute</span> ,<span class="cli">--unmute</span>) und den Sound lauter (<span class="cli">--increase</span>) und leiser (<span class="cli">--decrease</span>) machen. Interessant zum Festlegen von Tastenkombis mit den <acronym title="Shortcuts">Tastenküzel</acronym>  Einstellungen.</p></td></tr>
 </table>
 </div>
 </div>

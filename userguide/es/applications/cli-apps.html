@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2018, Haiku. All rights reserved.
+ * Copyright 2010-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,6 +64,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Aplicaciones de línea de comandos específicas de Haiku</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -142,9 +143,9 @@ Un ejemplo:</p>
 		<td valign="top"><p><span class="cli">diskimage</span> le permite registrar un archivo normal como un dispositivo de disco. Por ejemplo, puede registrar una imagen anyboot de Haiku, montarla en el Tracker y copiar, editar o quitar archivos de ahí antes de usarla como origen en el Instalador.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>El launch_daemon inicia todo tipo de servicios y aplicaciones al arrancar. Para algunos se les dirige a reiniciarlos en caso que hubieran cerrado. Si no quiere que eso suceda – por ejemplo, en caso que quiera poner a prueba un Tracker modificado – entonces usaría <span class="cli">launch_roster</span> para detener (<tt>stop</tt>) el reinicio de la aplicación previo a cerrarla. De manera similar, puede iniciarla de nuevo (<tt>start</tt>) o lograr averiguar información sobre ella (<tt>info</tt>). El parámetro <tt>log</tt> muestra un historial de todos los eventos relacionados con launch_daemon.<br />
-Si se invoca sin ningún parámetro, <span class="cli">launch_roster</span> despliega una lista de todos las aplicaciones y servicios que estan bajo su control.<br />
-Por ejemplo, la siguiente orden detendrá el re-lanzamiento de la Barra de Escritorio:</p>
+		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
+Without parameter, <span class="cli">launch_roster</span> lists all apps/services that are under its control.<br />
+For example, this will stop the re-launching of the Deskbar:</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p>La orden <span class="cli">mountvolume</span> es preferida por muchos para montar discos y particiones locales, porque su formato de uso es muy fácil: sólo debe invocarlo con el nombre de la partición y eso es todo. Ingrese la orden junto a <tt>--help</tt> para conocer más opciones.</p>
@@ -170,6 +171,11 @@ mountvolume RAMimage</pre>
 <p></p>
 <p>Es muy importante que siempre desmonte su ramdisk de manera limpia, ya sea desde el Tracker o con la orden <span class="cli">unmount /RAMimage</span>, de lo contrario los cambios no se escribirán de vuelta en el archivo imagen!</p>
 </td></tr>
+<tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>This command sets the screen mode (resolution, bit depth, refresh rate). Normally, you'd set that in the Screen preferences. Another parameter makes it useful in combination with the Shortcuts preferences: e.g. <span class="cli">--brightness +3</span> increases the brightness by "3". Useful to change the backlight with a key combination.</p>
+</td></tr>
+<tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>This command sets the volume of the system master output. Besides specific values in dB, you can <span class="cli">--togglemute</span>, <span class="cli">--mute</span> or <span class="cli">--unmute</span> and <span class="cli">--increase</span> or <span class="cli">--decrease</span> the volume. Useful to assign key combinations with the Shortcuts preferences.</p></td></tr>
 </table>
 </div>
 </div>

@@ -114,6 +114,23 @@ Aktivoi valintaruutu <span class="menu">Vahvista poistuminen, jos ohjelmia on k�
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Vihjeitä Pääteikkunatyöskentelystä</a></h2>
+<ul><li><p>Tiedoston tai kansion raahaaminen Seuraaja-ikkunasta Pääteikkunaan lisää sen kohdistimen osoittamaan sijaintiin. Raahaaminen hiiren kakkospainikkeen asiayhteysvalikosta tarjoaa lisätoimintoja:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Lisää polku</span></td><td> </td><td>Lisää tiedoston sijainnin, sama kuin raahata ja pudottaa hiiren ykköspainikkeella.</td></tr>
+<tr><td><span class="menu">Vaihda hakemisto</span></td><td> </td><td>Vaihtaa raahatun tiedoston kansion.</td></tr>
+<tr><td><span class="menu">Luo linkki tähän</span></td><td> </td><td>Luo linkin raahattuun tiedostoon Pääteikkunan nykyisessä työhakemistossa.</td></tr>
+<tr><td><span class="menu">Siirrä tänne</span></td><td> </td><td>Siirtää raahatun tiedoston Pääteikkunan nykyiseen työhakemistoon.</td></tr>
+<tr><td><span class="menu">Kopioi tänne</span></td><td> </td><td>Kopioi raahatun tiedoston Pääteikkunan nykyiseen työhakemistoon.</td></tr>
+</table></li>
+<li><p>Voit avata minkä tahansa tiedoston ensisijaisen sovelluksen komennolla <span class="cli">open <i>[tiedostonimi]</i></span>. Tämä toimii myös nykyisen ("<span class="cli">.</span>") ja yläkansion ("<span class="cli">..</span>") esitystavalla, joka avautuu silloin Seuraaja-ikkunassa. Joten nykyisen työhakemiston avaamiseksi kirjoita:</p>
+<pre class="terminal">open .</pre>
+</li>
+<li><p>Jos komento tuottaa paljon tulostusta, tulostus vierii nopeasti. Käytä muutamia komentoja ja vierittäminen takaisin päin ja vimeisimmän tulosteen alun löytäminen tulee vaikeaksi. Valikkokomennoilla <span class="menu">Muokkaa | Tyhjennä kaikki</span> tai näppäimillä <span class="key">ALT</span> <span class="key">L</span> voit tyhjentää vierintäpuskuriin ennen komentosi kirjoittamista. Simsalabim, koskematon tyhjä takaisinvierintäpuskuri, voit vain vierittää takaisin ylöspäin tulostuksesi alun tavoittamiseksi.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Bash-räätälöinti</a></h2>
 <p>Unixista tulevan bash-komentotulkin räätälöimiseksi on lukemattomia mahdollisuuksia. Sitä varten kaksi tiedostoa on käyttäjille erityisen tärkeitä: <span class="cli">profile</span> ja <span class="cli">inputrc</span><br />
 Molemmat tiedostot voidaan luoda <span class="path">/boot/home/config/settings/</span>-kansioon ja niillä voidaan lisätä tai korvata järjestelmäoletukset, jotka on määritelty hakemistossa <span class="path">/boot/system/settings/etc/</span>.</p>
@@ -131,23 +148,6 @@ Molemmat tiedostot voidaan luoda <span class="path">/boot/home/config/settings/<
 
 <h3>inputrc</h3>
 <p>Tiedosto <span class="cli">inputrc</span> käsittelee näppäinsidoksia. Koska Haiku tarjoaa hyödyllisiä oletusarvoja, sinun ei luultavasti tarvitse sotkeutua näihin kietoutuneempiin asetuksiin. Jos sinulla on tässä erikoistarpeita, perehdy moniin verkkoresursseihin, esim.: <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Library</a>.</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Vihjeitä Pääteikkunatyöskentelystä</a></h2>
-<ul><li><p>Tiedoston tai kansion raahaaminen Seuraaja-ikkunasta Pääteikkunaan lisää sen kohdistimen osoittamaan sijaintiin. Raahaaminen hiiren kakkospainikkeen asiayhteysvalikosta tarjoaa lisätoimintoja:</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Lisää polku</span></td><td> </td><td>Lisää tiedoston sijainnin, sama kuin raahata ja pudottaa hiiren ykköspainikkeella.</td></tr>
-<tr><td><span class="menu">Vaihda hakemisto</span></td><td> </td><td>Vaihtaa raahatun tiedoston kansion.</td></tr>
-<tr><td><span class="menu">Luo linkki tähän</span></td><td> </td><td>Luo linkin raahattuun tiedostoon Pääteikkunan nykyisessä työhakemistossa.</td></tr>
-<tr><td><span class="menu">Siirrä tänne</span></td><td> </td><td>Siirtää raahatun tiedoston Pääteikkunan nykyiseen työhakemistoon.</td></tr>
-<tr><td><span class="menu">Kopioi tänne</span></td><td> </td><td>Kopioi raahatun tiedoston Pääteikkunan nykyiseen työhakemistoon.</td></tr>
-</table></li>
-<li><p>Voit avata minkä tahansa tiedoston ensisijaisen sovelluksen komennolla <span class="cli">open <i>[tiedostonimi]</i></span>. Tämä toimii myös nykyisen ("<span class="cli">.</span>") ja yläkansion ("<span class="cli">..</span>") esitystavalla, joka avautuu silloin Seuraaja-ikkunassa. Joten nykyisen työhakemiston avaamiseksi kirjoita:</p>
-<pre class="terminal">open .</pre>
-</li>
-<li><p>Jos komento tuottaa paljon tulostusta, tulostus vierii nopeasti. Käytä muutamia komentoja ja vierittäminen takaisin päin ja vimeisimmän tulosteen alun löytäminen tulee vaikeaksi. Valikkokomennoilla <span class="menu">Muokkaa | Tyhjennä kaikki</span> tai näppäimillä <span class="key">ALT</span> <span class="key">L</span> voit tyhjentää vierintäpuskuriin ennen komentosi kirjoittamista. Simsalabim, koskematon tyhjä takaisinvierintäpuskuri, voit vain vierittää takaisin ylöspäin tulostuksesi alun tavoittamiseksi.</p>
-</li></ul>
 
 </div>
 </div>

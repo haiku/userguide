@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2018, Haiku. All rights reserved.
+ * Copyright 2010-2022, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -137,8 +137,7 @@ Esimerkki:</p>
 		<td valign="top"><p><span class="cli">diskimage</span> sallii sinun rekisteröidä tavallisen tiedoston levylaitteena. Voit esimerkiksi rekisteröidä Haiku anyboot-levyvedoksen, liittää se Seuraajassa ja kopoida, muokata tai poistaa siitä tiedostoja käyttäen sitä Asennusohjelman lähteenä.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>Taustaprosessi launch_daemon käynnistää kaiken tyyppisiä palveluita ja sovelluksia järjestelmän käynnistyessä. Jotkut niistä se on käskytetty käynnistymään uudelleen, jos ne sulkeutuvat. Jos et halua sitä – ehkä haluat esimerkiksi testata muokattua Seuraajaa – käytä <span class="cli">launch_roster</span>-sovellusta <tt>pysäyttämään</tt> sovelluksen uudelleenkäynnistyminen ennen siitä poistumista. Samalla tavalla voit <tt>käynnistää</tt> sen uudestaan tai hakea <tt>tietoja</tt> siitä. Parametri <tt>log</tt> tulostaa kaikkien launch_daemon-riippuvaisten tapahtumien lokitekstit.<br />
-Ilman parametriä <span class="cli">launch_roster</span> luettelee kaikki sovellukset/palvelut, jotka ovat sen hallinnassa.<br />
+		<td valign="top"><p>Taustaprosessi launch_daemon käynnistää kaiken tyyppisiä palveluita ja sovelluksia järjestelmän käynnistyessä. Jotkut niistä se on käskytetty käynnistämään uudelleen, jos ne sulkeutuvat. Jos et halua sitä – ehkä haluat esimerkiksi testata muokattua Seuraajaa – käytä <span class="cli">launch_roster</span>-sovellusta <tt>pysäyttämään</tt> sovelluksen uudelleenkäynnistyminen ennen siitä poistumista. Samalla tavalla voit <tt>käynnistää</tt> sen uudestaan tai hakea <tt>tietoja</tt> siitä. Ilman parametriä, <span class="cli">launch_roster</span> luettelee kaikki sovellukset/palvelut, jotka ovat sen hallinnassa.<br />
 Esimerkiksi, tämä pysäyttää Työpöytäpalkin uudelleenkäynnistymisen:</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre>
 </td></tr>
@@ -165,6 +164,11 @@ mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMimage</pre>
 mountvolume RAMimage</pre>
 <p>On hyvin tärkeää aina irrottaa ramlevy siististi joko Seuraajasta tai Pääteikkunasta komennolla <span class="cli">unmount /RAMimage</span>, tai muutokset eivät tallennu takaisin levykuvatiedostoon!</p>
 </td></tr>
+<tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>Tämä komento asettaa näytön tilan (resoluutio, bittisyvyys, virkistystaajuus). Normaalisti asetat sen Näyttöasetuksissa. Toinen parametri tekee sen hyödylliseksi Pikanäppäinasetusten yhdistelmissä: esim.: <span class="cli">--brightness +3</span> kasvattaa kirkkautta "3":lla. Hyödyllinen muutettaessa taustavaloa näppäinyhdistelmällä.</p>
+</td></tr>
+<tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
+		<td valign="top"><p>Tämä komento asettaa järjestelmä masterlähdön voimakkuuden. Paitsi määrätyn arvon desibeleinä, voit <span class="cli">--togglemute</span>, <span class="cli">--mute</span> tai <span class="cli">--unmute</span> ja <span class="cli">--increase</span> tai <span class="cli">--decrease</span> äänenvoimakkuuden. Hyödyllinen liitettäessä Pikanäppäinasetusten näppäinyhdistelmiin.</p></td></tr>
 </table>
 </div>
 </div>

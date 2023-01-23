@@ -119,6 +119,22 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Подсказки для работы с Терминалом</a></h2>
+<ul><li><p>Перетаскивание файла или папки из окна Tracker-а в Терминал подставит путь к нему у курсора. Перетаскивание правой кнопкой мыши вызовет меню для дополнительных действий:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Вставить путь</span></td><td> </td><td>Вставляет путь к файлу так же, как при перетаскивании левой кнопкой мыши.</td></tr>
+<tr><td><span class="menu">Сменить каталог</span></td><td> </td><td>Переводит Терминал в папку перетаскиваемого файла.</td></tr>
+<tr><td><span class="menu">Создать ссылку здесь</span></td><td> </td><td>Создает симлинк на перетаскиваемый файл в текущей директории Терминала.</td></tr>
+<tr><td><span class="menu">Переместить сюда</span></td><td> </td><td>Перемещает перетаскиваемый файл в текущую директорию Терминала.</td></tr>
+<tr><td><span class="menu">Копировать сюда</span></td><td> </td><td>Копирует перетаскиваемый файл в текущую директорию Терминала.</td></tr>
+</table></li>
+<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<pre class="terminal">open .</pre></li>
+<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Настройка командной оболочки Bash</a></h2>
 <p>Пришедшая из Unix, командная оболочка Bash имеет очень широкие возможности по настройке. Существуют два наиболее важных для пользователя файла: <span class="cli">profile</span> и <span class="cli">inputrc</span><br />
 Оба файла могут быть созданы в домашней папке (<span class="path">/boot/home/config/settings/</span>), где они дополняют или переопределяют (т. к. являются более приоритетными) системные настройки по умолчанию, расположенные по адресу  <span class="path">/boot/common/etc/</span>.</p>
@@ -136,22 +152,6 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h3>inputrc</h3>
 <p><span class="cli">inputrc</span> работает с клавиатурными привязками (keybindings). Так как в Haiku эти настройки вполне пригодны и по умолчанию, то скорее всего менять их не потребуется, но если всё же возникла небходимость их подправить, то рекомендуется обратится к одному из многочисленных онлайн ресурсов, например, <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Library</a>.</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Подсказки для работы с Терминалом</a></h2>
-<ul><li><p>Перетаскивание файла или папки из окна Tracker-а в Терминал подставит путь к нему у курсора. Перетаскивание правой кнопкой мыши вызовет меню для дополнительных действий:</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Вставить путь</span></td><td> </td><td>Вставляет путь к файлу так же, как при перетаскивании левой кнопкой мыши.</td></tr>
-<tr><td><span class="menu">Сменить каталог</span></td><td> </td><td>Переводит Терминал в папку перетаскиваемого файла.</td></tr>
-<tr><td><span class="menu">Создать ссылку здесь</span></td><td> </td><td>Создает симлинк на перетаскиваемый файл в текущей директории Терминала.</td></tr>
-<tr><td><span class="menu">Переместить сюда</span></td><td> </td><td>Перемещает перетаскиваемый файл в текущую директорию Терминала.</td></tr>
-<tr><td><span class="menu">Копировать сюда</span></td><td> </td><td>Копирует перетаскиваемый файл в текущую директорию Терминала.</td></tr>
-</table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
-<pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
-</li></ul>
 
 </div>
 </div>

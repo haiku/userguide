@@ -117,6 +117,23 @@ Wird die Option <span class="menu">Beenden bestätigen, falls noch aktive Progra
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">Tipps für das Arbeiten mit dem Terminal</a></h2>
+<ul><li><p>Wird eine Datei aus einem Tracker-Fenster ins Terminal gezogen, so wird der Pfad zu dieser Datei an der aktuellen Cursor-Position eingefügt. Wird sie mittels der rechten Maustaste hineingezogen, gibt es mehrere Möglichkeiten zur Auswahl:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Pfad einfügen</span></td><td> </td><td>Fügt den Pfad zu dieser Datei ein.</td></tr>
+<tr><td><span class="menu">Zum Ordner wechseln</span></td><td> </td><td>Wechselt im Terminal zum Verzeichnis der Datei.</td></tr>
+<tr><td><span class="menu">Verknüpfung hier erstellen</span></td><td> </td><td>Im aktuellen Verzeichnis des Terminals wird eine Verknüpfung zu dieser Datei erstellt.</td></tr>
+<tr><td><span class="menu">Hierher verschieben</span></td><td> </td><td>Verschiebt die Datei in das aktuelle Verzeichnis im Terminal.</td></tr>
+<tr><td><span class="menu">Hierher kopieren</span></td><td> </td><td>Kopiert die Datei in das aktuelle Verzeichnis im Terminal.</td></tr>
+</table></li>
+<li><p>Vom Terminal aus kann auch jede Datei mit ihrem bevorzugten Programm gestartet werden. Der Befehl hierfür ist <span class="cli">open <i>[Dateiname]</i></span>. Dies funktioniert auch mit den Repräsentanten für das aktuelle ("<span class="cli">.</span>") und übergeordnete ("<span class="cli">..</span>") Verzeichnis. Um also ein Tracker-Fenster mit dem aktuellen Verzeichnis zu öffnen wäre dies einzugeben: </p>
+<pre class="terminal">open .</pre>
+</li>
+<li><p>Produziert ein Befehl viele Ausgaben, scrollt alles ziemlich schnell vorbei. Benutzt man mehrere solcher Befehle hintereinander, wird es schwierig den Anfang der Ausgabe des letzten Befehls zu finden. Mittels  <span class="menu">Bearbeiten | Bildschirm leeren</span> oderr <span class="key">ALT</span> <span class="key">L</span> kann man den Scroll-Puffer leeren, befor man einen Befehl ausführt. Schon hat man einen leeren Scroll-Puffer und man kann direkt ganz nach oben springen, um zum Anfang der Ausgabe zu kommen.</p>
+</li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Personalisierung der Bash</a></h2>
 <p>Da die Bash aus der Unix-Welt stammt, gibt es unzählige Möglichkeiten sie anzupassen. Zwei davon sind für den Anwender besonders interessant: <span class="cli">profile</span> und <span class="cli">inputrc</span><br />
 Werden diese beiden Dateien im <span class="path">/boot/home/config/settings/</span> Verzeichnis angelegt, erweiteren oder ersetzen die Standardwerte, die in <span class="path">/boot/system/settings/etc/</span> festgelegt sind, </p>
@@ -134,23 +151,6 @@ Werden diese beiden Dateien im <span class="path">/boot/home/config/settings/</s
 
 <h3>inputrc</h3>
 <p>Die Datei <span class="cli">inputrc</span> kümmert sich um die Tastaturzuweisungen. Da Haiku aber bereits mit einer sinnvollen Voreinstellung eingerichtet ist, wird man hier wenig ändern müssen - außer man hat spezielle Bedürfnisse. In diesem Fall sei auf die <a href="http://php.net/manual/de/book.readline.php"> GNU Readline Bibliothek</a> im Internet verwiesen.</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">Tipps für das Arbeiten mit dem Terminal</a></h2>
-<ul><li><p>Wird eine Datei aus einem Tracker-Fenster ins Terminal gezogen, so wird der Pfad zu dieser Datei an der aktuellen Cursor-Position eingefügt. Wird sie mittels der rechten Maustaste hineingezogen, gibt es mehrere Möglichkeiten zur Auswahl:</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Pfad einfügen</span></td><td> </td><td>Fügt den Pfad zu dieser Datei ein.</td></tr>
-<tr><td><span class="menu">Zum Ordner wechseln</span></td><td> </td><td>Wechselt im Terminal zum Verzeichnis der Datei.</td></tr>
-<tr><td><span class="menu">Verknüpfung hier erstellen</span></td><td> </td><td>Im aktuellen Verzeichnis des Terminals wird eine Verknüpfung zu dieser Datei erstellt.</td></tr>
-<tr><td><span class="menu">Hierher verschieben</span></td><td> </td><td>Verschiebt die Datei in das aktuelle Verzeichnis im Terminal.</td></tr>
-<tr><td><span class="menu">Hierher kopieren</span></td><td> </td><td>Kopiert die Datei in das aktuelle Verzeichnis im Terminal.</td></tr>
-</table></li>
-<li><p>Vom Terminal aus kann auch jede Datei mit ihrem bevorzugten Programm gestartet werden. Der Befehl hierfür ist <span class="cli">open <i>[Dateiname]</i></span>. Dies funktioniert auch mit den Repräsentanten für das aktuelle ("<span class="cli">.</span>") und übergeordnete ("<span class="cli">..</span>") Verzeichnis. Um also ein Tracker-Fenster mit dem aktuellen Verzeichnis zu öffnen wäre dies einzugeben: </p>
-<pre class="terminal">open .</pre>
-</li>
-<li><p>Produziert ein Befehl viele Ausgaben, scrollt alles ziemlich schnell vorbei. Benutzt man mehrere solcher Befehle hintereinander, wird es schwierig den Anfang der Ausgabe des letzten Befehls zu finden. Mittels  <span class="menu">Bearbeiten | Bildschirm leeren</span> oderr <span class="key">ALT</span> <span class="key">L</span> kann man den Scroll-Puffer leeren, befor man einen Befehl ausführt. Schon hat man einen leeren Scroll-Puffer und man kann direkt ganz nach oben springen, um zum Anfang der Ausgabe zu kommen.</p>
-</li></ul>
 
 </div>
 </div>

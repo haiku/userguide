@@ -115,6 +115,23 @@
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="hints" name="hints">ターミナルで作業するためのヒント</a></h2>
+<ul><li><p>
+ファイルやフォルダーを Tracker ウィンドウからターミナルにドラッグすると、ファイルやフォルダーの場所をカーソル位置に挿入します。右クリックでドラッグすると、次のようなアクションがコンテキストメニューに表示されます。</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">パスを挿入 (Insert path)</span></td><td> </td><td>左クリックと同様、ファイルの場所を挿入。</td></tr>
+<tr><td><span class="menu">ディレクトリを変更 (Change directory)</span></td><td> </td><td>ドラッグされたファイルのフォルダーへディレクトリを変更。</td></tr>
+<tr><td><span class="menu">カレントディレクトリにリンク作成 (Create link here)</span></td><td> </td><td>現在ターミナルで作業中のディレクトリにドラッグされたファイルのリンクを作成。</td></tr>
+<tr><td><span class="menu">カレントディレクトリへ移動 (Move here)</span></td><td> </td><td>ドラッグされたファイルをカレントディレクトリへ移動。</td></tr>
+<tr><td><span class="menu">カレントディレクトリへコピー (Copy here)</span></td><td> </td><td>ドラッグされたファイルをカレントディレクトリにコピー。</td></tr>
+</table></li>
+<li><p><span class="cli">open <i>[filename]</i></span> コマンドであらゆるファイルも優先アプリケーションで開けます。これは現在の ("<span class="cli">.</span>") フォルダーと親 ("<span class="cli">..</span>") フォルダーの表現でも動作可能で、Tracker ウィンドウ内に開かれます。現在作業中のディレクトリを開くには以下のように入力してください。</p>
+<pre class="terminal">open .</pre>
+</li>
+<li><p>コマンドが大量の出力を生成すると、いろいろなものがどんどんスクロールします。これらのコマンドをいくつか使用すると、スクロールバックして最新の出力のスタート地点を探すのが難しくなります。<span class="menu">編集 | すべてをクリア (Edit | Clear all)</span> または <span class="key">ALT</span> <span class="key">L</span> で、コマンドが問題を起こす前にスクロールバックバッファーをクリアできます。すぐに、まっさらなスクロールバッファーにより、スクロールバーを上にスクロールするだけで出力のスタート地点を見つけられます。</p></li></ul>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="customization" name="customization">Bash のカスタマイズ</a></h2>
 <p>bash は Unix 由来なので、カスタマイズする方法は数え切れないほどあります。ユーザーにとって重要なファイルは、<span class="cli">profile</span> と <span class="cli">.nputrc</span> の 2 つです。<br />
 ファイルは両方とも <span class="path">/boot/home/config/settings/</span> 内に作成でき、<span class="path">/boot/system/settings/etc/</span> で設定されたシステムデフォルトを上書きできます。</p>
@@ -132,23 +149,6 @@
 
 <h3>inputrc</h3>
 <p><span class="cli">inputrc</span> はキーバインドに対応します。Haiku は便利なデフォルトを提供するので、ユーザーが詳細設定を変更する必要はないでしょう。特別なキーバインドが必要な場合は、<a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Library</a> などのオンラインリソースを見てください。</p>
-
-<h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hints" name="hints">ターミナルで作業するためのヒント</a></h2>
-<ul><li><p>
-ファイルやフォルダーを Tracker ウィンドウからターミナルにドラッグすると、ファイルやフォルダーの場所をカーソル位置に挿入します。右クリックでドラッグすると、次のようなアクションがコンテキストメニューに表示されます。</p>
-<table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">パスを挿入 (Insert path)</span></td><td> </td><td>左クリックと同様、ファイルの場所を挿入。</td></tr>
-<tr><td><span class="menu">ディレクトリを変更 (Change directory)</span></td><td> </td><td>ドラッグされたファイルのフォルダーへディレクトリを変更。</td></tr>
-<tr><td><span class="menu">カレントディレクトリにリンク作成 (Create link here)</span></td><td> </td><td>現在ターミナルで作業中のディレクトリにドラッグされたファイルのリンクを作成。</td></tr>
-<tr><td><span class="menu">カレントディレクトリへ移動 (Move here)</span></td><td> </td><td>ドラッグされたファイルをカレントディレクトリへ移動。</td></tr>
-<tr><td><span class="menu">カレントディレクトリへコピー (Copy here)</span></td><td> </td><td>ドラッグされたファイルをカレントディレクトリにコピー。</td></tr>
-</table></li>
-<li><p><span class="cli">open <i>[filename]</i></span> コマンドであらゆるファイルも優先アプリケーションで開けます。これは現在の ("<span class="cli">.</span>") フォルダーと親 ("<span class="cli">..</span>") フォルダーの表現でも動作可能で、Tracker ウィンドウ内に開かれます。現在作業中のディレクトリを開くには以下のように入力してください。</p>
-<pre class="terminal">open .</pre>
-</li>
-<li><p>コマンドが大量の出力を生成すると、いろいろなものがどんどんスクロールします。これらのコマンドをいくつか使用すると、スクロールバックして最新の出力のスタート地点を探すのが難しくなります。<span class="menu">編集 | すべてをクリア (Edit | Clear all)</span> または <span class="key">ALT</span> <span class="key">L</span> で、コマンドが問題を起こす前にスクロールバックバッファーをクリアできます。すぐに、まっさらなスクロールバッファーにより、スクロールバーを上にスクロールするだけで出力のスタート地点を見つけられます。</p></li></ul>
 
 </div>
 </div>

@@ -82,7 +82,7 @@
 <p>永続的にこのリビジョンにダウングレードするには、'Haiku' リポジトリがその hrev を指すようにする必要があります。現在のリビジョンは Deskbar の "Haiku について" で見つかります。例として、hrev56231 にダウングレードするには、ターミナルを開いて以下を入力します:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231
 pkgman full-sync</pre>
-<p>そのリビジョンで固定されるので、Haiku 新しいアップデートを一切受け取らないことに注意してください。可能であれば、不具合を報告してそれを修正する手助けができます。修正されたら - <a href="http://cgit.haiku-os.org/haiku/log/">コミットログ</a>を観察してください -  次の入力で、"current" repo に戻せます:</p>
+<p>そのリビジョンで固定されるので、Haiku が新しいアップデートを一切受け取らないことに注意してください。可能であれば、不具合を報告してそれを修正する手助けができます。修正されたら - <a href="http://cgit.haiku-os.org/haiku/log/">コミットログ</a>を観察してください -  次の入力で、"current" repo に戻せます:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/r1beta3/$(getarch)/current
 pkgman full-sync</pre>
 </div>
