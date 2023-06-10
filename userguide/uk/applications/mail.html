@@ -17,14 +17,14 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Пошта (Mail)</title>
+	<title>Mail (Пошта)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -54,43 +54,43 @@
 <li><a href="../../jp/applications/mail.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="magnify.html">Magnify</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="mediaplayer.html">Медіапрогравач (MediaPlayer)</a>  »
+ «  <a href="magnify.html">Magnify (Екранна лупа)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="mediaplayer.html">MediaPlayer (Медіаплеєр)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Зміст</td></tr>
+<tr class="heading"><td>Індекс</td></tr>
 <tr class="index"><td><a href="#reading">Читання повідомлень</a><br />
 	<a href="#creating">Створення нових повідомлень</a><br />
 	<a href="#preferences">Налаштування</a></td></tr>
 </table>
 
-<h2><img src="../../images/apps-images/mail-icon_64.png" alt="mail-icon_64.png" width="64" height="64" />Пошта (Mail)</h2>
+<h2><img src="../../images/apps-images/mail-icon_64.png" alt="mail-icon_64.png" width="64" height="64" />   Mail (Пошта)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
-<span class="path">~/config/settings/Mail/Menu Links/</span> - Об'єкти, покладені сюди з'являються в контекстному меню поштової скриньки.<br />
-<span class="path">~/config/settings/Mail/signatures/</span> - Місце для зберігання підписів.<br />
-<span class="path">~/config/settings/Mail/status/</span> - Місце для зберігання призначених для користувача статусів.</td></tr>
+<span class="path">~/config/settings/Mail/Menu Links/</span> - Objects put here appear in the mailbox' context menu<br />
+<span class="path">~/config/settings/Mail/signatures/</span> - Location to store signatures<br />
+<span class="path">~/config/settings/Mail/status/</span> - Location to store custom statuses</td></tr>
 </table>
 <p><br /></p>
-<p>Пошта, це програма для перегляду та редагування поштових повідомлень яка використовується системою Haiku за замовчуванням. Вона не має нічого спільного з реальними отриманням та відправкою пошти, що здійснюються за допомогою mail_daemon, процес конфігурації якого описаний у розділі <a href="../preferences/e-mail.html">E-mail</a>.</p>
-<p>Ця сторінка загальний огляд поштової програми. Для отримання додаткової інформації про те, як працює електронна пошта в Haiku, зверніться до <a href="../workshop-email.html">Семінару про обслуговування пошти</a>.</p>
+<p>Mail is Haiku's default viewer and editor of emails. It has nothing to do with the actual fetching and sending of mails, which is done by the mail_daemon and can be configured via the <a href="../preferences/e-mail.html">E-mail</a> preferences.</p>
+<p>This page is a general overview of the application Mail. For more information how email in Haiku works, refer to the <a href="../workshop-email.html">Workshop on managing email</a>.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="reading" name="reading">Читання повідомлень</a></h2>
-<p>Ваш двоклік на поштовому файлі відкриє його у Пошті. Інтерфейс надзвичайно простий:</p>
+<p>You double-click an email file to open it in Mail. The interface is quite simple:</p>
 <img src="../images/apps-images/mail-read.png" alt="email-read.png" /> 
 <p>A menu and optional tool bar on top, with an area of the interesting attributes of a mail (to, from, subject, date) below that, and then the actual body of the mail. If the mail appears with strange characters or empty, try to change the <span class="menu">Encoding</span> in the <span class="menu">Message</span> menu.</p>
-<p>Якщо є файли, прикріплені до електронної пошти вони перераховані в кінці цього повідомлення. Клікання правою кнопкою мишки на ньому відкриває контекстне меню <span class="menu">Зберегти вкладення... (Save attachment...)</span> або  <span class="menu">Відкрити вкладення (Open attachment)</span>. Ви також можете перетягнути його прямо на робочий стіл або інше вікно Tracker'а.</p>
-<p>Більшість із основних пунктів меню і інструментів досить зрозумілі, тому ми зосередимося тільки на основних моментах.</p>
+<p>If there are files attached to an email, they are listed at the end of the message. A right-click on one opens a context menu to <span class="menu">Save attachment...</span> or <span class="menu">Open attachment</span>. You can also drag &amp; drop directly to the Desktop or another Tracker window.</p>
+<p>Most of the menu and tool bar items are pretty self-explaining, so we'll concentrate just on the highlights.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Файл</h3>
 <p>При закритті вікна нового повідомлення, його статус, як правило, перемикається з «Нове (New)», до «Читати (Read)». Але ви можете встановити інші статуси шляхом вибору з підменю <span class="menu">Закрити та... (Close and...)</span>. Там Ви також знайдете опцію <span class="menu">Встановити до... (Set to...)</span> для створення свого власного статусу який буде збережено під <span class="path">~/config/settings/Mail/status/</span>.</p>
@@ -202,9 +202,9 @@ Should you opt not to send attributes with your attachments, remember zip up you
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="magnify.html">Magnify</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="mediaplayer.html">Медіапрогравач (MediaPlayer)</a>  »
+ «  <a href="magnify.html">Magnify (Екранна лупа)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="mediaplayer.html">MediaPlayer (Медіаплеєр)</a>  »
 </span></div>
 </div>
 

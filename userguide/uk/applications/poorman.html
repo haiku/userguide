@@ -11,20 +11,21 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Humdinger
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>PoorMan</title>
+	<title>PoorMan (Веб-сервер)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -54,42 +55,42 @@
 <li><a href="../../jp/applications/poorman.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="people.html">Персони (People)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="screenshot.html">Знімок екрану (Screenshot)</a>  »
+ «  <a href="people.html">People (Контакти)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="screenshot.html">Screenshot (Знімок екрана)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
 
-<h2><img src="../../images/apps-images/poorman-icon_64.png" alt="poorman-icon_64.png" width="64" height="64" />PoorMan</h2>
+<h2><img src="../../images/apps-images/poorman-icon_64.png" alt="poorman-icon_64.png" width="64" height="64" />   PoorMan (Веб-сервер)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/PoorMan</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/PoorMan Settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>PoorMan хороший маленький веб-сервер, надзвичайно простий у встановленні. Природно, що він не пропонує ніяких додаткових функцій, як інше програмне забезпечення для важких умов експлуатації сервера, це все-таки тільки веб-сервер для бідної людини.  ;-)</p>
-<p>Після першого запуску, PoorMan запитає яку теку, Ви збираєтесь розмістити в Інтернеті. Якщо ви йдете з налаштуванням <span class="button">Типово (Default)</span>, для Вас буде створена нова тека <span class="path">/boot/home/public_html</span>. В якості стартової сторінки там за замовчування має бути присутній файл HTML з назвою <span class="cli">index.html</span>.</p>
-<p>PoorMan представляє себе за допомогою простої консолі, яка реєструє його активність. Потім, є інформація про стан, якщо сервер працює, яка папка обслуговується та лічильник відвідувань. Налаштування можна змінити за допомогою пункту меню <span class="menu">Редагувати (Edit) | Налаштування... (Settings...)</span>:</p>
+<p>PoorMan – це гарний маленький веб-сервер, який надзвичайно легко налаштувати. Звичайно, він не пропонує ніяких розширених можливостей, як інші потужні серверні програми, адже це всього лише веб-сервер для «бідних родичів».</p>
+<p>Під час першого запуску PoorMan запитує папку, до якої буде надано доступ з мережі Інтернет. Якщо Ви виберете значення за замовчуванням <span class="button">Створити public_html</span>, буде створено нову папку <span class="path">/boot/home/public_html</span>. У цій папці має знаходитись файл HTML з типовою назвою <span class="cli">index.html</span>, який буде використано в якості  стартової сторінки Вашого інтернет-ресурсу.</p>
+<p>PoorMan представляє собою просту консоль, яка веде журнал його активності. Крім того, на панелі відображається інформація про стан сервера, веб-папку ресурсу та кількість відвідувань. Налаштування можна змінити за допомогою пункту меню <span class="menu">Редагувати | Налаштування…</span>:</p>
 <p><img id="poorman" src="../images/apps-images/poorman.png" alt="poorman.png" /></p>
 <p>Панель налаштувань розділена на три вкладки:</p>
-<p>У вкладці <span class="menu">Сайт (Site)</span> Ви можете вибрати для обслуговування іншу теку, ввести іншу стартову сторінку та мати опцію відправки списку файлів при відсутності стартової сторінки.<br />
-Вкладка <span class="menu">Logging</span> дозволяє де / активувати ведення журналу в консолі або при необхідності у вибраному файлі.<br />
-Вкладка <span class="menu">Додатково (Advanced)</span> містить налаштування максимальної кількості одночасних з'єднань.</p>
-<p>Пункти меню вікна консолі говорять самі за себе. З ними ви можете, наприклад, зберегти вихід консолі або його частини, очистити консоль або журнал, запустити / зупинити сервер або очистити лічильник відвідувань.</p>
+<p>На вкладці <span class="menu">Сайт</span> Ви можете вибрати іншу папку розташування сайту, задати стартову сторінку та обрати опцію відправки списку файлів з веб-папки сайту при відсутності стартової сторінки.<br />
+Вкладка <span class="menu">Ведення журналу</span> дозволяє ввімкнути/вимкнути виведення журналу у вікно консолі або, при необхідності, зберегти в окремому лог-файлі.<br />
+Вкладка <span class="menu">Розширені</span> містить настройки максимальної кількості одночасних з'єднань.</p>
+<p>Пункти меню вікна консолі не потребують пояснень. За допомогою них Ви можете, наприклад, зберегти (частково) вивод консолі, очистити консоль або файл журналу а також запустити/зупинити сервер або обнулити лічильник відвідувань.</p>
 
-<div class="box-info">Якщо ви хочете спробувати, як працює PoorMan, виберіть <span class="path">/boot/system/apps/BePDF/docs/docs-build/</span> як теку та <span class="cli">index.html</span> як стартову сторінку. Потім спрямуйте ваш браузер на URL-адресу 127.0.0.1, яка є Вашим локальним хостом.</div>
+<div class="box-info">Якщо Ви хочете перевірити, як працює PoorMan, призначте папку <span class="path">/boot/system/apps/BePDF/docs/docs-build/</span> веб-папкою а файл <span class="cli">index.html</span> стартовою сторінкою. Потім перенаправте браузер на URL-адресу 127.0.0.1, яка є адресою Вашого локального хоста.</div>
 
 </div>
 </div>
 <!--
 <div class="nav">
 <div class="inner"><span>
- «  <a href="people.html">Персони (People)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="screenshot.html">Знімок екрану (Screenshot)</a>  »
+ «  <a href="people.html">People (Контакти)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="screenshot.html">Screenshot (Знімок екрана)</a>  »
 </span></div>
 </div>
 -->

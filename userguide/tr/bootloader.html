@@ -73,7 +73,7 @@
 <a id="options" name="options">Açılış Yöneticisi Seçenekleri</a></h2>
 <p>Başlangıçta dört seçenek sunulur:</p>
 <table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
-<tr><td><b>Select boot volume</b></td><td> </td><td>Hangi Haiku yüklemesinin veya durumunun başlatılacağını seçin (aşağıda <a href="#troubleshooting">Sorun tespiti</a> bölümüne bakın).</td></tr>
+<tr><td><b>Select boot volume/state</b></td><td> </td><td>Hangi Haiku yüklemesinin veya durumunun başlatılacağını seçin (aşağıda <a href="#troubleshooting">Sorun tespiti</a> bölümüne bakın).</td></tr>
 <tr><td><b>Select safe mode options</b></td><td> </td><td>Donanım kaynaklı sorunlarda veya sistem hatalı davranan bir eklenti yüzünden kararsız veya önyüklenemez duruma gelirse deneyebileceğiniz birkaç seçenek barındırır. Seçenekler üzerinde hareket ettiğinizde kısa bir açıklama ekranın altında belirir.</td></tr>
 <tr><td></td><td></td><td>
 	<p><span class="menu">Safe mode</span><br />
@@ -139,7 +139,7 @@
 <li><p><span class="menu">Use fail-safe graphics driver</span> seçeneği sorununuzu VESA grafik kipine dönerek çözdüyse bu seçeneği <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span> dosyasında <i>#fail_safe_video_mode true</i> satırının başında bulunan <tt>#</tt> karakterini kaldırarak sürekli duruma getirebilirsiniz.</p></li>
 <li><p>Soruna neden olan sürücü, eklenti vb. sistem hiyerarşisi içindeyse durum biraz daha çetrefilli olabilir; çünkü bu bölüm salt okunur olarak işlem görür. Bu noktada <span class="menu">Disable system components</span> seçeneği işe yarar. Bu seçenekle birlikte tüm sistem hiyerarşisi içinde dolanabilir ve soruna neden olan bileşeni <span class="key">SPACE</span> veya <span class="key">RETURN</span> düğmesine basarak devre dışı bırakabilirsiniz. <span class="key">ESC</span> düğmesi sizi bir düzey yukarıya götürür.</p>
 <p>Yaptığınız ayarı sürekli kılmak için <a href="http://www.haiku-os.org/blog/barrett/2013-12-15_how_permanently_blacklist_package_file">How to Permanently Blacklist a Package File</a> makalesi size ayrıntılı bilgi verecektir.</p></li>
-<li><p><span class="menu">Select boot volume</span> seçeneği altında hangi önceki Haiku "sürümünü" önyükleyeceğinizi seçebilirsiniz. Bir paketi her yüklediğinizde veya kaldırdığınızda eski durum kaydedilir ve önyükleyici içinde seçebileceğiniz girdilerden başlatacağınız durumu seçebilirsiniz.<br />Herhangi bir paketi yükledikten sonra önyükleme sorunlarıyla karşılaşırsanız önceki bir Haiku durumuna önyükleyin ve sorun çıkaran paketi kaldırın. <a href="applications/softwareupdater.html#downgrading">Yazılım Güncelleyici</a> konu başlığında anlatılan yöntemleri kullanarak kalıcı olarak belirli bir Haiku revizyonuna geri dönebilirsiniz.</p></li>
+<li><p><span class="menu">Select boot volume/state</span> seçeneği altında hangi önceki Haiku "sürümünü" önyükleyeceğinizi seçebilirsiniz. Bir paketi her yüklediğinizde veya kaldırdığınızda eski durum kaydedilir ve önyükleyici içinde seçebileceğiniz girdilerden başlatacağınız durumu seçebilirsiniz.<br />Herhangi bir paketi yükledikten sonra önyükleme sorunlarıyla karşılaşırsanız önceki bir Haiku durumuna önyükleyin ve sorun çıkaran paketi kaldırın. <a href="applications/softwareupdater.html#downgrading">Yazılım Güncelleyici</a> konu başlığında anlatılan yöntemleri kullanarak kalıcı olarak belirli bir Haiku revizyonuna geri dönebilirsiniz.</p></li>
 </ul>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>

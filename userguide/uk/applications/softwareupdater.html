@@ -10,20 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>SoftwareUpdater</title>
+	<title>SoftwareUpdater (Оновлення ПЗ)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -53,38 +54,37 @@
 <li><a href="../../jp/applications/softwareupdater.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="showimage.html">Переглядач зображень (ShowImage)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="soundrecorder.html">Звукозапис (SoundRecorder)</a>  »
+ «  <a href="showimage.html">ShowImage (Демонстратор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="soundrecorder.html">SoundRecorder (Звукозапис)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/apps-images/softwareupdater-icon_64.png" alt="softwareupdater-icon_64.png" width="64" height="64" />SoftwareUpdater</h2>
+<h2><img src="../../images/apps-images/softwareupdater-icon_64.png" alt="softwareupdater-icon_64.png" width="64" height="64" />   SoftwareUpdater (Оновлення ПЗ)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/SoftwareUpdater</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/SoftwareUpdater_settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>SoftwareUpdater (Оновлювач програмного забезпечення) перевіряє всі активні сховища (дивись <a href="../preferences/repositories.html">Repositories preferences (Налаштування сховищ)</a>) для оновлення встановлених пакунків, та системи Haiku включно. It downloads and installs the available updates in one go.</p>
+<p>Програма оновлення програмного забезпечення SoftwareUpdater перевіряє всі активні репозитарії (дивіться розділ <a href="../preferences/repositories.html">Репозитарії</a>) на наявність оновлень до встановлених пакетів, включно з системними оновленнями самої Haiku. Програма завантажує і встановлює доступні оновлення усі за один раз.</p>
 <img src="../images/apps-images/softwareupdater.png" alt="SoftwareUpdater's main window" />
-<p>After launching, SoftwareUpdater checks for updates to packages and displays them in a list with their new version and a short description. You can opt to <span class="menu">Show more details</span> to include the name of the repository for each package and show both the old and new package versions.</p>
-<p><span class="button">Update now</span> will start the download of all the packages and their subsequent installation.</p>
-<p>Depending on the packages that were updated, you may have to reboot Haiku to actually complete the update process. Updated applications usually only need to be restarted, while changes to Haiku itself may require a reboot of the system to take effect.</p>
-<div class="box-info"><p>Every time packages are updated, installed or uninstalled (either with SoftwareUpdater/HaikuDepot or in Terminal via <tt>pkgman</tt>), a new "state" is saved at <span class="path">/system/packages/administrative/</span>. This makes it possible to boot into any past state from the <a href="../bootloader.html">Boot Options</a>, making it easy to solve issues that may arise from having installed/updated a package that doesn't work as expected.</p>
-<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time. Until there's an option for an automatic clean-up, it's a good idea to check the size of the "administrative" folder from time to time and remove the oldest states, that you probably won't have to boot into again.</p>
+<p>Після запуску, SoftwareUpdater перевіряє наявність оновлень для пакетів і відображає їх у списку з новою версією та коротким описом. Ви можете увімкнути опцію <span class="menu">Показати деталі</span>, щоб додати назву репозитарію для кожного пакета та показати як стару, так і нову версії пакета.</p>
+<p>Після натискання кнопки <span class="button">Оновити зараз</span> почнеться завантаження усіх пакетів зі списку і їх подальша інсталяція.</p>
+<p>Залежно від того, які пакети було оновлено, Вам доведеться перезагрузити Haiku, щоб фактично завершити процес оновлення. Оновлені програми зазвичай потрібно лише перезапустити, тоді як зміни у самій Haiku можуть вимагати перезагрузки системи, щоб вони набули чинності.</p>
+<div class="box-info"><p>Кожного разу, коли пакети оновлюються, встановлюються чи видаляються (за допомогою SoftwareUpdater/HaikuDepot або в терміналі через <tt>pkgman</tt>), новий «стан системи» зберігається в <span class="path">/system/packages/administrative/</span>. Це дає змогу загрузити систему в будь-якому попередньому стані через <a href="../bootloader.html">опції загрузки</a>, що полегшує вирішення проблем, які можуть виникнути через встановлення/оновлення пакета, який не працює так як треба.</p>
+<p>Оскільки у каталогах «станів системи» зберігаються копії оновлених/видалених пакетів, «адміністративний» каталог з часом може значно збільшитися. Доки не з'явиться можливість автоматичного очищення, варто час від часу перевіряти розмір «адміністративного» каталога і видаляти з нього найстаріші системні стани, які Вам, найімовірніше, не знадобляться.</p>
 </div>
 <h2>
-<a id="downgrading" name="downgrading">Downgrading to a previous Haiku revision</a></h2>
-<p>It's rare but possible that an update to the latest Haiku revision ("hrev") introduced a regression you're not willing to live with. From the boot options menu you can load a former, working state (see <a href="../bootloader.html#troubleshooting">Boot Loader - Troubleshooting</a>). Find the last working state and boot into it.</p>
-<p>To permanently downgrade to this revision, you have to point the 'Haiku' repository to that hrev. You find the current revision under "About Haiku" from the Deskbar. As example, to downgrade to hrev56231, open a Terminal and enter:</p>
+<a id="downgrading" name="downgrading">Пониження до попередньої ревізії Haiku</a></h2>
+<p>Рідко, але можливо, що оновлення до останньої ревізії Haiku («hrev») запровадило регресію, з якою Ви не бажаєте миритися. Використовуючи меню параметрів загрузки можна завантажити попередній робочий стан (дивіться розділ <a href="../bootloader.html#troubleshooting">Boot Loader – Вирішення проблем</a>). Знайдіть останній робочий стан і загрузіться у нього.</p>
+<p>Щоб понизити систему до потрібної Вам ревізії, необхідно перенастроїти репозитарій «Haiku» на відповідний «hrev». Ви знайдете поточну ревізію у меню «Про систему Haiku» на панелі задач. Наприклад, щоб понизити ревізію до hrev56231, відкрийте термінал і виконайте команди:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231
 pkgman full-sync</pre>
-<p>Note, that you're now stuck with that revision, Haiku won't get any new updates. You should report the regression and help to fix it, if you can. Once fixed - watch the <a href="http://cgit.haiku-os.org/haiku/log/">commit logs</a> -  you can change back to the "current" repo with:</p>
+<p>Зауважте, що зараз Ви застрягли на цій ревізії; Haiku не отримуватиме нових оновлень. Ви повинні повідомити про регресію та допомогти її виправити, якщо можете. Після виправлення – слідкуйте за «<a href="http://cgit.haiku-os.org/haiku/log/">журналом комітів</a>» –  коли виправлення увійде у нову ревізію, Ви зможете повернутися до «поточного» репозитарію:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/r1beta3/$(getarch)/current
 pkgman full-sync</pre>
 </div>
@@ -92,9 +92,9 @@ pkgman full-sync</pre>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="showimage.html">Переглядач зображень (ShowImage)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="soundrecorder.html">Звукозапис (SoundRecorder)</a>  »
+ «  <a href="showimage.html">ShowImage (Демонстратор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="soundrecorder.html">SoundRecorder (Звукозапис)</a>  »
 </span></div>
 </div>
 

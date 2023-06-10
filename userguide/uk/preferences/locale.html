@@ -10,19 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  *		Gerard Stanczak (Google Code-In student)
+ * Translators:
+ *		'
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Locale</title>
+	<title>Locale (Локаль)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -61,36 +63,35 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/prefs-images/locale-icon_64.png" alt="locale-icon_64.png" width="64" height="64" />Locale</h2>
+<h2><img src="../../images/prefs-images/locale-icon_64.png" alt="locale-icon_64.png" width="64" height="64" />   Locale (Локаль)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Налаштування (Preferences)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Preferences (Налаштування)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/preferences/Locale</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/Locale settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>Haiku's localization system does not only include replacing texts with their translations, but also more complex tasks such as formatting numbers, dates, and times in a way that matches your Locale preferences.</p>
-<div class="box-info">If you would like to help with translations or start with a language that is currently missing, please get in contact on the <a href="http://www.freelists.org/list/haiku-i18n">Haiku-i18n mailing list</a>.</div>
+<p>Система локалізації Haiku передбачає не лише заміну текстів їхніми перекладами, а й складніші завдання, такі як форматування чисел, дат і часу відповідно до Ваших регіональних налаштувань.</p>
+<div class="box-info">Якщо Ви хочете допомогти з перекладами або почати з мови, якої наразі немає, будь ласка, зв'яжіться з нами через <a href="http://www.freelists.org/list/haiku-i18n">список розсилки Haiku-i18n</a>.</div>
 <h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Language</h2>
-<p>Haiku has been translated to dozens of languages, unfortunately some translations are not complete yet. For that reason, you can choose more than one language as “Preferred languages”. If some text is missing in a translation, it's replaced with the words of the next preferred language. English is the default fallback (also when not listed).</p>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Мова</h2>
+<p>Haiku перекладено на десятки мов, на жаль, деякі переклади ще не завершені. З цієї причини Ви можете додати кілька мов у список «Мови за вподобанням». Якщо в перекладі відсутній якийсь текст, він буде замінений словами наступної обраної мови. За замовчуванням використовується англійська мова (навіть якщо її немає у списку).</p>
 <img src="../images/prefs-images/locale-language.png" alt="locale-language.png" />
-<p>In this example, the preferred language is set to Spanish. The first fallback is Italian, and if the text is missing there too, it's back to default English.<br />
-As you can see, expanding a language entry on the left side reveals sub-entries for specific variations or dialects of a language (if available).</p>
+<p>У цьому прикладі мовою за вподобанням встановлено українську. Резервного варіанта немає, і якщо переклад відсутній, за замовчуванням повертається англійська.<br />
+Як Ви можете бачити, розгорнувши мовний запис у списку ліворуч, Ви побачите підзаписи для конкретних варіацій або діалектів мови (якщо вони доступні).</p>
 <h2>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Formatting</h2>
-<p>On the <span class="menu">Formatting</span> tab you can set up the formatting of date, time, number and currency formats independently from the settings of your preferred language.</p>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Формати</h2>
+<p>На вкладці <span class="menu">Формати</span> Ви можете встановити формати дати, часу, чисел і грошової одиниці незалежно від вибраної Вами мови за вподобанням.</p>
 <img src="../images/prefs-images/locale-formatting.png" alt="locale-formatting.png" />
-<p>You may be a Spanish fellow located in the Italian speaking part of Switzerland. So, you'd prefer your system in Spanish, but numbers and currency formatted like at work: Swiss/Italian.<br />
-If you're more comfortable with your Spanish names for days and months (think of the modified dates of files, for example), you can override this time-specific formatting with the checkbox <span class="menu">Use month/day-names from preferred language</span>.</p>
-<p>Granted, the above example is maybe not the most common scenario, but it demonstrates the flexibility of the system.</p>
-<p>Another option is to <span class="menu">Translate application and folder names</span>. Disable the checkbox if you prefer the graphical interface localized, while retaining the original English names for preference panels, applications and standard folder names.</p>
+<p>Можливо, Ви іспанець, який живе в італомовній частині Швейцарії. Отже, в системі встановлена мова за вподобанням іспанська, але цифри та грошова одиниця у форматі, як у Вас на роботі: швейцарський/італійський.<br />
+Якщо Вам зручніше користуватися іспанськими назвами днів і місяців (згадайте, наприклад, змінені дати файлів), Ви можете встановити такий формат, увімкнувши опцію <span class="menu">Назви місяця/дня як у мові за вподобанням</span>.</p>
+<p>Звичайно, наведений вище приклад, можливо, не є найпоширенішим сценарієм, але він демонструє гнучкість системи.</p>
+<p>Інша опція – <span class="menu">Перекладати назви програм та папок</span>. Вимкніть цю опцію, якщо Ви бажаєте, щоб графічний інтерфейс було локалізовано, але при цьому збережено оригінальні англійські назви панелей налаштувань, програм і стандартних папок.</p>
 <p><br /> </p>
-<p>Changes are applied immediately, though currently running applications may require to be closed and restarted before showing the new setting.</p>
+<p>Зміни застосовуються негайно, хоча поточні запущені програми можуть потребувати закриття і перезапуску для того, щоб відобразились нові настройки.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="button">Типово (Defaults)</span></td><td> </td><td>Скинути всі налаштування до типових значень.</td></tr>
-<tr><td><span class="button">Повернути (Revert)</span></td><td> </td><td>brings back the settings that were active when you started the Locale preferences.</td></tr>
+<tr><td><span class="button">Типові настройки</span></td><td> </td><td>повертає все до стандартних (типових) значень.</td></tr>
+<tr><td><span class="button">Відкат змін</span></td><td> </td><td>повертає настройки, які були встановлені до запуску Locale.</td></tr>
 </table>
 
 </div>
@@ -98,9 +99,9 @@ If you're more comfortable with your Spanish names for days and months (think of
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="input.html">Input</a> 
-::  <a href="../preferences.html" class="uplink">Налаштування (Preferences)</a> 
-::  <a href="media.html">Media</a>  »
+ «  <a href="input.html">Input (Пристрої вводу)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences (Налаштування)</a> 
+::  <a href="media.html">Media (Медіа)</a>  »
 </span></div>
 </div>
 

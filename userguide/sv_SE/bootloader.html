@@ -79,7 +79,7 @@ Med datorer som använder UEFI för att starta i stället för den klassiska BIO
 <a id="options" name="options">Starthanterarens alternativ</a></h2>
 <p>När den kommit fram erbjuds du fyra menyer:</p>
 <table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
-<tr><td><b>Select boot volume</b></td><td> </td><td>Välj vilken Haikuinstallation/typvärde du vill starta (se artikel om <a href="#troubleshooting">Felsökning</a> nedan).</td></tr>
+<tr><td><b>Select boot volume/state</b></td><td> </td><td>Välj vilken Haikuinstallation/typvärde du vill starta (se artikel om <a href="#troubleshooting">Felsökning</a> nedan).</td></tr>
 <tr><td><b>Select safe mode options</b>
 </td><td> </td><td>Det finns flera alternativ att prova om det skulle uppstå hårdvarurelaterade problem eller systemet blir instabil eller hindrar dig att starta det eftersom någon tillägg bär sig dåligt. När du flyttar markeringen mellan alternativen dyker en kort förklaring upp längst ner på skärmen.</td></tr>
 <tr><td></td><td></td><td>
@@ -147,7 +147,7 @@ Med datorer som använder UEFI för att starta i stället för den klassiska BIO
 <li><p>Om aktivering av <span class="menu">Use fail-safe graphics driver</span> löser dina problem genom att komma tillbaka till VESA grafik, kan du göra inställningen permanent genom att ta bort <tt>#</tt> från radet <i>#fail_safe_video_mode true</i> i textfil <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span>.</p></li>
 <li><p>Om en kränkande drivrutin, tillägg osv. är inställd på en hierarki av systemet, things get a bit more complicated, because that area is read-only. Here, the <span class="menu">Disable system components</span> comes into play. With it, you can navigate through the whole system hierarchy and disable the component that's messing things up for you by checking an entry with the <span class="key">SPACE</span> or <span class="key">RETURN</span> key. <span class="key">ESC</span> returns you up one level to the parent directory.</p>
 <p>Online, there's the guide <a href="https://www.haiku-os.org/guides/daily-tasks/blacklist-packages">Disabling components of packages</a> showing how to make that setting stick.</p></li>
-<li><p>Under <span class="menu">Select boot volume</span> you can specify what former "version" of Haiku to boot. Every time you un/install a package, the old state is saved and you can boot into it by choosing it from the list presented in the boot loader options.<br />
+<li><p>Under <span class="menu">Select boot volume/state</span> you can specify what former "version" of Haiku to boot. Every time you un/install a package, the old state is saved and you can boot into it by choosing it from the list presented in the boot loader options.<br />
 So, if you encounter boot problems after installing some package, boot a Haiku state from before that time and uninstall the offending package. You can permanently revert to a specific Haiku revision as described in the topic <a href="applications/softwareupdater.html#downgrading">SoftwareUpdater</a>.</p></li>
 </ul>
 <h2>

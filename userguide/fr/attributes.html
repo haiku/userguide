@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduction de cette page n'est pas achevée. Les parties non encore traduites apparaîtrons en anglais.</div>
 
 <h1>Attributs</h1>
 
@@ -89,11 +90,12 @@ Vous pouvez mettre en place un ordre de tri secondaire en pressant la touche <sp
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Les attributs dans le Terminal</a></h2>
 <p>Si vous préférez utiliser la ligne de commande ou souhaitez modifier un grand nombre d'attribut à l'aide de scripts shell, vous pouvez utiliser plusieurs commandes de contrôle d'attributs depuis un Terminal.</p>
+<p>Pour obtenir plus d'information sur ces commandes et leurs options respectives, vous pouvez taper le nom de la commande suivi de "<span class="cli">-h</span>" ou "<span class="cli">--help</span>".</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> liste les attributs d'un fichier, mais n'affiche pas le contenu desdits attributs.</p>
-<pre>usage: listattr 'nom_de_fichier' ['nom_de_fichier2' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>En l'appelant sur un des fichiers de l'exemple précédent, voici le résultat :</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
 File: Clara Botters
@@ -154,9 +156,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> supprime complètement un attribut d'un fichier.</p>
 
-<pre>usage: rmattr [-p] attribut fichier1 [fichier2...]
-         'attribut' est le nom d'un attribut du fichier.
-         Si '-p' est spécifié, 'attribut' est considéré comme un motif de recherche.</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>Même s'il serait suffiant de ne pas remplir l'attribut "Fax", vous pouvez le supprimer complètement du fichier de Clara en tapant :</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -169,7 +169,6 @@ Clara Botters : string : Whelton</pre>
 <p>Si vous voulez également copier les données du fichier, vous pouvez utiliser l'option "<span class="cli">-d</span>" ou "<span class="cli">--data</span>".</p>
 
 <p><br /></p>
-<p>Pour obtenir plus d'information sur ces commandes et leurs options respectives, vous pouvez taper le nom de la commande suivi de "<span class="cli">-h</span>" ou "<span class="cli">--help</span>".</p>
 
 </div>
 </div>

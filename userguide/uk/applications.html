@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
@@ -17,14 +18,14 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
 	<meta name="robots" content="all" />
-	<title>Applications (Програми)</title>
+	<title>Програми</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -54,132 +55,125 @@
 <li><a href="../jp/applications.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="tracker.html">Tracker</a> 
+ «  <a href="tracker.html">Tracker (Файловий менеджер)</a> 
 ::  <a href="contents.html" class="uplink">Зміст</a> 
-::  <a href="workspaces.html">Робочі місця (Workspaces)</a>  »
+::  <a href="workspaces.html">Workspaces (Робочі області)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h1>Applications (Програми)</h1>
+<h1>Програми</h1>
 
-<p>До занурення у всі програми що ідуть разом з Haiku, спробуємо подивитись детальніше на їх встановлення та видалення. Найзручніший спосіб знаходити, встановлювати, оновлювати і видаляти програми це скористатись системою керування пакетами Haiku. А оскільки Haiku  бінарно і за джерелами в основному сумісна зі своїм предком BeOS, то досі можна знайти старі архіви (.zip і .pkg) та успішно їх встановити.</p>
-<div class="box-info">Нижче Ви завжди знайдете згадування про ієрархію<tt>/системи/</tt>. Якщо Ви збираєтесь встановлювати пакети лише для одного користувача (колись Haiku можливо стане багатокористувацькою), використовуйте дзеркало ієрархії файлової системи під home: <tt>~/config/</tt>. Дивись параграф <a href="filesystem-layout.html">Filesystem layout (Ієрархія файлової системи)</a> для отримання додаткової інформації.</div>
-
-<h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hpkg" name="hpkg">Пакети Haiku (Haiku packages)(.hpkg)</a></h2>
-<p>Найпростіший шлях це використання <a href="applications/haikudepot.html">HaikuDepot (Сховища Haiku)</a> для знаходження, закачки та автоматичного встановлення і видалення пакету. Якщо Ви завантажили пакет звідкілясь або взяли його не з публічного репозиторія просто двічі клікніть по ньому для запуску HaikuDepot (Сховища Haiku) і встановіть його звідти.</p>
-<p>Ви зможете знайти нові встановлені програми у <tt>/system/apps/</tt> або у випадку програм командної стрічки в <tt>/system/bin/</tt>. Всі інші файли та залежності (бібліотеки, додатки, дані, etc.) автоматично з'являться у правильних місцях файлової системи.</p>
-<p>Розділи <a href="deskbar.html">Deskbar - панель завдань</a> і <a href="desktop-applets/launchbox.html">LaunchBox</a> описують, як додати у них значок нової програми.</p>
-<div class="box-info">До речі, *.hpkg можна розпакувати як і будь-який інший архів, але це не те саме що скористатись пакетним менеджером. Основна файлова система з'являється тільки при розташуванні файлів у відповідних теках, хоча жодного фізичного руху навколо не відбувається. Тому установка/видалення ідуть дуже швидко та чисто.</div>
-<p>При залежності пакету від іншого або від бібліотеки, з'являється вікно з пропозицією  завантаження  та встановлення і цих необхідних файлів.</p>
-<p>Видалення пакету також просте: знайдіть його у HaikuDepot (Сховищі Haiku) та клікніть <span class="button">Uninstall(Видалити)</span>.</p>
-<p>Якщо ви працюєте у Терміналі або бажаєте виконати встановлення/видалення за допомогою скрипта погляньте на таку команду <tt>pkgman --help</tt>.</p>
+<p>Перш ніж почати вивчати і використовувати усі програми, які постачаються з Haiku, давайте детальніше розглянемо, як проводити інсталяцію та видалення програм. Найзручнішим способом пошуку, встановлення, оновлення та видалення програм є менеджер пакетів Haiku. Крім того, оскільки Haiku  бінарно сумісна зі своєю попередницею BeOS, то досі можна знайти старі архіви (.zip та .pkg) і успішно їх встановити.</p>
+<div class="box-info">На сторінках посібника Вам доволі часто буде траплятися згадування про системний каталог <tt>/system/</tt>. Якщо Ви маєте намір встановлювати пакети лише для одного користувача (у разі, коли Haiku стане системою з багатьма користувачами), Вам слід використовувати домашній каталог користувача: <tt>~/config/</tt>. Додаткову інформацію дивіться у розділі <a href="filesystem-layout.html">Структура файлової системи</a>.</div>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="beos_apps" name="beos_apps">Старі BeOS архіви (.zip and .pkg)</a></h2>
-<p>BeOS архіви з усім їхнім вмістом у теці застосування треба просто розпакувати (двоклік відкриє <span class="app">Expander (Розпаковувач)</span> або старий <span class="app">PackageInstaller (Встановлювач пакетів)</span>) будь-де у <tt>/boot/home/</tt> та запустити звідти. Видалення таких програм легке: просто видаліть теку програми.</p>
-<p>Це вірно для більшості старих програм BeOS. Якщо вам трапилася така і не бажає працювати після встановлення, можливо вона пробує розмістити свої файли на жорстко прописаних місцях, які не факт що фізично існують. Ви можете поправити ситуацію вручну. Тека <tt>/system/non-packaged/</tt> дозволяє відтворити правильну ієрархію теки. Все більше та більше реальних пакетів .hpkg стають доступними, а старі BeOS перепаковуються заново, тому потреба у цьому поступово зменшується. Ознайомтесь з статтею <a href="http://www.haiku-os.org/guides/daily-tasks/install-applications">online article</a> щоб знати як використовувати ієрархію <tt>non-packaged</tt>.
+<a id="hpkg" name="hpkg">Пакети Haiku (.hpkg)</a></h2>
+<p>Найпростіший спосіб для пошуку, завантаження та автоматичного встановлення або видалення пакетів – скористатися менеджером пакетів <a href="applications/haikudepot.html">HaikuDepot</a>. Якщо Ви завантажили пакет з іншого місця – можливо, тому, що його (поки що) немає в загальнодоступному репозитарії – просто зробіть на ньому подвійний клік, щоб відкрити в HaikuDepot і встановити звідти.</p>
+<p>Ви знайдете щойно встановлену програму в <tt>/system/apps/</tt> або, у випадку програми командного рядка, в <tt>/system/bin/</tt>. Усі інші файли, від яких залежить робота програми (бібліотеки, дані, доповнення, тощо), автоматично з'являться у потрібних місцях файлової системи.</p>
+<p>У розділах <a href="deskbar.html">Панель задач</a> або <a href="desktop-applets/launchbox.html">Панель запуску</a> описано, як додати елементи швидкого доступу до щойно встановленої програми.</p>
+<div class="box-info">До речі, хоча Ви можете розпакувати файл .hpkg, як і будь-який інший архів, це не те саме, що робить менеджер пакетів, коли проводить інсталяцію пакета. Базова файлова система лише розподіляє файли у відповідні папки, фізичного переміщення не відбувається. Ось чому встановлення/видалення відбувається дуже швидко і чисто.</div>
+<p>Якщо пакет залежить від якоїсь іншої бібліотеки або пакета, з'явиться вікно із запитом на завантаження та встановлення необхідних файлів.</p>
+<p>Видалити пакет так само просто: знайдіть його у HaikuDepot і натисніть кнопку <span class="button">Деінсталяція</span>.</p>
+<p>Якщо ви працюєте у терміналі або бажаєте виконати встановлення/видалення пакета за допомогою сценарію, Вам слід переглянути справку команди <tt>pkgman --help</tt>.</p>
 
-
-
-
-
-</p>
+<h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="beos_apps" name="beos_apps">Старі архіви BeOS (.zip та .pkg)</a></h2>
+<p>Архіви BeOS, які містять усе необхідне в папці програми, можна просто розпакувати (подвійний клік на архіві відкриває <span class="app">Expander</span> або старий <span class="app">PackageInstaller</span>) у будь-якому місці <tt>/boot/home/</tt> та запустити звідти. Видалити такі самодостатні програми легко: просто видаліть папку програми.</p>
+<p>Це стосується більшості старих програм для BeOS. Якщо Ви натрапите на програму, яка не працює «з коробки», оскільки намагається розмістити свої файли у жорстко закодованих місцях, існування яких не гарантується, Ви можете спробувати виправити це вручну. Каталог <tt>/system/non-packaged/</tt> дозволяє відтворити потрібну структуру папок. З появою все більшої кількості справжніх пакетів .hpkg і перепакуванням старих програм для BeOS, потреба у цьому зменшиться. Ознайомтеся з цією <a href="http://www.haiku-os.org/guides/daily-tasks/install-applications">онлайн-статтею</a>, де йдеться про те, як використовувати каталог <tt>non-packaged</tt>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list-of-apps" name="list-of-apps">Програми Haiku</a></h2>
-<p>Haiku постачається з невеликим набором необхідних програм. Ви можете знайти їх за адресами <span class="path">/boot/system/apps/</span> або <span class="path">/boot/common/apps/</span>. Програми, що переважно не запускаються двокліком по файлу (наприклад, ShowImage (Перегляд зображень) можуть бути знайдені в меню <span class="menu"> Applications (Програми)</span> панелі Deskbar.</p>
+<p>Haiku постачається з набором здебільшого невеликих, але необхідних програм. Усі вони знаходяться у каталозі <span class="path">/boot/system/apps/</span>. Програми, які зазвичай не запускаються подвійним кліком на файлі даних (наприклад, ShowImage для файлів зображень), можна знайти у меню <span class="menu"> Applications (Програми)</span> Панелі задач Deskbar.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0"> 
-	<tr><td style="width:24px;"><img src="../images/apps-images/activitymonitor-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/activitymonitor.html">ActivityMonitor (Монітор активності)</a></td><td style="width:10px;"> </td>
-		<td valign="top">Інструмент для відстеження системних ресурсів, наприклад, використання процесора і оперативної пам'яті.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/bootmanager-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/bootmanager.html">BootManager (Завантажувач)</a></td><td> </td>
-		<td valign="top">Інструмент для встановлення завантажувального меню у MBR жорсткого диска.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/charactermap-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/charactermap.html">CharacterMap (Мапа символів)</a></td><td> </td>
-		<td valign="top">Програма, що показує мапу символів, які використовуються у системі.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/codycam-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/codycam.html">CodyCam (Вебкамера)</a></td><td> </td>
-		<td valign="top">Інструмент для роботи з веб-камерою, який дозволяє завантажувати зображення на сервер.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/activitymonitor-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/activitymonitor.html">ActivityMonitor (Монітор активності)</a></td><td style="width:10px;"> </td>
+		<td valign="top">Інструмент для відстеження системних ресурсів, таких як, використання процесора і оперативної пам'яті.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/bootmanager-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/bootmanager.html">BootManager (Менеджер загрузки)</a></td><td> </td>
+		<td valign="top">Інструмент для встановлення меню загрузки у MBR жорсткого диска.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/charactermap-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/charactermap.html">CharacterMap (Таблиця символів)</a></td><td> </td>
+		<td valign="top">Програма, яка показує карту символів Unicode.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/codycam-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/codycam.html">CodyCam (Веб-камера)</a></td><td> </td>
+		<td valign="top">Інструмент для роботи з веб-камерою, який дозволяє вивантажувати стоп-кадри зображення на сервер.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/debugger-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/debugger.html">Debugger (Відладчик)</a></td><td> </td>
 		<td valign="top">Відладчик з графічним інтерфейсом.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/deskcalc-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/deskcalc.html">DeskCalc (Калькулятор)</a></td><td> </td>
 		<td valign="top">Калькулятор.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/diskprobe-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/diskprobe.html">DiskProbe</a></td><td> </td>
+	<tr><td style="width:24px;"><img src="../images/apps-images/diskprobe-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/diskprobe.html">DiskProbe (HEX-редактор)</a></td><td> </td>
 		<td valign="top"> HEX-редактор для файлів та пристроїв.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/diskusage-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/diskusage.html">DiskUsage (Використання диска)</a></td><td> </td>
-		<td valign="top">Інструмент для візуалізації використання дискової пам'яті.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/drivesetup-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/drivesetup.html">DriveSetup (Розмітка диску)</a></td><td> </td>
+		<td valign="top">Програма для візуалізації використання дискової пам'яті.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/drivesetup-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/drivesetup.html">DriveSetup (Розмітчик диска)</a></td><td> </td>
 		<td valign="top">Інструмент для роботи з розділами жорсткого диска.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/expander-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/expander.html">Expander (Розпаковувач)</a></td><td> </td>
+	<tr><td style="width:24px;"><img src="../images/apps-images/expander-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/expander.html">Expander (Екстрактор)</a></td><td> </td>
 		<td valign="top">Інструмент для роботи з архівами.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/haikudepot-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/haikudepot.html">HaikuDepot (Сховище Haiku)</a></td><td> </td>
-		<td valign="top">Інструмент для пошуку, завантаження, встановлення, оновлення і видалення (програм) пакетів.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/icon-o-matic-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/icon-o-matic.html">Icon-O-Matic</a></td><td> </td>
-		<td valign="top">Програма для створення векторних іконок в Haiku.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/installer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/installer.html">Installer (Встановлювач)</a></td><td> </td>
-		<td valign="top">Інструмент для встановлення Haiku в розділ.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/haikudepot-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/haikudepot.html">HaikuDepot (Менеджер пакетів)</a></td><td> </td>
+		<td valign="top">Інструмент для пошуку, завантаження, встановлення, оновлення і видалення пакетів (програм).</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/icon-o-matic-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/icon-o-matic.html">Icon-O-Matic (Редактор значків)</a></td><td> </td>
+		<td valign="top">Редактор векторних значків Haiku.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/installer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/installer.html">Installer (Інсталятор)</a></td><td> </td>
+		<td valign="top">Програма для інсталяції системи Haiku на цільовий розділ/том.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/magnify-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/magnify.html">Magnify (Екранна лупа)</a></td><td> </td>
-		<td valign="top">Додаток для збільшення зображення в зоні курсора.</td></tr>
+		<td valign="top">Програма яка показує збільшене зображення області екрана навколо курсора миші.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/mail-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/mail.html">Mail (Пошта)</a></td><td> </td>
-		<td valign="top"><span style="color:silver">Поштовий клієнт. [<i>опис відсутній</i>]</span></td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/mediaplayer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/mediaplayer.html">MediaPlayer (Медіапрогравач)</a></td><td> </td>
-		<td valign="top">A player for all supported audio/video files.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/midiplayer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/midiplayer.html">MidiPlayer</a></td><td> </td>
-		<td valign="top">A player for MIDI files.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/packageinstaller-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/packageinstaller.html">LegacyPackageInstaller</a></td><td> </td>
-		<td valign="top">Installer for BeOS packages in PKG format.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/people-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/people.html">People (Особи)</a></td><td> </td>
-		<td valign="top">Менеджер контактів.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/poorman-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/poorman.html">PoorMan</a></td><td> </td>
+		<td valign="top">Засіб перегляду та редактор електронних поштових повідомлень.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/mediaplayer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/mediaplayer.html">MediaPlayer (Медіаплеєр)</a></td><td> </td>
+		<td valign="top">Плеєр для відтворення медіафайлів, які підтримуються системою.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/midiplayer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/midiplayer.html">MidiPlayer (MIDI-плеєр)</a></td><td> </td>
+		<td valign="top">Використовується щоб програвати музичні файли у форматі MIDI.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/packageinstaller-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/packageinstaller.html">PackageInstaller (Інсталятор пакетів)</a></td><td> </td>
+		<td valign="top">Інсталятор для пакетів BeOS у форматі PKG.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/people-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/people.html">People (Контакти)</a></td><td> </td>
+		<td valign="top">Проста база даних контактів, адресна книга, записничок.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/poorman-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/poorman.html">PoorMan (Веб-сервер)</a></td><td> </td>
 		<td valign="top">Простий веб-сервер.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/screenshot-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/screenshot.html">Screenshot (Знімок екрану)</a></td><td> </td>
-		<td valign="top">Інструмент для зйомки зображень робочого столу.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/showimage-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/showimage.html">ShowImage (Переглядач)</a></td><td> </td>
-		<td valign="top">A simple image viewer.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/softwareupdater-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/softwareupdater.html">SoftwareUpdater</a></td><td> </td>
-		<td valign="top">A tool to update software packages and Haiku itself.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/screenshot-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/screenshot.html">Screenshot (Знімок екрана)</a></td><td> </td>
+		<td valign="top">Інструмент для створення скриншотів.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/showimage-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/showimage.html">ShowImage (Демонстратор)</a></td><td> </td>
+		<td valign="top">Простий засіб для перегляду зображень з початковими функціями редактора.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/softwareupdater-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/softwareupdater.html">SoftwareUpdater (Оновлення ПЗ)</a></td><td> </td>
+		<td valign="top">Інструмент для оновлення програмного забезпечення і системи Haiku.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/soundrecorder-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/soundrecorder.html">SoundRecorder (Звукозапис)</a></td><td> </td>
-		<td valign="top"><span style="color:silver">Додаток для запису звуку з лінійного входу або мікрофону. [<i>опис поки відсутній</i>]</span></td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/stylededit-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/stylededit.html">StyledEdit (Редактор тексту)</a></td><td> </td>
-		<td valign="top">Простий редактор текстів.</td></tr>
+		<td valign="top"><span style="color:silver">Інструмент для запису звуку з лінійного входу або мікрофона. [<i>опис поки відсутній</i>]</span></td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/stylededit-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/stylededit.html">StyledEdit (Текстовий редактор)</a></td><td> </td>
+		<td valign="top">Простий редактор тексту.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/terminal-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/terminal.html">Terminal (Термінал)</a></td><td> </td>
-		<td valign="top">Доступ до командної стрічки оболонки bash.</td></tr>
+		<td valign="top">Інтерфейс командного рядка оболонки bash.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/textsearch-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/textsearch.html">TextSearch (Пошук тексту)</a></td><td> </td>
-		<td valign="top">Інструмент для пошуку текстових файлів.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/tv-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/tv.html">TV (ТБ)</a></td><td> </td>
-		<td valign="top"><span style="color:silver">Переглядач аналового TV. [<i>опис поки відсутній</i>]</span></td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/webpositive-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/webpositive.html">WebPositive (Переглядач тенет)</a></td><td> </td>
-		<td valign="top">Нативний переглядач веб-сторінок.</td></tr>
+		<td valign="top">Інструмент для пошуку тексту у текстових файлах.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/tv-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/tv.html">TV (Телебачення)</a></td><td> </td>
+		<td valign="top"><span style="color:silver">Засіб перегляду ефірного телебачення при наявності відповідного апаратного забезпечення. [<i>опис поки відсутній</i>]</span></td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/webpositive-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/webpositive.html">WebPositive (Браузер Інтернет)</a></td><td> </td>
+		<td valign="top">Нативний браузер веб-сторінок.</td></tr>
 </table>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-apps" name="cli-apps">Haiku - додатки для командної стрічки</a></h2>
-<p>Окрім звиклих термінальних додатків, що ідуть разом с оболонкою bash і які вимагаються для POSIX сумісності  постачаються Haiku-додатки для командної стрічки. Вони часто використовуються для написання скриптів, корисно буде заглянути в розділ <a href="bash-scripting.html">Bash і написання сценаріїв</a>.</p>
+<a id="cli-apps" name="cli-apps">Програми командного рядка Haiku</a></h2>
+<p>Окрім звичайних інструментів командного рядка, які постачаються з оболонкою bash або необхідні для сумісності з POSIX, є декілька характерних для Haiku програм командного рядка, про які варто згадати. Ці команди часто бувають корисними для написання сценаріїв; додаткову інформацію дивіться у розділі <a href="bash-scripting.html">Bash і написання сценаріїв</a>.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-		<tr><td style="width:24px;"><img src="../images/apps-images/cli-app-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/list-cli-apps.html">Список всіх додатків для командної стрічки</a></td><td> </td></tr>
-		<tr><td style="width:24px;"><img src="../images/apps-images/cli-app-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/cli-apps.html">Спеціальні Haiku-додатки для командної стрічки</a></td><td> </td></tr>
+		<tr><td style="width:24px;"><img src="../images/apps-images/cli-app-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/list-cli-apps.html">Список програм командного рядка</a></td><td> </td></tr>
+		<tr><td style="width:24px;"><img src="../images/apps-images/cli-app-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/cli-apps.html">Програми командного рядка характерні для Haiku</a></td><td> </td></tr>
 </table>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="list-of-bundled-apps" name="list-of-bundled-apps">Додатки, що входять у склад Haiku</a></h2>
-<p>Крім тих згаданих додатків,  що підтримуються проектом Haiku, існує ще кілька важливих додатків, що підтримуються сторонніми розробниками. Виявлені помилки і запити на їх покращення просимо відсилати саме до людей які супроводжують ці додатки.</p>
+<a id="list-of-bundled-apps" name="list-of-bundled-apps">Програми у комплекті з Haiku</a></h2>
+<p>Окрім перелічених вище програм, які підтримуються проектом Haiku, є кілька важливих програм від сторонніх розробників, що входять до стандартного дистрибутива системи Haiku. Про помилки та побажання щодо їхнього функціонування слід повідомляти відповідну службу підтримки.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 		<tr><td style="width:24px;"><img src="../images/apps-images/bepdf-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/bepdf.html">BePDF</a></td><td style="width:10px;"> </td>
-		<td valign="top"> <acronym title="Portable Document Format">PDF</acronym> переглядач.</td></tr>
+		<td valign="top">Програма для перегляду документів у форматі <acronym title="Portable Document Format">PDF</acronym>.</td></tr>
 <!--	<tr><td style="width:24px;"><img src="../images/apps-images/bezillabrowser-icon_16.png" alt="icon" width="16" height="16" /></td><td _translation_id="270"><a href="applications/bezillabrowser.html">BeZillaBrowser</a></td><td> </td>
 		<td valign="top" _translation_id="271">A web browser based on Mozilla's source code.</td></tr> -->
-	<tr><td style="width:24px;"><img src="../images/apps-images/pe-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/pe.html">Pe</a></td><td> </td>
-		<td valign="top">Розширений редактор текстів з підсвіткою синтаксису і багатьом іншим.</td></tr>
-	<tr><td style="width:24px;"><img src="../images/apps-images/vision-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/vision.html">Vision</a></td><td> </td>
-		<td valign="top"><acronym title="Internet Relay Chat">IRC</acronym>-клієнт.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/pe-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/pe.html">Pe (Редактор для програмістів)</a></td><td> </td>
+		<td valign="top">Удосконалений текстовий редактор з підсвіткою синтаксису і багатьом іншим.</td></tr>
+	<tr><td style="width:24px;"><img src="../images/apps-images/vision-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/vision.html">Vision (IRC-клієнт)</a></td><td> </td>
+		<td valign="top">Клієнтська програма <acronym title="Internet Relay Chat">IRC</acronym>-мережі для Haiku.</td></tr>
 <!--	<tr><td style="width:24px;"><img src="../images/apps-images/vlc-icon_16.png" alt="icon" width="16" height="16" /></td><td _translation_id="276"><a href="applications/vlc.html">VLC media player</a></td><td> </td>
 		<td valign="top" _translation_id="277">VideoLAN's media player.</td></tr> -->
-	<tr><td style="width:24px;"><img src="../images/apps-images/wonderbrush-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/wonderbrush.html">WonderBrush</a></td><td> </td>
+	<tr><td style="width:24px;"><img src="../images/apps-images/wonderbrush-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/wonderbrush.html">WonderBrush (Графічний редактор)</a></td><td> </td>
 		<td valign="top">Редактор растрових та векторних зображень  від YellowBite.</td></tr>
 </table>
 
@@ -188,9 +182,9 @@
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="tracker.html">Tracker</a> 
+ «  <a href="tracker.html">Tracker (Файловий менеджер)</a> 
 ::  <a href="contents.html" class="uplink">Зміст</a> 
-::  <a href="workspaces.html">Робочі місця (Workspaces)</a>  »
+::  <a href="workspaces.html">Workspaces (Робочі області)</a>  »
 </span></div>
 </div>
 

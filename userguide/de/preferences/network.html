@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Finest Bug
  *		Humdinger
  *		Matthias
@@ -72,14 +73,14 @@
 <tr><td>Einstellungen:</td><td></td><td><span class="path">/boot/system/settings/network/resolv.conf</span></td></tr>
 </table>
 <p><br /></p>
-<p>In den Netzwerk Einstellungen lassen sich alle verfügbaren Netzwerkgeräte und Dienste konfigurieren. Links im Fenster befinden sich einklappbare Listen aller Geräte und Dienste, rechts die dazugehörigen Informationen oder Einstellmöglichkeiten.<br />
+<p>In den Netzwerk-Einstellungen lassen sich alle verfügbaren Netzwerkgeräte und Dienste konfigurieren. Links im Fenster befinden sich einklappbare Listen aller Geräte und Dienste, rechts die dazugehörigen Informationen und Einstellmöglichkeiten.<br />
 Ganz unten lässt sich eine Checkbox aktivieren, um den <span class="menu"><a href="../desktop-applets/networkstatus.html">NetzwerkStatus</a> in der Deskbar</span> anzuzeigen. <span class="button">Anfangswerte</span> bringt die Einstellungen zurück, die beim Start des Panels aktiv waren.</p>
 
 <h2>Geräte</h2>
 <img src="../images/prefs-images/network-prefs-device.png" alt="network-prefs-device.png" />
 
-<p>Hier sehen wir ein Wifi-Gerät, das den iprowifi4965 Treiber benutzt. Aus dem Menü lässt sich das WLAN auswählen mit verbunden werden soll. Hinter jedem WLAN Namen zeigt ein kleines Icon die jeweilige Signalstärke an.<br />
-Wird ein WLAN ausgewählt, versucht Haiku bei jedem Hochfahren automatisch mit diesem eine Verbindung aufzubauen. <span class="menu">Automatisch wählen</span> hingegen, verbindet mit dem WLAN mit der höchsten Signalstärke.</p>
+<p>Hier sehen wir ein Wifi-Gerät, das den iprowifi4965 Treiber benutzt. Aus dem Menü lässt sich das WLAN auswählen mit dem sich Haiku verbinden soll. Hinter jedem WLAN-Namen zeigt ein kleines Icon die jeweilige Signalstärke an.<br />
+Wird ein WLAN ausgewählt, wird Haiku bei jedem neuen Hochfahren versuchen, sich automatisch mit diesem WLAN zu verbinden. <span class="menu">Automatisch wählen</span> hingegen, verbindet mit dem WLAN mit der höchsten Signalstärke.</p>
 <p>Verbindet man sich mit einem geschützten Funknetzwerk, wird nach dem Passwort gefragt und ob diese Verbindung nur einmalig oder immer genehmigt werden soll. Letzteres speichert das Passwort, um es in Zukunft nicht mehr eingeben zu müssen.</p>
 <p>Mit den Buttons darunter lässt sich ein Gerät  <span class="button">Deaktivieren</span> oder mit dem WLAN <span class="button">Neu verbinden</span>.</p>
 
@@ -106,7 +107,7 @@ Klickt man <span class="button">Anwenden</span> werden die neuen Einstellungen a
 <h2>Einstellungsdateien</h2>
 
 <p>Die Netzwerkeinstellungen finden sich im Ordner <span class="path">/system/settings/network/</span>. Das ist im Normalfall eher uninteressant, außer man muss sie mal löschen, weil irgendetwas phantastisch schief gegangen ist und man nochmal ganz von vorn anfangen will...</p>
-<p>Eine Datei ist allerdings recht nützlich, besonders wenn man in der Konsole arbeitet. In der <tt>hosts</tt> Datei lassen sich Namen an  IP Adressen im Netzwerk zuweisen. Zum Beispiel:</p>
+<p>Eine Datei ist allerdings recht nützlich, besonders wenn man in der Konsole arbeitet. In der <tt>hosts</tt>-Datei lassen sich Namen an IP-Adressen im Netzwerk zuweisen. Zum Beispiel:</p>
 <pre>127.0.0.1		localhost	#loopback
 192.168.178.3		NAS		#Synology
 192.168.178.102		XIOS		#Mediaplayer</pre>

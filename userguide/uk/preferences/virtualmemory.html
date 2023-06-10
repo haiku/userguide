@@ -10,20 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Віртуальна пам'ять (VirtualMemory)</title>
+	<title>VirtualMemory (Файл підкачки)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -53,29 +54,27 @@
 <li><a href="../../jp/preferences/virtualmemory.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="tracker.html">Tracker</a> 
-::  <a href="../preferences.html" class="uplink">Налаштування (Preferences)</a>
+ «  <a href="tracker.html">Tracker (Файловий менеджер)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences (Налаштування)</a>
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/prefs-images/virtualmemory-icon_64.png" alt="virtualmemory-icon_64.png" width="64" height="64" />Віртуальна пам'ять (VirtualMemory)</h2>
+<h2><img src="../../images/prefs-images/virtualmemory-icon_64.png" alt="virtualmemory-icon_64.png" width="64" height="64" />   VirtualMemory (Файл підкачки)</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Налаштування (Preferences)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Preferences (Налаштування)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/preferences/VirtualMemory</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/kernel/drivers/virtual_memory</span><br />
-<span class="path">~/config/settings/VM_data</span> - Зберігає позицію вікна панелі.</td></tr>
+<span class="path">~/config/settings/VM_data</span> – зберігає позицію вікна панелі.</td></tr>
 </table>
-<p>Віртуальна пам'ять дозволяє використовувати область підкачки з жорсткого диску, якщо фізична пам'ять більше потрібна для інших речей. Таким чином, навіть якщо у вас багато оперативної пам'яті,  використання віртуальної зовсім непогана ідея.</p>
+<p>Механізм управління віртуальною пам'яттю дозволяє застосувати файл підкачки на жорсткому диску, якщо оперативну пам'ять можна використовувати більш розумно для інших речей. Отже, навіть якщо у Вас багато оперативної пам'яті, ідея пустити в дію віртуальну пам'ять ніколи не буде поганою.</p>
 <img src="../images/prefs-images/virtualmemory.png" alt="virtualmemory.png" />
-<p>Normally, the swap file is written to the boot partition. If you're running low on free memory there, you can deactivate the <span class="menu">Automatic swap management</span> and choose another mounted partition from the popup menu. The swap file size is set with the slider below.<br />
-If you often run into disk thrashing due to the virtual memory system swapping memory in and out, you can try to use a separate harddisk for you swap file to avoid I/O congestion. Simply another partition on the same harddisk with your system/data won't help. Upgrading your RAM is of course the most effective way to go...</p>
+<p>Як правило, файл підкачки записується на завантажувальний розділ. Якщо на ньому бракує вільного місця, Ви можете вимкнути опцію «Автоматичне обслуговування підкачки» і вибрати інший змонтований розділ зі спливаючого меню. Розмір файлу підкачки встановлюється за допомогою повзунка нижче.<br />Якщо Ви часто стикаєтеся з перевантаженням диска через те, що система віртуальної пам'яті підкачує сторінки з даними, можете спробувати використати окремий жорсткий диск для файлу підкачки, щоб уникнути перевантажень вводу/виводу. Просто ще один розділ на тому самому жорсткому диску з Вашою системою/даними не допоможе. У такому випадку, збільшення оперативної пам'яті буде найбільш ефективним виходом…</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="button">Типово (Defaults)</span></td><td> </td><td>Скинути всі налаштування до типових значень.</td></tr>
-<tr><td><span class="button">Повернути (Revert)</span></td><td> </td><td>Повернути ті налаштування що були до запуску аплету Віртуальна пам'ять (VirtualMemory).</td></tr>
+<tr><td><span class="button">Типові настройки</span></td><td> </td><td>повертає все до стандартних (типових) значень.</td></tr>
+<tr><td><span class="button">Відкат змін</span></td><td> </td><td>повертає настройки, які були встановлені до запуску VirtualMemory.</td></tr>
 </table>
 
 </div>
@@ -84,8 +83,8 @@ If you often run into disk thrashing due to the virtual memory system swapping m
 <!--
 <div class="nav">
 <div class="inner"><span>
- «  <a href="tracker.html">Tracker</a> 
-::  <a href="../preferences.html" class="uplink">Налаштування (Preferences)</a>
+ «  <a href="tracker.html">Tracker (Файловий менеджер)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences (Налаштування)</a>
 </span></div>
 </div>
 -->

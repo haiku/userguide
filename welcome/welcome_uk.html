@@ -12,6 +12,7 @@
  *		Stephan Aßmus <superstippi@gmx.de>
  * Translators:
  *		Humdinger
+ *		'
  *		totish
  *
 -->
@@ -24,7 +25,7 @@
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -60,86 +61,84 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Зміст</td></tr>
+<tr class="heading"><td>Індекс</td></tr>
 <tr class="index"><td>
-	<a href="#welcome">Welcome to Haiku!</a><br />
-	<a href="#system">Getting to know the system</a><br />
-	<a href="#bugreport">Beware of Bugs</a><br />
-	<a href="#update">Installing Haiku and updating</a><br />
-	<a href="#software">Installing new software</a><br />
-	<a href="#localized">A localized Haiku</a><br />
-	<a href="#wifi">Wifi in Haiku</a><br />
-	<a href="#api">Getting to know the API</a><br />
-	<a href="#contact">Getting in contact</a>
-</td></tr>
+        <a href="#welcome">Вітаємо в Haiku!</a><br />
+	<a href="#system">Знайомство з системою</a><br />
+	<a href="#bugreport">Ви не застраховані від «багів»</a><br />
+	<a href="#update">Інсталяція Haiku та оновлення</a><br />
+	<a href="#software">Інсталяція інших програм</a><br />
+	<a href="#localized">Локалізація Haiku</a><br />
+	<a href="#wifi">Wi-Fi в системі Haiku</a><br />
+	<a href="#api">Знайомство з  API</a><br />
+	<a href="#contact">Як зв'язатися з нами</a></td></tr>
 </table>
 
 <h1>
 <a id="welcome" name="welcome">Вітаємо в Haiku!</a></h1>
-<p>Thanks for checking out Haiku! This is our 8th public release. We hope to attract new developers to our project and give users a chance to check out Haiku. While this fourth <i>beta release</i> includes all major features planned for the final Haiku release, it still has bugs and a few rough edges that need further polishing. However, we think that this release is quite usable and hope it lets you discover Haiku's great potential and that you share our excitement.</p>
-<p>Відвідайте вебсайт нашого проекту <a hrf="https://www.haiku-os.org">Haiku-os.org</a> для ознайомлення з останніми новинами та оголошеннями.</p>
+<p>Дякуємо за Вашу увагу до системи Haiku! Це наш 8-й публічний реліз. Ми сподіваємося залучити нових розробників до нашого проекту та дати користувачам можливість перевірити Haiku. Хоча ця четверта <i>бета-версія</i> містить усі основні функції, заплановані для останнього випуску Haiku, у ній все ще є помилки та кілька невирішених питань, які потребують подальшого доопрацювання. Проте ми вважаємо, що цей випуск цілком придатний для використання, і сподіваємося, що він дозволить Вам відкрити великий потенціал Haiku та розділити наше захоплення.</p>
+<p>Відвідайте веб-сайт нашого проекту <a href="https://www.haiku-os.org">Haiku-os.org</a>, щоб отримати останні новини та оголошення.</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">Знайомство з системою</a></h2>
-<p>While the first release(s) of Haiku will be very much like the BeOS R5, the operating system it is reimplementing, there are many additions and improvements that were developed by the Haiku team over the years. So, if you're a returning BeOS user or are new user, have a look at these links:</p>
+<p>Хоча перші випуски Haiku дуже схожі на BeOS R5, операційну систему з якої вона походить, у ній є багато доповнень та покращень, які розроблялися командою Haiku протягом багатьох років. Отже, якщо Ви повернулися до BeOS або є новим користувачем, перегляньте ці посилання:</p>
 <table cellspacing="16" border="0">
-<tr><td align="center"><a href="uk/quicktour.html"><img src="images/quicktour_icon_96.png" /></a><p><a href="uk/quicktour.html">Haiku Quick Tour</a></p></td>
+<tr><td align="center"><a href="uk/quicktour.html"><img src="images/quicktour_icon_96.png" /></a><p><a href="uk/quicktour.html">Швидкий огляд Haiku</a></p></td>
 <td width="24"></td>
-<td align="center"><a href="../userguide/uk/contents.html"><img src="images/userguide_icon_96.png" /></a><p><a href="../userguide/uk/contents.html">Haiku User Guide</a></p></td></tr>
+<td align="center"><a href="../userguide/uk/contents.html"><img src="images/userguide_icon_96.png" /></a><p><a href="../userguide/uk/contents.html">Посібник користувача Haiku</a></p></td></tr>
 </table>
-<p>For more interactive help and support, become part of the <a href="https://www.haiku-os.org/community/" class="printurl">Haiku community</a> and join our forums and chat channel.</p>
+<p>Щоб отримати більше інтерактивної допомоги та підтримки, станьте частиною <a href="https://www.haiku-os.org/community/" class="printurl">Haiku community</a> та приєднуйтесь до наших форумів і чату.</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="bugreport" name="bugreport">Остерігайтесь помилок</a></h2>
-<p>We have been working hard to fix potentially critical bugs, however, being a beta release, there are bound to be some left undiscovered.</p>
-<div class="box-warning">We discourage using beta versions as a production system. Your data could be altered, mangled or downright destroyed. Keep up-to-date backups!</div>
+<a id="bugreport" name="bugreport">Ви не застраховані від «багів»</a></h2>
+<p>Ми наполегливо працювали над виправленням потенційно критичних помилок, однак, оскільки це бета-версія, деякі з них можуть залишитися невиявленими.</p>
+<div class="box-warning">Ми не рекомендуємо використовувати бета-версії у якості основної опереаційної системи. Ваші дані можуть бути змінені, спотворені або просто знищені. Зберігайте актуальні резервні копії! </div>
 
-<p>One of the main reasons for releasing a beta version is to attract more people to test the system and discover bugs or provide suggestions for future enhancements. Please file bugs and enhancements in our bug tracker after using its search function to avoid duplicates.</p>
+<p>Однією з основних причин випуску бета-версії є залучення більшої кількості людей для тестування системи та виявлення помилок або надання пропозицій щодо майбутніх удосконалень. Будь ласка, повідомляйте про помилки та вдосконалення в нашому багтрекері, попередньо скориставшись функцією пошуку, щоб уникнути повторювання.</p>
 <ul>
-	<li><a href="http://dev.haiku-os.org/wiki" class="printurl">Система відслідковування помилок у Haiku (Bug Tracker)</a></li>
-	<li><a href="uk/bugreports.html">Поради по повідомленнях про помилки</a></li>
+	<li><a href="http://dev.haiku-os.org/wiki" class="printurl">Система відстеження помилок Haiku</a></li>
+	<li><a href="uk/bugreports.html">Продуктивна робота з багтрекером</a></li>
 </ul>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="update" name="update">Installing Haiku and updating</a></h2>
-<p>If you haven't already, our online <a href="https://www.haiku-os.org/get-haiku/installation-guide/">Installation Guide</a> explains how to prepare a partition and install Haiku on your harddrive.</p>
-<p>Updating Haiku as well as third party packages is done with the application <a href="../userguide/uk/applications/softwareupdater.html">SoftwareUpdater</a>. When it's finished, reboot.<br />
-For more details, see the guide <a href="https://www.haiku-os.org/guides/daily-tasks/updating-system">Updating and downgrading your system</a> on our website.</p>
+<a id="update" name="update">Інсталяція Haiku та оновлення</a></h2>
+<p>Якщо Ви цього ще не зробили, наш <a href="https://www.haiku-os.org/get-haiku/installation-guide/">онлайн-посібник з Інсталяції</a> пояснює, як підготувати розділ і встановити Haiku на Ваш жорсткий диск.</p>
+<p>Оновлення Haiku, а також сторонніх пакетів виконується за допомогою програми <a href="../userguide/uk/applications/softwareupdater.html">SoftwareUpdater</a>. Після завершення перезавантажте систему.<br />
+Для більш детальної інформації дивіться посібник <a href="https://www.haiku-os.org/guides/daily-tasks/updating-system">Оновлення та пониження версії системи</a> на нашому сайті.</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="software" name="software">Встановлення додаткових програм</a></h2>
-<p>Most of the available software can be downloaded and installed with the application <a href="../userguide/uk/applications/haikudepot.html">HaikuDepot</a> that comes with Haiku.<br />
-Because of our binary and source compatibility, most BeOS applications run on Haiku. Many of those have been re-packaged for Haiku or still run unmodified. You'll find more information on installing new programs in the user guide's chapter on <a href="../userguide/uk/applications.html">Applications</a>.</p>
-<p>Існує декілька колекцій програмного забезпечення створених товариством. Дивись сторінку <a href="https://www.haiku-os.org/community/software">Сайти програмного забезпечення (Software Sites)</a> на нашому вебсайті.</p>
+<a id="software" name="software">Інсталяція іншого програмного забезпечення</a></h2>
+<p>Більшість доступного програмного забезпечення можна завантажити та встановити за допомогою менеджера пакетів <a href="../userguide/uk/applications/haikudepot.html">HaikuDepot</a>, який постачається разом із Haiku.<br />
+Завдяки сумісності наших двійкових файлів та вихідних кодів, більшість програм для BeOS працюють у Haiku. Багато з них було перепаковано для Haiku або все ще працюють без змін. Ви знайдете більше інформації про встановлення нових програм у розділі <a href="../userguide/uk/applications.html">Програми</a> посібника користувача.</p>
+<p>Існує кілька колекцій програмного забезпечення, створених спільнотою. Дивіться сторінку <a href="https://www.haiku-os.org/community/software">Сайти програмного забезпечення</a> на нашому веб-сайті.</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="localized" name="localized">A localized Haiku</a></h2>
-<p>Haiku has been translated to dozens of languages and supports a multitude of keymaps. When booting Haiku for the first time you can set language and keymap. These settings can be changed at any time with the <a href="../userguide/uk/preferences/locale.html">Locale</a> and <a href="../userguide/uk/preferences/keymap.html">Keymap</a> preferences.<br />
-The <a href="../userguide/uk/applications/haikudepot.html">HaikuDepot</a> application offers a number of input methods for Chinese, Japanese and Korean to download and install.</p>
+<a id="localized" name="localized">Локалізація Haiku</a></h2>
+<p>Haiku перекладено десятками мов і підтримує безліч розкладок клавіатури. Під час першого запуску Haiku Ви можете встановити мову та розкладку клавіатури. Ці настройки можна у будь-який час змінити за допомогою панелей налаштувань <a href="../userguide/uk/preferences/locale.html">Locale</a> і <a href="../userguide/uk/preferences/keymap.html">Keymap</a>.<br />
+Менеджер пакетів <a href="../userguide/uk/applications/haikudepot.html">HaikuDepot</a> пропонує декілька методів вводу для китайської, японської та корейської мов, які можна завантажити та встановити.</p>
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="software" name="wifi">Wifi в Haiku</a></h2>
-<p>Haiku підтримує бездротові мережі з шифруванням WPA/WPA2 або WEP та звичайно незахищені з'єднання. Через відмінності у політиці ліцензування деяких виробників апаратного забезпечення може знадобитися ручне встановлення прошивки. Детальнішу інформацію про підтримуване обладнання, встановлення прошивки та процес під'єднання до бездротової мережі можна отримати у Настанові користувачеві <a href="../userguide/uk/workshop-wlan.html">Семінар: Бездротові мережі</a>.</p> 
+<a id="software" name="wifi">Wi-Fi в системі Haiku</a></h2>
+<p>Haiku підтримує безпровідні мережі з шифруванням WPA/WPA2 або WEP та звичайно незахищені з'єднання. і, звичайно, відкриті незашифровані з’єднання. Через різні політики ліцензування різних постачальників апаратного забезпечення може знадобитися процес інсталяції мікропрограми вручну. Ви знайдете більше інформації про підтримуване обладнання, встановлення мікропрограми та як під'єднатися до безпровідної мережі у розділі <a href="../userguide/uk/workshop-wlan.html">Майстер‑клас: Безпровідні мережі</a> посібника користувача.</p> 
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="api" name="api">Знайомство з  API</a></h2>
-<p>Так як Haiku є відтворенням,  API її  таке ж як у BeOS R5 (з деякими виключеннями), Тому документація у  Be Book все ще актуальна. Завдяки компанії ACCESS, котрій належать права на інтелектуальну власність Be Inc., нам дозволено поширювати Be Book.<br />
-Відхилення від API BeOS та Haiku, конкретні доповнення зібрані в Haiku Book.</p>
+<p>Оскільки Haiku є повторною оновленою реалізацією, API залишається таким самим, як і для BeOS R5 (з деякими доповненнями). Тому документація у Be Book все ще залишається актуальним інформаційним ресурсом. Завдяки ACCESS CO., LTD., яка володіє правами на колишню власність Be Inc., нам дозволено розповсюджувати копію книги Be Book.<br />
+Відхилення від BeOS API та специфічні для Haiku доповнення зібрано у Haiku Book.</p>
 
-<p>Існують інші ресурси, що допоможуть почати вивчення:</p>
+<p>Існує кілька ресурсів, які допоможуть Вам розпочати роботу:</p>
 <ul>
-	<li><a href="https://www.haiku-os.org/development" class="printurl">Start developing for Haiku</a></li>
-	<li><a href="http://cgit.haiku-os.org/" class="printurl">Браузер вихідного коду</a></li>
+	<li><a href="http://www.haiku-os.org/development/faq" class="printurl">FAQ для розробників</a></li>
+	<li><a href="http://cgit.haiku-os.org/" class="printurl">Репозитарії програмного коду</a></li>
 	<li><a href="http://www.haiku-os.org/legacy-docs/bebook/" class="printurl"> Be Book</a></li>
 	<li><a href="https://www.haiku-os.org/docs/api/" class="printurl">The Haiku Book</a></li>
 	<li><a href="http://www.haiku-os.org/legacy-docs/benewsletter/" class="printurl">Архів Be Newsletter</a></li>
@@ -147,15 +146,16 @@ The <a href="../userguide/uk/applications/haikudepot.html">HaikuDepot</a> applic
 
 <h2>
 <a href="#"><img src="images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="contact" name="contact">Бажаєте спілкування</a></h2>
-<p>Ви можете звязатися з розробниками, іншими користувачами, приєднатися до обговорення на IRC каналі(<a href="https://webchat.oftc.net/?channels=haiku">#haiku</a> у вебчаті) , нашому форумі або в списках розсилки. Коли маса людей спілкується разом необхідно дотримуватись деяких правил для збереження ефективності спілкування. Почитайте <a href="https://www.haiku-os.org/community/ml/etiquette">Етикет списків розсилки</a>.</p>
+<a id="contact" name="contact">Як зв'язатися з нами</a></h2>
+<p>Спілкуйтеся з іншими розробниками та користувачами і долучайтеся до дискусій на IRC-каналі (<a href="https://webchat.oftc.net/?channels=haiku">#haiku</a> у веб-чаті), на наших форумах або через списки розсилки.<br />
+Коли багато різних людей збираються разом, необхідно встановити правила, щоб спілкування було ефективним. Будь ласка, поважайте наш <a href="https://www.haiku-os.org/community/ml/etiquette">Етикет списків розсилки</a>.</p>
 <ul>
-	<li><a href="http://www.haiku-os.org/community/irc" class="printurl">IRC канали</a></li>
+	<li><a href="http://www.haiku-os.org/community/irc" class="printurl">Канали IRC-мережі</a></li>
 	<li><a href="http://www.haiku-os.org/forum" class="printurl">Форуми</a></li>
-	<li><a href="https://www.freelists.org/list/haiku" class="printurl">General mailing list</a></li>
-	<li><a href="https://www.freelists.org/list/haiku-development" class="printurl">Development mailing list concerning Haiku itself</a></li>
-	<li><a href="https://www.freelists.org/list/haiku-3rdparty-dev" class="printurl">Mailing list for 3rd party application programmers</a></li>
-	<li><a href="http://www.haiku-os.org/community/ml" class="printurl">Огляд усіх списків розсилки</a></li>
+	<li><a href="http://www.freelists.org/list/haiku" class="printurl">Загальний список розсилки</a></li>
+	<li><a href="http://www.freelists.org/list/haiku-development" class="printurl">Список розсилки розробників Haiku</a></li>
+	<li><a href="http://www.freelists.org/list/haiku-3rdparty-dev" class="printurl">Список розсилки сторонніх розробників</a></li>
+	<li><a href="http://www.haiku-os.org/community/ml" class="printurl">Усі списки розсилки</a></li>
 </ul>
 
 </div>

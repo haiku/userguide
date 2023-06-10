@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">本节的翻译还未完成。在未完成之前，所有的未完成部分都将使用英语原文。</div>
 
 <h1>Attributes（属性）</h1>
 
@@ -86,11 +87,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">终端中的属性</a></h2>
 <p>如果你喜欢使用命令行，或者计划使用脚本来处理较多的文件，那么在 Terminal 中有一些可用于控制属性的命令。</p>
+<p> 更多有关这些命令和它们的参数选项的信息，您可以通过键入命令名，然后辅以 "<span class="cli">-h</span>" 或者 "<span class="cli">--help</span>" 选项来获取。</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> 命令列出了文件的属性，但不显示属性内容。</p>
-<pre>usage: listattr 'filename' ['filename' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>上面我们的截图中的例子：</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
 File: Clara Botters
@@ -151,9 +153,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> 命令用于从文件中完全移除其某一属性。</p>
 
-<pre>usage: rmattr [-p] attr filename1 [filename2...]
-         'attr' is the name of an attribute of the file
-         If '-p' is specified, 'attr' is regarded as a pattern.</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>即使不填写 "Fax" 属性，在实际应用中也已经足够了；所以你可以通过键入下面的命令来从 Clara 文件中完全删除它：</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -166,7 +166,6 @@ Clara Botters : string : Whelton</pre>
 <p>如果您希望完全拷贝文件的属性及其数据文件，你可以在命令后添加 "<span class="cli">-d</span>" 或者 "<span class="cli">--data</span>" 来完成。</p>
 
 <p><br /></p>
-<p> 更多有关这些命令和它们的参数选项的信息，您可以通过键入命令名，然后辅以 "<span class="cli">-h</span>" 或者 "<span class="cli">--help</span>" 选项来获取。</p>
 
 </div>
 </div>

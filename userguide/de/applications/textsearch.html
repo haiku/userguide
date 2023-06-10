@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		taos
  *
@@ -70,11 +71,11 @@
 <tr><td>Einstellungen:</td><td></td><td><span class="path">~/config/settings/TextSearch</span></td></tr>
 </table>
 <p><br /></p>
-<p>TextSearch sucht nach Zeichenfolgen in Textdateien. Normalerweise wählt man dazu die Dateien oder Ordner aus, die durchsucht werden sollen und wählt TextSearch aus Trackers <a href="../tracker-add-ons.html">Add-on</a> Kontextmenü.</p>
+<p>TextSearch sucht nach Zeichenfolgen in Textdateien. Normalerweise wählt man dazu die Dateien oder Ordner aus, die durchsucht werden sollen, und wählt TextSearch aus Trackers <a href="../tracker-add-ons.html">Add-on</a> Kontextmenü.</p>
 
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
-<p>Im Textfeld oben wird der Suchbegriff eingegeben und die Suche per <span class="key">RETURN</span> oder Klick auf <span class="button">Suchen</span> gestartet. Ist die Option <span class="menu">Treffer-Zeilen anzeigen</span> aktiviert, werden die Suchergebnisse automatisch aufgeklappt und zeigen dann die Zeilennummern der Fundstellen in den Dateien, die den Suchbegriff enthalten.</p>
+<p>Im Textfeld wird oben der Suchbegriff eingegeben und die Suche per <span class="key">RETURN</span> oder Klick auf <span class="button">Suchen</span> gestartet. Ist die Option <span class="menu">Treffer-Zeilen anzeigen</span> aktiviert, werden die Suchergebnisse automatisch aufgeklappt und zeigen dann die Zeilennummern der Fundstellen in den Dateien, die den Suchbegriff enthalten.</p>
 
 <p>Nur ein paar kurze Erläuterungen zu den ansonsten sich selbst erklärenden Menüpunkten:</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
@@ -87,10 +88,10 @@
 <tr><td><span class="menu">Dateien im Tracker zeigen</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>Öffnet die Speicherorte der gerade ausgewählten Dateien im Tracker.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Text in Ablage kopieren</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>Kopiert die momentane Auswahl in die Ablage.</td></tr>
 <tr><td colspan="5"><h3>Einstellungen</h3></td></tr>
-<tr><td colspan="3" class="onelinetop"><span class="menu">Mit Punkt beginnende Ordner ignorieren</span></td><td> </td><td>Nützlich wenn man sich in einer Unix-Umgebung bewegt, in der Verwaltungsdateien oft in "<tt>.Ordner</tt>" versteckt werden. Sourcecode Versionierungssysteme wie SVN und CVS sind Beispiele für Anwendungen, die das so machen und auch unter Haiku weit verbreitet sind.</td></tr>
+<tr><td colspan="3" class="onelinetop"><span class="menu">Mit Punkt beginnende Ordner ignorieren</span></td><td> </td><td>Nützlich, wenn man sich in einer Unix-Umgebung bewegt, in der Verwaltungsdateien oft in "<tt>.Ordner</tt>" versteckt werden. Sourcecode-Versionierungssysteme, wie SVN und CVS, sind Beispiele für Anwendungen, die das so machen und auch unter Haiku weit verbreitet sind.</td></tr>
 <tr><td colspan="3"><span class="menu">Regulärer Ausdruck</span></td><td> </td><td>TextSearch benutzt das Konsolenprogramm <span class="cli">grep</span>. Dazu müssen spezielle Zeichen wie <tt>'"*\$?!</tt> und Leerzeichen mit einem <tt>\</tt> "escaped" werden. Aktiviert man diese Option, muss man das selbst machen. Im Gegenzug stehen einem die mächtigen Möglichkeiten von <a href="http://de.wikipedia.org/wiki/Regul%C3%A4re_Ausdr%C3%BCcke" class="external free" title="Reguläre Ausdrücke" rel="nofollow">Regulären Ausdrücken</a> zur Verfügung.</td></tr>
 <tr><td colspan="3"><span class="menu">Nur Textdateien</span></td><td> </td><td>TextSearch ist momentan nur zur Suche von Begriffen in reinen Textdateien sinnvoll zu gebrauchen. Deaktiviert man diese Option, werden alle Arten von Dateien durchsucht.</td></tr>
-<tr><td colspan="3"><span class="menu">Öffne Dateien im Code-Editor</span></td><td> </td><td>Erzwingt das Öffnen im bevorzugten Code-Editor (der für text/x-source-code eingestellt ist). Ansonsten wird die Datei in der für diesen Dateityp gesetzten Anwendung geöffnet. Praktisch wenn z. B. HTML Dateien bearbeitet werden sollen, die sonst den Browser starten.</td></tr>
+<tr><td colspan="3"><span class="menu">Öffne Dateien im Code-Editor</span></td><td> </td><td>Erzwingt das Öffnen im bevorzugten Code-Editor, der für text/x-source-code eingestellt ist. Ansonsten wird die Datei in der für diesen Dateityp gesetzten Anwendung geöffnet. Das ist praktisch, wenn zum Beispiel HTML-Dateien bearbeitet werden sollen, die sonst im Browser gestartet werden.</td></tr>
 <tr><td colspan="5"><h3>Historie</h3></td></tr>
 <tr><td colspan="4"></td><td>Enthält kürzlich benutzte Suchbegriffe.</td></tr>
 <tr><td colspan="5"><h3>Kodierung</h3></td></tr>

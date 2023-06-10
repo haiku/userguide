@@ -10,20 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Пошук тексту (TextSearch)</title>
+	<title>TextSearch (Пошук тексту)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -53,59 +54,57 @@
 <li><a href="../../jp/applications/textsearch.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="terminal.html">Термінал (Terminal)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="tv.html">ТБ (TV)</a>  »
+ «  <a href="terminal.html">Terminal (Термінал)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="tv.html">TV (Телебачення)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/apps-images/textsearch-icon_64.png" alt="textsearch-icon_64.png" width="64" height="64" />Пошук тексту (TextSearch)</h2>
+<h2><img src="../../images/apps-images/textsearch-icon_64.png" alt="textsearch-icon_64.png" width="64" height="64" />   TextSearch (Пошук тексту)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><i>Немає запису, переважно запускається як доповнення Tracker</i></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><i>У меню не входить, запускається як доповнення Tracker</i></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/TextSearch</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/TextSearch</span></td></tr>
 </table>
 <p><br /></p>
-<p>Пошук тексту (TextSearch) шукає рядок в текстових файлах. Як правило, він викликається з контекстного меню <a href="../tracker-add-ons.html">Доповнення Tracker'а (Tracker's Add-on)</a> при виборі файлів або тек які Ви бажаєте відшукати.</p>
+<p>TextSearch шукає рядок тексту у текстових файлах. Зазвичай він викликається з контекстного меню <a href="../tracker-add-ons.html">Доповнення</a> файлового менеджера Tracker під час вибору файлів або папок, у яких потрібно виконати пошук.</p>
 
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
-<p>Увійдіть у рядок пошуку в текстовому полі вгорі і натисніть клавішу <span class="key">RETURN</span> або клікніть по кнопці <span class="button">Пошук (Search)</span> для початку. Якщо меню <span class="menu">Показати стрічки (Show lines)</span> активовано, хіти автоматично розширяться, щоб показати стрічки файлу, що містить рядок який Ви шукаєте. </p>
+<p>Ви вводите текст, який треба знайти,  у текстовому полі зверху і натискаєте клавішу <span class="key">Enter</span> або кнопку <span class="button">Пошук</span>, щоб почати пошук. Якщо опція <span class="menu">Показати рядки</span> увімкнена, результати пошуку автоматично розгортаються, щоб показати знайдений текст разом з рядками у файлах. </p>
 
-<p>Всього лише кілька слів про деякі з пунктів меню решта говорять самі за себе:</p>
+<p>Лише кілька слів про деякі з пунктів меню,  інші не потребують пояснень:</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
-<tr><td colspan="5"><h3>Меню Файл (File)</h3></td></tr>
-<tr><td class="onelinetop"><span class="menu">Нове вікно (New window)</span></td><td></td><td><span class="key">ALT</span> <span class="key">N</span></td><td> </td><td>Відкриває нове вікно, в якому можна ввести інший рядок для пошуку серед тих самих файлів / тек.
+<tr><td colspan="5"><h3>Меню <span class="menu">Файл</span></h3></td></tr>
+<tr><td class="onelinetop"><span class="menu">Нове вікно</span></td><td></td><td><span class="key">ALT</span> <span class="key">N</span></td><td> </td><td>Відкриває нове вікно програми, де Ви можете ввести інший текст пошукового запиту і повторити пошук у вже вибраних Вами, тих самих файлах/папках.
 </td></tr>
-<tr><td><span class="menu">Встановити мету... (Set target...)</span></td><td></td><td><span class="key">ALT</span> <span class="key">F</span></td><td></td><td>Lets you choose a new set of files and folders to search through. Alternatively you can drag and drop files/folders into the window.</td></tr>
-<tr><td colspan="5"><h3>Меню Дія (Action)
-</h3></td></tr>
-<tr><td><span class="menu">Урізати вибір (Trim selection)</span></td><td></td><td><span class="key">ALT</span> <span class="key">T</span></td><td> </td><td>Видаляє всі записи зі списку, які не вибрані в даний момент.</td></tr>
-<tr><td><span class="menu">Почати вибір (Open selection)</span></td><td></td><td><span class="key">ALT</span> <span class="key">O</span></td><td></td><td>Відкриває вибрані файли у бажаному додатку (так само як при двокліку мишкою). Якщо це текстовий редактор, що підтримує таке (як от Pe), Ви можете перейти до точної стрічки що була задана у рядку пошуку.</td></tr>
-<tr><td><span class="menu">Show files in Tracker</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>Відкриє розташування поточно вибраних файлів у Tracker'і.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Копіювати текст до буферу обміну (Copy text to clipboard)</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>Копіюватиме поточно вибране до буферу обміну.</td></tr>
-<tr><td colspan="5"><h3> Меню Налаштування (Settings)</h3></td></tr>
-<tr><td colspan="3" class="onelinetop"><span class="menu">Пропустити теки що починаються з крапки (Skip folders starting with a dot)</span></td><td> </td><td>Це корисно при роботі в "юніксовому" середовищі, де часто адміністративні файли приховані всередині "<tt>.тек/</tt>". Системи керування версіями вихідних текстів, такі як SVN і CVS є прикладами додатків, що використовують їх, вони також досить поширені в Haiku.</td></tr>
-<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
-<tr><td colspan="3"><span class="menu">Тільки текстові файли (Text files only)</span></td><td> </td><td>Пошук тексту (TextSearch) в цьому випадку використовуватиметься тільки для пошуку рядків в звичайних текстових файлах. Деактивація параметру дозволить переглядати будь-який файл будь-коли.</td></tr>
-<tr><td colspan="3"><span class="menu">Open files in code editor</span></td><td> </td><td>Forces files to be opened in the preferred code editor (that handles text/x-source-code). Otherwise a file will be opened in whatever app is set for its filetype. Useful, for example, when editing HTML files that normally would open in your browser.</td></tr>
-<tr><td colspan="5"><h3>Меню Історія (History)</h3></td></tr>
-<tr><td colspan="4"></td><td>Містить стрічки пошуку що використовувались недавно.</td></tr>
-<tr><td colspan="5"><h3>Меню Кодування (Encoding)</h3></td></tr>
-<tr><td colspan="4"></td><td>Дозволяє при потребі вибирати інше кодування.</td></tr>
+<tr><td><span class="menu">Вибрати цільовий об'єкт … </span></td><td></td><td><span class="key">ALT</span> <span class="key">F</span></td><td></td><td>Відкриває діалог для вибору файлів або папок, у яких потрібно виконати пошук. Крім того, Ви можете перетягнути файли/папки у вікно програми.</td></tr>
+<tr><td colspan="5"><h3>Меню <span class="menu">Дії</span></h3></td></tr>
+<tr><td><span class="menu">Обмежитись вибраним</span></td><td></td><td><span class="key">ALT</span> <span class="key">T</span></td><td> </td><td>Видаляє зі списку всі записи, які наразі не вибрано.</td></tr>
+<tr><td><span class="menu">Відкрити вибране</span></td><td></td><td><span class="key">ALT</span> <span class="key">O</span></td><td></td><td>Відкриває вибрані у вікні результатів пошуку файли в асоційованій програмі (те саме, що і подвійний клік миші). Якщо це текстовий редактор і він підтримує цю функцію (наприклад, Pe), Ви можете перейти до того рядка, в якому було знайдено текст пошукового запиту.</td></tr>
+<tr><td><span class="menu">Показати файли у Tracker</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>Відкриває папки з вибраними у вікні результатів пошуку файлами у файловому менеджері Tracker.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Копіювати текст до буферу обміну</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>Робить копію поточного виділення у буфері обміну.</td></tr>
+<tr><td colspan="5"><h3>Меню <span class="menu">Налаштування</span></h3></td></tr>
+<tr><td colspan="3" class="onelinetop"><span class="menu">Пропустити папки що починаються з крапки</span></td><td> </td><td>Це корисно при роботі у середовищі «unixy», де часто адміністративні файли приховані всередині «<tt>.folders/</tt>». Системи контролю версій вихідних кодів, такі як SVN та CVS, є прикладами програм, що використовують цю можливість а також широко застосовуються у Haiku.</td></tr>
+<tr><td colspan="3"><span class="menu">Регулярний вираз</span></td><td> </td><td>TextSearch використовує інструмент командного рядка <span class="cli">grep</span>. Для його роботи необхідно, щоб спеціальні символи, такі як <tt>'"*\$?!</tt> та пробіл, були екрановані символом <tt>\</tt>. Активація цього параметра означає, що Вам доведеться робити це самостійно, але натомість Ви отримаєте можливість використовувати <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">регулярні вирази</a>.</td></tr>
+<tr><td colspan="3"><span class="menu">Тільки текстові файли</span></td><td> </td><td>Пошук тексту здійснюється лише у звичайних текстових файлах. Якщо вимкнути цей параметр, програма шукатиме у файлах будь-якого типу.</td></tr>
+<tr><td colspan="3"><span class="menu">Відкривати файли в редакторі коду</span></td><td> </td><td>Дозволяє відкривати файли у вибраному редакторі коду (який обробляє сигнатуру text/x-source-code). Інакше файл буде відкритий у асоційованій для цього типу файлу програмі. Корисно, наприклад, при редагуванні HTML-файлів, які зазвичай відкриваються у браузері.</td></tr>
+<tr><td colspan="5"><h3>Меню <span class="menu">Історія</span></h3></td></tr>
+<tr><td colspan="4"></td><td>Містить нещодавно використані рядки пошукових запитів.</td></tr>
+<tr><td colspan="5"><h3>Меню <span class="menu">Кодування</span></h3></td></tr>
+<tr><td colspan="4"></td><td>Дозволяє вибирати різні кодування символів, при необхідності.</td></tr>
 </table>
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="terminal.html">Термінал (Terminal)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="tv.html">ТБ (TV)</a>  »
+ «  <a href="terminal.html">Terminal (Термінал)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="tv.html">TV (Телебачення)</a>  »
 </span></div>
 </div>
 

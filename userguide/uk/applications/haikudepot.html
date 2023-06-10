@@ -10,19 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  *		Andrew Lindesay <apl@lindesay.co.nz>
+ * Translators:
+ *		'
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>HaikuDepot</title>
+	<title>HaikuDepot (Менеджер пакетів)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -52,137 +54,137 @@
 <li><a href="../../jp/applications/haikudepot.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="expander.html">Expander</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="icon-o-matic.html">Icon-O-Matic</a>  »
+ «  <a href="expander.html">Expander (Екстрактор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="icon-o-matic.html">Icon-O-Matic (Редактор значків)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Зміст</td></tr>
-<tr class="index"><td><a href="#filter">The Filter</a><br />
-                <a href="#list">The List</a><br />
-                <a href="#info">The Info Area</a><br />
-                <a href="#menu">HaikuDepot and Show menu</a><br />
-                <a href="#account">Creating a User Account</a><br />
-                <a href="#rating">Rating and Commenting</a><br />
-                <a href="#logs">Diagnostic Logs</a><br />
-                <a href="#tips">Tips</a><br />
+<tr class="heading"><td>Індекс</td></tr>
+<tr class="index"><td><a href="#filter">Фільтр</a><br />
+                <a href="#list">Список</a><br />
+                <a href="#info">Розділ інформації</a><br />
+                <a href="#menu">Меню HaikuDepot і Показати</a><br />
+                <a href="#account">Створення облікового запису</a><br />
+                <a href="#rating">Оцінювання і коментування</a><br />
+                <a href="#logs">Журнали діагностики</a><br />
+                <a href="#tips">Корисні поради</a><br />
 </td></tr>
 </table>
 
-<h2><img src="../../images/apps-images/haikudepot-icon_64.png" alt="haikudepot-icon_64.png" width="64" height="64" />HaikuDepot</h2>
+<h2><img src="../../images/apps-images/haikudepot-icon_64.png" alt="haikudepot-icon_64.png" width="64" height="64" />   HaikuDepot (Менеджер пакетів)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/HaikuDepot</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/HaikuDepot/main_settings</span><br />
-<span class="path">~/config/cache/HaikuDepot/</span> - Cached icons, screenshots, descriptions etc.</td></tr>
+<span class="path">~/config/cache/HaikuDepot/</span> – кеш значків, скриншотів, описів та інших елементів</td></tr>
 </table>
 <p><br /></p>
-<p>HaikuDepot is the central application when it comes to managing your software packages. With it you can browse and search through package repositories and install and uninstall packages. By default, HaikuDepot starts up with a list of "<i>Featured packages</i>", software that's deemed interesting to many users.</p>
+<p>HaikuDepot є центральною програмою для управління пакетами програмного забезпечення. За допомогою нього Ви можете переглядати та шукати у репозитаріях пакетів, встановлювати та видаляти пакунки. За замовчуванням HaikuDepot запускається зі списком <span class="menu">Рекомендовані пакети</span>, програмного забезпечення, яке вважається цікавим для багатьох користувачів.</p>
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
-<p>The second tab shows <span class="menu">All packages</span>, the display changes to smaller icons and more information arranged in columns:</p>
+<p>На другій вкладці показано список <span class="menu">Усі пакети</span>; відображення значків змінюється на менше, у стовпчиках надається більше інформації:</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="filter" name="filter">The Filter</a></h2>
-<p>At the top we find a few means to filter the list of available packages below:</p>
+<a id="filter" name="filter">Фільтр</a></h2>
+<p>У верхній частині вікна програми Ви бачите декілька елементів управління  фільтрами списку доступних пакетів:</p>
 <ul>
-<li><p>The <span class="menu">Category</span> pop-up menu lets you limit the list to individual categories like "<i>Audio</i>" or "<i>Games</i>".</p></li>
-<li><p>The <span class="menu">Search terms</span> text field filters the list to those packages that have all the entered (space-delimited) strings in their name or description.</p></li>
-<li><p>The <span class="menu">Repositories</span> menu of the menu bar determines which repos are being queried. "<i>Local</i>" packages are the ones that were installed from somewhere other than an online repo; maybe from a USB thumb drive or downloaded from some website or a package that you've built yourself.</p></li>
+<li><p>Список який розкривається <span class="menu">Категорія</span> дозволяє обмежити список пакетів окремими категоріями, наприклад, «<i>Audio</i>» або «<i>Games</i>».</p></li>
+<li><p>Текстове поле <span class="menu">Умови пошуку</span> фільтрує список пакетів таким чином, що у списку відображаються тільки пакети, у назві чи описі яких є усі введені пошукові рядки (розділені пробілами).</p></li>
+<li><p>Меню <span class="menu">Репозитарії</span> на панелі меню визначає, з яких репозитаріїв програма отримує інформацію про пакети і самі пакети.<br />
+«<i>Локальні</i>» пакети – це пакети, які були встановлені не з онлайн-репозитарію; можливо, з USB-накопичувача або завантажені з якогось веб-сайту чи пакета, який Ви створили самостійно.</p></li>
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="list" name="list">The List</a></h2>
-<p>Like in any Tracker window, you can choose from a context menu which columns to display by right-clicking the column heading. A left-click sorts the list according to that column. Of course, you can rearrange the columns by dragging them to a new position.</p>
-<p>The <span class="menu">Date</span> column shows when a packge was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
-<p>The <span class="menu">Status</span> column of a package can have one of several states:</p>
+<a id="list" name="list">Список</a></h2>
+<p>Як і в будь-якому вікні Tracker, Ви можете вибрати у контекстному меню, які стовпці відображати, зробивши правий клік миші на заголовку стовпця. Лівий клік миші сортує список відповідно до цього стовпця. Звичайно, Ви можете змінити порядок стовпців, перетягнувши їх на нове місце.</p>
+<p>У стовпці <span class="menu">Дата</span> показано, коли пакет було додано до репозитарію або коли він оновлювався. Сортуйте за цим стовпчиком, щоб побачити нові або оновлені пакети у верхній частині списку.</p>
+<p>Стовпець <span class="menu">Стан</span> пакета може мати одне із декількох значень:</p>
 <ul>
-<li><p><span class="menu">Active</span>: The package is currently installed and ready to be used.</p></li>
-<li><p><span class="menu">Available</span>: The package exists in that repository and can be downloaded and installed. If there are any dependencies on other packages, you'll be informed of that while installing and get the choice of downloading/installing all that's necessary.</p></li>
-<li><p><span class="menu">Pending / %</span>: <i>Pending</i> is shown for a package that is queued for download/installation. While a package is downloaded, the progress is shown as percentage.</p></li>
+<li><p><span class="menu">Активний</span>: Пакет встановлений і готовий до використання.</p></li>
+<li><p><span class="menu">Доступний</span>: Пакет існує у цьому репозитарії, його можна завантажити і встановити. Якщо пакет залежить від інших пакетів, Ви будете проінформовані про це під час встановлення і матимете можливість завантажити/встановити все необхідне.</p></li>
+<li><p><span class="menu">Очікування / %</span>: «<i>Очікування</i>» інформує про пакети, які стоять у черзі на завантаження/інсталяцію. Під час завантаження пакета прогрес відображається у відсотках.</p></li>
 </ul>
-<p>The date column shows when the server system recorded the specific version of the package.  Owing to possible delays in the publishing process, this date may not be entirely accurate.</p>
-<p>You can grab the dotted line between the packages list and the info area to vertically resize the packages list.</p>
+<p>Стовпець дати показує, коли система сервера записала конкретну версію пакета.  Через можливі затримки в процесі публікації ця дата може бути не зовсім точною.</p>
+<p>Потягнувши за експандер у вігляді горизонтальної пунктирної лінії між списком пакетів і областю інформації, Ви можете змінити розмір області відображення списку пакетів.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="info" name="info">The Info Area</a></h2>
-<p>At the bottom is an area that displays information on the package that is currently selected in the list above it.<br />
-To the right of package name, author, rating and version is a button, that – depending on the current state of the package – lets you <span class="button">Install</span> or <span class="button">Uninstall</span> it. If a package is already installed, you'll find an additional button there to <span class="button">Open</span> the application.</p>
-<p>Below are four tabs: About, Ratings, Changelog and Contents.</p>
+<a id="info" name="info">Розділ інформації</a></h2>
+<p>Нижню частину екрана займає область, де відображається інформація про пакет, який наразі вибрано у списку над нею.<br />
+Праворуч від назви пакета, автора, рейтингу та версії є кнопка, яка – залежно від поточного стану пакета – дозволяє провести  <span class="button">Інсталяцію</span> або <span class="button">Деінсталяцію</span> цього пакета. Якщо пакет вже інстальовано, Ви знайдете там додаткову кнопку <span class="button">Відкрити</span> програму.</p>
+<p>Нижче наведено чотири вкладки: «<i>Інфо про пакет</i>», «<i>Оцінки</i>», «<i>Журнал змін</i>» та «<i>Вміст пакета</i>».</p>
 <ul>
-<li><p _translation_id="5252"><span class="menu">About</span></p>
-<p _translation_id="5253">The first tab has a detailed description of the package, as well as screenshots and a contact address and URL of the team that maintains the packaged software, if available. Clicking the screenshot thumbnail will open it full-size in a new window</p></li>
-<li><p _translation_id="5254"><span class="menu">Ratings</span></p>
-<p _translation_id="5255">The second tab shows ratings and comments of users, if available.</p>
+<li><p _translation_id="5252"><span class="menu">Інфо про пакет</span></p>
+<p _translation_id="5253">На першій вкладці міститься детальний опис пакета, а також скриншоти, контактна адреса та URL-адреса команди, яка підтримує пакет, якщо такі є. Натиснувши на мініатюру скріншоту, Ви відкриєте його у повному розмірі у новому вікні</p></li>
+<li><p _translation_id="5254"><span class="menu">Оцінки</span></p>
+<p _translation_id="5255">На другій вкладці відображаються оцінки та коментарі користувачів, якщо такі є.</p>
 <img src="../images/apps-images/haikudepot-rating-tab.png" alt="haikudepot-rating-tab.png" />
-<p _translation_id="5268">To the left is a statistic, showing the number of stars (1 to 5) the package got from how many users.<br />
-In the middle are user comments with their nickname, the number of stars they gave the package and which version of the package they were rating or commenting on. You'll find more on how to rate a package yourself <a href="#rating">further down</a>.<br />
+<p _translation_id="5268">Ліворуч – статистика, яка показує кількість зірок (від 1 до 5), які отримав пакет і від якої кількості користувачів.<br />
+Посередині – коментарі користувачів із зазначенням їхніх нікнеймів, кількості зірок, які вони поставили пакету, та версії пакету, яку вони оцінювали або коментували. Нижче Ви знайдете більше інформації про те, як оцінити пакет <a href="#rating">самостійно</a>.<br />
 <!--  With the little thumb up/down icons to the right, you can show your approval or disapproval with a certain comment.
 -->
 </p></li>
-<li><p _translation_id="5257"><span class="menu">Changelog</span></p>
-<p _translation_id="5258">Here you find a detailed history of all the  versions of the package that have been released so far, if the maintainer of the package  provides that information.</p></li>
-<li><p><span class="menu">Contents</span></p>
-<p>The last tab shows all the files and folders a package contains. This only works for already downloaded packages.</p></li>
+<li><p _translation_id="5257"><span class="menu">Журнал змін</span></p>
+<p _translation_id="5258">Тут Ви знайдете детальну історію усіх версій пакета, які було випущено до цього часу, якщо той хто супроводжує пакет надає таку інформацію.</p></li>
+<li><p><span class="menu">Вміст пакета</span></p>
+<p>Остання вкладка показує усі файли та папки, які містить пакет. Це працює лише для вже завантажених пакетів.</p></li>
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">HaikuDepot and Show menu</a></h2>
-<p>In the <span class="menu">HaikuDepot</span> menu at the top of the window, you'll find an item to <span class="menu">Refresh repositories</span>. This will request an up-to-date list of all available packages from the repositories.<br />
-The second item is to <span class="menu">Manage repositories...</span>. It opens the <a href="../preferences/repositories.html">Repositories</a> preferences, to add/remove or disable and enable repositories.<br />
-<span class="menu">Check for updates...</span> opens the <a href="../apps/softwareupdater.html">SoftwareUpdater</a> to search and install updated packages.<br />
-<span class="menu">Settings...</span> opens a window with the currently only option: <span class="menu">Share anonymous usage data with HaikuDepotServer</span>. The data is used to, for example, increase a counter on how often a package is viewed and installed, which then can determine if a package is promoted to the "Featured packages" list.</p>
-<p>Under <span class="menu">Show</span> you can choose to also display <span class="menu">Develop packages</span> and <span class="menu">Source packages</span> in the packages list. For the normal user those are of no interest and would only clutter the list. They are important, however, for people who need the libraries, headers etc. of a package to develop and compile programs depending on them.</p>
-<p>Of more interest are the options to only show <span class="menu">Available packages</span> and <span class="menu">Installed packages</span>.</p>
+<a id="menu" name="menu">Меню HaikuDepot і Показати</a></h2>
+<p>У меню <span class="menu">HaikuDepot</span> головного меню програми Ви знайдете пункт <span class="menu">Оновити репозитарії</span>. За допомогою цього пункту виконується запит на отримання актуального списку усіх доступних пакетів з підключених репозитаріїв.<br />
+Другий пункт – <span class="menu">Управління репозитаріями…</span>. Він відкриває панель налаштувань <a href="../preferences/repositories.html">Repositories</a>, для додавання/видалення або під'єднання/від'єднання репозитаріїв.<br />
+<span class="menu">Перевірити на обнови…</span> запускає програму <a href="../apps/softwareupdater.html">SoftwareUpdater</a> для пошуку оновлених пакетів та їх інсталяції.<br />
+<span class="menu">Налаштування…</span> відкриває вікно з єдиною наразі опцією: <span class="menu">Надавати анонімні дані про використання до HaikuDepotServer</span>. Ці дані використовуються, наприклад, для збільшення лічильника кількості переглядів та інсталяцій пакета, що потім може вплинути на перехід пакета до списку «<i>Рекомендовані пакети</i>».</p>
+<p>У меню <span class="menu">Показати</span> Ви можете вибрати, щоб у списку пакетів також були показані <span class="menu">Пакети розробника</span> та <span class="menu">Пакети з вихідним кодом</span>. Для звичайного користувача вони не становлять інтересу і лише захаращують список. Однак вони є важливими для людей, яким потрібні бібліотеки, заголовки і т.п. з пакетів для розробки для компіляції програм на їх основі.</p>
+<p>Більший інтерес викликають пункти <span class="menu">Доступні пакети</span> і <span class="menu">Встановлені пакети</span>, які фільтрують список пакетів за цими категоріями.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="account" name="account">Creating a User Account</a></h2>
-<p>To be able to rate a package, you need a user account at the <a href="http://depot.haiku-os.org">Haiku Depot Server</a> that serves all the packages and keeps track of ratings and user comments. You can create an account within the HaikuDepot application by clicking on the menu in the far right of the menu bar that shows your current status: <span class="menu">Not logged in</span>. Choosing <span class="menu">Log in...</span> opens a window with two tabs; one to enter your user name and password (once you have those) to log in, and the other to create a new account:</p>
+<a id="account" name="account">Створення облікового запису користувача</a></h2>
+<p>Щоб мати можливість оцінити пакет, Вам потрібен обліковий запис користувача на <a href="http://depot.haiku-os.org">Haiku Depot Server</a>, який обслуговує усі пакети та відстежує оцінки і коментарі користувачів. Ви можете створити обліковий запис у програмі HaikuDepot, натиснувши на меню в крайній правій частині панелі меню, яке показує Ваш поточний статус: <span class="menu">Не авторизований</span>. Вибір пункту <span class="menu">Авторизація…</span> відкриває вікно з двома вкладками; одна для введення Вашого імені користувача і пароля (якщо вони у Вас є) для входу, а інша для створення нового облікового запису:</p>
 <img src="../images/apps-images/haikudepot-login-tab.png" alt="haikudepot-login-tab.png" /> 
-<p>To create an account you need to:</p>
-<ul><li>use an all lower-case user name without special characters</li>
-<li>use a password that's at least 8 characters long with at least 2 capitals and 2 numbers</li>
-<li>provide a valid email address (if you want a new password sent to you in case you forgot it)</li>
-<li>solve the captcha</li>
-<li>tick the checkboxes to confirm you're over 16 and have read the usage conditions linked below them.</li></ul>
-<p>After logging in, the top-right menu of the HaikuDepot window will now say <span class="menu">Logged in as (...)</span>, showing your user name. The menu now offers you to <span class="menu">Switch account...</span> or <span class="menu">Log out</span>.</p>
-<p>As a reminder of what you actually agreed to when you ticked the above mentioned checkbox, there are menu items to <span class="menu">View latest/agreed usage conditions...</span></p>
+<p>Для створення облікового запису потрібно:</p>
+<ul><li>записувати ім'я користувача у нижньому регістрі без спеціальних символів</li>
+<li>використовувати пароль довжиною не менше 8 символів, які містять щонайменше 2 великі літери та 2 цифри</li>
+<li>вказати дійсну адресу електронної пошти (якщо Ви хочете, щоб Вам було надіслано новий пароль, якщо Ви його забули)</li>
+<li>вирішити капчу</li>
+<li>підтвердити, що Вам більше 16 років і Ви прочитали умови користування, посилання на які наведено нижче.</li></ul>
+<p>Після входу в систему у меню в крайній правій частині панелі меню HaikuDepot з'явиться напис <span class="menu">Авторизований як (…)</span>, де буде вказано Ваше ім'я користувача. Тепер меню пропонує Вам <span class="menu">Змінити обліковий запис…</span> або <span class="menu">Вийти з системи</span>.</p>
+<p>Як нагадування про те, на що Ви фактично погодилися, коли позначили чекбокс у згаданому вище полі, є пункти меню <span class="menu">Перегляд останніх/погоджених Умов користування…</span></p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="rating" name="rating">Rating and Commenting</a></h2>
-<p>After you've created a user account and are logged in, you can rate a package and leave a comment, if you want. Just hover the mouse over the rating stars in the info area of a package and they turn into a <span class="button">Rating...</span> button. Click it to open the rating window:</p>
+<a id="rating" name="rating">Оцінювання і коментування</a></h2>
+<p>Після того, як Ви створили обліковий запис користувача і увійшли в систему, Ви можете оцінити пакет і залишити коментар, якщо хочете. Просто наведіть курсор миші на зірочки рейтингу в інформаційній області пакета і вони перетворяться на кнопку <span class="button">Оцінити пакет…</span>. Натисніть її, щоб відкрити вікно оцінки:</p>
 <img src="../images/apps-images/haiku-depot-ratingpanel.png" alt="haiku-depot-ratingpanel.png" />
-<p>Here you move the mouse over the stars to light them up and choose your rating, you can also choose from a number of levels to judge the stability of the application and pick the language of your optional comment. To make a comment meaningful, you should have worked with the application you're about to rate for a while to become familiar with its features, bugs and quirks. And don't write the next great American novel... keep it short, sweet and polite. :)<br />
-After you click <span class="button">Send</span> the data is transmitted to the server. You may have to go to the <span class="menu">Tools</span> menu to <span class="menu">Refresh repositories</span> before you can see your changes.</p>
-<p>At any time, you can come back and edit your comment and re-rate it. You can also hide your rating from other users by deactivating a checkbox <span class="menu">This rating is visible to other users</span>, that appears in this window once you've rated a package.</p>
+<p>Тут Ви можете навести курсор миші на зірочки, щоб вони засвітилися, і вибрати свою оцінку, також Ви можете вибрати один з декількох рівнів оцінки стабільності роботи програми і вибрати мову Вашого необов'язкового коментаря. Щоб Ваш коментар був змістовним, Вам слід попрацювати з програмою, яку Ви збираєтеся оцінити, щоб ознайомитися з її можливостями, помилками і особливостями. І не пишіть наступний великий американський роман… нехай коментар буде короткий, по суті і ввічливий. :)<br />
+Після натискання кнопки <span class="button">Надіслати</span> дані передаються на сервер. Можливо, Вам доведеться зайти в меню <span class="menu">HaikuDepot</span> і вибрати пункт <span class="menu">Оновити репозитарії</span>, перш ніж Ви зможете побачити зміни.</p>
+<p>У будь-який момент Ви можете повернутися, відредагувати свій коментар і зробити повторне оцінювання. Ви можете приховати свою оцінку від інших користувачів, знявши позначку з опції <span class="menu">Цю оцінку видно і іншим користувачам</span>, яка з'являється у цьому вікні після того, як Ви оцінили пакет.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="logs" name="logs">Diagnostic Logs</a></h2>
-<p>As HaikuDepot is used, it interacts with network as well as local services. Things can go wrong, sometimes in ways that were not anticipated when the application was written. In those cases the error message may be quite unspecific. To help diagnosing a given problem, HaikuDepot can provide a log of what the application does.</p>
-<p>An error message may suggest to view the logs to get further in-depth information or you may be asked to provide the log when you file an issue at the Haiku <a href="https://dev.haiku-os.org/">bug tracking system</a>.</p>
-<p>To see the diagnostic logs, HaikuDepot needs to be started from <a href="terminal.html">Terminal</a>:</p>
+<a id="logs" name="logs">Журнали діагностики</a></h2>
+<p>HaikuDepot взаємодіє як з мережевими, так і з локальними сервісами. Іноді, щось може піти не так, як це передбачалося під час написання програми. У таких випадках повідомлення про помилку може бути не зовсім конкретним. Щоб допомогти діагностувати проблему, HaikuDepot може надати журнал того, що робить програма.</p>
+<p>У повідомленні про помилку можна запропонувати переглянути журнали для отримання більш детальної інформації або Вас можуть попросити надати журнал, коли Ви створюєте тікет у <a href="https://dev.haiku-os.org/">системі відстеження помилок</a> Haiku.</p>
+<p>Щоб переглянути журнали діагностики, HaikuDepot потрібно запустити з <a href="terminal.html">терміналу</a>:</p>
 <pre>HaikuDepot -v debug</pre>
-<p>The command uses the <span class="cli">-v</span> flag to control the verbosity of the diagnostic logs. Possible values are: <span class="cli">off</span>, <span class="cli">info</span>, <span class="cli">debug</span> and <span class="cli">trace</span>. Using <span class="cli">off</span> will do only a small amount of logging, while <span class="cli">trace</span> does it in the highest detail.</p>
-<p>As HaikuDepot starts up and when interacting with the application, you will see text scroll by in the Terminal window; this is the diagnostic log.</p>
+<p>Команда використовує параметр <span class="cli">-v</span> для управління деталізацією діагностичних журналів. Можливі значення: <span class="cli">off</span>, <span class="cli">info</span>, <span class="cli">debug</span> і <span class="cli">trace</span>. Використання параметра <span class="cli">off</span> призведе до створення журналу з мінімальним обсягом записів, тоді як <span class="cli">trace</span> – до максимальної деталізації.</p>
+<p>Під час запуску HaikuDepot і під час взаємодії з програмою у вікні терміналу Ви побачите постійний вивод текстових повідомлень; це діагностичний журнал.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="tips" name="tips">Tips</a></h2>
-<p>There is another way to keep track of new and updated packages besides sorting the <span class="menu">Date</span> column of the list of packages. For that, you need to create an RSS ATOM feed at the <a href="https://depot.haiku-os.org">Haiku Depot Server</a> website. Click the "hamburger" widget at the top right, and choose <span class="menu">Build Feed URL</span> under Data.<br />
-Most interesting of the few settings on that page: Besides getting a feed for all new/updated packages, you are also able to add just the names of the packages you're interested in. Click the <span class="button">Build Feed URL</span> button and you get an RSS URL that you can paste into an RSS feed reader like BePodder, QuiteRSS, fRiSS etc.</p>
+<a id="tips" name="tips">Корисні поради</a></h2>
+<p>Існує ще один спосіб відстежувати нові та оновлені пакети, окрім сортування стовпця <span class="menu">Дата</span> у списку пакетів. Для цього Вам потрібно створити канал RSS ATOM на веб-сайті <a href="https://depot.haiku-os.org">Haiku Depot Server</a>. Натисніть віджет «гамбургер» угорі праворуч і виберіть <span class="menu">Генерация ленты обновлений</span> у розділі «Data».<br />
+Найцікавіше з кількох налаштувань на цій сторінці: Окрім отримання стрічки новин для усіх нових/оновлених пакетів, Ви можете додати назви конкретних пакетів, які Вас цікавлять. Натисніть кнопку <span class="button">Создать ссылку</span> і Ви отримаєте URL-адресу RSS, яку можна вставити у програму читання каналів RSS, наприклад, BePodder, QuiteRSS, fRiSS, тощо.</p>
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="expander.html">Expander</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="icon-o-matic.html">Icon-O-Matic</a>  »
+ «  <a href="expander.html">Expander (Екстрактор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="icon-o-matic.html">Icon-O-Matic (Редактор значків)</a>  »
 </span></div>
 </div>
 

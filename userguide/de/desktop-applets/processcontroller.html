@@ -11,6 +11,7 @@
  *		Maciej Bałuta  (Google Code-In student)
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		taos
  *
@@ -83,8 +84,8 @@ Um es wieder aus der Deskbar zu entfernen, deaktiviert man mit dem Kontextmenü 
 <h2>Speichernutzung</h2>
 <img src="../images/processcontroller-images/memory.png" alt="ProcessController - Memory usage" />
 <p>Die Überwachung der Speichernutzung kann ziemlich ungenau sein.</p>
-<p>Das Menü ermöglicht die Überwachung der Speichernutzung der diversen Teams im System. Neben dem Team-Name befinden sich zwei Spalten: die erste enthält den Speicher, der schreibend reserviert wurde, während die zweite den Gesamtspeicherbedarf zeigt, also inklusive nur lesend genutzten Speicher (von gemeinsam genutzte Bibliotheken, beispielsweise).</p>
-<p>Die oberste Zeile <i>Systemressourcen &amp; Cache</i> zeigt die gesamte Speichernutzung von System und allen Anwendungen. Die Länge des blauen Balkens repräsentiert dden physikalisch im Rechner vorhandenen Speicher. Die folgenden Reihen zeigen den benutzten Speicher für jedes Team. Die Länge der Balken entspricht nur dem tatsächlich benutzten Teil des Speichers.</p>
+<p>Das Menü ermöglicht die Überwachung der Speichernutzung der diversen Teams im System. Neben dem Team-Name befinden sich zwei Spalten: Die erste enthält den Speicher, der schreibend reserviert wurde, während die zweite den Gesamtspeicherbedarf zeigt, also inklusive nur lesend genutzten Speicher (von gemeinsam genutzte Bibliotheken, beispielsweise).</p>
+<p>Die oberste Zeile <i>Systemressourcen &amp; Cache</i> zeigt die gesamte Speichernutzung des Systems und aller Anwendungen. Die Länge des blauen Balkens repräsentiert den physikalisch im Rechner vorhandenen Speicher. Die folgenden Reihen zeigen den benutzten Speicher für jedes Team. Die Länge der Balken entspricht nur dem tatsächlich benutzten Teil des Speichers.</p>
 <table>
 		<tr><td style="width:20px;height:20px;background:#1414E7"></td><td style="width:10px"></td><td>Speichernutzung einer Anwendung (beschreibbar)</td></tr>
 		<tr><td style="height:20px;background:#A4A4F5"></td><td></td><td>Speichernutzung, inklusive nur lesend (geteilt mit anderen Anwendungen)</td></tr>
@@ -101,7 +102,7 @@ Um es wieder aus der Deskbar zu entfernen, deaktiviert man mit dem Kontextmenü 
 </table>
 <p>Auf der ersten Ebene befinden sich die Team-Namen. Klickt man auf einen, kann das gesamte Team zum Beenden gezwungen werden. Der dunkelblaue Teil des Balkens entspricht der Zeit, die in Kernel-Code verbracht wird, der hellblaue Teil in User-Code, und der grüne Teil in den Leerlauf-Thread(s). Ein komplett blauer Balken bedeutet, dass dieses Team die gesamte Rechenleistung beansprucht.</p>
 <p>Die zweite Ebene zeigt alle Threads eines Teams. Klickt man auf einen, kann er debugged oder zum Beenden gezwungen werden. Ein komplett blauer Balken bedeutet, dass dieser Thread einen Prozessor/Kern vollständig auslastet.</p>
-<p>In der letzten Ebene des Menüs lässt sie die Priorität eines Threads ändern. Hier ist Vorsicht angesagt! In der Regel sollte die Priorität eines Threads umgekehrt zu seiner CPU-Auslastung sein. Das heißt, je mehr er versucht Rechenzeit zu bekommen, desto niedriger sollte seine Priorität sein. Am besten man spielt gar nicht erst mit Thread-Prioritäten einer Anwendung herum, sondern kontaktiert statt dessen deren Autoren; das ist deren Aufgabe.</p>
+<p>In der letzten Ebene des Menüs lässt sich die Priorität eines Threads ändern. Hier ist Vorsicht geboten! In der Regel sollte die Priorität eines Threads umgekehrt zu seiner CPU-Auslastung sein. Das heißt, je mehr er versucht Rechenzeit zu bekommen, desto niedriger sollte seine Priorität sein. Am besten man spielt gar nicht erst mit Thread-Prioritäten einer Anwendung herum, sondern kontaktiert statt dessen deren Autoren. Das ist deren Aufgabe.</p>
 
 </div>
 </div>

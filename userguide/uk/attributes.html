@@ -4,13 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Humdinger
+ *		'
  *		totish
  *
 -->
@@ -24,7 +25,7 @@
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -54,9 +55,9 @@
 <li><a href="../jp/attributes.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="filetypes.html">Filetypes</a> 
+ «  <a href="filetypes.html">Типи файлів (Filetypes)</a> 
 ::  <a href="contents.html" class="uplink">Зміст</a> 
-::  <a href="index.html">Зміст</a>  »
+::  <a href="index.html">Індекс</a>  »
 </span></div>
 </div>
 
@@ -65,117 +66,126 @@
 
 <h1>Атрибути (Attributes)</h1>
 
-<p>Атрибути - це поля даних, які відносятся до файлу, але не є його частиною. Вони не враховуються при підрахунку розміру файлу і можуть бути скопійовані або видалені без зміни самого файлу. Система використовує атрибути для зберігання, наприклад, розміру ,типу файлу, дати його останньої зміни і т.д. Так само яу в інших операційних системах.</p>
-<p>Відмінність полягає в тому, що Ви можете додати будь-який атрибут до будь-якого файлу, потім відобразити і зробити його таким , що можна редагувати у вікні  Tracker. Вам потрібно лиш визначити якого типу атрибут Ви бажаєте додати до файлу (наприклад: стрічка, ціле число і час), дати визначення і опис.</p>
-<p>І взагалі файл може не містити жодної інформації. Подивімося на файли контактів наприклад:</p>
+<p>Атрибути – це поля даних, які належать файлу, але не є його частиною. Вони не враховуються при обчисленні розміру файлу, атрибути можна копіювати або змінити, не торкаючись самого файлу. Система використовує атрибути для зберігання, наприклад, розміру файлу, типу файлу або дати останньої модифікації. Це схоже на інші операційні системи та їхні файлові системи.</p>
+<p>Різниця полягає в тому, що Ви можете додати будь-який атрибут до будь-якого файлу та відобразити його або зробити доступним для редагування у вікні Tracker. Для цього потрібно: вибрати тип файлу, до якого додоється атрибут; визначити тип атрибута який  додається (наприклад, рядок, ціле число або час); дати атрибуту назву та опис.</p>
+<p>Сам файл взагалі може бути пустим, не містити ніякої інформації. Подивіться, наприклад, на ці файли контактів:</p>
 <img src="images/attributes-images/people.png" alt="people.png" />
 <br />
-<p>Як ви бачете усі файли мають нульовий розмір разом з атрибутами і атрибут E-mail в контакта "John Nox" редагується прямо з Tracker'а.</p>
-<p>Якщо проіндексувати атрибути в контактів, листів або звукових файлів, то стане можливим робити пошук за допомогою швидкої системи запитів.</p>
+<p>Як Ви бачите, файл має нульовий розмір разом з атрибутами а атрибут E-mail контакта «Школа економіки» редагується прямо у вікні Tracker.</p>
+<p>Якщо Ви проіндексуєте атрибути, як це робиться за замовчуванням для контактів, електронної пошти або аудіофайлів, їх також можна буде шукати за допомогою швидкої системи запитів Haiku.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="attributes-tracker" name="attributes-tracker">Робота з атрибутами в Tracker'i</a></h2>
-<p>у Tracker'і атрибути відображаються, як у базі даних або таблиці. Можна вибрати, які атрибути відображати і відсортувати список файлів за ними</p>
-<p>Відкрийте Tracker, клікніть по пункту меню  <span class="menu">Атрибути (Attributes)</span> і виберіть атрибути, які вихочете відобразити. Також можна просто клікнути по заголовку колонки і відмітити елементи в контекстному меню. Можна поміняти колонки з атрибутами, якщо потягнути їх за заголовок, або видалити непотрібну колонку, якщо перетягнути її за межі вікна.</p>
-<p>Подвійно клікніть мишкою по лінії, що знаходиться між двома заголовками атрибутів і ширина колонки автоматично зміниться згідно найдовшого атрибута.</p>
-<p>Клікніть по заголовку колонки, щоб відсортувати список. Ви можете встановити вторинне сортування коли утримувати клавішу <span class="key">SHIFT</span>  і клікнути по заголовку колонки. Наприклад, відсортуйте файли контактів по компанії і по імені контакту.Вторинне сортування буде відмічене світлим індикатором поряд іззіголовком.</p>
-<p>Редагування атрибутів є такою ж простою операцією як і переіменування файлу: клікніть по стрічці або натисніть <span class="key">ALT</span> <span class="key">E</span> для переміщення по атрибутах використовуйте клавіші <span class="key">TAB</span> and <span class="key">SHIFT</span> <span class="key">TAB</span>. Клавіша<span class="key">ESC</span> дозволить вийти з режиму редагування без збереження змін.</p>
+<a id="attributes-tracker" name="attributes-tracker">Робота з атрибутами у програмі Tracker</a></h2>
+<p>Атрибути відображаються подібно до бази даних або електронної таблиці. У програмі Tracker Ви можете вибрати, які атрибути відображати (стовпці) і відповідно їх сортувати список файлів (рядки).</p>
+<p>Для цього відкрийте вікно Tracker, клікніть по пункту меню  <span class="menu">Атрибути</span> і виберіть атрибути, які Ви хочете відобразити. Або просто зробіть правий клік на заголовку стовпчика (колонки) і позначте пункти в контекстному меню. Ви можете переставляти стовпчики місцями простим перетягуванням заголовка стовпчика. Переміщення стовпчика з вікна – це швидкий спосіб позбутися непотрібних Вам колонок.</p>
+<p>Подвійний клік миші на лінії між двома атрибутами у заголовку автоматично змінить розмір стовпчика до оптимальної ширини.</p>
+<p>Клік на заголовку стовпчика змінить порядок сортування з висхідного на низхідний. Ви можете встановити вторинний порядок сортування, утримуючи клавішу <span class="key">SHIFT</span> під час натискання на заголовку стовпчика. Наприклад, можна сортувати файли контактів за компанією, а в межах цього порядку сортувати за іменами контактів. Вторинний порядок сортування позначається світлішим індикатором поруч із заголовком.</p>
+<p>Редагування атрибутів є такою ж простою операцією, як і перейменування файлу: клікніть на атрибуті або натисніть <span class="key">ALT</span> <span class="key">E</span>. Щоб переходити між атрибутами використовуйте клавіші <span class="key">TAB</span> і <span class="key">SHIFT</span> <span class="key">TAB</span>. Клавіша <span class="key">ESC</span> дозволить вийти з режиму редагування без збереження змін.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="attributes-terminal" name="attributes-terminal">Робота з атрибутами в Terminal'i</a></h2>
-<p>Якщо Ви надаєте перевагу командній лінії  або плануєте працювати з великою кількістю файлів при допомозі скриптів , то існує кілька команд для керування атрибутами в Terminal'i.</p>
+<a id="attributes-terminal" name="attributes-terminal">Робота з атрибутами у програмі Terminal (Термінал)</a></h2>
+<p>Якщо Ви віддаєте перевагу використанню командного рядка або плануєте працювати з великою кількістю файлів за допомогою сценаріїв, є кілька команд для управління атрибутами з Терміналу.</p>
+<p>Більш детальну інформацію про ці команди та їхні опції можна отримати, ввівши назву команди з параметром «<span class="cli">-h</span>» або «<span class="cli">--help</span>».</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> - показує список атрибутів, але не їх вміст .</p>
-<pre>usage: listattr 'filename' ['filename' ...]</pre>
-<p>Приклад:</p>
-<pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
-File: Clara Botters
-   Type         Size                 Name
------------  ---------  -------------------------------
-MIME String         21  "BEOS:TYPE"
-        Text         14  "META:name"
-        Text          6  "META:nickname"
-        Text          1  "META:company"
+<p><span class="cli">listattr</span> – показує список атрибутів файлу, але за замовчуванням не показує їхній вміст. Для виводу значень атрибутів потрібно додати параметр «-l» або «--long».</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]
+  -l, --long  Shows the attribute contents as well.</pre>
+<p>З нашого прикладу на скриншоті вище:</p>
+<pre class="terminal">~/people&gt; listattr -l Джон\ До
+File: Джон До
+        Type       Size  Name                                Contents
+-------------------------------------------------------------------------------
+ MIME String        21  "BEOS:TYPE"                         application/x-person
+        Text        14  "META:name"                         Джон До
+        Text         5  "META:nickname"                     dodo
+        Text        25  "META:company"                      Рога и Копыта
+        Text        26  "META:address"                      ул. Заречная 24
+        Text         9  "META:city"                         Київ
+        Text        17  "META:state"                        Київська
+        Text         6  "META:zip"                          03191
+        Text        15  "META:country"                      Україна
+        Text        21  "META:email"                        john.doe@example.com
+        Text        13  "META:hphone"                       044 555 1111
+        Text        17  "META:mphone"                       +38 044 555 1112
+        Text        13  "META:wphone"                       044 555 1113
+        Text        13  "META:fax"                          044 555 1114
+        Text        13  "META:url"                          haiku-os.org
+        Text         1  "META:group"
 
-        Text         18  "META:address"
-        Text          8  "META:city"
-        Text          1  "META:state"
-        Text          1  "META:zip"
-        Text          1  "META:country"
-
-        Text          1  "META:hphone"
-        Text         13  "META:wphone"
-        Text          1  "META:fax"
-        Text         19  "META:email"
-        Text          1  "META:url"
-
-        Text          5  "META:group"
-    Raw Data         20  "_trk/pinfo_le"
- 
-131 bytes total in attributes.</pre>
-<p>Поза всіма "<tt>META:*</tt>"  атрибутами, які зберігають контактну інформацію. є також два , якими керує система:</p>
+229 bytes total in attributes.
+~/people&gt;</pre>
+<p>Окрім усіх атрибутів «<tt>META:*</tt>», які містять інформацію про контакт, є два системні атрибути:</p>
 <ul>
-<li><p><tt>BEOS:TYPE</tt> зберігає тип файлу у вигляді <acronym title="Multipurpose Internet Mail Extensions">MIME</acronym> стрічки, у нашому випадку "<tt>application/x-person</tt>".Він визначає іконку по замовчуванню і додаток, який відкриває файл за подвійним кліком по ньому.</p></li>
-<li><p>"<tt>_trk/pinfo_le</tt>" при допомозі цього атрибуту Tracker відслідковує місце розташування іконки. </p></li></ul>
-<div class="box-info">Зверніть увагу на бекслеш після "Clara". В Terminal'i Ви можете відміняти спеціальні символи такі як <tt>'"*\\$?!</tt>. Пробіл між "Clara" і "Botters" також є таким. Отже бекслеш є насправді попереду пробілу а не після "Clara".</div>
+<li><p>«<tt>BEOS:TYPE</tt>» містить тип файлу у вигляді <acronym title="Multipurpose Internet Mail Extensions">MIME</acronym>-рядка, у нашому випадку «<tt>application/x-person</tt>». Він визначає піктограму за замовчуванням і програму, яка відкриває файл, якщо зробити на ньому подвійний клік.</p></li>
+<li><p>«<tt>_trk/pinfo_le</tt>» (не відображається) – це атрибут, за допомогою якого Tracker відстежує позицію піктограми файлу.</p></li></ul>
+<div class="box-info">Зверніть увагу на зворотну косу риску (бекслеш) після «Джон». У Терміналі Ви повинні «екранувати» спеціальні символи, такі як <tt>'"*\\$?!</tt>. Пробіл між «Джон» і «До» також є одним із них. Тому бекслеш насправді стоїть перед символом пробілу, а не після «Джон».</div>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="catattr" name="catattr">catattr</a></h3>
-<p><span class="cli">catattr</span> - виводить вміст вказаного атрибуту файлу.</p>
-<pre>usage: catattr [--raw|-r] attr_name file1 [file2...]</pre>
-<p>Приклад:</p>
-<pre class="terminal"> ~/people -&gt;catattr META:city Clara\\ Botters
-Clara Botters : string : Whelton</pre>
+<p><span class="cli">catattr</span> – виводить вміст вказаного атрибуту файлу.</p>
+<pre>usage: catattr [-P] [--raw|-r] &lt;attribute-name&gt; &lt;file1&gt; [&lt;file2&gt;...]
+  -P            Don't resolve links
+  --raw,-r      Get the raw data of attributes
+  --data,-d     Show the attribute data only</pre>
+<p>Знову з нашого прикладу:</p>
+<pre class="terminal">~/people&gt; catattr META:city Джон\ До
+Джон До : string : Київ</pre>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="addattr" name="addattr">addattr</a></h3>
-<p><span class="cli">addattr</span> - дозволяє додати атрибут і (або) заповнити його вміст.</p>
-<pre>usage: addattr [-t type] attr value file1 [file2...]
-    or: addattr [-f value-from-file] [-t type] attr file1 [file2...]
- 
-         Type is one of:
-                 string, mime, int, llong, float, double, bool, icon, raw
-                 or a numeric value (ie. 0x1234, 42, 'ABCD', ...)
-         The default is "string"</pre>
-<p>Припустимо Clara  влаштувалась на роботу в Barkelbaer Inc., Ви можете тепер заповнити атрибут "Company", який раніше був пустим наступним чином:</p>
-<pre class="terminal"> ~/people -&gt;addattr -t string META:company Barkelbaer\\ Inc. Clara\\ Botters</pre>
+<p><span class="cli">addattr</span> – додає атрибут до файлу та/або присвоює йому значення.</p>
+<pre>usage: addattr [-t type|-c code] [ -P ] attr value file1 [file2...]
+   or: addattr [-f value-from-file] [-t type|-c code] [ -P ] attr
+file1 [file2...]
+
+        -P : Don't resolve links
+        The '-t' and '-c' options are alternatives; use one or the other.
+        type is one of:
+                string, mime, int, int32, uint32, llong, int64, uint64,
+                float, double, bool, icon, time, raw
+                or a numeric value (ie. 0x1234, 42, ...),
+                or an escape-quoted type code, eg. \'MICN\'
+        The default is "string"
+        code is a four-char type ID (eg. MICN)</pre>
+<p>Припустимо, Джон  влаштувався на роботу в компанію Haiku, Inc., тепер Ви можете змінити значення атрибуту «Компанія» на нове:</p>
+<pre class="terminal">~/people&gt; addattr -t string META:company Haiku,\ Inc. Джон\ До</pre>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
-<p><span class="cli">rmattr</span> - дозволяє повністю видалити атрибут файлу.</p>
+<p><span class="cli">rmattr</span> – повністю видаляє атрибут з файлу.</p>
 
-<pre>usage: rmattr [-p] attr filename1 [filename2...]
-         'attr' is the name of an attribute of the file
-         If '-p' is specified, 'attr' is regarded as a pattern.</pre>
-<p>хоча просто можна би було не заповняти атрибут "Fax" , але ви можете повністю видалити цей атрибут в файлу Clara:</p>
-<pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
+<pre>usage: rmattr [-P] [-p] attr filename1 [filename2...]
+        'attr' is the name of an attribute of the file
+        -P : Don't resolve links
+        If '-p' is specified, 'attr' is regarded as a pattern.</pre>
+<p>Хоча з практичної точки зору було б достатньо просто не заповнювати атрибут «Факс», Ви можете повністю видалити його з файлу Джона, ввівши:</p>
+<pre class="terminal"> ~/people&gt; rmattr META:fax Джон\ До</pre>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="copyattr" name="copyattr">copyattr</a></h3>
-<p><span class="cli">copyattr</span> дозволяє зкопіювати атрибути з одного або дікількох файлів на інший. По замовчуванню вміст файлу <b>не</b> \\ копіюється.</p>
+<p><span class="cli">copyattr</span> – копіює атрибути з одного або декількох файлів до іншого. За замовчуванням, власне вміст файлу <b>не</b> копіюється.</p>
 <pre>Usage: copyattr &lt;options&gt; &lt;source&gt; [ ... ] &lt;destination&gt;</pre>
 
-<p>Якщо Ви забажаєте скопіювати не тільки атрибути але і вміст файлу слід додати опцію "<span class="cli">-d</span>" або "<span class="cli">--data</span>".</p>
+<p>Якщо Ви хочете копіювати не тільки атрибути але і вміст файлу, слід додати параметр «<span class="cli">-d</span>» або «<span class="cli">--data</span>».<br />Довідку по використанню програми завжди можна отримати, якщо виконати програму з параметром «<span class="cli">-h</span>» або «<span class="cli">--help</span>».</p>
 
 <p><br /></p>
-<p>Більше інформації про команди і їх опції можна отримати після введення команди з опцією "<span class="cli">-h</span>" або "<span class="cli">--help</span>".</p>
 
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="filetypes.html">Filetypes</a> 
+ «  <a href="filetypes.html">Типи файлів (Filetypes)</a> 
 ::  <a href="contents.html" class="uplink">Зміст</a> 
-::  <a href="index.html">Зміст</a>  »
+::  <a href="index.html">Індекс</a>  »
 </span></div>
 </div>
 

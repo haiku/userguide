@@ -11,20 +11,21 @@
  *		Gerard Stanczak (Google Code-In student)
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Miдiпрогравач (MidiPlayer)</title>
+	<title>MidiPlayer (MIDI-плеєр)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -54,38 +55,36 @@
 <li><a href="../../jp/applications/midiplayer.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="mediaplayer.html">Медіапрогравач (MediaPlayer)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="packageinstaller.html">LegacyPackageInstaller</a>  »
+ «  <a href="mediaplayer.html">MediaPlayer (Медіаплеєр)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="packageinstaller.html">PackageInstaller (Інсталятор пакетів)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/apps-images/midiplayer-icon_64.png" alt="midiplayer-icon_64.png" width="64" height="64" />Miдiпрогравач (MidiPlayer)</h2>
+<h2><img src="../../images/apps-images/midiplayer-icon_64.png" alt="midiplayer-icon_64.png" width="64" height="64" />   MidiPlayer (MIDI-плеєр)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/MidiPlayer</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/MidiPlayerSettings</span></td></tr>
 </table>
 <p><br /></p>
-<p>Як випливає з назви, Miдiпрогравач (MidiPlayer) використовується для відтворення музичних міді файлів. Midi файли є особливими, так як вони не містять фактично оцифрованої та певним чином закодованої музики, а тільки опис її: тримати цю ноту так-то довго, з таким-то рівнем звуку, та використовуючи такий-то інструмент для цього.<br />
-Не зважаючи на те що розмір файлів досить малий, випливає також що в залежності від бібліотеки інструментів (так званих «Звукових шрифтів»  («SoundFont»)) результати можуть дуже відрізнятися. Крім того ці SoundFonts мають тенденцію бути досить великими в зв'язку з кількістю та якістю зразків звучання інструменту.</p>
-<div class="box-info"><p>Haiku releases include a small but relatively high quality SoundFont. People who use MIDI more seriously often already have very high quality or custom SoundFonts.</p>
-<p>To use other SoundFonts (that don't come installable via HaikuDepot as a HPKG), just copy the .sf file to e.g. <tt>~/config/non-packaged/data/synth/</tt>. You can select the active SoundFont in the Media preferences under <span class="menu">MIDI</span>.</p></div>
+<p>Як випливає з назви, MidiPlayer (MIDI-плеєр) використовується щоб програвати музичні файли у форматі MIDI. Для програмного забезпечення такого типу використовується термін «секвенсер». MIDI-файли є особливими, оскільки вони не містять оцифровану та певним чином закодовану музику, а лише її опис: "Тримай цю ноту стільки-то часу з такою-то гучністю і використовуй для неї інструмент X".<br />
+Це дозволяє зменшити розмір файлу, але також означає, що залежно від бібліотеки інструментів (так званого «SoundFont») результати можуть дуже відрізнятися. Крім того, ці «Звукові шрифти» мають тенденцію швидко збільшуватись у розмірі, в залежності від кількості та якості семплів інструментів.</p>
+<div class="box-info"><p>До релізів Haiku включено невеликий, але відносно якісний SoundFont <tt>TimGMSoundFont</tt>, який можна встановити через менеджер пакетів HaikuDepot. Люди, які займаються MIDI більш серйозно, напевно вже мають дуже якісні або спеціальні бібліотеки SoundFonts.</p>
+<p>Щоб скористатися іншими «Звуковими шрифтами» (які не можна встановити з HaikuDepot як HPKG), просто  перенесіть файли .sf (або їхні копії) до папки <tt>~/config/non-packaged/data/synth/</tt>. Ви можете вибрати активний SoundFont у налаштуваннях медіа у розділі MIDI.</p></div>
 <img src="../images/apps-images/midiplayer.png" alt="midiplayer.png" />
-<p>Інстерфейс Програвача Midi дуже нескладний. Просто клікніть або захопіть та опустіть на його вікно  midi файл і відтворення стартує. 
-Налаштуйте гучність повзунком та додайте спотворюючі ефекти за допомогою випаючого меню  <span class="menu">Відбивання (Reverb)</span>. </p>
+<p>Інтерфейс MIDI-плеєра дуже простий. Подвійний клік на MIDI-файлі або перетягування файлу на панель плеєра запустить відтворення. Ви регулюєте гучність за допомогою повзунка та додаєте ефекти реверберації у спливаючому меню <span class="menu">Відбиття</span>. Якщо підключити осцилоскоп, то у верхній частині панелі з'явиться візуалізація.</p>
 
 </div>
 </div>
 <!--
 <div class="nav">
 <div class="inner"><span>
- «  <a href="mediaplayer.html">Медіапрогравач (MediaPlayer)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
+ «  <a href="mediaplayer.html">MediaPlayer (Медіаплеєр)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
 ::  <a href="packageinstaller.html">PackageInstaller</a>  »
 </span></div>
 </div>

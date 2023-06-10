@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">A tradução desta página ainda não está completa. Até lá, partes incompletas mostrarão o original em inglês.</div>
 
 <h1>Atributos</h1>
 
@@ -85,11 +86,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Atributos no Terminal</a></h2>
 <p>Se preferir utilizar a linha de comando ou planeja trabalhar com muitos arquivos usando scripting, existem vários comandos para controlar atributos a partir do Terminal.</p>
+<p>Mais informações sobre estes comandos e suas opções podem ser encontradas digitando o nome do comando seguido de "<span class="cli">-h</span>" ou "<span class="cli">--help</span>".</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> lista os atributos do arquivo, mas não mostra o conteúdo dos atributos.</p>
-<pre>uso: listattr 'nome do arquivo' ['nome do arquivo' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>Do nosso exemplo de tela acima:</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
 File: Clara Botters
@@ -150,9 +152,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> remove completamente um atributo de um arquivo.</p>
 
-<pre>uso: rmattr [-p] atrib nomedoarquivo1 [nomedoarquivo2...]
-         'atrib' é o nome de um atributo do arquivo
-         Se '-p' é especificado, 'atrib' é considerado como um padrão.</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>Embora, em todo seu aspecto prático, seria suficiente apenas não preencher o atributo "Fax", pode-se removê-lo completamente do arquivo de Clara digitando:</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -165,7 +165,6 @@ Clara Botters : string : Whelton</pre>
 <p>Se desejar copiar os atributos mais os dados do arquivo em si, pode-se adicionar a opção "<span class="cli">-d</span>" ou "<span class="cli">--data</span>".</p>
 
 <p><br /></p>
-<p>Mais informações sobre estes comandos e suas opções podem ser encontradas digitando o nome do comando seguido de "<span class="cli">-h</span>" ou "<span class="cli">--help</span>".</p>
 
 </div>
 </div>

@@ -10,20 +10,22 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Термінал (Terminal)</title>
+	<title>Terminal (Термінал)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -53,111 +55,111 @@
 <li><a href="../../jp/applications/terminal.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="stylededit.html">Редактор StyledEdit</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="textsearch.html">Пошук тексту (TextSearch)</a>  »
+ «  <a href="stylededit.html">StyledEdit (Текстовий редактор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="textsearch.html">TextSearch (Пошук тексту)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/apps-images/terminal-icon_64.png" alt="terminal-icon_64.png" width="64" height="64" />Термінал (Terminal)</h2>
+<h2><img src="../../images/apps-images/terminal-icon_64.png" alt="terminal-icon_64.png" width="64" height="64" />   Terminal (Термінал)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/Terminal</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/Terminal</span><br />
-<span class="path">~/config/settings/profile</span> - додає/перевизначає типові значення у <span class="path">/boot/system/settings/etc/profile</span><br />
-<span class="path">~/config/settings/inputrc</span> - додає/перевизначає типові значення у  <span class="path">/boot/system/settings/etc/inputrc</span></td></tr>
+<span class="path">~/config/settings/profile</span> – додає нові/перевизначає типові значення в <span class="path">/boot/system/settings/etc/profile</span><br />
+<span class="path">~/config/settings/inputrc</span> – додає нові/перевизначає типові значення в <span class="path">/boot/system/settings/etc/inputrc</span></td></tr>
 </table>
 <p><br /></p>
-<p>Термінал (Terminal) є інтерфейсом командної стрічки bash (Bourne Again Shell) у Haiku</p>
-<p>Будь ласка, зверніться до розділу <a href="../bash-scripting.html"> Скриптування (Scripting) </a> де є кілька посилань на електронні підручники по роботі в оболонці, а також погляньте на <a href="cli-apps.html">Додатки командної стрічки у Haiku (Haiku's commandline applications)</a>. Тут ми зконцентруємося саме на Терміналі.</p>
+<p>Програма Термінал – це інтерфейс Haiku до bash, командної оболонки Bourne Again Shell.</p>
+<p>Будь ласка, зверніться до розділу <a href="../bash-scripting.html">Написання сценаріїв</a>, де наведено кілька посилань на онлайн-уроки з роботи у командному рядку, а також подивіться розділ <a href="cli-apps.html">Програми командного рядка…</a>. Тут ми зосередимося на самій програмі Термінал.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="windows-tabs" name="windows-tabs">Вікна та вкладки</a></h2>
-<p>Ви можете відкрити стільки Терміналів скільки потрібно, або кожен у своєму власному вікні, або за допомогою клавіш <span class="key">ALT</span> <span class="key">N</span> у повністю запущеному терміналі. Або використати вкладки Термінала за допомогою набору комбінації <span class="key">ALT</span> <span class="key">T</span></p>
+<p>Ви можете відкрити стільки терміналів, скільки потрібно, кожен у власному вікні, просто запустивши більше Терміналів, або за допомогою комбінації клавіш <span class="key">ALT</span> <span class="key">N</span> з уже запущеного Термінала. Також Ви можете скористатися режимом вкладок Термінала і відкрити більше вкладок за допомогою комбінації клавіш <span class="key">ALT</span> <span class="key">T</span></p>
 <img src="../images/apps-images/terminal.png" alt="terminal.png" />
 <br />
-<p>Double-clicking into the emtpy part of the tab bar opens a new tab; onto a tab opens a dialog to rename its title. There are several %-designated variables that are explained with a tooltip when you hover the mouse over the text field.<br />
-By default, <tt>%1d: %p</tt>, a tab shows the current directory and, separated by a <tt>:</tt>, the name of the currently running process (or <tt>--</tt> if it's just bash running, probably idling). The screenshot above shows the first tab with a FTP session in the <span class="path">Desktop</span> folder and a second tab idling at <span class="path">home</span>.<br />
-Via <span class="menu">Settings | Window title...</span> the Terminal window's title can be edited in a similar way.</p>
-<p>Двоклік правою кнопкою мишки на вкладці покаже контекстне меню <span class="menu">Закрити вкладку (Close tab)</span>, <span class="menu">Закрити інші вкладки (Close other tabs)</span> або подібним двокліком меню <span class="menu">Редагувати заголовок вкладки...Edit tab title...</span>.</p>
-<p>Розмір вікна Термінала може бути змінений так само як будь-якого іншого вікна або за допомогою меню <span class="menu">Налаштування (Settings) | Розмір вікна (Window size)</span>. Комбінація клавіш <span class="key">ALT</span> <span class="key">ENTER</span> включає повноекранний режим.</p>
-<p>Всі налаштування які ви внесете безпосередньо через меню <span class="menu">Налаштування (Settings)</span>, такі як <span class="menu">Назва вікна (Window title)</span>, <span class="menu">Розмір вікна (Window size)</span>, <span class="menu">Кодування (Text encoding)</span> або <span class="menu">Розмір шрифта (Font size)</span> будуть діяти тільки у поточній сесії. Якщо Ви хочете внести постійні зміни це необхідно зробити в панелі <span class="menu">Налаштування... (Settings...)</span>.</p>
+<p>Подвійний клік на порожній частині панелі вкладок відкриє нову вкладку; подвійний клік на вкладці відкриє діалогове вікно для зміни її назви. Існує декілька параметрів, позначених символом «%», значення яких пояснюється підказкою при наведенні курсора миші на текстове поле вводу.<br />
+За замовчуванням, текст у заголовку кодується як <tt>%1d: %p</tt> – вкладка показує поточний каталог і, відокремлену символом <tt>:</tt> назву поточного запущеного процесу (або <tt>--</tt> коли запущено лише bash, без вводу команд). Скриншот вище показує дві вкладки терміналів відкритих з каталогу <span class="path">Desktop</span>, які простоюють у режимі очікування команди.<br />
+За допомогою пункту меню <span class="menu">Налаштування | Заголовок вікна…</span> можна аналогічно відредагувати заголовок вікна Термінала.</p>
+<p>Правий клік миші на вкладці відкриває контекстне меню з пунктами <span class="menu">Закрити вкладку</span>, <span class="menu">Закрити інші вкладки</span> та <span class="menu">Редагувати заголовок вкладки…</span>. Останній пункт працює як і подвійний клік на вкладці.</p>
+<p>Розмір вікна термінала можна змінити, як і будь-якого іншого вікна або скористатися заздалегідь визначеними значеннями у меню <span class="menu">Налаштування | Розмір вікна </span>. Комбінація клавіш <span class="key">ALT</span> <span class="key">ENTER</span> перемикає у повноекранний режим.</p>
+<p>Усі параметри, які Ви змінюєте безпосередньо через меню <span class="menu">Налаштування</span>, такі як <span class="menu">Заголовок вікна…</span>, <span class="menu">Розмір вікна</span>, <span class="menu">Кодування тексту</span> або <span class="menu">Розмір шрифту</span> будуть діяти лише у поточному сеансі. Якщо Ви хочете зробити постійні зміни, Вам слід застосувати їх на панелі <span class="menu">Налаштування…</span>.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="settings" name="settings">Налаштування (Settings)</a></h2>
-<p>Меню <span class="menu">Налаштування (Settings) | Налаштування (Settings...)</span> відкриє панель для настройки стандартних параметрів Терміналу.</p>
+<a id="settings" name="settings">Налаштування</a></h2>
+<p>Пункт меню <span class="menu">Налаштування | Налаштування…</span> відкриває панель для настройки стандартних параметрів Термінала.</p>
 <img src="../images/apps-images/terminal-settings.png" alt="terminal-settings.png" />
 <br />
-<p>Most of the offered settings speak for themselves. Not entirely obvious though, the font size is set in the submenu of the <span class="menu">Font</span> popup menu.<br />
-Hover your mouse over the "formulas" for naming tab and window titles to get tooltips for the available variables. <br />
-You can choose pre-defined color schema like <span class="menu">Midnight</span> or <span class="menu">Retro</span> or create a <span class="menu">Custom</span> one by selecting which <span class="menu">Color</span> you want to change (<span class="menu">Text</span>, <span class="menu">Background</span>, <span class="menu">Cursor</span> etc.) and then use  the color picker below.</p>
-<p>You can also configure "ANSI colors" with the <span class="menu">Color</span> menu. Those are the first 8 named colors in the color palette of terminal applications. You choose a color, for example "<i>ANSI red color</i>", and then adjust it with the color picker below. The effect is not visible unless you run a terminal application that makes use of that color. The exact colors used in various places are documented at <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
-<p>A few more options follow: you can have a <span class="menu">Blinking cursor</span> and choose to <span class="menu">Allow bold text</span>.<br />
-<span class="menu">Use left Option as Meta key</span> if you work with certain UNIX software that relies on accessing an extended portion of the ASCII character set, like e.g. GNU Emacs and  the GNU readline library.<br />
-Activate the checkbox to <span class="menu">Confirm exit if active programs exist</span> and you'll be warned when trying to close a Terminal window while an app is still being executed.</p>
+<p>Більшість запропонованих параметрів говорять самі за себе. Хоча це не зовсім очевидно, розмір шрифту встановлюється у підменю елементів списку <span class="menu">Шрифт</span>.<br />
+Наведіть курсор миші на «формули» у текстових полях вводу для назв вкладок і вікон, щоб отримати підказки по доступним параметрам у цих полях.<br />
+Ви можете вибрати наперед визначену схему кольорів, наприклад, <span class="menu">Midnight</span> або <span class="menu">Retro</span> або створити власну  через пункт <span class="menu">Вибір користувача</span>, вибравши колір для елемента, колір якого Ви хочете змінити (<span class="menu">Текст</span>, <span class="menu">Фон</span>, <span class="menu">Курсор</span> тощо) а потім скористайтеся інструментом вибору кольорів.</p>
+<p>Ви можете зробити настройку «кольорів ANSI» за допомогою меню <span class="menu">Кольори…</span>. Це перші 8 названих кольорів у палітрі кольорів термінальних програм. Ви вибираєте колір, наприклад, «<i>ANSI червоний</i>» а потім регулюєте його за допомогою палітри кольорів. Ефект не буде видимим, доки Ви не запустите термінальну програму, яка використовує цей колір. Точні кольори, які використовуються у різних місцях, описано у <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Вікіпедії</a>.</p>
+<p>Далі доступні ще кілька опцій: Ви можете встановити <span class="menu">Мигання курсору</span> і вибрати <span class="menu">Дозволити жирний текст</span>.<br />
+Увімкніть опцію <span class="menu">Використовувати лівий Option як клавішу Meta</span>, якщо Ви працюєте з певним програмним забезпеченням UNIX, якому потрібен доступ до розширеної частини набору символів ASCII, наприклад, GNU Emacs і бібліотека GNU readline.<br />
+Увімкніть опцію <span class="menu">Підтверджувати вихід якщо присутні активні програми</span> і Ви отримаєте попередження про спробу закрити вікно термінала, коли програма все ще виконується.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td class="onelinetop"><span class="button">Зберегти у файл (Save to file...)</span></td><td width="10"> </td><td>дозволить зберегти налаштування як вибраний профіль який при двокліку відкриє відповідно зконфігурований Термінал.</td></tr>
-<tr><td><span class="button">Повернути (Revert)</span></td><td> </td><td>дозволить повернути налаштування що існували до відкриття панелі.</td></tr>
-<tr><td><span class="button">Типово (Defaults)</span></td><td> </td><td>Скинути всі налаштування до типових значень.</td></tr>
+<tr><td class="onelinetop"><span class="button">Зберегти у файл…</span></td><td width="10"> </td><td>дозволяє зберігати різні конфігурації як окремі профілі, які при подвійному натисканні відкривають термінал з відповідними настройками.</td></tr>
+<tr><td><span class="button">Відкат змін</span></td><td> </td><td>повертає настройки, які були активні на момент відкриття панелі налаштувань.</td></tr>
+<tr><td><span class="button">Типові настройки</span></td><td> </td><td>повертає все до стандартних (типових) значень.</td></tr>
 </table>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="shortcuts" name="shortcuts">Клавіатурні скорочення</a></h2>
-<p>Ви знайдете найпоширеніші гарячі клавіші тут <a href="../keyboard-shortcuts.html#terminal">Гарячі клавіші та комбінації кнопок (Shortcuts and key combinations)</a>.</p>
-<p>Ще більше приємних можливостей додає комбінація кнопок та мишки: при утриманні <span class="key">ALT</span> шлях або URL під курсором мишки підсвічується. Клік лівою кнопкою мишки відкриє файл / теку / вебсайт. Правоклік мишкою відкриє у контекстному меню або  <span class="menu">Копіювати шлях (Copy path)</span> або <span class="menu">Копіювати абсолютний шлях (Copy absolute path)</span>. Уявіть, що ви перебуваєте в теці <span class="path">/MyData/source/haiku/</span> і маєте шлях <span class="path">generated/objects/haiku/x86_gcc2/release/apps/stylededit/StyledEdit</span> під курсором мишки, останній пункт меню приведе Вас до комбінації абсолютного шляху &lt;<i>глибоко вдихніть</i>&gt;:<br /> <span class="path">/MyData/source/haiku/generated/objects/haiku/x86_gcc2/release/apps/stylededit/StyledEdit</span>.</p>
-<p>При утриманні клавіш <span class="key">ALT</span> <span class="key">SHIFT</span>, буде виділено шлях від початку до місця де знаходиться курсор.</p>
-<p>До речі, правоклік кнопкою миші у вікні Терміналу буде вставляти вміст буферу обміну. У комбінації з копіюванням частин виділених доріжок, це може бути використано для швидкої навігації  у глибину ієрархії тек.</p>
+<p>Список корисних комбінацій клавіш Ви знайдете у розділі <a href="../keyboard-shortcuts.html#terminal">Клавіші швидкого доступу</a>.</p>
+<p>Ще одна корисна можливість, яка більше схожа на комбінацію клавіш і миші: Якщо утримувати клавішу <span class="key">ALT</span>, шлях або URL під курсором миші підсвічується. Лівий клік миші відкриє файл/папку або веб-сайт. Правий клік миші відкриє контекстне меню з пунктами <span class="menu">Відкрити шлях</span>, <span class="menu">Копіювати шлях</span> та <span class="menu">Копіювати абсолютний шлях</span>.<br />
+Уявіть, що Ви знаходитесь у <span class="path">/MyData/source/haiku/</span> і маєте шлях <span class="path">generated/objects/haiku/x86_gcc2/release/apps/stylededit/StyledEdit</span> під курсором миші, останній пункт меню призведе до комбінованого абсолютного шляху &lt;<i>глибоко вдихніть</i>&gt;:<br />
+<span class="path">/MyData/source/haiku/generated/objects/haiku/x86_gcc2/release/apps/stylededit/StyledEdit</span>.</p>
+<p>При утриманні клавіш <span class="key">ALT</span> <span class="key">SHIFT</span>, підсвічується шлях від початку рядка до місця де знаходиться курсор миші.</p>
+<p>До речі, правий клік миші у вікні Терміналу вставить буфер обміну. У поєднанні з копіюванням частин підсвічених шляхів це може бути використано для швидкої навігації  по ієрархії папок з великою кількістю вкладень.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="hints" name="hints">Поради для роботи у Терміналі</a></h2>
-<ul><li><p>Переміщення файлу або теки з вікна Tracker в Термінал буде вставляти свій шлях в місці розташування курсору. Перетягування правою кнопкою мишки запропонує додаткові дії в контекстному меню:</p>
+<ul><li><p>Перетягування лівою кнопкою миші файлу або папки з вікна Tracker до вікна Термінала вставляє шлях до цього файлу/папки у місце де знаходиться курсор. Перетягування правою кнопкою миші відкриває контекстне меню, яке пропонує додаткові дії у відношенні об'єкта перетягування (файлу/папки):</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Вставити шлях (Insert path)</span></td><td> </td><td> вставить розташування файлу таке саме як хапання та кидання лівою кнопкою мишки.</td></tr>
-<tr><td><span class="menu">Змінити каталог (Change directory)</span></td><td> </td><td>каталог 
-зміниться до теки де буде хапатись файл.</td></tr>
-<tr><td><span class="menu">Створити посилання тут (Create link here)</span></td><td> </td><td>створить посилання на захоплюваний файл у поточній робочій директорії Терміналу.</td></tr>
-<tr><td><span class="menu">Перемістити сюди (Move here)</span></td><td> </td><td> перемістить захоплюваний файл до поточної робочої директорії Терміналу.</td></tr>
-<tr><td><span class="menu">Копіювати сюди (Copy here)</span></td><td> </td><td>зкопіює захоплюваний файл до поточної робочої директорії Терміналу.</td></tr>
+<tr><td><span class="menu">Вставити шлях</span></td><td> </td><td>Вставляє шлях до файлу так само, як і перетягування лівою кнопкою миші.</td></tr>
+<tr><td><span class="menu">Змінити каталог</span></td><td> </td><td>Змінює каталог на каталог об'єкта перетягування, тобто файлу/папки (команда <span class="cli">cd</span>).</td></tr>
+<tr><td><span class="menu">Створити посилання</span></td><td> </td><td>Створює посилання на об'єкт перетягування, тобто файл, у поточному робочому каталозі Термінала (команда <span class="cli">ln</span>).</td></tr>
+<tr><td><span class="menu">Перемістити сюди</span></td><td> </td><td> Переміщує об'єкт перетягування, тобто файл, у поточний робочий каталог Термінала (команда <span class="cli">mv</span>).</td></tr>
+<tr><td><span class="menu">Копіювати сюди</span></td><td> </td><td>Копіює об'єкт перетягування, тобто файл, у поточний робочий каталог Термінала (команда <span class="cli">cp</span>).</td></tr>
 </table></li>
-<li><p>You can open any file with its preferred application with the command <span class="cli">open <i>[filename]</i></span>. This also works with the representation of the current ("<span class="cli">.</span>") and parent ("<span class="cli">..</span>") folder which then open in a Tracker window. So, to open the current working directory, you type:</p>
+<li><p>Ви можете відкрити будь-який файл у пріоритетній програмі, за допомогою команди <span class="cli">open <i>[filename]</i></span>. Це також працює з представленням поточної («<span class="cli">.</span>») та батьківської («<span class="cli">..</span>») папок, які потім відкриваються у вікні Tracker. Отже, щоб відкрити поточний робочий каталог, виконайте команду:</p>
 <pre class="terminal">open .</pre></li>
-<li><p>If a command generates lots of output, things scroll by rapidly. Use a few of those commands and it gets difficult to scroll back and find the start of the last output. With <span class="menu">Edit | Clear all</span> or <span class="key">ALT</span> <span class="key">L</span> you can clear the scroll back buffer before issuing your command. Presto, a pristine empty scroll back buffer, you can just scroll back right to the top to catch the beginning of your output.</p>
+<li><p>Якщо команда генерує багато вихідних даних, все швидко прокручується. Якщо Ви використовуєте кілька таких команд, Вам буде важко прокрутити назад і знайти початок останнього виводу. За допомогою пункту меню <span class="menu">Дія | Очистити все</span> або <span class="key">ALT</span> <span class="key">L</span> Ви можете очистити буфер прокрутки перед виконанням команди. Тепер, коли буфер прокрутки порожній, Ви можете просто прокрутити назад до самого початку, щоб знайти початок виводу потрібної Вам команди.</p>
 </li></ul>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="customization" name="customization">Користувацькі налаштування Bash (Bash customization)</a></h2>
-<p>Виходячи з Unix, існує безліч можливостей для налаштування самого bash. Є два файли, які особливо важливі для користувача: <span class="cli">профіль (profile)</span> та <span class="cli">inputrc</span><br />
-Обидва файли можуть бути створені в теці <span class="path">/boot/home/config/settings/</span> та додані і перепризначені у теці <span class="path">/boot/system/settings/etc/</span>.</p>
+<a id="customization" name="customization">Настроювання Bash користувачем</a></h2>
+<p>Як йдеться ще з Unix, існує багато можливостей по настроюванню самого bash. Є два файли, які особливо важливі для користувача: <span class="cli">profile</span> та <span class="cli">inputrc</span>.<br />
+Обидва файли можна створити в каталозі <span class="path">/boot/home/config/settings/</span> і додати або замінити системні параметри за замовчуванням, визначені в <span class="path">/boot/system/settings/etc/</span>.</p>
 
-<h3>Файл профіль (profile)</h3>
-<p> <span class="cli">Профіль (profile)</span> завантажується кожен раз при відкритті нового Терміналу. Він встановлює всі види псевдонімів і змінних, які будуть впливати на поведінку та зовнішній вигляд bash. Ви знайдете безліч онлайн-ресурсів, які деталізують всі можливості.</p>
-<p>Haiku/BeOS Tip Server надає досить багато порад, для початку наприклад:</p>
+<h3>Файл «profile»</h3>
+<p>Файл <span class="cli">profile</span> завантажується кожного разу, коли Ви відкриваєте новий термінал. У ньому встановлюються всілякі псевдоніми і змінні, які впливають на поведінку і зовнішній вигляд bash. Ви знайдете багато онлайн-ресурсів, які детально описують усі можливості.</p>
+<p>Наприклад, на сервері Haiku/BeOS Tip є чимало порад, які допоможуть Вам розпочати роботу:</p>
 <ul>
-<li><a href="https://betips.net/?p=5">Customize your Terminal prompt</a></li>
-<li><a href="https://betips.net/?p=66">More prompt customizations</a></li>
-<li><a href="https://betips.net/?p=67">Enhancing bash</a></li>
-<li><a href="https://betips.net/?p=105">Custom keyboard shortcuts</a></li>
+<li><a href="https://betips.net/?p=713">Змінюємо запрошення рядка термінала на свій лад</a></li>
+<li><a href="https://betips.net/?p=66">Змінюємо запрошення рядка термінала на свій лад (продовження)</a></li>
+<li><a href="http://betips.net/1997/09/09/enhancing-bash/">Розширений bash</a></li>
+<li><a href="http://betips.net/1997/09/09/custom-keyboard-shortcuts/">Комбінації клавіш призначені користувачем</a></li>
 </ul>
-<p>There are more, <a href="https://betips.net/?s=profile">have a look</a>.</p>
+<p>Тут теж можете  <a href="http://betips.net/index.php?s=.profile">подивитись</a>.</p>
 
-<h3>Файл inputrc</h3>
-<p>Файл <span class="cli">inputrc</span> має справу з комбінаціями клавіш. Оскільки Haiku надає корисні типові значення, Вам напевно не доведеться возитись з цими складними налаштуваннями. Якщо у Вас виникне особлива потреба зверніться до одного з онлайн-ресурсів, наприклад до <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">The GNU Readline Library</a>.</p>
+<h3>Файл «inputrc»</h3>
+<p>Файл <span class="cli">inputrc</span> відповідає за прив'язку клавіш. Оскільки Haiku встановлює усі необхідні параметри за замовчуванням, Вам, ймовірно, не доведеться возитися з цими більш складними параметрами. Якщо у Вас є особливі вимоги, зверніться до одного з багатьох онлайн-ресурсів, наприклад, до <a href="http://tiswww.case.edu/php/chet/readline/rluserman.html">Бібліотеки GNU Readline</a>.</p>
 
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="stylededit.html">Редактор StyledEdit</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="textsearch.html">Пошук тексту (TextSearch)</a>  »
+ «  <a href="stylededit.html">StyledEdit (Текстовий редактор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="textsearch.html">TextSearch (Пошук тексту)</a>  »
 </span></div>
 </div>
 

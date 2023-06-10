@@ -11,20 +11,21 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Humdinger
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Bash і написання скриптів</title>
+	<title>Командна оболонка Bash і Написання сценаріїв</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -54,68 +55,66 @@
 <li><a href="../jp/bash-scripting.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="workshop-wlan.html">Workshop: Wlan</a> 
+ «  <a href="workshop-wlan.html">Майстер-клас: Wlan</a> 
 ::  <a href="contents.html" class="uplink">Зміст</a> 
-::  <a href="bootloader.html">Завантажувач системи (Boot Loader)</a>  » 
+::  <a href="bootloader.html">Boot Loader (Загружчик)</a>  » 
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h1>Bash і написання скриптів</h1>
+<h1>Командна оболонка Bash і Написання сценаріїв</h1>
 
-<p>"Скриптинг"- це техніка автоматизаціі процедур шляхом об'єднання команд і збереження їх у вигляді  текстових файлів, які називаються "скриптами" ("сценаріями"). Кожен раз коли Ви запускаєте скрипт, команди обробляються одна за одною так, ніби вони були введені в <a href="applications/terminal.html">Терміналі(Terminal)</a> вручну.<br />
-Скрипти можуть змінюватись від простих, що виконують кілька команд в певному порядку, до нетривіальних фрагментів коду, який вирішує надскадні завдання.</p>
-
-<h2>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="bash" name="bash">Bash</a></h2>
-<p>Since scripts rely naturally a lot on the shell they are interpreted by, you should first familiarize yourself with the BASH that's used by Haiku. There are many resources online as it's a widely used shell. One nice document is Johan Jansson's <a href="https://web.archive.org/web/20011205095723/http://www.beforever.com/bashtut.htm" class="printurl">Introduction to bash - a tutorial for bash under BeOS</a>.<br />
-The <a href="https://www.gnu.org/software/bash/manual/bash.pdf" class="printurl">Bash Reference Manual (PDF, 720 KiB)</a> is a nice resource to get into the details.</p>
+<p>«Написання сценаріїв» – це метод автоматизаціі процедур/завдань шляхом об'єднання команд і збереження їх у вигляді  текстових файлів, які називаються «сценарії» («скрипти»). Кожного разу, коли Ви запускаєте такий сценарій, команди обробляються одна за одною так само, якщо б Ви вводили їх у <a href="applications/terminal.html">термінал</a> вручну.<br />
+Сценарії можуть бути різними – від простого виконання декількох команд у певному порядку до хитромудрих фрагментів коду, які вирішують складні завдання.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="scripting-bible" name="scripting-bible">Біблія скриптингу</a></h2>
-<p>Після вивчення початків роботи у командній стрічці, настає час випустити себе у світ скриптингу. Знову ж таки силу силенну настанов Ви знайдете і у мережі і на полицях книгарень. Онлайн є доступна книга, що створена спеціально для Haiku <a href="http://www.birdhouse.org/beos/bible/bos/ch_scripting1.html" class="printurl">Scripting Chapter</a> (<a href="http://www.birdhouse.org/beos/bible/bos/BeOS.scripting.PDF">PDF, 900kb</a>) від автора BeOS Bible Скота Хакера (Scot Hacker's) .</p>
+<a id="bash" name="bash">Bash, або нова оболонка Борна (Bourne Again Shell)</a></h2>
+<p>Оскільки сценарії значною мірою залежать від оболонки, в якій вони інтерпретуються, Вам слід спочатку ознайомитися з інтерфейсом командного рядка BASH, який використовується в Haiku. В мережі Інтернет існує  багато ресурсів з інформацією про цю командну оболонку бо вона є досить поширеною.  Хорошим підручником послужить  робота Йохана Янссона (Johan Jansson) <a href="https://web.archive.org/web/20011205095723/http://www.beforever.com/bashtut.htm" class="printurl">Introduction to bash – a tutorial for bash under BeOS</a>.<br />
+<a href="https://www.gnu.org/software/bash/manual/bash.pdf" class="printurl">Bash Reference Manual (PDF, 720 KiB)</a> – чудовий ресурс для отримання більш детальної інформації.</p>
 
 <h2>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a><a id="user-scripts" name="user-scripts">Скрипти в  Haiku</a></h2>
-<p>Зрозуміло, що в роботі Haiku теж використовуються скрипти. Завантаження і завершення роботи - типово скриптові процедури. Сьогодні замість них використовується <a href="https://dev.haiku-os.org/wiki/LaunchDaemon">launch_daemon</a>. Ці чітко визначені послідовності можуть бути розширені за допомогою користувацьких скриптів.<br />
-Якщо  вони ще не існують Вам доведеться самостійно їх створити. В іншому випадку просто додайте потрібні команди в те місце де вони повинні виконуватись.</p>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="scripting-bible" name="scripting-bible">Головна книга по сценаріям</a></h2>
+<p>Після того, як Ви вивчили основи роботи в командній оболонці, настав час поступово занурюватися у світ сценаріїв. Знову ж таки, Ви знайдете безліч навчальних посібників та довідкових матеріалів в мережі Інтернет а також у книжкових магазинах. Дуже гарним вступом, який практично створено спеціально для Haiku, є розділ <a href="http://www.birdhouse.org/beos/bible/bos/ch_scripting1.html" class="printurl">Scripting Chapter</a> (<a href="http://www.birdhouse.org/beos/bible/bos/BeOS.scripting.PDF">PDF, 900kb</a>) з книги «The BeOS Bible» Скота Хакера (Scot Hacker) .</p>
+
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a><a id="user-scripts" name="user-scripts">Сценарії в Haiku</a></h2>
+<p>Раніше Haiku мала сценарії для завантаження та завершення роботи. Сьогодні замість них використовується демон запуску (<a href="https://www.haiku-os.org/docs/api/launch_intro.html">launch_daemon</a>). Втім, користувач все ще може доповнити цей процес за допомогою певних сценаріїв користувача. Якщо їх ще не існує, Вам доведеться створити необхідні файли самостійно. Надалі просто додайте свої команди до відповідного сценарію в якому вони будуть виконуваться.</p>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="userbootscript" name="userbootscript"> UserBootscript (Завантажувальний скрипт користувача)</a></h3>
-<p><span class="path">/boot/home/config/settings/boot/UserBootscript</span> буде виконаний після того як система завершить процес завантаження. Наприклад, Ви можете додати кілька програм, які стартуватимуть при кожному завантаженні:</p>
+<a id="userbootscript" name="userbootscript">UserBootscript</a></h3>
+<p>Сценарій <span class="path">/boot/home/config/settings/boot/UserBootscript</span> буде виконано після завершення процесу завантаження системи. Наприклад, Ви можете додати команди запуску програм і вони автоматично запускатимуться під час кожного завантаження:</p>
 <pre># Запуск LaunchBox
 /boot/system/apps/LaunchBox &amp;
 
 # Запуск Workspaces 
 /boot/system/apps/Workspaces &amp;</pre>
-<p>Не забудьте додати в кінці команди знак "<tt>&amp;</tt>" щоб запустити цей процес у фоновому режимі, інакше скрипт зависне , поки ця команда не буде завершена (У нашому випадку, коли запущений додаток буде закрито).</p>
+<p>Не забудьте додати в кінці команди символ «<tt>&amp;</tt>», щоб запустити цей процес у фоновому режимі. Якщо цього не зробити, сценарій зупинеться і буде очикувати завершення команди (у цьому прикладі: коли запущена програма буде закрита).</p>
 
-<p>Простішою альтернативою для додатків, котрі запускаються під час завантаження - розміщення посилання на потрібні програми в теці<span class="path">/boot/home/config/settings/boot/launch</span>. Це можна зробити правим кліком по додатку, котрий Ви бажаєте помістити в автозапуск вибором в меню <span class="menu">Створити посилання (Create Link)</span> і переміщенням по теках з використанням <a href="tracker.html#navigating">навігації</a> до потрібного каталогу.</p>
-
-<h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="usershutdownscript" name="usershutdownscript">The UserShutdownScript - <i>not yet working</i></a></h3>
-<p><span class="path">/boot/home/config/settings/boot/UserShutdownScript</span> буде виконаний в якості початкового етапу процесу завершення роботи.
-Якщо скрипт поверне ненульовий результат після свого закінчення, то завершення роботи буду призупинено.</p>
+<p>Простою альтернативою вищеописаному способу запуску програм під час завантаження є розміщення символьних посилань на ці програми у каталозі <span class="path">/boot/home/config/settings/boot/launch</span>. Це можна зробити правим кліком миші на програмі, яку Ви хочете запускати автоматично, потім вибрати в контекстному меню пункт <span class="menu">Створити посилання</span> і  з використанням <a href="tracker.html#navigating">навігації</a> перейти до вищезгаданого каталогу.</p>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="usershutdownfinishscript" name="usershutdownfinishscript">The UserShutdownFinishScript - <i>not yet working</i></a></h3>
-<p><span class="path">/boot/home/config/settings/boot/UserShutdownFinishScript</span> виконується в останню чергу в процесі завершення роботи. Майте на увазі, що більшість елементів системи вже не функціонують під час його виконання.</p>
+<a id="usershutdownscript" name="usershutdownscript">UserShutdownScript – <i>ще не існує, потрібно створити</i></a></h3>
+<p>Сценарій <span class="path">/boot/home/config/settings/boot/UserShutdownScript</span> буде виконано як перший крок у процесі завершення роботи системи. Якщо скрипт повертає ненульовий статус завершення своєї роботи, вимкнення буде перервано.</p>
+
+<h3>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="usershutdownfinishscript" name="usershutdownfinishscript"> UserShutdownFinishScript – <i>ще не існує, потрібно створити</i></a></h3>
+<p>Сценарій <span class="path">/boot/home/config/settings/boot/UserShutdownFinishScript</span> виконується як останній крок у процесі завершення роботи системи. Зауважте, що на момент виконання цього сценарію більшість частин системи вже завершили роботу.</p>
 
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="workshop-wlan.html">Workshop: Wlan</a> 
+ «  <a href="workshop-wlan.html">Майстер-клас: Wlan</a> 
 ::  <a href="contents.html" class="uplink">Зміст</a> 
-::  <a href="bootloader.html">Завантажувач системи (Boot Loader)</a>  » 
+::  <a href="bootloader.html">Boot Loader (Загружчик)</a>  » 
 </span></div>
 </div>
 

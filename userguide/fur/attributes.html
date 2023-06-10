@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -85,11 +85,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">I attributes tal Terminal</a></h2>
 <p>Se tu preferissis doprâ la rie di comant o tu planifichis di lavorâ cun tancj file doprant i script, a esistin diviers comants par controlâ i atribûts dal Terminâl.</p>
+<p>Plui informazions su chescj comants e lis lôr opzions a puedin jessi cjatadis scrivint il non dal comant cun daûr "<span class="cli">-h</span>" o "<span class="cli">--help</span>".</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> al liste i atribûts di un file, ma nol mostre i contignûts dai atribûts.</p>
-<pre>ûs: listattr 'nonfile' ['nonfile' ...]</pre>
+<p><span class="cli">listattr</span> al liste i atribûts di un file, ma nol mostre i contignûts dai atribûts. Par chê operazion tu scugnis zontâ il parametri <tt>-l</tt> o <tt>--long</tt>.</p>
+<pre>ûs: listattr [-l|--long] 'nonfile' ['nonfile' ...]</pre>
 <p>De nestre cature di schermi parsore:</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\ Botters
 File: Clara Botters
@@ -150,9 +151,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> al gjave dal dut un atribût di un file.</p>
 
-<pre>ûs: rmattr [-p] atrib nonfile1 [nonfile2...]
-         'atrib' al è il non di un atribût dal file
-         Se '-p' al è specificât, 'atrib' al è considerât come un model.</pre>
+<pre>ûs: rmattr [-p] atrib nonfile1 [nonfile2...]</pre>
 <p>Ancje se al at pratic al baste no jemplâ l'atribût "Fax", tu puedi gjavâlu dal dut dal file di Clara scrivint:</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\ Botters</pre>
 
@@ -165,7 +164,6 @@ Clara Botters : string : Whelton</pre>
 <p>Se tu desideris copiâ i atribûts e i dâts dal file stes, tu puedis zontâ la opzion "<span class="cli">-d</span>" o "<span class="cli">--data</span>".</p>
 
 <p><br /></p>
-<p>Plui informazions su chescj comants e lis lôr opzions a puedin jessi cjatadis scrivint il non dal comant cun daûr "<span class="cli">-h</span>" o "<span class="cli">--help</span>".</p>
 
 </div>
 </div>

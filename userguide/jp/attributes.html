@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -87,11 +87,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">ターミナルでの属性</a></h2>
 <p>コマンドラインが好みか、スクリプトを使って大量のファイルを処理するつもりなら、ターミナルから属性を制御できるコマンドがいくつか用意されています。</p>
+<p>以上のコマンドとそのオプションに関する詳しい情報は、コマンド名の次に "<span class="cli">-h</span>" または "<span class="cli">--help</span>" を続けてタイプすると得られます。</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> はファイルの属性を一覧表示します。属性の内容は表示しません。</p>
-<pre>使い方: listattr 'filename' ['filename' ...]</pre>
+<p><span class="cli">listattr</span> はファイルの属性を一覧表示します。属性の内容は表示しません。表示するためには、<tt>-l</tt> or <tt>--long</tt> オプションを追加する必要があります。</p>
+<pre>使い方: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>上のスクリーンショットの例です。
 </p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
@@ -153,9 +154,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> はファイルから属性を削除します。</p>
 
-<pre>使い方: rmattr [-p] attr filename1 [filename2...]
-         'attr' はそのファイル属性の名前です。
-         '-p' が指定されると、'attr' はパターンとみなされます。</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>実用的には、単に "Fax" 属性の内容を入力しなければ十分ですが、次のようにタイプすると、Clara のファイルから "Fax" 属性を完全に削除できます。</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -168,7 +167,6 @@ Clara Botters : string : Whelton</pre>
 <p>属性に加えてファイルの内容そのものもコピーする場合は、"<span class="cli">-d</span>" または "<span class="cli">--data</span>" オプションを追加します。</p>
 
 <p><br /></p>
-<p>以上のコマンドとそのオプションに関する詳しい情報は、コマンド名の次に "<span class="cli">-h</span>" または "<span class="cli">--help</span>" を続けてタイプすると得られます。</p>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tłumaczenie tej strony jest niekompletne. Nieukończone części wyświetlane są w języku angielskim.</div>
 
 <h1>Atrybuty</h1>
 
@@ -87,11 +88,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Atrybuty w aplikacji Terminal</a></h2>
 <p>Jeżeli preferujesz używanie linii komend z konsoli tekstowej lub planujesz obsługę wielu plików przy pomocy skryptu, to masz do dyspozycji wiele poleceń do kontroli atrybutów z Terminala.</p>
+<p>Więcej informacji na temat tej komendy możesz uzyskać po wprowadzeniu jej z jedną z następujących opcji „<span class="cli">-h</span>” lub „<span class="cli">--help</span>”.</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> listuje nazwy atrybutów pliku lub plików bez pokazywania zawartości tych atrybutów.</p>
-<pre>użyj: listattr 'nazwa pliku' ['nazwa pliku' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>Z naszej migawki ekranowej powyżej:</p>
 <pre class="terminal"> ~/osoby -&gt;listattr Clara\\ Botters
 File: Clara Botters
@@ -152,9 +154,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> całkowicie usuwa atrybut przywiązany do pliku.</p>
 
-<pre>Użyj: rmattr [-p] atrybut nazwa_pliku_1 [nazwa_pliku_2...]
-        'atrybut' jest nazwą atrybutu przywiązanego do pliku, jeśli opcja
-        '-p' jest włączona to 'atrybut' jest traktowany jako wzorzec.</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>Jeżeli w praktyce chciałbyś nie wypełniać atrybutu „Fax” możesz go całkowicie usunąć wydając następujące polecenie:</p>
 <pre class="terminal"> ~/osoby -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -167,7 +167,6 @@ Clara Botters : string : Whelton</pre>
 <p>Jeżeli chcesz skopiować atrybuty wraz z danymi pliku możesz użyć następujących opcji „<span class="cli">-d</span>” lub „<span class="cli">--data</span>”.</p>
 
 <p><br /></p>
-<p>Więcej informacji na temat tej komendy możesz uzyskać po wprowadzeniu jej z jedną z następujących opcji „<span class="cli">-h</span>” lub „<span class="cli">--help</span>”.</p>
 
 </div>
 </div>

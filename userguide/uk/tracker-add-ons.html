@@ -14,14 +14,14 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Додатки Tracker'а  (Tracker Add-Ons)</title>
+	<title>Tracker – Доповнення</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -51,41 +51,41 @@
 <li><a href="../jp/tracker-add-ons.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="tracker.html">Tracker</a> 
+ «  <a href="tracker.html">Tracker (Файловий менеджер)</a> 
 ::  <a href="contents.html" class="uplink">Зміст</a> 
-::  <a href="keyboard-shortcuts.html">Гарячі клавіші</a>  »
+::  <a href="keyboard-shortcuts.html">Комбінація клавіш</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
 
-<h1>Додатки Tracker'а  (Tracker Add-Ons)</h1>
+<h1>Tracker – Доповнення</h1>
 
-<p>Додатки можуть встановити доповнення на які вони могли би легко посилатися при виборі у Tracker'і. Тільки доповнення, які можуть обробляти конкретний тип файлу представлені в розділі <span class="menu">Доповнення (Add-Ons)</span> з контекстного меню абоз меню <span class="menu">Файл (File)</span> вікна Tracker'а. Деяким доповненням не обов'язково потрібен файл коли вони працюють, і таким чином, вони завжди присутні.</p>
-<p>Нові доповнення Tracker'а що не ідуть зосновним пакетом .hpkg , можуть бутисвстановлені копіюванням до відповідної теки non-packaged (дивись розділ <a href="filesystem-layout.html">Макет файлової системи (Filesystem layout)</a>):</p>
+<p>Програми можуть встановлювати доповнення, щоб їх можна було легко викликати для вибраних файлів у вікні Tracker. Тільки доповнення, які можуть обробляти конкретний тип файлу, представлені у пункті контекстного меню <span class="menu">Доповнення</span> або меню <span class="menu">Файл</span> вікна Tracker. Деяким доповненням не обов'язково потрібен файл для роботи, тому вони завжди присутні у списку.</p>
+<p>Нові доповнення Tracker, які не входять до складу стандартних пакетів .hpkg, можуть бути встановлені шляхом копіювання до відповідного каталога «non-packaged» (дивіться розділ <a href="filesystem-layout.html">Структура файлової системи (Filesystem layout)</a>):</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/non-packaged/add-ons/Tracker/</span></td><td>   </td><td>для доповнень доступних кожному користувачеві</td></tr>
-<tr><td><span class="path">/boot/home/config/non-packaged/add-ons/Tracker/</span></td><td>   </td><td>для доповнень доступних вам особисто</td></tr>
+<tr><td><span class="path">/boot/home/config/non-packaged/add-ons/Tracker/</span></td><td>   </td><td>для доповнень доступних окремому користувачеві</td></tr>
 </table>
-<p>Ім'я файла доповнення може мати тире та прописну літеру і тоді стає доступним з  гарячими клавішами. Наприклад, <span class="app">Open Target Folder-O</span> відкриється з <span class="key">ALT</span> <span class="key">OPT</span> <span class="key">O</span>.<br />
-Звичайно, ви повинні подбати про можливість повторень гарячих клавіш. Вони не повинні бути однакові для різних доповнень.</p>
+<p>Якщо до ім'я файлу доповнення додати тире та велику літеру, тоді його можна викликати за допомогою комбінації клавіш. Наприклад, <span class="app">Open Target Folder-O</span> відкриється за допомогою <span class="key">ALT</span> <span class="key">OPT</span> <span class="key">O</span>.<br />
+Звісно, при виборі комбінації клавіш Ви маєте подбати про можливі колізії. Вони не повинні бути однакові для різних доповнень.</p>
 
-<h2><a id="system-add-ons" name="system-add-ons">Доповнення Tracker'а Haiku</a></h2>
-<p>Ось доповнення Tracker'а що присутні при кожному встановленні Haiku:</p>
+<h2><a id="system-add-ons" name="system-add-ons">Стандартні доповнення Tracker</a></h2>
+<p>При інсталяції Haiku в системі автоматично встановлюються наступні доповнення Tracker:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="4"> 
 	<tr><td class="onelinetop"><b>Background</b><i>-B</i></td>
-		<td valign="top">Відкриває налаштування <a href="preferences/backgrounds.html">Тло (Background)</a> для зміни кольору або зображення столу. Викликана на файлі зображення панель Тло запускається з цим образом уже завантаженим в якості потенційного фону.</td></tr>
+		<td valign="top">Відкриває панель налаштувань <a href="preferences/backgrounds.html">Background (Фон)</a> для зміни кольору або фонового зображення робочого столу чи будь-якого каталога або папки. Якщо викликати панель для вибраного файла зображення, вона запускається з цим зображенням уже завантаженим в якості потенційного фону.</td></tr>
 	<tr><td class="onelinetop"><b>DiskUsage</b><i>-I</i></td>
-		<td valign="top">Запускає додаток <a href="applications/diskusage.html">Використання диску (DiskUsage)</a> з відповідною текою у якості основи.</td></tr>
+		<td valign="top">Запускає програму <a href="applications/diskusage.html">DiskUsage (Використання диску)</a> з відповідним каталогом або папкою у якості об'єкта для аналізу.</td></tr>
 	<tr><td class="onelinetop"><b>FileType</b><i>-F</i></td>
-		<td valign="top">Викликаний на файлі, відкриває його специфічну панель <a href="filetypes.html"> Filetype </a> , в іншому випадку основні налаштування Типів файлів (FileTypes).</td></tr>
+		<td valign="top">Якщо викликається для конкретного файлу або папки, то відкриває специфічну панель <a href="filetypes.html">типу файлу</a> для цього елементу, в іншій ситуації відкривається загальна панель налаштувань FileTypes (Типи файлів).</td></tr>
 	<tr><td class="onelinetop"><b>Open Target Folder</b><i>-O</i></td>
-		<td valign="top">Використовується тільки на пов'язаному файлі та відкриває теку, в якій він знаходиться.</td></tr>
+		<td valign="top">Використовується тільки для пов'язаного файлу та відкриває каталог або папку, в якій знаходиться файл.</td></tr>
 	<tr><td class="onelinetop"><b>TextSearch</b><i>-G</i></td>
-		<td valign="top">Запускає доповнення <a href="applications/textsearch.html">TextSearch</a> для пошуку стрічки у вибраній теці(та її підтеках).</td></tr>
+		<td valign="top">Запускає програму <a href="applications/textsearch.html">TextSearch (Пошук тексту)</a> для пошуку рядка у вибраному каталозі або папці (та їх вкладених папках).</td></tr>
 	<tr><td class="onelinetop"><b>ZipOMatic</b><i>-Z</i></td>
-		<td valign="top">Додає вибірку до архіву. Викликається без вибору відкриває панель для створення архіву простим перетягуванням.</td></tr>
+		<td valign="top">Додає виділені файли або папки до zip-архіву. Якщо викликається без вибраних файлів або папок, відкриває панель для створення архіву простим перетягуванням.</td></tr>
 </table>
 
 </div>
@@ -93,9 +93,9 @@
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="tracker.html">Tracker</a> 
+ «  <a href="tracker.html">Tracker (Файловий менеджер)</a> 
 ::  <a href="contents.html" class="uplink">Зміст</a> 
-::  <a href="keyboard-shortcuts.html">Гарячі клавіші</a>  »
+::  <a href="keyboard-shortcuts.html">Комбінація клавіш</a>  »
 </span></div>
 </div>
 

@@ -61,7 +61,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Aplicazions a rie di comant specifichis par Haiku</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -137,9 +136,9 @@ Un esempli:</p>
 		<td valign="top"><p><span class="cli">diskimage</span> ti permet di regjistrâ un file regolâr come dispositîf disc. Par sempli, tu puedis regjistrâ une imagjin anyboot di Haiku, montâle in Tracker e lì copiâ, modificâ o gjavâ file prime di doprâle come sorzint intal Instaladôr.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
-Without parameter, <span class="cli">launch_roster</span> lists all apps/services that are under its control.<br />
-For example, this will stop the re-launching of the Deskbar:</p>
+		<td valign="top"><p>Il launch_daemon al invie ogni sorte di servizi e aplicazion al inviament dal sisteme. Par cualchidun al è stât istruît in mût che al torni a inviâju se a jessin. Se no tu desideris che al funzioni cussì – magari tu vuelis provâ une version modificade di Tracker, par esempli – tu dopris <span class="cli">launch_roster</span> par fâ il  <tt>stop</tt> dal tornâ a inviâ la aplicazion prime che e jessî. In maniere simile, tu puedis fâi di gnûf il <tt>start</tt> o otignî <tt>info</tt> in merit.  Il parametri <tt>log</tt> al stampe un regjistri di ducj i events relatîfs a launch_daemon.<br />
+Cence parametris, <span class="cli">launch_roster</span> al liste dutis lis aplicazion/servizis che a stan sot dal so control.<br />
+Par esempli, chest al fermarà di tornâ a inviâ il Deskbar:</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p><span class="cli">mountvolume</span> al ven preferît di tancj par montâ discs e partizions  locâi, parcè che il so ûs al è ce tant sempliç: al baste clamâlu cul non de partizion e il zûc al è fat. Prove <tt>--help</tt> par vê plui opzions.</p>
@@ -165,10 +164,10 @@ mountvolume RAMimage</pre>
 <p>Al è une vore impuartant dismontâ simpri in maniere nete il to ramdisk, sedi dal Tracker opûr cun <span class="cli">unmount /RAMimage</span>, in câs contrari lis modifichis no vignaran scritis su pal file imagjin!</p>
 </td></tr>
 <tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>This command sets the screen mode (resolution, bit depth, refresh rate). Normally, you'd set that in the Screen preferences. Another parameter makes it useful in combination with the Shortcuts preferences: e.g. <span class="cli">--brightness +3</span> increases the brightness by "3". Useful to change the backlight with a key combination.</p>
+		<td valign="top"><p>Chest comant al configure la modalitât dal schermi (risoluzion, profonditât colôr, frecuence di inzornament). Di norme, tu ju configuris tes preferencis dal Schermi. U altri parametri lu rint util in cumbinazion cu lis preferencis des Scurtis: p.e. <span class="cli">--brightness +3</span> al incrès la luminositât di "3". Util par cambiâ la iluminazion par daûr cuntune cumbinazion di tascj.</p>
 </td></tr>
 <tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>This command sets the volume of the system master output. Besides specific values in dB, you can <span class="cli">--togglemute</span>, <span class="cli">--mute</span> or <span class="cli">--unmute</span> and <span class="cli">--increase</span> or <span class="cli">--decrease</span> the volume. Useful to assign key combinations with the Shortcuts preferences.</p></td></tr>
+		<td valign="top"><p>Chest comant al configure il volum su la jessude principâl di sisteme. Sore a valôrs specifics in dB, tu puedis indicâ <span class="cli">--togglemute</span> (comute cidin), <span class="cli">--mute</span> (cidine) o <span class="cli">--unmute</span> (ative sun) e <span class="cli">--increase</span> (auemnte) o <span class="cli">--decrease</span> (diminuìs) il volum. Util par assegnâ lis cumbinazions di tascj cu lis preferencis des Scurtis.</p></td></tr>
 </table>
 </div>
 </div>

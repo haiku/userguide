@@ -75,7 +75,7 @@ On computers that use UEFI for booting instead of the classic BIOS, you need to 
 <a id="options" name="options">Opsi Boot Loader </a></h2>
 <p>Ketika sampai disana, anda akan dihadapkan pada empat menu:</p>
 <table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
-<tr><td><b>Select boot volume</b></td><td> </td><td>Pilih instalasi / negara bagian Haiku untuk memulai (lihat <a href="#troubleshooting">Pemecahan Masalah</a> di bawah).</td></tr>
+<tr><td><b>Select boot volume/state</b></td><td> </td><td>Pilih instalasi / negara bagian Haiku untuk memulai (lihat <a href="#troubleshooting">Pemecahan Masalah</a> di bawah).</td></tr>
 <tr><td><b>Select safe mode options</b></td><td> </td><td>Ada beberapa opsi untuk dicoba jika terjadi masalah terkait perangkat keras atau jika sistem menjadi tidak stabil atau tidak bisa di-boot karena add-on yang salah tingkah. Saat memindahkan bilah pilihan ke suatu opsi, penjelasan singkat muncul di bagian bawah layar.</td></tr>
 <tr><td></td><td></td><td>
 	<p><span class="menu">Safe mode</span><br />
@@ -146,7 +146,7 @@ Menyimpan syslog dari sesi Haiku sebelumnya ke disk. Saat ini hanya volume FAT32
 <li><p>Jika mengaktifkan <span class="menu">Use fail-safe graphics driver</span> menyelesaikan masalah Anda dengan kembali ke grafik VESA, Anda dapat menjadikan pengaturan ini permanen dengan menghapus <tt>#</tt> dari baris  <i>#fail_safe_video_mode true</i> dalam text file <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span>.</p></li>
 <li><p>Jika driver yang menyinggung, add-on dll diinstal dalam hierarki sistem, hal-hal menjadi sedikit lebih rumit, karena area itu hanya baca. Di sini, <span class="menu">Blacklist entries</span> ikut bermain. Dengan itu, Anda dapat menavigasi keseluruhan hierarki sistem dan nonaktifkan komponen yang mengacaukan Anda dengan memeriksa entri dengan kunci <span class="key">SPACE</span> or <span class="key">RETURN</span> key. <span class="key">ESC</span> mengembalikan Anda satu tingkat ke direktori induk.</p>
 <p>Online, ada artikel <a href="http://www.haiku-os.org/blog/barrett/2013-12-15_how_permanently_blacklist_package_file">Bagaimana secara permanen mem-dafarhitamkan berkas paket</a> yang menunjukkan cara membuat pengaturan tetap Secara Permanen.</p></li>
-<li><p>Under <span class="menu">Select boot volume</span> you can specify what former "version" of Haiku to boot. Every time you un/install a package, the old state is saved and you can boot into it by choosing it from the list presented in the boot loader options.<br />
+<li><p>Under <span class="menu">Select boot volume/state</span> you can specify what former "version" of Haiku to boot. Every time you un/install a package, the old state is saved and you can boot into it by choosing it from the list presented in the boot loader options.<br />
 So, if you encounter boot problems after installing some package, boot a Haiku state from before that time and uninstall the offending package. You can permanently revert to a specific Haiku revision as described in the topic <a href="applications/softwareupdater.html#downgrading">SoftwareUpdater</a>.</p></li>
 </ul>
 <h2>

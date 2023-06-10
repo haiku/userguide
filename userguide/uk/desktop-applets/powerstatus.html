@@ -11,20 +11,21 @@
  *		Maciej Bałuta (Google Code-In student)
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Стан живлення (PowerStatus)</title>
+	<title>PowerStatus (Стан живлення)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -64,36 +65,36 @@
 <div id="content">
 <div>
 
-<h2><img src="../../images/desktop-applets-images/powerstatus-icon_64.png" alt="powerstatus-icon_64.png" width="64" height="64" />Стан живлення (PowerStatus)</h2>
+<h2><img src="../../images/desktop-applets-images/powerstatus-icon_64.png" alt="powerstatus-icon_64.png" width="64" height="64" />   PowerStatus (Стан живлення)</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Аплети Робочого столу (Desktop Applets)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Desktop Applets (Аплети Робочого стола)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/PowerStatus</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/PowerStatus settings</span></td></tr>
 </table>
-<p>Стан живлення (PowerStatus) показує інформацію про рівень заряду (розряду) батареї та використовується тільки у мобільних комп'ютерах. Якщо він не працює то при запуску аплет спитає у якому вигляді його відкрити у режимі вікна чи поселити у Deskbar. У режимі вікна Ви отримуєте можливість зміни іконки при зміні розміру вікна та використати <a href="../gui.html#replicants">Реплікант (Replicant)</a> для переміщення його на робочий стіл.<br />
-Будь-де встановлений він працює через контекстне меню, яке викликається правою кнопкою мишки.</p>
-<p>Зауваження: Стан живлення (PowerStatus) для роботи потребує працюючої підтримки ACPI.</p>
+<p>Аплет PowerStatus (Стан живлення) показує інформацію про рівень заряду (розряду) батареї і використовується тільки на мобільних комп'ютерах. Якщо аплет ще не запущено, під час запуску Ви зможете вибрати в якому режимі буде відкрита програма: у віконному режимі чи на панелі задач Deskbar. У віконному режимі можна змінити розмір піктограми, змінивши розмір вікна або використати маркер <a href="../gui.html#replicants"> репліканта</a>, щоб перетягнути його на робочий стіл.<br />
+Де б не було встановлено аплет, ним можна управляти за допомогою контекстного меню, яке відкривається правою кнопкою миші.</p>
+<p>Примітка: PowerStatus вимагає підтримки ACPI програмним та апаратним забезпеченням комп'ютерної системи.</p>
 <img src="../images/powerstatus-images/applet.png" alt="PowerStatus applet" />
-<p>Контекстне меню пропонує наступні опції:</p>
+<p>Контекстне меню складається з наступних пунктів:</p>
 <table summary="options" border="0" cellspacing="0" cellpadding="2">
-	<tr><td><span class="menu">Показувати мітки текстом (Show text label)</span></td><td style="width:10px"></td><td>Показує рівень заряду батареї у відсотках або час, що залишився.</td></tr>
-	<tr><td><span class="menu">Показувати іконку стану (Show status icon)</span></td><td></td><td>Показує іконку аплета.</td></tr>
-	<tr><td class="onelinetop"><span class="menu">Показувати процент / час (Show percent / time)</span></td><td></td><td>Перемикання між режимами відображення рівня заряду батареї у відсотках або часу, що залишився (Пункт <span class="menu">Показувати мітку текстом (Show text label)</span> має бути активним.</td></tr>
-	<tr><td><span class="menu">Інформація про батарею... (Battery info...)</span></td><td></td><td>Показує розширене вікно інформації про батарею.</td></tr>
-	<tr><td><span class="menu">Про... (About...)</span></td><td></td><td>Показує вікно Про... (About...).</td></tr>
-	<tr><td><span class="menu"> Вийти (Quit)</span></td><td></td><td>Вихід з аплету Стан живлення ( PowerStatus).</td></tr>
+	<tr><td><span class="menu">Показати надпис заряду</span></td><td style="width:10px"></td><td>Показує рівень заряду батареї у відсотках або час, що залишився.</td></tr>
+	<tr><td><span class="menu">Показати значок стану</span></td><td></td><td>Показує значок заряду батареї.</td></tr>
+	<tr><td class="onelinetop"><span class="menu">Показати процент/час</span></td><td></td><td>Перемикання між режимами відображення рівня заряду батареї у відсотках або часу, що залишився (пункт <span class="menu">Показати надпис заряду</span> має бути активним).</td></tr>
+	<tr><td><span class="menu">Інфо батареї…</span></td><td></td><td>Показує вікно з розширеною інформацією про батарею.</td></tr>
+	<tr><td><span class="menu">Про програму…</span></td><td></td><td>Показує вікно з інформацією про програму (About…).</td></tr>
+	<tr><td><span class="menu">Вийти</span></td><td></td><td>Завершує роботу аплету PowerStatus.</td></tr>
 
 </table>
-<p>Коли пункт <span class="menu">Показувати текстові мітки (Show text label)</span> активний, рівень батареї поки триває зарядка відображається в дужках.</p>
+<p>Коли пункт <span class="menu">Показати надпис заряду</span> активний, під час заряджання, в дужках відображається рівень заряду акумулятора.</p>
 
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="networkstatus.html">Стан мережі (NetworkStatus)</a> 
-::  <a href="../desktop-applets.html" class="uplink">Desktop Applets</a> 
-::  <a href="processcontroller.html">Контролер процесів (ProcessController)</a>  »
+ «  <a href="networkstatus.html">NetworkStatus (Стан мережі)</a> 
+::  <a href="../desktop-applets.html" class="uplink">Desktop Applets (Аплети Робочого стола)</a> 
+::  <a href="processcontroller.html">ProcessController (Контро́лер процесів)</a>  »
 </span></div>
 </div>
 

@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		taos
  *
@@ -70,16 +71,16 @@
 <tr><td>Einstellungen:</td><td></td><td><i>keine</i><br />Eine Sicherung des MBR wird standardmäßig in <span class="path">~/config/settings/bootman/</span> gespeichert</td></tr>
 </table>
 <p><br /></p>
-<p>Wird die Haiku-Partition nicht zu einem bereits installierten Bootmanager wie GRUB hinzugefügt, kann der Haiku BootManager ein einfaches Bootmenü im MBR (Master Boot Record) anlegen, das etwa so aussieht:</p>
+<p>Wird die Haiku-Partition nicht zu einem bereits installierten Bootmanager wie GRUB hinzugefügt, kann der Haiku BootManager ein einfaches Bootmenü im MBR (Master Boot Record) anlegen. Das Bootmenü sieht in etwa so aus:</p>
 <img src="../images/apps-images/bootmenu.png" alt="bootmenu.png" />
-<div class="box-info">BootManager wurde noch nicht ausgiebig getestet und unterliegt noch einigen Einschränkungen, auf die hingewiesen wird, wenn sie nicht erfüllt sind: das Menü kann nur auf der ersten Festplatte installiert werden und benötigt 2 KiB freien Speicherplatz hinter dem MBR (Master Boot Record).</div>
-<p>BootManager führt durch den Installationsprozess des Bootmenüs.</p>
+<div class="box-info">BootManager wurde noch nicht ausgiebig getestet und unterliegt noch einigen Einschränkungen: BootManager kann nur auf der ersten Festplatte das Bootmenü installieren und benötigt dafür 2 KiB freien Speicherplatz hinter dem MBR (Master Boot Record). BootManager weist darauf hin, wenn das nicht erfüllt sein sollte. </div>
+<p>BootManager führt schrittweise durch die Installation des Bootmenüs:</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="1-drives" id="1-drives">Auswählen des Ziellaufwerks</a></h2>
 <img src="../images/apps-images/bootmanager-1.png" alt="bootmanager-1.png" />
-<p>Aus einer Liste aller verfügbaren Laufwerke wird das gewünschte Ziel ausgewählt. Falls auf diesem Laufwerk bereits ein Bootmenü existiert, kann mit <span class="button">Entfernen</span> auf einfache Weise ein zuvor gesichertes Backup des MBR wiederhergestellt werden, wodurch das Bootmenü wieder entfernt wird.<br />
-Ansonsten kann mit <span class="button">Installieren</span> der Installationsprozess fortgesetzt werden.</p>
+<p>Aus einer Liste aller verfügbaren Laufwerke wird das gewünschte Ziel ausgewählt. Falls auf diesem Laufwerk bereits ein Bootmenü existiert, kann mit <span class="button">Entfernen</span> ein zuvor gesichertes Backup des MBR wiederhergestellt werden und damit das Bootmenü entfernt.<br />
+Mit <span class="button">Installieren</span> wird der Installationsprozess fortgesetzt.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="2-backup" id="2-backup">Sichern des MBR (Master Boot Record)</a></h2>

@@ -63,16 +63,15 @@
 
 <div id="content">
 <div>
-<div class="box-info">このページの翻訳はまだ完全ではありません。完成するまでは、未完成の部分はオリジナルの英文を使用します。</div>
 
-<h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Haiku 特有のコマンドラインアプリケーション</h2>
+<h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Haiku 独自のコマンドラインアプリケーション</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>場所:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br />
 <span class="path">/boot/system/non-packaged/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
 </table>
 <p><br /></p>
 <p>Haiku に標準装備されているすべてのコマンドラインアプリケーションは、<span class="path">/boot/system/bin/</span> の中にあります。ユーザー自身の、または追加でインストールしたコマンドラインアプリケーションは同様にそこにあるか、hpkg パッケージからインストールされているなら、<span class="path">~/config/bin/</span> に現れるでしょう。これらはまた、<span class="path">/boot/system/non-packaged/bin/</span> あるいは、<span class="path">~/config/non-packaged/bin/</span> に置けます。これらすべてのパスは PATH 環境変数の一部なので、コマンドは自動的に見つかります。<br />
-以下は、Haiku 特有のコマンドラインアプリケーションの完全なリストではありません。試しに、もっとも有用な一部のコマンドを単に強調しているだけです。<span class="path">bin/</span> フォルダーにあるものをユーザー自身で少し調査することを促します。コマンドを <tt>--help</tt> 引数を付けて実行すると、コマンドの使い方とさまざまなオプションについて表示します。</p>
+以下は、Haiku 独自のコマンドラインアプリケーションの完全なリストではありません。試しに、もっとも有用な一部のコマンドを単に強調しているだけです。<span class="path">bin/</span> フォルダーにあるものをユーザー自身で少し調査することを促します。コマンドを <tt>--help</tt> 引数を付けて実行すると、コマンドの使い方とさまざまなオプションについて表示します。</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="cli-attributes" name="cli-attributes">属性に関するコマンド: <span class="cli">listattr</span>, <span class="cli">catattr</span>、<span class="cli">addattr</span>、<span class="cli">rmattr</span>、<span class="cli">copyattr</span></a></h3>
@@ -165,10 +164,9 @@ mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMimage</pre>
 mountvolume RAMimage</pre>
 <p>Tracker からか、<span class="cli">unmount /RAMimage</span> のどちらかで、RAM ディスクを常に正常にアンマウントすることはとても重要です。そうしなければ、変更がイメージファイルに書き込まれないでしょう!</p></td></tr>
 <tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>This command sets the screen mode (resolution, bit depth, refresh rate). Normally, you'd set that in the Screen preferences. Another parameter makes it useful in combination with the Shortcuts preferences: e.g. <span class="cli">--brightness +3</span> increases the brightness by "3". Useful to change the backlight with a key combination.</p>
-</td></tr>
+		<td valign="top"><p>このコマンドはスクリーンモード (解像度、色深度、リフレッシュレート) を設定します。通常それらは画面プリファレンスで設定します。もう一つの引数がショートカットプリファレンスとの組み合わせでこのコマンドを便利にします。たとえば、 <span class="cli">--brightness +3</span> は明るさを "3" に上げます。キーコンビネーションで明るさを変化させるのに便利です。</p></td></tr>
 <tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>This command sets the volume of the system master output. Besides specific values in dB, you can <span class="cli">--togglemute</span>, <span class="cli">--mute</span> or <span class="cli">--unmute</span> and <span class="cli">--increase</span> or <span class="cli">--decrease</span> the volume. Useful to assign key combinations with the Shortcuts preferences.</p></td></tr>
+		<td valign="top"><p>このコマンドはマスター出力のボリュームを設定します。dB で値を指定するほかに、<span class="cli">--togglemute</span>, <span class="cli">--mute</span> または <span class="cli">--unmute</span> でき、ボリュームの <span class="cli">--increase</span> または <span class="cli">--decrease</span> もできます。ショートカットプリファレンスでキーコンビネーションを割り当てると便利です。</p></td></tr>
 </table>
 </div>
 </div>

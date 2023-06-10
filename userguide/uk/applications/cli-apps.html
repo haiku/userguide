@@ -11,20 +11,21 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Humdinger
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Додатки командної стрічки</title>
+	<title>Програми командного рядка</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -62,123 +63,120 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Додатки командної стрічки властиві Haiku</h2>
+<h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />   Програми командного рядка характерні для Haiku</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Розташування:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br />
 <span class="path">/boot/system/non-packaged/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
 </table>
 <p><br /></p>
-<p>Всі додатки командної стрічки, що постачаються з Haiku знаходяться або в <span class="path">/boot/system/bin</span> або в
- <span class="path">/boot/common/bin</span>. Ваші власні або додатково встановлені <span class="path">~/config/bin</span>. Всі ці розташування є частиною змінної PATH  і тому автоматично знаходяться.<br />
-Нижче наведений список не є вичерпним списком всіх специфічних додатків командної стрічки Haiku, а лише спробою виділення найкорисніших, що можливо вам смакуватимуть. Спробуйте ознайомитись з тим що є у теці <span class="path">bin/</span> на свій розсуд. Виконання програми з параметром  <tt>--help</tt> показує використання команди і всіх її можливих варіантів.</p>
+<p>Усі програми командного рядка, які входять до дистрибутиву Haiku, знаходяться у каталозі <span class="path">/boot/system/bin</span>. Ваші власні або додатково встановлені програми командного рядка з'являться там же, або у <span class="path">~/config/bin</span>, якщо вони встановлюються з пакета .hpkg. В іншому випадку Ви можете помістити їх у <span class="path">/boot/system/non-packaged/bin/</span> або <span class="path">~/config/non-packaged/bin/</span>. Усі ці місця є частиною змінної оточення «PATH» і тому будуть знайдені автоматично.<br />
+Наведений нижче список не є вичерпним переліком усіх програм CLI характерних для Haiku, він лише показує декілька найкорисніших з них, щоб дати Вам уявлення про їхню роботу. Вам буде корисно самостійно розібратися з тим, що знаходиться у каталозі <span class="path">bin/</span>. Запуск програми з параметром <tt>--help</tt> показує справку по використанню команди і всі її різноманітні опції.</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-attributes" name="cli-attributes">Стосовно атрибутів: <span class="cli">listattr</span>, <span class="cli">catattr</span>, <span class="cli">addattr</span>, <span class="cli">rmattr</span>, <span class="cli">copyattr</span></a></h3>
-<p>Дані команди використовуються для відображення, зчитування, додавання та видалення атрибутів файлів. Пам'ятайте, що ці мета-дані в даний час доступні тільки на томах відформатованих у BFS. Переміщення файлів на інші файлові системи видалить всі атрибути!<br />
-Всі ці команди описано в розділі <a href="../attributes.html#attributes-terminal">Атрибути у Терміналі</a>.</p>
+<a id="cli-attributes" name="cli-attributes">Команди пов'язані з атрибутами: <span class="cli">listattr</span>, <span class="cli">catattr</span>, <span class="cli">addattr</span>, <span class="cli">rmattr</span>, <span class="cli">copyattr</span></a></h3>
+<p>Ці команди використовуються для відображення, зчитування, додавання і видалення атрибутів файлів. Пам'ятайте, що ці метадані наразі доступні лише на томах у форматі BFS. Переміщення файлів до інших файлових систем позбавляє файли усіх атрибутів!<br />
+Усі ці команди описано у розділі <a href="../attributes.html#attributes-terminal">Атрибути у Терміналі</a>.</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-index" name="cli-index">Стосовно index: <span class="cli">lsindex</span>, <span class="cli">mkindex</span>, <span class="cli">reindex</span>, <span class="cli">rmindex</span></a></h3>
-<p>Цими командами  ви перераховуєте, виконуєте, переиндексовуєте та видаляєте атрибути  BFS індексу. Кожен том має власний індекс, пам'ятайте, це при копіюванні файлів з одного тому на інший.<br />
-Ці команди описані в розділі <a href="../index.html">Index</a>.</p>
+<a id="cli-index" name="cli-index">Команди пов'язані з індексом: <span class="cli">lsindex</span>, <span class="cli">mkindex</span>, <span class="cli">reindex</span>, <span class="cli">rmindex</span></a></h3>
+<p>За допомогою цих команд Ви можете обробляти списки, створювати, переіндексувати та видаляти атрибути з індексу BFS. Кожен том має власний індекс, пам'ятайте про це, коли копіюєте файли з одного тому до іншого.<br />
+Ці команди описано у розділі <a href="../index.html">Індекс</a>.</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-pkg" name="cli-pkg">Стосовно обслуговування пакетів: <span class="cli">package</span>, <span class="cli">pkgman</span></a></h3>
-<p>The <span class="cli">package</span> command is used to manage HPKG packages. Have a look at the article <a href="https://www.haiku-os.org/guides/daily-tasks/install-applications">Installing applications</a> to learn the very basics. Usually the tool <a href="https://github.com/haikuports/haikuports/wiki">haikuporter</a> is used to automatically create packages from so-called recipes.</p>
-<p><span class="cli">pkgman</span> використовується для пошуку, установки, оновлення і видалення пакетів. Дозволяє додавати, видаляти сховища пакетів  та освіжати їх списки. Особливий вид поновлення викликається з параметром <tt>full-sync</tt>: Він є агресивніший та дозволяє при необхідності відновлювати старі версії і видаляти пакети.<br />
-Для деталізації параметру вводять "--help", наприклад, <tt>pkgman search --help</tt>.</p>
+<a id="cli-pkg" name="cli-pkg">Команди управління пакетами: <span class="cli">package</span>, <span class="cli">pkgman</span></a></h3>
+<p>Для управління пакетами HPKG використовується команда <span class="cli">package</span>. Перегляньте статтю <a href="https://www.haiku-os.org/guides/daily-tasks/install-applications">Інсталяція програм</a>, щоб дізнатися про основи цього процесу. Зазвичай для автоматичного створення пакетів за так званими «рецептами» використовується інструмент <a href="https://github.com/haikuports/haikuports/wiki">haikuporter</a>.</p>
+<p><span class="cli">pkgman</span> призначено для пошуку, інсталяції, оновлення та деінсталяції пакетів. Працює з репозитаріями: репозитарії пакетів можна додавати, прибирати і оновлювати їхні списки. За допомогою параметра <tt>full-sync</tt> викликається спеціальний тип оновлення: він є більш агресивним, може понижати версію або вилучати пакети, якщо це необхідно.<br />
+Щоб отримати докладнішу інформацію про параметр, додайте «--help», наприклад, <tt>pkgman search --help</tt>.</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-scripting" name="cli-scripting">Використання команд скриптування</a></h3>
-<p>Ось кілька інструментів командного рядка, які особливо корисні для написання сценаріїв (дивись також розділ <a href="../bash-scripting.html">Bash and Scripting (Bash і створення сценаріїв)</a>).</p>
+<a id="cli-scripting" name="cli-scripting">Команди сценаріїв</a></h3>
+<p>Ось декілька інструментів командного рядка, які особливо корисні при написанні сценаріїв (додатково дивіться розділ <a href="../bash-scripting.html">Bash і Написання сценаріїв</a>).</p>
 <table summary="scripting cli tools" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><p><span class="cli">alert</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">alert</span> викликає вікно з типовим попередженням з наперед визначеною іконкою та пояснювальним текстом з трьома кнопками. Вона повертає назву натиснутої кнопки і стан виходу (починаючи з 0). Як приклад це зроблено у стрічці:</p>
-<pre class="terminal">alert --idea "FantasticApp(tm) installed successfully! \
-Would you like a link to it?" "On Desktop" "In Deskbar" "No thanks"</pre>
+		<td valign="top"><p><span class="cli">alert</span> виводить типове вікно попередження з попередньо визначеним значком, пояснювальним текстом і кнопками (до трьох кнопок). Повертає назву натиснутої кнопки і статус виходу (починаючи з 0). Наприклад, така команда виводить таке вікно:</p>
+<pre class="terminal">alert --idea "FantasticApp(tm) успішно встановлено! \
+Бажаєте створити посилання на нього?" "На Робочому столі" "На Панелі задач" "Ні, дякую"</pre>
 <p><img src="../images/apps-images/cli-alert.png" alt="cli-alert.png" /></p>
 </td></tr>
 <tr><td><p><span class="cli">filepanel</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">filepanel</span> відображає панель завантаження або збереження файла і дозволяє користувачеві вибрати файл або місце розташування. Як результат ви отримаєте обраний файл або шлях папки. Є кілька параметрів, доступних, наприклад, для встановлення початкової теки, заголовка вікна, типового імені при збереженні або обмеженні дозволених типів файлів. Приблизно ось так</p>
-<pre class="terminal">filepanel -s -t "Save your logfile" -d ~/config/settings -n Fantastic.log</pre>
+		<td valign="top"><p><span class="cli">filepanel</span> відображає панель відкриття або збереження файлу і дозволяє користувачеві вибрати файл або місце розташування. У якості значення, яке повертає команда, Ви отримаєте шлях до вибраного файлу або папки. Доступно декілька параметрів, наприклад, встановлення початкового каталогу, заголовка вікна, назви файлу за замовчуванням при збереженні або обмеження на дозволені типи файлів. Ось приклад:</p>
+<pre class="terminal">filepanel -s -t "Збереження файлу журналу" -d ~/config/settings -n Fantastic.log</pre>
 <p><img src="../images/apps-images/cli-filepanel.png" alt="cli-filepanel.png" /></p></td></tr>
 <tr><td><p><span class="cli">hey</span></p></td><td style="width:10px;"> </td>
-<td valign="top"><p><span class="cli">hey</span> крихітний допоміжний інструмент, який посилає BMessages до програм і видає їхню відповідь.  Він може бути використаний для виконання сценаріїв додатків, тобто "дистанційного керування" програмою зі сценарію або командного рядка. Його використання трохи складніше... Дякуємо за BeOS Bible Скоту Хакеру та прекрасний <a href="http://www.birdhouse.org/beos/bible/bos/ch_scripting6.html">hey підручник</a> Крісу Херботу.</p>
-</td></tr>
+<td valign="top"><p><span class="cli">hey</span> це невеликий допоміжний інструмент, який надсилає «BMessages» програмам і виводить (роздруковує) їхні відповіді. Його можна використовувати для програмних сценаріїв, тобто «дистанційного керування» програмою зі сценарію або командного рядка. Його використання є дещо складним… Запис у <a href="https://www.haiku-os.org/blog/humdinger/2017-11-05_scripting_the_gui_with_hey/">Humdinger's blog</a> слугує гарним вступом а завдяки «BeOS Bible» від Scot Hacker's є набагато повніший <a href="http://www.birdhouse.org/beos/bible/bos/ch_scripting6.html">підручник по роботі з hey</a> від Chris Herborth.</p></td></tr>
 <tr><td><p><span class="cli">notify</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">notify</span> shows a notification panel with a message. There are various parameters that are described when you call <span class="cli">notify --help</span>. A notification can also be used to show the progress of some action. When doing that, it's important to set a <i>messageID</i> and always use it when you update the progress (a float between 0.0 and 1.0 that's printed as percent). Otherwise you'll see several notification panels if you update quicker then the set timeout.<br />
-An example:</p>
-<pre class="terminal">notify --type progress --group "--group" --title "--title" --icon /boot/home/bebook.hvif \
---messageID MyMessageID --progress .75 "Keep waiting"</pre>
+		<td valign="top"><p><span class="cli">notify</span> показує панель сповіщень з повідомленням. У команди існують різні параметри, опис яких можна подивитись виконавши команду <span class="cli">notify --help</span>. Сповіщення може бути використано для показу прогресу виконання певної дії. Для цього важливо встановити <i>messageID</i> і завжди використовувати його при оновленні прогресу (число з плаваючою комою від 0.0 до 1.0, яке виводиться у відсотках). Інакше Ви побачите кілька панелей сповіщень, якщо Ви оновите прогрес швидше, ніж встановлений таймаут.<br />
+Приклад:</p>
+<pre class="terminal">notify --type progress --group "Група елементів" --title "Заголовок" --icon /boot/home/bebook.hvif \
+--messageID MyMessageID --progress .75 "Трохи зачекайте"</pre>
 <p><img src="../images/apps-images/cli-notification.png" alt="cli-notification.png" /></p>
 </td></tr>
 <tr><td><p><span class="cli">query</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">query</span> is the commandline version of the Find panel. In fact, a quick way to generate the search term is to build a query in the Find panel, switch to <span class="menu">by formula</span>, add double quotes (<tt>"</tt>) in front and back and paste the whole string after your <span class="cli">query</span> command in Terminal or your script.</p>
+		<td valign="top"><p><span class="cli">query</span> – це версія командного рядка пошукової панелі «Знайти». Насправді, швидкий спосіб створити пошуковий запит – це створити запит на панелі «Знайти», переключитися у режим <span class="menu">за формулою</span>, додати подвійні лапки (<tt>"</tt>) спереду і ззаду і вставити весь рядок після команди <span class="cli">query</span> в Терміналі або Вашому сценарії.</p>
 </td></tr>
 <tr><td><p><span class="cli">waitfor</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">waitfor</span> is a nice way to wait for a particular application or thread to be started or to have ended.</p>
+		<td valign="top"><p><span class="cli">waitfor</span> – це зручний спосіб дочекатися запуску або завершення певної програми чи потоку.</p>
 </td></tr></table>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-other" name="cli-other">Other commands</a></h3>
+<a id="cli-other" name="cli-other">Інші команди</a></h3>
 
 <table summary="scripting cli tools" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><p><span class="cli">checkfs</span></p></td><td style="width:10px;"> </td>
-		<td><p><span class="cli">checkfs</span> is an important tool to check for errors in your file system. Simply add a volume name like <span class="path">/Haiku</span> or device path and it'll run through every file and correct inconsistencies where possible.</p>
+		<td><p><span class="cli">checkfs</span> – важливий інструмент для перевірки файлової системи на наявність помилок. Просто додайте назву тому, наприклад <span class="path">/Haiku</span> або шлях до пристрою і програма перевірить кожен файл і виправить невідповідності, де це можливо.</p>
 </td></tr>
 <tr><td><p><span class="cli">desklink</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">desklink</span> can install an icon for any file, folder, query or application in the Deskbar tray. It also offers the option to provide a context menu when right-clicking an icon to execute special actions. As an example, try this to add the commandline app <span class="app">screenshot</span> with various options (the "<tt>\</tt>" in the first line is just for the line break in Terminal):</p>
-<pre class="terminal"> desklink "cmd=Active window (2s):/bin/screenshot --window --border --delay 2" \
-"cmd=Remove replicant:desklink --remove=screenshot" /bin/screenshot
+		<td valign="top"><p>За допомогою <span class="cli">desklink</span> можна встановити значок для будь-якого файлу, папки, запиту або програми в системному треї панелі задач Deskbar. Також можна створити контекстне меню при натисканні правою кнопкою миші на значку для виконання спеціальних дій. Для прикладу, спробуйте додати програму командного рядка <span class="app">screenshot</span> з різними параметрами (символ «<tt>\</tt>» у першому рядку слугує лише для переведення рядка у Терміналі):</p>
+<pre class="terminal"> desklink "cmd=Активне вікно (2с):/bin/screenshot --window --border --delay 2" \
+"cmd=Прибрати реплікант:desklink --remove=screenshot" /bin/screenshot
 </pre>
-<p><img src="../images/apps-images/cli-desklink.png" alt="cli-alert.png" /></p>
+<p><img src="../images/apps-images/cli-desklink.png" alt="cli-desklink.png" /></p>
 </td></tr>
 <tr><td><p><span class="cli">diskimage</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">diskimage</span> lets you register a regular file as disk device. For example, you can register a Haiku anyboot image, mount it in Tracker and copy, edit or remove files there before using it as source in the Installer.</p>
+		<td valign="top"><p><span class="cli">diskimage</span> дозволяє зареєструвати звичайний файл як дисковий пристрій. Наприклад, Ви можете зареєструвати образ Haiku «anyboot», підключити (змонтувати) його у Tracker і копіювати, редагувати або видаляти файли, перш ніж використовувати його як джерело в  Інсталяторі.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
-Without parameter, <span class="cli">launch_roster</span> lists all apps/services that are under its control.<br />
-For example, this will stop the re-launching of the Deskbar:</p>
+		<td valign="top"><p>Демон «launch_daemon» запускає всілякі служби та програми під час загрузки системи. Для деяких з цих служб/програм прописана інструкція на автоматичний перезапуск, якщо вони були завершені. Якщо Вам це не потрібно – наприклад, якщо Ви хочете протестувати модифікований Tracker – Ви можете використовувати <span class="cli">launch_roster</span> з параметром <tt>stop</tt>, щоб відключити перезапуск програми перед завершенням роботи з нею і зупинити програму. Параметр <tt>start</tt>, навпаки, відновить автоматичний перезапуск і запустить службу/програму а параметр <tt>info</tt> надасть інформацію про неї. Параметр <tt>log</tt> виводе (друкує) журнал усіх подій, пов'язаних з «launch_daemon».<br />
+Без параметрів, <span class="cli">launch_roster</span> виводить список усіх служб/програм, які перебувають під його контролем.<br />
+Наприклад, ця команда зупинить повторний запуск і саму програму Deskbar:</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">mountvolume</span> is preferred by many to mount local partitions and disks, because its usage is so easy: just call it with the name of the partition and you're done. Try <tt>--help</tt> for more options.</p>
-<p><span class="cli">mount</span> can additionally mount remote disks by using a network filesystem, like NFS4. You specify the used filesystem with the <tt>-t</tt> parameter and the remote location with the <tt>-p</tt> parameter. As filesystem parameter you can use anything you find in <span class="path">/system/add-ons/kernel/file_system</span> (and corresponding file hierarchies under <span class="path">~/config</span> or "<span class="path">non-packaged</span>", of course). You also have to create a folder as mountpoint. Here's an example:</p>
+		<td valign="top"><p>Багато хто надає перевагу <span class="cli">mountvolume</span> для підключення (монтування) локальних розділів і дисків, оскільки вона дуже проста у використанні: просто викличте її, вказавши назву розділу, і все готово. Використовуйте <tt>--help</tt> для отримання повної справки по програмі.</p>
+<p><span class="cli">mount</span> може додатково підключати (монтувати) віддалені диски за допомогою мережевої файлової системи, наприклад, NFS4. Ви вказуєте файлову систему за допомогою параметра <tt>-t</tt> а віддалене розташування – за допомогою параметра <tt>-p</tt>. У якості параметра файлової системи Ви можете використовувати будь-що, що знайдете в <span class="path">/system/add-ons/kernel/file_system</span> (і, звісно, у відповідних файлових структурах в <span class="path">~/config</span> або «<span class="path">non-packaged</span>»). Ви також повинні створити папку як точку монтування. Ось приклад:</p>
 <pre class="terminal">mkdir -p /DiskStation
 mount -t nfs4 -p "192.168.178.3:volume1" /DiskStation</pre></td></tr>
 <tr><td><p><span class="cli">open</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p><span class="cli">open</span> is a very handy little tool. With it you open any file with its preferred application, or start a specific application by its signature without the need to know its exact path. It also works with URLs and even with the "virtual" directories <tt>.</tt> for the current directory and <tt>..</tt> for the parent, opening the folder in Tracker.</p>
+		<td valign="top"><p><span class="cli">open</span> – дуже зручний маленький інструмент. За допомогою нього Ви відкриваєте будь-який файл у пріоритетній програмі або запускаєте певну програму за її сигнатурою без необхідності знати її точний шлях. Він також працює з URL-адресами і навіть з «віртуальними» каталогами «<tt>.</tt>» для поточного каталогу та «<tt>..</tt>» для батьківського, відкриваючи папку в Tracker.</p>
 </td></tr>
 <tr><td><p><span class="cli">ramdisk</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>A ramdisk is like a harddisk running only in the computer's memory. That makes it very fast but also volatile, because its contents vanishes when you shut down the computer, or it crashes or you experience a blackout.<br />
-To create a ramdisk of 1 GiB, format to the name "RAMses" and mount it, you enter this in Terminal or create a script of it:</p>
+		<td valign="top"><p>RAM-диск схожий на жорсткий диск, який працює лише в оперативній пам'яті комп'ютера. Це робить його дуже швидким, але водночас і нестабільним, оскільки його вміст зникає, коли Ви вимикаєте комп'ютер, або він виходить з ладу, коли у Вас відключається світло.<br />
+Щоб створити RAM-диск розміром 1 гігабайт, відформатувати його під назвою «RAMses» і підключити (монтувати), введіть цю команду у терміналі або створіть відповідний сценарій:</p>
 <pre class="terminal">ramdisk create -s 1gb
 mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMses
 mountvolume RAMses</pre>
-<p>Note: When creating a ramdisk, the <span class="cli">ramdisk</span> command prints out the path to it. If you create several disks, that path <span class="path">/dev/disk/virtual/ram/0/raw</span> will change!</p>
-<p>To preserve the contents, at least if no calamity like a blackout etc. strikes, a ramdisk can be set up to read/write an image on the harddisk. For that, you need to supply a file of the desired size that will be read from every time you start your ramdisk, and written to when you unmount it. To create an image file "RAMimage" of 500MiB and format it, do this:</p>
+<p>Примітка: Під час створення RAM-диску команда <span class="cli">ramdisk</span> виводить шлях до нього. Якщо Ви створите декілька дисків, цей шлях <span class="path">/dev/disk/virtual/ram/0/raw</span> зміниться!</p>
+<p>Щоб зберегти вміст, принаймні, якщо не станеться якихось непередбачуваних ситуацій, таких як відключення електроенергії тощо, <span class="cli">ramdisk</span> можна запустити у режимі читання/запису образу на жорсткому диску. Для цього Вам потрібно створити файл потрібного розміру, який зчитуватиметься щоразу, коли Ви запускатимете <span class="cli">ramdisk</span>, і записуватиметься, коли Ви будете відключати (розмонтовувати) RAM-диск. Щоб створити файл образу «RAMimage» розміром 500 MiB і відформатувати його, виконайте такі дії:</p>
 <pre class="terminal">dd if=/dev/zero of=RAMimage bs=500M count=1
 mkfs -q -t bfs /dev/disk/virtual/ram/0/raw RAMimage</pre>
-<p>From now on, you start the ramdisk like this:</p>
+<p>Відтепер Ви запускаєте <span class="cli">ramdisk</span> таким чином:</p>
 <pre class="terminal">ramdisk create RAMimage
 mountvolume RAMimage</pre>
-<p>It's very important to always cleanly unmount you ramdisk, either from Tracker or with <span class="cli">unmount /RAMimage</span>, or the changes won't be written back to the image file!</p>
+<p>Дуже важливо завжди чисто відключати (розмонтовувати) Ваш RAM-диск, або з Tracker або за допомогою <span class="cli">unmount /RAMimage</span>, інакше зміни не будуть записані назад до файлу образу!</p>
 </td></tr>
 <tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>This command sets the screen mode (resolution, bit depth, refresh rate). Normally, you'd set that in the Screen preferences. Another parameter makes it useful in combination with the Shortcuts preferences: e.g. <span class="cli">--brightness +3</span> increases the brightness by "3". Useful to change the backlight with a key combination.</p>
+		<td valign="top"><p>Ця команда встановлює режим екрана (роздільну здатність, бітову глибину, частоту оновлення). Зазвичай це можна зробити у настройках параметрів екрана. Ще один параметр робить її корисною у поєднанні з клавішами швидкого доступу: наприклад, <span class="cli">--brightness +3</span> збільшує яскравість на «3». Корисно для зміни підсвічування за допомогою комбінації клавіш.</p>
 </td></tr>
 <tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>This command sets the volume of the system master output. Besides specific values in dB, you can <span class="cli">--togglemute</span>, <span class="cli">--mute</span> or <span class="cli">--unmute</span> and <span class="cli">--increase</span> or <span class="cli">--decrease</span> the volume. Useful to assign key combinations with the Shortcuts preferences.</p></td></tr>
+		<td valign="top"><p>Ця команда встановлює гучність головного виходу системи. Окрім конкретних значень у дБ, Ви можете використовувати такі параметри, як <span class="cli">--togglemute</span>, <span class="cli">--mute</span> або <span class="cli">--unmute</span> та <span class="cli">--increase</span> або <span class="cli">--decrease</span> для управління гучністю. Для тих параметрів, які використовуються постійно, корисно призначити комбінації клавіш за допомогою панелі налаштувань клавіш швидкого доступу.</p></td></tr>
 </table>
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="list-cli-apps.html">List of commands</a> 
-::  <a href="../applications.html#cli-apps" class="uplink">Applications (Програми)</a> 
+ «  <a href="list-cli-apps.html">Список команд</a> 
+::  <a href="../applications.html#cli-apps" class="uplink">Програми</a> 
 </span></div>
 </div>
 

@@ -10,20 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Екран (Screen)</title>
+	<title>Screen (Екран)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -53,44 +54,43 @@
 <li><a href="../../jp/preferences/screen.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="repositories.html">Сховища - Репозиторії (Repositories)</a> 
-::  <a href="../preferences.html" class="uplink">Налаштування (Preferences)</a> 
-::  <a href="screensaver.html">Зберігач екрану (ScreenSaver)</a>  »
+ «  <a href="repositories.html">Repositories (Репозитарії)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences (Налаштування)</a> 
+::  <a href="screensaver.html">ScreenSaver (Екранна заставка)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/prefs-images/screen-icon_64.png" alt="screen-icon_64.png" width="64" height="64" />Екран (Screen)</h2>
+<h2><img src="../../images/prefs-images/screen-icon_64.png" alt="screen-icon_64.png" width="64" height="64" />   Screen (Екран)</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Налаштування (Preferences)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Preferences (Налаштування)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/preferences/Screen</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/system/app_server/workspaces</span><br />
-<span class="path">~/config/settings/kernel/drivers/vesa</span> - тільки при запущеному режимі VESA.<br />
-<span class="path">~/config/settings/Screen_data</span> - зберігає позицію вікна панелей.</td></tr>
+<span class="path">~/config/settings/kernel/drivers/vesa</span> – тільки при роботі у режимі VESA.<br />
+<span class="path">~/config/settings/Screen_data</span> – зберігає позицію вікна панелей.</td></tr>
 </table>
-<p>Кожне Ваше <a href="../workspaces.html">робоче місце (workspaces)</a> може мати власну роздільчу здатність, глибину кольору та частоту оновлення.</p>
+<p>Кожна <a href="../workspaces.html">робоча область</a> може мати власну роздільчу здатність, глибину кольору та частоту оновлення.</p>
 <img src="../images/prefs-images/screen.png" alt="screen.png" />
-<p>Верхнє меню визначає до яких робочих місць застосовувати зміни (конкретно до якогось чи для всіх). Залежно від вашої відеокарти, інші меню містять доступні роздільчу здатність, глибину кольору та частоту оновлення.</p>
-<p>Після клікання по кнопці <span class="button">Прийняти (Apply)</span>, графічний режим міняється та з'являється попередження з питанням зберегти чи відхилити зміни. Якщо Ви не будете відповідати на це попередження через 12 секунд повернеться попередній режим. Ви можете не побачити його у випадку коли Ваш монітор не підтримує такі налаштування.</p>
-<p>Існує комбінація клавіш яка працює завжди, навіть коли налаштування екрану відкриті, це: <span class="key">SHIFT</span> <span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">ESC</span> яка встановлює запасний безпечний відіорежим.  Це зручно коли Ваш монітор не може правильно повідомляти свої можливості і Ваші налаштування викликають або спотворення або чорний екран. При цьому спливає попередження і якщо Ви нічого не робите протягом 12 секунд або натиснете клавішу <span class="key">ESC</span> то все повернеться назад.</p>
-<p>У лівій частині вікна, Ви побачите макет екрану з повідомленням про модель, виробника, роздільчу здатність в крапках на дюйм (dpi). Вказується назва відеокарти, якщо вона підтримується драйвером. В іншому випадку буде запис про включення "VESA", безпечного режиму що дозволяє працювати з більшістю апаратного забезпечення.</p>
-<div class="box-info">Незважаючи на те що режим VESA у Haiku працює дуже добре, Ви можете зіткнутися з деякими обмеженнями. Ви не зможете використати свій широкоформатний монітор в його рідній роздільчій здатності в результаті чого буде трохи розмите зображення. Можуть накладатися обмеження щодо доступних глибини кольору і частоти оновлення. </div>
-<p>Clicking on the screen representation opens the <a href="backgrounds.html">Backgrounds</a> preferences.</p>
-<p>Below is a slider to set the screen's <span class="menu">Brightness</span>, if you're running on a notebook and the graphics driver supports it. In Terminal, <span class="cli">screenmode --help</span> shows how to control brightness and other options from the command line.</p>
-<p>To the bottom left you can set the number of workspaces and arrange them in columns and rows.</p>
-<p>Кнопка <span class="button">Повернути (Revert)</span> дозволяє застосувати ті налаштування які були активні до запуску панелі Екран (Screen).</p>
+<p>У верхньому меню можна вказати до якої робочої області, поточної або до усіх підряд, будуть застосовані зміни. Залежно від Вашої відеокарти, інші меню містять значення роздільної здатності, глибини кольору та частоти оновлення, які підтримує пристрій.</p>
+<p>Після натискання на кнопку <span class="button">Застосувати</span> графічний режим буде змінено і з'явиться попередження з проханням зберегти або скасувати зміни. Якщо Ви не будете відповідати на це попередження, через 12 секунд графічний режим повернеться до попереднього стану. Ви можете не побачити вікно попередження у випадку, коли Ваш монітор не підтримує задані параметри настройки.</p>
+<p>Існує комбінація клавіш, яка працює завжди а не лише тоді, коли відкриті налаштування екрана: <span class="key">SHIFT</span> <span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">ESC</span> встановлює резервний безпечний режим відео.  Це зручно, якщо Ваш монітор неправильно повідомляє про свої можливості а Ваші настройки призводять до викривленого або чорного екрана. Тут також з'являється попередження і, якщо Ви нічого не зробите протягом 12 секунд або не натиснете клавішу <span class="key">ESC</span>, все повернеться назад.</p>
+<p>У лівій частині вікна Ви бачите зображення Вашого екрана із зазначенням виробника, моделі відеокарти та роздільної здатності в точках на дюйм (dpi). Тут також показано назву відеокарти, якщо вона підтримується драйвером. В іншому випадку буде вказано «VESA» – швидке запасне рішення, яке працює практично з будь-яким обладнанням.</p>
+<div class="box-info">Незважаючи на те, що режим VESA у Haiku працює дуже добре, Ви можете зіткнутися з деякими обмеженнями. Можливо, Ви не зможете користуватися своїм широкоформатним дисплеєм у його нативній роздільній здатності, що призведе до дещо розмитого зображення. Крім того, можуть бути обмеження щодо доступної глибини кольору та частоти оновлення.</div>
+<p>Натискання зображення екрана відкриває панель налаштувань параметрів <a href="backgrounds.html">фону</a>.</p>
+<p>Якщо Ви працюєте на ноутбуці і графічний драйвер це підтримує, то нижче розташовано повзунок яким можна встановити <span class="menu">Яскравість</span> екрана. Виконана у терміналі команда <span class="cli">screenmode --help</span> показує, як управляти яскравістю та іншими параметрами за допомогою командного рядка.</p>
+<p>Внизу ліворуч ви можете встановити кількість робочих областей і розташувати їх у стовпчики і рядки.</p>
+<p>Кнопка <span class="button">Відкат змін</span> повертає настройки, які були встановлені до запуску панелі Screen (Екран).</p>
 
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="repositories.html">Сховища - Репозиторії (Repositories)</a> 
-::  <a href="../preferences.html" class="uplink">Налаштування (Preferences)</a> 
-::  <a href="screensaver.html">Зберігач екрану (ScreenSaver)</a>  »
+ «  <a href="repositories.html">Repositories (Репозитарії)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences (Налаштування)</a> 
+::  <a href="screensaver.html">ScreenSaver (Екранна заставка)</a>  »
 </span></div>
 </div>
 

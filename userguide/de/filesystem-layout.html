@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		taos
  *
@@ -68,7 +69,7 @@
 <p>In Haikus Dateisystem werden nach Möglichkeit allgemein verständliche Datei- und Ordnernamen verwendet, um den Benutzer nicht unnötig im Dunkeln zu lassen. Dateien und Ordner, die für das Funktionieren des Systems wichtig sind, werden gegen zufällige Änderungen durch einen der folgenden Hinweise geschützt:</p>
 <img src="images/filesystem-layout-images/achtung-user.png" alt="achtung-user.png" /> 
 <img src="images/filesystem-layout-images/achtung-system.png" alt="achtung-system.png" />
-<p>Der zweite Hinweis erscheint wenn versucht wird etwas in der Systemhierarchie umzubenennen oder zu löschen. Der "<span class="button">Umbenennen</span>" Button kann nur geklickt werden während die <span class="key">SHIFT</span> Taste gehalten wird.</p>
+<p>Der zweite Hinweis erscheint, wenn versucht wird, etwas in der Systemhierarchie umzubenennen oder zu löschen. Der Button <span class="button">Umbenennen</span> kann nur geklickt werden während die <span class="key">SHIFT</span> Taste gehalten wird.</p>
 <p>Grundsätzlich verzweigt sich das Hauptverzeichnis der Bootpartition in zwei Äste:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/</span></td><td> </td><td>Hier liegen die Systemdateien und die Anwendungen/Pakete, auf die alle Benutzer Zugriff haben.</td></tr>
@@ -81,7 +82,7 @@
 <a id="system" name="system">Der System-Ordner - <span class="path">/boot/system/</span></a></h2>
 <p>Bei Haikus Vorgänger BeOS hieß dieser Ordner <span class="path">/boot/beos/</span>. Ihn trifft man immer mal wieder in älterer Dokumentation an (z.B. im original BeBook).
 <br />
-Die meisten Ordner in <span class="path">/boot/system/</span> sind schreibgeschützt. Das ist auch vernünftig, schließlich befinden sich hier Dateien, die wichtig für das funktionieren von Haiku sind und daher für (zufälligen) Änderungen geschützt werden müssen. Die einzigen vom Benutzer veränderbaren Ordner sind:</p>
+Die meisten Ordner in <span class="path">/boot/system/</span> sind schreibgeschützt. Das ist auch vernünftig, schließlich befinden sich hier Dateien, die wichtig für das Funktionieren von Haiku sind. Daher sind sie vor (zufälligen) Änderungen geschützt. Die einzigen vom Benutzer veränderbaren Ordner sind:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Enthält Cache-Dateien und den Ordner für temporäre Dateien, auf den <span class="path">/tmp/</span> verlinkt ist.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Enthält die Ordner-Hierarchie für Dateien, die nicht Teil eines .hpkg sind (wahrscheinlich aus einem alten BeOS Archiv).</td></tr>
@@ -129,16 +130,16 @@ Dateien, auf die später mal in einer Mehrbenutzer-Umgebung die anderen Benutzer
 <td>Dieser Ordner enthält <a href="bash-scripting.html#user-scripts">User Skripte</a> die vor oder nach dem Hoch- bzw. Herunterfahren des Systems ausgeführt werden.</td></tr>
 
 <tr><td><span class="path">boot/launch/</span></td><td> </td>
-<td>In diesem Ordner enthaltene Verknüpfungen zu Programmen oder Dokumenten werden automatisch beim jedem Hochfahren geöffnet.</td></tr>
+<td>In diesem Ordner liegen Verknüpfungen zu Programmen oder Dokumenten, die dann automatisch beim jedem Hochfahren geöffnet werden.</td></tr>
 
 <tr><td><span class="path">beos_mime/</span></td><td> </td>
-<td>In dieser <acronym title="Multipurpose Internet Mail Extensions">MIME</acronym> Datenbank sammelt Haiku all die verschiedenen <a href="filetypes.html">Dateitypen</a> und ihre Einstellungen.</td></tr>
+<td>In dieser <acronym title="Multipurpose Internet Mail Extensions">MIME</acronym>-Datenbank sammelt Haiku die verschiedenen <a href="filetypes.html">Dateitypen</a> und ihre Einstellungen.</td></tr>
 
 <tr><td class="onelinetop"><span class="path">deskbar/menu/</span></td><td> </td>
 <td>Hierher kopierte oder verlinkte Dateien/Ordner/Queries erscheinen im Menü der <a href="deskbar.html#deskbar-menu">Deskbar</a>.</td></tr>
 
 <tr><td class="onelinetop"><span class="path">kernel/drivers/</span></td><td> </td>
-<td>Hier gibt es vor allem eine interessante Datei: <span class="cli">kernel</span> bietet einige hardwarenahe Konfigurationen, wie Auschalten von <acronym title="Symmetric Multi Processing">SMP</acronym>, Aktivieren von Debugging über die serielle Schnittstelle oder Einschalten von erweitertem Power-Management. Eine Konfigurationszeile wird aktiviert, indem das Rautesymbol  "<tt>#</tt>" entfernt wird. Hier ist Vorsicht angeraten!</td></tr>
+<td>Hier gibt es vor allem eine interessante Datei: <span class="cli">kernel</span> bietet einige hardwarenahe Konfigurationen, wie das Ausschalten von <acronym title="Symmetric Multi Processing">SMP</acronym>, Aktivieren von Debugging über die serielle Schnittstelle oder Einschalten von erweitertem Power-Management. Eine Konfigurationszeile wird aktiviert, indem das Rautesymbol  "<tt>#</tt>" entfernt wird. Hier ist Vorsicht angeraten!</td></tr>
 
 <tr><td><span class="path">Tracker/</span></td><td> </td>
 

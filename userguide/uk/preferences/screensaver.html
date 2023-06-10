@@ -10,20 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Зберігач екрану (ScreenSaver)</title>
+	<title>ScreenSaver (Екранна заставка)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -53,48 +54,47 @@
 <li><a href="../../jp/preferences/screensaver.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="screen.html">Екран (Screen)</a> 
-::  <a href="../preferences.html" class="uplink">Налаштування (Preferences)</a> 
-::  <a href="shortcuts.html">Гарячі клавіші (Shortcuts)</a>  »
+ «  <a href="screen.html">Screen (Екран)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences (Налаштування)</a> 
+::  <a href="shortcuts.html">Shortcuts (Комбінації клавіш)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
-<h2><img src="../../images/prefs-images/screensaver-icon_64.png" alt="screensaver-icon_64.png" width="64" height="64" />Зберігач екрану (ScreenSaver)</h2>
+<h2><img src="../../images/prefs-images/screensaver-icon_64.png" alt="screensaver-icon_64.png" width="64" height="64" />   ScreenSaver (Екранна заставка)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Налаштування (Preferences)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Preferences (Налаштування)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/preferences/Screensaver</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/ScreenSaver_settings</span></td></tr>
 </table>
 
-<p>Панель налаштуваньЗберігач екрану  (ScreenSaver) об'єднана у двох вкладках  :
+<p>Панель налаштувань програми ScreenSaver (Екранна заставка) розділена на дві вкладки:
 </p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a name="fade" id="fade">General</a></h2>
+<a name="fade" id="fade">Вкладка «Загальні» (General)</a></h2>
 <img src="../images/prefs-images/screensaver-fade.png" alt="screensaver-fade.png" />
 <br />
-<p>Верхній прапорець вмикає / відключає екранну заставку.<br />
-За допомогою повзунка під ним можна встановити час простою для включення  зберігача.</p>
-<p>Наступні два повзунки використовуватися тільки після їх активації прапорцями: <br />
-Один повзунок визначає, через скільки хвилин вимкнути екран. <br />
-Інший, через скільки хвилин Вам буде потрібен пароль, щоб розблокувати машину.
+<p>Верхній чекбокс вмикає/вимикає скринсейвер.<br />
+За допомогою повзунка під ним Ви можете контролювати, через який час простою вмикається заставка.</p>
+<p>Наступні два повзунки можна використовувати лише після того, як Ви активували їхні чекбокси:<br />
+Один повзунок визначає, через скільки хвилин екран буде вимкнено.<br />
+Інший – через скільки хвилин Вам знадобиться пароль для розблокування комп'ютера або пристрою.
 </p>
-<p>При натисканні на різні кути двох екранів в нижній частині Ви вказуєте, коли система негайно запустить екранну заставку або коли при розташуванні курсора мишки в певному його місці не допустити згасання. Натисніть в середині екрану, щоб відключити цю функцію знову.</p>
+<p>При натисканні на різні кути двох екранів в нижній частині Ви вказуєте, коли системі треба негайно запускати екранну заставку а коли не запускати її, якщо Ви ставите курсор миші у вказаний кут. Натисніть в середині екрану, щоб відключити цю функцію.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a name="screensavers" id="modules">Зберігачі екрану (Screensavers)</a></h2>
+<a name="screensavers" id="modules">Вкладка «Екранні заставки» (Screensavers)</a></h2>
 <img src="../images/prefs-images/screensaver-modules.png" alt="screensaver-modules.png" />
 <br />
-<p>На другій вкладці відображається список всіх встановлених зберігачів екрану з їх індивідуальними налаштуваннями. Ви можете перевірити свої налаштування кнопкою <span class="button">Тест (Test)</span> нижче списку. <br />
-Нові заставки, які не постачаються як частина регулярного пакету .hpkg, можна встановити шляхом копіювання їх у відповідну <tt>non-packaged</tt> теку (дивись розділ <a href="../filesystem-layout.html">Макет файлової системи (Filesystem layout)</a>):</p>
+<p>На другій вкладці показано список усіх встановлених екранних заставок та їхні індивідуальні настройки. Ви можете перевірити роботу заставки за допомогою кнопки <span class="button">Тест</span> під списком.<br />
+Нові скринсейвери, які не постачаються як частина регулярного пакету .hpkg, можна встановити шляхом копіювання їх у відповідну <tt>non-packaged</tt> папку (дивіться розділ <a href="../filesystem-layout.html">Структура файлової системи (Filesystem layout)</a>):</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="path">/boot/system/non-packaged/add-ons/Screen Savers/</span></td><td>   </td><td>для Зберігачів екрану доступних кожному користувачеві.</td></tr>
-<tr><td><span class="path">/boot/home/config/non-packaged/add-ons/Screen Savers/</span></td><td>   </td><td>для Зберігачів екрану доступних особисто Вам.</td></tr>
+<tr><td><span class="path">/boot/system/non-packaged/add-ons/Screen Savers/</span></td><td>   </td><td>для екранних заставок доступних кожному користувачеві.</td></tr>
+<tr><td><span class="path">/boot/home/config/non-packaged/add-ons/Screen Savers/</span></td><td>   </td><td>для екраних заставок доступних особисто Вам.</td></tr>
 </table>
 
 </div>
@@ -102,9 +102,9 @@
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="screen.html">Екран (Screen)</a> 
-::  <a href="../preferences.html" class="uplink">Налаштування (Preferences)</a> 
-::  <a href="shortcuts.html">Гарячі клавіші (Shortcuts)</a> »
+ «  <a href="screen.html">Screen (Екран)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences (Налаштування)</a> 
+::  <a href="shortcuts.html">Shortcuts (Комбінації клавіш)</a> »
 </span></div>
 </div>
 

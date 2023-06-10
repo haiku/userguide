@@ -10,6 +10,7 @@
  * Authors:
  *              Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		Matthias
  *		taos
@@ -92,8 +93,8 @@
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="bitmap-vector" name="bitmap-vector">BeOS Pixelgraphik im Vergleich zu Haiku Vektoricons</a></h2>
-<p>Im Gegensatz zum BeOS verwendet Haiku vektor-basierte an Stelle von pixel-basierten Icons. Für diesen Zweck wurde ein eigenes "Haiku Vector Icon Format" (HVIF) entwickelt, das für eine kleine Dateigröße und schnelle Anzeige optimiert ist. Aus diesem Grund sind Haiku Icons normalerweise <i>erheblich</i> kleiner als ein Pixelbild oder das weit verbreiteten SVG-Format. Ebenso sind Haiku Icons nicht wie im BeOS auf 256 Farben (8bit Palette) beschränkt.<br />
-Als Beispiel, das Icon vom Terminal:</p>
+<p>Im Gegensatz zum BeOS verwendet Haiku vektor-basierte Icons an Stelle von pixel-basierten. Für diesen Zweck wurde ein eigenes "Haiku Vector Icon Format" (HVIF) entwickelt, das für eine kleine Dateigröße und schnelle Anzeige optimiert ist. Aus diesem Grund sind Haiku-Icons normalerweise <i>erheblich</i> kleiner als ein Pixelbild oder das weit verbreiteten SVG-Format. Ebenso sind Haiku-Icons nicht wie im BeOS auf 256 Farben (8bit Palette) beschränkt.<br />
+Als Beispiel das Icon vom Terminal:</p>
 <table border="0" cellpadding="10">
         <tr align="center"><td><b>Pixel</b></td><td><b>SVG</b></td><td><b>HVIF</b></td></tr>
         <tr align="center"><td><img src="../../images/apps-images/i-o-m-terminal-bitmap32.png" alt="i-o-m-terminal-bitmap32" width="32" height="32" /> <img src="../../images/apps-images/i-o-m-terminal-bitmap16.png" alt="i-o-m-terminal-bitmap16" width="16" height="16" /></td><td style="width:100px"><img src="../../images/apps-images/terminal-icon_32.png" alt="terminal-icon_32" width="32" height="32" /></td><td><img src="../../images/apps-images/terminal-icon_32.png" alt="terminal-icon_32" width="32" height="32" /></td></tr>
@@ -125,8 +126,8 @@ Als Beispiel, das Icon vom Terminal:</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="i-o-m" name="i-o-m">Icon-Erstellung mit Icon-O-Matic</a></h2>
-<p>Icon-O-Matic ist der Icon-Editor unter Haiku. Die damit erstellten Icons können im Haiku-eigenen Format HVIF, als SVG oder PNG abgespeichert werden. Darüber hinaus ist es auch möglich, das Icon direkt als Attribut an eine bestehende Datei anzuhängen oder es als Ressource, beziehungsweise Quelldatei für Programmierer bereit zu stellen. Da Icon-O-Matic speziell für das Format HVIF entwickelt wurde, kann man an der Arbeitsweise ein wenig die Struktur des HVIF Formats erkennen.</p>
-<p>Im Gegensatz zu anderen Vektorgraphik-Programmen werden hier keine separaten Objekte erstellt, die jeweils ihre eigene Sammlung an Eigenschaften, wie Pfad, Strichstärke oder Farbe haben. Die einzelnen Objekte ("shapes") werden vielmehr aus mehrfach genutzten Pfaden ("paths") und Farben ("styles") zusammengesetzt und mit Eigenschaften ("properties") versehen. Dieses Wiederverwenden einzelner Elemente ist eines der Geheimnisse von HVIFs Effizienz. Auch wenn es dem Icon-Designer etwas mehr abverlangt, gibt es doch einige Vorteile, die für diesen Ansatz sprechen.<br />
+<p>Icon-O-Matic ist der Icon-Editor unter Haiku. Die damit erstellten Icons können im Haiku-eigenen Format HVIF, als SVG oder PNG abgespeichert werden. Darüber hinaus ist es auch möglich, das Icon direkt als Attribut an eine bestehende Datei anzuhängen oder es als Ressource beziehungsweise Quelldatei für Programmierer bereit zu stellen. Da Icon-O-Matic speziell für das Format HVIF entwickelt wurde, kann man an der Arbeitsweise ein wenig die Struktur des HVIF Formats erkennen.</p>
+<p>Im Gegensatz zu anderen Vektorgraphik-Programmen werden hier keine separaten Objekte erstellt, die jeweils ihre eigene Sammlung an Eigenschaften, wie Pfad, Strichstärke oder Farbe haben. Die einzelnen Objekte ("shapes") werden vielmehr aus mehrfach genutzten Pfaden ("paths") und Farben ("styles") zusammengesetzt und mit Eigenschaften ("properties") versehen. Dieses Wiederverwenden einzelner Elemente ist eines der Geheimnisse der Effizienz von HVIF. Auch wenn es dem Icon-Designer etwas mehr abverlangt, gibt es doch einige Vorteile, die für diesen Ansatz sprechen.<br />
 So können beispielsweise durch das Wiederverwenden eines Pfads mehrere Objekte gleichzeitig geändert werden. Besonders deutlich wird das beim Schattenwurf eines Objekts. Durch die Änderung des gemeinsamen Pfads, wird gleichzeitig zum Objekt auch dessen durch eine leichte Verzerrung erzeugte Schatten mitgeändert.</p>
 
 <p>Ein kurzer Überblick über das Programmfenster von Icon-O-Matic:</p>
@@ -138,18 +139,18 @@ So können beispielsweise durch das Wiederverwenden eines Pfads mehrere Objekte 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="i-o-m-path" name="i-o-m-path">Pfad</a></h3>
-<p>Ein Pfad besteht aus mehreren Punkten, die durch eine Linie oder einer Bezier-Kurve miteinander verbunden sind. Um einzelne Punkte ändern oder hinzufügen zu können, muss der entsprechende Pfad in der Pfadliste links ausgewählt sein.</p>
+<p>Ein Pfad besteht aus mehreren Punkten, die durch eine Linie oder eine Bezier-Kurve miteinander verbunden sind. Um einzelne Punkte ändern oder hinzufügen zu können, muss der entsprechende Pfad links in der Pfadliste ausgewählt sein.</p>
 
-<p>Ein Klick in die Zeichenfläche setzt den ersten Punkt eines Pfads. Dabei lässt sich auch gleich festlegen, ob es sich bei dem Pfad um eine Linie oder eine Kurve handeln soll: ein einfacher Klick erzeugt eine gerade Linie; wird die Taste gehalten und die Maus bewegt, erscheinen die typischen Greifer für Bezier-Kurven. Natürlich kann der Pfad auch noch nachträglich von einer Linie zur Kurve oder andersrum geändert werden.</p>
+<p>Ein Klick in die Zeichenfläche setzt den ersten Punkt eines Pfads. Dabei lässt sich auch gleich festlegen, ob es sich bei dem Pfad um eine Linie oder eine Kurve handeln soll: Ein einfacher Klick erzeugt eine gerade Linie. Wird die Maus-Taste gehalten und die Maus bewegt, erscheinen die typischen Greifer für Bezier-Kurven. Natürlich kann der Pfad auch noch nachträglich von einer Linie in eine Kurve oder andersrum geändert werden.</p>
 
 <img src="../../images/apps-images/i-o-m-path-ab.png" alt="i-o-m-path-ab" />
 
-<p>Um von Bild "A" zu Bild "B" zu kommen, müssen einige Eckpunkte der Linie zu Kurvenpunkten umgewandelt werden. Dazu wird beim Klick auf einen Punkt die <span class="key">ALT</span> Taste gehalten und dabei die Maus bewegt, damit die Bezier-Greifer erscheinen. Hierdurch ergibt sich eine symmetrische Bezier-Kurve: beide Greifer sind fest miteinander verbunden. Wenn man nur einen der beiden verändern möchte, muss man wieder <span class="key">ALT</span> drücken während man einen Greifer bewegt.<br />
+<p>Um von Bild "A" zu Bild "B" zu kommen, müssen einige Eckpunkte der Linie zu Kurvenpunkten umgewandelt werden. Dazu wird beim Klick auf einen Punkt die <span class="key">ALT</span> Taste gehalten und dabei die Maus bewegt, damit die Bezier-Greifer erscheinen. Hierdurch ergibt sich eine symmetrische Bezier-Kurve: Beide Greifer sind fest miteinander verbunden. Wenn man nur einen der beiden verändern möchte, muss man wieder <span class="key">ALT</span> drücken, während man einen Greifer bewegt.<br />
 Umgekehrt kann man einen Kurvenpunkt in einen Eckpunkt verwandeln, indem man ihn bei gedrückter <span class="key">ALT</span> Taste anklickt.</p>
 
 <p>Durch Klicken und Ziehen kann ein Punkt verschoben werden. Um mehrere Punkte gleichzeitig auszuwählen, zieht man bei gedrückter <span class="key">SHIFT</span> Taste einen entsprechenden Auswahlrahmen auf. Ausgewählte Punkte erscheinen mit einem roten statt dem normal schwarzen Umriss.<br />
 Ein weiterer Punkt wird in einem Pfad eingefügt, indem man auf die Verbindungslinie zwischen zwei Punkten klickt.<br />
-Ausgewählte Punkte lassen sich mit <span class="key">ENTF</span> entfernen; alternativ kann auch ein nicht ausgewählter Punkt durch einen Klick bei gedrückter <span class="key">STRG</span> Taste gelöscht werden.</p>
+Ausgewählte Punkte lassen sich mit <span class="key">ENTF</span> entfernen. Alternativ kann auch ein nicht ausgewählter Punkt durch einen Klick bei gedrückter <span class="key">STRG</span> Taste gelöscht werden.</p>
 
 <p>Der Mauszeiger zeigt den aktuellen Bearbeitungsmodus:</p>
 <table summary="Mouse pointer states, Path" border="0" cellpadding="10">
@@ -184,7 +185,7 @@ Ausgewählte Punkte lassen sich mit <span class="key">ENTF</span> entfernen; alt
 
 <table summary="Path menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Umkehren</span></td><td style="width:15px;"></td><td>Wenn der Pfad nicht "geschlossen" ist (siehe weiter unten: Pfad Eigenschaften), wird ein neuer Punkt mit dem zuletzt gesetzten Punkt verbunden. Durch "Umkehren" wird der neue Punkt mit dem ursprünglichen Startpunkt des Pfads verbunden.</td></tr>
-<tr><td><span class="menu">Aufräumen</span></td><td></td><td>Entfernt überflüssige Punkte (insbesondere beim Import von SVG-Graphiken hilfreich).</td></tr>
+<tr><td><span class="menu">Aufräumen</span></td><td></td><td>Entfernt überflüssige Punkte, was insbesondere beim Import von SVG-Graphiken hilfreich ist.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Indizes vorwärts rotieren</span></td><td><span class="key">ALT</span> <span class="key">R</span></td><td>Hierdurch wird sozusagen die Öffnung eines Pfads gedreht. Am deutlichsten wird das bei einem nicht geschlossenen Pfad mit einem zugewiesenen Style und Shape und einem Stroke Transformator. Wenn der Pfad diese Form hat ⊂, wird er folgendermaßen gedreht: ⊂ ∩ ⊃ ∪.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Indizes rückwärts rotieren</span></td><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">R</span></td><td>Wie oben, nur links herum.</td></tr>
 </table>
@@ -201,7 +202,7 @@ Ausgewählte Punkte lassen sich mit <span class="key">ENTF</span> entfernen; alt
 
 <img src="../../images/apps-images/i-o-m-shape.png" alt="i-o-m-shape" />
 
-<p>Wird eine Form aus der Liste ausgewählt, wird diese Form mit einem Rechteck umschlossen um sie hervorzuheben. Je nach dem, wo dieses Rechteck mit der Maus angefasst wird, kann man die Form verschieben, in der Größe verändern oder um den Mittelpunkt drehen, der selbst auch verschoben werden kann. Mittels der <span class="key">SHIFT</span>-Taste kann man beim Verschieben die Richtung unveränderlich halten, beim Drehen 45°-Schritte festlegen und das Seitenverhältnis bei der Größenänderung beibehalten. Wie bereits bei der Bearbeitung des Pfads kann am Mauszeiger der aktuelle Bearbeitungsmodus abgelesen werden:</p>
+<p>Wird eine Form aus der Liste ausgewählt, wird diese Form mit einem Rechteck umschlossen um sie hervorzuheben. Je nachdem, wo dieses Rechteck mit der Maus angefasst wird, kann man die Form verschieben, in der Größe verändern oder um den Mittelpunkt drehen. Der Mittelpunkt selbst kann auch verschoben werden. Mittels der <span class="key">SHIFT</span>-Taste kann man beim Verschieben die Richtung unveränderlich halten, beim Drehen 45°-Schritte festlegen oder das Seitenverhältnis bei der Größenänderung beibehalten. Wie bereits bei der Bearbeitung des Pfads kann am Mauszeiger der aktuelle Bearbeitungsmodus abgelesen werden:</p>
 <table summary="Mouse pointer states, Shape" border="0" cellpadding="10">
         <tr align="center">
                 <td><img src="../../images/apps-images/i-o-m-pointer-move-shape.png" alt="i-o-m- move-shape" width="16" height="16" /></td>
@@ -244,11 +245,11 @@ Anderenfalls wird durch diesen Menüpunkt die Transformation auf die Pfade angew
                 <td><img src="../../images/apps-images/i-o-m-lod-icon_64.png" alt="i-o-m-lod-icon_64" width="64" height="64" /></td></tr>
 </table>
 <p>Ein gutes Beispiel für den Detail-Grad ist das Icon von BeVexed.<br />
-Je nach dem, welche Icon-Größe im Tracker eingestellt ist, kann für jede Form festgelegt werden ob sie angezeigt wird, oder nicht. In diesem Beispiel wären die Zahlen bei 16x16 nicht mehr erkennbar und würden nur stören. Über den entsprechenden Wert beim Detail-Grad wurden sie ausgeblendet.</p>
+Je nachdem, welche Icon-Größe im Tracker eingestellt ist, kann für jede Form festgelegt werden, ob sie angezeigt wird, oder nicht. In diesem Beispiel wären die Zahlen bei 16x16 nicht mehr erkennbar und würden nur stören. Über den entsprechenden Wert beim Detail-Grad wurden sie ausgeblendet.</p>
 <p>Der Wert für den "LOD" errechnet sich folgendermaßen: ein LOD von 1.00 ist für eine Icon-Größe von 64x64 festgelegt. Für andere Größen ist die Icon-Größe durch 64 zu teilen. So hat ein Icon der Größe 16x16 einen LOD von 16/64 = 0.25. 
 Eine Form wird unterhalb seines <span class="menu">Min LOD</span>, beziehungsweise überhalb seines <span class="menu">Max LOD</span> nicht angezeigt.</p>
 <p>Wenn man also den <span class="menu">Min LOD</span> einer Form auf 0.0 und den <span class="menu">Max LOD</span> auf 0.5 setzt, dann wird diese Form nur angezeigt, wenn die Icon-Größe im Tracker kleiner oder <i>gleich</i> 32x32 ist. Wenn sie bereits ab dieser Größe ausgeschlossen werden soll, muss ein Wert kleiner als 0.5 - beispielsweise 0.49 - eingegeben werden.</p>
-<p>Der "LOD" kann nicht nur dafür verwendet werden, Formen ein- oder auszublenden, sondern unter anderem auch um Linien verschiedener Strichstärken zu verwenden: die Form duplizieren, am Duplikat die gewünschten Änderungen vornehmen und bei beiden den LOD so einstellen, dass entweder die eine oder die andere Form angezeigt wird. Hierbei ist aber darauf zu Achten, dass die Werte der jeweiligen Detail-Grade nicht überlappen! Sonst sind bei einer Icon-Größe beide Formen sichtbar...<br />
+<p>Der "LOD" kann nicht nur dafür verwendet werden, Formen ein- oder auszublenden, sondern unter anderem auch, um Linien verschiedener Strichstärken zu verwenden: Die Form duplizieren, am Duplikat die gewünschten Änderungen vornehmen und bei beiden den LOD so einstellen, dass entweder die eine oder die andere Form angezeigt wird. Hierbei ist aber darauf zu Achten, dass die Werte der jeweiligen Detail-Grade nicht überlappen! Sonst sind bei einer Icon-Größe beide Formen sichtbar...<br />
 Wenn zum Beispiel "Form 1" unterhalb 48x48 zu sehen sein soll und "Form 2" überhalb (LOD: 48/64 = 0.75):</p>
 
 <table summary="LOD values example" border="0" cellpadding="5">
@@ -298,7 +299,7 @@ Natürlich kann der Marker verschoben werden, um den Farbverlauf anzupassen. Zus
 <tr><td><span class="menu">Enden</span></td><td style="width:15px;"></td><td>(<i>nur bei "Stroke"</i>) Definiert die Endpunkte einer Linie: <span class="menu">Butt</span> - abgeflacht, <span class="menu">Square</span> - die Linienbreite wird auf die Linie als Abschluss-Quadrat aufgesetzt, oder <span class="menu">Round</span>, die Linie wird abgerundet.</td></tr>
 <tr><td><span class="menu">Ausrichtung erk.</span></td><td></td><td>(<i>nur bei "Contour"</i>) Stellt sicher, dass Icon-O-Matic - insbesondere bei Pfaden, die sich selbst schneiden - die Kontur um einen Pfad immer außen anbringt.</td></tr>
 <tr><td><span class="menu">Verbindungen</span></td><td></td><td>Definiert, wie Linien an einem Punkt miteinander verbunden werden: <span class="menu">Miter</span> (auf Gehrung), <span class="menu">Round</span> (abgerundet) oder <span class="menu">Bevel</span> (abgeschrägt).</td></tr>
-<tr><td><span class="menu">Gehrungslimit</span></td><td></td><td>nur wenn unter <span class="menu">Verbindungen</span> "Miter" ausgewählt wurde: diese Einstellung beeinflusst das Aussehen des Gehrungsschnittes.</td></tr>
+<tr><td><span class="menu">Gehrungslimit</span></td><td></td><td>Nur wenn unter <span class="menu">Verbindungen</span> "Miter" ausgewählt wurde: Diese Einstellung beeinflusst das Aussehen des Gehrungsschnittes.</td></tr>
 </table>
 
 

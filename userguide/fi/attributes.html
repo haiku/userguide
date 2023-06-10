@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <h1>Attribuutit</h1>
 
@@ -85,12 +86,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Attribuutit Pääteikkunassa</a></h2>
 <p>Jos pidät parempana käyttää komentoriviä ja suunnittelet työskenteleväsi monien tiedostojen kanssa käyttäen skriptausta, on useita komentoja, joilla voidaan ohjata attribuutteja Pääteikkunasta.</p>
+<p>Lisätietoja näistä komennoista ja niiden valitsimista löytyy kirjoittamalla komentonimien ja sen jälkeen valitsimen ”<span class="cli">-h</span>” tai ”<span class="cli">--help</span>”.</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p>
-<span class="cli">listattr</span> luettelee tiedoston attribuutit, mutta ei näytä attribuuttien sisältöä.</p>
-<pre>käyttö: listattr 'tiedostonimi' ['tiedostonimi' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>Yllä olevasta näytönkaappausesimerkistämme:</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
 File: Clara Botters
@@ -152,9 +153,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> poistaa attribuutin kokonaan tiedostosta.</p>
 
-<pre>käyttö: rmattr [-p] attr tiedostonimi1 [tiedostonimi2...]
-         'attr' on tiedoston attribuutin nimi
-         Jos '-p' on määritelty, 'attr' -määrittelyä pidetään mallina.</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>Vaikka kaikessa käytännöllisyydessä olisi riittävää, jos ”Fax”-attribuutti vain jätettäisiin täyttämättä, sen voi kokonaan poistaa Claran tiedostosta kirjoittamalla:</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -167,7 +166,6 @@ Clara Botters : string : Whelton</pre>
 <p>Jos haluat kopioida attribuutit ja myös itse datatiedoston, voit lisätä valitsimen ”<span class="cli">-d</span>” tai ”<span class="cli">--data</span>”.</p>
 
 <p><br /></p>
-<p>Lisätietoja näistä komennoista ja niiden valitsimista löytyy kirjoittamalla komentonimien ja sen jälkeen valitsimen ”<span class="cli">-h</span>” tai ”<span class="cli">--help</span>”.</p>
 
 </div>
 </div>

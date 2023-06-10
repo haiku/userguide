@@ -4,12 +4,13 @@
 <head>
 <!--
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *
 -->
@@ -81,7 +82,7 @@
 <span class="path">~/config/settings/Touchpad_settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>Die Einstellungen für Eingabegeräte kombinieren die zuvor einzelnen Panels für Tastatur, Maus und Touchpad, sowie alle sonstigen vom System erkannten Eingabegeräte. Dabei werden links die Geräte aufgelistet, rechts erscheinen die für das gewählte Gerät vorhandenen Einstellungsmöglichkeiten.</p>
+<p>Die Einstellungen für Eingabegeräte kombinieren die zuvor einzelnen Panels für Tastatur, Maus und Touchpad sowie alle sonstigen vom System erkannten Eingabegeräte. Dabei werden links die Geräte aufgelistet, rechts erscheinen die für das gewählte Gerät vorhandenen Einstellungsmöglichkeiten.</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="keyboard" name="keyboard"><acronym title="Keyboard">Tastatur</acronym></a></h3>
@@ -89,19 +90,19 @@
 <p>Hier kann die Wiederholrate für einen Tastendruck und die Verzögerung eingestellt werden, die das System wartet, bis eine gedrückte Taste wiederholt wird. Die Einstellungen können in dem Textfeld getestet werden.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="button">Standardwerte</span></td><td> </td><td>Setzt alle Einstellungen auf die Standardwerte zurück.</td></tr>
-<tr><td><span class="button">Anfangswerte</span></td><td> </td><td>Stellt die Einstellungen wieder her, die aktiv waren als Keyboard gestartet wurde.</td></tr>
+<tr><td><span class="button">Anfangswerte</span></td><td> </td><td>Stellt die Einstellungen wieder her, die aktiv waren, als Keyboard gestartet wurde.</td></tr>
 </table>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="mouse" name="mouse"><acronym title="Mouse">Maus</acronym></a></h3>
 <img src="../images/prefs-images/mouse.png" alt="mouse.png" />
-<p>Im Auswahlmenü links kann die Art der Maus, respektive deren Tastenzahl, ausgewählt werden. Insbesondere für 1-Tasten Mäuse interessant: der Rechtsklick kann mit <span class="key">STRG</span>-Linksklick und ein Klick auf die mittlere Taste mit <span class="key">STRG</span> <span class="key">ALT</span>-Linksklick erzeugt werden.</p>
+<p>Im Auswahlmenü links kann die Art der Maus, respektive deren Tastenzahl, ausgewählt werden. Insbesondere für 1-Tasten Mäuse interessant: Der Rechtsklick kann mit <span class="key">STRG</span>-Linksklick und ein Klick auf die mittlere Taste mit <span class="key">STRG</span> <span class="key">ALT</span>-Linksklick erzeugt werden.</p>
 <p>Die Tastenbelegung kann über das Markieren der entsprechenden Taste und dem dazugehörigen Auswahlmenü geändert werden.</p>
 <p>Über die Schieberegler rechts kann die Doppelklick-Geschwindigkeit, die Geschwindigkeit des Mauszeigers und seine Beschleunigung eingestellt werden. Im Testfeld unter der Mausgrafik kann die Doppelklick-Geschwindigkeit getestet werden: Wird ein Wort durch Doppelklick nicht markiert, ist die entsprechende Geschwindigkeit zu hoch eingestellt (oder man muss halt lernen schneller zu klicken...).</p>
 <p>Im Auswahlmenü <span class="menu">Modus</span> wird bestimmt, wie Programmfenster auf Klicks reagieren. Hierfür gibt es drei Möglichkeiten:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Klicken aktiviert und bringt nach vorn</span></td><td width="15px"> </td><td>Das Fenster wird durch Klicken aktiviert und ganz nach vorn geholt. Dies ist die Standardeinstellung.</td></tr>
-<tr><td><span class="menu">Klicken aktiviert Fenster</span></td><td> </td><td>Beim Klicken auf ein Fenster wird dieses nur aktiviert, aber nicht automatisch in den Vordergrund geholt. Dies gelingt entweder durch Klicken auf den Fensterreiter beziehungsweise -rahmen oder durch Klicken irgendwo im Fenster, während die <a href="../gui.html#move-resize">Fenstermanagement-Tasten</a> <span class="key">STRG</span> <span class="key">ALT</span> gehalten werden.</td></tr>
+<tr><td><span class="menu">Klicken aktiviert Fenster</span></td><td> </td><td>Beim Klicken auf ein Fenster wird dieses nur aktiviert, aber nicht automatisch in den Vordergrund geholt. Dies gelingt entweder durch Klicken auf den Fensterreiter oder -rahmen oder durch Klicken irgendwo im Fenster, während die <a href="../gui.html#move-resize">Fenstermanagement-Tasten</a> <span class="key">STRG</span> <span class="key">ALT</span> gehalten werden.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Ohne Klicken aktivieren</span></td><td></td><td>Das Fenster unter dem Mauszeiger wird automatisch aktiviert. Um es in den Vordergrund zu holen, geht man vor wie bei <span class="menu">Klicken aktiviert Fenster</span> beschrieben.</td></tr>
 </table>
 <p>Die Option <span class="menu">Auf ersten Klick reagieren</span> vermeidet, ein Fenster erst aktivieren zu müssen, bevor eine Schaltfläche gedrückt oder ein Menü geöffnet werden kann. Allerdings besteht dann Gefahr, aus Versehen beispielsweise statt des Fensterreiters den "Schließen"-Button zu treffen und ein Programm ungewollt zu beenden. Andererseits kann damit der Arbeitsfluss deutlich beschleunigt werden.</p>
@@ -117,17 +118,18 @@
 <p>Mit den vertikalen und horizontalen roten Linien der Touchpad Darstellung lässt sich ein Scroll-Bereich definieren (rötlich gefärbt gegenüber der grauen normalen Navigationsfläche). Streicht man mit dem Finger über diesen Teil des Touchpads, bewegen sich die Scrollbalken eines Fensters entsprechend.</p>
 <p>Mit den Schiebereglern rechts daneben lässt sich die allgemeine Scroll-Beschleunigung und die vertikalen und horizontalen Scroll-Geschwindigkeiten einstellen.<br />
 Je größer die Beschleunigung, desto schneller scrollt eine Liste wenn man den Finger ganz schnell über den Scroll-Bereich bewegt. Die Scroll-Geschwindigkeit bestimmt das Verhalten beim "normal-schnellen" Überstreichen des Bereichs.</p>
-<p>Unter der Touchpad Grafik lässt sich "Zwei-Finger-Scrollen" für horizontales und vertikales Scrollen aktivieren. Bewegt man zwei Finger parallel in der Vertikalen oder Horizontalen, bewegen sich die Scrollbalken eines Fensters entsprechend.<br />
+<p>Unter der Touchpad-Grafik lässt sich <span class="menu">Zwei-Finger-Scrollen</span> für horizontales und vertikales Scrollen aktivieren. Bewegt man zwei Finger parallel in der Vertikalen oder Horizontalen, bewegen sich die Scrollbalken eines Fensters entsprechend.<br />
 Wer mit diesem Feature zurecht kommt, der kann auf Scroll-Bereiche verzichten und das gesamte Touchpad zum normalen Navigieren nutzen</p>
-<p>Ganz unten ist noch ein Regler zum einstellen der Berührungsempfindlichkeit. Werden Klicks per Antippen immer wieder ignoriert, sollte man die Empfindlichkeit erhöhen. Werden im Gegenteil immer irgendwelche Klicks registriert, obwohl eigentlich nur der Mauszeiger bewegt werden soll, sollte sie verringert werden.</p>
+<p>Es folgt ein Regler zum Einstellen der Empfindlichkeit. Werden Klicks per Antippen immer wieder ignoriert, sollte man die Empfindlichkeit erhöhen. Werden im Gegenteil immer irgendwelche Klicks registriert, obwohl eigentlich nur der Mauszeiger bewegt werden soll, sollte sie verringert werden.</p>
+<p>Der letzte Regler steuert die <span class="menu">Verzögerung der Tastatursperre</span>. Wenn man bei der Texteingabe immer wieder aus Versehen das Touchpad berührt und so die Texteingabemarke verschiebt, lässt sich das mit einer kürzeren Verzögerung verhindern.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="button">Standardwerte</span></td><td> </td><td>Setzt alle Einstellungen auf die Standardwerte zurück.</td></tr>
 <tr><td><span class="button">Anfangswerte</span></td><td> </td><td>Setzt wieder die Werte, die aktiv waren als das Touchpad Panel gestartet wurde.</td></tr>
 </table>
-<p>Folgender Tip bezieht sich nicht so sehr auf dieses Einstellungs Panel, sondern auf die Nutzung von Touchpads allgemein:<br />
+<p>Folgender Tipp bezieht sich nicht so sehr auf dieses Einstellungs-Panel, sondern auf die Nutzung von Touchpads allgemein:<br />
 Wusstest Du, dass man ein Drag &amp; Drop nur per Touchpad ausführen kann, also ohne die Tasten zu benutzen? Dazu macht einfach einen Doppelklick, ohne jedoch den Finger nach dem zweiten Klick anzuheben. Das so aufgenommene Icon hängt nun am Mauszeiger und kann mit dem Finger auf dem Touchpad umher bewegt werden. Hebt man den Finger, wird das Icon fallen gelassen.</p>
 <p>Angenommen der Finger erreicht beim Ziehen eines Icons den Rand des Touchpads, der Mauszeiger ist aber noch nicht am Bildschirmrand angekommen. Sobald man den Finger hebt, wird ja das Icon fallen gelassen. Wie also lässt sich das Icon weiterziehen?<br />
-Je nach verbauter Hardware gibt es da ein nettes Feature: man lässt den Finger einfach am Rand des Touchpads, aber ohne den Finger zu heben. Der Mauszeiger fliegt dann einfach weiter wie auf Auto-Pilot.</p>
+Je nach verbauter Hardware gibt es da ein nettes Feature: Man lässt den Finger einfach am Rand des Touchpads, aber ohne den Finger zu heben. Der Mauszeiger fliegt dann einfach weiter wie auf Auto-Pilot.</p>
 
 </div>
 </div>

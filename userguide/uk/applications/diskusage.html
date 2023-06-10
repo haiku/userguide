@@ -10,20 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>DiskUsage</title>
+	<title>DiskUsage (Використання диска)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -53,49 +54,49 @@
 <li><a href="../../jp/applications/diskusage.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="diskprobe.html">DiskProbe</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="drivesetup.html">Настройка дисків (DriveSetup)</a>  »
+ «  <a href="diskprobe.html">DiskProbe (HEX-редактор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="drivesetup.html">DriveSetup (Розмітчик диска)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/apps-images/diskusage-icon_64.png" alt="diskusage-icon_64.png" width="64" height="64" />DiskUsage</h2>
+<h2><img src="../../images/apps-images/diskusage-icon_64.png" alt="diskusage-icon_64.png" width="64" height="64" />   DiskUsage (Використання диска)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/DiskUsage</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/DiskUsage</span></td></tr>
 </table>
 <p><br /></p>
-<p>DiskUsage Графічно зображає дисковий простір на ваших розділах.<br />
-Корисний інструмент для відповіді на питання "<i>Куди поділося вільне місце на моєму диску?</i>".</p>
-<p>After launching, DiskUsage shows only an empty window with all mounted volumes as tabs at the top. You'll have to choose the one you're interested in and click <span class="button">Scan</span> to start chugging through the disk. For larger disks this can take some time... While you wait, you may switch to a different tab and start exploring that volume or begin the scan process there as well.<br />
-It's not recommended to start several concurrent scan processes on the same physical disk, as the constant repositioning of the heads of the drive will only extend the wait.</p>
+<p>DiskUsage у графічній формі показує, 
+ як використовується дисковий простір на Ваших томах.<br />
+Корисний інструмент для відповіді на запитання "<i>Куди поділося вільне місце на моєму диску?</i>".</p>
+<p>Після запуску DiskUsage показує лише порожнє вікно з усіма підключеними (змонтованими) томами у вигляді вкладок у верхній частині. Вам потрібно вибрати той, який вас цікавить, і натиснути кнопку <span class="button">Сканувати</span>, щоб почати процес сканування диска. Для великих за розміром дисків це може зайняти деякий час… Поки Ви чекаєте, можете перейти на іншу вкладку і почати досліджувати інший том або почати процес сканування і на ньому.<br />
+Не рекомендується запускати кілька паралельних процесів сканування на одному фізичному диску, оскільки постійне переміщення головок диска лише подовжить час очікування.</p>
 <p><img id="diskusage" src="../images/apps-images/diskusage.png" alt="diskusage.png" /></p>
-<p>Концентричні кола представляють собою різні рівні в ієрархії файлової системи. Над центральним колом зображена папка <span class="path">/boot/home/</span>. Кожен сегмент кола над нею - файл або папка, що знаходяться в <span class="path">/boot/home/</span>. Кожен подальший сегмент відображає на один рівень глибше файлової ієрархії. Можливо доведеться змінити розмір вікна, щоб папки з великим ступенем вкладень змогли поміститися на нього.</p>
+<p>Концентричні кола представляють собою різні рівні в ієрархії файлової системи. Центральне коло позначає каталог <span class="path">/boot/home/Desktop/haiku</span>. Кожен сегмент кільця безпосередньо за цим колом є файлом або папкою в <span class="path">/boot/home/Desktop/haiku/</span>. Кожен сегмент, що знаходиться далі, переносить Вас на один рівень глибше у файловій ієрархії. Можливо, Вам доведеться змінити розмір вікна, щоб вмістити глибоко вкладені підкаталоги.</p>
 <div class="box-info"><ul>
 <li>Якщо графічне представлення файлу стає меншим ніж 2°, то воно не відображається.</li>
 <li>Кількість файлів, що декларується для папки, включає також і файли у вкладених папках. Папка рахується як файл. </li>
 <li>DiskUsage ігнорує символьні посилання.</li>
 </ul></div>
-<p>При наведенні мишки на певний сегмент, Ви отримаєте інформацію про цей файл або папку внизу в стрічці стану.</p>
-<p>Right-clicking a segment offers a context menu to <span class="menu">Get info</span>, <span class="menu">Open</span> (with Tracker), <span class="menu">Open with</span> another suitable application or <span class="menu">Rescan</span> that particular folder.<br />
-Left-clicking a segment makes that file/folder the center circle.<br />
-Left-clicking the center circle moves you up one level.</p>
-<p>Ви можете перетягувати файли і папки з DiskUsage в інші додатки, на робочий стіл або на інше вікно Tracker'a для копіювання. Якщо ж навпаки перетягнути розділи і папки на вікно DiskUsage, то розмір вікна підженеться до нового представлення  і зробить його новим центральним колом.</p>
-<p>You can also use the Tracker add-on from the context menu of any folder to start DiskUsage with that particular location.</p>
+<p>Коли Ви наводите курсор миші на сегмент, у рядку стану внизу вікна з’являється інформація про цей файл або папку.</p>
+<p>Правий клік миші по сегменту викликає контекстне меню з пунктами <span class="menu">Дивитись інфо</span>, <span class="menu">Відкрити</span> (у Tracker), <span class="menu">Відкрити в</span> в іншій придатній програмі або <span class="menu">Пересканувати</span> папки цього сегменту.<br />
+Якщо зробити лівий клік миші по сегменту, цей файл/папка стане центральним колом.<br />
+Лівий клік миші по центральному колу переміщує на один рівень ієрархії вгору.</p>
+<p>Ви можете перетягувати файли та папки з DiskUsage в інші програми або на робочий стіл чи інші вікна Tracker для копіювання. І навпаки, скинуті у вікно DiskUsage томи і каталоги стануть новим центральним колом а саме вікно буде масштабовано безпосередньо до них.</p>
+<p>До того ж можна скористатися доповненням Tracker із контекстного меню будь-якої папки, щоб запустити DiskUsage із цього конкретного розташування.</p>
 
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="diskprobe.html">DiskProbe</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="drivesetup.html">Настройка дисків (DriveSetup)</a>  »
+ «  <a href="diskprobe.html">DiskProbe (HEX-редактор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="drivesetup.html">DriveSetup (Розмітчик диска)</a>  »
 </span></div>
 </div>
 

@@ -4,12 +4,13 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		Vincent Duvert
  *		Loïc
  *
@@ -95,7 +96,6 @@ Mieux encore, vous n'avez pas à double-cliquer à nouveau pour rafraichir une r
     <li><span class="menu">by Formula</span> - une recherche encore plus avancée, vous pouvez formuler finement vos critères en termes complexes.</li></ul></li>
 <li><p>Selection des disques/volumes à interroger.</p></li>
 <li><p>Entrez le terme recherché.</p></li>
-<li><p>Un agrandisseur cache/montre les options supplémentaires.</p></li>
 <li><p>Décochez la case <span class="menu">Temporary</span> (Temporaire) si vous ne voulez pas que cette requête s'efface après 7 jours.</p></li>
 <li><p>Cocher si votre requête est supposé inclure la corbeille (<span class="menu">Include trash</span>).</p></li>
 <li><p>En option, saisissez un nom pour cette requête si vous souhaitez l'enregistrer.</p></li>
@@ -116,7 +116,7 @@ Mieux encore, vous n'avez pas à double-cliquer à nouveau pour rafraichir une r
 <p>Cela ajoute une liste déroulante à gauche de la zone de texte ainsi que les boutons <span class="button">Add</span> et <span class="button">Remove</span> juste dessous. Dans la liste déroulante vous choisissez quel attribut rechercher. Avec<span class="button">Add</span> et <span class="button">Remove</span> vous pouvez interroger des attributs supplémentaires ou les retirer. Ces attributs peuvent être combinés logiquement avec ET/OU.</p>
 <p>Faisons par exemple une requête sur un e-mail :</p>
 <img src="images/queries-images/query-window-filled.png" alt="query-window-filled.png" />
-<p>Voici votre fenêtre de recherche lorsque vous recherchez tous les courriels que Clara Oswald vous a envoyés au cours des deux derniers mois et qui avaient pour objet "vibraphone" ou "skepticality".<br />
+<p>Voici votre fenêtre de recherche lorsque vous recherchez tous les courriels que Clara Oswald vous a envoyés au cours des deux derniers mois et qui avaient pour objet "sufflé" ou "impossible".<br />
 Comme vous le voyez, la recherche par les attributs temporels permet de trouver des expressions utiles : outre les "last 2 months" (2 derniers mois), vous pouvez également utiliser "today" (aujourd'hui), "yesterday" (hier), "Monday" (lundi) ou "last Monday" (qui serait le lundi de la semaine dernière), ou "last 2 minutes/hours/days/weeks" (2 dernières minutes/heures/jours/semaines).<br />
 Un bon moyen de réduire le nombre de résultats de recherche.</p>
 
@@ -129,8 +129,8 @@ Un bon moyen de réduire le nombre de résultats de recherche.</p>
 <p>la même chose, sous forme de texte, édité pour plus de lisibilité :</p>
 <pre>(((((MAIL:from=="*[cC][lL][aA][rR][aA] [oO][sS][wW][aA][lL][dD]*")
        &amp;&amp;(MAIL:when&gt;=%2 months%))
-       &amp;&amp;(MAIL:subject=="*[Vv][Ii][Bb][Rr][Aa][Pp][Hh][Oo][Nn][Ee]*"))
-       ||(MAIL:subject=="*[Ss][Kk][Ee][Pp][Tt][Ii][Cc][Aa][Ll][Ii][Tt][Yy]*"))
+       &amp;&amp;(MAIL:subject=="*[sS][uU][fF][fF][lL][éÉ]*"))
+       ||(MAIL:subject=="*[iI][mM][pP][oO][sS][sS][iI][bB][lL][eE]*"))
        &amp;&amp;(BEOS:TYPE=="text/x-email"))</pre>
 <p>A quoi ça sert ?</p>
 <ul>

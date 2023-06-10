@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		taos
  *
@@ -87,18 +88,18 @@
 <img src="../images/prefs-images/time-timezone.png" alt="time-timezone.png" />
 <p>Hier muss man einfach nur sein Land aus der Liste der Kontinete finden und auswählen und <span class="button">Zeitzone setzen</span>  drücken. Bei Ländern mit mehreren Zeitzonen muss man noch eine Stufe tiefer aufklappen (wer hätte gedacht, dass es in Deutschland für "Büsingen" eine eigene Zeitzone gibt?).<br />
 Rechts wird die Zeit der aktuell eingestellten Zeitzone gezeigt, sowie eine Vorschau auf die Zeit der momentan ausgewählten Zeitzone.</p>
-<p>Ebenfalls befindet sich auf der rechten Seite die Einstllung der Hardware-Uhr des Computers. Es gibt zwei Modi:</p>
+<p>Ebenfalls befindet sich auf der rechten Seite die Einstellung der Hardware-Uhr des Computers. Es gibt zwei Modi:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Lokale Zeit</span></td><td></td><td>zur Anzeige der Ortszeit; wird normalerweise benutzt wenn man auf dem Rechner auch noch Windows nutzt.</td></tr>
-<tr><td><span class="menu">GMT</span></td><td></td><td>zur Anzeige der Greenwich Mean Time; das ist die UNIX-kompatible Einstellung.</td></tr>
+<tr><td><span class="menu">Lokale Zeit</span></td><td></td><td>zur Anzeige der Ortszeit (Wird normalerweise benutzt, wenn man auf dem Rechner auch noch Windows nutzt.)</td></tr>
+<tr><td><span class="menu">GMT</span></td><td></td><td>zur Anzeige der Greenwich Mean Time (Das ist die UNIX-kompatible Einstellung.)</td></tr>
 </table>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="network" name="network">Netzwerkzeit</a></h2>
-<p>Datum und Zeit von Hand einzustellen ist für einen Rechner mit Internetverbindung eigentlich nicht mehr zeitgemäß. Es existieren öffentliche Server, die sehr genaue Zeitsignale liefern.</p>
+<p>Datum und Zeit von Hand einzustellen, ist für einen Rechner mit Internetverbindung eigentlich nicht mehr zeitgemäß. Es existieren öffentliche Server, die sehr genaue Zeitsignale liefern.</p>
 <img src="../images/prefs-images/time-network.png" alt="time-network.png" />
-<p>Mit <span class="button">+</span>/<span class="button">-</span> können <acronym title="Network Time Protocol">NTP</acronym>-Server der Liste hinzugefügt bzw. wieder entfernt werden.</p>
+<p>Mit <span class="button">+</span>/<span class="button">-</span> können <acronym title="Network Time Protocol">NTP</acronym>-Server der Liste hinzugefügt oder wieder entfernt werden.</p>
 <p>Mit den Optionen darunter wird bei aktiviertem <span class="menu">Alle Server abfragen</span> nicht nur der gerade ausgewählte verwendet. Durch <span class="menu">Synchronisieren beim Hochfahren</span> stellt man sicher, dass die Uhrzeit regelmäßig abgeglichen wird.</p>
 <p>Man kann die <span class="button">Serverliste zurücksetzen</span> wenn funktionierende NTP-Server versehentlich gelöscht wurden und per <span class="button">Synchronisieren</span> den Abgleich manuell anstoßen. Synchronisieren lässt sich auch von der Kommandozeile aus (oder in einem Skript):</p>
 <pre class="terminal">Time --update</pre>

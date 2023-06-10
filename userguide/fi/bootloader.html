@@ -73,7 +73,7 @@
 <a id="options" name="options">Käynnistyslataajavalitsimet</a></h2>
 <p>Kun olet päässyt sinne, näkyviin tulee neljä valikkoa:</p>
 <table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
-<tr><td><b>Valitse käynnistyslevy</b></td><td> </td><td>Valitse, minkä Haiku-asennuksen/version käynnistät (katso <a href="#troubleshooting">Vianjäljitys</a> alla).</td></tr>
+<tr><td><b>Valitse käynnistyslevytaltio/tila</b></td><td> </td><td>Valitse, minkä Haiku-asennuksen/version käynnistät (katso <a href="#troubleshooting">Vianjäljitys</a> alla).</td></tr>
 <tr><td><b>Valitse turvatilavalitsimet</b>
 </td><td> </td><td>Laitteistopulmien tapahtuessa voit kokeilla useita valitsimia tai jos järjestelmä tulee epästabiiliksi tai sitä ei pysty käynnistämään huonosti käyttäytyvän lisäosan vuoksi. Kun valintapalkin siirtää valitsimelle, niin näytön alalaitaan ilmaantuu lyhyt selite.</td></tr>
 <tr><td></td><td></td><td>
@@ -141,7 +141,7 @@
 <li><p>Jos <span class="menu">Käytä vikasietoista grafiikka-ajuria</span>-aktivointi ratkaisee pulmasi putoamalla takaisin VESA-grafiikkatilaan, voit tehdä tämän asetuksen pysyväksi poistamalla merkin <tt>#</tt> riviltä <i>#fail_safe_video_mode true</i> tekstitiedostosta <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span>.</p></li>
 <li><p>Jos häiritsevä ajuri, lisäosa jne. on asennettu järjestelmähierarkiaan, asiat ovat hiukan mutkikkaampia, koska se alue on kirjoitussuojattu. Tässä <span class="menu">Poista järjestelmäkomponentteja käytöstä</span> voi näytellä tärkeää roolia. Sen avulla voit navigoida läpi koko järjestelmähierarkian ja ottaa pois käytöstä komponentit, jotka sotkevat järjestelmää merkitsemällä kohteita <span class="key">VÄLILYÖNTI</span>-näppäimellä tai <span class="key">RETURN</span>-näppäimellä. <span class="key">ESC</span>-näppäin palauttaa sinut yhden tason ylöspäin ylempään hakemistoon.</p>
 <p>Verkossa oleva artikkeli <a href="https://www.haiku-os.org/guides/daily-tasks/blacklist-packages">Poistetaan pakkausten komponentteja käytöstä</a> näyttää, kuinka tästä asetuksesta tekee pysyvän.</p></li>
-<li><p>Kohdasta <span class="menu">Valitse käynnistyslevy</span> voit määritellä, että minkä aikaisemman Haikun ”version” käynnistät. Joka kerta kun asennat pakkauksen tai poistat sen, vanha tila tallennetaan ja voit käynnistää järjestelmän siihen tilaan valitsemalla sen käynnistyslatausvalitsimissa esitetystä luettelosta.<br />
+<li><p>Kohdasta <span class="menu">Valitse käynnistyslevytaltio/tila</span> voit määritellä, että minkä aikaisemman Haikun ”version” käynnistät. Joka kerta kun asennat pakkauksen tai poistat sen, vanha tila tallennetaan ja voit käynnistää järjestelmän siihen tilaan valitsemalla sen käynnistyslatausvalitsimissa esitetystä luettelosta.<br />
 Joten jos kohtaat käynnistyspulmia jonkun pakkauksen asentamisen jälkeen, käynnistä Haiku-versioon ennen sitä aikaa ja poista haittallinen pakkaus. Voit palata pysyvästi määrättyyn Haiku-versioon kuten kuvaillaan kohdassa <a href="application/softwareupdater.html#donwgrading">Ohjelmistopäivittäjä</a>.</p></li>
 </ul>
 <h2>

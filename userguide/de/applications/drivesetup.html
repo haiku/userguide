@@ -11,6 +11,7 @@
  *		Humdinger <humdingerb@gmail.com>
  *		Kacper Kasper <kacperkasper@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		Matthias
  *		taos
@@ -72,13 +73,13 @@
 <tr><td>Einstellungen:</td><td></td><td><span class="path">~/config/settings/DriveSetup</span></td></tr>
 </table>
 <p><br /></p>
-<p>DriveSetup ist ein Programm zum Erstellen, Löschen und Formatieren von Partitionen. Aktuell ist es noch nicht möglich, bestehende Partitionen zu verschieben oder in ihrer Größe zu verändern. Man benötigt also entweder Platz auf einem unpartitionierte Teil einer Disk (vielleicht ein USB Laufwerk oder eine zweite Festplatte) oder man muss auf externe Werkzeuge, wie die 
+<p>DriveSetup ist ein Programm zum Erstellen, Löschen und Formatieren von Partitionen. Aktuell ist es noch nicht möglich, bestehende Partitionen zu verschieben oder in ihrer Größe zu verändern. Man benötigt also entweder Platz auf einem unpartitionierte Teil eines Laufwerks (vielleicht ein USB-Laufwerk oder eine zweite Festplatte) oder man muss auf externe Werkzeuge, wie die 
 <a href="http://gparted.sourceforge.net/livecd.php">GParted LiveCD</a> zurückgreifen.</p>
 <img src="../images/apps-images/drivesetup.png" alt="drivesetup.png" />
-<p>Oben ist die Partitionierung des unten ausgewählten Datenträgers graphisch dargestellt. Standardmäßig kann jedes Gerät 4 <i>Primäre</i> Partitionen enthalten. Diese Einschränkung lässt sich umgehen, indem man eine von ihnen zu einer <i>Erweiterten</i> Parrtition macht, welche wiederum eine theoretisch unbegrenzte Zahl an <i>Logischen</i> Partitionen enthalten kann (praktisch wird deren Anzahl jedoch beispielsweise von den anderen installierten Betriebssystemen begrenzt).<br />
+<p>Oben ist die Partitionierung des unten ausgewählten Datenträgers graphisch dargestellt. Standardmäßig kann jedes Gerät 4 <i>Primäre</i> Partitionen enthalten. Diese Einschränkung lässt sich umgehen, indem man eine von ihnen zu einer <i>Erweiterten</i> Parrtition macht, welche wiederum eine theoretisch unbegrenzte Zahl an <i>Logischen</i> Partitionen enthalten kann. Praktisch wird deren Anzahl jedoch beispielsweise von den anderen installierten Betriebssystemen begrenzt.<br />
 Über das + / - Symbol können derart "versteckte" Partitionen auf- und eingeklappt werden.</p>
 <p>Symbole und Farben bieten weitere Informationen zu den vorhandenen Datenträgern und Partitionen.<br />
-Neben den bekannten Symbolen für Festplatten, CD-Laufwerken, USB-Sticks etc., zeigen einige weitere auf welche Art sie eingehängt wurden:</p>
+Neben den bekannten Symbolen für Festplatten, CD-Laufwerken, USB-Sticks und so weiter zeigen einige weitere Symbole an, auf welche Art die Partitionen eingehängt wurden:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><img src="../../images/apps-images/drivesetup-icon_boot.png" alt="drivesetup-icon_boot.png" width="16" height="16" /></td><td style="width:10px;"> </td>
 <td>Die /boot Partition</td></tr>
@@ -98,9 +99,9 @@ Neben den bekannten Symbolen für Festplatten, CD-Laufwerken, USB-Sticks etc., z
 <tr><td style="background-color:#FFACAC"></td><td></td><td>Eine schreibgeschützte Partition</td></tr>
 <tr><td style="background-image: repeating-linear-gradient(135deg, #E0E000 1%, #C0C0C0 15%)"></td><td></td><td>Eine verschlüsselte Partition</td></tr>
 </table>
-<p>Auf eine ausgewählte Partition können per Kontextmenü bzw. dem Menü <span class="menu">Partition</span> diverse Befehle angewendet werden. Darunter <span class="menu">Einhängen</span>/<span class="menu">Aushängen</span>, oder <span class="menu">Öffnen mit DiskProbe</span>.</p>
+<p>Auf eine ausgewählte Partition können per Kontextmenü oder dem Menü <span class="menu">Partition</span> diverse Befehle angewendet werden. Darunter <span class="menu">Einhängen</span>/<span class="menu">Aushängen</span>, oder <span class="menu">Öffnen mit DiskProbe</span>.</p>
 <p>Partitionen lassen sich so auch <span class="menu">Formatieren</span> und komplett <span class="menu">Löschen</span>.</p>
-<div class="box-stop">Mit Partitionen zu arbeiten, insbesondere sie zu formatieren, zu erstellen oder zu löschen ist höchst gefährlich. Ein unbedachter Klick, eine falsch ausgewählte Partition, und gespeicherte Daten sind unwiederbringlich verloren! Es wird dringend geraten, sicherheitshalber alles zweimal zu überprüfen und eine aktuelle Sicherheitskopie wichtiger Daten parat zu haben!</div>
+<div class="box-stop">Mit Partitionen zu arbeiten, insbesondere sie zu formatieren, zu erstellen oder zu löschen, ist höchst gefährlich. Ein unbedachter Klick, eine falsch ausgewählte Partition und gespeicherte Daten sind unwiederbringlich verloren! Es wird dringend geraten, sicherheitshalber alles zweimal zu überprüfen und eine aktuelle Sicherheitskopie wichtiger Daten parat zu haben!</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="initializing" name="initializing">Datenträger initialisieren</a></h2>
@@ -112,13 +113,13 @@ Neben den bekannten Symbolen für Festplatten, CD-Laufwerken, USB-Sticks etc., z
 <a id="creating" name="creating">Eine neue Partition erstellen</a></h2>
 <p>Wenn auf einem Datenträger ein unformatierter Bereich existiert, wie der Bereich <tt>&lt;leer&gt;</tt> im obigen Bild, kann man hierin mit <span class="menu">Partition | Anlegen...</span> (<span class="key">ALT</span> <span class="key">C</span>) eine neue Partition anlegen.</p>
 <img src="../images/apps-images/drivesetup-create.png" alt="drivesetup-create.png" />
-<p>Es erscheint ein Dialog um Partitionsgröße und -typ einzustellen. Für eine Haiku-Installation wäre <span class="menu">Be File System</span> zu wählen. Ebenso, wenn man all die interessanten Haiku Feature, wie Attribute und Queries, nutzen will. Man bedenke jedoch, dass andere Betriebssysteme auf so eine Partition eventuell nicht zugreifen können.</p>
+<p>Es erscheint ein Dialog, um Partitionsgröße und -typ einzustellen. Für eine Haiku-Installation muss <span class="menu">Be File System</span> ausgewählt werden. Ebenso, wenn man all die interessanten Haiku-Features, wie Attribute und Queries, nutzen will. Man bedenke jedoch, dass andere Betriebssysteme auf so eine Partition eventuell nicht zugreifen können.</p>
 <p>Als <span class="menu">Aktive Partition</span> lassen sich nur Primäre Partitionen kennzeichnen, keine Logischen innerhalb einer Erweiterten Partition. Der Haken muss gesetzt werden, um Haiku von dieser Partition booten zu können.</p>
 <p>Um eine neu angelegte Partition verwenden oder ins System einbinden zu können, muss sie zuerst mit einem Dateisystem formatiert werden.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="initializing" name="formatting">Formatierung einer Partition</a></h2>
-<p>Nur wenn eine Partition nicht ins System eingehängt ist, kann sie mit einem Dateisystem, das im Untermenü von <span class="menu">Partition | Formatieren</span> auszuwählen ist, formatiert werden. Das <span class="menu">Be File System</span> (BFS) ist zwingend für die Haiku Boot-Partition nötig, und auch für Datenpartition mit denen unter Haiku gearbeitet werden soll empfohlen. Nur BFS-formatierte Partitionen können per Queries durchsucht werden und unterstützen Haikus Dateiattribute.</p>
+<p>Mit dem Untermenü <span class="menu">Partition | Formatieren</span> kann eine Partition formatiert werden. Dafür darf sie nicht im System eingehängt sein. Das <span class="menu">Be File System</span> (BFS) ist zwingend für die Haiku Boot-Partition nötig. Es empfiehlt sich auch, für Datenpartition mit denen unter Haiku gearbeitet werden soll, BFS zu nutzen. Nur BFS-formatierte Partitionen können per Queries durchsucht werden und unterstützen Haikus Dateiattribute.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>Beim Formatieren muss ein Name für die Partition und die Blockgröße angegeben werden. Ein "Block" ist dabei der Speicherplatz in Bytes, den eine Datei auf dem Datenträger mindestens belegt. Den vorgeschlagenen Wert von 2048 sollte man am besten beibehalten, außer man ist seiner wirklich sicher.<br />
 Falls die zukünftigen Daten auf der Partition nicht per Queries durchsucht werden sollen, kann die Option <span class="menu">Query-Unterstützung aktivieren</span> ausgeschaltet werden, um ein kleines bisschen 'Overhead' für das Verwalten des Index zu sparen.</p>

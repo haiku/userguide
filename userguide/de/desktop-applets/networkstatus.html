@@ -4,13 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2010, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Maciej Bałuta  (Google Code-In student)
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		Matthias
  *		taos
@@ -73,8 +74,8 @@
 </table>
 <p>NetworkStatus informiert über den aktuellen Zustand der Netzwerkverbindung. Wenn das Programm nicht schon läuft, kann man beim Start entscheiden, ob das Applet in einem Fenster laufen oder in die Deskbar installiert werden soll. Im Fenstermodus kann die Symbolgröße geändert werden, indem man die Fenstergröße anpasst, bevor man es am <a href="../gui.html#replicants">Replikanten</a>-Symbol packt und auf den Desktop zieht.<br />
 Wo das Applet auch installiert ist, bedient wird es per Rechtsklick über ein Kontextmenü.</p>
-<p><img src="../images/networkstatus-images/applet.png" alt="NetworkStatus Applet" /><br />
-Der oberste Bereich zeigt alle Netzwerkgeräte und deren momentaner Zustand. Der Klick auf einen Eintrag öffnet ein Fenster mit dessen IP-, Broadcast- und Netzmasken-Adresse.<br />
+<img src="../images/networkstatus-images/applet.png" alt="NetworkStatus applet" />
+<p>Der oberste Bereich zeigt alle Netzwerkgeräte und deren momentanen Zustände an. Der Klick auf einen Eintrag öffnet ein Fenster mit dessen IP-, Broadcast- und Netzmasken-Adresse.<br />
 Darunter befindet sich eine Liste aller vom ersten WLAN-Adapter gefundenen Funknetzwerke und deren Signalstärke. Weitere Informationen zum Thema WLAN finden sich im <a href="..\\workshop-wlan.html">Workshop: Funknetzwerke nutzen</a>.<br />
 Zu guter Letzt lassen sich aus dem Menü noch die <span class="menu">Netzwerkeinstellungen öffnen...</span> um die <a href="../preferences/network.html">Netzwerk-Konfiguration</a> zu ändern und das Applet <span class="menu">Beenden</span>.</p>
 
@@ -83,8 +84,8 @@ Zu guter Letzt lassen sich aus dem Menü noch die <span class="menu">Netzwerkein
 	<tr><td><img src="../images/networkstatus-images/icon-ready.png" /></td><td style="width:15px;"></td><td>Bereit</td><td>Die Verbindung ist hergestellt.</td></tr>
 	<tr><td><img src="../images/networkstatus-images/icon-connecting.png" /></td><td></td><td>Konfigurierung läuft</td><td>Die Verbindung wird hergestellt.</td></tr>
 	<tr><td><img src="../images/networkstatus-images/icon-nosettings.png" /></td><td></td><td>Statusloser Zustand</td><td>Einige Einstellungen fehlen (siehe <a href="../preferences/network.html">IP Konfiguration</a>).</td></tr>
-	<tr><td><img src="../images/networkstatus-images/icon-noconnection.png" /></td><td></td><td>Nicht verbunden</td><td>Es existiert keine physische Verbindung (vielleicht ist kein Netzwerkkabel angeschlossen oder es wurden keine Funknetzwerke gefunden).</td></tr>
-	<tr><td><img src="../images/networkstatus-images/icon-nodevices.png" /></td><td></td><td>-</td><td>Es wurden keine Netzwerkgeräte gefunden (wahrscheinlich fehlen für die Hardware entsprechende Treiber).</td></tr>
+	<tr><td><img src="../images/networkstatus-images/icon-noconnection.png" /></td><td></td><td>Nicht verbunden</td><td>Es existiert keine physische Verbindung. Vielleicht ist kein Netzwerkkabel angeschlossen oder es wurden keine Funknetzwerke gefunden.</td></tr>
+	<tr><td><img src="../images/networkstatus-images/icon-nodevices.png" /></td><td></td><td>-</td><td>Es wurden keine Netzwerkgeräte gefunden. Wahrscheinlich fehlen Treiber für die Hardware.</td></tr>
 </table>
 
 </div>

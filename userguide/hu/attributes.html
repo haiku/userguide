@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Az oldal fordítása még folyamatban van. Amíg tart a fordítás, addig a lefordítatlan részek angolul jelennek meg.</div>
 
 <h1>Jellemzők</h1>
 
@@ -85,11 +86,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Jellemzők a Terminálban</a></h2>
 <p>Ha a parancssort részesíted előnyben, vagy szkriptek írását tervezed, akkor több parancs is a rendelkezésedre áll, amikkel kezelni tudod a jellemzőket a Terminálban.</p>
+<p>További segítséget kaphatsz ezekről a parancsokról, illetve az opciókról ha a parancs után megadod a "<span class="cli">-h</span>" vagy a "<span class="cli">--help</span>" opciót.</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p>A <span class="cli">listattr</span> megjeleníti a fájl összes jellemzőjét a hozzájuk tartozó adatok nélkül.</p>
-<pre>használat: listattr 'fájl' ['fájl' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>használat: listattr [-l|--long] 'fájl' ['fájl' ...]</pre>
 <p>Például:</p>
 <pre class="terminal"> ~/people -&gt;listattr Ecet\\ Tibor
 File: Ecet Tibor
@@ -149,9 +151,7 @@ Ecet Tibor : string : Hatvan</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p>Az <span class="cli">rmattr</span> egy teljes jellemzőt kitöröl a fájlból.</p>
 
-<pre>használat: rmattr [-p] jellemző fájl1 [fájl2...]
-         'jellemző' a fájl egyik jellemzőjének a neve
-         Ha a '-p' meg van adva, akkor a 'jellemző' mintaként szolgál.</pre>
+<pre>használat: rmattr [-p] jellemző fájl1 [fájl2...]</pre>
 <p>Például a "Fax" jellemzőt üresen is hagyhatjuk, de teljesen ki is törölhetjük azt:</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Ecet\\ Tibor</pre>
 
@@ -164,7 +164,6 @@ Ecet Tibor : string : Hatvan</pre>
 <p>Ha a jellemzők másolásával együtt magát a fájlt is át szeretné másolni, akkor adja meg a "<span class="cli">-d</span>" vagy a "<span class="cli">--data</span>" opciót is.</p>
 
 <p><br /></p>
-<p>További segítséget kaphatsz ezekről a parancsokról, illetve az opciókról ha a parancs után megadod a "<span class="cli">-h</span>" vagy a "<span class="cli">--help</span>" opciót.</p>
 
 </div>
 </div>

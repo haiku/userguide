@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Перевод этой страницы еще не завершен. Пока это не произойдет, незавершенные части будут на английском.</div>
 
 <h1>Атрибуты</h1>
 
@@ -87,11 +88,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Работа с атрибутами в Терминале</a></h2>
 <p>Если вы предпочитаете использовать командную строку или планируете работать с большим количеством файлов при помощи скриптов, то существует несколько команд для управления атрибутами в Терминале:</p>
+<p>Больше информации о командах и их опциях можно получить, введя имя команды и опцию "<span class="cli">-h</span>" или "<span class="cli">--help</span>".</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> - отображает список атрибутов файла, но не содержимое атрибутов.</p>
-<pre>usage: listattr 'filename' ['filename' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>Пример:</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
 File: Clara Botters
@@ -152,9 +154,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> - позволяет полность удалить атрибут файла. </p>
 
-<pre>usage: rmattr [-p] attr filename1 [filename2...]
-         'attr' is the name of an attribute of the file
-         If '-p' is specified, 'attr' is regarded as a pattern.</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>Хотя можно было бы просто не заполнять атрибут "Fax" (Факс), но вы также можете полностью удалить этот атрибут у файла Clara:</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -167,7 +167,6 @@ Clara Botters : string : Whelton</pre>
 <p>Если вы хотите скопировать не только атрибуты, но и содержимое файла, следует добавить опцию "<span class="cli">-d</span>" или "<span class="cli">--data</span>".</p>
 
 <p><br /></p>
-<p>Больше информации о командах и их опциях можно получить, введя имя команды и опцию "<span class="cli">-h</span>" или "<span class="cli">--help</span>".</p>
 
 </div>
 </div>

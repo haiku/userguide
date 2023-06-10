@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Preklad tejto stránky zatiaľ nie je dokončený. Dovtedy sa nedokončené časti zobrazia v anglickom origináli.</div>
 
 <h1>Atribúty</h1>
 
@@ -87,11 +88,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Atribúty v Termináli</a></h2>
 <p>Ak uprednostňujete príkazový riadok alebo plánujete pracovať s viacerými súbormi s použitím skriptovania, existuje niekoľko príkazov na ovládanie atribútov v Termináli.</p>
+<p>Viac informácií o týchto príkazoch zistíte napísaním názvu príkazu nasledovaným „<span class="cli">-h</span>“ alebo „<span class="cli">--help</span>“.</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> vypíše zoznam atribútov súboru, no nezobrazí obsah týchto atribútov.</p>
-<pre>použitie: listattr 'názov súboru' ['názov súboru' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>Z nášho obrázka hore:</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
 File: Clara Botters
@@ -152,9 +154,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> úplne odstráni atribút zo súboru.</p>
 
-<pre>použitie: rmattr [-p] attr názov_súboru1 [názov_súboru2...]
-         „attr“ je názov atribútu súboru
-         Ak je „-p“ uvedené, „attr“ sa považuje za vzor.</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>Aj keď by bolo praktickejšie vôbec nevypĺňať atribút „Fax“, môžete ho úplne odstrániť zo súboru Clary napísaním:</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -167,7 +167,6 @@ Clara Botters : string : Whelton</pre>
 <p>Ak chcete skopírovať atribúty a aj dáta samotného súboru, môžete pridať možnosť „<span class="cli">-d</span>“ alebo „<span class="cli">--data</span>“.</p>
 
 <p><br /></p>
-<p>Viac informácií o týchto príkazoch zistíte napísaním názvu príkazu nasledovaným „<span class="cli">-h</span>“ alebo „<span class="cli">--help</span>“.</p>
 
 </div>
 </div>

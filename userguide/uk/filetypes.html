@@ -9,19 +9,21 @@
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
+ * Translators:
+ *		'
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Filetypes</title>
+	<title>Типи файлів (Filetypes)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -59,62 +61,61 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h1>Filetypes</h1>
+<h1>Типи файлів (Filetypes)</h1>
 
-<p>Other than Windows, Haiku doesn't rely on the 3-letter file extension for a file type (e.g. .txt, .jpg, .mp3). This method is only a last resort fallback. Haiku uses <acronym title="Multipurpose Internet Mail Extensions">MIME</acronym> types just like it's custom on the internet.</p>
-<div class="box-info">While there's no reason to use file extensions in Haiku, remember to add them to files you want to share with users of other operating systems, e.g. over email, uploading to a server or via exchange of an USB drive. Otherwise their system may not recognize the file type.</div>
+<p>На відміну від Windows, при визначенні типу файлу Haiku не спирається на розширення типу файлу з 3-х літер (наприклад, .txt, .jpg, .mp3). Цей метод є лише крайнім заходом. Haiku використовує типи <acronym title="Multipurpose Internet Mail Extensions">MIME</acronym>, як це прийнято в мережі Інтернет.</p>
+<div class="box-info">Хоча у Haiku немає необхідності використовувати розширення файлів, не забувайте додавати їх до файлів, якими Ви хочете поділитися з користувачами інших операційних систем, наприклад, електронною поштою, вивантажуючи на сервер або обмінюючись файлами на USB-накопичувачі. Інакше їхня система може не розпізнати тип файлу.</div>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="specific-file" name="specific-file">Setting the filetype of a specific file</a></h2>
-<p>You can change the type of a specific file, its icon and the associated application. Select the file and invoke the <span class="menu">Add-Ons | Filetype add-on</span> from the right-click context menu.</p>
+<a id="specific-file" name="specific-file">Встановлення типу файлу для конкретного файлу</a></h2>
+<p>Ви можете змінити тип певного файлу, його значок та пов'язану (асоційовану) з ним програму. Виберіть файл і викличте <span class="menu">Доповнення | Filetype</span> у контекстному меню, що відкривається правою кнопкою миші.</p>
 <img src="images/filetypes-images/filetype-addon.png" alt="filetype-addon.png" />
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a name="filetype" id="filetype">The File Type</a></h3>
-<p>The above is a PNG file, its MIME string image/png. Let's say you definitely know that it's not a PNG but a GIF. You can change that either by entering the correct MIME string by hand or with one of the two buttons below the textbox:</p>
+<a name="filetype" id="filetype">Тип файлу</a></h3>
+<p>Вище Ви бачите інформацію про PNG-файл, його MIME-тип – image/png. Припустимо, Ви точно знаєте, що це не PNG, а GIF. Ви можете змінити це, ввівши правильний MIME-тип вручну або за допомогою однієї з двох кнопок під текстовим полем:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="button">Вибрати (Select...)</span></td><td> </td><td>shows a hierarchical list of filetypes where you navigate to <tt>image | GIF Image</tt>.</td></tr>
-<tr><td><span class="button">Такий як... (Same as...)</span></td><td> </td><td>opens a file dialog where you choose any file that already has the filetype you're looking for.</td></tr>
+<tr><td><span class="button">Вибрати…</span></td><td> </td><td>показує ієрархічний список типів файлів, в якому Ви можете вибрати <tt>image | GIF Image</tt>.</td></tr>
+<tr><td><span class="button">Такий як…</span></td><td> </td><td>відкриває діалогове вікно, в якому Ви можете вибрати будь-який файл, що вже має потрібний Вам тип.</td></tr>
 </table>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="preferred-app" name="preferred-app">The Preferred Application</a></h3>
-<p>This pop-up menu shows a list of all applications that can handle this particular filetype. From here you can choose which program should open this specific file when it's double-clicked. You could, for example, change a HTML file's preferred application from the browser to a text editor while you're working on it. Every other HTML file still opens in the browser, only this particular one starts in your text editor.</p>
+<a id="preferred-app" name="preferred-app">Пріоритетна програма</a></h3>
+<p>У цьому списку, який розкривається, показано усі програми, які можуть обробляти цей конкретний тип файлу. Тут Ви можете вибрати, яка програма має відкрити цей конкретний файл після подвійного кліку миші. Наприклад, Ви можете змінити пріоритетну програму для файлу HTML з браузера на текстовий редактор, під час роботи з цим файлом. Усі інші HTML-файли все ще відкриватимуться у браузері, лише цей відкриється у Вашому текстовому редакторі.</p>
 
-<p>The <span class="menu">Default application</span> is the one that's set globally for that filetype. If you don't find the program you want to associate with this file in the pop-up menu, you'll again find the buttons <span class="button">Select...</span> and <span class="button">Same as...</span> which do the similar thing described under "The File Type" above.</p>
+<p><span class="menu">Програма за замовчуванням</span> – це програма, яка встановлена глобально для цього типу файлів. Якщо у списку Ви не знайдете програму, яка буде відкривати цей файл, Ви знайдете її за допомогою кнопок <span class="button">Вибрати…</span> і <span class="button">Така як…</span>, які виконують аналогічну дію, описану вище для секції «Тип файлу».</p>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="icon" name="icon">The Icon</a></h3>
-<p>If you're wondering why the icon well on the top right is empty: Icons are normally inherited from the system default for that filetype. You can open the <span class="app">Filetype add-on</span> of a file that contains an icon and drag &amp; drop it into your file's icon well. Or you double-click the icon well and create or edit your own icon. For more info on icons and how to create your own, see topic <a href="applications/icon-o-matic.html">Icon-O-Matic</a>.</p>
+<a id="icon" name="icon">Значок</a></h3>
+<p>У цьому полі відображається значок, який належить файлу. Зазвичай, за замовчуванням використовуються системні значки для цього типу файлів. Ви можете відкрити <span class="app">Filetype</span> для файлу в якого вже є значок і перетягнути його у поле значка Вашого файлу. Або зробити подвійний клік по значку та створити чи відредагувати власний значок у редакторі. Для отримання додаткової інформації про значки та про те, як створювати власні, дивіться тему <a href="applications/icon-o-matic.html">Icon-O-Matic</a>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="settings-apps" name="settings-apps">Special settings for applications</a></h2>
-<p>If you invoke the <span class="app">Filetype add-on</span> on an executable (here: <span class="app">StyledEdit</span>), you'll get a different dialog:</p>
+<a id="settings-apps" name="settings-apps">Спеціальні настройки для програм</a></h2>
+<p>Якщо Ви викликаєте <span class="app">Filetype</span> для файлу програми (наприклад, <span class="app">StyledEdit</span>), Ви побачите інше діалогове вікно:</p>
 <img src="images/filetypes-images/filetype-addon-stylededit.png" alt="filetype-addon-stylededit.png" />
-<p>On top, you'll see, instead of a standardized MIME string, the unique application signature. With it, the system finds the program wherever it's installed.</p>
-<p>Below it are several flags, controlling the app's behaviour:</p>
+<p>Зверху, замість стандартного типу MIME Ви побачите унікальний підпис програми – сигнатуру. По сигнатурі система знаходить програму, де б вона не була встановлена.</p>
+<p>Нижче є декілька опцій, які контролюють поведінку програми:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="menu">Single launch</span></td><td> </td><td>Only one instance of the app can be running per executable file. If you have two copies of that app, however, they can run side by side.</td></tr>
-<tr><td><span class="menu">Multiple launch</span></td><td> </td><td>Many instances of the app can run simultaneously.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Exclusive launch</span></td><td> </td><td>Really only one instance with that app's signature is allowed to run at a time.</td></tr>
-<tr><td><span class="menu">Args only</span></td><td> </td><td>Indicates the app doesn't respond to messages.</td></tr>
-<tr><td><span class="menu">Background app</span></td><td> </td><td>The app won't appear in <a href="twitcher.html">Twitcher</a> or the list of running apps of the Deskbar.</td></tr>
+<tr><td><span class="menu">Одноразовий запуск</span></td><td> </td><td>Один виконуваний файл може запускати лише один екземпляр програми. Однак, якщо у Вас є дві копії програми, вони можуть запускатися одночасно.</td></tr>
+<tr><td><span class="menu">Багаторазовий запуск</span></td><td> </td><td>Багато екземплярів програми можуть працювати одночасно.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Ексклюзивний запуск</span></td><td> </td><td>Насправді, одночасно може бути запущений лише один екземпляр з сигнатурою цієї програми.</td></tr>
+<tr><td><span class="menu">Тільки агрументи</span></td><td> </td><td>Вказує, що програма не відповідає на повідомлення.</td></tr>
+<tr><td><span class="menu">Фонова програма</span></td><td> </td><td>Програма не відображатиметься в <a href="twitcher.html">Twitcher</a> або у списку запущених програм на панелі задач Deskbar.</td></tr>
 </table>
-<p>Then there's the list of supported filetypes. You can add (and remove) filetypes if you think the application can handle them. As a consequence, the app will appear in the menu for preferred applications or Tracker's <span class="menu">Open with...</span> context menu when you right-click on a file of that type.</p>
-<p>At the bottom are version and copyright information. Like the application signature, they are filled in by the app's author and shouldn't be altered.</p>
+<p>Далі йде список підтримуваних типів файлів. Ви можете додавати (і видаляти) типи файлів, якщо вважаєте, що програма може їх обробляти. Як наслідок, програма з'явиться у меню пріоритетних програм або у контекстному меню <span class="menu">Відкрити у…</span> Tracker, коли Ви зробите правий клік миші на файлі такого типу.</p>
+<p>Унизу наведено інформацію про версію програми та авторські права. Як і сигнатура програми, вони заповнюються автором програми і не повинні бути змінені.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="filetypes-preferences" name="filetypes-preferences">Global settings with the FileTypes Preferences</a></h2>
-<p>The <span class="app">FileTypes</span> preferences don't deal with individual files but with global settings of filetypes. You can change default icons and preferred applications or add, remove, or alter attributes of whole filetypes. You can even create your own filetype from scratch.</p>
-<p>All filetypes and their configurations are stored in <span class="path">/boot/home/config/settings/mime_d/</span>. Before you start experimenting, it may be prudent to make a backup of that folder...</p>
-<p>To learn more about the <span class="app">FileTypes</span> preferences see the workshop: <a href="workshop-filetypes+attributes.html">Filetypes, Attributes, Index and Queries</a>.</p>
+<a id="filetypes-preferences" name="filetypes-preferences">Глобальні настройки через параметри FileTypes</a></h2>
+<p>Параметри <span class="app">FileTypes</span> стосуються не окремих файлів, а глобальних параметрів типів файлів у системі. Ви можете змінити значки за замовчуванням і приорітетні програми або додати, видалити чи змінити атрибути цілих типів файлів. Ви навіть можете створити свій власний тип файлу з нуля.</p>
+<p>Усі типи файлів та їхні конфігурації зберігаються у <span class="path">/boot/home/config/settings/mime_d/</span>. Перш ніж почати експериментувати, доцільно створити резервну копію цього каталогу…</p>
+<p>Щоб дізнатися більше про параметри <span class="app">FileTypes</span> перегляньте майстер-клас: <a href="workshop-filetypes+attributes.html">Типи файлів, Атрибути, Індекси та Запити</a>.</p>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Terjemahan halaman ini belum lengkap. Sampai saat itu, bagian yang belum selesai menggunakan aslinya bahasa Inggris.</div>
 
 <h1>Atribut</h1>
 
@@ -85,11 +86,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Attribut di Terminal</a></h2>
 <p>Jika Anda lebih suka menggunakan baris perintah atau berencana untuk bekerja dengan banyak file menggunakan skrip, ada beberapa perintah untuk mengendalikan atribut dari Terminal.</p>
+<p>Informasi lebih lanjut tentang perintah-perintah ini dan opsinya dapat ditemukan dengan mengetikkan nama perintah diikuti oleh "<span class="cli">-h</span>" atau "<span class="cli">--help</span>".</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> mengeluarkan daftar atribut file, tetapi tidak menunjukkan konten atribut.</p>
-<pre>penggunaan: listattr 'filename' ['filename' ...]</pre>
+<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
+<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
 <p>Dari contoh tangkapan layar kami di atas:</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\ Botters
 File: Clara Botters
@@ -151,9 +153,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> menghapus total antribut dari sebuah berkas.</p>
 
-<pre>penggunaan: rmattr [-p] attr filename1 [filename2...]
-         'attr' is the name of an attribute of the file
-         If '-p' is specified, 'attr' is regarded as a pattern.</pre>
+<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>Meskipun dalam semua kepraktisan itu sudah cukup untuk tidak mengisi atribut "Faks", Anda dapat menghapusnya sepenuhnya dari file Clara dengan mengetik:</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\ Botters</pre>
 
@@ -166,7 +166,6 @@ Clara Botters : string : Whelton</pre>
 <p>Jika Anda ingin menyalin atribut plus data file itu sendiri, Anda dapat menambahkan opsi "<span class="cli">-d</span>" atau "<span class="cli">--data</span>".</p>
 
 <p><br /></p>
-<p>Informasi lebih lanjut tentang perintah-perintah ini dan opsinya dapat ditemukan dengan mengetikkan nama perintah diikuti oleh "<span class="cli">-h</span>" atau "<span class="cli">--help</span>".</p>
 
 </div>
 </div>

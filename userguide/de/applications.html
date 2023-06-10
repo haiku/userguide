@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Finest Bug
  *		Humdinger
  *		taos
@@ -67,16 +68,16 @@
 
 <h1>Anwendungen</h1>
 
-<p>Vor der Beschreibung all der von Haiku mitgelieferten Anwendungen, eine Erklärung wie Programme installiert und deinstalliert werden. Am einfachsten geht suchen, installieren, updaten und deinstallieren von Anwendungen mit Haikus Paketmanagement. Da Haiku allerdings auch weitgehend binär- und source-kompatibel zu seinem Vorfahren BeOS ist, stößt man vielleicht ab und zu auch noch auf alte Archive (.zip und .pkg), die immer noch installiert werden können.</p>
-<div class="box-info">Nachfolgend ist immer die <tt>/system/</tt> Hierarchie beschrieben. Falls Pakete nur für einen einzigen Benutzern installiert werden sollen (sobald Haiku mehrbenutzerfähig wird), muss die entsprechend gespiegelte Hierarchie im Home-Ordner benutzt werden: <tt>~/config/</tt>. Für mehr Infos, siehe <a href="filesystem-layout.html">Dateisystem Layout</a>.</div>
+<p>Bevor alle Programm beschrieben werden, die Haiku mit bringt, schauen wir uns an, wie Anwendungen installiert und wieder deinstalliert werden. Am einfachsten verwendet man Haikus Paketmanagement. Damit lassen sich Anwendungen suchen, installieren, updaten und wieder deinstallieren. Da Haiku allerdings auch weitgehend binär- und Quellen-kompatibel zu seinem Vorfahren BeOS ist, stößt man ab und zu vielleicht auch noch auf alte Archive (.zip und .pkg). Auch diese lassen sich noch installieren.</p>
+<div class="box-info">Nachfolgend ist immer die <tt>/system/</tt> Hierarchie gemeint. Falls Pakete nur für einen einzigen Benutzern installiert werden sollen (sobald Haiku mehrbenutzerfähig wird), muss die entsprechend gespiegelte Hierarchie im Home-Ordner benutzt werden: <tt>~/config/</tt>. Für mehr Infos, siehe <a href="filesystem-layout.html">Dateisystem-Layout</a>.</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="hpkg" name="hpkg">Haiku Pakete (.hpkg)</a></h2>
-<p>Am einfachsten benutzt man <a href="applications/haikudepot.html">HaikuDepot</a> um ein Paket zu finden, installieren und zu deinstallieren. Wurde ein Paket von irgendwo anders heruntergeladen — vielleicht weil es (noch) nicht in einem öffentlichen Repository ist — öffnet man es einfach per Doppelklick in HaikuDepot und installiert es von dort.</p>
+<p>Am einfachste Weg, um Paket zu finden, zu installieren und zu deinstallieren, ist <a href="applications/haikudepot.html">HaikuDepot</a>. Wurde ein Paket von irgendwo anders heruntergeladen — vielleicht weil es (noch) nicht in einem öffentlichen Repository ist — öffnet man es einfach per Doppelklick in HaikuDepot und installiert es von dort.</p>
 <p>Die neu installierte Anwendung taucht in <tt>/system/apps/</tt> auf oder, im Falle eines Konsolen-Programms, in <tt>/system/bin/</tt>. Alle anderen Dateien, die das Programm benötigt (Bibliotheken, Daten, Add-Ons etc.) erscheinen automatisch an den richtigen Orten im Dateisystem.</p>
-<p>In den Kapiteln <a href="deskbar.html">Deskbar</a> und <a href="desktop-applets/launchbox.html">LaunchBox</a> ist beschrieben wie man Verknüpfungen zu den neu installierten Anwendung herstellt.</p>
-<div class="box-info">Obwohl man eine .hpkg Datei wie jedes andere Archiv entpacken kann, macht das das Paketmanagement beim Installieren eines Pakets gerade nicht. Es sieht nur so aus, als würde das darunterliegende Dateisystem die Dateien in die entsprechenden Ordner verteilen. In Wahrheit findet eben kein physisches Herumverteilen statt, weswegen das Installieren/Deinstalliern auch so schnell und sauber funktionert.</div>
+<p>In den Kapiteln <a href="deskbar.html">Deskbar</a> und <a href="desktop-applets/launchbox.html">LaunchBox</a> ist beschrieben, wie man Verknüpfungen zu den neu installierten Anwendung herstellt.</p>
+<div class="box-info">Obwohl man eine .hpkg-Datei wie jedes andere Archiv entpacken kann, macht das das Paketmanagement beim Installieren eines Pakets gerade nicht. Es sieht nur so aus, als würde das darunterliegende Dateisystem die Dateien in die entsprechenden Ordner verteilen. In Wahrheit findet kein physisches Herumverteilen statt, weswegen das Installieren/Deinstalliern auch so schnell und sauber funktionert.</div>
 <p>Ist ein Paket von einer anderen Bibliothek oder anderen Paketen abhängig, erscheint ein Fenster mit der Nachfrage, ob die benötigten Dateien ebenfalls heruntergeladen und installiert werden sollen.</p>
 <p>Die Deinstallation ist genauso einfach: Einfach das Paket in HaikuDepot suchen und <span class="button">Deinstallieren</span> klicken.</p>
 <p>Arbeitet man im Terminal oder möchte Pakete in einem Skript de/installieren, sollte man sich mit dem Befehl <tt>pkgman --help</tt> vertraut machen.</p>
@@ -84,8 +85,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="beos_apps" name="beos_apps">Alte BeOS Archive (.zip und .pkg)</a></h2>
-<p>BeOS Archive, die alles nötige in ihrem Anwendungsordner mitbringen, können einfach irgendwo unter <tt>/boot/home/</tt> entpackt werden (ein Doppelklick öffnet den <span class="app">Entpacker</span> bzw. den alten <span class="app">PackageInstaller</span>) und von dort gestartet werden. Die Deinstallation solcher in sich geschlossenen Anwendung ist auch einfach: Man löscht einfach den Anwendungsordner.</p>
-<p>Obiges gilt für die Mehrheit an alten BeOS Anwendungen. Wenn man allerdings an eine gerät die nicht auf Anhieb funktioniert, weil sie Dateien an fest einprogrammierte Orte verteilen will, deren Existenz nicht gewährleistet ist, kann man versuchen das manuell zu beheben. Der Ordner <tt>/system/non-packaged/</tt> gestattet das Anlegen der benötigten Ordner-Hierarchie. Das wird immer seltener nötig werden, während die Anzahl richtiger .hpkg Pakete zunimmt und alte BeOS Anwendungen entsprechend umgepackt werden. Der Artikel "<a href="http://www.haiku-os.org/guides/daily-tasks/install-applications">Installing applications</a>" zeigt online, wie die <tt>non-packaged</tt> Hierarchie zu benutzen ist.</p>
+<p>BeOS-Archive bringen alles nötige in ihrem Anwendungsordner mit. Sie können einfach irgendwo unter <tt>/boot/home/</tt> entpackt werden. Ein Doppelklick öffnet den <span class="app">Entpacker</span> bzw. den alten <span class="app">PackageInstaller</span>). Die Anwendung kann von Ort und Stelle gestartet werden. Die Deinstallation solcher in sich geschlossenen Anwendung ist auch einfach: Man löscht einfach den Anwendungsordner.</p>
+<p>Obiges gilt für die Mehrheit der alten Anwendungen für BeOS. Wenn man allerdings an eine Anwendung gerät, die nicht auf Anhieb funktioniert, weil sie Dateien an fest vordefinierte Orte kopieren will. Es gibt aber keine Garantie, dass diese Ordnern unter Haiku noch da sind. Man kann allerdings versuchen, das Problem manuell zu beheben: Der Ordner <tt>/system/non-packaged/</tt> gestattet das Anlegen der benötigten Ordner-Hierarchie. Das wird immer seltener nötig, da die Anzahl an .hpkg-Pakete stetig zunimmt und alte BeOS-Anwendungen entsprechend umgepackt werden. Der Artikel "<a href="http://www.haiku-os.org/guides/daily-tasks/install-applications">Installing applications</a>" zeigt, wie die <tt>non-packaged</tt> Hierarchie zu benutzen ist.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -95,11 +96,11 @@
 	<tr><td style="width:24px;"><img src="../images/apps-images/activitymonitor-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/activitymonitor.html">ActivityMonitor</a></td><td style="width:10px;"> </td>
 		<td valign="top">Ein Programm zur Anzeige unterschiedlicher Systemressourcen wie CPU-Auslastung oder Speicherverbrauch.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/bootmanager-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/bootmanager.html">BootManager</a></td><td> </td>
-		<td valign="top">Ein Tool zum Installieren eines Bootmenüs im MBR (Master Boot Record) eines Laufwerks.</td></tr>
+		<td valign="top">Ein Tool zum Installieren eines Bootmenüs im Master Boot Record (MBR) eines Laufwerks.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/charactermap-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/charactermap.html">CharacterMap</a></td><td> </td>
 		<td valign="top">Ein Programm zum Anzeigen einer Unicode Zeichentabelle.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/codycam-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/codycam.html">CodyCam</a></td><td> </td>
-		<td valign="top">Ein Programm zum kontinuierlichen Speichern von Bilder einer Webcam auf einen Server.</td></tr>
+		<td valign="top">Ein Programm, das kontinuierlich Bilder einer Webcam auf einem Server speichert.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/debugger-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/debugger.html">Debugger</a></td><td> </td>
 		<td valign="top">Ein grafischer Debugger.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/deskcalc-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/deskcalc.html">DeskCalc</a></td><td> </td>
@@ -109,31 +110,31 @@
 	<tr><td style="width:24px;"><img src="../images/apps-images/diskusage-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/diskusage.html">DiskUsage</a></td><td> </td>
 		<td valign="top">Ein Programm zur Darstellung der Datenträgerbelegung.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/drivesetup-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/drivesetup.html">DriveSetup</a></td><td> </td>
-		<td valign="top">Ein Tool zur Partitionierung von Laufwerken.</td></tr>
+		<td valign="top">Ein Tool, um Laufwerke zu partitionieren.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/expander-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/expander.html">Expander</a></td><td> </td>
-		<td valign="top">Ein Entpacker verbreiteter Archive.</td></tr>
+		<td valign="top">Ein Entpacker für gängige Archiv-Dateien.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/haikudepot-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/haikudepot.html">HaikuDepot</a></td><td> </td>
 		<td valign="top">Ein Programm zum Finden, Herunterladen, Installieren, Aktualisieren und Deinstallieren von Software-Paketen.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/icon-o-matic-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/icon-o-matic.html">Icon-O-Matic</a></td><td> </td>
-		<td valign="top">Ein Programm zur Erstellung von Haiku Vektoricons.</td></tr>
+		<td valign="top">Ein Programm zum Erstellung von Haiku Vektoricons.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/installer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/installer.html">Installer</a></td><td> </td>
-		<td valign="top">Das Programm um Haiku auf eine Partition zu installieren.</td></tr>
+		<td valign="top">Das Programm, um Haiku auf einer Partition zu installieren.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/magnify-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/magnify.html">Magnify</a></td><td> </td>
-		<td valign="top">Das Programm zeigt einen vergrößerten Bereich rund um den Mauszeiger.</td></tr>
+		<td valign="top">Das Programm vergrößert den Bereich rund um den Mauszeiger.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/mail-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/mail.html">Mail</a></td><td> </td>
-		<td valign="top">Ein Email Programm. </td></tr>
+		<td valign="top">Ein E-Mail-Programm. </td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/mediaplayer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/mediaplayer.html">MediaPlayer</a></td><td> </td>
-		<td valign="top">Ein Player für alle unterstützten Audio/Video Dateien.</td></tr>
+		<td valign="top">Ein Player für alle unterstützten Audio- und Video-Dateien.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/midiplayer-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/midiplayer.html">MidiPlayer</a></td><td> </td>
-		<td valign="top">Ein Player für MIDI Dateien.</td></tr>
+		<td valign="top">Ein Player für MIDI-Dateien.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/packageinstaller-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/packageinstaller.html">LegacyPackageInstaller</a></td><td> </td>
-		<td valign="top">Ein Tool zum Installieren von BeOS Paketen im PKG Format.</td></tr>
+		<td valign="top">Ein Tool zum Installieren von BeOS-Paketen im PKG-Format.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/people-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/people.html">People</a></td><td> </td>
-		<td valign="top">Ein Kontakt Manager.</td></tr>
+		<td valign="top">Ein Kontakt-Manager.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/poorman-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/poorman.html">PoorMan</a></td><td> </td>
 		<td valign="top">Ein einfacher Webserver.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/screenshot-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/screenshot.html">Screenshot</a></td><td> </td>
-		<td valign="top">Ein Tool um Screenshots aufzunehmen.</td></tr>
+		<td valign="top">Ein Tool, um Screenshots aufzunehmen.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/showimage-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/showimage.html">ShowImage</a></td><td> </td>
 		<td valign="top">Ein einfacher Bildbetrachter.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/softwareupdater-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/softwareupdater.html">SoftwareUpdater</a></td><td> </td>
@@ -145,7 +146,7 @@
 	<tr><td style="width:24px;"><img src="../images/apps-images/terminal-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/terminal.html">Terminal</a></td><td> </td>
 		<td valign="top">Zugang zur bash.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/textsearch-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/textsearch.html">TextSearch</a></td><td> </td>
-		<td valign="top">Ein Tool zum Durchsuchen von Textdateien.</td></tr>
+		<td valign="top">Ein Tool, um Textdateien zu durchsuchen.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/tv-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/tv.html">TV</a></td><td> </td>
 		<td valign="top"><span style="color:silver">Eine TV-Anwendung zum analogen Fernsehen. [<i>fehlt noch</i>]</span></td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/webpositive-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/webpositive.html">WebPositive</a></td><td> </td>
@@ -155,7 +156,7 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="cli-apps" name="cli-apps">Haikus Konsolenprogramme</a></h2>
-<p>Neben den Konsolenprogrammen, die mit der Bash Shell kommen oder zum POSIX Standard gehören, gibt es noch einige Haiku-spezifische Tools, die erwähnt werden sollten. Diese Befehle sind oft besonders nützlich fürs Skripten, siehe auch das Kapitel zu <a href="bash-scripting.html">Bash und Skripten</a>.</p>
+<p>Neben den Konsolenprogrammen, die mit der Bash Shell kommen oder zum POSIX Standard gehören, gibt es noch einige Haiku-spezifische Tools, die erwähnt werden sollten. Diese Befehle sind oft besonders nützlich für Skripte, siehe auch das Kapitel zu <a href="bash-scripting.html">Bash und Skripten</a>.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 		<tr><td style="width:24px;"><img src="../images/apps-images/cli-app-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/list-cli-apps.html">Liste aller Konsolenprogramme</a></td><td> </td></tr>
 		<tr><td style="width:24px;"><img src="../images/apps-images/cli-app-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/cli-apps.html">Haiku-spezifische Konsolenprogramme</a></td><td> </td></tr>
@@ -164,16 +165,16 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list-of-bundled-apps" name="list-of-bundled-apps">Zusätzlich installierte Anwendungen</a></h2>
-<p>Neben der oben aufgeführten Software, die komplett vom Haiku Projekt stammt und betreut wird, werden in einem Standard Haiku System noch einige weitere wichtige Programme mitinstalliert. Dort gefundene Bugs und gewünschte Features müssen allerdings direkt bei den jeweiligen Projekten gemeldet werden.</p>
+<p>Neben der oben aufgeführten Software, die komplett vom Haiku-Projekt stammt und betreut wird, werden in einem üblichen Haiku-System noch einige weitere wichtige Programme installiert. Dort gefundene Bugs und gewünschte Features müssen allerdings direkt bei den jeweiligen Projekten gemeldet werden.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 		<tr><td style="width:24px;"><img src="../images/apps-images/bepdf-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/bepdf.html">BePDF</a></td><td style="width:10px;"> </td>
-		<td valign="top">Ein <acronym title="Portable Document Format">PDF</acronym> Viewer.</td></tr>
+		<td valign="top">Ein <acronym title="Portable Document Format">PDF</acronym>-Viewer.</td></tr>
 <!--	<tr><td style="width:24px;"><img src="../images/apps-images/bezillabrowser-icon_16.png" alt="icon" width="16" height="16" /></td><td _translation_id="270"><a href="applications/bezillabrowser.html">BeZillaBrowser</a></td><td> </td>
 		<td valign="top" _translation_id="271">A web browser based on Mozilla's source code.</td></tr> -->
 	<tr><td style="width:24px;"><img src="../images/apps-images/pe-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/pe.html">Pe</a></td><td> </td>
 		<td valign="top">Ein fortgeschrittener Texteditor mit Syntax-Färbung und anderes mehr.</td></tr>
 	<tr><td style="width:24px;"><img src="../images/apps-images/vision-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/vision.html">Vision</a></td><td> </td>
-		<td valign="top">Ein <acronym title="Internet Relay Chat">IRC</acronym> Client.</td></tr>
+		<td valign="top">Ein <acronym title="Internet Relay Chat">IRC</acronym>-Client.</td></tr>
 <!--	<tr><td style="width:24px;"><img src="../images/apps-images/vlc-icon_16.png" alt="icon" width="16" height="16" /></td><td _translation_id="276"><a href="applications/vlc.html">VLC media player</a></td><td> </td>
 		<td valign="top" _translation_id="277">VideoLAN's media player.</td></tr> -->
 	<tr><td style="width:24px;"><img src="../images/apps-images/wonderbrush-icon_16.png" alt="icon" width="16" height="16" /></td><td><a href="applications/wonderbrush.html">WonderBrush</a></td><td> </td>

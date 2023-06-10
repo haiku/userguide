@@ -11,20 +11,21 @@
  *		Humdinger <humdingerb@gmail.com>
  *		Kacper Kasper <kacperkasper@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Настройка дисків (DriveSetup)</title>
+	<title>DriveSetup (Розмітчик диска)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -54,82 +55,83 @@
 <li><a href="../../jp/applications/drivesetup.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="diskusage.html">DiskUsage</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="expander.html">Expander</a>  »
+ «  <a href="diskusage.html">DiskUsage (Використання диска)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="expander.html">Expander (Екстрактор)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/apps-images/drivesetup-icon_64.png" alt="drivesetup-icon_64.png" width="64" height="64" />Настройка дисків (DriveSetup)</h2>
+<h2><img src="../../images/apps-images/drivesetup-icon_64.png" alt="drivesetup-icon_64.png" width="64" height="64" />   DriveSetup (Розмітчик диска)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/DriveSetup</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/DriveSetup</span></td></tr>
 </table>
 <p><br /></p>
-<p>DriveSetup is a tool to create, delete and format partitions. At this time it can't resize or move existing partitions, so that you'll either need an unpartitioned volume (perhaps an external USB drive or another harddisk) or do the initial setup with a tool like the <a href="http://gparted.sourceforge.net/livecd.php">GParted LiveCD</a> to provide the space for another partition.</p>
+<p>DriveSetup – це програма для створення, видалення та форматування розділів. Наразі вона не може змінювати розмір або переміщувати існуючі розділи, тому Вам знадобиться або том без розмітки (можливо, зовнішній USB-накопичувач чи інший жорсткий диск), або виконати початкову ініціалізацію за допомогою такого інструменту, як <a href="http://gparted.sourceforge.net/livecd.php">GParted LiveCD</a>, щоб забезпечити місце для іншого розділу.</p>
 <img src="../images/apps-images/drivesetup.png" alt="drivesetup.png" />
-<p>At the top is a graphical representation of all partitions inside the device chosen in the list below it. Each device, by default, can hold a maximum of 4 <i>primary</i> partitions. This limit can be removed by making one of those an <i>extended</i> partition, which in turn can hold theoretically an unlimited number of <i>logical</i> partitions (practical limitations depend on, for example, other OSes installed).<br />
-You may have to expand such a list with the +/- widget that appears in that case in front of that device to see the details of every logical partition.</p>
-<p>Colors and icons provide some more information about the available volumes and partitions.<br />
-Besides the familiar icons for harddisks, CD drives and USB sticks etc., there are a few that indicate a their mount mode:</p>
+<p>Верхню частину вікна займає графічне представлення усіх розділів на пристрої, який Ви вибрали зі списку, що розташований нижче. Кожен пристрій за замовчуванням може містити максимум 4 <i>основні</i> розділи. Це обмеження можна зняти, зробивши один з них <i>розширеним</i> розділом, який, у свою чергу, теоретично може містити необмежену кількість <i>логічних</i> розділів (практичні обмеження залежать, наприклад, від кількості інших встановлених операційних систем).<br />
+Можливо, Вам доведеться розгорнути такий список за допомогою віджета «+/-», який з'явиться у цьому випадку навпроти назви цього пристрою, щоб побачити деталі кожного логічного розділу.</p>
+<p>Кольори та значки надають додаткову інформацію про доступні томи та розділи.<br />
+Окрім звичних значків для жорстких дисків, CD-приводів, USB-накопичувачів та інших, є кілька, які вказують на режим їхнього підключення:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><img src="../../images/apps-images/drivesetup-icon_boot.png" alt="drivesetup-icon_boot.png" width="16" height="16" /></td><td style="width:10px;"> </td>
-<td>The /boot partition</td></tr>
+<td>Розділ /boot</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_encrypted.png" alt="drivesetup-icon_encrypted.png" width="16" height="16" /></td><td> </td>
-<td>An encrypted partition</td></tr>
+<td>Розділ з шифруванням</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_shared.png" alt="drivesetup-icon_shared.png" width="16" height="16" /></td><td> </td>
-<td>A partition shared through SMB/NFS etc.</td></tr>
+<td>Розділ зі спільним доступом через SMB/NFS, тощо.</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
-<td>A partition that was mounted read-only</td></tr>
+<td>Розділ підключений у режимі «тільки для читання»</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>A mounted image file (see also the <a href="./cli-apps.html">diskimage command</a>)</td></tr>
+<td>Змонтований файл образу (дивіться команду <a href="./cli-apps.html">diskimage</a>)</td></tr>
 </table>
-<p>When mounted, a colored bar shows the used space of a partition. The color depends on the kind of partition:</p>
+<p>Коли розділ змонтовано, кольоровий сегмент показує використаний простір розділу. Колір залежить від типу розділу:</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
-<tr><td style="background-color:#BEFFBE" width="20"></td><td width="3"></td><td>A BFS formatted partition</td></tr>
-<tr><td style="background-color:#ACACFF"></td><td></td><td>A non-BFS formatted partition</td></tr>
-<tr><td style="background-color:#FFACAC"></td><td></td><td>A read-only partition</td></tr>
-<tr><td style="background-image: repeating-linear-gradient(135deg, #E0E000 1%, #C0C0C0 15%)"></td><td></td><td>An encrypted partition</td></tr>
+<tr><td style="background-color:#BEFFBE" width="20"></td><td width="3"></td><td>Розділ у форматі BFS</td></tr>
+<tr><td style="background-color:#ACACFF"></td><td></td><td>Розділ у форматі відмінному від BFS</td></tr>
+<tr><td style="background-color:#FFACAC"></td><td></td><td>Розділ тільки для читання</td></tr>
+<tr><td style="background-image: repeating-linear-gradient(135deg, #E0E000 1%, #C0C0C0 15%)"></td><td></td><td>Розділ з шифруванням</td></tr>
 </table>
-<p>You can select a partition and choose various commands from the context or <span class="menu">Partition</span> menu, like <span class="menu">Mount</span>/<span class="menu">Unmount</span>, or to <span class="menu">Open in DiskProbe</span>.</p>
-<p>You can also <span class="menu">Format</span> or completely <span class="menu">Delete</span> a partition.</p>
-<div class="box-stop">Dealing with creating/deleting/formatting partitions is very dangerous business. Always check twice to be sure you're working with the right one and always keep an up-to-date backup of your data in case something goes wrong!</div>
+<p>Ви можете вибрати розділ і виконати різні команди з контекстного меню або меню <span class="menu">Розділ</span>, наприклад, <span class="menu">Підключити</span>/<span class="menu">Відключити</span> або <span class="menu">Відкрити у DiskProbe</span>.</p>
+<p>Ви також можете <span class="menu">Форматувати</span> або повністю <span class="menu">Видалити</span> розділ.</p>
+<div class="box-stop">Створення/видалення/форматування розділів – дуже небезпечна справа. Завжди перевіряйте двічі, щоб переконатися, що Ви працюєте з правильним розділом і завжди зберігайте актуальну резервну копію даних на випадок, якщо щось піде не так!</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="initializing">Initializing a disk</a></h2>
-<p>If you don't plan to use just one of the partitions of a larger disk, but the entire drive as one partition, e.g. a USB stick or a Compact Flash card, you'll have to initialize the disk first.</p>
-<p>You do this by selecting the raw disk from list of devices and choose a partition map from the <span class="menu">Disk | Initialize</span> menu. The <span class="menu">Intel Partition Map</span> is the right choice for classical booting via a BIOS.</p>
-<div class="box-stop">Initializing will destroy all data on the drive!</div>
+<a id="initializing" name="initializing">Ініціалізація диска</a></h2>
+<p>Якщо Ви плануєте використовувати не один з розділів великого диска, а весь диск як один розділ, наприклад, USB-накопичувач або карту пам'яті Compact Flash, Вам доведеться спочатку ініціалізувати диск.</p>
+<p>Для цього виділіть чистий диск (raw) у списку пристроїв і виберіть структуру розділів у меню <span class="menu">Диск | Ініціалізація</span>.<br />
+<span class="menu">Intel Partition Map</span> – це правильний вибір для класичного завантаження через BIOS.</p>
+<div class="box-stop">Ініціалізація знищить усі дані на диску!</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="creating" name="creating">Створення нового розділу</a></h2>
-<p>Якщо використати неформатований простір на диску, який позначено <tt>&lt;empty&gt;</tt>, то можна створити розділ вибравши <span class="menu">Розділ (Partition) | Створити (Create...)</span>(<span class="key">ALT</span> <span class="key">C</span>).</p>
+<p>Якщо на диску є неформатований простір, подібний до наведеного вище і який позначено <tt>&lt;Без розмітки&gt;</tt>, Ви можете створити новий розділ у цьому просторі за допомогою команди <span class="menu">Розділ | Створити…</span> або клавіш швидкого доступу <span class="key">ALT</span> <span class="key">C</span>.</p>
 <img src="../images/apps-images/drivesetup-create.png" alt="drivesetup-create.png" />
-<p>У цьому діалозі Ви повинні задати розмір і тип файлової системи. Виберіть <span class="menu">Be File System</span> якщо Вам потрібний розділ для встановлення Haiku або Ви бажаєте використати всі переваги цієї системи такі як атрибути і запити .
-Зверніть увагу на те, що інші операційні системи можуть мати труднощі з доступом до такого розділу.</p>
-<p>The <span class="menu">Active partition</span> checkbox is only available if you have created a primary partition instead of just another logical partition within an extended one. You'll have to tick that checkbox if you plan to use that partition to boot a Haiku installation.</p>
-<p>Before you can use, or even mount the newly created partition, it has to be formatted with a filesystem.</p>
+<p>Ви побачите діалогове вікно, у якому зможете вибрати розмір і тип розділу. Виберіть <span class="menu">Be File System</span>, якщо Ви хочете використовувати розділ для інсталяції Haiku або якщо Ви хочете використовувати усі цікаві можливості Haiku, такі як атрибути та запити. Зауважте, що інші операційні системи можуть не мати доступу до такого розділу.</p>
+<p>Чекбокс <span class="menu">Активний розділ</span> доступний, лише якщо Ви створили основний розділ, а не ще один логічний розділ у розширеному розділі. Вам слід встановити позначку на цю опцію, якщо Ви плануєте використовувати цей розділ для загрузки Haiku.</p>
+<p>Перш ніж Ви зможете використовувати або навіть підключити новостворений розділ, на ньому потрібно створити файлову систему у процесі форматування.
+</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">Formatting a partition</a></h2>
-<p>Only unmounted partitions can be formatted by choosing a filesystem from the sub-menu of <span class="menu">Partition | Format</span>. The <span class="menu">Be File System</span> (BFS) is mandatory for a Haiku boot partition and recommended for data partitions to be used with Haiku. Only BFS formatted partitions can be queried and fully support Haiku's file attributes.</p>
+<a id="initializing" name="formatting">Форматування розділу</a></h2>
+<p>Форматувати можна лише розділи, які ще не підключені. Виберіть файлову систему у підменю <span class="menu">Розділ | Форматувати</span>. <br />
+<span class="menu">Be File System</span> (BFS) є обов’язковою для загрузочного розділу Haiku та рекомендована для розділів даних, які використовуються з Haiku. Лише розділи у форматі BFS повністю підтримують запити та атрибути файлів Haiku.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
-<p>Тут Вам потрібно вибрати імя розділу та розмір блоку. Рекомендується розмір 2048 байт на блок, хоча за потреби його можна змінити.<br />
-Ініціалізація знищить всі дані на цьому розділі!</p>
-<div class="box-stop">Formatting will destroy all data on the partition!</div>
+<p>Тут Вам потрібно вказати імя розділу та розмір його блоку. Розмір блоку – це мінімальний простір у байтах, який буде виділено для файлу. Рекомендовано 2048 байт на блок, але Ви можете вибрати більший або менший розмір, якщо у Вас є особливі потреби.<br />
+Якщо майбутні дані на Вашому розділі не потребуватимуть виконання запитів, Ви можете зняти позначку з опції <span class="menu">Увімкнути підтримку запитів</span>, щоб трохи заощадити накладні витрати на управління індексом.</p>
+<div class="box-stop">Форматування знищить усі дані на розділі!</div>
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="diskusage.html">DiskUsage</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="expander.html">Expander</a>  »
+ «  <a href="diskusage.html">DiskUsage (Використання диска)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="expander.html">Expander (Екстрактор)</a>  »
 </span></div>
 </div>
 

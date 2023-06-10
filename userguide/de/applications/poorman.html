@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		FabianR
  *		Humdinger
  *		taos
  *
@@ -70,15 +71,15 @@
 <tr><td>Einstellungen:</td><td></td><td><span class="path">~/config/settings/PoorMan Settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>PoorMan ist ein netter kleiner Webserver, der ausgesprochen einfach einzurichten ist. Er bietet natürlich keine so fortgeschrittenen Funktionen wie eine ausgewachsene Serversoftware; er ist schließlich, wie sein Name PoorMan schon sagt, ein Arme-Leute-Webserver.</p>
+<p>PoorMan ist ein netter kleiner Webserver, der ausgesprochen einfach einzurichten ist. Er bietet natürlich keine so fortgeschrittenen Funktionen wie eine ausgewachsene Serversoftware. Er ist schließlich, wie sein Name PoorMan schon sagt, ein Arme-Leute-Webserver.</p>
 <p>Bei seinem ersten Start fragt PoorMan nach dem Ordner, der im Netz publiziert werden soll. Wählt man hier <span class="button">Standard</span>, wird dafür der Ordner <span class="path">/boot/home/public_html</span> angelegt. Als Startseite muss hier eine HTML-Datei mit dem Standardnamen <span class="cli">index.html</span> liegen.</p>
-<p>PoorMan zeigt sich mit einer einfachen Konsole, die alle Aktivitäten aufzeichnet. Dazu eine Statusanzeige ob der Server läuft, welches Verzeichnis publiziert wird und einen Zugriffszähler. Mit <span class="menu">Bearbeiten | Einstellungen...</span> lassen sich die Einstellungen ändern:
+<p>PoorMan zeigt sich mit einer einfachen Konsole, die alle Aktivitäten aufzeichnet. Dazu eine Statusanzeige, ob der Server läuft, welches Verzeichnis publiziert wird und einen Zugriffszähler. Mit <span class="menu">Bearbeiten | Einstellungen...</span> lassen sich die Einstellungen ändern:
 </p>
 <p><img id="poorman" src="../images/apps-images/poorman.png" alt="poorman.png" /></p>
 <p>Das Einstellungsfenster besteht aus drei Reitern:</p>
-<p>Im <span class="menu">Website</span> Reiter kann ein anderer zu publizierender Ordner oder eine andere Startseite angegeben werden oder festgelegt werden, dass die Dateiliste des Ordners übertragen werden soll, falls keine Startseite existiert.<br />
-Im <span class="menu">Log</span> Reiter kann man die Aufzeichnung der Ereignisse in der Konsole de/aktivieren oder sie optional in eine eigene Datei umleiten.<br />
-Im <span class="menu">Erweitert</span> Reiter lässt sich die  maximale Anzahl gleichzeitiger Verbindungen einstellen.</p>
+<p>Im Reiter <span class="menu">Website</span> kann ein anderer zu publizierender Ordner oder eine andere Startseite angegeben werden. Oder es lässt sich festgelegt, dass die Dateiliste des Ordners übertragen werden soll, falls keine Startseite existiert.<br />
+Im Reiter <span class="menu">Log</span> kann man die Aufzeichnung der Ereignisse in der Konsole de-/aktivieren oder sie optional in eine eigene Datei umleiten.<br />
+Im Reiter <span class="menu">Erweitert</span> lässt sich die  maximale Anzahl gleichzeitiger Verbindungen einstellen.</p>
 <p>Die Befehle in der Menüleiste des Konsolenfensters sind selbsterklärend. Mit ihnen lässt sich die Konsolenausgabe oder Teile davon speichern, die Konsolenaufzeichnung bzw. Log-Datei leeren, der Server starten und anhalten und der Zugriffszähler zurücksetzen.</p>
 
 <div class="box-info">Um auszuprobieren, ob PoorMan funktioniert, kann man einfach mal <span class="path">/boot/system/apps/BePDF/docs/docs-build/</span> als Ordner und <span class="cli">index.html</span> als Startseite einstellen. Dann springt man im Browser zur Adresse 127.0.0.1, also dem localhost.</div>

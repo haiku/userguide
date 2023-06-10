@@ -68,14 +68,14 @@
 
 <p>Haiku のブートローダーオプションは、ハードウェア周りの問題で悩んだ場合や、Haiku を複数インストールしていて (おそらくインストール CD 上あるいは USB メモリ上の Haiku)、そのいずれかを選択する場合に役立ちます。また、あるソフトウェアコンポーネントをインストールしたもののそれが正しく動作せず、システムの起動を妨げてしまう場合にもそれは役立ちます。以下の<a href="#troubleshooting">トラブルシューティング</a>を見てください。</p>
 <p>ブートローダーオプションに入るには、Haiku の起動プロセスが始まる前に <span class="key">SHIFT</span> キーを押し続ける必要があります。ブートマネージャーがインストールされているなら、Haiku のブートエントリーの実行前に <span class="key">SHIFT</span> を押し続ける動作を始めても構いません。Haiku がそのマシンの唯一のオペレーティングシステムであれば、BIOS からのブートメッセージがまだ表示されている状態から SHIFT キーを押し続ける動作を始められます。</p>
-<div class="box-info">いくつかのハードウェアでは、BIOS で USB キーボードを有効にしておく必要があります。<br />
-昔からの BIOS でなく UEFI をブートに使用しているコンピューター上では、代わりに <span class="key">SPACEBAR</span> を押してください。</div>
+<div class="box-info">いくつかのハードウェアでは、BIOS 内で USB キーボードを有効にしておく必要があります。<br />
+昔からの BIOS でなく UEFI をブートに使用しているコンピューター上では、<span class="key">SHIFT</span> の代わりに <span class="key">SPACEBAR</span> を押してください。</div>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="options" name="options">ブートローダーオプション</a></h2>
 <p>ブートローダーオプションに入ると、次の 4 つのメニューが表示されます。</p>
 <table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
-<tr><td><b>Select boot volume</b></td><td> </td><td>Haiku のインストール済イメージまたはバージョンのうち、どれを起動するのか選択します(以下の <a href="#troubleshooting">トラブルシューティング</a>を参照ください)。</td></tr>
+<tr><td><b>Select boot volume/state</b></td><td> </td><td>Haiku のインストール済イメージまたはバージョンのうち、どれを起動するのか選択します(以下の <a href="#troubleshooting">トラブルシューティング</a>を参照ください)。</td></tr>
 <tr><td><b>Select safe mode options</b>
 </td><td> </td><td>ハードウェア周りに問題が生じた場合、または不正なアドオンのためにシステムが不安定あるいは起動しなくなった場合に試してみるべきオプションがいくつかあります。オプションに選択バーを移動させると、画面の下部に短い説明が表示されます。</td></tr>
 <tr><td></td><td></td><td>	<p><span class="menu">Safe mode</span><br />
@@ -140,8 +140,8 @@
 <li><p><span class="menu">Use fail-safe graphics driver</span> の有効化で、VESA グラフィックへの代替によりトラブルが解決するなら、テキストファイル <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span> 内の<i>#fail_safe_video_mode true</i> 行の<tt>#</tt> を削除すると設定を永続的にできます。</p></li>
 <li><p>問題のあるドライバー、アドオンなどが、システム階層にインストールされている場合は、もう少し複雑になります。なぜなら、そこは読み取り専用だからです。ここで、<span class="menu">Disable system components</span> オプションが出てきます。それにより、システム階層全体を検索して、それから <span class="key">SPACE</span> または <span class="key">RETURN</span> キーでチェックすれば、状況を混乱させるコンポーネントを無効にします。<span class="key">ESC</span> はひとつ上の親ディレクトリーへ戻ります。</p>
 <p>オンラインで、<a href="http://www.haiku-os.org/blog/barrett/2013-12-15_how_permanently_blacklist_package_file">Disabling components of packages</a> という記事があります。これには、コンポーネントの無効化設定を固定する方法が説明されています。</p></li>
-<li><p><span class="menu">Select boot volume</span> の下で、起動する Haiku の以前の "バージョン" を指定できます。パッケージをアンインストール / インストールするたびに、以前の状態は保存されます。ブートローダーオプション内に表示されるリストから選択すれば、それを起動できます。<br />
-つまり、あるパッケージをインストールした後に起動時の問題が発生したら、問題が起きる前の Haiku のバージョンを起動して、問題となるパッケージをアンインストールしてください。<a href="applications/softwareupdater.html#downgrading">ソフトウェアの更新</a>のトピックに書かれているように、永続的に特定のHaikuバージョンに戻すこともできます。</p></li>
+<li><p><span class="menu">Select boot volume/state</span> で、起動する Haiku の以前の "バージョン" を指定できます。パッケージをアンインストール / インストールするたびに、以前の状態は保存されます。ブートローダーオプション内に表示されるリストから選択すれば、そこから起動できます。<br />
+つまり、あるパッケージをインストール後に起動時の問題が発生したら、問題が起きる前の Haiku のバージョンを起動して、問題となるパッケージをアンインストールしてください。<a href="applications/softwareupdater.html#downgrading">ソフトウェアの更新</a>のトピックに書かれているように、永続的に特定の Haiku バージョンに戻すこともできます。</p></li>
 </ul>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>

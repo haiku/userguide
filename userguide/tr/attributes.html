@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2009, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -85,11 +85,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="attributes-terminal" name="attributes-terminal">Öznitelikleri Uçbirimde Görüntüleme</a></h2>
 <p>Komut satırını kullanmayı yeğliyorsanız veya betikler kullanarak birden çok dosya üzerinde çalışacaksanız öznitelikleri uçbirimden denetlemek için birkaç komut bulunmaktadır.         </p>
+<p>Bu komutlar ve seçenekleri üzerine daha çok bilgiyi "<span class="cli">-h</span>" or "<span class="cli">--help</span>" özellikleri ile görüntüleyebilirsiniz.</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> bir dosyanın özniteliklerini listeler; ancak özniteliklerin içeriğini göstermez.</p>
-<pre>usage: listattr 'filename' ['filename' ...]</pre>
+<p><span class="cli">listattr</span> bir dosyanın özniteliklerini listeler; ancak özniteliklerin içeriğini göstermez. Bunun için <tt>-l</tt> veya <tt>--long</tt> eklemeniz gerekir.</p>
+<pre>kullanım: listattr [-l|--long] 'dosya-adı' ['dosya-adı' ...]</pre>
 <p>Yukarıdaki ekran görüntüsünden örnekle:</p>
 <pre class="terminal"> ~/people -&gt;listattr Clara\ Botters
 File: Clara Botters
@@ -150,9 +151,7 @@ Clara Botters : string : Whelton</pre>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> bir özniteliği dosyadan tümüyle kaldırır.</p>
 
-<pre>usage: rmattr [-p] attr filename1 [filename2...]
-         'attr' is the name of an attribute of the file
-         If '-p' is specified, 'attr' is regarded as a pattern.</pre>
+<pre>kullanım: rmattr [-p] attr dosya-adı1 [dosya-adı2...]</pre>
 <p>Clara'nın dosyasından "Fax" özniteliğini kaldırmak için:</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\ Botters</pre>
 
@@ -165,7 +164,6 @@ Clara Botters : string : Whelton</pre>
 <p>Hem öznitelikleri hem de dosya verisini kopyalamak isterseniz  "<span class="cli">-d</span>" veya "<span class="cli">--data</span>" değişkenlerini ekleyebilirsiniz.</p>
 
 <p><br /></p>
-<p>Bu komutlar ve seçenekleri üzerine daha çok bilgiyi "<span class="cli">-h</span>" or "<span class="cli">--help</span>" özellikleri ile görüntüleyebilirsiniz.</p>
 
 </div>
 </div>

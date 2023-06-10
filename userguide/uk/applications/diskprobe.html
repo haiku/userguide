@@ -10,20 +10,21 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		'
  *		totish
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>DiskProbe</title>
+	<title>DiskProbe (HEX-редактор)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
 <body>
 
 <div id="banner">
-<div><span>Настанова користувачеві</span></div>
+<div><span>Посібник користувача</span></div>
 </div>
 
 <div class="nav">
@@ -53,42 +54,41 @@
 <li><a href="../../jp/applications/diskprobe.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="deskcalc.html">Калькулятор (DeskCalc)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="diskusage.html">DiskUsage</a>  »
+ «  <a href="deskcalc.html">DeskCalc (Калькулятор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="diskusage.html">DiskUsage (Використання диска)</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">Переклад даної сторінки ще неповний. Допоки це так, незавершені частини користайте у англійському варіанті. </div>
 
-<h2><img src="../../images/apps-images/diskprobe-icon_64.png" alt="diskprobe-icon_64.png" width="64" height="64" />DiskProbe</h2>
+<h2><img src="../../images/apps-images/diskprobe-icon_64.png" alt="diskprobe-icon_64.png" width="64" height="64" />   DiskProbe (HEX-редактор)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Програми (Applications)</span></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/DiskProbe</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/DiskProbe_data</span></td></tr>
 </table>
 <p><br /></p>
-<p>DiskProbe це HEX редактор для перегляду і редагування вмісту файлу або пристрою на рівні байтів, він працює на самому низькому рівні і тому може серйозно пошкодити дані, якщо бути обережним!</p>
-<div class="box-warning">Завжди слід працювати тільки з резервною копією файлу, а особливо уважним слід бути при роботі безпосередньо з пристроєм!.</div>
-<p>При запуску DiskProbe у Вас спочатку спитають про файл або пристрій з яким Ви плануєте працювати. Після вибору відкриється вікно:</p>
+<p>DiskProbe – це HEX-редактор для перегляду і зміни даних у файлі або на пристрої на байтовому рівні. Це дуже низькорівневий інструмент, і тому він може дійсно зіпсувати все, якщо Ви не будете обережні!</p>
+<div class="box-warning">Завжди працюйте з резервною копією файлу та будьте особливо обережні, працюючи безпосередньо на пристрої.</div>
+<p>Під час запуску DiskProbe спочатку Вам буде запропоновано вказати файл або пристрій, з яким Ви хочете працювати. Після цього Ви побачите ось такий інтерфейс:</p>
 <p><img id="diskprobe" src="../images/apps-images/diskprobe.png" alt="diskprobe.png" /></p>
-<p>В основному вікні завжди відображається один блок даних, розмір якого можна виставити з меню <span class="menu">Вид (View) | Розмір блока (BlockSize)</span>. Зліва показано зміщення від початку блока, по середині дані у вигляді HEX значень і справа теж саме і вигляді символів ASCII.<br />
-Ви можете переходити  від блоку до блоку за допомогою верхнього повзунка або клавіш <span class="key">ALT</span> <span class="key">←</span> і <span class="key">ALT</span> <span class="key">→</span> і переключатись між HEX і ASCII колонками по <span class="key">TAB</span>.</p>
-<p>Пункт меню <span class="menu">Блок (Block) | Вибір (Selection)</span> Не тільки дасть вибір з різним порядком байтів (в шістнадцятковому або десятковому виді, який встановлюється через меню <span class="menu">Вид (View) | Представлення (Base)</span>), він також інтерпретує його як зміщення блоків до яких треба перейти. Пункт буде недоступним (сірим),якщо позиція буде за межами файлу/пристрою<br />
-Ця функція зручна в основному при перегляді файлових систем, бо вони часто містять посилання на інші блоки.</p>
-<p>If the file you're probing includes attributes, the <span class="menu">Attributes</span> menu can be used to open any of them in a new DiskProbe window. Here's the SYS:PACKAGE attribute of the <span class="app">AboutSystem</span> application:
+<p>У головному вікні завжди відображається один блок даних, розмір якого можна вибрати за допомогою пункту меню <span class="menu">Режим перегляду | Розмір блока</span>. Зліва – зміщення від початку блока, посередині – дані у вигляді HEX-значень, а праворуч – у вигляді ASCII-символів.<br />
+Ви можете переходити  від одного блока до іншого за допомогою повзунка вище або комбінації клавіш <span class="key">ALT</span> <span class="key">←</span> і <span class="key">ALT</span> <span class="key">→</span> та переключатися між стовпчиками HEX і ASCII за допомогою клавіші <span class="key">TAB</span>.</p>
+<p>Пункт меню <span class="menu">Блок | Вибір</span> не тільки покаже вибір з різним порядком байтів (у шістнадцятковій або десятковій системі, яка встановлена через меню <span class="menu">Режим перегляду | Система счислення</span>), він також інтерпретує його як зміщення блока до якого Ви можете перейти. Пункт буде недоступним (позначений сірим кольором), якщо позиція знаходиться поза межами файлу/пристрою.<br />
+Це зручна функція, особливо для перегляду файлових систем, оскільки вони часто містять вказівники на інші блоки.</p>
+<p>Якщо файл, який Ви переглядаєте містить атрибути, за допомогою меню <span class="menu">Атрибути (Attributes)</span> можна відкрити будь-який з них у новому вікні DiskProbe. Ось атрибут BEOS:ICON програми <span class="app">Про цю систему (AboutSystem)</span>:
 </p><p><img id="diskprobe-attribute" src="../images/apps-images/diskprobe-about-attr.png" alt="diskprobe-about-attr.png" /></p>
-<p>В залежності від виду атрибуту відкриється потрібний таб редактора, в додаток до постійно присутнього таба <i>Raw Editor</i>.Наприклад,редактор для текста і MIME - типів, переглядач векторних іконок.</p>
+<p>Залежно від типу атрибута відкриється додаткова вкладка відповідного редактора, окрім завжди присутньої вкладки редактора необроблених даних <i>Raw Editor</i>. Наприклад, редактор рядків і MIME-типів або засіб перегляду векторних значків.</p>
 </div>
 </div>
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="deskcalc.html">Калькулятор (DeskCalc)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Applications (Програми)</a> 
-::  <a href="diskusage.html">DiskUsage</a>  »
+ «  <a href="deskcalc.html">DeskCalc (Калькулятор)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Програми</a> 
+::  <a href="diskusage.html">DiskUsage (Використання диска)</a>  »
 </span></div>
 </div>
 
