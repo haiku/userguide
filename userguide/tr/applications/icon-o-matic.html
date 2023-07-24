@@ -246,7 +246,7 @@ If not, "Freeze transformation" will apply the current shape transformation to t
 With the LOD you control the visibility of a shape depending on its size. That way, you can leave away details of an icon that look good on a bigger icon, but maybe not so much on its smaller version.</p>
 <p>This is how it works: A LOD of 1.0 is defined as a 64px icon size. To get the LOD of a particular icon size you simply divide it by 64, e.g. a 16px icon has a LOD of 16/64 = 0.25. A shape won't be visible below its <span class="menu">Min LOD</span> and above its <span class="menu">Max LOD</span>.</p>
 <p>So, if you set a shape's <span class="menu">Min LOD</span> to 0.0 and the <span class="menu">Max LOD</span> to 0.5, this means that the shape will only be visible for icon sizes smaller or <i>equal</i> to 32px. If you wanted to exclude the 32px icon size, you'd have to stay below 0.5, say 0.49.</p>
-<p>The LOD is not only for leaving out detailing shapes, but also to e.g. change the stroke width at different sizes, if you feel that's needed. Simply duplicate a shape, make your changes and set both of their LOD settings to show either one or the other. Here lies the only source of potential confusion, when you unwittingly overlap LODs of shapes, and wonder why at some size both are visible...<br />
+<p>The LOD is not only for leaving out detailing shapes, but also to e.g. change the stroke width at different sizes, if you feel that's needed. Simply duplicate a shape, make your changes and set both of their LOD settings to show either one or the other. Here lies the only source of potential confusion, when you unwittingly overlap LODs of shapes, and wonder why at some size both are visible…<br />
 For example, if Shape 1 were to be shown below 48px and Shape 2 from 48px upward (LOD: 48/64 = 0.75):</p>
 
 <table summary="LOD values example" border="0" cellpadding="5">
@@ -280,7 +280,7 @@ Of course you can move these indicators to change the gradient to your liking. Y
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="i-o-m-transformer" name="i-o-m-transformer">Transformer</a></h3>
-<p>A shape can have Transformers which change its appearance. The effects, however, are more subtle than a truck turning into a battle robot...</p>
+<p>A shape can have Transformers which change its appearance. The effects, however, are more subtle than a truck turning into a battle robot…</p>
 
 <h4><a id="i-o-m-transformer-menu" name="i-o-m-transformer-menu">Transformer Add Menu</a></h4>
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
@@ -304,9 +304,9 @@ Of course you can move these indicators to change the gradient to your liking. Y
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="i-o-m-save" name="i-o-m-save">Saving an icon</a></h3>
 <p>There's your usual menu bar at the top, <span class="menu">File</span>, <span class="menu">Edit</span>, <span class="menu">Options</span>. The usage is pretty much self-explaining, so we'll only look at how to save your work.</p>
-<p><span class="menu">File | Save as...</span> will save in a special Icon-O-Matic format that retains additional information like the names of paths, shapes and styles. These will be stripped from the actual icon once you export it to save space. It's a good idea to back-up your work like this, because without named objects everything's named "&lt;path&gt;/&lt;shape&gt;/&lt;style&gt;" which makes specific changes tedious.</p>
+<p><span class="menu">File | Save as…</span> will save in a special Icon-O-Matic format that retains additional information like the names of paths, shapes and styles. These will be stripped from the actual icon once you export it to save space. It's a good idea to back-up your work like this, because without named objects everything's named "&lt;path&gt;/&lt;shape&gt;/&lt;style&gt;" which makes specific changes tedious.</p>
 
-<p><span class="menu">File | Export as...</span> opens a familiar save panel with a file format pop-up menu at the bottom, offering these choices:</p>
+<p><span class="menu">File | Export as…</span> opens a familiar save panel with a file format pop-up menu at the bottom, offering these choices:</p>
 <table summary="file formats" border="0" cellspacing="0" cellpadding="2">
 <tr><td>HVIF</td><td style="width:15px;"></td><td>Haiku Vector Icon Format</td></tr>
 <tr><td>HVIF RDef</td><td></td><td>Saves as resource used by programmers</td></tr>

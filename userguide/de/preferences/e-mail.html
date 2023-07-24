@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -73,7 +73,7 @@
 	<a href="#incoming">Einstellungen für eingehende Mails</a><br />
 	<a href="#outgoing">Einstellungen für ausgehende Mails</a><br />
 	<a href="#filters">Einstellungen für E-Mail Filter</a><br />
-	<a href="#settings">Der Mail Service</a>
+	<a href="#settings">Der E-Mail Dienst</a>
 </td></tr>
 </table>
 
@@ -96,8 +96,7 @@ Im Programmfenster der E-Mail-Eigenschaften als erstes unten auf <span class="bu
 <p>Dann ist die verwendete <i>E-Mail-Adresse</i> einzugeben, sowie der <i>Login</i>-Name und das  <i>Passwort</i> für das Mail-Konto. Der <i>Kontoname</i> bezeichnet das E-Mail-Konto in der Liste aller Konten, der <i>Benutzername</i> wird als Absender einer E-Mail angegeben.</p>
 <p>Haiku kennt einige der großen E-Mail-Provider, so dass die notwendigen technischen Einstellungen wie IP-Adresse und Servername bereits automatisch ausgefüllt werden. Wenn das nicht möglich ist, oder die Daten angepasst werden müssen, kann man dazu nach Klicken auf <span class="button">Weiter</span> wie nachfolgend beschrieben vorgehen.</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>Zunächst werden <i>Servername</i>, <i>Anmeldemethode</i> und <i>Verbindungsart</i> für eingehende E-Mail, darunter für ausgehende E-Mail angegeben. Die dazu nötigen Informationen sollten sich auf der Webseite des E-Mail-Providers finden lassen.<br />
-Mehr Informationen zu den verschiedenen Einstellungen und weiteren Optionen im Folgenden.</p>
+<div class="box-info">Nutzt man GMail als E-mail Provider, muss ein sog. "App-Passwort" erzeugt werden.<br />Siehe dazu Google's Hilfsseite "<a href="https://support.google.com/accounts/answer/185833?hl=de">Mit App-Passwörtern anmelden</a>".</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -113,7 +112,7 @@ Mehr Informationen zu den verschiedenen Einstellungen und weiteren Optionen im F
 <p>Mit einem Klick auf <span class="menu">Eingang</span> unter dem Kontonamen, lassen sich Einstellungen zum E-Mail Empfang vornehmen.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>Der erste Eintrag ist die <span class="menu">Mail-Server</span>-Adresse für eingehende E-Mails. Falls ein Provider einen bestimmten Port beim Anmelden verlangt, wird dieser mit einem vorangestellten Doppelpunkt an die Adresse angehängt, wie zum Beispiel <tt>pop.dein-provider.org:1400</tt>.</p>
-<p>Anschließend werden die benötigten Anmeldeinformationen eingetragen: <i>Benutzername</i> und <i>Passwort</i> - falls nötig muss die <i>Anmeldemethode</i> von der Standardeinstellung <span class="menu">Klartext</span> auf <span class="menu">APOP</span> für die Authentifizierung umgestellt werden.</p>
+<p>Anschließend werden die benötigten Anmeldeinformationen eingetragen: <i>Benutzername</i> und <i>Passwort</i> - falls nötig muss die <i>Verbindungsart</i> von <span class="menu">Keine Verschlüsselung</span> zu <span class="menu">SSL</span>, und die <i>Anmeldemethode</i> von der Standardeinstellung <span class="menu">Klartext</span> auf <span class="menu">APOP</span> für die Authentifizierung umgestellt werden.</p>
 <p>Bei Verwendung des <i>POP3</i>-Protokolls für eingehende E-Mails kann die Option <span class="menu">E-Mails auf dem Server belassen</span> eingeschaltet werden. So kann auch von einem anderen Computer aus auf die Mails zugegriffen werden. Mit <span class="menu">Gelöschte E-Mails auch vom Server löschen</span> werden die E-Mails erst dann auf dem Server gelöscht, wenn sie auch auf dem Rechner entfernt werden.</p>
 <p>Sollte stattdessen <i>IMAP</i> als Übertragungsprotokoll verwendet werden, steht nur die Option <span class="menu">Gelöschte E-Mails auch vom Server löschen</span> zur Verfügung. Zusätzlich kann man noch <span class="menu">IMAP-Ordner</span> angeben, um nur von einem bestimmten Postfach und dessen Unterverzeichnissen die E-Mails zu synchronisieren.</p>
 <p>Außerdem kann man durch Aktivieren der Option <span class="menu">Nur Kopfzeilen herunterladen bei E-Mails über ... KB</span> bestimmen, dass E-Mails lediglich teilweise (bis zu einer bestimten Größe) heruntergeladen werden. Dadurch werden von Mails, die größer als der eingestellte Wert sind, nur die Kopfzeilen heruntergeladen. So kann man erstmal die Betreffzeile und Absender prüfen, bevor man den Rest der Nachricht plus eventuelle Anhänge runterlädt. Die Einstellung ist vor allem bei langsamen Netzwerkverbindungen sinnvoll.</p>
@@ -125,7 +124,7 @@ Mehr Informationen zu den verschiedenen Einstellungen und weiteren Optionen im F
 <a id="outgoing" name="outgoing">Einstellungen für ausgehende E-Mails</a></h2>
 <p>Unter <span class="menu">Ausgang</span> lassen sich für jedes Konto Einstellungen zum E-Mail-Versand vornehmen.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>Als erstes ist die <i>SMTP-Server</i>-Adresse anzugeben. Wie beim Mail-Server für eingehende E-Mails beschrieben, kann hier wenn nötig ein spezieller Port angegeben werden: <tt>mail.dein-provider.org:1200</tt>.</p>
+<p>Als erstes ist die <i>SMTP-Server</i>-Adresse anzugeben. Wie beim Mail-Server für eingehende E-Mails beschrieben, kann hier wenn nötig ein spezieller Port angegeben werden, z. B. <tt>mail.dein-provider.org:1200</tt>, und ggf. <i>Benutzername</i>, <i>Passwort</i> and <i>Verbindungsart</i>.</p>
 <p>Falls man sich am SMTP-Server mit Benutzernamen und Passwort anmelden muss, muss man die <i>Anmeldemethode</i> auf <span class="menu">ESMTP</span> stellen. Die andere Möglichkeit <span class="menu">POP3 vor SMTP</span> ist für Provider, die festgelegt haben, dass man nur unmittelbar nach einem Post-Abholen auch Versenden kann.</p>
 <p>Genauso wie bei eingehenden Mails kann der Speicherpfad für ausgehende E-Mails unter <i>Zielverzeichnis</i> vom Standard <span class="path">/boot/home/mail/out</span> in einen anderen geändert werden.</p>
 
@@ -210,15 +209,13 @@ Dieser Filter hängt an den E-Mail-Text ein zufällig ausgesuchtes Zitat oder ei
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="settings" name="settings">Der E-Mail-Dienst</a></h2>
-<p>Nach der Konfiguration der E-Mail-Konten und Filter muss der E-Mail-Dienst noch konfiguriert werden, wann er E-Mails abrufen und versenden soll.</p>
+<p>Nach der Konfiguration der E-Mail-Konten und Filter kann der E-Mail-Dienst noch konfiguriert werden, wann E-Mails abgerufen und versandt werden sollen.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>Unter <i>E-Mail abfragen</i> legt man fest, in welchen Zeitabständen der Mailserver kontaktiert werden soll.<br />
-Wenn man seine Netzwerkverbindung über eine Wählverbindung aufbaut, ist es ratsam <span class="menu">Nur bei aktiver Einwahlverbindung</span> und <span class="menu">Versand aufschieben falls Einwahlverbindung nicht aktiv</span> auszuwählen. Dann werden E-Mails nur abgefragt oder versendet, wenn bereits eine Netzwerkverbindung besteht. Ausgehende E-Mails werden zurück gehalten, um keine unnötigen Einwahl-Entgelte zu verursachen.</p>
-<p>Der E-Mail-Dienst kann entweder <span class="menu">Nie</span>, <span class="menu">Beim Senden</span>, <span class="menu">Beim Senden und Empfangen</span> oder <span class="menu">Immer</span> ein Statusfenster anzeigen.</p>
-<p>Nur wenn der mail_daemon schon während dem Hochfahren gestartet wird (<span class="menu">Starte E-Mail-Dienst beim Systemstart</span>), werden E-Mails automatisch empfangen und versendet.</p>
+<p>Nachdem man die Checkbox aktiviert hat, lässt sich festlegen in welchen Zeitabständen der Mailserver kontaktiert werden soll.</p>
+<p>Der E-Mail-Dienst kann entweder <span class="menu">Nie</span>, <span class="menu">Beim Senden</span> oder <span class="menu">Beim Senden und Empfangen</span> eine Benachrichtigung anzeigen.</p>
+<p><span class="menu">Mailbox-Menü bearbeiten…</span> öffnet das Verzeichnis <span class="path">/boot/home/config/Mail/Menu Links/</span>. Alle Ordner oder auch Queries(!) - beziehungsweise Verknüpfungen hierzu - erscheinen im Kontextmenü des E-Mail-Dienst Icons in der Deskbar.</p>
+<p>Über dieses Kontextmenü kann man auch eine neue <span class="menu">Nachricht verfassen…</span>, sofort nach neuen E-Mails schauen (<span class="menu">E-Mails jetzt abrufen</span>), oder die E-Mail-Dienst <span class="menu">Einstellungen…</span> aufrufen.</p>
 <img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
-<p><span class="menu">Mailbox-Menü bearbeiten...</span> öffnet das Verzeichnis <span class="path">/boot/home/config/Mail/Menu Links/</span>. Alle Ordner oder auch Queries(!) - beziehungsweise Verknüpfungen hierzu - erscheinen im Kontextmenü des E-Mail-Dienst Icons in der Deskbar.</p>
-<p>Über dieses Kontextmenü kann man auch eine neue <span class="menu">Nachricht verfassen...</span>, sofort nach neuen E-Mails schauen (<span class="menu">E-Mails jetzt abrufen</span>), oder die E-Mail-Dienst <span class="menu">Einstellungen...</span> aufrufen.</p>
 <p>Hält man beim Aufrufen des Kontextmenüs <span class="key">SHIFT</span> gedrückt, erhält man Zugriff auf weitere Befehle:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">E-Mails nur abrufen für</span></td><td style="width:5px;"> </td>

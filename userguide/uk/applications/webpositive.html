@@ -61,87 +61,90 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 <h2><img src="../../images/apps-images/webpositive-icon_64.png" alt="webpositive-icon_64.png" width="64" height="64" />   WebPositive (Браузер Інтернет)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/WebPositive</span></td></tr>
-<tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/WebPositive/</span> - Configuration files, cookies, cache and browsing history</td></tr>
-<tr><td></td><td></td><td><span class="path">~/config/settings/WebPositive/Bookmarks</span> - All bookmarks as single files</td></tr>
+<tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/WebPositive/</span> – файли конфігурації, файли cookie, кеш браузера і історія веб-перегляду</td></tr>
+<tr><td></td><td></td><td><span class="path">~/config/settings/WebPositive/Bookmarks</span> – усі закладки у вигляді окремих файлів</td></tr>
 </table>
 <p><br /></p>
-<p>WebPositive, or Web+ for short, is Haiku's native web browser. One part of its name is a tip of the hat to BeOS' simple NetPositive, the other points to its modern foundation: the WebKit. This open source HTML rendering library is at the heart of other mainstream browsers as well, like Safari of Mac OS X and Google's Chrome. By using the ever evolving WebKit, Web+ will be able to keep up with new web technologies.</p>
+<p>WebPositive, або скорочено Web+ – це нативний веб-браузер Haiku. Одна частина його назви є відсиланням до простого NetPositive для BeOS, а інша вказує на його сучасну основу: WebKit. Ця бібліотека рендерингу HTML з відкритим вихідним кодом лежить в основі інших популярних браузерів, таких як Safari з Mac OS X та Google Chrome. Завдяки використанню WebKit, що постійно розвивається, Web+ зможе йти в ногу з новими веб-технологіями.</p>
 <img src="../images/apps-images/webpositive.png" alt="webpositive.png" />
-<p>WebPositive's interface is pretty straight forward: Under a menu bar is another bar with buttons to navigate to the previous and next sites in your browsing history, to stop the loading of a page and (optionally) a button to jump to your starting page.<br />
-Then comes the locator field to enter a site's URL.<br />
-Below this navigating bar appear the webpages. You can open many pages in parallel by loading them into their own tab.<br />
-At the bottom of the window is a status bar, showing the URL of the site being loaded or of the link the mouse pointer is hovering over. While a page is being loaded, a progress bar appears to the right.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Settings</h2>
-<p>From the <span class="menu">Window</span> menu you can open a <span class="menu">Settings</span> panel to configure a few essentials of WebPositive.</p>
+<p>Інтерфейс WebPositive досить простий: Під рядком головного меню знаходиться ще один рядок з кнопками для переходу до попереднього і наступного сайтів у Вашій історії перегляду, для зупинки завантаження сторінки і (як опція) кнопка для переходу на домашню сторінку.<br />
+Далі йде текстове поле вводу «локатор» для введення URL-адреси сайту.<br />
+Під цією навігаційною панеллю відображаються веб-сторінки. Ви можете відкривати багато сторінок паралельно, завантажуючи їх в окремі вкладки.<br />
+У нижній частині вікна знаходиться рядок стану, в якому відображається URL-адреса сайту, що завантажується, або посилання, на яке наведено курсор миші. Під час завантаження сторінки праворуч відображається індикатор виконання.
+</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Налаштування</h2>
+<p>З меню <span class="menu">Вікно</span> Ви можете відкрити панель <span class="menu">Налаштування</span>, щоб настоїти деякі основні параметри WebPositive.</p>
 <img src="../images/apps-images/webpositive-settings.png" alt="webpositive-settings.png" />
-<p>The first tab deals with general settings: What file or URL serves as a <span class="menu">Start page</span>, what's used as a <span class="menu">Search page</span> (if you set a <span class="menu">Custom</span> search engine, "<i>%s</i>" is used for the search term variable), what <span class="menu">Download folder</span> is used for stuff you get from the net.<br />
-Two pop-up menus let you decide what page to load - if any - when opening a new window or tab.<br />
-Via the following checkboxes you can avoid showing the tab bar when there's only one page open anyway. WebPositive's interface can be told to automatically hide in full screen mode, and the mouse pointer can be automatically hidden whenever it's not moved for a while.<br />
-Finally, you can decide to include the "Home" button in the navigation bar and set the number of days the browser remembers the sites you have visited in its history.</p>
-<p>In the second tab you can choose the fonts used for standard, serif, non-serif and monospaced fonts and set their default sizes.</p>
-<p>The last tab is used to configure a proxy server.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Browsing</h2>
-<p>If you have used any browser before, WebPositive shouldn't provide too many surprises. Instead of going through every menu item and feature, let's have a look at just a few points.</p>
+<p>Перша вкладка містить загальні настройки: Який файл або URL-адреса буде <span class="menu">Стартовою сторінкою</span>, що використовується як<span class="menu"> Сторінка пошуку</span> (якщо Ви встановили відмінну від стандартної пошукову систему, «<i>%s</i>» використовується як змінна для правил пошуку), яка <span class="menu">Папка завантажень</span> використовується для збереження матеріалів, які Ви отримуєте з мережі Інтернет.<br />
+За допомогою трьох списків які розкриваються, Ви можете вирішити, що робити при запуску браузера та яку сторінку завантажувати (якщо вона є) під час відкриття нового вікна чи вкладки.<br />
+Наступні чекбокси дозволяють Вам: не відображати панель вкладок, якщо відкрита лише одна сторінка; приховати інтерфейс WebPositive у повноекранному режимі; приховати курсор миші, коли його не переміщують протягом певного часу.<br />
+Нарешті, Ви можете додати кнопку «Додому» до навігаційної панелі і задати кількість днів, протягом яких браузер зберігає у своїй історії відвідані Вами сайти.</p>
+<p>На другій вкладці Ви можете вибрати шрифти, які будуть використовуваться в якості стандартного шрифта, шрифта із зарубками, шрифта без зарубок і моноширинного шрифта а також установити їхні розміри за замовчуванням.</p>
+<p>Остання вкладка використовується для настройки проксі-сервера.</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Перегляд</h2>
+<p>Якщо Ви користувалися будь-яким браузером раніше, WebPositive не повинен піднести Вам багато сюрпризів. Замість того, щоб розглядати кожен пункт меню і функції браузера, давайте розглянемо лише кілька моментів.</p>
 <ul>
 <li><img src="../images/apps-images/webpositive-tabbar.png" alt="webpositive-tabbar.png" />
-<p>New tabs are created with the <span class="key">+</span> button to the right in the tab bar or, if there's still enough space, by double-clicking into an empty area of it. If there are more tabs open than fit into the bar, the <span class="key">&lt;</span> <span class="key">&gt;</span> scroll-buttons become active, allowing you to scroll the tab bar left and right. The <span class="key">∨</span> button to the far right hosts a pop-up menu with all open tabs for even quicker navigation.</p></li>
-<li><p>Clicking on a link with the middle mouse button opens the page in a new tab in the background. Holding <span class="key">SHIFT</span> while middle-clicking, opens it in the foreground.</p></li>
-<li><p>From the <span class="menu">View</span> menu you can <span class="menu">Zoom in</span> and <span class="menu">Zoom out</span> of a page. There's also an option to <span class="menu">Zoom text only</span>, leaving all images with their original size.</p></li>
-<li><p>If you switch to full screen mode and have activated the setting to hide the interface, it will disappear after a second. To slide it temporarily back in, simply move the mouse pointer to the top of the screen.</p></li>
+<p>Нові вкладки створюються за допомогою кнопки <span class="key">+</span> праворуч на панелі вкладок або, якщо там ще достатньо місця, подвійним кліком миші на порожньому місці. Якщо відкрито більше вкладок, ніж вміщається на панелі, стають активними кнопки прокрутки <span class="key">&lt;</span> <span class="key">&gt;</span>, які дозволяють прокручувати панель вкладок вліво і вправо. Кнопка <span class="key">∨</span>, крайня праворуч, містить випливаюче меню з усіма відкритими вкладками для ще швидшої навігації.</p></li>
+<li><p>Клік середньою кнопкою миші на посиланні відкриває сторінку у новій вкладці у фоновому режимі. Якщо зробити клік середньою кнопкою миші з натиснутою клавішею <span class="key">SHIFT</span>,  вкладка відкриється на передньому плані.</p></li>
+<li><p>У меню <span class="menu">Режим перегляду</span> Ви можете <span class="menu">Збільшити</span> або <span class="menu">Зменшити</span> масштаб сторінки. Також є пункт <span class="menu">Збільшити тільки текст</span>, який дозволяє залишити усі зображення в оригінальному розмірі.</p></li>
+<li><p>Якщо Ви переключилися у повноекранний режим і активували опцію приховування інтерфейсу, він зникне через секунду. Щоб тимчасово повернути його назад, просто підведіть курсор миші до верхньої частини екрана.</p></li>
 <li><img src="../images/apps-images/webpositive-locator.png" alt="webpositive-locator.png" />
-<p>While you type in the locator text field, the browser matches the string to sites you have visited in the past and lists them below the text field. You either keep adding more letters to shorten the  list of possible sites, or choose an entry with <span class="key">↑</span> or <span class="key">↓</span>. <span class="key">ENTER</span> will load the page. You can also use the button to the far right which also serves to reload a page.<br />
-Strings not recognized as URLs will get looked up with the search engine set in WebPositive's settings, so the locator field doubles as quick shortcut to web searches.</p>
-<div class="box-info"><p>WebPositive supports quick shortcuts to direct search terms to different search engines. Just enter the one-letter-shortcut followed by your search term.</p>
+<p>Поки Ви вводите текст у текстовому полі «локатора», браузер зіставляє рядок із сайтами, які Ви відвідували раніше і показує їхні URL-адреси під текстовим полем у вигляді підказки. Ви можете або продовжувати додавати літери, щоб скоротити список можливих сайтів, або вибрати запис за допомогою клавіш <span class="key">↑</span> чи <span class="key">↓</span>. Натискання клавіші <span class="key">ENTER</span> завантажить сторінку. Ви можете скористатися крайньою правою кнопкою на панелі навігації, яка теж виконує перезавантаження сторінки.<br />
+Рядки, які не розпізнаються як URL-адреси, будуть шукатися за допомогою пошукової системи, встановленої в настройках WebPositive, тому поле локатора виконує функцію швидкого переходу до веб-пошуку.</p>
+<div class="box-info"><p>WebPositive підтримує параметри рядка для швидкого перенаправлення пошукових запитів до різних пошукових систем. Просто введіть однолітерний параметр, за яким слідує Ваш пошуковий запит.</p>
 <ul>
-<li>"g” for Google</li>
-<li>“b” for Bing</li>
-<li>“w” for Wikipedia</li>
-<li>“d” for DuckDuckGo</li>
-<li>“a” for Baiku</li>
-<li>“y” for Yandex</li>
-<li>“e” for Ecosia</li>
-<li>“q” for Qwant</li>
+<li>«g» для Google</li>
+<li>«b» для Bing</li>
+<li>«w» для Wikipedia</li>
+<li>«d» для DuckDuckGo</li>
+<li>«a» для Baiku</li>
+<li>«y» для Yandex</li>
+<li>«e» для Ecosia</li>
+<li>«q» для Qwant</li>
 </ul></div></li>
-<li><p>Right-clicking opens a context menu which, depending on the object you've clicked on, offers to open the link in a new window or a new tab, download the object etc.</p></li>
-<li><p><span class="menu">Edit | Find</span> shows a find bar at the bottom to start an in-page search. Matches are highlighted in the page.</p></li>
+<li><p>Клік правою кнопкою миші відкриває контекстне меню, яке, залежно від об'єкта, на який Ви натиснули, пропонує відкрити посилання у новому вікні або на новій вкладці, завантажити об'єкт тощо.</p></li>
+<li><p>Пункт меню <span class="menu">Редагувати | Знайти</span> відкриває панель пошуку у нижній частині вікна браузера, щоб розпочати пошук на сторінці. Знайдені на сторінці рядки підсвічуються.</p></li>
 </ul>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Bookmarks</h2>
-<p>WebPositive's bookmarks are managed as files and folders in <tt>~/config/settings/WebPositive/Bookmarks/</tt>. Adding a bookmark will create a new file there. You can quickly open the folder with <span class="menu">Manage Bookmarks...</span>.</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Закладки</h2>
+<p>Закладки WebPositive зберігаються як файли і папки у каталозі <tt>~/config/settings/WebPositive/Bookmarks/</tt>. При додаванні закладки там просто створюється новий файл. Крім того, Ви можете перетягнути «значок» сайту, який знаходиться перед URL-адресою, у будь-яке відкрите вікно Tracker або на Робочий стіл, або навіть на Панель закладок (активується командою <span class="menu">Режим перегляду | Показати панель закладок</span>).<br />
+Ви можете швидко відкрити каталог <tt>Bookmarks</tt> за допомогою пункту меню <span class="menu">Управління закладками</span>.</p>
 <img src="../images/apps-images/webpositive-bookmarks.png" alt="webpositive-bookmarks" />
-<p>You can change a bookmark's URL, name, title and enter keywords just like with any other file with attributes. Just make sure you have all their columns displayed via Tracker's <span class="menu">Attributes</span> menu, then select a file, press <span class="key">ALT</span> <span class="key">E</span> and start editing the attribute; change attribute columns with <span class="key">TAB</span>.<br />You can sort bookmarks into different folders you create yourself.</p>
-<p>By using Tracker to manage and navigate bookmarks you can lift its unique features to quickly find what you're looking for.<br />
-Activating <span class="menu">Type-ahead filtering</span> in <a href="../tracker.html#tracker-preferences">Tracker's preferences</a>, you can instantly trim down your list of bookmarks to matches of your filter-string. A few more <span class="key">↑</span> or <span class="key">↓</span> to move the selection and pressing <span class="key">ENTER</span> opens the site. Make sure to display all attribute columns to have the filter applied to name, title, URL and keywords.</p>
-<p>For this to work, all bookmarks should be kept in the <tt>~/config/settings/WebPositive/Bookmarks/</tt> folder and only copies should be sorted into custom subfolders for usage in WebPositive's <span class="menu">Bookmarks</span> menu (if at all). Also, actually filling the keywords attribute helps...</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Downloads</h2>
-<p><span class="menu">Window | Downloads</span> opens a window listing all past and ongoing downloads:</p>
+<p>Ви можете змінити URL-адресу, назву, заголовок і ввести ключові слова закладки так само, як і для будь-якого іншого файлу з атрибутами. Просто переконайтеся, що у Вас відображені усі стовці у меню <span class="menu">Атрибути</span> Tracker, потім виберіть файл, натисніть <span class="key">ALT</span> <span class="key">E</span> і почніть редагування атрибута; змінюйте стовці атрибутів за допомогою клавіші <span class="key">TAB</span>.<br />
+Ви можете розміщувати закладки у різних папках, які створюєте самостійно.</p>
+<p>Використовуючи Tracker для управління і навігації закладками, Ви можете скористатися його унікальними можливостями, щоб швидко знаходити те, що шукаєте.<br />
+Активувавши опцію <span class="menu">Включити випереджаючу фільтрацію</span> у <a href="../tracker.html#tracker-preferences">налаштуваннях Tracker</a>, Ви можете миттєво скоротити список закладок до тих, що відповідають Вашому фільтр-рядку. Ще кілька натискань на <span class="key">↑</span> або <span class="key">↓</span> для переміщення виділення по списку і натискання клавіші <span class="key">ENTER</span> відкриває сайт. Переконайтеся що відображаються усі стовпці атрибутів, щоб фільтр застосовувався до імені, назви, URL-адреси та ключових слів.</p>
+<p>Щоб це працювало, усі закладки слід зберігати у каталозі <tt>~/config/settings/WebPositive/Bookmarks/</tt> і лише копії слід розміщати у власні підпапки для використання у меню <span class="menu">Закладки</span> WebPositive (якщо це взагалі потрібно). Крім того, заповнення атрибуту ключових слів допоможе…</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Завантаження</h2>
+<p>Пункт меню <span class="menu">Вікно | Завантаження</span> відкриває вікно зі списком усіх попередніх і поточних завантажень:</p>
 <img src="../images/apps-images/webpositive-downloads.png" alt="webpositive-downloads.png" />
-<p>Currently downloading files are shown with a growing progress bar and, similar to copying files in Tracker, information on the download speed, file size and expected finishing time. Buttons to the right let you <span class="button">Cancel</span> and <span class="button">Restart</span> a download, or  <span class="button">Open</span> the file, or <span class="button">Remove</span> its entry from the list. The <span class="button">Remove missing</span> and <span class="button">Remove finished</span> buttons at the bottom do this for all entries in this list. "Missing" are files that were deleted in the meantime.</p>
-<p>Moving a file that is currently being downloaded to Trash will stop the download. You'll also notice, that its icon becomes "ghosted".<br />
-Generally, WebPositive is very tolerant when it comes to managing files with Tracker. Files can be renamed or moved even while they are being downloaded and even after the download is finished, these changes are reflected in the Downloads window.</p>
-<div class="box-info"><p>Ever wondered from what site you downloaded a particular package, image or any other file? You can track that down by opening the file with <a href="diskprobe.html">DiskProbe</a> and have a look at its <tt>META:url</tt> attribute.</p>
-<p>Want to have the URL permanently shown in your downloads folder? Just copy a bookmark into it, have the bookmark's URL attribute column displayed and remove the bookmark again.</p></div>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Keyboard shortcuts</h2>
-<p>Here are some useful keyboard shortcuts:</p>
+<p>Файли, що завантажуються у даний момент, показуються зі зростаючим індикатором виконання (прогресу) і, подібно до копіювання файлів у Tracker, інформацією про швидкість завантаження, розмір файлу та очікуваний час завершення. Кнопки праворуч дають змогу <span class="button">Скасувати</span> і <span class="button">Перезапустити</span> завантаження, <span class="button">Відкрити</span> файл або <span class="button">Вилучити</span> його зі списку. Кнопки <span class="button">Прибрати відсутні</span> і <span class="button">Прибрати завантажені</span> у нижній частині вікна роблять це для усіх записів у цьому списку. «Відсутніми» вважаються файли, які було видалено за цей час.</p>
+<p>Переміщення файлу, який зараз завантажується до Смітника зупинить завантаження. Ви також помітите, що його значок стає матовим (напівпрозорим).<br />
+Загалом, WebPositive дуже терпимо ставиться до управління файлами за допомогою Tracker. Файли можна перейменовувати або переміщувати навіть під час завантаження і навіть після завершення завантаження ці зміни відображаються у вікні завантажень.
+</p>
+<div class="box-info"><p>Ви коли-небудь цікавилися, з якого сайту завантажили певний пакет, зображення або будь-який інший файл? Ви можете відстежити це, відкривши файл за допомогою <a href="diskprobe.html">DiskProbe</a> і подивившись на його атрибут <tt>META:url</tt>.</p>
+<p>Бажаєте щоб URL-адреса постійно відображалася у Вашому каталозі завантажень? Просто копіюйте туди закладку, увімкніть відображення стовпця атрибута URL-адреси закладки і знову її видаліть.</p></div>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Клавіші швидкого доступу</h2>
+<p>Ось декілька корисних комбінацій клавіш:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td style="width:15px;"></td><td>Відкрити нову вкладку.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">W</span></td><td> </td><td>Закрити поточну вкладку.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td> </td><td>Відкрити нове вікно.</td></tr>
 <tr><td><span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">W</span></td><td> </td><td>Закрити поточне вікно.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td> </td><td>Увімкнути повноекранний режим.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td> </td><td>Перейти до повноекранного режиму.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">R</span> або  <span class="key">F5</span></td><td> </td><td>Обновити поточну сторінку.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">H</span></td><td> </td><td>Відкрити домашню сторінку.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">D</span></td><td> </td><td>Показати/сховати вікно завантажень.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">F</span></td><td> </td><td>Показати поле пошуку при внутрішньосторінковому пошуку (сховати з <span class="key">ESC</span>).</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">B</span></td><td> </td><td>Закласти поточну сторінку.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">M</span></td><td> </td><td>Обслуговувати закладки, відкриття теки Закладки (Bookmarks).</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">F</span></td><td> </td><td>Відкриває панель пошуку на сторінці (клавіша <span class="key">ESC</span> приховує відкриту панель).</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">B</span></td><td> </td><td>Додати поточну сторінку до закладок.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">M</span></td><td> </td><td>Відкрити каталог «Закладки» для управління закладками.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">←</span></td><td> </td><td>Попередня сторінка в історії.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">→</span></td><td> </td><td>Наступна сторінка в історії.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td> </td><td>Increases/decreases the size of the webpage's elements (same as <span class="key">ALT</span> + mouse wheel).</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td> </td><td>Збільшити/Зменшити розмір елементів веб-сторінки (те саме, що і <span class="key">ALT</span> + коліщатко миші).</td></tr>
 </table>
 
 </div>

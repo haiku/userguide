@@ -62,19 +62,18 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Індекс</td></tr>
-<tr class="index"><td><a href="#bitmap-vector">BeOS bitmap vs. Haiku vector icons</a><br />
-                <a href="#icons-attributes">Icons are attributes</a><br />
-                <a href="#i-o-m">Creating icons with Icon-O-Matic</a><br />
-                  <a href="#i-o-m-path">Path</a><br />
-                  <a href="#i-o-m-shape">Shape</a><br />
-                  <a href="#i-o-m-style">Style</a><br />
-                  <a href="#i-o-m-transformer">Transformer</a><br />
-                  <a href="#i-o-m-save">Saving an icon</a><br />
-                  <a href="#i-o-m-tips">Tips &amp; Tricks</a></td></tr>
+<tr class="index"><td><a href="#bitmap-vector">Растр BeOS проти вектора Haiku</a><br />
+                <a href="#icons-attributes">Значки – це атрибути</a><br />
+                <a href="#i-o-m">Створення значків в Icon-O-Matic</a><br />
+                  <a href="#i-o-m-path">Контур</a><br />
+                  <a href="#i-o-m-shape">Форма</a><br />
+                  <a href="#i-o-m-style">Стиль</a><br />
+                  <a href="#i-o-m-transformer">Трансформатор</a><br />
+                  <a href="#i-o-m-save">Збереження значка</a><br />
+                  <a href="#i-o-m-tips">Поради та Рекомендації</a></td></tr>
 </table>
 
 <h2><img src="../../images/apps-images/icon-o-matic-icon_64.png" alt="icon-o-matic-icon_64.png" width="64" height="64" />   Icon-O-Matic (Редактор значків)</h2>
@@ -87,28 +86,28 @@
 
 <p><br /></p>
 
-<p>Before we come to the actual creating of icons in Icon-O-Matic, a few words on Haiku's icons in general.</p>
+<p>Перш ніж перейти до фактичного створення значків в Icon-O-Matic, кілька слів про значки Haiku загалом.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="bitmap-vector" name="bitmap-vector">BeOS bitmap vs. Haiku vector icons</a></h2>
-<p>Contrary to the BeOS, Haiku uses vector icons instead of bitmap icons. A special Haiku Vector Icon Format (HVIF) was developed that is highly optimized for small file sizes and fast rendering. That's why our icons are for the most part <i>much</i> smaller than either a bitmap or the widely used SVG format. Also, unlike BeOS' bitmap icons, Haiku isn't limited to an 8bit palette (256 colors).<br />
-Take this icon of the Terminal, for example:</p>
+<a id="bitmap-vector" name="bitmap-vector">Растрові значки BeOS проти векторних значків Haiku</a></h2>
+<p>На відміну від BeOS, Haiku використовує векторні значки замість растрових. Було розроблено спеціальний формат векторних значків Haiku (HVIF), який оптимізовано для невеликих розмірів файлів і швидкого рендерингу. Ось чому наші значки здебільшого <i>набагато</i> менші за растрові або широко використовуваний формат SVG. Крім того, на відміну від растрових значків BeOS, Haiku не обмежується 8-бітною палітрою (256 кольорів).
+Візьміть, наприклад, цей значок терміналу:</p>
 <table border="0" cellpadding="10">
-        <tr align="center"><td><b>Bitmap</b></td><td><b>SVG</b></td><td><b>HVIF</b></td></tr>
+        <tr align="center"><td><b>Растр</b></td><td><b>SVG</b></td><td><b>HVIF</b></td></tr>
         <tr align="center"><td><img src="../../images/apps-images/i-o-m-terminal-bitmap32.png" alt="i-o-m-terminal-bitmap32" width="32" height="32" /> <img src="../../images/apps-images/i-o-m-terminal-bitmap16.png" alt="i-o-m-terminal-bitmap16" width="16" height="16" /></td><td style="width:100px"><img src="../../images/apps-images/terminal-icon_32.png" alt="terminal-icon_32" width="32" height="32" /></td><td><img src="../../images/apps-images/terminal-icon_32.png" alt="terminal-icon_32" width="32" height="32" /></td></tr>
-        <tr align="center"><td>1,024 byte<br />+ 256 byte</td><td> 7,192 byte </td><td> 768 byte </td></tr>
+        <tr align="center"><td>1,024 байт<br />+ 256 байт</td><td> 7,192 байт </td><td> 768 байт </td></tr>
 </table>
-<p>Note that the BeOS used two versions of an icon, one 16x16 and one 32x32, to achieve good visuals in List and Icon View mode.</p>
-<p>This trick isn't needed with vector icons. Besides only taking up a few hundred bytes in a file, vector icons also scale much better than bitmaps. (Note: BeOS offered only a 16x16 and 32x32 display.)</p>
+<p>Зауважте, що в BeOS використовується дві версії значків: 16x16 і 32x32, щоб досягти гарного візуального сприйняття у режимах перегляду «Список» та «Значки».</p>
+<p>З векторними значками цей трюк не потрібен. Крім того, що векторні значки займають лише кілька сотень байт у файлі, вони також масштабуються набагато краще, ніж растрові. (Зауважте: у BeOS були доступні лише значки 16x16 та 32x32).</p>
 <table border="0" cellpadding="10">
         <tr align="center"><td> </td><td><b>16x16</b></td><td><b>32x32</b></td><td><b>64x64</b></td><td><b>128x128</b></td></tr>
-        <tr align="center"><td><b>Bitmap</b></td>
+        <tr align="center"><td><b>Растр</b></td>
                 <td><img src="../../images/apps-images/i-o-m-bitmap16.png" alt="i-o-m-bitmap16" width="16" height="16" /></td>
                 <td><img src="../../images/apps-images/i-o-m-bitmap32.png" alt="i-o-m-bitmap32" width="32" height="32" /></td>
                 <td><img src="../../images/apps-images/i-o-m-bitmap64.png" alt="i-o-m-bitmap64" width="64" height="64" /></td>
                 <td><img src="../../images/apps-images/i-o-m-bitmap128.png" alt="i-o-m-bitmap128" width="128" height="128" /></td></tr>
-        <tr align="center"><td><b>Vector</b></td>
+        <tr align="center"><td><b>Вектор</b></td>
                 <td><img src="../../images/apps-images/i-o-m-vector16.png" alt="i-o-m-vector16" width="16" height="16" /></td>
                 <td><img src="../../images/apps-images/i-o-m-vector32.png" alt="i-o-m-vector32" width="32" height="32" /></td>
                 <td><img src="../../images/apps-images/i-o-m-vector64.png" alt="i-o-m-vector64" width="64" height="64" /></td>
@@ -118,40 +117,40 @@ Take this icon of the Terminal, for example:</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="icons-attributes" name="icons-attributes">Icons are attributes</a></h2>
-<p>Icons are stored as an attribute with their file. However, that doesn't mean that every file has to have this attribute to appear with an icon in a Tracker window: data files inherit their icon from their filetype. To globally change the filetype's icon you use the <span class="app">FileTypes</span> preferences. If you only want to add a special icon to an individual file, you use the <span class="app">FileType add-on</span> on it instead. See topic <a href="../filetypes.html">Filetypes</a> for more information.</p>
-<div class="box-info">Being an attribute, it follows that only filesystems supporting metadata can retain a file's individual icon. So, if you move files off your BFS volume, consider zipping them up so you don't lose icons or other attributes.</div>
+<a id="icons-attributes" name="icons-attributes">Значки – це атрибути</a></h2>
+<p>Значки зберігаються як атрибут файлу. Однак це не означає, що кожен файл повинен мати цей атрибут, щоб з'являтися зі своїм значком у вікні Tracker: файли даних наслідують свой значок від свого типу файлу. Щоб глобально змінити значок типу файлу, скористайтеся панелью налаштувань <span class="app">FileTypes</span>. Якщо Ви хочете додати спеціальний значок лише до окремого файлу, скористайтеся <span class="app">доповненням FileType</span> для нього. Докладнішу інформацію наведено у розділі <a href="../filetypes.html">Типи файлів</a>.</p>
+<div class="box-info">Оскільки значок є атрибутом, лише файлові системи, які підтримують метадані, можуть зберігати індивідуальний значок файлу. Тому, якщо Ви переміщуєте файли з тома BFS, заархівуйте їх, щоб не втратити значки та інші атрибути.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="i-o-m" name="i-o-m">Creating icons with Icon-O-Matic</a></h2>
-<p>Icon-O-Matic is Haiku's icon editor that can save your work as HVIF, SVG or PNG. The icon can also be directly attached as attribute to an existing file or exported as a resource or source file used by developers. Since the application was tailored to the optimized HVIF format, its usage reflects the inner workings of this format.</p>
-<p>Other than your normal vector graphics software, you don't deal with separate objects that each include all their specific properties like path, stroke width, stroke and fill color etc. Rather, you assemble your objects ("shapes") from shared paths and colors ("styles") and set certain properties. This re-using of elements is one secret of HVIF's efficiency. Although that imposes some constraints on the icon designer, there are a few advantages, too.<br />
-For example, by re-using a path, several objects can be modified together by manipulating this one path. Think of an object and its shadow. Modifying their shared path will change the object itself and automatically its (maybe slightly distorted/translated) shadow.</p>
+<a id="i-o-m" name="i-o-m">Створення значків за допомогою Icon-O-Matic</a></h2>
+<p>Icon-O-Matic – це редактор значків Haiku, який може зберігати Ваші роботи у форматах HVIF, SVG або PNG. Значок можна безпосередньо прикріпити як атрибут до існуючого файлу або експортувати як ресурс чи вихідний файл, який використовується розробниками. Оскільки програму було розроблено для оптимізованого формату HVIF, його використання відображає внутрішню роботу цього формату.</p>
+<p>На відміну від звичайних програм для векторної графіки, Ви не маєте справу з окремими об'єктами, кожен з яких включає усі свої специфічні властивості, такі як контур, ширина штриха, колір штриха,  заливки тощо. Натомість Ви збираєте об'єкти («форми») зі спільних контурів і кольорів («стилів») та встановлюєте певні властивості. Таке повторне використання елементів є одним із секретів ефективності HVIF. Хоча це і накладає певні обмеження на дизайнера значків, але є і певні переваги.<br />
+Наприклад, повторно використовуючи контур, можна змінювати кілька об'єктів разом, маніпулюючи одним контуром. Подумайте про об'єкт і його тінь. Зміна їхнього спільного контуру змінить сам об'єкт і автоматично його тінь (можливо, трохи трансформовану/переміщену).</p>
 
-<p>Here's a quick overview of Icon-O-Matic's window:</p>
+<p>Подивіться на короткий огляд вікна Icon-O-Matic:</p>
 <img src="../images/apps-images/i-o-m-overview.png" alt="i-o-m-overview.png" />
 
-<p>To create any visible object on the canvas, you need a shape with a path and a style. Conveniently, you can create one, two or all three of those together from the <span class="menu">Shape</span> menu. Every kind of object (Paths, Shapes, Transformers, and Styles) has a menu above its list of elements, offering various commands. Every element has certain options that are set in the <span class="menu">Properties</span> view.</p>
+<p>Щоб створити будь-який видимий об'єкт на полотні, Вам потрібна форма з контуром і стилем. Зручно, що Ви можете створити один, два або усі три елементи разом за допомогою меню <span class="menu">Форма</span>. Кожен тип об'єктів (Контури, Форми, Трансформатори та Стилі) має меню над списком елементів, яке містить різні команди. Кожен елемент має певні параметри, які задаються у вікні <span class="menu">Властивості</span>.</p>
 
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="i-o-m-path" name="i-o-m-path">Path</a></h3>
-<p>A path consists of several points which are connected with lines or Bezier curves. To add or change points, make sure the path is selected in the path list.</p>
+<a id="i-o-m-path" name="i-o-m-path">Контур</a></h3>
+<p>Контур складається з декількох точок, з'єднаних лініями або кривими Безьє. Щоб додати або змінити точки, переконайтеся, що контур вибрано у списку контурів.</p>
 
-<p>Simply clicking in the canvas will set the first point. While setting a point, you decide if the resulting line will be straight or curved: a simple click and release produces a straight line, holding down the mouse button and moving the mouse will drag out the handles for a Bezier curve. Of course, you can also change it all later on.</p>
+<p>Просте натискання кнопки миші на полотні створить першу точку. Встановлюючи точку, Ви вирішуєте, яка у результаті буде лінія – прямою чи кривою: просте натискання і відпускання створює пряму лінію, утримування кнопки миші і переміщення миші витягне маркери для кривої Безьє. Звісно, Ви можете змінити все це пізніше.</p>
 
 <img src="../../images/apps-images/i-o-m-path-ab.png" alt="i-o-m-path-ab" />
 
-<p>To get from "A" to "B", you have to transform some points from corner-points to curve-points. That's done by holding <span class="key">ALT</span> while clicking on a point and dragging out the handles. This results in a symmetrical Bezier: the second handle follows the movement of the other. If you need to move the handles independently, again click &amp; drag on a Bezier handle while holding <span class="key">ALT</span>.<br />
-Vice versa, to go from Bezier to a corner-point, hold <span class="key">ALT</span> and click on a point.</p>
+<p>Щоб потрапити з точки «А» в точку «Б», потрібно перетворити деякі точки з кутових на криві. Це робиться утримуванням клавіші <span class="key">ALT</span> при натисканні на точку і розтягуванням маркерів. У результаті утворюється симетричний Безьє: другий маркер слідує за рухом іншого. Якщо Вам потрібно перемістити маркер незалежно, знову натисніть і перетягніть маркер Безьє, утримуючи клавішу <span class="key">ALT</span>.<br />
+І навпаки, щоб перейти від Безьє до кутової точки, утримуйте клавішу <span class="key">ALT</span> і натисніть на точку.</p>
 
-<p>To move a point, simply click &amp; drag it. To select more than one point, hold down <span class="key">SHIFT</span> and draw a selection rectangle. Selected points are marked with a red border instead of the usual black.<br />
-To insert a point into a path you click on the connecting line between two points.<br />
-Selected points are deleted by pressing <span class="key">DEL</span> or by clicking on any point while holding <span class="key">CTRL</span>.</p>
+<p>Щоб перемістити точку, просто натисніть і перетягніть її. Щоб виділити кілька точок, утримуючи клавішу <span class="key">SHIFT</span>, розтягніть прямокутник виділення. Виділені точки позначаються червоною рамкою замість звичайної чорної.<br />
+Щоб вставити точку в контур, натисніть на з'єднувальній лінії між двома точками.<br />
+Виділені точки видаляються натисканням клавіші <span class="key">DEL</span> або натисканням на точку з утриманням клавіші <span class="key">CTRL</span>.</p>
 
-<p>The mouse pointer indicates the current mode:</p>
+<p>Курсор миші вказує на поточний режим роботи з точками:</p>
 <table summary="Mouse pointer states, Path" border="0" cellpadding="10">
         <tr align="center">
                 <td><img src="../../images/apps-images/i-o-m-pointer-move-path.png" alt="i-o-m-pointer-move-path" width="16" height="16" /></td>
@@ -162,46 +161,46 @@ Selected points are deleted by pressing <span class="key">DEL</span> or by click
                 <td><img src="../../images/apps-images/i-o-m-pointer-select.png" alt="i-o-m-pointer-select" width="16" height="16" /></td>
         </tr>
         <tr align="center">
-                <td>Move point(s)</td>
-                <td>Insert point</td>
-                <td>Add point</td>
-                <td>Delete point<br /><span class="key">CTRL</span></td>
-                <td>Corner↔Bezier<br /><span class="key">ALT</span></td>
-                <td>Select points<br /><span class="key">SHIFT</span></td>
+                <td>Перемістити<br />точку(ки)</td>
+                <td>Вставити<br />точку</td>
+                <td>Додати<br />точку</td>
+                <td>Видалити точку<br /><span class="key">CTRL</span></td>
+                <td>Кутова↔Безьє<br /><span class="key">ALT</span></td>
+                <td>Виділити точки<br /><span class="key">SHIFT</span></td>
         </tr>
 </table>
-<p>You can invoke a context menu by right-clicking a point or a selection of points:</p>
+<p>Ви можете викликати контекстне меню, зробивши клік правою кнопкою миші на точці або виділених точках:</p>
 <table summary="Path context" border="0" cellspacing="0" cellpadding="2">
-<tr><td class="onelinetop"><span class="menu">Select all</span></td><td style="width:70px"><span class="key">ALT</span> <span class="key">A</span></td><td>Selects all points of the current path.</td></tr>
-<tr><td><span class="menu">Transform</span></td><td><span class="key">T</span></td><td>Puts all selected points in a transformation box, so you can move, resize and rotate them together. It works just like with shapes, described a bit further down.</td></tr>
-<tr><td><span class="menu">Split</span></td><td></td><td>Splits selected points into two, one sitting on top of the other.</td></tr>
-<tr><td><span class="menu">Flip</span></td><td></td><td>Rotates selected points by 180°. Only has an effect on Bezier points.</td></tr>
-<tr><td><span class="menu">Remove</span></td><td><span class="key">DEL</span></td><td>Deletes selected points.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Вибрати все</span></td><td style="width:70px"><span class="key">ALT</span> <span class="key">A</span></td><td>Виділяє усі точки поточного контуру.</td></tr>
+<tr><td><span class="menu">Трансформація</span></td><td><span class="key">T</span></td><td>Поміщає усі виділені точки в прямокутник трансформації, щоб Ви могли переміщати, змінювати розмір і повертати їх разом. Працює так само, як і з формами, описаними трохи нижче.</td></tr>
+<tr><td><span class="menu">Розділити</span></td><td></td><td>Розділяє вибрані точки на дві, одна з яких накладається на іншу.</td></tr>
+<tr><td><span class="menu">Віддзеркалити</span></td><td></td><td>Повертає виділені точки на 180°. Впливає лише на точки Безьє.</td></tr>
+<tr><td><span class="menu">Прибрати</span></td><td><span class="key">DEL</span></td><td>Видаляє вибрані точки.</td></tr>
 </table>
 
-<h4><a id="i-o-m-path-menu" name="i-o-m-path-menu">Path Menu</a></h4>
-<p>The <span class="menu">Path</span> menu offers a few obvious entries to <span class="menu">Add rectangle</span> and <span class="menu">Add circle</span> or to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a path. Here are some that may need a bit more explaining:</p>
+<h4><a id="i-o-m-path-menu" name="i-o-m-path-menu">Меню «Контур»</a></h4>
+<p>Меню <span class="menu">Контур</span> пропонує кілька очевидних пунктів: <span class="menu">Додати прямокутник</span> і <span class="menu">Додати коло</span> та <span class="menu">Дублікат</span> або <span class="menu">Прибрати</span> контур. Інші пункти, можливо, потребують дещо більшого пояснення:</p>
 
 <table summary="Path menu" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Reverse</span></td><td style="width:15px;"></td><td>If your path isn't "closed" (see Path Properties below), a click into the canvas always creates a new point, connecting it with the last one. "Reverse" will reverse this order and your new point will connect to original start point instead.</td></tr>
-<tr><td><span class="menu">Clean up</span></td><td></td><td>Most useful with imported SVGs, this function will remove redundant points.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Rotate indices right</span></td><td><span class="key">ALT</span> <span class="key">R</span></td><td>Practically, this rotates the opening of a path. It's best seen when using a not-closed path with a style and a shape with a stroke transformer. Now, if your path looks like a ⊂ it will rotate like this: ⊂ ∩ ⊃ ∪.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Rotate indices left</span></td><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">R</span></td><td>Does the same in the other direction.</td></tr>
+<tr><td><span class="menu">Реверс</span></td><td style="width:15px;"></td><td>Якщо контур не замкнутий (дивіться властивості контуру нижче), натискання на полотні завжди створює нову точку, з'єднуючи її з попередньою. Вибор пункту «Реверс» змінить цей порядок, і нова точка з'єднається з початковою точкою.</td></tr>
+<tr><td><span class="menu">Очистити</span></td><td></td><td>Найбільш корисна для імпортованих SVG, ця функція видаляє зайві точки.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Обійти точки за годинником</span></td><td><span class="key">ALT</span> <span class="key">R</span></td><td>Практично, це переміщує початок контуру. Найкраще це видно при використанні незамкнутого контуру зі стилем і формою з трансформатором обрису. Отже, якщо Ваш контур має вигляд ⊂, він обертатиметься так: ⊂ ∩ ⊃ ∪.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Обійти точки проти годинника</span></td><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">R</span></td><td>Робить те ж саме в іншому напрямку.</td></tr>
 </table>
 
-<h4><a id="i-o-m-path-properties" name="i-o-m-path-properties">Path Properties</a></h4>
-<p><span class="menu">Properties</span> at the bottom left of the window offers all available settings of the currently selected object. A path only has two: a <span class="menu">Name</span> and if it's <span class="menu">Closed</span> or not.</p>
+<h4><a id="i-o-m-path-properties" name="i-o-m-path-properties">Властивості Контурів</a></h4>
+<p>Вікно <span class="menu">Властивості</span> у нижній лівій частині вікна програми містить усі доступні настройки вибраного на даний момент контуру. Контур має лише два параметри: <span class="menu">Назва</span> і <span class="menu">Замкнений</span>, який визначає, закритий він чи ні.</p>
 
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="i-o-m-shape" name="i-o-m-shape">Shape</a></h3>
-<p>A shape groups together one or more paths with a style. Practically, it's the object that you'll actually see on the canvas. The grouping is done with the checkboxes in front of the paths and styles: Just select your shape and tick off the desired path(s) and a style.</p>
-<p>A shape defines how a path and style is applied, e.g. if the object is filled or only stroked (which is done by using Transformers on the shape, we'll get to that later). Also, a shape can be moved, rotated or resized without touching the used path. That way, you can re-use a single path and get different, but related, shapes.</p>
+<a id="i-o-m-shape" name="i-o-m-shape">Форма</a></h3>
+<p>Форма об'єднує один або декілька контурів зі стилем. Фактично, це об'єкт, який Ви побачите на полотні. Групування здійснюється за допомогою чекбоксів навпроти контурів і стилів: Просто виберіть фігуру і позначте потрібний контур і стиль.</p>
+<p>Форма визначає спосіб застосування контуру і стилю, наприклад, якщо об'єкт з заливкою кольором (зафарбований) або лише обведений (це робиться за допомогою трансформаторів на формі, про це ми поговоримо пізніше). Крім того, форму можна переміщати, обертати або змінювати розмір, не чипаючи використаний контур. Таким чином, Ви можете повторно використати один контур і отримати різні, але пов'язані між собою форми.</p>
 
 <img src="../../images/apps-images/i-o-m-shape.png" alt="i-o-m-shape" />
 
-<p>When a shape is selected from the list, a rectangle is drawn around it. Depending on where exactly you grab it, the shape is moved, resized or rotated around a point in its center, which itself can be moved. Holding <span class="key">SHIFT</span> will lock direction when moving, limit rotating to 45° angles and restrict the aspect ratio while resizing. The mouse pointer again indicates the current mode:</p>
+<p>Коли Ви вибираєте форму у списку, навколо неї малюється прямокутник. Залежно від того, де саме Ви її берете, фігура переміщується, змінюється її розмір або вона повертається навколо точки в центрі, яку можна переміщати. Утримуючи клавішу <span class="key">SHIFT</span>, Ви зафіксуєте напрямок під час переміщення, обмежите поворот кутами по 45° та збережете співвідношення сторін під час зміни розміру. Вказівник миші вказує на поточний режим:</p>
 <table summary="Mouse pointer states, Shape" border="0" cellpadding="10">
         <tr align="center">
                 <td><img src="../../images/apps-images/i-o-m-pointer-move-shape.png" alt="i-o-m- move-shape" width="16" height="16" /></td>
@@ -210,32 +209,32 @@ Selected points are deleted by pressing <span class="key">DEL</span> or by click
                 <td><img src="../../images/apps-images/i-o-m-pointer-move-path.png" alt="i-o-m-pointer-move-rotation" width="16" height="16" /></td>
         </tr>
         <tr align="center">
-                <td>Move</td>
-                <td>Resize</td>
-                <td>Rotate</td>
-                <td>Move<br />rotation point</td>
+                <td>Переміщення</td>
+                <td>Зміна розміру</td>
+                <td>Поворот</td>
+                <td>Переміщення<br />точки обертання</td>
         </tr>
 </table>
 
-<p>Shapes lie on top of each other, each is on its own layer, if you will. To reorder them you drag &amp; drop their entry to a different position in the list.</p>
+<p>Форми лежать одна над одною, кожна на своєму шарі, якщо хочете. Щоб змінити їхній порядок, перетягніть рядок із записом форми в іншу позицію у списку форм.</p>
 
-<h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Shape Menu</a></h4>
-<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape. Then, there is:</p>
+<h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Меню «Форма»</a></h4>
+<p>Меню <span class="menu">Форма</span> пропонує вже згадану вище можливість <span class="menu">Додати порожню, з контуром/стилем/контуром &amp; стилем</span> а також, зробити <span class="menu">Дублікат</span> або <span class="menu">Прибрати</span> форму. Крім того є пункти:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Reset transformation</span></td><td style="width:15px;"></td><td>Reverts all the move, resize and rotate transformations you have applied to the shape.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Freeze transformation</span></td><td></td><td>When you transform a shape, its assigned path(s) stay in their original position. This may be intended; maybe more than one shape is using that path, maybe you intentionally used <span class="menu">Options | Snap to grid</span> to set the points at precise pixel borders.<br />
-If not, "Freeze transformation" will apply the current shape transformation to the assigned path(s). A future "Reset Transformation" will then return to this new state.</td></tr>
+<tr><td><span class="menu">Скинути трансформацію</span></td><td style="width:15px;"></td><td>Скасовує усі застосовані до форми переміщення, зміни розміру, повороти та інші трансформації.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Зафіксувати трансформацію</span></td><td></td><td>Коли Ви трансформуєте форму, прив'язані до неї контури залишаються у початковому положенні. Така поведінка передбачена; можливо, цей контур використовується для кількох форм або Ви навмисно використали пункт меню <span class="menu">Налаштування | Припасувати до сітки</span>, щоб встановити точки на точних межах пікселів.<br />
+Якщо ні, пункт «Зафіксувати трансформацію» застосує поточну трансформацію форми до прив'язаного контуру (контурів). Команда «Скинути трансформацію», виконана пізніше, повертає форму до цього нового стану.</td></tr>
 </table>
 
-<h4><a id="i-o-m-shape-properties" name="i-o-m-shape-properties">Shape Properties</a></h4>
-<p>Besides a <span class="menu">Name</span>, the <span class="menu">Properties</span> view for a shape has these options:</p>
+<h4><a id="i-o-m-shape-properties" name="i-o-m-shape-properties">Властивості Форм</a></h4>
+<p>Окрім рядка <span class="menu">Назва</span>, у вікні <span class="menu">Властивості</span> форми є такі параметри:</p>
 
 <table summary="Shape properties" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Min LOD</span></td><td></td><td>Minimum Level of Detail</td></tr>
-<tr><td><span class="menu">Max LOD</span></td><td></td><td>Maximum Level of Detail</td></tr>
+<tr><td><span class="menu">Мін. LOD</span></td><td></td><td>Мінімальний рівень деталізації</td></tr>
+<tr><td><span class="menu">Макс. LOD</span></td><td></td><td>Максимальний рівень деталізації</td></tr>
 </table>
 
-<h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Level of Detail (LOD)</a></h5>
+<h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Рівень деталізації (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
         <tr align="center"><td><b>16x16</b></td><td><b>32x32</b></td><td><b>64x64</b></td></tr>
         <tr align="center">
@@ -243,95 +242,95 @@ If not, "Freeze transformation" will apply the current shape transformation to t
                 <td><img src="../../images/apps-images/i-o-m-lod-icon_32.png" alt="i-o-m-lod-icon_32" width="32" height="32" /></td>
                 <td><img src="../../images/apps-images/i-o-m-lod-icon_64.png" alt="i-o-m-lod-icon_64" width="64" height="64" /></td></tr>
 </table>
-<p>See how there are no numbers in the 16px version of the BeVexed icon? That's done with the "Level of Detail" setting of their shapes.<br />
-With the LOD you control the visibility of a shape depending on its size. That way, you can leave away details of an icon that look good on a bigger icon, but maybe not so much on its smaller version.</p>
-<p>This is how it works: A LOD of 1.0 is defined as a 64px icon size. To get the LOD of a particular icon size you simply divide it by 64, e.g. a 16px icon has a LOD of 16/64 = 0.25. A shape won't be visible below its <span class="menu">Min LOD</span> and above its <span class="menu">Max LOD</span>.</p>
-<p>So, if you set a shape's <span class="menu">Min LOD</span> to 0.0 and the <span class="menu">Max LOD</span> to 0.5, this means that the shape will only be visible for icon sizes smaller or <i>equal</i> to 32px. If you wanted to exclude the 32px icon size, you'd have to stay below 0.5, say 0.49.</p>
-<p>The LOD is not only for leaving out detailing shapes, but also to e.g. change the stroke width at different sizes, if you feel that's needed. Simply duplicate a shape, make your changes and set both of their LOD settings to show either one or the other. Here lies the only source of potential confusion, when you unwittingly overlap LODs of shapes, and wonder why at some size both are visible...<br />
-For example, if Shape 1 were to be shown below 48px and Shape 2 from 48px upward (LOD: 48/64 = 0.75):</p>
+<p>Бачите, що у 16-піксельній версії значка BeVexed немає цифр? Це зроблено за допомогою параметра «Рівень деталізації» їхніх форм.<br />
+За допомогою LOD Ви управляєте видимістю форми залежно від її розміру. Таким чином, Ви можете прибрати деталі значка, які добре виглядають на більшому значку, але не дуже добре на його меншій версії.</p>
+<p>Ось як це працює: LOD 1.0 визначається як розмір значка у 64 пікселі. Щоб отримати LOD певного розміру значка, просто розділіть його на 64, наприклад, значок розміром 16 пікселів має LOD 16/64 = 0,25. Форму не буде видно нижче її <span class="menu">Мін. LOD</span> і вище її <span class="menu">Макс. LOD</span>.</p>
+<p>Отже, якщо Ви встановите <span class="menu">Мін. LOD</span> форми на 0.0 і <span class="menu">Макс. LOD</span> на 0.5, це означає, що форму буде видно лише для значків розміром менше або <i>дорівнює</i> 32 пікселя. Якщо Ви хочете виключити значки розміром 32 пікселі, Вам потрібно встановити значення нижче 0.5, скажімо 0.49.</p>
+<p>LOD можна використовувати не лише для того, щоб не деталізувати форми, але й для того, щоб, наприклад, змінювати ширину обрису для різних розмірів, якщо Ви вважаєте, що це потрібно. Просто зробіть дублікат форми, внесіть зміни і встановіть обидва параметри LOD для відображення однієї або іншої форми. Тут криється єдине джерело потенційної плутанини, коли Ви мимоволі перекриваєте LOD форм і дивуєтеся, чому при певному розмірі видно обидві…<br />
+Наприклад, якщо «Форма 1» має бути показана нижче 48 пікселів, а «Форма 2» – вище 48 пікселів (LOD: 48/64 = 0,75):</p>
 
 <table summary="LOD values example" border="0" cellpadding="5">
-<tr align="center"><td></td><td colspan="2"><b>OK</b></td><td style="width:25px" rowspan="6"></td><td colspan="2"><b>Not OK!</b></td></tr>
-<tr style="background-color:#F1F1F1"><td rowspan="2" style="vertical-align:middle ; background-color:#FFFFFF"><b>Shape 1</b></td><td>Min LOD</td><td>0.00</td><td>Min LOD</td><td>0.00</td></tr>
-<tr style="background-color:#F1F1F1"><td>Max LOD</td><td><span style="background-color:#33FF33">0.74</span></td><td>Max LOD</td><td><span style="background-color:#FF9977">0.75</span></td></tr>
+<tr align="center"><td></td><td colspan="2"><b>Правильно</b></td><td style="width:25px" rowspan="6"></td><td colspan="2"><b>Неправильно</b></td></tr>
+<tr style="background-color:#F1F1F1"><td rowspan="2" style="vertical-align:middle ; background-color:#FFFFFF"><b>Форма 1</b></td><td>Мін. LOD</td><td>0.00</td><td>Мін. LOD</td><td>0.00</td></tr>
+<tr style="background-color:#F1F1F1"><td>Макс. LOD</td><td><span style="background-color:#33FF33">0.74</span></td><td>Макс. LOD</td><td><span style="background-color:#FF9977">0.75</span></td></tr>
 <tr><td colspan="6"></td></tr>
-<tr style="background-color:#F8F8F8"><td rowspan="2" style="vertical-align:middle ; background-color:#FFFFFF"><b>Shape 2</b></td><td>Min LOD</td><td>0.75</td><td>Min LOD</td><td>0.75</td></tr>
-<tr style="background-color:#F8F8F8"><td>Max LOD</td><td>4.00</td><td>Max LOD</td><td>4.00</td></tr>
+<tr style="background-color:#F8F8F8"><td rowspan="2" style="vertical-align:middle ; background-color:#FFFFFF"><b>Форма 2</b></td><td>Мін. LOD</td><td>0.75</td><td>Мін. LOD</td><td>0.75</td></tr>
+<tr style="background-color:#F8F8F8"><td>Макс. LOD</td><td>4.00</td><td>Макс. LOD</td><td>4.00</td></tr>
 </table>
 
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="i-o-m-style" name="i-o-m-style">Style</a></h3>
-<p>A style can either be a solid color or some type of gradient.<br />
-Besides the predefined colors under <span class="menu">Swatches</span>, you can mix your own by clicking on the current color. Also, note the slider under the color spectrum which sets the alpha-channel (transparency).</p>
+<a id="i-o-m-style" name="i-o-m-style">Стиль</a></h3>
+<p>Стиль може бути як суцільним кольором, так і градієнтом.<br />
+Крім попередньо визначених кольорів на палітрі <span class="menu">Зразки</span>, Ви можете змішувати свої власні, натиснувши на поточний колір. Також зверніть увагу на повзунок під спектром кольору, який встановлює альфа-канал (прозорість).</p>
 <img src="../images/apps-images/i-o-m-gradients.png" alt="i-o-m-gradients" />
-<p>You quickly create a new style by mixing your color and simply drag &amp; dropping it into the list of styles.</p>
-<p>If you go for a gradient, you set the type (<span class="menu">Linear</span>, <span class="menu">Radial</span>, <span class="menu">Diamond</span>, <span class="menu">Cone</span>) and then define the start and end colors. This is done with a drag &amp; drop from a color bucket into the respective color indicator under the gradient.<br />
-Of course you can move these indicators to change the gradient to your liking. You can also insert more indicators to add more colors by double-clicking into the gradient. Pressing <span class="key">DEL</span> removes the selected indicator.</p>
-<p>You can move, resize and rotate the representing box of a gradient on the canvas until it fits your needs. This works just like with shapes.</p>
+<p>Ви можете швидко створити новий стиль, змішавши колір і просто перетягнувши його до списку стилів.</p>
+<p>Якщо ви обираєте градієнт, Ви встановлюєте тип (<span class="menu">Лінійний</span>, <span class="menu">Радіальний</span>, <span class="menu">Ромбовидний</span>, <span class="menu">Конічний</span>) а потім визначаєте початковий і кінцевий кольори. Це робиться за допомогою перетягування з палітри кольорів на відповідний індикатор кольору під градієнтом.<br />
+Звичайно, Ви можете пересувати ці індикатори, щоб змінити градієнт як Вам подобається. Ви можете вставити інші індикатори, щоб додати більше кольорів, двічі натиснувши на градієнті. Натискання клавіші <span class="key">DEL</span> видаляє вибраний індикатор.</p>
+<p>Ви можете переміщати, змінювати розмір і обертати рамку градієнта на полотні так, щоб вона відповідала Вашим потребам. Це працює так само, як і з формами.</p>
 
-<h4><a id="i-o-m-style-menu" name="i-o-m-style-menu">Style Menu</a></h4>
-<p>The <span class="menu">Style</span> menu offers the usual entries to <span class="menu">Add</span>, <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a style and to <span class="menu">Reset transformation</span>.</p>
+<h4><a id="i-o-m-style-menu" name="i-o-m-style-menu">Меню «Стиль»</a></h4>
+<p>Меню <span class="menu">Стиль</span> пропонує вже звичні пункти <span class="menu">Додати</span>, <span class="menu">Дублікат</span>, <span class="menu">Прибрати</span> стиль і <span class="menu">Скинути трансформацію</span>.</p>
 
-<h4><a id="i-o-m-style-properties" name="i-o-m-style-properties">Style Properties</a></h4>
-<p>The <span class="menu">Name</span> is the only <span class="menu">Properties</span> of a style.</p>
+<h4><a id="i-o-m-style-properties" name="i-o-m-style-properties">Властивості Стилів</a></h4>
+<p><span class="menu">Назва</span> – це єдина <span class="menu">Властивість</span> стилю.</p>
 
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="i-o-m-transformer" name="i-o-m-transformer">Transformer</a></h3>
-<p>A shape can have Transformers which change its appearance. The effects, however, are more subtle than a truck turning into a battle robot...</p>
+<a id="i-o-m-transformer" name="i-o-m-transformer">Трансформатор</a></h3>
+<p>Форма може мати трансформатори, які змінюють її вигляд. Ефекти, однак, більш тонкі, ніж перетворення вантажівки на бойового робота…</p>
 
-<h4><a id="i-o-m-transformer-menu" name="i-o-m-transformer-menu">Transformer Add Menu</a></h4>
+<h4><a id="i-o-m-transformer-menu" name="i-o-m-transformer-menu">Пункт «Додати» меню «Трансформатор»</a></h4>
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Contour</span></td><td></td><td>Adds an outline to a shape.</td></tr>
-<tr><td><span class="menu">Stroke</span></td><td></td><td>Strokes the path of a shape instead of filling it with a style.</td></tr>
+<tr><td><span class="menu">Обрис</span></td><td></td><td>Додає обрис (контур) до форми. Окреслює лінією.</td></tr>
+<tr><td><span class="menu">Штрих</span></td><td></td><td>Штрихує контур форми замість того, щоб застосувати стиль.</td></tr>
 </table>
 
-<p>Depending on the kind of Transformer, you'll get a different set of properties.</p>
+<p>Залежно від типу трансформатора, Ви отримаєте різний набір властивостей.</p>
 
-<h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Transformer Properties</a></h4>
-<p>Besides a <span class="menu">Name</span> and the actual <span class="menu">Width</span> for the transformer, the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
+<h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Властивості Трансформаторів</a></h4>
+<p>Окрім рядків <span class="menu">Назва</span> та <span class="menu">Ширина</span> трансформатора, у вікні <span class="menu">Властивості</span> є такі параметри (залежно від типу трансформатора вони дещо відрізняються):</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Caps</span></td><td style="width:15px;"></td><td><i>Stroke only</i>. Defines the end caps of a line: <span class="menu">Butt</span>, <span class="menu">Square</span> or <span class="menu">Round</span>.</td></tr>
-<tr><td><span class="menu">Detect orient.</span></td><td></td><td><i>Contour only</i>. Determines if the contour is to the inside or outside the path.</td></tr>
-<tr><td><span class="menu">Joins</span></td><td></td><td>Defines how lines are joined at a point: <span class="menu">Miter</span>, <span class="menu">Round</span> or <span class="menu">Bevel</span>.</td></tr>
-<tr><td><span class="menu">Miter limit</span></td><td></td><td>Only when the above <span class="menu">Joins</span> is set to "Miter" this setting influences the looks of the miter joint. </td></tr>
+<tr><td><span class="menu">Кінці ліній</span></td><td style="width:15px;"></td><td><i>Тільки для Тр «Штрих»</i>. Визначає кінцеві точки лінії: <span class="menu">Butt</span>, <span class="menu">Square</span> або <span class="menu">Round</span>.</td></tr>
+<tr><td><span class="menu">Зовні/Зсередини</span></td><td></td><td><i>Тільки для Тр «Обрис»</i>. Визначає, де знаходиться лінія окреслення (обвідна) – всередині або зовні контуру.</td></tr>
+<tr><td><span class="menu">З'єднання</span></td><td></td><td>Визначає спосіб з'єднання ліній у точці: <span class="menu">Miter</span>, <span class="menu">Round</span> або <span class="menu">Bevel</span>.</td></tr>
+<tr><td><span class="menu">Межа вістря</span></td><td></td><td>Цей параметр впливає на зовнішній вигляд з'єднання тільки тоді, коли для параметра <span class="menu">З'єднання</span> встановлено значення «Miter». </td></tr>
 </table>
 
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="i-o-m-save" name="i-o-m-save">Saving an icon</a></h3>
-<p>There's your usual menu bar at the top, <span class="menu">File</span>, <span class="menu">Edit</span>, <span class="menu">Options</span>. The usage is pretty much self-explaining, so we'll only look at how to save your work.</p>
-<p><span class="menu">File | Save as...</span> will save in a special Icon-O-Matic format that retains additional information like the names of paths, shapes and styles. These will be stripped from the actual icon once you export it to save space. It's a good idea to back-up your work like this, because without named objects everything's named "&lt;path&gt;/&lt;shape&gt;/&lt;style&gt;" which makes specific changes tedious.</p>
+<a id="i-o-m-save" name="i-o-m-save">Збереження значка</a></h3>
+<p>У верхній частині вікна є панель головного меню: <span class="menu">Файл</span>, <span class="menu">Редагувати</span>, <span class="menu">Налаштування</span>. Користування ним не потребує пояснень, тому ми розглянемо лише те, як зберегти Вашу роботу.</p>
+<p>Пункт меню <span class="menu">Файл | Зберегти як…</span> дозволяє зберегти значок у спеціальному форматі Icon-O-Matic, який записує додаткову інформацію, таку як  назви контурів, форм і стилів. Після експорту значка в інший формат, з метою заощадження місця, ці дані будуть прибрані з файлу. Це гарна ідея – створити резервну копію Вашої роботи, оскільки без перейменування об'єктів усі вони називаються «&lt;path&gt;/&lt;shape&gt;/&lt;style&gt;», що робить внесення конкретних змін нудною роботою.</p>
 
-<p><span class="menu">File | Export as...</span> opens a familiar save panel with a file format pop-up menu at the bottom, offering these choices:</p>
+<p>Пункт меню <span class="menu">Файл | Експортувати як…</span> відкриває знайому файлову панель збереження зі списком форматів файлу у нижній частині панелі, який пропонує такі варіанти:</p>
 <table summary="file formats" border="0" cellspacing="0" cellpadding="2">
-<tr><td>HVIF</td><td style="width:15px;"></td><td>Haiku Vector Icon Format</td></tr>
-<tr><td>HVIF RDef</td><td></td><td>Saves as resource used by programmers</td></tr>
-<tr><td>HVIF source code</td><td></td><td>Saves as source code used by programmers</td></tr>
-<tr><td>SVG</td><td></td><td>Saves as SVG</td></tr>
-<tr><td>PNG</td><td></td><td>Saves as a 64px sized PNG</td></tr>
-<tr><td>PNG set</td><td></td><td>Saves as 16, 32 and 64px sized PNGs</td></tr>
-<tr><td>BEOS:ICON attribute</td><td></td><td>Choose a file and set its icon attribute directly</td></tr>
-<tr><td>META:ICON attribute</td><td></td><td>Choose a file and attach the icon as mere meta data</td></tr>
+<tr><td>HVIF</td><td style="width:15px;"></td><td>Формат векторного значка Haiku</td></tr>
+<tr><td>HVIF RDef</td><td></td><td>Зберегти як ресурс, який використовується програмістами</td></tr>
+<tr><td>Вихідний код HVIF</td><td></td><td>Зберегти як вихідний код, який використовується програмістами</td></tr>
+<tr><td>SVG</td><td></td><td>Зберегти у форматі SVG</td></tr>
+<tr><td>PNG</td><td></td><td>Зберегти у форматі PNG розміром 64px</td></tr>
+<tr><td>Комплект PNG</td><td></td><td>Зберегти у форматі PNG як набір значків з розмірами 16, 32 та 64px</td></tr>
+<tr><td>BEOS:ICON attribute</td><td></td><td>Вибрати файл і встановити його атрибут значка безпосередньо</td></tr>
+<tr><td>META:ICON attribute</td><td></td><td>Вибрати файл і прикріпити значок як метадані</td></tr>
 </table>
 
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="i-o-m-tips" name="i-o-m-tips">Tips &amp; Tricks</a></h3>
-<p>A few things you should keep in mind when working with Icon-O-Matic and some general tips for its usage:</p>
+<a id="i-o-m-tips" name="i-o-m-tips">Поради та Рекомендації</a></h3>
+<p>Кілька речей, про які слід пам'ятати при роботі з Icon-O-Matic і деякі загальні поради щодо його використання:</p>
 <ul>
-<li><p>Read the <a href="https://www.haiku-os.org/development/icon-guidelines">Icon Guidelines</a> to learn about important characteristics of Haiku icons, e.g. perspective, shadows and the <a href="https://www.haiku-os.org/files/downloads/2007-03-20_haiku-color-palette.png">Haiku color palette</a>.</p></li>
-<li><p>You should always try to minimize your use of paths, those are the most expensive, file size wise. Re-use paths wherever possible and work with manipulated shapes and their transformers instead. Smart use of gradients can also save space.</p></li>
-<li><p>Wherever possible, you should activate Snap-to-Grid from the <span class="menu">Options</span> menu when editing paths. Path points that align with the 64x64 pixel grid use less storage space. You'll also get the crispest look if points are set on exact pixel borders. For example, it is important to align the most prominent outlines with the 16x16 grid.</p></li>
-<li><p>Check the preview to see if your icon still looks good in 16x16. You may want to use the <a href="#i-o-m-shape-lod">Level Of Detail</a> settings described in the Shapes section.</p></li>
-<li><p>There's an easy way to produce letters, even if Icon-O-Matic doesn't provide such a tool. Just enter the text in a text editor such as StyledEdit, adjust font type and style, and drag &amp; drop or copy &amp; paste the selected text into Icon-O-Matic. This will create the according paths and shapes.</p></li>
-<li><p>If you assign more than one path to a shape, their overlapping areas will cancel each other out. When one path is completely inside another, it practically creates a hole in the resulting shape.</p></li>
-<li><p>You can zoom in and out of the canvas with the mouse wheel. Panning is done either by click &amp; drag with the middle mouse button or with a normal left-click &amp; drag while holding <span class="key">SPACE</span>.</p></li>
+<li><p>Прочитайте <a href="https://www.haiku-os.org/development/icon-guidelines">Icon Guidelines</a>, щоб дізнатися про важливі характеристики значків Haiku, наприклад, перспективу, тіні та <a href="https://www.haiku-os.org/files/downloads/2007-03-20_haiku-color-palette.png">палітру кольорів Haiku</a>.</p></li>
+<li><p>Завжди намагайтеся мінімізувати використання контурів, оскільки вони є самими затратними з точки зору розміру файлу. Повторно використовуйте контури всюди, де це можливо, проводьте маніпуляції з формами та працюйте з їхніми трансформаторами. Розумне використання градієнтів також може заощадити місце.</p></li>
+<li><p>Під час редагування контурів, де це можливо, слід застосувати один з варіантів визначених у пункті <span class="menu">Припасувати до сітки</span> меню <span class="menu">Налаштування</span>. Точки контуру, які вирівнюються до сітки 64x64 пікселів, займають менше місця у пам'яті. Ви також отримаєте найчіткіший вигляд, якщо встановите точки на точних межах пікселів. Наприклад, важливо вирівняти найбільш помітні контури за сіткою 16x16.</p></li>
+<li><p>Переконайтеся у попередньому перегляді, що Ваш значок все ще добре виглядає у форматі 16x16. Можливо, Ви захочете скористатися настройкою <a href="#i-o-m-shape-lod">Рівень деталізації</a>, описаною у параграфі «Форма».</p></li>
+<li><p>Існує простий спосіб створення літер, навіть якщо Icon-O-Matic не надає такого інструменту. Просто введіть текст у текстовому редакторі, наприклад, StyledEdit, задайте тип і стиль шрифту та перетягніть або копіюйте вибраний текст до Icon-O-Matic. Це створить відповідні контури і форми.</p></li>
+<li><p>Якщо до форми прив'язати декілька контурів, їхні області перекриття нейтралізують одна одну. Коли один контур повністю знаходиться всередині іншого, він практично створює отвір у формі.</p></li>
+<li><p>Ви можете збільшувати або зменшувати масштаб полотна за допомогою коліщатка миші. Змінювання панорами виконується або кліком і перетягуванням середньою кнопкою миші, або звичайним кліком лівою кнопкою миші і перетягуванням з утриманням клавіші <span class="key">SPACE</span>.</p></li>
 </ul>
 
 

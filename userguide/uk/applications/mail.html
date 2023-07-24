@@ -62,7 +62,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Індекс</td></tr>
@@ -76,124 +75,125 @@
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
-<span class="path">~/config/settings/Mail/Menu Links/</span> - Objects put here appear in the mailbox' context menu<br />
-<span class="path">~/config/settings/Mail/signatures/</span> - Location to store signatures<br />
-<span class="path">~/config/settings/Mail/status/</span> - Location to store custom statuses</td></tr>
+<span class="path">~/config/settings/Mail/Menu Links/</span> – Розміщені тут об’єкти з’являються у контекстному меню поштової скриньки<br />
+<span class="path">~/config/settings/Mail/signatures/</span> – Місце для зберігання підписів.<br />
+<span class="path">~/config/settings/Mail/status/</span> – Місце для зберігання статусів, які визначив користувач.</td></tr>
 </table>
 <p><br /></p>
-<p>Mail is Haiku's default viewer and editor of emails. It has nothing to do with the actual fetching and sending of mails, which is done by the mail_daemon and can be configured via the <a href="../preferences/e-mail.html">E-mail</a> preferences.</p>
-<p>This page is a general overview of the application Mail. For more information how email in Haiku works, refer to the <a href="../workshop-email.html">Workshop on managing email</a>.</p>
+<p>Mail (Пошта) – це засіб перегляду та редактор електронних поштових повідомлень, який використовується системою Haiku за замовчуванням. Програма не має нічого спільного з власне отриманням та відправкою електронної пошти, які виконує mail_daemon, процес конфігурації якого описаний у розділі <a href="../preferences/e-mail.html">E‑mail (E‑пошта)</a>.</p>
+<p>Ця сторінка є загальним оглядом програми Пошта. Щоб дізнатися більше про те, як працює система електронної пошти Haiku, зверніться до розділу <a href="../workshop-email.html">Майстер-клас: Управління поштою
+</a>.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="reading" name="reading">Читання повідомлень</a></h2>
-<p>You double-click an email file to open it in Mail. The interface is quite simple:</p>
+<p>Двічі натисніть на файл поштового повідомлення, щоб відкрити його у програмі Пошта. Інтерфейс досить простий:</p>
 <img src="../images/apps-images/mail-read.png" alt="email-read.png" /> 
-<p>A menu and optional tool bar on top, with an area of the interesting attributes of a mail (to, from, subject, date) below that, and then the actual body of the mail. If the mail appears with strange characters or empty, try to change the <span class="menu">Encoding</span> in the <span class="menu">Message</span> menu.</p>
-<p>If there are files attached to an email, they are listed at the end of the message. A right-click on one opens a context menu to <span class="menu">Save attachment...</span> or <span class="menu">Open attachment</span>. You can also drag &amp; drop directly to the Desktop or another Tracker window.</p>
-<p>Most of the menu and tool bar items are pretty self-explaining, so we'll concentrate just on the highlights.</p>
+<p>Зверху знаходиться головне меню та додаткова панель інструментів, під ними – область з важливими атрибутами листа (від кого, кому, дата, тема) а далі – власне текст повідомлення. Якщо лист містить символи, які не можна прочитати або порожній, спробуйте змінити <span class="menu">Кодування</span> у меню <span class="menu">Повідомлення</span>.</p>
+<p>Якщо до листа прикріплені файли, вони перераховані в кінці повідомлення. Правий клік миші на одному з них відкриє контекстне меню з пунктами <span class="menu">Зберегти вкладення…</span> і <span class="menu">Відкрити вкладення</span>. Ви можете перетягнути файл на робочий стіл або в інше вікно Tracker.</p>
+<p>Більшість пунктів меню та панелі інструментів є досить зрозумілими, тому ми зосередимося лише на основних моментах.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Файл</h3>
-<p>При закритті вікна нового повідомлення, його статус, як правило, перемикається з «Нове (New)», до «Читати (Read)». Але ви можете встановити інші статуси шляхом вибору з підменю <span class="menu">Закрити та... (Close and...)</span>. Там Ви також знайдете опцію <span class="menu">Встановити до... (Set to...)</span> для створення свого власного статусу який буде збережено під <span class="path">~/config/settings/Mail/status/</span>.</p>
+<p>Коли Ви закриваєте вікно нового вхідного повідомлення, його статус зазвичай змінюється з «Нове» на «Прочитане». Але Ви можете встановити й інші статуси, вибравши статус у підменю <span class="menu">Закрити і…</span>. У цьому підменю Ви знайдете пункт <span class="menu">Встановити статус як…</span> для створення своїх власних статусів, які зберігаються в <span class="path">~/config/settings/Mail/status/</span>.</p>
 <h3>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Edit</h3>
-<p>Тут ви знайдете елемент для відкриття  <span class="menu">Налаштування... (Preferences...)</span> пошти (<a href="#preferences">дивись нижче</a>) Та ярлик для обслуговування Ваших <span class="menu">Облікових записів... (Accounts...)</span>, який відкриє панель налаштувань <a href="../preferences/e-mail.html">Пошти (E-mail)</a>.</p>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Редагувати</h3>
+<p>У цьому меню Ви знайдете пункт, який відкриває <span class="menu">Налаштування…</span> поштової програми (<a href="#preferences">дивіться нижче</a>) та пункт <span class="menu">Облікові записи…</span>, який відкриває панель налаштувань <a href="../preferences/e-mail.html">E-mail</a> для управління Вашими акаунтами.</p>
 <h3>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Перегляд</h3>
-<p>Вам дуже рідко знадобляться  ці два елементи, взагалі то:</p>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Режим перегляду</h3>
+<p>Ці два пункти знадобляться Вам дуже рідко, якщо взагалі знадобляться:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Показати заголовок (Show header)</span></td><td class="onelinetop"><span class="key">ALT</span> <span class="key">H</span></td><td style="width:10px;"></td><td>Показує повний заголовок листа, наприклад, в тому випадку, якщо вам потрібно відстежити шлях вашої пошти.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Показати чисте повідомлення (Show raw message)</span></td><td></td><td></td><td>Відображає пошту в сирому вигляді, тобто з усіма керуючими символами і без забарвлення в цитатах або URL, наприклад .</td></tr>
+<tr><td><span class="menu">Показати заголовок</span></td><td class="onelinetop"><span class="key">ALT</span> <span class="key">H</span></td><td style="width:10px;"></td><td>Показує повний заголовок листа, якщо Вам, наприклад, потрібно відстежити шлях поштового повідомлення.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Показати необроблене повідомлення</span></td><td></td><td></td><td>Відображає повідомлення у необробленому вигляді, тобто з усіма керуючими символами і, наприклад, без розфарбовування лапок або URL-адрес.</td></tr>
 </table>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Повідомлення</h3>
-<p>Різні варіанти відповіді на пошту, можливо потребуватимуть трохи пояснень.</p>
+<p>Різні варіанти відповіді на повідомлення можуть вимагати короткого пояснення.</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Відповісти (Reply)</span></td><td><span class="key">ALT</span> <span class="key">R</span></td><td style="width:10px;"></td><td>Стандартна відповідь серверу, який відправив вам пошту. Примітка: У разі списку розсилки пошти зазвичай відповідають списку розсилки, <i>а не </i> простій людині яка надіслала лист!</td></tr>
-<tr><td class="onelinetop"><span class="menu">Відповісти відправителю (Reply to sender)</span></td><td><span class="key">OPT</span> <span class="key">ALT</span> <span class="key">R</span></td><td></td><td>Тут навпаки, посилається безпосередньо тій і тільки тій особі, що зазначена у полі атрибута «Від (From)».</td></tr>
-<tr><td><span class="menu">Відповісти всім (Reply to all)</span></td><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">R</span></td><td></td><td>Відсилається відправнику та всім реціпієнтам оригінального листа.</td></tr>
+<tr><td><span class="menu">Відповісти</span></td><td><span class="key">ALT</span> <span class="key">R</span></td><td style="width:10px;"></td><td>Стандартна відповідь серверу, який надіслав Вам листа. ПРИМІТКА: У випадку з повідомленням через список розсилки, відповідь зазвичай надсилається списку розсилки, а <i>не</i> особі, яка написала повідомлення!</td></tr>
+<tr><td class="onelinetop"><span class="menu">Відповісти відправникові</span></td><td><span class="key">OPT</span> <span class="key">ALT</span> <span class="key">R</span></td><td></td><td>У цьому випадку, повідомлення надсилається безпосередньо і тільки особі, зазначеній в атрибуті «Від» (From).</td></tr>
+<tr><td><span class="menu">Відповісти всім</span></td><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">R</span></td><td></td><td>Відповідь ініціатору повідомлення та всім іншим одержувачам оригінального листа (з копіями).</td></tr>
 </table>
-<div class="box-info">Якщо ви відзначите пассаж в повідомленні, перш ніж відповісти на нього, тільки виділений текст буде котируватися в вашій відповіді. Хороший спосіб скоротити надмірне цитування, яке схвалює далеко не кожен ...</div>
-<p>Елементи <span class="menu">Переслати (Forward)</span>, <span class="menu">Відповісти повторно (Resend)</span> та <span class="menu">Копіювати до нового (Copy to new)</span> також є досить зрозумілі.</p>
-<p>Коли Ви відкриваєте лист за допомогою Tracker або у  вікні результатів запиту то зможете рухатись між <span class="menu">Попереднім повідомленням (Previous message)</span> та <span class="menu">Наступним повідомленням (Next message)</span> у списку.</p>
-<p>Пункт <span class="menu">Зберегти адресу (Save address)</span> колекціонує всі адреси з заголовків та тіла повідомленням у підменю. Вибір адреси відкриє додаток <a href="people.html">Персони (People)</a> для завершення та збереження контактної інформації.</p>
+<div class="box-info">Якщо виділити фрагмент листа перед тим, як відповісти на нього, у листі-відповіді буде процитовано лише виділений текст. Гарний спосіб скоротити надмірне вживання цитат, яке майже всі не схвалюють…</div>
+<p>Пункти меню <span class="menu">Переслати</span>, <span class="menu">Відіслати повторно</span> та <span class="menu">Копіювати до нового</span> знову ж таки не потребують пояснень.</p>
+<p>Коли Ви відкриваєте лист з вікна Tracker або з вікна результатів запиту, Ви зможете переходити від одного повідомлення до іншого використовуючи пункти меню <span class="menu">Попереднє повідомлення</span> і <span class="menu">Наступне повідомлення</span>.</p>
+<p>Пункт меню <span class="menu">Зберегти адресу</span> збирає всі адреси електронної пошти з заголовка і власне тексту листа у підменю. Вибравши у цьому підменю адресу, Ви відкриєте програму <a href="people.html">People (Контакти)</a>, щоб заповнити і зберегти контактну інформацію.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Запити</h3>
-<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all corresponding mails:</p>
+<p>Це меню містить запити, які показують усі листи, пов'язані з поточним відкритим листом. Вибираючи пункти <span class="menu">Той самий отримувач</span>, <span class="menu">Той самий відправник</span> або <span class="menu">Та сама тема</span>, Ви отримаєте запити, які покажуть усі відповідні листи:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="creating" name="creating">Creating new messages</a></h2>
-<p>A new email is created by invoking <span class="menu">New mail message</span> of the <span class="menu">File</span> menu or the corresponding icon from the tool bar of an open email. Or you just start the Mail application or choose <span class="menu">Create new message...</span> from the context menu of the mailbox icon in the Deskbar.</p>
+<a id="creating" name="creating">Створення нових повідомлень</a></h2>
+<p>Нове поштове повідомлення створюється за допомогою команди <span class="menu">Нове повідомлення</span> меню <span class="menu">Файл</span> або відповідного значка на панелі інструментів відкритого листа. Або просто запустіть програму Пошта або виберіть пункт <span class="menu">Створити нове повідомлення…</span> у контекстному меню значка поштової скриньки на панелі задач Deskbar.</p>
 <img src="../images/apps-images/mail-write.png" alt="email-write.png" /> 
-<p>The window is pretty similar to the one when reading mails. The menu and tool bar items are slightly different and the text boxes have to be filled with the recipient's email address, subject and so on, of course.</p>
-<p><span class="menu">Cc</span> is short for the anachronistic term "<i>carbon copy</i>" and results in copies of your mail being sent to the listed people. The difference to just listing a buch of addresses in the "To" field is, that you don't directly address the cc'ed people, thereby signaling that you probably don't expect an answer of them.<br />
-<span class="menu">Bcc</span> means "<i>blind carbon copy</i>" which does practically the same as "Cc", but hides the recipients from each other.</p>
-<p>You can enter several recipients by separating their addresses with a comma.
-<span class="menu">To</span>, <span class="menu">CC</span>, and <span class="menu">BCC</span> are pop-up menus. They contain all email addresses on your system found by a query for <a href="people.html">People</a> files. Their "Group" attribute will sort them in corresponding submenus.</p>
-<p>Again, we'll focus on the more interesting features in the menus.</p>
+<p>Вікно дуже схоже на те, що Ви бачите при читанні пошти. Пункти меню та елементи панелі інструментів дещо відрізняються, а текстові поля потрібно заповнити адресою електронної пошти одержувача, темою листа тощо.</p>
+<p><span class="menu">Cc</span> – це скорочення від анахронічного терміну «<i>carbon copy</i>», що означає, що копії Вашого листа будуть надіслані переліченим особам. Відмінність від простого переліку адрес у полі «Кому» полягає у тому, що Ви не звертаєтеся безпосередньо до людей, яким надсилаєте копії, тим самим сигналізуючи, що Ви, ймовірно, не очікуєте від них відповіді.<br />
+<span class="menu">Bcc</span> означає «<i>blind carbon copy</i>» , це практично те саме, що й «Cc», тільки одержувачі не бачать адреси один одного.</p>
+<p>Ви можете ввести кілька одержувачів, розділяючи їхні адреси комою.
+<span class="menu">Кому</span>, <span class="menu">CC</span> і <span class="menu">BCC</span> – це списки, які розкриваються. Вони містять усі адреси електронної пошти у Вашій системі, знайдені за запитом до файлів <a href="people.html">Контакти</a>. Атрибут «Group» контактів сортує їх у відповідних підменю.</p>
+<p>Знову ж таки, ми зосередимося на найцікавіших функціях меню.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Файл</h3>
-<p>With <span class="menu">Save as draft</span> you can store your work so far and come back to it later. To load it again, choose it from the <span class="menu">Open draft</span> submenu that will list the result of a query for all mails with the status "Draft".</p>
+<p>За допомогою пункту меню <span class="menu">Зберегти як чернетку</span> Ви можете зберегти свою роботу на деякий час і повернутися до неї пізніше. Щоб завантажити розпочатий лист знову, виберіть його у підменю <span class="menu">Відкрити чернетки</span>, у якому буде показано результат запиту для усіх листів зі статусом «Чернетка».</p>
 <h3>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Edit</h3>
-<p><span class="menu">Increase</span> and <span class="menu">Decrease quote level</span> or their respective shortcuts <span class="key">ALT</span> <span class="key"> </span> / <span class="key">-</span> are used to add/remove a level of quoting by adjusting the number of "&gt;" symbols in front of quoted lines. Just select some text in all the lines you want un/quoted and invoke the menu item.</p>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Редагувати</h3>
+<p>Пункти меню <span class="menu">Додати префікс цитати</span> і <span class="menu">Прибрати префікс цитати</span> або їхні відповідні комбінації клавіш <span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span> використовуються для додавання/зняття рівня цитати шляхом зміни кількості символів «&gt;» перед цитатою. Просто виділіть текст у рядках, які Ви хочете зробити цитатою або відмінити цитату і виберіть цей пункт меню.</p>
 
 <img src="../images/apps-images/mail-spellcheck.png" alt="email-spellcheck.png" /> 
 
-<p><span class="menu">Check spelling</span> currently only offers corrections of English texts by marking wrong or unknown words red and showing them in italic.
-Right-clicking such a word opens a context menu offering suggestions to correct the word or to <span class="menu">Add</span> it to the accepted vocabulary.</p>
-<p>Then, there are again the items to open Mail's <span class="menu">Preferences...</span> (<a href="#preferences">see below</a>) and a shortcut to managing your <span class="menu">Accounts...</span>, which will open the <a href="../preferences/e-mail.html">E-mail</a> preference panel.</p>
+<p>Пункт <span class="menu">Перевіряти орфографію</span> наразі пропонує лише виправлення англійських текстів, позначаючи неправильні або невідомі слова червоним кольором.
+Правий клік миші на такому слові відкриває контекстне меню з пропозиціями виправити слово або замінити його.</p>
+<p>Далі знову є пункт, який відкриває <span class="menu">Налаштування…</span> поштової програми (<a href="#preferences">дивіться нижче</a>) і пункт <span class="menu">Облікові записи…</span>, який відкриває панель налаштувань <a href="../preferences/e-mail.html">E-mail</a> для управління Вашими акаунтами.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Повідомлення</h3>
-<p>With <span class="menu">Add signature</span> you can add predefined texts to the end of your mail. From its submenu you can choose a specific or <span class="menu">Random</span> one.</p>
+<p>За допомогою пункту меню <span class="menu">Додати підпис</span> Ви можете додавати заздалегідь визначені тексти в кінець повідомлення. У підменю Ви можете вибрати певний текст або <span class="menu">Випадковий</span>.</p>
 
 <img src="../images/apps-images/mail-signature.png" alt="email-signature.png" /> 
 
-<p>You create new or edit existing signatures with <span class="menu">Edit signatures...</span>, which will open a window where you enter the text itself and the title of your new sig. There, in the <span class="menu">Signature</span> menu, you find items to <span class="menu">Open</span> a specific signature or <span class="menu">Save</span> or <span class="menu">Delete</span> the currently loaded one, Signatures should be saved in <span class="path">~/config/settings/Mail/signatures</span>.</p>
-<p>Use <span class="menu">Add enclosure...</span> and <span class="menu">Remove enclosure</span> to add/remove files as attachments. You can also drag &amp; drop files from a Tracker window. Be careful though to drop those in the header section (To/From/Subject area at the top) or they'll get pasted into the email body if they are text files.</p>
+<p>Ви створюєте нові або редагуєте існуючі підписи за допомогою пункту меню <span class="menu">Редагувати підписи…</span>, який відкриває вікно де Ви вводите сам текст і заголовок Вашого нового підпису. У цьому вікні, у меню <span class="menu">Підпис</span> Ви знайдете пункти <span class="menu">Відкрити</span> певний підпис або <span class="menu">Зберегти</span> чи <span class="menu">Видалити</span> поточний підпис. Підписи слід зберігати в <span class="path">~/config/settings/Mail/signatures</span>.</p>
+<p>Використовуйте пункти меню <span class="menu">Додати вкладення…</span> і <span class="menu">Прибрати вкладення</span>, щоб додати/вилучити файли як вкладення. Ви можете перетягувати файли з вікна Tracker. Проте будьте обережні, щоб не скинути їх у секцію заголовка (Від/Кому/Тема – область у верхній частині вікна програми), інакше вони будуть вставлені у текст електронного листа, якщо це текстові файли.</p>
 
 <img src="../images/apps-images/mail-attachments.png" alt="email-attachments.png" /> 
 
-<p>File attachments are listed below the header section. You can remove a file by invoking a context menu or by selecting it and pressing <span class="key">DEL</span>.</p>
+<p>Список вкладених файлів розміщається у нижній частині вікна програми. Ви можете видалити файл, відкривши контекстне меню або виділивши його і натиснувши клавішу <span class="key">DEL</span>.</p>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Запити</h3>
-<p>This doesn't work yet, but is intended to hold queries that would show all mail related to the currently open mail, like all to the same recipient or same subject/thread.</p>
+<p>Ця функція поки що не працює, але вона призначена для запитів, які показуватимуть усі листи, пов'язані з поточним відкритим листом, наприклад, одному і тому ж одержувачу або з однаковою темою (subject/thread).</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="preferences" name="preferences">Preferences</a></h2>
+<a id="preferences" name="preferences">Налаштування</a></h2>
 <img src="../images/apps-images/mail-preferences.png" alt="email-preferences.png" /> 
-<p>Mail's preferences come in two parts:</p>
+<p>Налаштування пошти складаються з двох частин:</p>
 <h3>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>User interface</h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Інтерфейс користувача</h3>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Button bar</span></td><td style="width:10px;"></td><td>Options to show labels under the icons or hide the tool bar completely.</td></tr>
-<tr><td><span class="menu">Font</span></td><td></td><td>Sets the type of font used for the email text.</td></tr>
-<tr><td><span class="menu">Size</span></td><td></td><td>Sets the font size.</td></tr>
-<tr><td><span class="menu">Colored quotes</span></td><td></td><td>Colors different levels of quotation.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Initial spell check mode</span></td><td></td><td>Turns the spell checker on/off on startup.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Automatically mark mail as read</span></td><td></td><td>If you close an email with the Status "New", you can have it automatically marked as "Read".</td></tr>
+<tr><td><span class="menu">Панель кнопок</span></td><td style="width:10px;"></td><td>Параметри відображення надписів під значками або повного приховування панелі інструментів.</td></tr>
+<tr><td><span class="menu">Шрифт</span></td><td></td><td>Встановлює тип шрифту для тексту у листах електронної пошти.</td></tr>
+<tr><td><span class="menu">Розмір шрифту</span></td><td></td><td>Встановлює розмір шрифту.</td></tr>
+<tr><td><span class="menu">Забарвлення цитат</span></td><td></td><td>Забарвлює різні рівні цитат.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Перевірка орфографії</span></td><td></td><td>Вмикає/вимикає перевірку орфографії під час запуску.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Автоматично помітити як прочитане</span></td><td></td><td>Якщо Ви закриєте електронний лист зі статусом «New», Ви можете автоматично позначити його як «Read».</td></tr>
 </table>
 
 <h3>
-<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Mailing</h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Поштові відправлення</h3>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Default account</span></td><td style="width:10px;"></td><td>If you have several email accounts, this specifies which to use by default when creating a new message.</td></tr>
-<tr><td><span class="menu">Reply account</span></td><td></td><td>When you reply to a mail, you can either always <span class="menu">Use default account</span> set in the pop-up menu above, or use the <span class="menu">Account from mail</span>, which will send the mail from the same account that received the original message.</td></tr>
-<tr><td><span class="menu">Reply preamble</span></td><td></td><td>This is inserted before the quoted text in your reply. You can use various variables from the pop-up menu next to the text field. Example: "<i>Hello %n!\n\nOn %d you wrote:\n</i>" produces this:
+<tr><td><span class="menu">Обліковий запис за замовчуванням</span></td><td style="width:10px;"></td><td>Якщо у Вас є декілька облікових записів електронної пошти, тут вказується, який з них буде використовуватися за замовчуванням при створенні нового поштового повідомлення.</td></tr>
+<tr><td><span class="menu">Обліковий запис для відповіді</span></td><td></td><td>Коли Ви відповідаєте на лист, Ви можете вибрати параметр <span class="menu">Використати запис за замовчуванням</span>, встановлений у списку вище, або використати <span class="menu">Обліковий запис з листа</span>, тоді лист буде надіслано з того самого облікового запису, з якого надійшло оригінальне повідомлення.</td></tr>
+<tr><td><span class="menu">Вступ відповіді</span></td><td></td><td>Цей текст вставляється перед процитованим текстом у Вашій відповіді. Ви можете використовувати різні змінні зі списку поруч з текстовим полем. Приклад: «<i>Hello %n!\n\nOn %d you wrote:\n</i>» буде мати вигляд:
 <pre>Hello Dr. Hawking!
 
 On Mon, 18 Jan 1998 02:55:16 +0800 you wrote:
 &gt; so thanks again for the inspiration concerning the cosmological constant.
 &gt; ...and the rest of the quoted text following...</pre></td></tr>
-<tr><td><span class="menu">Auto signature</span></td><td></td><td>Adds a signature automatically to the end of the mail.</td></tr>
-<tr><td><span class="menu">Encoding</span></td><td></td><td>Sets the default encoding.</td></tr>
-<tr><td class="onelinetop"><span class="menu">Warn unencodable</span></td><td></td><td>If your mail contains characters that can't be encoded with the currently set encoding method, you can turn on being warned about that. That gives you the opportunity to change the encoding before sending. Otherwise unencodable characters are replaced by rectangle symbols.</td></tr>
-<tr><td><span class="menu">Text wrapping</span></td><td></td><td>Inserts line-breaks every 76 characters which makes mails easier to read.</td></tr>
-<tr><td><span class="menu">Attach attributes</span></td><td></td><td>You can choose to send BFS' attributes of a file alongside the attachments. This is nice for other Haiku users, as they'll get a "complete" file (think artist, album, title attributes of MP3 files), but may cause confusion (or even suspicion) with others, who will wonder what the additional "BeOS Attributes" attachment might be...<br />
-Should you opt not to send attributes with your attachments, remember zip up your files before you send them or you'll strip away BFS attributes.</td></tr>
+<tr><td><span class="menu">Автопідпис</span></td><td></td><td>Автоматично додає підпис у кінець листа.</td></tr>
+<tr><td><span class="menu">Кодування</span></td><td></td><td>Встановлює кодування за замовчуванням.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Інфо про  символи без кодування</span></td><td></td><td>Якщо Ваш лист містить символи, які не можуть бути закодовані за допомогою встановленого методу кодування, Ви можете увімкнути попередження про це. Це дасть Вам можливість змінити кодування перед відправленням. Інакше, символи без кодування будуть замінені символами заміщення (прямокутниками).</td></tr>
+<tr><td><span class="menu">Перенос тексту</span></td><td></td><td>Вставляє переноси рядка через кожні 76 символів, що полегшує читання листів.</td></tr>
+<tr><td><span class="menu">Додати атрибути</span></td><td></td><td>Ви можете надіслати BFS атрибути файлу разом із вкладеннями. Це добре для інших користувачів Haiku, оскільки вони отримають «повний» файл (згадайте про атрибути виконавця, альбому, назви MP3-файлів) але може збити з пантелику (або навіть викликати підозру) інших користувачів, які будуть дивуватися, що це за додаткові вкладення «BeOS Attributes»…<br />
+Якщо Ви вирішуєте не надсилати атрибути разом із вкладеннями, не забудьте зробити архіви файлів перед надсиланням, інакше Ви видалите атрибути BFS.</td></tr>
 </table>
 
 </div>

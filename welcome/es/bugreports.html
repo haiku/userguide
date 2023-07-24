@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Índice</td></tr>
@@ -142,16 +143,16 @@ Tome nota que en el KDL su teclado podría dejar de funcionar. Los teclados PS/2
 <a id="syslog" name="syslog">Registro de Eventos de Sistema</a></h3>
 <p><b>Este es el método predilecto para extraer información de un sistema que no arranca.</b><br />
 El Registro de Eventos de Sistema (o syslog, por su nombre corto en inglés) contiene información valiosa sobre lo que ha sucedido con su sistema, incluyendo la salida de las sesiones KDL. Normalmente es buena idea adjuntarlo al ticket de Trac relacionado con el núcleo. El syslog es escrito al archivo <span class="path">/boot/system/var/log/syslog</span>. Debido a que escribir a un archivo requiere un sistema funcional, la salida más reciente puede no haber logrado llegar al syslog cuando ocurre un problema en el núcleo (particularmente en reinicios espontáneos o sesiones KDL incontinuables).</p>
-<p>La opción <span class="menu">Activar syslog de depuración</span> (Enable debug syslog) en el <span class="menu">menú de Depuración</span> del cargador de arranque vuelve el syslog persistente. Si la opción <span class="menu">Guarde sus syslog de una sesión anterior durante el arranque</span> (Save syslog from previous session during boot) ha sido activada en las opciones del cargador de arranque (como lo está de forma predeterminada), encontrará el syslog de su última sesión en <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
-Si no puede arrancar para llegar al previous_syslog, tendrá que ingresar al menú del cargador de arranque manteniendo presionada la tecla <span class="key">Mayús</span> (SHIFT) mientras arranca.<br />
-En el <span class="menu">menú de Depuración</span> del cargador de arranque, debería encontrar las entradas <span class="menu">Mostrar syslog de sesión previa</span> (Display syslog from previous session) y <span class="menu">Guardar syslog de sesión previa</span> (Save syslog from previous session). La primera muestra el syslog en pantalla, y la segunda le permite guardarlo en un archivo en disco. Note que en este momento solamente se soportan volumenes FAT32 para guardar el archivo. Si quiere usar una unidad USB, pero la insertó muy tarde de manera que todavía no se ha reconocido, puede reinicar la máquina y reingresar en el menú de cargador de arranque. Nota: No arranque ningún sistema operativo accidentalmente o los datos se perderán.</p>
+<p>The option <span class="menu">Enable debug syslog</span> in the boot loader's <span class="menu">Debug menu</span> makes the syslog persistent. If the option <span class="menu">Save syslog from previous session during boot</span> is activated in the boot loader options (as it is by default), you'll find the syslog of your last session as <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
+If you're not able to boot to get to the previous_syslog, you have to enter the boot loader menu by holding down <span class="key">SHIFT</span> (or <span class="key">SPACE</span> when booting via UEFI) while booting.<br />
+In the boot loader's <span class="menu">Debug menu</span> you should find the entries <span class="menu">Display syslog from previous session</span> and <span class="menu">Save syslog from previous session</span>. The former displays the syslog on screen, the latter allows you to save it as a file to disk. Note that at the moment only FAT32 volumes are supported for saving the file. If you want to use a USB stick, but have plugged it in too late so that it isn't recognized yet, you can reset the machine and re-enter the boot loader menu. Note: Don't accidentally boot any operating system or the data will be lost.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">Salida de depuración en pantalla</a></h3>
-<p><b>La salida de depuración en pantalla es útil solamente para depurar problemas muy específicos y es conocido que tiene problemas de tiempos. No lo use, si no debe hacerlo.</b><br />
-Esto sólo es relevante cuando Haiku no arranca en su máquina y la opción de <span class="menu">Depuración de syslog</span> (Debug syslog) no funciona por alguna razón. Antes que aparezca el logo de arranque de Haiku, mantenga presionada la tecla <span class="key">Mayús</span> (SHIFT) para entrar en el menú del cargador de arranque. Seleccione <span class="menu">Seleccionar opciones de arranque en modo seguro</span> (Select safe mode options). Cerca de la parte inferior, aparecerá en la lista <span class="menu">[ ] Activar salida de depuración a pantalla</span> (Enable on screen debug output). (Nota: Las otras opciones podrían ser activadas en un intento de lograr que Haiku pueda arrancar. Si Haiku solo arranca cuando una o más opciones están activadas, asegúrese de mencionar cuales son.)<br />
-Finalmente seleccione <span class="menu">Regresar a menú principal</span> (Return to main menu) y luego <span class="menu">Continuar con el arranque</span> (Continue booting).<br />
-Una o más páginas de texto se mostrarán en la pantalla, solamente las últimas líneas deben incluirse en su ticket. Hay más información en el <a href="../../userguide/es/bootloader.html">Cargador de arranque</a>.</p>
+<p><b>The on-screen debug output is useful only for debugging very specific issues and is known to have (timing) issues. Don't use it, if you don't have to.</b><br />
+This is only relevant when Haiku fails to boot on your machine and the <span class="menu">Debug syslog</span> option doesn't work for some reason. Before the Haiku boot logo appears, hold <span class="key">SHIFT</span> (or <span class="key">SPACE</span> when booting via UEFI) to enter the boot loader menu. Select <span class="menu">Select debug options</span>. Near the bottom, <span class="menu">Enable on screen debug output</span> will be listed. (Note: The other options could be enabled in an attempt to boot Haiku. If Haiku will boot only when one or more options are activated, be sure to mention which ones.)<br />
+Finally select <span class="menu">Return to main menu</span> and then <span class="menu">Continue booting</span>.<br />
+One or more pages of text will display on the screen, only the last few lines need to be included on your ticket. There's more information on the <a href="../../userguide/es/bootloader.html">Boot Loader</a>.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="hardware" name="hardware">Fallos de hardware/controladores</a></h2>
@@ -164,7 +165,7 @@ Una o más páginas de texto se mostrarán en la pantalla, solamente las última
 <tr><td class="onelinetop">- <span class="cli">listimage | grep drivers/</span></td><td> </td><td>muestra una lista de todos los controladores utilizados.</td></tr>
 <tr><td>- <span class="cli">usb_hid_report</span></td><td> </td><td>En caso de dispositivos de entrada USB, agregue el archivo <span class="cli">/tmp/usb_hid_report_descriptor_*.bin</span>.</td></tr>
 <tr><td>- <span class="cli">ints</span></td><td> </td><td>sólo disponible en la <i>Zona de depuración del núcleo (kernel)</i> (vea abajo). Muestra el uso de interruptores. No deberían haber muchos que esten compartidos por diferentes dispositivos.</td></tr>
-<tr><td colspan="3">Salida de depuración a pantalla (una opción de modo a prueba de fallas en el momento de arranque, vea <a href="#onscreen">arriba</a>)</td></tr>
+<tr><td colspan="3">- On screen debug output (a debug boot time option, see <a href="#onscreen">above</a>).</td></tr>
 </table>
 
 <p>Las primeras cuatro ordenes se pueden ingresar en la Terminal. Agregue un <span class="cli"> &gt; output.txt</span> tras una orden, y será canalizada a un archivo de texto llamado "output.txt" que puede adjuntar al reporte de fallos o correo electrónico.</p>

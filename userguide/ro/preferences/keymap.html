@@ -71,7 +71,7 @@
 <p><br /></p>
 <img src="../images/prefs-images/keymap.png" alt="keymap.png" />
 <p>To the right, the Keymap window shows a representation of your keyboard. When you press a key, the corresponding key is darkened and the assigned symbol is entered into the <i>Sample and Clipboard</i> text field at the bottom. From there you can also copy and paste it into a document.<br />
-Thus, the Keymap preferences are not only for configuring your local keymap, but are also useful when looking for a special symbol used in other languages. For example, you can switch the keymap to "French", find the "ç" and copy it into your mail to François. (Though you'll find the "cedil" also in other keymaps...)</p>
+Thus, the Keymap preferences are not only for configuring your local keymap, but are also useful when looking for a special symbol used in other languages. For example, you can switch the keymap to "French", find the "ç" and copy it into your mail to François. (Though you'll find the "cedil" also in other keymaps…)</p>
 <p>Pressing modifier keys like <span class="key">SHIFT</span>, <span class="key">CONTROL</span> or <span class="key">OPTION</span> changes the displayed keyboard accordingly.</p>
 <p>Then there are the keys that are marked with a blue background. These keys are called <i>Dead Keys</i> that can change the key you press after that. If you click on such a blue key with your mouse, those changeable keys light up yellow. Click again and everything's back to normal. Examples are é, ñ, ó or ë.</p>
 <p>Mai jos de reprezentarea tastaturii există încă două opțiuni:</p>
@@ -84,11 +84,11 @@ Thus, the Keymap preferences are not only for configuring your local keymap, but
 <br />
 By right-clicking a normal key, the context menu offers to <span class="menu">Remove</span> its mapping. Modifier keys can have alternative mappings, like using <span class="key">CAPS LOCK</span> as <span class="key">CTRL</span> key:</p>
 <img src="../images/prefs-images/keymap-context.png" alt="keymap-context.png" />
-<p>Alternatively to this or drag &amp; dropping of keys, there's the menu <span class="menu">File | Set modifier keys...</span> that opens this window:</p>
+<p>Alternatively to this or drag &amp; dropping of keys, there's the menu <span class="menu">File | Set modifier keys…</span> that opens this window:</p>
 <img src="../images/prefs-images/keymap-modifiers.png" alt="keymap-modifiers.png" />
 <p>Here, you can assign keys to their respective roles or even completely disable the role of a key. You can even assign the same key to different roles, though that's not a good idea most of the time and you'll be warned by a small exclamation mark beside the pop-up menus if you do that.<br />
 Pressing <span class="button">Set modifier keys</span> applies your changes and closes the window.</p>
-<p>When you're done you can save the result from the menu <span class="menu">File | Save...</span>. Your modified map will only appear in the user-defined list if it's stored in <span class="path">~/config/settings/Keymap/</span>. Otherwise you'll have to manually load it via <span class="menu">File | Open...</span>.</p>
+<p>When you're done you can save the result from the menu <span class="menu">File | Save…</span>. Your modified map will only appear in the user-defined list if it's stored in <span class="path">~/config/settings/Keymap/</span>. Otherwise you'll have to manually load it via <span class="menu">File | Open…</span></p>
 <p>To better match the Keymap panel to your physical keyboard, there are several different settings available from the <span class="menu">Layout</span> menu.</p>
 <p>The font used in the keyboard representation is set from the <span class="menu">Font</span> menu. Note, that it may or may not contain all symbols for a specific keymap.</p>
 <p>Finally, there's a <span class="button">Revert</span> button to bring back the settings that were active when you started the Keymap preferences.</p>
@@ -100,7 +100,7 @@ Pressing <span class="button">Set modifier keys</span> applies your changes and 
 <p>There's another method to customize your keymap besides the Keymap preference panel. It involves editing a text file containing loads of hex values, which may appear daunting on first sight, but isn't really that impossible to grasp.</p>
 <p>Puteți transfera harta de taste curentă cu o comandă în Terminal:</p>
 <pre class="terminal">keymap -d &gt; MyKeymap</pre>
-<p>The generated text file can then be opened in a text editor. Make sure to use a fixed font in that editor or you'll never grok that file...<br />
+<p>The generated text file can then be opened in a text editor. Make sure to use a fixed font in that editor or you'll never grok that file…<br />
 At the beginning of that file, you'll find a legend of a stylized keyboard with the hex value corresponding to each key. Below that are the actual assignments of every value. You can do all the customizing that's also available from the Keymap preference panel, and then some. If you happen to have some special keys on your keyboard, you may be able to activate them. That is, use them as ordinary keys or like an option or control key. You won't be able to, for example, have your multimedia keys de/increase the volume or start some application. For this you can use the <a href="shortcuts.html">Shortcuts</a> preferences.</p>
 <p>Când ați terminat veți salva fișierul și spuneți sistemului să încarce harta de taste modificată cu această comandă:</p>
 <pre class="terminal">keymap -s &lt; MyKeymap</pre>

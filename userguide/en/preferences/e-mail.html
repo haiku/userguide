@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -91,8 +91,7 @@ You start by clicking the <span class="button">Add</span> button to create a new
 <p>Now you enter your <i>E-mail address</i>, <i>Login name</i> and <i>Password</i>, give an <i>Account name</i> under which it will be known under Haiku and your <i>Real name</i>.</p>
 <p>If your account is from a major e-mail provider, Haiku already knows all technical details like server IP addresses. If that is not the case, clicking <span class="button">Next</span> will open another window to enter this information by hand:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>You first set the <i>Server name</i>, <i>Login type</i> and <i>Connection type</i> for the incoming mail, below that for the outgoing mail. You should find the necessary information on your email provider's website.<br />
-See below for more info about the various settings and additional options.</p>
+<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -108,7 +107,7 @@ See below for more info about the various settings and additional options.</p>
 <p>Click on <span class="menu">Incoming</span> under your account's name to set up how e-mails are received.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>First is the <span class="menu">Mail server</span> address for incoming mails. If your provider needs you to log into a specific port, you add that to the address, separated by a colon. For example, <tt>pop.your-provider.org:1400</tt>.</p>
-<p>Then you enter your login information, <i>Login name</i> and <i>Password</i>, and if necessary change the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
+<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
 <p>If you use <i>POP3</i> and retrieve mails of this account from different computers, you may want to activate the option to <span class="menu">Leave mail on server</span> and only <span class="menu">Remove mail from server when deleted</span> locally.</p>
 <p>If you use <i>IMAP</i> instead, you have the option to <span class="menu">Remove mail from server when deleted</span> locally. You can specify <span class="menu">IMAP folders</span> to only synchronize with a specific folder and its subfolders.</p>
 <p>Also, you can opt to only <span class="menu">Partially download messages larger than</span> a certain size. This will only get the header and you can decide if you want to download the rest of the message plus possible attachments after seeing the subject and who sent it. Useful if you have a slow connection.</p>
@@ -120,7 +119,7 @@ See below for more info about the various settings and additional options.</p>
 <a id="outgoing" name="outgoing">More on setting up outgoing e-mail</a></h2>
 <p>Click on <span class="menu">Outgoing</span> under your account's name to set up how e-mails are sent.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt>.</p>
+<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
 <p>If you need to login, you change the <i>Login Type</i> to <span class="menu">ESMTP</span> and enter username and password above. The other type is used for providers that need you to check for mail with <span class="menu">POP3 before SMTP</span> for identification.</p>
 <p>As with incoming mail, you can also change the <i>Destination</i> of your outbox (default: <span class="path">/boot/home/mail/out/</span>).</p>
 
@@ -207,15 +206,13 @@ Outgoing Mail Filters</h3>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="settings" name="settings">Setting up the Mail Service</a></h2>
-<p>Now that your incoming and outgoing mail servers (and maybe some filters, too), are configured, you have to tell the Mail Service that does all the actual checking and fetching how to do its job.</p>
+<p>Now that your incoming and outgoing mail servers (and maybe some filters, too), are configured,  the Mail Service that does all the actual checking and fetching needs to know how to do its job.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>Under <i>Mail checking</i> you configure the interval at which the account's mail server is probed for new mail.<br />
-If you're on a dial-up connection, you may want to do that <span class="menu">Only when dial-up is connected</span> and also <span class="menu">Schedule outgoing mail when dial-up is disconnected</span> to avoid dialing automatically in regularly only to check for mail.</p>
-<p>The Mail Service has a status window which you can set to show up <span class="menu">Never</span>, <span class="menu">While sending</span>, <span class="menu">While sending and receiving</span> or <span class="menu">Always</span>.</p>
-<p>Make sure to <span class="menu">Start mail services on startup</span> or there will be no mail_daemon running to do your bidding...</p>
+<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
+<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
+<p><span class="menu">Edit mailbox menu…</span> will open the folder <span class="path">/boot/home/config/Mail/Menu Links/</span>. All folders or queries (!) or their links put into this folder will appear in the context menu of the mailbox icon of the Mail Services in the Deskbar tray.</p>
+<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
 <img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
-<p><span class="menu">Edit mailbox menu...</span> will open the folder <span class="path">/boot/home/config/Mail/Menu Links/</span>. All folders or queries (!) or their links put into this folder will appear in the context menu of the mailbox icon of the Mail Services in the Deskbar tray.</p>
-<p>From that menu, you can also <span class="menu">Create new message...</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Preferences...</span>.</p>
 <p>If you hold down <span class="key">SHIFT</span> when invoking the context menu, you'll get additional commands:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">Check for mails only</span></td><td style="width:5px;"> </td>

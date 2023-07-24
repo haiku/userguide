@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Terjemahan halaman ini belum lengkap. Sampai saat itu, bagian yang belum selesai menggunakan aslinya bahasa Inggris.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Indeks</td></tr>
@@ -93,9 +94,7 @@ Anda mulai dengan mengklik tombol untuk membuat akun baru tanpa nama. Ini <span 
 <p>Sekarang Anda memasukkan  <i>alamat email</i> Anda, <i>nama login</i> dan <i>kata sandi</i>, berikan <i>nama akun</i> yang akan dikenal di bawah Haiku dan <i>nama asli</i> Anda.</p>
 <p>Jika akun Anda berasal dari penyedia email utama, Haiku sudah mengetahui semua detail teknis seperti alamat IP server. Jika itu tidak terjadi, mengklik <span class="button">Berikutnya</span> akan membuka jendela lain untuk memasukkan informasi ini manual:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>Anda pertama-tama mengatur <i>nama Server</i>, <i>jenis Login</i> dan <i>jenis Koneksi</i> untuk surat masuk, di bawah itu untuk surat keluar. Anda harus menemukan informasi yang diperlukan di situs web penyedia email Anda.<br />
-Lihat di bawah untuk info lebih lanjut tentang berbagai pengaturan dan opsi tambahan.
-</p>
+<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -111,7 +110,7 @@ Lihat di bawah untuk info lebih lanjut tentang berbagai pengaturan dan opsi tamb
 <p>Klik <span class="menu">Incoming</span> dengan nama akun Anda untuk mengatur bagaimana email diterima.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>Pertama adalah alamat <span class="menu">server Mail</span> untuk email masuk. Jika penyedia Anda meminta Anda untuk masuk ke port tertentu, Anda menambahkannya ke alamat tersebut, dipisahkan dengan tanda titik dua. Misalnya, <tt>pop.your-provider.org:1400.</tt></p>
-<p>Kemudian Anda memasukkan informasi login Anda, <i>nama Login</i> dan <i>Kata Sandi</i>, dan jika perlu ubah <i>jenis Login</i> dari <span class="menu">text biasa</span> ke <span class="menu">APOP</span> untuk otentikasi.</p>
+<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
 <p>Jika Anda menggunakan <i>POP3</i> dan mengambil email dari akun ini dari komputer yang berbeda, Anda mungkin ingin mengaktifkan opsi untuk <span class="menu">Tinggalkan email di server</span> dan <span class="menu">hanya Hapus email dari server ketika dihapus</span> secara lokal.</p>
 <p>Jika Anda menggunakan <i>IMAP</i>sebagai gantinya, Anda memiliki opsi untuk <span class="menu">Menghapus email dari server ketika dihapus</span> secara lokal. Anda dapat menentukan <span class="menu">folder IMAP</span> untuk hanya menyinkronkan dengan folder tertentu dan subfoldernya.</p>
 <p>Selain itu, Anda dapat memilih untuk hanya <span class="menu">mengunduh sebagian pesan yang lebih besar dari ukuran tertentu</span>. Ini hanya akan mendapatkan tajuk dan Anda dapat memutuskan apakah Anda ingin mengunduh sisa pesan plus kemungkinan lampiran setelah melihat subjek dan siapa yang mengirimnya. Anda memiliki koneksi yang lambat.</p>
@@ -123,7 +122,7 @@ Lihat di bawah untuk info lebih lanjut tentang berbagai pengaturan dan opsi tamb
 <a id="outgoing" name="outgoing">Lebih lanjut tentang pengaturan e-mail keluar</a></h2>
 <p>Klik <span class="menu">Outgoing</span> dengan nama akun Anda untuk mengatur cara pengiriman email.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>Pertama adalah alamat <i>server SMTP</i> untuk surat keluar. Seperti dengan server masuk sebelumnya, Anda dapat menggunakan port tertentu jika diperlukan, mis. <tt>mail.your-provider.org:1200</tt>.</p>
+<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
 <p>Jika Anda perlu masuk, Anda mengubah <i>Jenis Login</i> menjadi <span class="menu">ESMTP</span>dan memasukkan nama pengguna dan kata sandi di atas. Jenis lainnya digunakan untuk penyedia yang perlu Anda periksa email dengan <span class="menu">POP3 sebelum SMTP</span> untuk identifikasi.</p>
 <p>Seperti halnya surat masuk, Anda juga dapat mengubah <i>Tujuan</i> kotak keluar Anda (default:<span class="path">/boot/home/mail/out/</span>).</p>
 
@@ -214,13 +213,11 @@ Itu akan melampirkan "kue keberuntungan" lucu atau bijaksana yang dipilih secara
 <a id="settings" name="settings">melakukan pengaturan Layanan imel</a></h2>
 <p>Sekarang setelah server surat masuk dan keluar Anda (dan mungkin beberapa filter juga) dikonfigurasikan, Anda harus memberi tahu Layanan Surat yang melakukan semua pemeriksaan aktual dan mengambil cara melakukan tugasnya.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>Di bawah <i>Pemeriksaan surat</i> Anda mengonfigurasi interval saat server surat akun diperiksa untuk surat baru.<br />
-Jika Anda menggunakan koneksi dial-up, Anda mungkin ingin melakukannya <span class="menu">Hanya ketika dial-up terhubung</span> dan juga <span class="menu">Menjadwalkan surat keluar ketika dial-up terputus</span> untuk menghindari panggilan secara otomatis masuk secara teratur hanya untuk memeriksa surat.</p>
-<p>Layanan Mail memiliki jendela status yang dapat Anda atur untuk menampilkan <span class="menu">Takpernah</span>, <span class="menu">Saat mengirim</span>, <span class="menu">Saat mengirim dan menerima</span> atau<span class="menu">Selalu</span>.</p>
-<p>Pastikan untuk <span class="menu">Memulai layanan email saat startup</span> atau tidak akan ada mail_daemon yang berjalan untuk melakukan penawaran Anda...</p>
-<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
+<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
+<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
 <p><span class="menu">Edit menu kotak surat...</span> akan membuka folder <span class="path">/boot/home/config/Mail/Menu Links/</span>. Semua folder atau kueri (!) Atau tautannya yang dimasukkan ke folder ini akan muncul di menu konteks ikon kotak surat dari Layanan Mail di baki Deskbar.</p>
-<p>Dari menu itu, Anda juga dapat <span class="menu">Membuat pesan baru...</span>, <span class="menu">Periksa surat sekarang</span> atau edit <span class="menu">Preferensi ...</span>.</p>
+<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
+<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p>Jika Anda menahan <span class="key">SHIFT</span> saat menjalankan menu konteks, Anda akan mendapatkan perintah tambahan:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">Hanya periksa surat</span></td><td style="width:5px;"> </td>

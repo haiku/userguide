@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,17 +61,16 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Індекс</td></tr>
 <tr class="index"><td>
-	<a href="#creating">Creating a new e-mail account</a><br />
-	<a href="#account-settings">Account settings</a><br />
-	<a href="#incoming">Setting up incoming e-mail</a><br />
-	<a href="#outgoing">Setting up outgoing e-mail</a><br />
-	<a href="#filters">Notifications and e-mail filters</a><br />
-	<a href="#settings">Setting up the Mail Service</a>
+	<a href="#creating">Створення нового облікового запису</a><br />
+	<a href="#account-settings">Настройки облікового запису</a><br />
+	<a href="#incoming">Настройки вхідної пошти</a><br />
+	<a href="#outgoing">Настройки вихідної пошти</a><br />
+	<a href="#filters">Сповіщення та поштові фільтри</a><br />
+	<a href="#settings">Налаштування поштового сервісу</a>
 </td></tr>
 </table>
 
@@ -81,154 +80,153 @@
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/preferences/E-mail</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/Mail/*</span></td></tr>
 </table>
-<p>Haiku provides a system that retrieves e-mail regularly via a Mail Service (also known as mail_daemon) and saves each mail as a single text file. It parses the mail and fills its attributes with all necessary header information, like from, to, subject and its unread status. Now it can be queried by you or any application. This system also makes switching e-mail clients easy as all the data and your configuration stays the same.<br />
-The configuration is done in the E-Mail preference panel.</p>
+<p>Поштова система Haiku регулярно отримує електронну пошту через поштовий сервіс (також відомий як mail_daemon) і зберігає кожне повідомлення у вигляді окремого текстового файлу. Вона аналізує лист і заповнює його атрибути всією необхідною для заголовка інформацією, такою як: від кого, до кого, тема і статус непрочитаного листа. Тепер Ви можете працювати з повідомленням самостійно або з будь-якої програми. Ця система також полегшує перехід на інший поштовий клієнт, оскільки усі дані та настройки залишаються незмінними.<br />
+Конфігурація системи задається на панелі налаштувань електронної пошти.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="creating" name="creating">Creating a new e-mail account</a></h2>
-<p>Let's go through the process of setting up an e-mail account.<br />
-You start by clicking the <span class="button">Add</span> button to create a new, unnamed account. This opens a panel where you fill in your account info:</p>
+<a id="creating" name="creating">Створення нового облікового запису Е-пошти</a></h2>
+<p>Давайте розглянемо процес створення облікового запису електронної пошти.<br />
+Ви починаєте з натискання кнопки <span class="button">Додати</span>, щоб створити новий акаунт без назви. Це відкриє панель, де Ви можете заповнити інформацію про свій обліковий запис:</p>
 <img src="../images/prefs-images/e-mail-new-account.png" alt="e-mail-new-account.png" />
-<p>First, you set how you get your mail, via <span class="menu">POP3</span> or <span class="menu">IMAP</span>.</p>
-<p>Now you enter your <i>E-mail address</i>, <i>Login name</i> and <i>Password</i>, give an <i>Account name</i> under which it will be known under Haiku and your <i>Real name</i>.</p>
-<p>If your account is from a major e-mail provider, Haiku already knows all technical details like server IP addresses. If that is not the case, clicking <span class="button">Next</span> will open another window to enter this information by hand:</p>
+<p>По-перше, Ви встановлюєте спосіб отримання пошти – через <span class="menu">POP3</span> або <span class="menu">IMAP</span>.</p>
+<p>Після цього Ви вводите <i>Адресу E-mail</i>, <i>Ім'я для авторизації</i> і <i>Пароль</i>, вказуєте <i>Назву акаунта</i> під якою акаунт буде зареєстрований у Haiku і своє <i>Справжнє Ім'я</i>.</p>
+<p>Якщо у Вас обліковий запис від популярного провайдера електронної пошти, Haiku вже знає усі технічні деталі, такі як IP-адреса сервера. Якщо це не так, при натисканні кнопки <span class="button">Далі</span>, відкриється інше вікно для введення цієї інформації вручну:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>You first set the <i>Server name</i>, <i>Login type</i> and <i>Connection type</i> for the incoming mail, below that for the outgoing mail. You should find the necessary information on your email provider's website.<br />
-See below for more info about the various settings and additional options.</p>
+<div class="box-info">Якщо Ви використовуєте GMail як поштовий сервіс, Вам доведеться створити спеціальний пароль програми.<br />
+Дивіться сторінку підтримки Google, щоб дізнатися, <a href="https://support.google.com/mail/answer/185833">як увійти за допомогою паролів програм</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="account-settings" name="account-settings">Account settings</a></h2>
-<p>By selecting the name of an account in the left list, you can change some general settings:</p>
+<a id="account-settings" name="account-settings">Настройки облікового запису</a></h2>
+<p>Вибравши назву облікового запису у списку в лівій частині вікна, Ви можете змінити деякі загальні настройки цього запису:</p>
 <img src="../images/prefs-images/e-mail-accounts.png" alt="e-mail-accounts.png" />
-<p>The <i>Account name</i> is the name that's shown for example in the list of accounts in the E-mail preferences. <i>Real name</i> is the name someone sees when she gets mail from you. <i>Return address</i> is the email address that is used when someone replies to your mail. Normally that is the same address you've sent your email from.</p>
-<p>If you'd like to use an email account to only send or only receive email, you can de/activate that usage by right-clicking the account's name in the leftside list to set the checkmarks accordingly.</p>
+<p><i>Назва акаунта</i> – це назва, яка відображається, наприклад, у списку акаунтів у налаштуваннях електронної пошти. <i>Справжнє ім'я</i> – ім'я, яке бачить користувач, коли отримує від Вас повідомлення. <i>Зворотня адреса</i> – це адреса електронної пошти, яка використовується, коли хтось відповідає на Ваш лист. Зазвичай це та сама адреса, з якої Ви надіслали листа.</p>
+<p>Якщо Ви хочете використовувати обліковий запис електронної пошти лише для відправки або лише для отримання листів, Ви можете увімкнути або вимкнути цей режим, зробивши правий клік миші на назві акаунта у списку в лівій частині вікна і встановивши відповідні позначки.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="incoming" name="incoming">More on setting up incoming e-mail</a></h2>
-<p>Click on <span class="menu">Incoming</span> under your account's name to set up how e-mails are received.</p>
+<a id="incoming" name="incoming">Докладно про настройки вхідної пошти</a></h2>
+<p>Натисніть рядок <span class="menu">Вхідні</span> під назвою Вашого акаунта, щоб настроїти параметри отримання електронних листів.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
-<p>First is the <span class="menu">Mail server</span> address for incoming mails. If your provider needs you to log into a specific port, you add that to the address, separated by a colon. For example, <tt>pop.your-provider.org:1400</tt>.</p>
-<p>Then you enter your login information, <i>Login name</i> and <i>Password</i>, and if necessary change the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
-<p>If you use <i>POP3</i> and retrieve mails of this account from different computers, you may want to activate the option to <span class="menu">Leave mail on server</span> and only <span class="menu">Remove mail from server when deleted</span> locally.</p>
-<p>If you use <i>IMAP</i> instead, you have the option to <span class="menu">Remove mail from server when deleted</span> locally. You can specify <span class="menu">IMAP folders</span> to only synchronize with a specific folder and its subfolders.</p>
-<p>Also, you can opt to only <span class="menu">Partially download messages larger than</span> a certain size. This will only get the header and you can decide if you want to download the rest of the message plus possible attachments after seeing the subject and who sent it. Useful if you have a slow connection.</p>
-<p>You can change the <i>Destination</i> of your inbox (default: <span class="path">/boot/home/mail/in/</span>), which is useful if you'd like to separate the mails from different accounts into their own folders. However, queries let you sort things out just as well.</p>
+<p>По-перше, це адреса <span class="menu">Поштового сервера</span> для вхідних листів. Якщо Ваш провайдер вимагає, щоб Ви увійшли на певний порт, Ви додаєте його до адреси, розділяючи двокрапкою. Наприклад, <tt>pop.your-provider.org:1400</tt>.</p>
+<p>Потім Ви вводите свою реєстраційну інформацію, ім’я <i>Користувача</i> та <i>Пароль</i> і, якщо необхідно, змінюєте <i>Тип підключення</i> з <span class="menu">Без шифрування</span> на <span class="menu">SSL</span> а <i>Тип авторизації</i> зі стандартного <span class="menu">Звичайний текст</span> на <span class="menu">APOP</span> для автентифікації.</p>
+<p>Якщо Ви використовуєте <i>POP3</i> і отримуєте пошту цього акаунта з різних комп'ютерів, Ви можете активувати опцію <span class="menu">Зберігати пошту на сервері</span> і <span class="menu">Вилучити пошту з сервера при видаленні</span>, якщо пошта видаляється на локальному комп'ютері.</p>
+<p>Якщо Ви використовуєте <i>IMAP</i>, у Вас 
+є опція <span class="menu">Вилучити пошту з сервера при видаленні</span>, якщо пошта видаляється на локальному комп'ютері. Кнопка <span class="menu">Конфігурування папок IMAP</span> дозволяє настроїти папки для синхронізації лише з певною папкою та її підпапками.</p>
+<p>Крім того, Ви можете вибрати опцію <span class="menu">Частково завантажувати повідомлення більші ніж</span>. У цьому випадку буде завантажено лише заголовок, і Ви зможете вирішити, чи хочете завантажити решту повідомлення разом з можливими вкладеннями, після того, як побачите тему і того, хто його надіслав. Корисно, якщо у Вас повільне з'єднання.</p>
+<p>Ви можете змінити <i>Поштовий каталог</i> Вашої вхідної скриньки (за замовчуванням: <span class="path">/boot/home/mail/in/</span>), що може бути корисним, якщо Ви хочете розділити листи з різних облікових записів на окремі папки. Втім, за допомогою запитів Ви можете впорядкувати все так само добре.</p>
 
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="outgoing" name="outgoing">More on setting up outgoing e-mail</a></h2>
-<p>Click on <span class="menu">Outgoing</span> under your account's name to set up how e-mails are sent.</p>
+<a id="outgoing" name="outgoing">Докладно про настройки вихідної пошти</a></h2>
+<p>Натисніть рядок <span class="menu">Вихідні</span> під назвою Вашого акаунта, щоб настроїти параметри відправки електронних листів.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt>.</p>
-<p>If you need to login, you change the <i>Login Type</i> to <span class="menu">ESMTP</span> and enter username and password above. The other type is used for providers that need you to check for mail with <span class="menu">POP3 before SMTP</span> for identification.</p>
-<p>As with incoming mail, you can also change the <i>Destination</i> of your outbox (default: <span class="path">/boot/home/mail/out/</span>).</p>
+<p>По-перше, це адреса <i>SMTP-сервера</i> для вихідної пошти. Як і у випадку з вхідним сервером, Ви можете використовувати певний порт, наприклад, <tt>mail.your-provider.org:1200</tt> а також змінити <i>Користувача</i>, <i>Пароль</i> і <i>Тип підключення</i>.</p>
+<p>Якщо Вам потрібно увійти в систему, змініть <i>Тип авторизації</i> на <span class="menu">ESMTP</span> і введіть ім'я користувача та пароль вище. Інший тип використовується для провайдерів, які вимагають, щоб Ви перевіряли пошту за допомогою <span class="menu">POP3 перед SMTP</span> для ідентифікації.</p>
+<p>Як і у випадку з вхідною поштою, Ви можете змінити <i>Поштовий каталог</i> Вашої вихідної скриньки (за замовчуванням: <span class="path">/boot/home/mail/out/</span>).</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="filters" name="filters">Notifications and other e-mail filters</a></h2>
-<p>Notifications for newly arrived email and methods to sort and filter emails are found in <span class="menu">E-Mail filters</span> under an account's name. You can add any number of filters that are applied one after the other and rearrange them by drag &amp; dropping them to their new position.<br />
-Currently there are three <span class="menu">Incoming mail filters</span> you can add. After adding a filter, you have to select it to see its options.</p>
+<a id="filters" name="filters">Сповіщення та інші поштові фільтри</a></h2>
+<p>Сповіщення про нові поштові повідомлення, а також методи сортування та фільтрації листів знаходяться у розділі <span class="menu">Фільтри E-Mail</span> під назвою акаунта. Ви можете додати будь-яку кількість фільтрів, які будуть застосовуватися один за одним і міняти їх порядок, перетягуючи на нову позицію у списку.<br />
+На даний момент у блок <span class="menu">Фільтри вхідної пошти</span> Ви можете додати три фільтри. Після додавання фільтра Вам потрібно вибрати його у списку, щоб побачити його параметри.</p>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-Spam filter (AGMS Bayesian)</h3>
+Спам-фільтр Баєса (AGMS Bayesian)</h3>
 <img src="../images/prefs-images/e-mail-filter-spam.png" alt="e-mail-filter-spam.png" />
-<p>The spam filter uses statistical methods to classify a mail as unwanted spam. It assigns a value between 0 and 1 to it and you can decide what are the limits for a genuine mail and what will be considered spam.<br />
-You can have that spam rating added to the start of the subject.<br />
-Also, the spam filter can learn from all incoming e-mail. Of course, you'll have to teach it by sorting out the false positives, mails that were mistakenly marked as spam. You'll find more on that when we discuss the application <span class="app">Mail</span>.</p>
-<p>Together with the following <span class="menu">Rule filter</span>, you're able to automatically sort out detected spam mails.</p>
+<p>Спам-фільтр використовує статистичні методи для класифікації листів як небажаного спаму. Він присвоює повідомленням значення від 0 до 1 і Ви можете вирішити, що є межею для справжнього листа а що вважатиметься спамом.<br />
+Ви можете додати цей спам-рейтинг на початку теми.<br />
+Крім того, спам-фільтр може навчатися на основі всієї вхідної пошти. Звичайно, Вам доведеться навчати його, відсортовуючи помилкові спрацьовування, тобто листи, які були помилково позначені як спам. Про це Ви дізнаєтеся більше, коли ми поговоримо про програму <span class="app">Mail</span>.</p>
+<p>Разом із наведеним нижче фільтром <span class="menu">Співпадаючий заголовок</span> Ви можете автоматично сортувати виявлені спам-листи.</p>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-Rule filter</h3>
+Співпадаючий заголовок</h3>
 <img src="../images/prefs-images/e-mail-filter-header.png" alt="e-mail-filter-header.png" />
-<p>This filter compares the mail header to a search pattern and performs some action according to the rules you set up.<br />
- With the first text field you specify which header to check against. These are available:</p>
+<p>Цей фільтр порівнює заголовок листа з пошуковим шаблоном і виконує певну дію відповідно до встановлених Вами правил.<br />
+У першому текстовому полі Ви вказуєте, з яким полем (елементом) заголовка порівнювати. Доступні наступні значення:</p>
 <table summary="match header" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">Name</span></td><td style="width:5px;"> </td>
-		<td>the name of the sender</td></tr>
+		<td>ім'я відправника</td></tr>
 	<tr><td><span class="menu">From</span></td><td> </td>
-		<td>the e-mail address of the sender</td></tr>
+		<td>адреса електронної пошти відправника</td></tr>
 	<tr><td><span class="menu">To</span></td><td> </td>
-		<td>your e-mail address (different for each e-mail account)</td></tr>
+		<td>Ваша адреса електронної пошти (для кожного облікового запису своя)</td></tr>
 	<tr><td><span class="menu">Reply to</span></td><td> </td>
-		<td>the e-mail address replies are sent to</td></tr>
+		<td>адреса електронної пошти, на яку надсилаються відповіді</td></tr>
 	<tr><td><span class="menu">When</span></td><td> </td>
-		<td>the date and time the mail was received</td></tr>
+		<td>дата і час отримання листа</td></tr>
 	<tr><td><span class="menu">Subject</span></td><td> </td>
-		<td>the subject line</td></tr>
+		<td>тема поштового повідомлення</td></tr>
 	<tr><td><span class="menu">Cc</span></td><td> </td>
-		<td>addresses of anyone receiving a carbon copy (Cc)</td></tr>
+		<td>адреси всіх, хто отримає копію (Cc)</td></tr>
 	<tr><td><span class="menu">Account</span></td><td> </td>
-		<td>the name of the e-mail's account</td></tr>
+		<td>назва облікового запису електронної пошти</td></tr>
 	<tr><td><span class="menu">Status</span></td><td> </td>
-		<td>The current status of the e-mail. Normally, this can be "Read", "Replied", "Sent", "Forwarded", "New", or anything you have defined yourself. However, unless you change it yourself in a filter, it will always be "New" after the Mail Service fetched the mail.</td></tr>
+		<td>Поточний статус поштового повідомлення. Зазвичай це може бути «Прочитано», «Відповіли», «Відправлено», «Переслано», «Нове» або будь-яке інше значення, яке Ви визначили самостійно. Однак, якщо Ви не зміните його самостійно у фільтрі, воно завжди буде «Новим» після того, як поштовий сервіс отримає лист.</td></tr>
 	<tr><td><span class="menu">Priority</span></td><td> </td>
-		<td>is set by the sender's e-mail program (e.g. "urgent")</td></tr>
+		<td>встановлюється поштовою програмою відправника (наприклад, «терміново»)</td></tr>
 	<tr><td><span class="menu">Thread</span></td><td> </td>
-		<td>essentially the same as "Subject", but without things like Re: or Fwd:</td></tr>
+		<td>по суті, те саме, що й «Subject», але без таких речей, як Re: або Fwd:</td></tr>
 	<tr><td><span class="menu">Classification group</span></td><td> </td>
-		<td>depending on what the spam filter classified it as, this will either be empty (if uncertain) or contain the word "Genuine" or "Spam"</td></tr>
+		<td>залежно від того, як спам-фільтр класифікував лист, він буде або порожнім (у разі невизначеності) або міститиме слово «Справжній» (Genuine) чи «Спам» (Spam).</td></tr>
 	<tr><td class="onelinetop"><span class="menu">Spam/Genuine estimate</span></td><td> </td>
-		<td>this is a numerical estimate that the spam filter assigned to the e-mail. They are shown in scientific notation, where 1.065e-12 translates to 1.065 divided by 10 to the 12th power, which in this case translates to 0.000000000001065.</td></tr>
+		<td>це числова оцінка, яку спам-фільтр присвоїв поштовому повідомленню. Вони показані у науковій нотації, де 1.065e-12 перекладається як 1.065, поділене на 10 в 12-му ступені, що в даному випадку перекладається як 0.000000000001065.</td></tr>
 </table>
-<p>The second text field holds your search pattern. It accepts <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expression" rel="nofollow">regular expressions</a> which gives it great flexibility, while unfortunately complicating things a bit. Read up on it a bit, it's well worth it and simple search patterns aren't <i>that</i> complicated at all.</p>
-<p>With the pop-up menu below it, you assign an action when the pattern matches. You can move or delete a mail, set the status to "Read" or anything else or set the e-mail account you'll reply with.</p>
+<p>Друге текстове поле містить пошуковий шаблон. Він приймає <a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%B8%D0%B9_%D0%B2%D0%B8%D1%80%D0%B0%D0%B7" class="external free" title="Wikipedia: Regular expression" rel="nofollow">регулярні вирази</a>, що надає йому велику гнучкість, але, на жаль, дещо ускладнює роботу. Почитайте трохи про це, воно того варте, і прості пошукові шаблони стануть не <i>таким</i> вже й складними.</p>
+<p>За допомогою списку який розкривається під ним Ви можете призначити дію, коли шаблон збігається. Ви можете перемістити або видалити поштове повідомлення, встановити статус «Прочитано» або будь-який інший а також вказати обліковий запис, з якого Ви будете відповідати.</p>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-New mails notification</h3>
+Сповіщення про нову пошту</h3>
 <img src="../images/prefs-images/e-mail-filter-notification.png" alt="e-mail-filter-notification.png" />
-<p>There are several ways you can choose to be notified of newly arrived email. Under <span class="menu">Method</span> you find a number of options that can be combined as well:</p>
+<p>Існують різні способи отримання сповіщень про нові електронні листи. У списку <span class="menu">Метод</span> Ви знайдете декілька варіантів, які можна комбінувати:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
-	<tr><td><span class="menu">none</span></td><td style="width:5px;"> </td>
-		<td>No notification</td></tr>
-	<tr><td><span class="menu">Beep</span></td><td> </td>
-		<td>Plays the sound file of the "New E-mail" event set in the <a href="sounds.html">Sounds</a> preferences for <i>every</i> new email</td></tr>
-	<tr><td><span class="menu">Alert</span></td><td> </td>
-		<td>Shows an alert window for <i>every</i> new email</td></tr>
-	<tr><td><span class="menu">Keyboard LEDs</span></td><td> </td>
-		<td>Blinks some LEDs like the caps-lock indicator</td></tr>
-	<tr><td class="onelinetop"><span class="menu">Central alert</span></td><td> </td>
-		<td>Shows <i>one</i> alert window for all new mails</td></tr>
-	<tr><td><span class="menu">Central beep</span></td><td> </td>
-		<td>Plays the sound file of the "New E-mail" event set in the <a href="sounds.html">Sounds</a> preferences <i>once</i> for new mail</td></tr>
-	<tr><td><span class="menu">Log window</span></td><td> </td>
-		<td>Shows the log window</td></tr>
+	<tr><td><span class="menu">пусто</span></td><td style="width:5px;"> </td>
+		<td>Без сповіщення</td></tr>
+	<tr><td><span class="menu">Сигнал</span></td><td> </td>
+		<td>Відтворює звуковий файл події «New E-mail» заданий на панелі налаштувань <a href="sounds.html">Sounds</a> для <i>кожного</i> нового листа</td></tr>
+	<tr><td><span class="menu">Оповіщення</span></td><td> </td>
+		<td>Показує вікно сповіщення для <i>кожного</i> нового електронного листа</td></tr>
+	<tr><td><span class="menu">Індикатори клавіатури</span></td><td> </td>
+		<td>Блимає світлодіодами клавіатури, наприклад, індикатором Caps-Lock</td></tr>
+	<tr><td class="onelinetop"><span class="menu">Головне оповіщення</span></td><td> </td>
+		<td>Показує <i>одне</i> вікно сповіщення для всіх нових листів</td></tr>
+	<tr><td><span class="menu">Головний сигнал</span></td><td> </td>
+		<td>Відтворює звуковий файл події «New E-mail» заданий на панелі налаштувань <a href="sounds.html">Sounds</a>, <i>один</i> раз для всіх нових листів</td></tr>
+	<tr><td><span class="menu">Вікно журналу</span></td><td> </td>
+		<td>Показує вікно журналу</td></tr>
 </table>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-Outgoing Mail Filters</h3>
-<p>At this moment, there's only one filter that deals with outgoing mail: <span class="cli">fortune</span>.
-<br />It will attach a randomly chosen funny or wise "fortune cookie" to the end of every mail before it's sent out. You can do a dry run by issuing the command <span class="cli">fortune</span> in a Terminal.</p>
+Фільтри вихідної пошти</h3>
+<p>На даний момент існує лише один фільтр, який обробляє вихідну пошту: <span class="cli">fortune</span>.<br />
+Він додає випадково вибране кумедне або мудре «fortune cookie» в кінець кожного листа перед його відправленням. Ви можете зробити пробний запуск, виконавши команду <span class="cli">fortune</span> в терміналі.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="settings" name="settings">Setting up the Mail Service</a></h2>
-<p>Now that your incoming and outgoing mail servers (and maybe some filters, too), are configured, you have to tell the Mail Service that does all the actual checking and fetching how to do its job.</p>
+<a id="settings" name="settings">Налаштування поштового сервісу</a></h2>
+<p>Тепер, коли Ваші сервери вхідної та вихідної пошти (і, можливо, деякі фільтри) налаштовані, Вам потрібно вказати поштовому сервісу, який виконує усі перевірки та вибірки, як виконувати свою роботу.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>Under <i>Mail checking</i> you configure the interval at which the account's mail server is probed for new mail.<br />
-If you're on a dial-up connection, you may want to do that <span class="menu">Only when dial-up is connected</span> and also <span class="menu">Schedule outgoing mail when dial-up is disconnected</span> to avoid dialing automatically in regularly only to check for mail.</p>
-<p>The Mail Service has a status window which you can set to show up <span class="menu">Never</span>, <span class="menu">While sending</span>, <span class="menu">While sending and receiving</span> or <span class="menu">Always</span>.</p>
-<p>Make sure to <span class="menu">Start mail services on startup</span> or there will be no mail_daemon running to do your bidding...</p>
+<p>Після позначення чекбокса Ви можете встановити інтервал, з яким поштовий сервер акаунта перевірятиметься на наявність нової пошти.</p>
+<p>Поштовий сервіс може видавати сповіщення, відображення яких Ви можете настроїти як <span class="menu">Ніколи</span>, <span class="menu">Поки йде відправка</span> або <span class="menu">При відправленні та отриманні</span>.</p>
+<p>Кнопка <span class="menu">Редагувати меню скриньки…</span> відкриє папку <span class="path">/boot/home/config/Mail/Menu Links/</span>. Усі папки або запити (!), або посилання на них, поміщені у цю папку, відображатимуться у контекстному меню значка значка поштової скриньки Поштових служб в системному треї Deskbar.</p>
+<p>У цьому контекстному меню Ви можете <span class="menu">Створити нове повідомлення…</span>, <span class="menu">Перевірити пошту зараз</span> або змінити <span class="menu">Налаштування…</span>.</p>
 <img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
-<p><span class="menu">Edit mailbox menu...</span> will open the folder <span class="path">/boot/home/config/Mail/Menu Links/</span>. All folders or queries (!) or their links put into this folder will appear in the context menu of the mailbox icon of the Mail Services in the Deskbar tray.</p>
-<p>From that menu, you can also <span class="menu">Create new message...</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Preferences...</span>.</p>
-<p>If you hold down <span class="key">SHIFT</span> when invoking the context menu, you'll get additional commands:</p>
+<p>Якщо під час відкриття контекстного меню утримувати клавішу <span class="key">SHIFT</span>, Ви отримаєте додаткові команди:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
-	<tr><td><span class="menu">Check for mails only</span></td><td style="width:5px;"> </td>
-		<td>Offers a submenu to check only one specific account</td></tr>
-	<tr><td><span class="menu">Send pending mails</span></td><td> </td>
-		<td>Allows you to send pending mails without also checking for new mails</td></tr>
-	<tr><td><span class="menu">Shutdown mail services</span></td><td> </td>
-		<td>Quits the whole email infrastructure (mail_daemon)</td></tr>
+	<tr><td><span class="menu">Перевірити пошту акаунта…</span></td><td style="width:5px;"> </td>
+		<td>Пропонує підменю для перевірки кореспонденції конкретного облікового запису</td></tr>
+	<tr><td><span class="menu">Відправити пошту з черги</span></td><td> </td>
+		<td>Дозволяє відправити відкладені листи без перевірки наявності нових листів</td></tr>
+	<tr><td><span class="menu">Вимкнути поштові сервіси</span></td><td> </td>
+		<td>Завершує роботу всієї поштової інфраструктури (mail_daemon)</td></tr>
 </table>
-<p>The mailbox icon itself shows if there are unread messages (status "New") when there are envelopes inside.</p>
+<p>Сам значок поштової скриньки показує, чи є непрочитані поштові повідомлення (статус «Нове»), якщо всередині є конверти.</p>
 
 </div>
 </div>

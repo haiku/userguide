@@ -80,141 +80,144 @@
 <h1>Tracker (Файловий менеджер)</h1>
 
 <p>Tracker – комп'ютерна програма, що надає інтерфейс користувача для роботи з файловою системою та файлами. Це навігаційний файловий менеджер, який фактично являє собою основу графічної оболонки користувача Haiku.<br />Дозволяє виконувати найчастіші операції з    папками і файлами: створення, відкриття/програвання/запуск/перегляд, редагування, переміщення, перейменування, копіювання, вилучення, зміну атрибутів та властивостей, пошук файлів та призначення прав.</p>
-<p>Being an application like any other (the Desktop with its icons is really just a fullscreen window in the background), Tracker appears with its windows in the Deskbar and can be quit and restarted. The easiest way to quit and restart a crashed or frozen Tracker (or a wayward Deskbar) is to call the <a href="teammonitor.html">Team Monitor</a>.</p>
+<p>Як і будь-яка інша програма (Робочий стіл з його значками – це просто повноекранне вікно у фоновому режимі), Tracker з'являється зі своїми вікнами на панелі задач Deskbar, і його можна закрити і перезапустити. Найпростіший спосіб завершити роботу і перезапустити аварійно завершений чи завислий Tracker (або Deskbar) – це викликати <a href="teammonitor.html"> Team Monitor</a>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="mounting-volumes" name="mounting-volumes">Підключення дисків</a></h2>
-<p>In order to access a harddisk, CD, USB stick etc., you first have to mount the volume, that is, let the system know it's there. This is done with a right-click on the Desktop or an already mounted volume (like the boot disk) and choosing the volume from the <span class="menu">Mount</span> submenu. You find the same <span class="menu">Mount</span> menu in the Deskbar.</p>
+<p>Щоб отримати доступ до жорсткого диска, компакт-диска, USB-накопичувача тощо, спочатку Вам потрібно підключити (монтувати) том, тобто повідомити системі, що він є. Для цього зробіть правий клік миші на робочому столі або вже підключеному томі (наприклад, загрузочному диску) і виберіть том у підменю <span class="menu">Підключити</span>.<br />
+Ви знайдете аналогічне меню <span class="menu">Підключити</span> на панелі задач Deskbar.</p>
 <img src="images/tracker-images/mount-settings.png" alt="drill-down.png" />
-<p>There are also <span class="menu">Settings</span> so you don't have to mount everything manually after every bootup.<br />
-The above settings will automatically mount any storage device you connect/insert and also mount all disks on bootup that were mounted previously.</p>
-<div class="box-warning">Before you disconnect e.g. a harddrive or USB stick, make sure you have successfully unmounted the volume and its icon has disappeared. This guarantees that all data transfer has finished. Otherwise you may lose data or corrupt the disk!</div>
-<div class="box-warning">Haiku is able to mount non-BFS formatted volumes. Be warned, however, that these non-BFS filesystems haven't been rigorously tested. Writing to those volumes may cause corruption in some cases. If you want to be on the safe side, always choose <span class="button">Mount read-only</span> when mounting!</div>
+<p>У підменю є пункт <span class="menu">Налаштування…</span>, щоб Вам не довелося підключати (монтувати) все вручну після кожної загрузки.<br />
+Ці настройки автоматично підключать будь-який пристрій зберігання даних, який Ви під'єднаєте або вставите а також усі диски, які були підключені під час попередньої загрузки.</p>
+<div class="box-warning">Перш ніж від'єднати, наприклад, жорсткий диск або USB-накопичувач, переконайтеся, що Ви успішно від'єднали том і його значок зник. Це гарантує, що передача даних завершилася. Інакше Ви можете втратити дані або пошкодити диск!</div>
+<div class="box-warning">Haiku може підключати томи, відформатовані не у форматі BFS. Однак зауважте, що ці файлові системи, відмінні від BFS, не було ретельно протестовано. У деяких випадках запис до таких томів може призвести до пошкодження даних. Щоб перестрахуватися, при підключенні завжди вибирайте варіант <span class="button">Підключити тільки для читання</span>!</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="navigating" name="navigating">Навігація</a></h2>
-<p>By default, when you double-click a folder, Tracker opens a new window while leaving the parent window open. This can quickly lead to an overcrowded desktop.<br />
-You can prevent that by holding down the <span class="key">OPT</span> key, which automatically closes the parent window.<br />
-This is also true for keyboard navigation. For more on that, see topic <a href="keyboard-shortcuts.html">Shortcuts and key combinations</a>.</p>
-<p>Moving through your folders is one of Tracker's main purposes, just like the file managers on other platforms. Haiku's Tracker has some unique features that will help you doing that efficiently.</p>
+<p>За замовчуванням, коли Ви переходите до папки подвійним кліком, Tracker відкриває нове вікно, залишаючи батьківське вікно відкритим. Це може швидко призвести до переповнення робочого столу відкритими вікнами.<br />
+Цьому можна запобігти, утримуючи клавішу <span class="key">OPT</span>, яка автоматично закриває батьківське вікно.<br />
+Це також стосується навігації за допомогою клавіатури. Докладніше про це дивіться у розділі <a href="keyboard-shortcuts.html">Клавіші швидкого доступу</a>.</p>
+<p>Переміщення по папках – одне з основних призначень Tracker, як і файлових менеджерів на інших платформах. Файловий менеджер системи Haiku має кілька унікальних функцій, які допоможуть Вам робити це ефективно.</p>
 
 <h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a><a id="drill-down" name="drill-down">Drilling down the submenus</a></h3>
-<p>Instead of double-clicking your way down folder after folder, there's a better way to drill down:</p>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a><a id="drill-down" name="drill-down">Деталізація по підменю</a></h3>
+<p>Замість того, щоб постійно відкривати папку за папкою подвійним кліком, є кращий спосіб навігації по файловій ієрархії:</p>
 <img src="images/tracker-images/drill-down.png" alt="drill-down.png" />
 <!-- screenshot needs updating to show /boot/system/documentation -->
-<p>Right-click onto a folder, and at the top of the usual context menu you'll find a submenu of the current folder that let's you navigate down a level. Just move down the hierarchy until you find the file or folder you're looking for and click on it to open it. The above shows the contents of the folder <span class="path">/boot/home/config/</span>.<br />
-If you do the above while dragging a file with you, it will be moved to where you eventually drop it.</p>
-<p>A similar method can be used from any Tracker window:</p>
+<p>Правий клік миші на папці викличе звичайне контекстне меню, першим елементом якого Ви побачите підменю поточної папки, яке дозволить Вам перейти на рівень нижче. Просто рухайтеся вниз по ієрархії, поки не знайдете потрібний Вам файл або папку і клацніть на ньому, щоб відкрити. Вище показано вміст папки <span class="path">/arcaos/GeneralUser GS 1.471/instrument lists/</span>.<br />
+Якщо Ви виконаєте ці дії під час перетягування файлу, він буде переміщений туди, куди Ви його зрештою скинете.</p>
+<p>Цей простий спосіб можна використовувати у кожному вікні Tracker:</p>
 <img src="images/tracker-images/window-drill-down.png" alt="window-drill-down.png" />
-<p>Click on the area in the lower left, where the number of items is listed, and you'll get submenus for every level above your current location. From there you can drill down through the folders as usual.</p>
-<p>Note, that the Desktop is always the topmost level as that is where Tracker shows mounted volumes. So, if you want to go to another disk, you first have to navigate to the top (Desktop) and cross over to your other disk from there.</p><br />
-<p>You'll get the same submenu-navigating when you drag a file over a folder. After a short while of hovering, a submenu pops up and you can drill down to your destination. If you initiated the drag with the right mousebutton, you can choose between copying, moving or linking the file when you release the mouse.</p>
+<p>Якщо зробити клік на нижній лівій частині вікна, де вказано кількість елементів поточної папки, Ви отримаєте підменю для папок розташованих на рівень вище від Вашої поточної папки. Звідти Ви можете переходити по папках, як зазвичай.</p>
+<p>Зверніть увагу, що Робочий стіл завжди є верхнім рівнем файлової ієрархії, оскільки саме на ньому Tracker показує підключені томи. Отже, якщо Ви хочете перейти на інший диск, Вам слід спершу перейти на верхній рівень (Робочий стіл) а звідти перейти на інший диск.</p><br />
+<p>Таке саме підменю з'являється, коли ви перетягуєте файл над папкою. Після короткої затримки при наведенні курсору миші з файлом з'являється підменю, в якому Ви можете перейти до пункту призначення. Якщо Ви ініціювали перетягування правою кнопкою миші, Ви можете вибирати між копіюванням, переміщенням або створенням посилання на файл, коли відпускаєте кнопку миші.</p>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="type-ahead" name="type-ahead">Jumping to files with type-ahead</a></h3>
-<p>You may be familiar with the concept from file managers of other operating systems: typing the first few letters of a filename will jump to the first file matching these starting characters. Haiku took the idea a step further. If there isn't a file starting with those letters it will jump to the first file including the string anywhere in its name. And if there's nothing with the string in its filename, the attributes are searched next.</p>
+<a id="type-ahead" name="type-ahead">Перехід до файлів з випередженням набору тексту</a></h3>
+<p>Можливо, Ви вже знайомі з такою концепцією по файлових менеджерах інших операційних систем: набравши перші кілька літер назви файлу можна перейти до першого файлу назва якого містить ці початкові символи. У Haiku ця ідея була розвинута ще далі. Якщо файлу, назва якого містить ці літери, не існує, пошук перейде до першого файлу, що містить цей рядок у будь-якій частині назви. А якщо немає нічого подібного у назві, то буде виконано пошук за атрибутами.</p>
 <img src="images/tracker-images/window-type-ahead.png" alt="window-type-ahead.png" />
-<p>In the above example, there are many files starting with "Haiku logo", rendering simpler approaches to typing ahead quite useless. In Haiku however, typing "web" jumps right to its first occurence in "Haiku logo - website". The characters you enter appear in the bottom left corner where you normally find the item count of all files in the folder. A second after entering a character, the display jumps back to normal and you're ready for a new type ahead search.</p>
+<p>У наведеному вище прикладі є багато файлів, що починаються з «Haiku logo», що робить простіші підходи до пошуку з набором тексту цілком марними. Однак у Haiku введення слова «web» призводить до переходу до його першого входження у назві файлу «Haiku logo - website». Символи, які Ви вводите, з'являються у нижній лівій частині вікна, де зазвичай відображається кількість усіх елементів папки. За секунду після введення символу екран повернеться до звичайного вигляду і Ви будете готові до нового пошуку з випередженням набору тексту.</p>
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="type-ahead-filter" name="type-ahead-filter">Випереджаюча фільтрація</a></h3>
-<p>Instead of jumping to a file while typing, there's also the option to filter out all files not matching your type-ahead string. This can improve clarity dramatically, especially when dealing with crowded folders. By using <span class="key">SHIFT</span> <span class="key">SPACE</span> as delimiter, you can even filter on multiple strings.<br />
-Contrary to type-ahead jumping, the filtering will stick until you press <span class="key">ESC</span> or close the window (or leave the folder if you're using Single Window Navigation).<br />
-This type-ahead filtering is set in the <a href="#tracker-preferences.html">Tracker preferences</a>.</p>
+<p>Замість того, щоб переходити до файлу під час введення тексту є можливість відфільтрувати усі файли, які не відповідають введеному рядку. Це може значно підвищити якість пошуку, особливо при роботі у переповнених файлами папках. Використовуючи клавіші <span class="key">SHIFT</span> <span class="key">SPACE</span> як розділювач Ви зможете фільтрувати по кілька рядків одразу.<br />
+На відміну від переходу з набором тексту, фільтрація триватиме доки Ви не натиснете <span class="key">ESC</span> або не закриєте вікно (або не вийдете з папки при використанні одновіконної навігації).<br />
+Випереджаюча фільтрація включається на панелі <a href="#tracker-preferences.html">Налаштування Tracker</a>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="appearance" name="appearance">Декорація</a></h2>
 <img src="images/tracker-images/window-menu.png" alt="window-menu.png" />
-<p>Tracker windows offer three different viewing modes from the <span class="menu">Window</span> menu:</p>
+<p>Вікно Tracker пропонує три різні режими відображення у меню <span class="menu">Вікно</span>:</p>
 <ul>
-<li><p><span class="menu">Icon view</span> (<span class="key">ALT</span> <span class="key">1</span>) - Big icons, you can change the size from the submenu or in/decrease their size with <span class="key">ALT</span> <span class="key">+</span>/<span class="key">-</span>.</p></li>
-<li><p><span class="menu">Mini icon view</span> (<span class="key">ALT</span> <span class="key">2</span>) - Small icons.</p></li>
-<li><p><span class="menu">List view</span> (<span class="key">ALT</span> <span class="key">3</span>) - A detailed list of your files enabling you to show/hide file attributes (see topic <a href="attributes.html">Attributes</a>.)</p></li>
+<li><p><span class="menu">У вигляді значків</span> (<span class="key">ALT</span> <span class="key">1</span>) – 
+великі значки, Ви можете змінити розмір значків у підменю або збільшити/зменшити за допомогою клавіш <span class="key">ALT</span> <span class="key">+</span>/<span class="key">-</span>.</p></li>
+<li><p><span class="menu">У вигляді міні-значків</span> (<span class="key">ALT</span> <span class="key">2</span>) – маленькі значки.</p></li>
+<li><p><span class="menu">У вигляді списку</span> (<span class="key">ALT</span> <span class="key">3</span>) – деталізований список файлів з можливістю показувати/приховувати атрибути файлів (дивіться розділ <a href="attributes.html">Атрибути</a>.)</p></li>
 </ul>
-<p>The <span class="menu">Window</span> menu offers a number of other functions:</p>
+<p>Меню <span class="menu">Вікно</span> пропонує ряд інших функцій:</p>
 <ul>
-<li><p><span class="menu">Resize to fit</span> (<span class="key">ALT</span> <span class="key">Y</span>) - Resizes the window to its ideal size.</p></li>
-<li><p><span class="menu">Arrange by...</span> - Only available in Icon or Mini icon view, a submenu allows to set the sorting order to various properties:</p>
+<li><p><span class="menu">Припасувати</span> (<span class="key">ALT</span> <span class="key">Y</span>) – підганяє розмір вікна під його вміст для оптимального відображення усіх елементів.</p></li>
+<li><p><span class="menu">Сортувати за…</span> – підменю, доступне лише у режимі відображення значків або міні-значків, дозволяє встановити порядок сортування за різними критеріями:</p>
 	<ul>
-	<li><p><span class="menu">Name</span>, <span class="menu">Real name</span>, <span class="menu">Size</span>, <span class="menu">Modified</span>, <span class="menu">Created</span>, <span class="menu">Kind</span>, <span class="menu">Location</span>, <span class="menu">Permissions</span></p></li>
-	<li><p><span class="menu">Reverse order</span> - Inverts the sorting order</p></li>
-	<li _translation_id="4339"><p><span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>) - Aligns all icons to an invisible grid. Hold down <span class="key">SHIFT</span> and the menu becomes <span class="menu">Clean up all</span> which additionally sorts all icons according to the above selected criterium.</p></li>
+	<li><p><span class="menu">Назва</span>, <span class="menu">Розмір</span>, <span class="menu">Змінений</span>, <span class="menu">Створений</span>, <span class="menu">Тип</span>, <span class="menu">Розташування</span>, <span class="menu">Дозволи</span></p></li>
+	<li><p><span class="menu">Зворотній порядок</span> – інвертує порядок сортування</p></li>
+	<li _translation_id="4339"><p><span class="menu">Очистити</span> (<span class="key">ALT</span> <span class="key">K</span>) – вирівнює усі значки за невидимою сіткою. Утримуйте клавішу <span class="key">SHIFT</span> і пункт меню зміниться на <span class="menu">Очистити все</span>, який додатково сортує усі значки відповідно до вибраного вище критерію.</p></li>
 	</ul></li>
-<li><p><span class="menu">Select...</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">A</span>) - Select files according to a <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expression">regular expression</a>.</p></li>
-<li><p><span class="menu">Close</span> (<span class="key">ALT</span> <span class="key">W</span>) - Closes the window. Hold down <span class="key">SHIFT</span> and the menu becomes <span class="menu">Close all</span> which closes every Tracker window.</p></li>
-<li><p><span class="menu">Close all in workspace</span> (<span class="key">ALT</span> <span class="key">Q</span>) - Closes every Tracker window in the current workspace. A useful shortcut if you forgot to hold the <span class="key">OPT</span> key while clicking through folders and all those still open Tracker windows clutter your workspace.</p></li>
+<li><p><span class="menu">Вибрати…</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">A</span>) – відбирає файли відповідно до заданого <a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%B8%D0%B9_%D0%B2%D0%B8%D1%80%D0%B0%D0%B7" class="external free" title="Wikipedia: Regular expression">регулярного виразу</a>.</p></li>
+<li><p><span class="menu">Закрити</span> (<span class="key">ALT</span> <span class="key">W</span>) – закриває вікно. Утримуйте клавішу <span class="key">SHIFT</span> і пункт меню зміниться на <span class="menu">Закрити все</span>, який закриє усі вікна Tracker.</p></li>
+<li><p><span class="menu">Закрити все у робочій області</span> (<span class="key">ALT</span> <span class="key">Q</span>) – закриває усі вікна Tracker у поточній робочій області. Корисний пункт, коли Ви забули утримувати клавішу <span class="key">OPT</span> при переході між папками і усі відкриті вікна Tracker захаращують Ваш робочий простір.</p></li>
 </ul>
 <div class="box-info">
-<p _translation_id="4341">Sometimes you just want to rearrange a few icons without doing a complete <span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>). In that case, you select these icons and start to drag them to their new location. Before you drop them there, keep <span class="key">ALT</span> pressed. This will align the icons to the invisible grid.</p>
-<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. Normally, that's the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p>
+<p _translation_id="4341">Іноді Ви просто хочете переставити кілька значків, не застосовуючи пункт <span class="menu">Очистити</span> (<span class="key">ALT</span> <span class="key">K</span>). У такому разі Ви виділяєте ці значки і починаєте перетягувати їх на нове місце. Перш ніж перетягнути їх туди, утримуйте натиснутою клавішу <span class="key">ALT</span>. Це вирівняє значки за невидимою сіткою.</p>
+<p>Перший стовпець у режимі <span class="menu">У вигляді списку</span> визначає підписи значків у режимах <span class="menu">У вигляді міні-значків</span> та <span class="menu">У вигляді значків</span>. Зазвичай це назва файлу, але Ви можете переключитися у режим <span class="menu">У вигляді списку</span>, перетягнути стовпець <span class="menu">Розмір</span> ліворуч і отримати значки з підписами їхнього розміру при поверненні назад у режим <span class="menu">У вигляді значків</span>. А то!</p>
 </div>
-<p>The rest of the functions are pretty self-explanatory, leaving the Tracker preferences.</p>
+<p>Решта функцій є досить зрозумілими, залишаються лише налаштування Tracker.</p>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tracker-preferences" name="tracker-preferences">Налаштування Tracker</a></h3>
-<p><span class="menu">Window | Preferences...</span> opens a panel that offers a number of settings that, where not obvious, should become clear once tried out. Since all settings are applied live, you'll immediately see the changes.
-<br />So, in short, the not so obvious settings:</p>
+<p>Пункт меню <span class="menu">Вікно | Налаштування…</span> відкриває панель, яка пропонує параметри і опції, які, якщо вони не зовсім очевидні, стануть зрозумілими після того, як Ви їх спробуєте. Оскільки усі настройки застосовуються у реальному часі, Ви одразу побачите зміни.<br />
+Отже, коротко про неочевидні настройки:</p>
 <ul>
-<li><p><span class="menu">Desktop</span> - Decide if all mounted disks appear directly on the Desktop or in a window after clicking a single Disk icon sitting on the Desktop.</p></li>
-<li><p><span class="menu">Windows</span> - You can set <span class="menu">Single window navigation</span>, i.e. a double-clicked folder doesn't open in its own window, but inside the already open window instead, replacing the view of its parent folder. This is not the same as clicking while holding the <span class="key">OPT</span> key, as described above, because you'll lose the per window saved position and size.
+<li><p><span class="menu">Робочий стіл</span> – дозволяє визначити як відображати підключені диски, безпосередньо на Робочому столі або в окремому вікні після натискання на значок «Диски».</p></li>
+<li><p><span class="menu">Вікна</span> – дозволяє встановити режим <span class="menu">Одновіконна навігація</span>, тобто папка, на якій Ви зробили подвійний клік, відкриється не в окремому вікні а у вже відкритому вікні, замінюючи відображення елементів батьківської папки своїм вмістом. Це не те саме що клік з утриманням клавіші <span class="key">OPT</span> , як описано вище, оскільки Ви втратите збережені для кожного вікна позицію і розмір.
 </p>
 <img src="images/tracker-images/tracker-preferences-navigator.png" alt="tracker-preferences-navigator.png" />
-<p>Before you switch Tracker to <span class="menu">Single window navigation mode</span>, because that may feel more familiar to you, we recommend giving the menu based browsing a try first, as that may actually work much faster for you after getting used to. On the other hand, single window browsing offers a <i>Navigator</i> where you can enter or copy &amp; paste a path name and use back, forward and up buttons.</p> 
-<p>Activating <span class="menu">Type-ahead filtering</span> will filter the contents of a Tracker window while you type to only display the files matching your string in their name or any currently displayed attribute. See <a href="#type-ahead-filter">above</a>.</p>
-<p><span class="menu">Hide dotfiles</span> and you won't see files starting with a "<tt>.</tt>", a popular naming convention for configuration files under Linux.</p> 
-<p>You can <span class="menu">Generate image thumbnails</span> which will replace the standard icons for image files.</p></li>
-<li><p><span class="menu">Volume icons</span> - Set the color of an optional indicator of free space that's shown besides a disk's icon.</p></li>
-<li><p><span class="menu">Disk mount</span> - Define when and what disks are mounted automatically, as described above under <a href="#mounting-volumes">"Mounting volumes"</a>.</p></li>
+<p>Перед тим, як перевести Tracker у режим <span class="menu">Одновіконна навігація</span>, оскільки він може здатися Вам більш звичним, ми рекомендуємо спочатку спробувати навігацію за допомогою меню – після звикання Ви зможете працювати набагато швидше. З іншого боку, навігація в одному вікні пропонує <i>Навігатор</i>, в якому Ви можете ввести або копіювати&amp;вставити шлях до файлу та використовувати кнопки «Назад», «Вперед» і «Вгору».</p> 
+<p>Активація опції <span class="menu">Включити випереджаючу фільтрацію</span> фільтруватиме вміст вікна Tracker при введенні тексту, щоб відображати тільки ті файли, в яких текст у назві або будь-якому показаному атрибуті збігається з введеним Вами текстовим рядком. Дивіться <a href="#type-ahead-filter">вище</a>.</p>
+<p>Увімкніть опцію <span class="menu">Сховати файли з крапкою</span> і Ви не побачите файли, що починаються з "<tt>.</tt>" – популярної конвенції іменування конфігураційних файлів у Linux.</p> 
+<p>Ви можете увімкнути опцію <span class="menu">Генерувати мініатюри зображень</span> і мініатюри замінять стандартні значки для файлів зображень.</p></li>
+<li><p><span class="menu">Значки томів</span> – дозволяє показати/сховати індикатор вільного місця, який відображається поряд із значком диска та задати його колір.</p></li>
+<li><p><span class="menu">Підключення дисків</span> – дозволяє визначити коли і як підключаються (монтуються) диски, як описано вище у параграфі <a href="#mounting-volumes">Підключення дисків</a>.</p></li>
 </ul>
-<p>This panel, by the way, is also available as <span class="app">Tracker</span> from Deskbar's <span class="menu">Preferences</span>.</p>
+<p>Ця панель налаштувань також доступна у меню <span class="menu">Preferences</span> панелі задач Deskbar як пункт <span class="app">Tracker</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="working-with-files" name="working-with-files">Робота з файлами</a></h2>
-<p>When invoked on a selected file, most of the <span class="menu">File</span> menu commands are also offered in the context menu by right-clicking that file.</p>
-<p>As usual the commands are pretty clear.</p>
+<p>Більшість команд меню <span class="menu">Файл</span> також доступні з контекстного меню, яке можна викликати правою кнопкою миші на вибраному файлі.</p>
+<p>Як завжди, команди досить зрозумілі.</p>
 <ul>
-<li><p><span class="menu">Find...</span> - Find a file or folder. See topic <a href="queries.html">Query</a> for more info.</p></li>
-<li><p><span class="menu">New</span> - Create a new folder or any other file based on a <i>template</i>.
-</p>
+<li><p><span class="menu">Знайти…</span> – пошук файлів або папок. Додаткову інформацію дивіться у розділі <a href="queries.html">Запити</a>.</p></li>
+<li><p><span class="menu">Новий…</span> – дозволяє створити новий каталог/папку або файл на основі <i>шаблону</i>.</p>
 <img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
-<p>Choosing <span class="menu">Edit templates...</span> opens the folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Creating a file in that folder will offer its filetype with the file's name and other attributes as template in the <span class="menu">New</span> menu. Here, there's a file "Text" with the filetype <tt>text/plain</tt>. See topic <a href="filetypes.html">Filetypes</a> for more info.</p></li>
-<li><p><span class="menu">Open with...</span> - A submenu offers all applications that can handle this filetype.
-</p>
+<p>Вибір пункту меню <span class="menu">Редагувати шаблони…</span> відкриває каталог <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Створений у цьому каталозі файл з'явиться зі своєю назвою, типом та іншими атрибутами в якості шаблону у підменю <span class="menu">Новий…</span>. Наприклад, зараз Ви бачите файл «text file» з типом файлу <tt>Text file</tt>. Додаткову інформацію дивіться у розділі <a href="filetypes.html">Типи файлів</a>.</p></li>
+<li><p><span class="menu">Відкрити у…</span> – підменю, яке показує усі програми, які можуть працювати з таким типом файлів.</p>
+
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
 
-<p>The preferred application that would open the file when double-clicked, is checkmarked. This submenu lists first those applications that can handle the exact filetype, in this case it's a text file, the type <tt>text/plain</tt>. Next come all applications that can handle that supertype in general, here <tt>text/*</tt>. Last in the list are those that can deal with any file. If you don't click on an app in the submenu, but on the <span class="menu">Open with...</span> entry instead, a panel opens:</p>
+<p>Пріоритетна праграма, яка відкриває файл при подвійному натисканні, відображається з позначкою. У цьому підменю спочатку перелічено програми, які можуть працювати з цим конкретним типом файлу, у нашому випадку це файл MIDI, тип <tt>audio/x-midi</tt> або <tt>MIDI file</tt>. Далі йдуть усі програми, які можуть обробляти цей супертип взагалі, у даному випадку <tt>audio/*</tt>. Останніми у списку йдуть програми, які можуть працювати з будь-яким типом файлів. Якщо Ви натиснете не на програму у підменю, а на сам пункт меню <span class="menu">Відкрити у…</span>, відкриється панель:</p>
 
 <img src="images/tracker-images/open-with-preferred.png" alt="open-with-preferred" />
-<p>Here you'll again find the programs that were listed in the submenu. By selecting one and clicking the <span class="button">Open and make preferred</span> button, you changed the preferred application for every file of that filetype, here <tt>text/plain</tt>.</p></li>
-<li><span class="menu">Get info</span>
-<p>This opens a panel that shows the meta data of a file and lets you edit its permissions. You can rename it by clicking on the file name at the top.</p>
+
+<p>Там Ви знову побачите програми, які були перелічені у підменю. Вибравши одну з них і натиснувши кнопку <span class="button">Відкрити і зробити пріоритетним</span>, Ви зміните програму за замовчуванням для усіх файлів цього типу, у нашому випадку файлів типу <tt>audio/x-midi</tt>.</p></li>
+<li><span class="menu">Дивитись інфо</span>
+<p>При виборі цього пункту відкриється панель, яка показує метадані файлу і дозволяє редагувати його дозволи. Ви можете перейменувати його, натиснувши на назву файлу у верхній частині панелі.</p>
 <img src="images/tracker-images/get-info.png" alt="get-info" />
-<p>The panel consists of three tabs:</p>
+<p>Панель містить три вкладки:</p>
 <ul>
-<li><span class="menu">Information</span>: Shows standard data like size, date of creation/modification, file type and location. Click on the location path to open the file's parent folder. The <span class="menu">Open with</span> menu sets the preferred application to open this particular file.</li>
-<li><span class="menu">Permissions</span>: Lets you change 'owner', 'group' and 'other' file permissions.</li>
-<li><span class="menu">Attibutes</span>: Lists all extra file attributes with their value and type.</li>
+<li><span class="menu">Інформація</span>: Показує стандартні дані, такі як розмір, дату створення/модифікації, тип і розташування файлу. Натисніть на шлях розташування, щоб відкрити батьківський каталог файлу. Список <span class="menu">Відкрити за допомогою</span> дозволяє вибрати пріоритетну програму для відкриття цього конкретного файлу.</li>
+<li><span class="menu">Дозволи</span>: Дозволяє змінювати права доступу до файлу користувачам «Власник», «Група» та «Інший».</li>
+<li><span class="menu">Атрибути</span>: Показує список усіх додаткових атрибутів файлу з їх значенням і типом.</li>
 </ul></li>
-<li><p><span class="menu">Edit name</span>, <span class="menu">Duplicate</span> and <span class="menu">Move to trash</span> - lets you rename or duplicate a file or put the selected file(s) to the trash.</p></li>
-<li><p><span class="menu">Move to</span>, <span class="menu">Copy to</span> and <span class="menu">Create link</span> - lets you move, copy or link the selected file(s) using the submenu navigating method. Holding <span class="key">SHIFT</span> while invoking the menu offers the option to create a relative link.</p></li>
-<li><p><span class="menu">Cut</span>, <span class="menu">Copy</span> and <span class="menu">Paste</span> - lets you cut, copy and paste files using the clipboard. By holding <span class="key">SHIFT</span> while invoking the menu you can <span class="menu">Copy/Cut more</span> files, maybe from another folder that you can paste somewhere else later. Also, while holding <span class="key">SHIFT</span> you can paste the copied files in the clipboard as links.</p></li>
-<li><p><span class="menu">Identify</span> - will sniff out and set the type of files if they didn't have one before, e.g. if you transferred a file with <span class="cli">wget</span> which doesn't set a filetype itself. Holding <span class="key">SHIFT</span> while invoking the menu changes the item to <span class="menu">Force identify</span> which identifies the filetype and corrects it if it was false before.</p></li>
-<li><p><span class="menu">Add-Ons</span> - offers you every generic Tracker add-on and those that can handle the selected file(s). See topic <a href="tracker-add-ons.html">Tracker Add-ons</a> for more information.</p></li>
+<li><p><span class="menu">Редагувати ім'я</span>, <span class="menu">
+Дублювати</span>, <span class="menu">До смітника</span> – пункти меню, які дозволяють перейменувати файл, зробити дублікат файлу, перемістити вибраний файл (файли) до смітника.</p></li>
+<li><p><span class="menu">Перемістити до</span>, <span class="menu">Копіювати до</span>, <span class="menu">Створити посилання</span> – підменю, які дозволяють переміщати, копіювати та створювати посилання на вибраний файл(и) використовуючи метод деталізації по підменю. Утримання клавіші <span class="key">SHIFT</span> під час виклику меню надає можливість створити відносне посилання.</p></li>
+<li><p><span class="menu">Вирізати</span>, <span class="menu">Копіювати</span>,  <span class="menu">Вставити</span> – пункти меню, які дозволяють вирізати, копіювати та вставляти файли через буфер обміну. Утримання клавіші <span class="key">SHIFT</span> під час виклику меню змінює пункти на <span class="menu">Вирізати ще</span>, <span class="menu">Копіювати ще</span>, щоб Ви могли обробити більше файлів, можливо з іншої папки, які Ви можете вставити куди-небудь пізніше. Крім того, з натиснутою клавішею <span class="key">SHIFT</span> Ви можете вставляти копійовані в буфер обміну файли як посилання.</p></li>
+<li><p><span class="menu">Визначити</span> – пункт меню, який дозволяє встановити тип файлу, якщо тип не було визначено раніше, наприклад, у випадку передачі файлу за допомогою команди <span class="cli">wget</span>, при виконанні якої  тип файлу не встановлюється. Утримання клавіші <span class="key">SHIFT</span> під час виклику меню змінює пункт на <span class="menu">Ідентифікувати примусово</span>, який ідентифікує тип файлу і виправить його, якщо раніше він був помилковим.</p></li>
+<li><p><span class="menu">Доповнення</span> – підменю, яке пропонує Вам стандартні доповнення Tracker та програми які можуть обробляти конкретний вибраний файл(и). Додаткову інформацію дивіться у розділі <a href="tracker-add-ons.html">Tracker – Доповнення</a>.</p></li>
 </ul>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="transaction-status" name="transaction-status">Стан виконання операції</a></h2>
-<p>When you copy, move or delete files, Tracker shows its progress with a status window. If you initiate more than one transaction, each job gets its own status display.</p>
+<p>Коли Ви копіюєте, переміщуєте або видаляєте файли, Tracker показує прогрес у вікні стану. Якщо Ви ініціюєте більше однієї транзакції, кожне завдання отримує власний статус.</p>
 <img src="images/tracker-images/transaction-status.png" alt="transaction-status.png" />
-<p>To the right are two buttons to pause or stop a transaction entirely. Sometimes it can be useful to temporarily pause a large transaction. For example, you may need to quickly launch a large application. Copying large amounts of data chokes your harddisk's IO bandwidth and thus delays your workflow.</p>
+<p>Праворуч знаходяться дві кнопки для призупинення або повної зупинки завдання. Іноді буває корисно тимчасово призупинити велику за розміром транзакцію. Наприклад, Вам може знадобитися швидко запустити ресурсоємну програму. Копіювання великих обсягів даних перевантажує пропускну здатність жорсткого диска і, таким чином, затримує робочий процес.</p>
 
 </div>
 </div>

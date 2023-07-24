@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">本节的翻译还未完成。在未完成之前，所有的未完成部分都将使用英语原文。</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>索引</td></tr>
@@ -94,8 +95,7 @@
 <p>接下来，输入您的 <i>邮箱地址</i>，<i>登陆名</i> 和 <i>密码</i>；之后，给出您的 <i>账户名</i> 以及 <i>真实姓名</i>，它们将在 Haiku 中始终可见。</p>
 <p>如果您的账户来自于主要的电子邮箱提供商，Haiku 已经知道了所有的技术细节，例如服务器 IP 地址。反之，点击 <span class="button">下一步</span> 将会打开其他窗口，您需要手动输入这些信息：</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>首先您需要为接受邮件设置 <i>服务器名称</i>, <i>登陆类型</i> and <i>连接类型</i> ，之后是发送邮件的设置。您应该可以在您的邮箱提供商站点找到相关的信息。 <br />
-关于各种设置和附加选项的详细信息请参阅下文。</p>
+<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -111,7 +111,7 @@
 <p>点击您的账户名下的 <span class="menu">收件箱</span> 设置如何进行邮件的接收。</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>首先是用于接收邮件的 <span class="menu">邮件服务器</span> 地址。如果您的提供商要求您通过指定端口登陆，您可以将其添加到地址末端，以冒号隔开。例如， <tt>pop.your-provider.org:1400</tt>。</p>
-<p>然后输入您的登陆信息， <i>登录名称</i> 和 <i>密码</i>，并且如果有必要，修改默认的 <i>登陆类型</i>  <span class="menu">Plain text</span> 为 <span class="menu">APOP</span> 以便身份验证。</p>
+<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
 <p>如果您使用 <i>POP3</i> 并且从不同的计算机上检索邮件，您可能需要激活 <span class="menu">在服务器保留邮件</span> 选项及本地的 <span class="menu">删除时从服务器移除邮件</span> 。</p>
 <p>如果您使用的是 <i>IMAP</i> ，您已经具有了本地的 <span class="menu">删除时从服务器移除邮件</span> 选项。您可以指定 <span class="menu">IMAP 目录</span> 以用于和指定目录及其子目录同步。</p>
 <p>同时，您也可以指定仅 <span class="menu">下载部分消息</span>，大于某个存储空间的消息。这样将会仅下载消息头，而且您在查阅了标题和发送者之后，可以确定是否下载消息内容和附加内容。当您的网络连接速度比较慢是非常有用。 </p>
@@ -123,7 +123,7 @@
 <a id="outgoing" name="outgoing">发件箱的设置</a></h2>
 <p>点击您的账户名下面的 <span class="menu">发件箱</span> 以设置邮件发送方式。</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>首先是发送邮件的 <i>SMTP 服务器</i> 地址。与前面的接收服务器类似，如果需要，您可以使用指定端口，如：<tt>mail.your-provider.org:1200</tt> 。</p>
+<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
 <p>如果您需要登录，您可以修改 <i>登录类型</i> 为 <span class="menu">ESMTP</span> ，然后输入上述的用户名和密码。其他类型用于需要您检查 <span class="menu">POP3 before SMTP</span> 邮件认证的供应商。</p>
 <p>与接收邮件类似，您可以修改发件箱的 <i>位置</i>（默认为：<span class="path">/boot/home/mail/out/</span>）。</p>
 
@@ -215,14 +215,11 @@
 <a id="settings" name="settings">邮箱服务设置</a></h2>
 <p>现在，您的接收和发送邮件服务器（可能还有某些过滤器）都完成了配置，那么您需要告诉实际执行检查和接收的 Mail 服务 如何完成它的任务。</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>在 <i>Mail Checking</i> 中，您可以配置检查账户的邮件服务器中新邮件的时间间隔。<br />
-
-如果您使用拨号连接，您可能需要 <span class="menu">Only When Dial-Up is Connected</span> 以及 <span class="menu">Schedule Outgoing Mail When Dial-Up is Disconnected</span> 以避免自动拨号激动检查邮件。</p>
-<p> Mail 服务具有一个状态窗口，您可以将其设置为显示  <span class="menu">Never</span>，<span class="menu">While Sending</span>，<span class="menu">While Sending and Receiving</span> 或者 <span class="menu">Always</span> 。</p>
-<p>确保启用 <span class="menu">Start Mail Services on Startup</span> ，否则将会没有运行的 mail_daemon 来执行您的命令。</p>
-<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
+<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
+<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
 <p><span class="menu">编辑邮箱菜单...</span> 将会打开 <span class="path">/boot/home/config/Mail/Menu Links/</span> 目录。所有的目录或查询，以及放置于该目录中的链接将会呈现在 桌面栏托盘 中 Mail 服务 的邮箱图标的右键菜单中。 </p>
-<p>从该菜单中，您也可以 <span class="menu">新建邮件...</span>，<span class="menu">马上查收邮件</span> 或者编辑 <span class="menu">首选项...</span> 。</p>
+<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
+<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p>在打开右键菜单时按下 <span class="key">SHIFT</span> 按键，您将会获取附加的命令：</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">仅检查邮件</span></td><td style="width:5px;"> </td>

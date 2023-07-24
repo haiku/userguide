@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">A tradução desta página ainda não está completa. Até lá, partes incompletas mostrarão o original em inglês.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Índice</td></tr>
@@ -93,8 +94,7 @@ Comece clicando no botão <span class="button">Adicionar</span> para criar uma c
 <p>Agora entre com seu <i>Endereço de Correio Eletrônico</i>, <i>Nome de Autenticação</i> e <i>Senha</i>, dê um <i>Nome da Conta</i> sob o qual será conhecido no Haiku e seu <i>Nome verdadeiro</i>.</p>
 <p>Se sua conta é de um provedor de correio eletrônico de grande porte, o Haiku já conhece todos os detalhes técnicos como endereços IP do servidor. Se não for o caso, clicar <span class="button">Próximo</span> abrirá outra janela para entrar com esta informação manualmente:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>Primeiro defina o <i>Nome do Servidor</i>, <i>Tipo de autenticação</i> e <i>Tipo de conexão</i> para a caixa de entrada, abaixo os dados para a caixa de saída. As informações necessárias são encontradas no sítio web do seu provedor de correio eletrônico.<br />
-Veja abaixo mais informações sobre as várias definições e opções adicionais.</p>
+<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -110,7 +110,7 @@ Veja abaixo mais informações sobre as várias definições e opções adiciona
 <p>Clique em <span class="menu">Entrada</span> sob o nome da sua conta para configurar como as mensagens são recebidas.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>Primeiro é o endereço do <span class="menu">Servidor de correio</span> para mensagens recebidas. Se seu provedor necessita que você logue em uma porta específica, adicione-a ao endereço, separada por dois pontos. Por exemplo, <tt>pop.your-provider.org:1400</tt>.</p>
-<p>Então entre com seus dados de autenticação, <i>Nome de autenticação</i> e <i>Senha</i>, e se necessário altere o <i>Tipo de autenticação</i> do padrão <span class="menu">Texto simples</span> para <span class="menu">APOP</span>.</p>
+<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
 <p>Se utilizar <i>POP3</i> recuperar mensagens destas conta a partir de diferentes computadores, você pode querer ativar a opção para <span class="menu">Deixar correio no servidor</span> e somente <span class="menu">Remover correio do servidor quando eliminado</span> localmente.</p>
 <p>Se utilizar <i>IMAP</i> ao invés disso, existe a opção para <span class="menu">Remover correio do servidor quando eliminado</span> localmente. Pode-se especificar <span class="menu">Pastas IMAP</span> para apenas sincronizar com uma pasta específica e suas subpastas.</p>
 <p>Igualmente, pode-se optar por somente <span class="menu">Baixar parcialmente mensagens maiores que</span> um determinado tamanho. Isto irá apenas obter o cabeçalho e pode-se decidir se deseja baixar o restante da mensagem mais possíveis anexos após ver o assunto e quem enviou. Útil caso tenha uma conexão lenta.</p>
@@ -122,7 +122,7 @@ Veja abaixo mais informações sobre as várias definições e opções adiciona
 <a id="outgoing" name="outgoing">Mais sobre configurar a saída de correio</a></h2>
 <p>Clique em <span class="menu">Saída</span> abaixo do nome da sua conta para configurar como as mensagens são enviadas.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>Primeiro é o endereço do <i>Servidor SMTP</i> para mensagens enviada. Assim como o servidor de entrada anterior, pode-se usar uma porta específica se necessário, por exemplo <tt>mail.your-provider.org:1200</tt>.</p>
+<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
 <p>Se precisa autenticar-se, modifique o <i>Tipo de Autenticação</i> para <span class="menu">ESMTP</span> e entre com o nome de usuário e senha acima. O outro tipo é usado para provedores que precisam de checagem por correio com <span class="menu">POP3 antes de SMTP</span> para identificação.</p>
 <p>Assim como o correio de entrada, pode-se também mudar o <i>Destino</i> da caixa de saída (padrão: <span class="path">/boot/home/mail/out/</span>).</p>
 
@@ -210,13 +210,11 @@ Filtros de Saída de Correio</h3>
 <a id="settings" name="settings">Configurando um Serviço de Correio</a></h2>
 <p>Agora que seus servidores de entrada e saída de correio (e talvez alguns filtros também) estão configurados, diga ao Serviço de Correio que faça toda a verificação e busca, como é o seu trabalho.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>Em <i>Verificação de correio</i> configure o intervalo no qual o servidor da conta de correio é sondado sobre novas mensagens.<br />
-Se estiver em uma conexão discada, pode desejar fazer com que acesse <span class="menu">Apenas quando a conexão discada estiver conectada</span> e também <span class="menu">Agendar correio enviado quando a conexão discada estiver conectada</span> para evitar discar automaticamente com regularidade apenas para verificar o correio.</p>
-<p>O serviço de Correio tem uma janela de status a qual pode ser definida para ser exibida <span class="menu">Nunca</span>, <span class="menu">Enquanto estiver enviando</span>, <span class="menu">Enquanto estiver enviando e recebendo</span> ou <span class="menu">Sempre</span>.</p>
-<p>Certifique-se de <span class="menu">Carregar os serviços de correio na inicialização</span> ou não haverá mail_daemon executando para atender seu pedido...</p>
-<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
+<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
+<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
 <p><span class="menu">Editar menu da caixa de correio...</span> irá abrir a pasta <span class="path">/boot/home/config/Mail/Menu Links/</span>. Todas as pastas ou consultas (!) ou seus vínculos colocados nesta pasta irão aparecer no menu de contexto do ícone da caixa de correio de Serviços de Correio na bandeja da Deskbar.</p>
-<p>A partir daquele menu, pode-se também <span class="menu">Criar nova mensagem...</span>, <span class="menu">Verificar mensagens agora</span> ou editar as <span class="menu">Preferências...</span>.</p>
+<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
+<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p>Se segurar a tecla <span class="key">SHIFT</span> quando chamar o menu de contexto, obterá comandos adicionais:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">Checar apenas por correios</span></td><td style="width:5px;"> </td>

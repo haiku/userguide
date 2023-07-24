@@ -77,7 +77,7 @@
 <tr><td><tt>CortexAddOnHost</tt></td><td style="width:10px;"> </td><td>Запускає службу для моніторингу аудіо- та відео доповненнь медіа, які використовуються в системі.</td></tr>
 <tr><td><tt>FirstBootPrompt</tt></td><td> </td><td>Налаштування мови та розкладки клавіатури. </td></tr>
 <tr><td><tt>[</tt></td><td> </td><td>Повертає true/false після порівняння елементів.</td></tr>
-<tr><td colspan="3"><a id="A" name="A"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>A</h2></a></td></tr>
+<tr><td colspan="3"><a id="A" name="A"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>A - E</h2></a></td></tr>
 <tr><td><tt>addattr</tt></td><td> </td><td>Записує атрибут у файл, враховуючи тип і відповідно конвертуючи значення. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>alert</tt></td><td> </td><td>Показує вікно повідомлення. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>arp</tt></td><td> </td><td>Маніпулює системним кешем ARP. </td></tr>
@@ -87,7 +87,8 @@
 <tr><td><tt>bash</tt></td><td> </td><td>Командна оболонка bash.</td></tr>
 <tr><td><tt>bc</tt></td><td> </td><td>Інтерактивний інтерпретатор Сі-подібної мови, що може виконувати обчислення із довільною заданою точністю.</td></tr>
 <tr><td><tt>beep</tt></td><td> </td><td>Сигнал системного динаміка. </td></tr>
-<tr><td><tt>bfsinfo</tt></td><td> </td><td>Проводить аналіз файлової системи.</td></tr>
+<tr><td><tt>bfsinfo</tt></td><td> </td><td>За допомогою цієї програми Ви можете отримати деяку інформацію про базову структуру Вашого BFS-диска.<br />
+Ви можете створити дамп суперблока диска, який містить деяку загальну інформацію про диск (його розмір тощо), кожен «i-node», місцезнаходження якого Вам відомо і «B+Tree», який містить дані каталогу та індексів.</td></tr>
 <tr><td><tt>bunzip2</tt></td><td> </td><td>Дивіться <tt>bzip2</tt>.</td></tr>
 <tr><td><tt>bzip2</tt></td><td> </td><td>Компресор файлів.</td></tr>
 <tr><td><tt>c++</tt></td><td> </td><td>Компілятор C++.</td></tr>
@@ -107,7 +108,7 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>clipboard</tt></td><td> </td><td>Маніпулює системним буфером обміну.</td></tr>
 <tr><td><tt>cmp</tt></td><td> </td><td>Виконує побайтове порівняння файлів.</td></tr>
 <tr><td><tt>collectcatkeys </tt></td><td> </td><td>Збирає рядки, відмічені для перекладу та створює catkeys-файли (каталоги локалізації).<br />
-Викликається автоматично при виконанні команди <tt>make catkeys</tt> в системі «makefile_engine».<br />
+Викликається автоматично при виконанні команди <tt>make catkeys</tt> в системі «Makefile engine».<br />
 Після виконання команди у каталозі з проектом буде створена папка <span class="path">locales</span> з файлом «en.catkeys». Далі потрібно створити catkeys-файли для мов, які Вам потрібні.<br />
 Наприклад, щоб створити catkeys-файл для української мови, виконайте команду:
 <pre class="terminal">collectcatkeys -o locales/uk.catkeys -l ukrainian -s application/x-vnd.Haiku-IPCamera objects.x86_64-cc11-release/IPCamera.pre</pre></td></tr>
@@ -140,7 +141,7 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>error</tt></td><td> </td><td>Виводить текстові повідомлення про помилки для заданих номерів помилок. </td></tr>
 <tr><td><tt>expand</tt></td><td> </td><td>Конвертує символи табуляції на пробіли.</td></tr>
 <tr><td><tt>expr</tt></td><td> </td><td>Виводить значення виразу.</td></tr>
-<tr><td colspan="3"><a id="F" name="F"><h2>F</h2></a></td></tr>
+<tr><td colspan="3"><a id="F" name="F"><h2>F - J</h2></a></td></tr>
 <tr><td><tt>factor</tt></td><td> </td><td>Виводить прості множники цілих чисел.</td></tr>
 <tr><td><tt>false</tt></td><td> </td><td>Нічого не робить, позначає «неуспішно» та повертає значення «1».</td></tr>
 <tr><td><tt>fdinfo</tt></td><td> </td><td>Показує інформацію про використані дескриптори файлів у системі.</td></tr>
@@ -177,7 +178,7 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>iroster</tt></td><td> </td><td>Виводить список пристроїв вводу.</td></tr>
 <tr><td><tt>isvolume</tt></td><td> </td><td>Отримує інформацію про підключений том.</td></tr>
 <tr><td><tt>join</tt></td><td> </td><td>Для кожної пари вхідних рядків з ідентичними  полями виводить об’єднаний рядок у стандартний вивод.</td></tr>
-<tr><td colspan="3"><a id="K" name="K"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>K</h2></a></td></tr>
+<tr><td colspan="3"><a id="K" name="K"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>K - O</h2></a></td></tr>
 <tr><td><tt>kernel_debugger</tt></td><td> </td><td>Входить у відладчик ядра.</td></tr>
 <tr><td><tt>keymap</tt></td><td> </td><td>Завантажує або зберігає розкладку клавіш.</td></tr>
 <tr><td><tt>kill</tt></td><td> </td><td>Посилає процесу сигнал про завершення. </td></tr>
@@ -187,7 +188,7 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>lesskey</tt></td><td> </td><td>Визначає прив'язку клавіши для less. </td></tr>
 <tr><td><tt>link</tt></td><td> </td><td>Створює посилання на файл.</td></tr>
 <tr><td><tt>linkcatkeys</tt></td><td> </td><td>Компілює файли «*.catkeys» (каталоги локалізації), додаючи ресурси до виконуваного файлу.<br />
-Викликається автоматично при виконанні команди <tt>make bindcatalogs</tt> в системі «makefile_engine».</td></tr>
+Викликається автоматично при виконанні команди <tt>make bindcatalogs</tt> в системі «Makefile engine».</td></tr>
 <tr><td><tt>listarea</tt></td><td> </td><td>Виводить списки команд (teams) для всіх запущених процесів з інформацією про задіяні ресурси та розподіл пам'яті. </td></tr>
 <tr><td><tt>listattr</tt></td><td> </td><td>Виводить список атрибутів файлу. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>listdev</tt></td><td> </td><td>Виводить список всіх пристроїв апаратного забезпечення в системі.</td></tr>
@@ -232,7 +233,7 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>nproc</tt></td><td> </td><td>Виводить кількість доступних процесорів.</td></tr>
 <tr><td><tt>od</tt></td><td> </td><td>Запис файлів у вісімковому або інших форматах. Виводить однозначне представлення кожного файлу («-» означає стандартний ввод), або стандартний ввод, якщо файл не задано.</td></tr>
 <tr><td><tt>open</tt></td><td> </td><td>Запускає програму/документ із оболонки командного рядка. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
-<tr><td colspan="3"><a id="P" name="P"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>P</h2></a></td></tr>
+<tr><td colspan="3"><a id="P" name="P"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>P - S</h2></a></td></tr>
 <tr><td><tt>package</tt></td><td> </td><td>Створює, перевіряє або розпаковує пакети Haiku.</td></tr>
 <tr><td><tt>package_repo</tt></td><td> </td><td>Створює або перевіряє файл репозитарію пакетів Haiku.</td></tr>
 <tr><td><tt>passwd</tt></td><td> </td><td>Змінює пароль користувача.</td></tr>
@@ -255,6 +256,7 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>ramdisk</tt></td><td> </td><td>Створює ram-диск. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>rc</tt></td><td> </td><td>Компілятор ресурсів.</td></tr>
 <tr><td><tt>readlink</tt></td><td> </td><td>Виводить шлях до об'єкта символічного посилання.</td></tr>
+<tr><td><tt>recover</tt></td><td> </td><td>Інструмент, за допомогою якого можна відновити дані з пошкоджених BFS-дисків, які Ви навіть не можете змонтувати (дивіться <a href="https://www.pinc-software.de/docs/BFS-tools.html#recover">документацію</a> для отримання додаткової інформації).</td></tr>
 <tr><td><tt>reindex</tt></td><td> </td><td>Розміщує атрибути існуючих файлів у новостворених індексах. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>release</tt></td><td> </td><td>Виставляє семафор. </td></tr>
 <tr><td><tt>renice</tt></td><td> </td><td>Змінює пріоритет запущеного процесу.</td></tr>
@@ -292,7 +294,7 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>sum</tt></td><td> </td><td>Виводить контрольну суму та кількість блоків для кожного файлу. </td></tr>
 <tr><td><tt>sync</tt></td><td> </td><td>Примусово переносить змінені блоки на диск, оновлює суперблок.</td></tr>
 <tr><td><tt>sysinfo</tt></td><td> </td><td>Показує інформацію про систему.</td></tr>
-<tr><td colspan="3"><a id="T" name="T"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>T</h2></a></td></tr>
+<tr><td colspan="3"><a id="T" name="T"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>T - Z</h2></a></td></tr>
 <tr><td><tt>tac</tt></td><td> </td><td>Об'єднує та друкує файли, починаючи з останнього рядка. </td></tr>
 <tr><td><tt>tail</tt></td><td> </td><td>Виводить останні десять рядків файлу.</td></tr>
 <tr><td><tt>tcpdump</tt></td><td> </td><td>Збирає та виводить дампи трафіку мережі. </td></tr>

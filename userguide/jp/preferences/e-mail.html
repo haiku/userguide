@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -25,7 +25,7 @@
 <body>
 
 <div id="banner">
-<div><span>ユーザーガイド</span></div>
+<div><span>User guide</span></div>
 </div>
 
 <div class="nav">
@@ -56,7 +56,7 @@
 </ul>
 <span>
  «  <a href="deskbar.html">Deskbar</a> 
-::  <a href="../preferences.html" class="uplink">Preferences (プレファレンス)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences</a> 
 ::  <a href="filetypes.html">FileTypes</a>  »
 </span></div>
 </div>
@@ -97,8 +97,7 @@
 <p>それから、<i>E-mail アドレス</i> (E-mail Address)、<i>ログイン名</i> (Login Name)、<i>パスワード</i> (Password) を入力して、Haiku 内で用いられる<i>アカウント名</i> (Account Name) と<i>実名</i> (Real Name) も決めてください。</p>
 <p>(海外の) 主要な電子メールプロバイダーを利用している場合、Haiku はすでにサーバーの IP アドレスのような技術項目をすべて理解しています。それ以外の場合は、<span class="button">次へ (Next)</span> をクリックすると、これらの情報を手入力するウィンドウが開きます。</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>まず、受信メールの<i>サーバー名 (Server name)</i>、<i>認証方法 (Login type)</i>、および<i>接続タイプ (Connection type)</i> を設定します。その下は、送信メールの設定です。ユーザーの電子メールプロバイダーのウェブサイトで必要な情報は得られるはずです。<br />
-各種設定や追加の設定について詳しくは以下を見てください。</p>
+<div class="box-info">GMail を e-mail プロバイダーとして使用している場合、特別なアプリパスワードを作成する必要があります。<br />Google のサポートページ、<a href="https://support.google.com/mail/answer/185833">アプリ パスワードでログインする</a>を参照ください。</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -114,7 +113,7 @@
 <p>どのように電子メールを受信するか設定するには、アカウント名の下にある<span class="menu">受信 (Incoming)</span> をクリックします。</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>最初は、受信用の<span class="menu">メールサーバー (Mail server)</span> アドレスです。プロバイダーが特定のポートへのログインを必要とするなら、コロンで区切ってアドレスに追加できます (例: <tt>pop.your-provider.org:1400</tt>)。</p>
-<p>次に、ログイン情報として、<i>ログイン名 (Login name)</i>、および<i>パスワード (Password)</i> を入力してください。必要なら、<i>認証方法 (Login type)</i> をデフォルトの<span class="menu">平文 (Plain text)</span> から <span class="menu">APOP</span> に変更してください。</p>
+<p>次に、ログイン情報として、<i>ユーザー名 (Username)</i>、および<i>パスワード (Password)</i> を入力してください。必要なら、<i>接続方法 (Connection type)</i> を <span class="menu">暗号化なし (No encryption)</span> から <span class="menu">SSL</span> へ変更してから、<i>認証方法 (Login type)</i> をデフォルトの<span class="menu">平文 (Plain text)</span> から <span class="menu">APOP</span> に変更してください。</p>
 <p>もし <i>POP3</i> を使っていて、このアカウントのメールを複数のコンピューターで取得するなら、<span class="menu">受信後もサーバーにメールを保存する (Leave mail on server)</span> オプションと、<span class="menu">ローカルから削除されたらメールをサーバーから削除する (Remove mail from server when deleted)</span> を有効にしてもよいでしょう。</p>
 <p>もし代わりに <i>IMAP</i> を使っているならば、<span class="menu">Remove mail from server when deleted</span> locally オプションが利用できます。また、同期するフォルダーを、<span class="menu">Top Mailbox Folder</span> (最上層の受信箱フォルダー) から指定したフォルダーとそのサブフォルダーに変更できます。</p>
 <p>同様に、指定したサイズより大きいメールについて、<span class="menu">部分的にメッセージをダウンロード</span> (Partially download messages) するようにも設定できます。これはヘッダーのみを取得するので、題名と差出人を見た後でメッセージの続きと有効な添付ファイルをダウンロードするか決められます。低速な接続回線を利用している場合に便利です。</p>
@@ -126,7 +125,7 @@
 <a id="outgoing" name="outgoing">送信の追加設定</a></h2>
 <p>アカウント名の下にある <span class="menu">送信 (Outgoing)</span> をクリックして、電子メールの送信を設定します。</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>最初に、送信用の <i>SMTP サーバー (SMTP Server)</i>  アドレスを設定します。先の受信サーバーと同様、必要に応じて特定のポートを指定できます (例 <tt>mail.your-provider.org:1200</tt>)。</p>
+<p>最初に、送信用 <i>SMTP サーバー (SMTP server)</i> アドレスを設定します。先の受信サーバーと同様、必要に応じて特定のポートを指定でき (例 <tt>mail.your-provider.org:1200</tt>)、and change <i>ユーザー名 (Username)</i>, <i>パスワード (Password)</i> および <i>接続方法 (Connection type)</i> を変更できます。</p>
 <p>ログインする必要があれば、<i>ログインの種類 (Login Type)</i> を <span class="menu">ESMTP</span> に変更しユーザー名とパスワードを入力します。もう 1 つは、プロバイダーがメール確認時に認証のため <span class="menu">POP3 before SMTP</span> を要求する場合に用いられます。</p>
 <p>受信メールと同様に、送信箱の<i>場所</i> (Destination) を変更できます。(デフォルト: <span class="path">/boot/home/mail/out/</span>)</p>
 
@@ -213,19 +212,17 @@
 <a id="settings" name="settings">メールサービスの設定</a></h2>
 <p>受信および送信メールサーバーの設定が (おそらくフィルターの設定も) 完了したので、実際の確認と取得のすべてを行うメールサービスに、ジョブをどのように行うか知らせる必要があります。</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p><i>メールチェック (Mail Checking)</i> で、アカウントのメールサーバーに新着メールを問い合わせる間隔を指定します。<br />
-ダイヤルアップ接続を利用しているなら、メールチェックのためだけに自動でダイヤルしてしまうのを防ぐため<span class="menu">ダイヤルアップ接続の時のみ (Only When Dial-Up is Connected)</span> と <span class="menu">ダイヤルアップ接続が中断した時に送信メールを予約する (Schedule Outgoing Mail When Dial-Up is Disconnected)</span> を有効にするとよいでしょう。 </p>
-<p>メールサービスでは、ステータスウィンドウの表示を<span class="menu">表示しない (Never)</span>、<span class="menu">送信中に (While Sending)</span>、<span class="menu">送受信中に (While Sending and Receiving)</span>、<span class="menu">常に (Always)</span> から選択できます。</p>
-<p><span class="menu">起動時にメールサービスを開始する (Start Mail Services on Startup)</span> が無効だと、処理を実行する mail_daemon が起動していないので、有効であるかしっかり確認してください。</p>
-<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
+<p>チェックボックスをチェック後、アカウントのメールサーバーに新着メールを問い合わせる間隔を指定できます。</p>
+<p>メールサービスでは、通知を<span class="menu">表示しない (Never)</span>、<span class="menu">送信中に (While Sending)</span> 表示、<span class="menu">送受信中に (While Sending and Receiving)</span> 表示から選択できます。</p>
 <p><span class="menu">メールボックスメニューを編集… (Edit Mailbox Menu...)</span> は、<span class="path">/boot/home/config/Mail/Menu Links/</span> フォルダーを開きます。この中に格納されたすべてのフォルダーやクエリ、またそれらのリンクが、Deskbar トレイのメールサービスにあるメールボックスアイコンのコンテキストメニューに表示されます。</p>
-<p>メニューからは、<span class="menu">メッセージを作成... (Create new message...)</span>、<span class="menu">直にメッセージをチェック (Check for mail now)</span> 、<span class="menu">メール設定の変更... (Preferences...)</span> といった操作ができます。</p>
+<p>そのコンテキストメニューからは、<span class="menu">メッセージを作成... (Create new message...)</span>、<span class="menu">メールを今すぐチェック (Check for mail now)</span> もでき 、<span class="menu">メール設定... (Settings...)</span> の変更もできます。</p>
+<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p><span class="key">SHIFT</span> を押しながらメニューを開くと、次のコマンドも表示されます。</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">メッセージのみチェック (Check for mails only)</span></td><td style="width:5px;"> </td>
 		<td>指定した 1 つのアカウントのメッセージをチェックするためのサブメニューを開きます。</td></tr>
 	<tr><td><span class="menu">未送信のメッセージを送る (Send pending mails)</span></td><td> </td>
-		<td>新規メールをチェックせずにメッセージを送信します。</td></tr>
+		<td>新規メールをチェックせずに未送信のメッセージを送信します。</td></tr>
 	<tr><td><span class="menu">メールサービスをシャットダウン (Shutdown mail services)</span></td><td> </td>
 		<td>メールサービスを終了します。</td></tr>
 </table>
@@ -237,7 +234,7 @@
 <div class="nav">
 <div class="inner"><span>
  «  <a href="deskbar.html">Deskbar</a> 
-::  <a href="../preferences.html" class="uplink">Preferences (プレファレンス)</a> 
+::  <a href="../preferences.html" class="uplink">Preferences</a> 
 ::  <a href="filetypes.html">FileTypes</a>  »
 </span></div>
 </div>

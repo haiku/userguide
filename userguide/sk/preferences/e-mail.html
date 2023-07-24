@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Preklad tejto stránky zatiaľ nie je dokončený. Dovtedy sa nedokončené časti zobrazia v anglickom origináli.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Obsah</td></tr>
@@ -94,8 +95,7 @@ Začnete kliknutím na tlačidlo <span class="button">Pridať</span>, čím vytv
 <p>Potom zadajte svoju <i>Emailovú adresu</i>, <i>Prihlasovacie meno</i> a <i>Heslo</i>, uveďte <i>Názov účtu</i>, pod ktorým bude známy v Haiku a vaše <i>Skutočné meno</i>.</p>
 <p>Ak je váš účet od jedného z veľkých poskytovateľov e-mailu, Haiku už pozná všetky technické detaily ako napríklad IP adresa servera. Ak to ale nie je váš prípad, kliknutím na <span class="button">Ďalej</span> otvoríte nové okno, do ktorého treba tieto informácie zadať:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>Najprv nastavíte <i>Názov servera</i>, <i>Typ prihlásenia</i> a <i>Typ pripojenia</i> pre prichádzajúce správy, pod tým pre odchádzajúce. Potrebné informácie by ste mali nájsť na webstránke vášho poskytovateľa emailu.<br />
-Pozrite nižšie pre viac informácií o rôznych nastaveniach a ďalších možnostiach.</p>
+<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -111,7 +111,7 @@ Pozrite nižšie pre viac informácií o rôznych nastaveniach a ďalších mož
 <p>Kliknutím na <span class="menu">Prichádzajúce</span> pod názvom vášho účtu nastavíte prijímanie e-mailov.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>Prvá je adresa <span class="menu">Poštového servera</span> pre prichádzajúce správy. Ak váš poskytovateľ požaduje pripojenie ku konkrétnemu portu, pridajte ho za adresu, oddelený od nej dvojbodkou. Napríklad <tt>pop.vas-poskytovatel.sk:1400</tt>.</p>
-<p>Potom vložíte prihlasovacie údaje, <i>Používateľské meno</i> a <i>Heslo</i>, a ak je to potrebné, zmeňte <i>Typ prihlásenia</i> z prednastavenej autentifikácie <span class="menu">Čistý text</span> na <span class="menu">APOP</span>.</p>
+<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
 <p>Ak používate <i>POP3</i> a prijímate správy z tohto účtu na viacerých počítačoch, asi budete chcieť aktivovať možnosť <span class="menu">Ponechať poštu na serveri</span> a len <span class="menu">Odstrániť poštu zo servera pri zmazaní</span> lokálne.</p>
 <p>Ak namiesto toho používate <i>IMAP</i>, máte možnosť <span class="menu">Odstrániť poštu zo servera pri zmazaní</span> lokálne. Môžete špecifikovať <span class="menu">Priečinky IMAP</span> pre synchronizáciu len určitých priečinkov a ich podpriečinkov.</p>
 <p>Tiež si môžete vybrať <span class="menu">Čiastočne stiahnuť správy väčšie ako</span> určitá veľkosť. Toto stiahne len hlavičku a vy sa môžete rozhodnúť, či chcete stiahnuť zvyšok správy plus možné prílohy potom, ako uvidíte predmet a odosielateľa. Výhodné najmä pre pomalšie pripojenia.</p>
@@ -123,7 +123,7 @@ Pozrite nižšie pre viac informácií o rôznych nastaveniach a ďalších mož
 <a id="outgoing" name="outgoing">Viac o nastavovaní odchádzajúceho e-mailu</a></h2>
 <p>Kliknutím na <span class="menu">Odchádzajúce</span> pod názvom vášho účtu nastavíte odosielanie e-mailov.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>Najprv nastavte adresu <i>Servera SMTP</i> pre odchádzajúce správy. Tak isto ako s odchádzajúcimi správami, môžete nastaviť port, ak je potrebný, napr. <tt>mail.your-provider.org:1200</tt>.</p>
+<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
 <p>Ak sa potrebujete prihlásiť, zmeňte <i>Typ prihlásenia</i> na <span class="menu">ESMTP</span> a zadajte používateľske meno a heslo, ktoré sú uvedené vyššie. Druhý typ sa používa u poskytovateľov, ktorí potrebujú, aby ste si správy sťahovali cez <span class="menu">POP3, potom SMTP</span> kvôli identifikácii.</p>
 <p>Tak isto ako s prichádzajúcimi správami, môžete zmeniť <i>Cieľ</i> vašej schránky odchádzajúcich správ (prednastavené: <span class="path">/boot/home/mail/out/</span>).</p>
 
@@ -212,13 +212,11 @@ Filtre odchádzajúcich správ</h3>
 <a id="settings" name="settings">Nastavenie Poštovej Služby</a></h2>
 <p>Takže teraz, keď ste si nastavili servery (a možno aj zopár filtrov) pre prichádzajúcu aj odchádzajúcu poštu, musíte povedať Poštovej službe, ktorá v skutočnosti vykonáva kontrolu a získavanie nových správ, ako má vykonávať svoju robotu.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>Pod <i>Kontrola pošty</i> nastavujete interval, v akom sa kontrolujú nové správy na serveri.<br />
-Ak ste na vytáčanom spojení, budete to asi chcieť robiť <span class="menu">Iba ak je vytočené spojenie</span> a tiež <span class="menu">Naplánovať odchádzajúcu poštu pri odpojení vytáčaného spojenia</span>, aby ste zabránili pravidelnému vytáčaniu len kvôli skontrolovaniu e-mailu.</p>
-<p>Poštová služba má okno so stavom, ktoré môžete nastaviť, aby sa zobrazovalo <span class="menu">Nikdy</span>, <span class="menu">Počas odosielania</span>, <span class="menu">Počas odosielania a prijímania</span> alebo <span class="menu">Vždy</span>.</p>
-<p>Uistite sa, že je začiarknuté <span class="menu">Spustiť služby pošty pri štarte</span> alebo nebude bežať mail_daemon, ktorý by vaše požiadavky plnil...</p>
-<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
+<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
+<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
 <p><span class="menu">Upraviť menu poštovej schránky...</span> otvorí priečinok <span class="path">/boot/home/config/Mail/Menu Links/</span>. Všetky priečinky alebo požiadavky (!) alebo ich odkazy v tomto priečinku sa zjavia v kontextovom menu ikony schránky Poštovej služby v Paneli.</p>
-<p>Z toho menu môžete tiež <span class="menu">Vytvoriť novú správu...</span>, <span class="menu">Skontrolovať poštu teraz</span> alebo upraviť <span class="menu">Nastavenia...</span>.</p>
+<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
+<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p>Ak podržíte stlačený kláves <span class="key">SHIFT</span> počas otvárania kontextového menu, dostanete ďalšie príkazy:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">Iba skontrolovať novú poštu</span></td><td style="width:5px;"> </td>

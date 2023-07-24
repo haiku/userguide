@@ -18,7 +18,7 @@
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="all" />
-	<title>Reporting bugs</title>
+	<title>Звіти про помилки</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
@@ -61,120 +61,119 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Індекс</td></tr>
-<tr class="index"><td><a href="#account">Getting a Trac account</a><br />
-                <a href="#report">Creating a bug report</a><br />
-                <a href="#app">Application bugs</a><br />
-                  <a href="#server">Server bugs</a><br />
-                  <a href="#kernel">Kernel bugs</a><br />
-                  <a href="#kdl">Kernel Debugging Land - KDL</a><br />
-                  <a href="#syslog">Syslog</a><br />
-                  <a href="#onscreen">On screen debug output</a><br />
-                  <a href="#hardware">Hardware/Driver bugs</a><br />
-                  <a href="#next">What's next?</a></td></tr>
+<tr class="index"><td><a href="#account">Створення облікового запису у системі Trac</a><br />
+                <a href="#report">Створення звіту про помилку</a><br />
+                <a href="#app">Помилки у програмах</a><br />
+                  <a href="#server">Помилки у серверах</a><br />
+                  <a href="#kernel">Помилки в ядрі</a><br />
+                  <a href="#kdl">Kernel Debugging Land – KDL</a><br />
+                  <a href="#syslog">Системний журнал</a><br />
+                  <a href="#onscreen">Виведення відладочної інформації на екран</a><br />
+                  <a href="#hardware">Помилки в апаратному забезпеченні/драйверах</a><br />
+                  <a href="#next">І що далі?</a></td></tr>
 </table>
 
-<h1>Reporting bugs</h1>
+<h1>Звіти про помилки</h1>
 
-<p>Since our developers are unable to test every hardware combination, nor every different way of interacting with the operating system, we are relying on users to give us some input on how things work at their end. Since Haiku is still quite young, it's very likely that you will encounter bugs. We thank you for taking the time to report these. Together we can improve Haiku, bit by bit.</p>
-<p>To keep our bugtracker effective, it's essential to abide by the <a href="http://dev.haiku-os.org/wiki/BugTrackerEtiquette">Bug Tracker Etiquette</a>.</p>
-
-<h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="account" name="accout">Getting a Trac account</a></h2>
-<p>To file a ticket, you need to have an account at <a href="http://dev.haiku-os.org/register" title="Register at Haiku's Bugtracker">Haiku's Bugtracker</a>.<br />
-When creating a new account, be certain to <b>provide your email address</b> as it is necessary to obtain basic ticket modification privileges. Be sure to <b>check your spam folder</b> shortly afterwards, as the all important verification mail often ends up there.</p>
+<p>Оскільки наші розробники не можуть протестувати усі комбінації апаратного забезпечення або кожен спосіб взаємодії з операційною системою, ми покладаємося на користувачів, які можуть надати нам інформацію про те, як система працює на їхньому комп'ютері. Зважаючи на те, що Haiku все ще досить молода, дуже ймовірно, що Ви зіткнетеся з помилками. Ми дякуємо Вам за те, що Ви знайдете час, щоб повідомити про них. Разом ми можемо покращити Haiku, крок за кроком.</p>
+<p>Щоб наш багтрекер був ефективним, важливо дотримуватися <a href="http://dev.haiku-os.org/wiki/BugTrackerEtiquette">Етикету (соціальних правил)</a> багтрекера.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="report" name="report">Creating a bug report</a></h2>
-<p>Before reporting a bug, please <a href="http://dev.haiku-os.org/query?status=new&amp;status=assigned&amp;status=reopened&amp;status=closed&amp;summary=%7Etext+you+want+to+search+for&amp;order=priority">make sure</a> that it does not yet exist. You can also use the <a href="http://dev.haiku-os.org/search?q=&amp;noquickjump=1&amp;ticket=on">search</a> function for this.<br />
-After you have established that it's a unique bug, make your information as accurate as possible:</p>
+<a id="account" name="accout">Створення облікового запису у системі Trac</a></h2>
+<p>Щоб подати тікет, Вам потрібно мати обліковий запис у <a href="http://dev.haiku-os.org/register" title="Register at Haiku's Bugtracker">системі відстеження помилок Haiku</a>.<br />
+Створюючи новий обліковий запис, не забудьте вказати <b>свою електронну адресу</b>, оскільки вона необхідна для отримання базових привілеїв на модифікацію тікета. Одразу після цього, не забудьте перевірити <b>папку «Спам»</b>, оскільки всі важливі листи з підтвердженням часто потрапляють туди.</p>
+
+<h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="report" name="report">Створення звіту про помилку</a></h2>
+<p>Перш ніж створити звіт про помилку, будь ласка, <a href="http://dev.haiku-os.org/query?status=new&amp;status=assigned&amp;status=reopened&amp;status=closed&amp;summary=%7Etext+you+want+to+search+for&amp;order=priority">переконайтеся</a>, що такий тікет ще не виставлений. Для цього Ви можете скористатися <a href="http://dev.haiku-os.org/search?q=&amp;noquickjump=1&amp;ticket=on">функцією пошуку</a>.<br />
+Після того, як Ви переконалися, що це унікальна помилка, зробіть свою інформацію якомога точнішою:</p>
 <ul>
-	<li><p>Attempt to reproduce your issue on the current revision of Haiku. Pre-built images for testing purposes are  <a href="http://download.haiku-os.org">available</a> online.</p></li>
-	<li><p>Include basic information such as how you are testing Haiku (on real hardware, on VMWare, on QEMU, etc.).</p></li>
-	<li><p>Mention which revision you are running. You can find this information in <span class="menu">About Haiku...</span> from the Deskbar menu. Also mention what kind of Haiku build you are testing (x86_gcc2, x86_64). The downloadable images are named accordingly, for a self-built image you should know how you built it.</p></li>
-	<li><p>Describe the problem you are experiencing. Try to be as accurate as you can: describe the actual behavior, and the behavior you expected.</p></li>
-	<li><p>Describe what steps you need to perform in order to expose the bug. This will help developers reproduce the bug.</p></li>
-	<li><p>Attach as much information as you have. If it is a GUI bug, or a bug in one of the applications, try to take a screenshot by pressing the <span class="key">PRINT</span> key.</p></li>
+	<li><p>Спробуйте відтворити проблему у поточній редакції Haiku. Тестові образи системи <a href="http://download.haiku-os.org">доступні</a> на офіційному сайті.</p></li>
+	<li><p>Надайте основну інформацію, наприклад, як Ви тестуєте Haiku (на реальному обладнанні, на VMWare, на QEMU тощо).</p></li>
+	<li><p>Зазначте, яку ревізію Ви використовуєте. Цю інформацію можна знайти у пункті <span class="menu">Про систему Haiku</span> меню Deskbar. Також зазначте, яку збірку Haiku Ви тестуєте (x86_gcc2, x86_64), яка тестується. Образи, які можна завантажити, мають відповідні назви, для самостійно створеного образу Вам слід знати, як Ви його створили.</p></li>
+	<li><p>Опишіть проблему, з якою Ви зіткнулися. Намагайтеся бути якомога точнішими: опишіть фактичну поведінку та поведінку, яку Ви очікували.</p></li>
+	<li><p>Опишіть, які кроки потрібно виконати, щоб виявити (відтворити) помилку. Це допоможе розробникам відтворити баг.</p></li>
+	<li><p>Додайте якомога більше інформації. Якщо це помилка графічного інтерфейсу або помилка в одній з програм, спробуйте зробити знімок екрана натиснувши клавішу <span class="key">PRINT</span>.</p></li>
 </ul>
 	
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="app" name="app">Application bugs</a></h2>
-<p>When an application crashed, you can either save a report or write a core file (both saved to the Desktop) that you can attach to a bugreport, or you can evoke the <a href="../../userguide/uk/applications/debugger.html">Debugger</a>.</p>
-<p>If it's not a crashing bug, you may get useful information when starting the application from Terminal. Some applications provide logging and other options when started with certain parameters; try <tt>-h</tt> or <tt>--help</tt> to see if that is the case. As example, see the different logging levels of <a href="../../userguide/uk/applications/haikudepot.html#logs">HaikuDepot</a>.</p>
+<a id="app" name="app">Помилки у програмах</a></h2>
+<p>Після аварійного завершення програми Ви можете зберегти звіт про помилку чи записати дамп ядра (обидва зберігаються на Робочому столі), який можна прикріпити при поданні тікета, або викликати <a href="../../userguide/uk/applications/debugger.html">Debugger</a>.</p>
+<p>Якщо це не збій, Ви можете отримати корисну інформацію під час запуску програми з терміналу. Деякі програми передбачають ведення журналу та інші можливості під час запуску з певними параметрами; спробуйте скористатися командами <tt>-h</tt> або <tt>--help</tt>, щоб дізнатися, чи це так. Як приклад, перегляньте різні рівні журналювання у <a href="../../userguide/uk/applications/haikudepot.html#logs">HaikuDepot</a>.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="server" name="server">Server bugs</a></h2>
-<p>When vital servers like the app server, the registrar or the input server crash, you won't see the usual crash alert. Instead the whole screen will be cleared white and the Debugger will be started in text-mode, its output appearing directly on screen. Likely you will still be able to move the mouse, which will overwrite the white and Debugger output on screen. Applications still running (like ProcessController or the clock in the Deskbar) might also draw over the debugger output on screen.<br />
-Besides everything being more ugly and inconvenient, basically the same applies as for application bugs. Most importantly procure a back trace (<span class="cli">bt</span> command). You may need to take a picture of the screen with a digital camera, since you won't be able to copy the text anywhere.<br />
-Depending on what exactly crashed, you can try to save a crash report on the Desktop with <span class="cli">save-report</span> or <span class="cli">write-core</span> for a core file, and then press the power button once to try shutting cleanly down. If the power button doesn't work, there are also the commands <span class="cli">shutdown</span> and <span class="cli">reboot</span>.</p>
+<a id="server" name="server">Помилки у серверах</a></h2>
+<p>Коли життєво важливі сервери такі як app server, registrar або input server виходять з ладу, Ви не побачите звичного сповіщення про збій. Замість цього весь екран стане білим, відладчик буде запущено у текстовому режимі і його вивід з'явиться безпосередньо на екрані. Скоріш за все, Ви все ще зможете рухати мишею, курсор якої перезапише білий екран і вивід відладчика на екран. Програми, які все ще працюють (наприклад, ProcessController або годинник на панелі задач), також можуть перекривати вивід відладчика на екрані.<br />
+Окрім того, що все виглядає більш жахливо і незручно, в основному все те ж саме, що і для помилок у програмі. Найважливіше – зробити зворотне трасування (командою <span class="cli">bt</span>). Можливо, Вам доведеться сфотографувати екран цифровою камерою, оскільки скопіювати текст нікуди не вдасться.<br />
+Залежно від того, що саме вийшло з ладу, Ви можете спробувати зберегти звіт про помилку на робочому столі за допомогою команди <span class="cli">save-report</span> або <span class="cli">write-core</span> для дампа ядра, а потім натиснути кнопку живлення один раз, щоб спробувати вимкнути систему повністю. Якщо кнопка живлення не спрацювала, є також команди <span class="cli">shutdown</span> і <span class="cli">reboot</span>.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="kernel" name="kernel">Kernel bugs</a></h2>
-<p>Kernel bugs are usually the ones with the most severe effects while at the same time being the hardest to debug. There are different kinds of symptoms, which most likely point to a kernel or driver issue:</p>
+<a id="kernel" name="kernel">Помилки в ядрі</a></h2>
+<p>Помилки в ядрі зазвичай мають найсерйозніші наслідки і в той же час їх найважче виправляти. Існують різні типи симптомів, які, найімовірніше, вказують на проблему в ядрі або драйверах:</p>
 <ul>
-<li><p>The system enters kernel debugging land (KDL) on its own volition. The upper part of the screen is cleared white and several lines of text are printed on it. The second line says "<i>Welcome to Kernel Debugging Land...</i>", the one above it states the immediate reason for entering KDL.</p></li>
-<li><p>The system reboots spontaneously.</p></li>
-<li><p>The system freezes completely. You can't move the mouse and no application draws anything anymore. An important test in that situation is, whether you still can enter KDL via the shortcut <span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> (<span class="key">SysReq</span> being <span class="key">PRINT</span> on most keyboards). Wait at least a minute to see, if anything happens.</p></li>
-<li><p>The system doesn't boot up correctly. It may reboot spontaneously or stop at some point (e.g. at some icon of the boot screen). In the latter case also try <span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span>.</p></li>
-<li><p>The whole system or some piece of hardware doesn't behave correctly. For example, it could be very slow, errors occur, or something doesn't work at all. If some hardware doesn't work at all, the first obvious check is whether Haiku supports it at all at the moment (e.g. ask on a mailing list or a forum).</p></li>
+<li><p>Система переходить у режим відладки ядра (KDL) за власним бажанням. Верхня частина екрану очищається, стає білою і друкуються кілька рядків тексту. У другому рядку написано "<i>Welcome to Kernel Debugging Land…</i>" а над ним вказано безпосередню причину переходу до режиму KDL.</p></li>
+<li><p>Спонтанна перезагрузка системи.</p></li>
+<li><p> Система повністю зависає. Ви не можете рухати мишею і жодна програма більше нічого не малює. Важливим тестом у цій ситуації є перевірка того, чи Ви все ще можете увійти до KDL за допомогою комбінації клавіш <span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> (<span class="key">SysReq</span> – це <span class="key">PRINT</span> на більшості клавіатур). Зачекайте принаймні хвилину і перевірте, чи нічого не змінилося.</p></li>
+<li><p>Система загружається неправильно. Вона може спонтанно перезагрузитися або зупинятися на певному етапі (наприклад, на певному значку екрана загрузки). В останньому випадку спробуйте <span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span>.</p></li>
+<li><p>Уся система або якась її частина поводиться неправильно. Наприклад, вона може працювати дуже повільно, виникають помилки або щось взагалі не працює. Якщо якесь обладнання не працює взагалі, перше, що Ви можете зробити, це перевірити, чи підтримує Haiku його на даний момент (наприклад, запитайте у списку розсилки або на форумі).</p></li>
 </ul>
-<p>Note that while only the last point seems to indicate hardware relation, all the other symptoms could be caused by a bug in a hardware driver as well. If you have a suspicion what piece of hardware or corresponding driver might have to do with the problem, check whether removing/disabling the hardware or the driver makes a difference. For example, if you suspect Wifi you may find that your BIOS has an option to disable it. Or if not, you could blacklist the responsible Wifi driver from your Haiku installation (see <a href="../../userguide/uk/bootloader.html">Boot Loader</a>).</p>
+<p>Зверніть увагу, що хоча лише останній пункт вказує на апаратну частину, усі інші симптоми можуть бути спричинені помилкою в драйвері обладнання. Якщо у Вас є підозра, що апаратне забезпечення або відповідний драйвер можуть бути пов'язані з проблемою, перевірте, як вплинуло на ситуацію вилучення/вимкнення пристрою або драйвера. Наприклад, якщо Ви підозрюєте Wifi, Ви можете виявити, що у BIOS є можливість вимкнути його. Якщо ні, Ви можете додати відповідний драйвер Wifi до чорного списку встановленої системи Haiku (дивіться розділ <a href="../../userguide/uk/bootloader.html">Boot Loader</a>).</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="kdl" name="kdl">Kernel Debugging Land - KDL</a></h3>
-<p>If the system hasn't entered KDL by itself, you can do that intentionally by invoking the keyboard shortcut <span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> (<span class="key">SysReq</span> being the <span class="key">Print</span> key, normally).<br />
-Note that in KDL your keyboard may not work. PS/2 keyboards always do, with USB keyboards it depends on the type of USB controller (UHCI/EHCI). Generally, the keyboard should be plugged into the port directly, not via any hubs. In some circumstances, the keyboard only works if one has entered KDL via the keyboard shortcut at least once. USB OHCI is not supported at the moment.</p>
+<a id="kdl" name="kdl">Kernel Debugging Land – KDL</a></h3>
+<p>Якщо система не увійшла у режим KDL самостійно, Ви можете зробити це примусово за допомогою комбінації клавіш <span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> (<span class="key">SysReq</span> – це <span class="key">PRINT</span> на більшості клавіатур).<br />
+Зауважте, що у режимі KDL Ваша клавіатура може не працювати. Клавіатури PS/2 завжди працюють, у випадку з USB-клавіатурами це залежить від типу USB-контролера (UHCI/EHCI). Як правило, клавіатуру слід підключати до порту безпосередньо, а не через хаб. За певних обставин клавіатура може працювати, лише якщо Ви хоча б один раз перейшли у режим KDL за допомогою комбінації клавіш. USB OHCI наразі не підтримується.</p>
 <p>Сама KDL є свого роду оболонкою. Можна виконувати команди, які надають інформацію про систему. Можуть бути цікавими наступні команди :</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="cli">bt</span> (aka <span class="cli">sc</span>)</td><td> </td><td>Prints a back trace (aka stack crawl). If the system entered KDL on its on volition, a back trace is normally printed automatically. Enter the command if that didn't happen or part of it is obscured (e.g. when the stack trace is so long that it wrapped around) and your only way of providing the information to developers is by taking a picture of the screen.</td></tr>
-<tr><td><span class="cli">ints</span></td><td> </td><td>Shows the handled and unhandled hardware interrupts.</td></tr>
-<tr><td class="onelinetop"><span class="cli">co</span> (aka continue)</td><td> </td><td>Leaves the kernel debugger and continues normal operation of the system, if that is possible.</td></tr>
-<tr><td><span class="cli">reboot</span></td><td> </td><td>Reboots the system immediately. You will lose all unsaved data and even those that have been saved, but have not yet been written back to disk.</td></tr>
+<tr><td><span class="cli">bt</span> (або sc)</td><td> </td><td>виводить на екран зворотнє трасування (також відоме як перегляд стека). Якщо система увійшла у режим KDL за власним бажанням, зворотне трасування зазвичай виводиться автоматично. Введіть цю команду, якщо цього не сталося або частину трасування не видно (наприклад, якщо трасування стека настільки довге, що воно прокручує екран) і єдиний спосіб надати інформацію розробникам – це зробити знімок екрана.</td></tr>
+<tr><td><span class="cli">ints</span></td><td> </td><td>показує оброблені та необроблені апаратні переривання.</td></tr>
+<tr><td class="onelinetop"><span class="cli">co</span> (або continue)</td><td> </td><td>виходить з відладчика ядра і продовжує нормальну роботу системи, якщо це можливо.</td></tr>
+<tr><td><span class="cli">reboot</span></td><td> </td><td>відразу перезагружає систему. Будуть втрачені усі незбережені дані і навіть ті, які були збережені, але ще не були записані на диск.</td></tr>
 </table>
-<p>For more information, see the article <a href="http://www.haiku-os.org/documents/dev/welcome_to_kernel_debugging_land">Welcome to Kernel Debugging Land</a>.</p>
-<p>The KDL output is written to the serial port (if you have one, a respective cable, and a second computer to connect with, you can capture the output there via a terminal program) and to the syslog. If you can't leave KDL it won't be written to the syslog file, though. There's a boot loader debug option that allows you to capture it nonetheless (see below).</p>
-<p>You can generate QR codes from KDL output that can then be converted to text using smartphones or similar devices. See the blog post <a href="http://www.haiku-os.org/blog/mmlr/2012-07-01_qr_encode_your_kdl_output">QR Encode your KDL Output</a> on how to get data out of KDL using that feature.</p>
+<p>Докладнішу інформацію наведено у статті <a href="http://www.haiku-os.org/documents/dev/welcome_to_kernel_debugging_land">Welcome to Kernel Debugging Land</a>.</p>
+<p>Вивід KDL записується у послідовний порт (якщо у Вас є послідовний порт, відповідний кабель і другий комп'ютер для підключення, Ви можете перехопити вихідні дані за допомогою програми-терміналу) і у файл системного журналу (syslog). Якщо Ви не можете вийти з KDL, дані не будуть записані у файл syslog. Існує опція секції відладки загружчика, яка дозволяє перехоплювати вивод (дивіться нижче).</p>
+<p>Ви можете генерувати QR-коди з вихідних даних KDL, які потім можна перетворити на текст за допомогою смартфонів або подібних пристроїв. Про те, як отримати дані з KDL за допомогою цієї функції, дивіться статтю <a href="http://www.haiku-os.org/blog/mmlr/2012-07-01_qr_encode_your_kdl_output">QR Encode your KDL Output</a>.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="syslog" name="syslog">Syslog</a></h3>
-<p><b>This is the preferred method for extracting information from a non-booting system.</b><br />
-The syslog (short for system log) contains valuable information about what has happened in your system, including the output of KDL sessions. It's usually a good idea to attach it to the kernel related Trac ticket. The syslog is written to the file <span class="path">/boot/system/var/log/syslog</span>. Since writing to a file requires a working system, the most recent output might not have made it to the syslog when a kernel problem occurs (particularly on spontaneous reboots or uncontinuable KDL sessions).</p>
-<p>The option <span class="menu">Enable debug syslog</span> in the boot loader's <span class="menu">Debug menu</span> makes the syslog persistent. If the option <span class="menu">Save syslog from previous session during boot</span> is activated in the boot loader options (as it is by default), you'll find the syslog of your last session as <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
-If you're not able to boot to get to the previous_syslog, you have to enter the boot loader menu by holding down <span class="key">SHIFT</span> while booting.<br />
-In the boot loader's <span class="menu">Debug menu</span> you should find the entries <span class="menu">Display syslog from previous session</span> and <span class="menu">Save syslog from previous session</span>. The former displays the syslog on screen, the latter allows you to save it as a file to disk. Note that at the moment only FAT32 volumes are supported for saving the file. If you want to use a USB stick, but have plugged it in too late so that it isn't recognized yet, you can reset the machine and re-enter the boot loader menu. Note: Don't accidentally boot any operating system or the data will be lost.</p>
+<a id="syslog" name="syslog">Системний журнал (Syslog)</a></h3>
+<p><b>Це найкращий спосіб отримати інформацію з системи, яка не загружається.</b><br />
+Syslog (скорочення від system log – системний журнал) містить цінну інформацію про те, що сталося у Вашій системі, зокрема вивведення відладочної інформації сеансів KDL. Зазвичай рекомендується долучати його до пов'язаного з ядром тікета системи Trac. Системний журнал записується у файл <span class="path">/boot/system/var/log/syslog</span>. Оскільки для запису у файл потрібна робоча система, при виникненні проблем ядра (зокрема, під час спонтанних перезагрузок або перериванні сеансів KDL), крайній вивід міг не потрапити до системного журналу.</p>
+<p>Опція <span class="menu">Enable debug syslog</span> меню <span class="menu">Select debug options</span> загружчика вмикає запис системного журналу на постійній основі. Якщо у параметрах відладки загружчика увімкнено опцію <span class="menu">Save syslog from previous session during boot</span> (увімкнена за замовчуванням), системний журнал Вашого останнього сеансу запишеться як файл <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
+Якщо Ви не можете загрузитися, щоб отримати доступ до «previous_syslog», Вам потрібно увійти у меню загружчика, утримуючи клавішу <span class="key">SHIFT</span> під час загрузки (або <span class="key">SPACE</span> для загрузки через UEFI).<br />
+У меню <span class="menu">Select debug options</span> загружчика Ви знайдете опції <span class="menu">Display syslog from previous session</span> і <span class="menu">Save syslog from previous session</span>. Перша опція виводить syslog на екран, друга дозволяє зберегти його у вигляді файлу на диск. Зверніть увагу, що на даний момент для збереження файлу підтримуються лише томи FAT32. Якщо Ви хочете використати USB-накопичувач, але підключили його занадто пізно і він ще не розпізнаний, Ви можете перезагрузити комп'ютер і знову увійти до меню загружчика. Примітка:  Не загрузіть випадково будь-яку іншу операційну систему, інакше дані буде втрачено.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="onscreen" name="onscreen">On screen debug output</a></h3>
-<p><b>The on-screen debug output is useful only for debugging very specific issues and is known to have (timing) issues. Don't use it, if you don't have to.</b><br />
-This is only relevant when Haiku fails to boot on your machine and the <span class="menu">Debug syslog</span> option doesn't work for some reason. Before the Haiku boot logo appears, hold <span class="key">SHIFT</span> to enter the boot loader menu. Select <span class="menu">Select safe mode options</span>. Near the bottom, <span class="menu">[ ] Enable on screen debug output</span> will be listed. (Note: The other options could be enabled in an attempt to boot Haiku. If Haiku will boot only when one or more options are activated, be sure to mention which ones.)<br />
-Finally select <span class="menu">Return to main menu</span> and then <span class="menu">Continue booting</span>.<br />
-One or more pages of text will display on the screen, only the last few lines need to be included on your ticket. There's more information on the <a href="../../userguide/uk/bootloader.html">Boot Loader</a>.</p>
+<a id="onscreen" name="onscreen">Виведення відладочної інформації на екран</a></h3>
+<p><b>Виведення відладочної інформації на екран корисне лише для виправлення дуже специфічних проблем і, як відомо, має проблеми з синхронізацією. Не використовуйте його без необхідності.</b><br />
+Це стосується лише тих випадків, коли Haiku не вдається загрузитися на Вашому комп'ютері, а опція <span class="menu">Enable debug syslog</span> з якихось причин не спрацьовує. Перш ніж з'явиться логотип завантаження Haiku, утримуйте клавішу <span class="key">SHIFT</span> (або <span class="key">SPACE</span> для загрузки через UEFI), щоб увійти у меню загружчика. Далі, зайдіть у меню <span class="menu">Select debug options</span>. Там Ви знайдете опцію <span class="menu">Enable on screen debug output</span>. (Примітка: Під час спроби загрузки Haiku можуть бути увімкнені інші опції. Якщо Haiku загружається лише після увімкнення одної або кількох опції, обов'язково вкажіть їх).<br />
+Нарешті, виберіть <span class="menu">Return to main menu</span>, а потім <span class="menu">Continue booting</span>.<br />
+На екрані з'явиться одна або кілька сторінок тексту, лише останні кілька рядків потрібно включити у Ваш тікет. Більше інформації про загружчик можна знайти у розділі <a href="../../userguide/uk/bootloader.html">Boot Loader</a>.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="hardware" name="hardware">Hardware/Driver bugs</a></h2>
-<p>When dealing with a hardware/driver related bug, you should attach the following information as text files:</p>
+<a id="hardware" name="hardware">Помилки в апаратному забезпеченні/драйверах</a></h2>
+<p>Якщо Ви маєте справу з помилкою, пов'язаною з апаратним забезпеченням/драйвером, Вам слід прикріпити до тікета наступну інформацію у вигляді текстових файлів:</p>
 
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td>- <span class="cli">listdev</span></td><td> </td><td>A detailed listing of your hardware, including vendor and pci id's, similar to Linux' <span class="cli">lshw</span> and <span class="cli">lspci</span>.</td></tr>
-<tr><td>- <span class="cli">listusb -v</span></td><td> </td><td>Assuming it's a USB related issue, similar to <span class="cli">lsusb</span>.</td></tr>
-<tr><td>- <span class="cli">open /var/log/syslog</span></td><td> </td><td>The primary system log used by Haiku, see <a href="#syslog">Syslog</a> above, akin to on screen debugging during boot. With the <span class="cli">open</span> command you can crop down the relevant part of the syslog in a text editor.</td></tr>
-<tr><td class="onelinetop">- <span class="cli">listimage | grep drivers/</span></td><td> </td><td>Lists all used drivers.</td></tr>
-<tr><td>- <span class="cli">usb_hid_report</span></td><td> </td><td>In case of USB input devices, add the <span class="cli">/tmp/usb_hid_report_descriptor_*.bin</span> file.</td></tr>
-<tr><td>- <span class="cli">ints</span></td><td> </td><td>Only available within <i>Kernel Debugging Land</i> (see above). Shows interrupt usage. There shouldn't be too many that are shared by different devices.</td></tr>
-<tr><td colspan="3">- On screen debug output (a safe mode boot time option, see <a href="#onscreen">above</a>).</td></tr>
+<tr><td>– <span class="cli">listdev</span></td><td> </td><td>детальний список Вашого обладнання, включно з ідентифікаторами виробника та pci, подібно до команд <span class="cli">lshw</span> та  <span class="cli">lspci</span> у Linux. </td></tr>
+<tr><td>– <span class="cli">listusb -v</span></td><td> </td><td>детальна інформація по USB, припускаємо, що проблема може бути пов'язана з USB, команда аналогічна <span class="cli">lsusb</span>.</td></tr>
+<tr><td>– <span class="cli">open /var/log/syslog</span></td><td> </td><td>основний системний журнал, який використовує Haiku, дивіться вище <a href="#syslog">Системний журнал</a>, який схожий на екранний вивід відладчика під час завантаження. За допомогою команди <span class="cli">open</span> Ви можете вирізати відповідну частину системного журналу у текстовому редакторі.</td></tr>
+<tr><td class="onelinetop">– <span class="cli">listimage | grep drivers/</span></td><td> </td><td>список усіх використаних драйверів.</td></tr>
+<tr><td>– <span class="cli">usb_hid_report</span></td><td> </td><td>у разі використання USB-пристроїв додайте файл <span class="cli">/tmp/usb_hid_report_descriptor_*.bin</span>.</td></tr>
+<tr><td>– <span class="cli">ints</span></td><td> </td><td>Доступно лише у режимі <i>Kernel Debugging Land</i> (дивіться вище). Показує використання переривань. Не повинно бути занадто багато переривань, які спільно використовуються різними пристроями.</td></tr>
+<tr><td colspan="3">– Вивід відладочної інформації на екран (опція меню вибора параметрів відладки загружчика, дивіться <a href="#onscreen">вище</a>).</td></tr>
 </table>
 
-<p>The first four commands are entered into Terminal. Add a <span class="cli">&gt; output.txt</span> after a command, and it's piped into a text file called "<tt>output.txt</tt>" that you can attach to your bug report or email.</p>
+<p>Перші чотири команди вводяться у терміналі. Додайте «<span class="cli"> &gt; output.txt</span>» після команди і вона буде збережена у текстовому файлі з назвою «<tt>output.txt</tt>», який Ви можете прикріпити до Вашого звіту про помилку або електронного листа.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="next" name="next">What's next?</a></h2>
-<p>After the bug has been reported, a developer will look at your bug and try to classify it. Remember, we are all volunteers, and as such, sometimes a bug report might go unanswered for a while. Adding new information when it becomes available usually helps getting a bug picked up quicker, but do not try to 'bump' the bug up by adding
-non-descriptive comments.</p>
-<p>Remember, reporting a bug is not something you spend a little time on and then you are done. If you reported a bug, then you are part of the Haiku development process. Developers might come up with questions while they are trying to fix your bug. Please stay around to answer these. Consider your participation 'done' when the bug is marked
-as 'fixed'.</p>
+<a id="next" name="next">І що далі?</a></h2>
+<p>Після створення звіту про помилку розробник розгляне її та спробує класифікувати. Пам’ятайте, що ми всі волонтери і тому інколи звіт про помилку може деякий час залишатися без відповіді. Додавання нової інформації до звіту, коли вона стає доступною, зазвичай допомагає швидше виправити помилку, але не намагайтеся «підняти» звіт додаванням
+неінформативних коментарів.
+</p>
+<p>Пам’ятайте, що створення звіту про помилку – це не те, на що Ви витратите трохи часу і  цим усе закінчиться. Якщо Ви створюєте звіт про помилку, Ви берете участь у процесі розробки Haiku. У розробників можуть виникнути запитання, коли вони намагаються виправити помилку. Будь ласка, залишайтеся на зв'язку, щоб відповісти на них. Вважайте свою участь «завершеною», коли помилка буде позначена як «виправлена» а звіт про помилку закритий.</p>
 
 </div>
 </div>

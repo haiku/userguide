@@ -62,7 +62,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/apps-images/showimage-icon_64.png" alt="showimage-icon_64.png" width="64" height="64" />   ShowImage (Демонстратор)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -71,53 +70,54 @@
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/ShowImage_settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>ShowImage allows you to view images in all formats that are supported through <a href="../preferences/datatranslations.html">DataTranslators</a>. New formats are automatically recognized when their translator is added to the system. This has been done for Haiku's vector icon files, WonderBrush images or when WebP images became available, for example.<br />
-ShowImage provides minimal editing features to crop, rotate and flip images and to save them in another format.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Перегляд</h2>
+<p>ShowImage (Демонстратор зображень)  дозволяє переглядати зображення в усіх форматах, які підтримуються <a href="../preferences/datatranslations.html">Трансляторами</a>. Нові формати розпізнаються автоматично, коли до системи додається відповідний транслятор. Це було зроблено, наприклад, для файлів векторних значків Haiku, зображень WonderBrush або коли стали доступними зображення WebP.<br />
+ShowImage надає мінімальні можливості редагування, такі як вирізати фрагмент, повернути та перевернути зображення а також збереження їх в іншому форматі.
+</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Режим перегляду</h2>
 <img src="../images/apps-images/showimage-view.jpg" alt="showimage-view.jpg" />
-<p>The <span class="menu">View</span> menu offers to start a <span class="menu">Slide show</span> of all images in a folder (or query result window) and set a <span class="menu">Slide delay</span> from 2 to 20 seconds.</p>
-<p>Other commands apply to the currently displayed image (without changing the size of the window):<br />
-<span class="menu">Original size</span> shows the image with a 100% zoom factor.<br />
-<span class="menu">Fit to window</span> shrinks the image back into the window frame, e.g. after having zoomed into it or after resizing the window.<br />
-<span class="menu">Zoom in</span> and <span class="menu">Zoom out</span> move into and out of the image in 10% steps. Zooming is also done with the mouse wheel; to pan an image bigger than the window, simply left-click and drag your mouse around.</p>
-<p>Two settings don't just apply to the currently displayed image and are remembered when browsing from one image to the next:<br />
-<span class="menu">High quality zooming</span> applies a very fast filter when zooming to reduce jagged lines and produce a smoother result.<br />
-<span class="menu">Stretch to window</span> will stretch smaller images to fill the current window frame.</p>
-<p>Then there's a <span class="menu">Full screen</span> mode with an option to <span class="menu">Show caption in full screen mode</span> which overlays the file name at the bottom of the image.</p>
-<p>Lastly, <span class="menu">Show tool bar</span> will show/hide the graphical controls:</p>
+<p>Меню <span class="menu">Режим перегляду</span> дозволяє запустити <span class="menu">Показ слайдів</span> для усіх зображень у папці (або у вікні результатів запиту) і встановити <span class="menu">Затримку слайда</span> від  2 до 20 секунд.</p>
+<p>Інші команди застосовуються до поточного відкритого зображення (без зміни розміру вікна):<br />
+<span class="menu">Оригінальний розмір</span> показує зображення у масштабі 100% .<br />
+<span class="menu">Припасувати до вікна</span> підганяє зображення до рамок вікна, наприклад, після збільшення масштабу або зміни розміру вікна.<br />
+<span class="menu">Збільшити</span>,  <span class="menu">Зменшити</span> змінює масштаб зображення з кроком 10%. Масштабування можна здійснити за допомогою коліщатка миші; щоб змінити панораму зображення більшого розміру, ніж вікно, просто натисніть ліву кнопку миші і перетягніть мишу.</p>
+<p>Два параметра застосовуються не лише до поточного зображення, а й запам'ятовуються при переході від одного зображення до іншого:<br />
+<span class="menu">Високоякісна зміна розміру</span> застосовує дуже швидкий фільтр під час масштабування, щоб зменшити нерівні лінії і отримати більш плавний результат.<br />
+<span class="menu">Розтягнути по вікну</span> розтягує менші зображення, щоб заповнити увесь фрейм вікна.</p>
+<p>У режимі <span class="menu">Повний екран </span> з увімкненою опцією <span class="menu">Показувати заголовок на повному екрані</span> назва файлу накладається на зображення у нижній частині екрана.</p>
+<p>Нарешті, пункт меню <span class="menu">Показати панель інструментів</span> показує/приховує графічні елементи управління:</p>
 <img src="../../images/apps-images/showimage-toolbar.png" alt="showimage-toolbar.png" />
-<p>From left to right: Previous image, next image, start slide show (in full screen mode), selection mode, original size, fit to window, zoom in, zoom out, previous and next page (when an image format like TIFF allows multiple pages in one file, see below).</p>
-<p>Most of the more often used commands are also available from a right-click context menu on the image. Convenient when in full-screen mode.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Browsing</h2>
+<p>Зліва направо: попереднє зображення, наступне зображення, запуск слайд-шоу (у повноекранному режимі), режим виділення, оригінальний розмір, припасувати до вікна, збільшити, зменшити, попередня і наступна сторінки (якщо формат зображення, наприклад, TIFF, дозволяє зберігати кілька сторінок в одному файлі, дивіться нижче).</p>
+<p>Більшість команд меню, які часто використовуються, також доступні у контекстному меню правої кнопки миші в області зображення. Це дуже зручно у повноекранному режимі.</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Перегляд</h2>
 <img src="../images/apps-images/showimage-browse.jpg" alt="showimage-browse.jpg" />
-<p>After opening an image you can quickly browse through all the other images in its folder (or query result window) by pressing <span class="key">↑</span>/<span class="key">↓</span> or <span class="key">←</span>/<span class="key">→</span>. You can see the selection change accordingly in the Tracker window.</p>
-<p>There is a quick way to open the folder of the current image and even navigate to its parent and subfolders. It works just like with <a href="../tracker.html#drill-down">drill-down navigating</a> in Tracker by clicking in the info area in the status bar that shows size and format of the current image.</p>
-<p>Looking at the <span class="menu">Browse</span> menu, shows another type of browsing: Some image formats, like TIFF, can contain several pages in one file. Commands like <span class="menu">First page</span> and <span class="menu">Next page</span> let you navigate those pages.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Editing</h2>
+<p>Після відкриття зображення Ви можете швидко переглядати усі інші зображення у поточній папці (або у вікні результатів запиту), натискаючи клавіші <span class="key">↑</span>/<span class="key">↓</span> або <span class="key">←</span>/<span class="key">→</span>. Ви можете бачити, як відповідно змінюється підсвітка вибору файлу у вікні Tracker.</p>
+<p>Існує швидкий спосіб відкрити папку з поточним зображенням і навіть перейти до його батьківської та вкладених папок. Це працює так само, як і <a href="../tracker.html#drill-down">навігація через деталізацію по підменю</a> у Tracker, якщо натиснути на інформаційну область у рядку стану, яка показує розмір і формат поточного зображення.</p>
+<p>Якщо Ви подивитеся на меню <span class="menu">Перегляд</span>, то побачите ще один тип перегляду: Деякі формати зображень, наприклад TIFF, можуть містити кілька сторінок в одному файлі. Команди <span class="menu">Перша сторінка</span> та <span class="menu">Наступна сторінка</span> дають змогу переходити між цими сторінками.</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Редагування</h2>
 <img src="../images/apps-images/showimage-edit.jpg" alt="showimage-edit.jpg" />
-<p>The <span class="menu">Image</span> menu offers the few image manipulations necessary for an image viewer: rotating and flipping the image. Note however, that the actual image data won't be changed. Only an attribute is added to the file so it'll be shown rotated or flipped the next time you open it.</p>
-<p><span class="menu">Use as backgroud...</span> will open the <a href="../preferences/backgrounds.html">Backgrounds</a> preferences to set the current picture as image for your workspaces.</p>
-<p>Cropping is another feature that's needed sometimes. To define the frame to cut to, you can switch to <span class="menu">Selection mode</span> from the <span class="menu">Edit</span> menu and drag out a box with your left mouse button. If you don't want to change modes first, you can create this box in "normal mode" by simply holding <span class="key">CTRL</span> while left-click-dragging, which otherwise would just pan the image around.<br />
-<span class="menu">Clear selection</span> or <span class="key">ESC</span> will remove the selection box.</p>
-<p>The following chapter shows how to actually save the cropped area.</p>
+<p>Меню <span class="menu">Зображення</span> пропонує декілька маніпуляцій із зображенням, необхідних для перегляду зображень: поворот та переворот зображення. Зауважте, що фактичні дані зображення при цьому не змінюються. До файлу буде додано лише атрибут, за яким його буде показано повернутим або перевернутим при наступному відкритті.</p>
+<p>Пункт меню <span class="menu">Використати як фон…</span> відкриє <a href="../preferences/backgrounds.html">панель налаштування фона</a>, щоб встановити поточне зображення фоном для Ваших робочих областей.</p>
+<p>Кадрування – ще одна функція, яка іноді потрібна. Щоб визначитися з рамкою для вирізання, перейдіть у <span class="menu">Режим виділення</span> меню <span class="menu">Редагувати</span> та розтягніть рамку лівою кнопкою миші. Якщо Ви не хочете змінювати режим, Ви можете створити цю рамку у «звичайному режимі», утримуючи клавішу <span class="key">CTRL</span> під час розтягування рамки лівою кнопкою миші; просте перетягування лівою кнопкою миші, без утримання клавіші, змінює панораму зображення.<br />
+Пункт меню <span class="menu">Зняти виділення</span> або клавіша <span class="key">ESC</span> знімає рамку.</p>
+<p>У наступному параграфі показано, як зберегти виділену (вирізану) область.</p>
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Збереження та конвертація</h2>
-<p>Для збереження або конвертації зображення у доступному форматі можна скористатись звичайним елементом  <span class="menu">Зберегти як... (Save as...)</span> меню <span class="menu">Файл (File)</span>, вказавши формат та вибравши назву файла.<br />
-Часто буде швидше, особливо коли вікно Tracker'а  вже відкрите у теці призначення, скористатись методом drag &amp; drop (хапай та кидай).</p>
+<p>Щоб зберегти або конвертувати зображення у будь-який доступний формат, Ви можете використати звичайний пункт <span class="menu">Зберегти як…</span> меню <span class="menu">Файл</span>, вибрати формат і вказати назву файлу.<br />
+Іноді буде швидше, особливо коли вікно Tracker вже відкрите з папкою призначення, скористатись методом перетягування (drag &amp; drop).</p>
 <img src="../images/apps-images/showimage-dnd.jpg" alt="showimage-dnd.jpg" />
-<p>Це буде також при завершенні вказаного вище кадрування. Або вибрати кадр, як описано вище, або вибрати пункт меню <span class="menu">Редагувати (Edit) | Вибрати все (Select all)</span> для цілого зображення. Потім перетягніть методом drag &amp; drop на робочий стіл або у будь-яке вікно Tracker, щоб створити нову вирізку зображення в тому ж форматі що вихідне зображення.</p>
-<p>Для збереження в іншому форматі захопіть за  допомогою правої кнопки мишки та вибравши формат з контекстного меню відпустіть зображення.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Keyboard shortcuts</h2>
-<p>Ось список гарячих клавіш які найчастіше використовуються:</p>
+<p>Це також спосіб завершити описане вище кадрування. Розтягніть рамку (виділіть фрагмент/кадр), як описано вище, або виберіть пункт меню <span class="menu">Редагувати | Виділити все</span> для всього зображення. Потім перетягніть і скиньте виділений фрагмент на Робочий стіл або у будь-яке вікно Tracker, щоб створити з нього новий файл зображення у тому ж форматі, що й оригінальне зображення.</p>
+<p>Щоб зберегти в іншому форматі, перетягніть виділений фрагмент правою кнопкою миші і виберіть формат з контекстного меню після відпускання.</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Клавіші швидкого доступу</h2>
+<p>Ось декілька корисних комбінацій клавіш:</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">←</span> / <span class="key">↑</span></td><td style="width:15px;"></td><td>попереднє зображення</td></tr>
 <tr><td><span class="key">→</span> / <span class="key">↓</span></td><td></td><td>наступне зображення</td></tr>
-<tr><td><span class="key">DEL</span></td><td></td><td>перемістити до Кошика</td></tr>
+<tr><td><span class="key">DEL</span></td><td></td><td>перемістити до Смітника</td></tr>
 <tr><td><span class="key">+</span></td><td></td><td>збільшити</td></tr>
 <tr><td><span class="key">-</span></td><td></td><td>зменшити</td></tr>
 <tr><td><span class="key">0</span></td><td></td><td>оригінальний розмір (масштаб 100%)</td></tr>
-<tr><td><span class="key">1</span></td><td></td><td>припасувати до вікна</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Увімкнути повноекранний режим (так само двокліком)</td></tr>
-<tr><td><span class="key">CTRL</span></td><td></td><td>Утримуючи клавішу <span class="key">CTRL</span> Ви можете створити вибраний кадр без явного перемикання до режиму вибору. </td></tr>
+<tr><td><span class="key">1</span></td><td></td><td>припасувати до розміру вікна</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>перемикання повноекранного режиму (також подвійним кліком)</td></tr>
+<tr><td><span class="key">CTRL</span></td><td></td><td>утримуючи клавішу <span class="key">CTRL</span>, Ви можете створити рамку виділення без явного переходу у режим виділення. </td></tr>
 </table>
 
 </div>

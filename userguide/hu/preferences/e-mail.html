@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Az oldal fordítása még folyamatban van. Amíg tart a fordítás, addig a lefordítatlan részek angolul jelennek meg.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Index</td></tr>
@@ -93,8 +94,7 @@ A <span class="button">Hozzáadás</span> gomb megnyomásával létrehozunk egy 
 <p>Ezután meg kell adnunk az <i>E-mail címet</i>, a <i>felhasználói nevet</i> és <i>jelszót</i>, a <i>fiók elnevezését</i> és az Ön <i>valódi nevét</i>.</p>
 <p>Ha az e-mail címed egy ismert szolgáltatónál van, akkor a Haiku ismeri annak technikai adatait, mint például a kiszolgáló IP-címét. Egyéb esetben, kattintsunk a <span class="button">Következő</span> gombra, ahol megadhatjuk ezeket az adatokat:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>Elsőként adjuk meg a <i>kiszolgáló nevét</i>, a <i>bejelentkezés</i> és a <i>biztonság</i> típusát mind a bejövő, mind pedig a kimenő levelek esetében. A szükséges információk megtalálhatóak a szolgálató oldalán.<br />
-Alább további információkat kaphatunk a különféle beállításokról és opciókról.</p>
+<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -110,7 +110,7 @@ Alább további információkat kaphatunk a különféle beállításokról és 
 <p>Kattintson a <span class="menu">Bejövő</span> listaelemre az e-mial fiók neve alatt a bejövő levelek beállításához.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>Az első beállítás a <span class="menu">Kiszolgáló</span>, ahonnan a bejövő leveleket fogadja. Ha a szolgáltató egyéni portot használ, akkor azt is meg kell adni a kiszolgáló neve után kettősponttal elválasztva. Például: <tt>mail.szolgaltato.hu:1400</tt>.</p>
-<p>Ezután a hozzáférési információkat adhatjuk meg: a <i>Felhasználó</i>t és a <i>Jelszó</i>t, és szükség esetén a <i>Bejelentkezés típusá</i>t is módosíthatjuk, ami lehet <span class="menu">Sima szöveg</span> illetve <span class="menu">APOP</span>.</p>
+<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
 <p><i>POP3</i> használatakor, ha több számítógépen is letöltjük a leveleinket, akkor ajánlott bejelölni a <span class="menu">Levelek meghagyása a kiszolgálón</span>, és a <span class="menu">Levelek törlése a kiszolgálóról is</span> opciót.</p>
 <p><i>IMAP</i> esetében pedig, ajánlott bejelölni a <span class="menu">Levelek törlése a kiszolgálóról is</span> opciót. Továbbá, megadhatja az <span class="menu">IMAP mappák</span>at, hogy csak az adott mappákat és almappákat szinkronizálja.</p>
 <p>Arra is van lehetőségünk, hogy megadjuk a <span class="menu">Letöltési mérethatár</span>t. Ha a levél mérete nagyobb a megadottnál, akkor csak a levél fejléce töltődik le, majd eldöntheti, hogy letölti-e a levél többi részét vagy sem. FIGYELEM: jelenleg ha lassú az internetünk, akkor ezt az opciót ki kell kapcsolni, mert külünben a levélnek csak a fejléce fog letöltődni.</p>
@@ -122,7 +122,7 @@ Alább további információkat kaphatunk a különféle beállításokról és 
 <a id="outgoing" name="outgoing">Kimenő levelek beállítása</a></h2>
 <p>A <span class="menu">Kimenő</span> listaelemre kattintva a levélküldési beállításokat adhatjuk meg.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>Elsőként a <i>Kiszolgáló</i> címét adjuk meg. Mint a bejövő leveleknél, itt is megadható a port. Például: <tt>mail.szolgaltato.hu:1200</tt>.</p>
+<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
 <p>Ha szükséges bejelentkezni a küldés előtt, akkor válasszuk ki a <i>Bejelentkezés típusa</i> listából az <span class="menu">ESMTP</span>)-t, majd adjuk meg a felhasználói nevünket és a jelszavunkat is. A másik lehetőség az, amikor a szolgáltató azonosítás céljából az új levelek ellenőrzését kéri küldés előtt: <span class="menu">POP3 az SMTP előtt</span>.</p>
 <p>Itt is szintén megadhatjuk az <i>Útvonalá</i>t az elküldött levelek mappájának (alapértelmezett: <span class="path">/boot/home/mail/out/</span>).</p>
 
@@ -210,13 +210,11 @@ Kimenő levelek szűrője</h3>
 <a id="settings" name="settings">Levelező-rendszer beállítása</a></h2>
 <p>A bejövő és kimenő kiszolgálók és a szűrők beállítása után most lássuk, hogy a levelező rendszer milyen beállításokkal rendelkezik.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>A <i>Levelek ellenőrzése</i> részben beállíthatjuk, hogy milyen gyakorisággal ellenőrizze az új leveleket.<br />
-Ha betárcsázós internettel rendelkezünk, ajánlott bejelölni a <span class="menu">Csak mikor az internet elérhető</span> és a <span class="menu">Kimenő levelek küldése internetre csatlakozáskor</span> jelölőnégyzetet az állandó ellenőrzés elkerülése érdekében.</p>
-<p>A levelező rendszer rendelkezik egy állapot ablakkal, ami megadható, hogy mikor jelenjen meg: <span class="menu">Soha</span>, <span class="menu">Küldés közben</span>, <span class="menu">Küldéskor / fogadáskor</span> vagy <span class="menu">Mindig</span>.</p>
-<p>Győződjünk meg arról is, hogy az <span class="menu">Automatikus indítás</span> be legyen jelölve, ugyanis csak akkor fogja tudni használni a levelező rendszer szolgáltatásaikat.</p>
-<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
+<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
+<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
 <p>A <span class="menu">Postafiókmenü szerkesztése…</span> megnyitja a <span class="path">/boot/home/config/Mail/Menu Links/</span> mappát. Minden mappa és lekérdezés(!) vagy azok hivatkozása, ami ebben a mappában szerepel, az megjelenik a postaláda ikon helyi menüjében a Polcon az Asztalsávon.</p>
-<p>A menüből ezen kívül az alábbiakat is elérjük: <span class="menu">Új üzenet...</span>, <span class="menu">Üzenetek ellenőrzése most</span> és <span class="menu">Beállítások...</span>.</p>
+<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
+<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p>A <span class="key">SHIFT</span> lenyomva tartásával a menü megnyitásakor további funkciók is elérhetőek:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">Csak a levelek lekérdezése</span></td><td style="width:5px;"> </td>

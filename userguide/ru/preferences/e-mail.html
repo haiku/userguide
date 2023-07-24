@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2011, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Перевод этой страницы еще не завершен. Пока это не произойдет, незавершенные части будут на английском.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Содержание</td></tr>
@@ -95,8 +96,7 @@
 <p>Если у вас аккаунт от крупного провайдера электронной почты, то в Haiku уже встроены технические сведения, такие как IP-адреса серверов. Эта информация заполнится автоматически. Если этого не произошло,
 нажатие кнопки <span class="button">Далее</span> откроет другое окно, где можно будет ввести нужную информацию вручную:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<p>Сперва задайте <i>Имя сервера</i>, <i>Метод аутентификации</i> и <i>Тип соединения</i> для входящей почты, затем, ниже - для исходящей. Необходимую информацию можно найти на сайте вашего поставщика услуг электронной почты.<br />
-Ниже вы найдете больше информации о различных настройках и дополнительных опциях.</p>
+<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -112,7 +112,7 @@
 <p>Кликните на <span class="menu">Входящие (Incoming)</span> под названием вашего аккаунта для настройки получения электронной почты.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>Сперва укажите адрес <span class="menu">Почтового сервера</span> для входящих писем. Если ваш провайдер требует подключения через определенный порт, добавьте его к адресу через двоеточие. Например, <tt>pop.your-provider.org:1400</tt>.</p>
-<p>Далее введите свои учетные данные: имя <i>Пользователя</i> и <i>Пароль</i>, и при необходимости измените <i>Метод аутентификации</i> с установленного по умолчанию <span class="menu">Обычного текста</span> на <span class="menu">APOP</span>.</p>
+<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
 <p>Если вы используете протокол <i>POP3</i> и получаете почту через этот аккаунт с разных компьютеров, то вы можете активировать опцию <span class="menu">Оставлять письма на сервере (Leave mail on server)</span>. Удаляться письма с сервера будут только при активации опции <span class="menu">Удалять письма с сервера при удалении (Remove mail from server when deleted)</span>.</p>
 <p>При использовании протокола <i>IMAP</i> вы можете воспользоваться опцией <span class="menu">Удалять письма с сервера при удалении (Remove mail from server when deleted)</span>. Вы также можете <span class="menu">Настроить папки IMAP</span> таким образом, чтобы синхронизировалась только определенная папка и ее подпапки.</p>
 <p>Вы также можете активировать <span class="menu">Частичную загрузку сообщений (Partially download messages)</span>, которые больше определенного размера. При этом будут приниматься только заголовки писем, и вы сможете решить, загружать ли письмо (и вложения, если они есть) целиком, прочитав его тему и адрес отправителя. Это полезно, если у вас медленное соединение.</p>
@@ -124,7 +124,7 @@
 <a id="outgoing" name="outgoing">Настройки исходящей электронной почты</a></h2>
 <p>Кликните на <span class="menu">Исходящие (Outgoing)</span> под именем вашего аккаунта для настройки отправки электронной почты.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>Первым идет адрес <i>SMTP-сервера (SMTP Server)</i> для исходящей почты. Как и для сервера входящей почты, вы можете использовать в случае необходимости конкретный порт, например: <tt>mail.your-provider.org:1200</tt>.</p>
+<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
 <p>Если необходима авторизация, то измените <i>Тип входа (Login Type)</i> на <span class="menu">ESMTP</span> и выше введите имя пользователя и пароль. Другой тип предназначен для провайдеров, которым для проверки почты нужна <span class="menu">Авторизация POP3 перед SMTP (POP3 before SMTP)</span>.</p>
 <p>Как и для входящей почты, вы можете также изменить расположение <i>Папки</i> для отправляемых писем (по умолчанию: <span class="path">/boot/home/mail/out/</span>).
 </p>
@@ -214,13 +214,11 @@
 <a id="settings" name="settings">Настройка почтового сервиса</a></h2>
 <p>Теперь, когда серверы входящей и исходящей почты (и, возможно, некоторые фильтры) настроены, вы должны указать почтовому сервису когда и каким образом проверять и загружать почту.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>В <i>Проверке почты</i> настраивается интервал, с которым будет проверяться наличие новых писем на почтовом сервере для данного аккаунта.<br />
-Если вы выходите в интернет через Dial-up модем, то можете активировать проверку <span class="menu">Только при наличии связи</span>, а также <span class="menu">Ставить в очередь исходящую почту пока отсутствует подключение к сети</span>, чтобы избежать частого автоматического дозвона только для проверки почты.</p>
-<p>Почтовый сервис имеет окно статуса, которое можно настроить, чтобы оно отображалось <span class="menu">Никогда</span>, <span class="menu">Во время отправки</span>, <span class="menu">Во время отправки и получения</span> или <span class="menu">Всегда</span>.</p>
-<p>Убедитесь, что <span class="menu">Запускать  почтовые служюы при загрузке</span> активен, в противном случае вы не сможете принимать и отправлять почту.</p>
-<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
+<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
+<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
 <p><span class="menu">Редактирование меню почтового ящика (Edit mailbox menu)...</span> откроет папку <span class="path">/boot/home/config/Mail/Menu Links/</span>. Все папки, запросы или ссылки на них, помещенные в эту папку, появятся в контекстном меню значка почтового ящика в трее Deskbar.</p>
-<p>В этом меню вы также можете <span class="menu">Создать сообщение (Create new message)...</span>, <span class="menu">Проверить почту (Check for mail now)</span> или редактировать <span class="menu">Настройки (Edit preferences)...</span>.</p>
+<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
+<img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p>Зажав <span class="key">SHIFT</span> при вызове контекстного меню, вы получите дополнительные команды:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><span class="menu">Только проверить почту</span></td><td style="width:5px;"> </td>
