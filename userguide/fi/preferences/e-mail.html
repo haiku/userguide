@@ -61,7 +61,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Hakemisto</td></tr>
@@ -91,7 +90,8 @@
 <p>Nyt kirjoitat <i>sähköpostiosoitteesi</i>, <i>kirjautumisnimesi</i> ja <i>salasanasi</i> sekä annat sen <i>tilinimen</i>, jonka alla se tunnetaan Haikussa ja <i>oikean nimesi</i>.</p>
 <p>Jos tilisi on pääsähköpostitarjoajalta, Haiku jo tietää kaikki tekniset yksityiskohdat kuten palvelimen IP-osoitteet. Jos näin ei ole laita, painikkeen <span class="button">Seuraava</span> napsauttaminen avaa toisen ikkunan näiden tietojen kirjoittamiseksi manuaalisesti:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
+<div class="box-info">Jos käytät GMailia sähköpostitarjoajanasi, sinun on luotava erityinen sovellussalasana.<br />Katso Googlen tukisivulta, että kuinka <a href="https://support.google.com/mail/answer/185833">Sovellukseen kirjaudutaan salasanalla</a>.
+</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -107,7 +107,7 @@
 <p>Napsauta painiketta <span class="menu">Tuleva</span> tilin nimen kohdalla sen asettamiseksi kuinka sähköpostia vastaanotetaan.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>Ensimmäisenä on <span class="menu">Sähköpostipalvelin</span>-osoite tulevalle sähköpostille. Jos sähköpostitarjoajasi haluaa sinun kirjautuvat tiettyyn porttiin, voit lisätä sen osoitteeseen, erotettuna kaksoispisteellä. Esimerkiksi <tt>pop.your-provider.org:1400</tt>.</p>
-<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
+<p>Seuraavaksi kirjoitat kirjautumistiedot: <i>Käyttäjätunnus</i> ja <i>Salasana</i>, ja vaihdat <i>Yhteystyypi</i>n, jos se on välttämätöntä, oletusarvosta <span class="menu">Ei salausta</span> tyyppiin <span class="menu">SLL-salaus</span> ja <i>Kirjautumistyypi</i>n oletustyypistä <span class="menu">Pelkkä teksti</span> todentamista varten tyypiksi <span class="menu">APOP</span>.</p>
 <p>Jos käytät <i>POP3</i>-yhteyskäytäntöä ja noudat tämän tilin sähköpostiviestit eri tietokoneilta, saatat haluta aktivoida valitsimen <span class="menu">Jätä sähköposti palvelimelle</span> ja vain <span class="menu">Poista sähköpostiviesti palvelimelta poistettaessa</span> paikallisesti.</p>
 <p>Jos käytät sen sijaan <i>IMAP</i>-yhteyskäytäntöä, sinulla on valitsin <span class="menu">Poista sähköposti palvelimelta poistettaessa</span> paikallisesti. Voit määritellä <span class="menu">IMAP-kansiot</span> vain synkronoidaksesi tietyn kansion ja sen alikansiot.</p>
 <p>Voit myös valita vain <span class="menu">Osittain ladatut viestit suurempia kuin</span> tietty koko. Tällä saat näkyviin vain otsakkeen ja voit päättää, että haluatko ladata loput viestistä plus mahdolliset liitteet sen jälkeen kun olet nähnyt aiheen ja kuka on lähettänyt viestin. Tämä on hyödyllinen hitailla yhteyksillä.</p>
@@ -119,7 +119,7 @@
 <a id="outgoing" name="outgoing">Lisää lähtevän sähköpostin asetuksista</a></h2>
 <p>Napsauta <span class="menu">Lähtevä</span> tilin nimen kohdalla sen asettamiseksi, kuinka sähköpostiviestit lähetetään.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
+<p>Ensimmäisenä on <i>SMTP-palvelin</i>osoite lähtevää sähköpostia varten. Kuten edellä tulevalle sähköpostin palvelimelle, voit käyttää tiettyä porttia, jos on tarvetta. Esimerkiksi <tt>mail.your-provider.org:1200</tt>, ja vaihtaa <i>Käyttäjätunnus</i>, <i>Salasana</i> ja <i>Yhteystyyppi</i>.</p>
 <p>Jos sinun on kirjauduttava, voit vaihtaa <i>kirjautumistyypin</i> <span class="menu">ESMTP</span>-valikosta ja kirjoittaa käyttäjänimen ja salasanan ylle. Toista tyyppiä <span class="menu">POP3 ennen SMTP</span> käyttävät sähköpostitarjoajat, jotka haluavat tunnistaa sähköposti lähettäjän.</p>
 <p>Kuten tulevassa sähköpostissa, voin myös vaihtaa lähtevän sähköpostilaatikon <i>kohteen</i> (oletus: <span class="path">/boot/home/mail/out/</span>).</p>
 
@@ -202,10 +202,10 @@ Lähtevän sähköpostin suodattimet</h3>
 <a id="settings" name="settings">Postipalvelun asettaminen</a></h2>
 <p>Sen jälkeen kun tulevan ja lähtevän postin sähköpostipalvelimet (ja ehkä myös jotkut suodattimet) on asetettu, sinun on kehotettava Sähköpostipalvelua, joka tekee todellisen tarkistuksen ja noutamisen, tekemään työnsä.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
-<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
+<p>Sen jälkeen kun olet valinnut tarkistusmerkin, voit asettaa aikavälin, jolla tilin sähköpostipalvelin kyselee uutta sähköpostia.</p>
+<p>Sähköpostipalvelulla on tilaikkuna, jonka voidaan asettaa näyttämään ilmoitukset <span class="menu">Ei koskaan</span>, <span class="menu">Lähetettäessä</span>, <span class="menu">Lähetettäessä ja vastaanotettaessa</span> tai <span class="menu">Aina</span>.</p>
 <p>Painike <span class="menu">Muokkaa sähköpostilaatikkovalikkoa...</span> avaa kansion <span class="path">/boot/home/config/Mail/Menu Links/</span>. Kaikki kansiot tai kyselyt (!) tai niiden linkit, jotka on laitettu tähän kansioon, ilmaantuvat Työpöytäpalkin tarjottimen sähköpostipalvelujen sähköpostilaatikkokuvakkeen asiayhteysvalikkoon.</p>
-<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
+<p>Tuosta valikosta voit myös <span class="menu">Luo uusi viesti...</span>, <span class="menu">Tarkista sähköposti nyt</span> tai muokata <span class="menu">Asetukset...</span>:</p>
 <img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p>Jos pidät alhaalla <span class="key">VAIHTO</span>-näppäintä asiayhteysvalikkoa kutsuessasi, saat näkyviin lisäkomentoja:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 

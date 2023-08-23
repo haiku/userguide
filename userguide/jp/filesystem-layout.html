@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		log-1
  *		mt
  *		Kentaro Ozeki
@@ -64,6 +65,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">このページの翻訳はまだ完全ではありません。完成するまでは、未完成の部分はオリジナルの英文を使用します。</div>
 
 <h1>ファイルシステムレイアウト</h1>
 
@@ -81,8 +83,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">システムフォルダー - <span class="path">/boot/system/</span></a></h2>
-<p>Haiku の前身である BeOS では、このフォルダーは <span class="path">/boot/beos/</span> と名付けられていました。まだその名称をいくつかの古いドキュメント (たとえば、オリジナルの BeBook) 中に見ることがあるでしょう。<br />
-<span class="path">/boot/system/</span> 内のほとんどのフォルダーは読み取り専用です。それは理にかなったことです。なぜなら、それらは Haiku が正常に動作するために必要なファイルを含んでおり、そのために、(不慮の) 変更から安全である必要があるからです。ユーザーが書き込めるフォルダーは以下のものだけです。</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>キャッシュファイルや、<span class="path">/tmp/</span> にリンクされた一時フォルダーを含みます。</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>.hpkg の一部でない (おそらく古い BeOS アーカイブ由来の) ファイル用のフォルダー階層を含みます。</td></tr>
@@ -90,7 +92,7 @@
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>システム全体の設定を含みます。</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Syslog (トラブルシューティングの際に重要となります) のようなログを含み、またスワップファイルの標準の置き場所です。</td></tr>
 </table>
-<p><span class="box-info"><span class="path">packages</span> および <span class="path">non-packaged</span> フォルダーについて詳しくは、<a href="applications.html">アプリケーション</a>のトピックを参照ください。</span></p>
+<p><div class="box-info"><span class="path">packages</span> および <span class="path">non-packaged</span> フォルダーについて詳しくは、<a href="applications.html">アプリケーション</a>のトピックを参照ください。</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -109,7 +111,7 @@
 <td><a href="queries.html">クエリ</a>がここに保存されます。標準では 7 日間仮保存されます。</td></tr>
 </table>
 
-<p><span class="path">/boot/home/config/</span> フォルダーは特別です。<span class="path">/boot/system/</span> のように、そのほとんどはパッケージ管理のコントロール下にあり、したがって読み取り専用です。さらにそこにはユーザーが書き込める以下の同様なフォルダーがあります:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -122,7 +124,7 @@
 <td>このフォルダーは、すべてのアプリケーションの設定と、システムに関する 2、3 の設定を含んでいます。特有のサブフォルダー内で設定を管理するアプリケーションと、単に設定ファイルをそこに置くだけのアプリケーションがあります。</td></tr>
 </table>
 
-<p><span class="box-info"><span class="path">packages</span> および <span class="path">non-packaged</span> フォルダーについて詳しくは、<a href="applications.html">アプリケーション</a>のトピックを参照ください。</span></p>
+<p><div class="box-info"><span class="path">packages</span> および <span class="path">non-packaged</span> フォルダーについて詳しくは、<a href="applications.html">アプリケーション</a>のトピックを参照ください。</div></p>
 <p><span class="path">~/config/settings/</span> 内には以下のより興味深いいくつかのフォルダーがあります:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

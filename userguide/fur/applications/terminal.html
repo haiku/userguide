@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,18 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td>
+                <a href="#windows-tabs">Windows and tabs</a><br />
+                <a href="#settings">Settings</a><br />
+                <a href="#colors">Colors</a><br />
+                <a href="#shortcuts">Keyboard shortcuts</a><br />
+                <a href="#hints">Hints for working with the Terminal</a><br />
+                <a href="#customization">Bash customization</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/terminal-icon_64.png" alt="terminal-icon_64.png" width="64" height="64" />Terminâl</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -86,17 +98,15 @@ In maniere predefinide, <tt>%1d: %p</tt>, une schede e mostre la cartele atuâl 
 Cun <span class="menu">Impostazions | Titul barcon...</span> inte stesse maniere si pues modificâ il titul dal barcon dal Terminal.</p>
 <p>Fasint clic diestri suntune schede al ven mostrâ un menù contestuâl che ti permet di fâ <span class="menu">Siere schede</span>, <span class="menu">Siere altris schedis</span> o, come cul dopli clic, <span class="menu">Modifiche titul schede...</span>.</p>
 <p>Un barcon di Terminâl al pues jessi ridimensionât tant che cualsisei altri barcon opûr tu puedis doprâ i valôrs prestabilîts dal menù <span class="menu">Impostazions | Dimensions dal barcon</span>. <span class="key">ALT</span> <span class="key">INVIE</span> al comute la modalitât plen visôr.</p>
-<p>Dutis lis impostazions che tu cambiis in maniere direte  midiant il menù <span class="menu">Impostazions</span>, come il <span class="menu">Titul barcon</span>, <span class="menu">Dimension dal barcon</span>, <span class="menu">Codifiche dal test</span> o <span class="menu">Dimension caratar</span> a vegnin tignudis dome pe session atuâl. Se tu desideris rindi permanentis lis modifichis, tu âs di aplicâlis intal panel <span class="menu">Impostazions...</span>.</p>
+<p>All the settings you change directly through the <span class="menu">Settings</span> menu, like <span class="menu">Window title</span>, <span class="menu">Window size</span>, <span class="menu">Text encoding</span> or <span class="menu">Font size</span> are only kept for the current session. If you want to make permanent changes, you have to either invoke <span class="menu">Save as default</span> or apply them in the <span class="menu">Settings…</span> panel.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="settings" name="settings">Impostazions</a></h2>
 <p><span class="menu">Impostazions | Impostazions...</span> al vierç un panel par configurâ lis impostazions standard di un Terminâl.</p>
 <img src="../images/apps-images/terminal-settings.png" alt="terminal-settings.png" />
 <br />
-<p>La plui part des impostazions ufiertis no àn bisugne di spiegazions. No dal dut clare invezit e je la dimension dal caratar che e ven stabilide intal sot-menù dal menù a tende <span class="menu">Caratar</span>.<br />
-Se tu passis parsore cul mouse aes "formulis" par dâ un non ai titui des schedis e dai barcons al vignarà fûr un sugjeriment cu lis variabilis disponibilis. <br />
-Tu puedis sielzi il scheme di colôrs predefinît come <span class="menu">Miezegnot</span> o <span class="menu">Passât</span> o creâ'nt un <span class="menu">Personalizât</span> selezionant il <span class="menu">Colôr</span> che tu desideris cambiâ (<span class="menu">Test</span>, <span class="menu">Fonts</span>, <span class="menu">Cursôr</span> e vie indenant.) e dopo doprant il seletôr di colôr sot.</p>
-<p>Tu puedis ancje configurâ i "colôrs ANSI" cul menù <span class="menu">Colôr</span>. Chei a son i prins 8 colôrs cun non te palete dai colôrs des aplicazions dal terminâl. Tu puedis sielzi un colôr, par esempli "<i>colôr ros ANSI</i>" e dopo justâlu cul seletôr colôr lì sot. L'efiet no è visibil a mancul che no tu eseguissis une aplicazion di terminâl che e dopre chel colôr. I colôrs esats doprâts in varis puescj a son documentâts su <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
+<p>Most of the offered settings speak for themselves. Not entirely obvious though, the font size is set in the submenu of the <span class="menu">Font</span> popup menu.<br />
+Hover your mouse over the "formulas" for naming tab and window titles to get tooltips for the available variables.</p>
 <p>Pocjis altri opzions a vegnin dopo: tu puedis vê un <span class="menu">Cursôr che al cimie</span> (par fâ in mût che al lampi) e sielzi <span class="menu">Permet test in neret</span>.<br />
 <span class="menu">Dopre Opzion a çampe come tast Meta</span> se tu lavoris cun determinâts software UNIX che si base sul acès a une porzion estese dal complès di caratars ASCII, come p.e. GNU Emacs e la librarie GNU readline.<br />
 Ativâ la casele di selezion <span class="menu">Domande conferme pe jessude se a esistin programs atîfs</span> ti visarà cuant che si cîr di sierâ un barcon di Terminâl intant che une aplicazion e je ancjemò in esecuzion.</p>
@@ -105,6 +115,20 @@ Ativâ la casele di selezion <span class="menu">Domande conferme pe jessude se a
 <tr><td><span class="button">Torne indaûr</span></td><td> </td><td>al puarte indaûr lis impostazions a chês che a jerin ativis cuant che si à viert il panel des impostazions.</td></tr>
 <tr><td><span class="button">Predefinîts</span></td><td> </td><td>al torne a puartâ dut ai valôrs predefinîts.</td></tr>
 </table>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="colors" name="colors">Colors</a></h2>
+<p><span class="menu">Settings | Colors…</span> opens a panel to configure the colors used by Terminal.</p>
+<img src="../images/apps-images/terminal-colors.png" alt="terminal-colors.png" />
+<p>From the top menu, you can choose a pre-defined <span class="menu">Color scheme</span> like <span class="menu">Midnight</span> or <span class="menu">Retro</span> or create a <span class="menu">Custom</span> one by selecting the color you want to change (<span class="menu">Text</span>, <span class="menu">Background</span>, <span class="menu">Cursor</span> etc.) and then use the color picker below.</p>
+<p>You can also configure "ANSI colors", which are the first 8 named colors in the color palette of terminal applications. You choose a color, for example "<i>ANSI red color</i>", and then adjust it with the color picker below. The effect is visible live in the open Terminal and in the preview below. The exact colors used in various places are documented at <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td class="onelinetop"><span class="button">Salve su file...</span></td><td width="10"> </td><td>let's you save your custom color scheme under a name that will appear in the <span class="menu">Color scheme</span> menu at the top, if you put it in the default location <span class="path">~/config/settings/Terminal/Theme</span>.</td></tr>
+<tr><td><span class="button">Torne indaûr</span></td><td> </td><td>brings back the colors that were active when you opened the colors panel.</td></tr>
+<tr><td><span class="button">Predefinîts</span></td><td> </td><td>al torne a puartâ dut ai valôrs predefinîts.</td></tr>
+</table>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="shortcuts" name="shortcuts">Scurtis di tastiere</a></h2>

@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		kervas
  *		killa.fr0gg
  *		miguel~1.mx
@@ -63,6 +64,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h1>Disposición del sistema de archivos</h1>
 
@@ -80,8 +82,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">La carpeta del sistema - <span class="path">/boot/system/</span></a></h2>
-<p>Bajo el predecesor de Haiku, el BeOS, esta carpeta se llamaba <span class="path">/boot/beos/</span>. Todavía puede encontrar mención de esto en alguna documentación antigüa (p. ej. en el BeBook original).<br />
-La mayoría de la carpeta dentro de <span class="path">/boot/system/</span> son de sólo lectura, que tiene sentido pues contienen los archivos necesarios para que Haiku funcionce correctamente y por tanto deben estar en un lugar seguro libre de alguna alteración (accidental). Las únicas carpetas a las que el usuario puede escribir son:</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Contiene archivos en caché y una carpeta temporal vinculada a <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Contiene una jerarquía para archivos que no son parte de un .hpkg (probablemente de antiguos archivos de BeOS)</td></tr>
@@ -89,7 +91,7 @@ La mayoría de la carpeta dentro de <span class="path">/boot/system/</span> son 
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Contienen las configuraciones a nivel de sistema.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Contiene registros como el syslog (importante cuando esta resolviendo problemas) y es la ubicación predeterminada para el archivo <i>swap</i>.</td></tr>
 </table>
-<p><span class="box-info">Para mayor información sobre las carpetas <span class="path">packages</span> y <span class="path">non-packaged</span>, vea el tema <a href="applications.html">Aplicaciones</a>.</span></p>
+<p><div class="box-info">Para mayor información sobre las carpetas <span class="path">packages</span> y <span class="path">non-packaged</span>, vea el tema <a href="applications.html">Aplicaciones</a>.</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -108,7 +110,7 @@ Los archivos que le gustaría compartirs con otros usuarios en un futuro ambient
 <td>Las <a href="queries.html">Consultas</a> se almacenan aquí, de manera predeterminada por 7 días.</td></tr>
 </table>
 
-<p>La carpeta <span class="path">/boot/home/config/</span> es especial: justo como <span class="path">/boot/system/</span> se encuentra principalmente bajo el el control del gestionador de paquetes y por tanto es de sólo lectura. También contiene estas carpetas similares, que si son de escritura por usuario:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -121,7 +123,7 @@ Los archivos que le gustaría compartirs con otros usuarios en un futuro ambient
 <td>Esta carpeta contiene las selecciones para todas las aplicaciones y unas cuantas configuraciones para el sistema. Algunas aplicaciones administran sus configuraciones en sus propias subcarpetas, otros simplemente ponen su archivo de configuración allí.</td></tr>
 </table>
 
-<p><span class="box-info">Para mayor información sobre las carpetas <span class="path">packages</span> y <span class="path">non-packaged</span>, vea el tema <a href="applications.html">Aplicaciones</a>.</span></p>
+<p><div class="box-info">Para mayor información sobre las carpetas <span class="path">packages</span> y <span class="path">non-packaged</span>, vea el tema <a href="applications.html">Aplicaciones</a>.</div></p>
 <p>Aquí estan algunas de la carpetas más interesantes en <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

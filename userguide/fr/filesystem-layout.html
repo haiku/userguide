@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		Vincent Duvert
  *		Wabouz
  *		Loïc
@@ -63,6 +64,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduction de cette page n'est pas achevée. Les parties non encore traduites apparaîtrons en anglais.</div>
 
 <h1>Structure du système de fichiers</h1>
 
@@ -80,8 +82,8 @@ Une fois que cette fonctionnalité sera mise en place, Haiku supportera le multi
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">Le dossier système - <span class="path">/boot/system/</span></a></h2>
-<p>Sous BeOS, le prédecesseur de Haiku, ce dossier était nommé <span class="path">/boot/beos/</span>. Vous pouvez encore rencontrer cette référence dans d’anciennes documentations (comme le BeBook).<br />
-Dans tous les cas, vous ne devriez pas altérer son contenu. Chaque mise à jour de Haiku est susceptible d’ajouter, de supprimer ou de remplacer tout ce qui se trouve dans ce dossier. Si vous voulez ajouter des fonctionnalités au système, comme des extensions au Tracker, des Translateurs ou des pilotes supplémentaires, installez-les plutôt dans votre hiérarchie personnelle <span class="path">/boot/home/</span>, ou, si l’élément devrait être disponible pour tous les utilisateurs,  <span class="path">/boot/common/</span>. Tant que Haiku ne sera pas multi-utilisateur, cette distinction n’a pas d’effet apparent, puisque qu’il n’y a qu’un utilisateur avec un dossier <i>home</i>. Mais puisque ce support multi-utilisateur sera disponible ultérieurement, il est bon de prendre tout de suite les bonnes habitudes.</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Contient les fichiers caches et les dossiers temporaires, dans <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Contient une arborescence pour les fichiers qui ne font pas partie d'un .hpkg (dans les anciennes archives BeOS).</td></tr>
@@ -89,7 +91,7 @@ Dans tous les cas, vous ne devriez pas altérer son contenu. Chaque mise à jour
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Contient les réglages du système.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Contient des journaux (logs) comme syslog (important pour la résolution de problèmes) et est l'emplacement par défaut pour changer un fichier.</td></tr>
 </table>
-<p><span class="box-info">Pour plus d'informations sur les dossiers <span class="path">packages</span> et <span class="path">non-packaged</span>, consultez le sujet <a href="applications.html">Applications</a>.</span></p>
+<p><div class="box-info">Pour plus d'informations sur les dossiers <span class="path">packages</span> et <span class="path">non-packaged</span>, consultez le sujet <a href="applications.html">Applications</a>.</div></p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="home" name="home">Le dossier personnel - <span class="path">/boot/home/</span></a></h2>
@@ -107,7 +109,7 @@ Les fichiers que vous souhaiteriez partager avec les autres utilisateurs dans un
 <td><a href="queries.html">Les Requêtes</a> sont stockées ici, par défaut pendant 7 jours.</td></tr>
 </table>
 
-<p>Le dossier <span class="path">/boot/home/config/</span> est spécial, tout comme <span class="path">/boot/system/</span>, est très souvent sous le contrôle du géstionnaire de paquets, donc disponible pour une lecture seule. Il contient aussi ces dossiers, modifiables par l'utilisateur.</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -120,7 +122,7 @@ Les fichiers que vous souhaiteriez partager avec les autres utilisateurs dans un
 <td>Ce dossier contient les paramètres de toutes les applications et quelques configurations pour le système. Certaines applications gèrent leurs paramètres dans leurs propres sous-dossiers, d'autres mettre simplement leur fichier de configuration ici.</td></tr>
 </table>
 
-<p><span class="box-info">Pour plus d'informations sur les dossiers <span class="path">packages</span> et <span class="path">non-packaged</span>, consultez le sujet <a href="applications.html">Applications</a>.</span></p>
+<p><div class="box-info">Pour plus d'informations sur les dossiers <span class="path">packages</span> et <span class="path">non-packaged</span>, consultez le sujet <a href="applications.html">Applications</a>.</div></p>
 <p>Voici les sous dossiers les plus intéressants <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

@@ -10,7 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
- *		'
+ *		Iah
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h1>Структура файлової системи</h1>
 
@@ -68,7 +69,7 @@
 <img src="images/filesystem-layout-images/achtung-user.png" alt="achtung-user.png" /> 
 <img src="images/filesystem-layout-images/achtung-system.png" alt="achtung-system.png" />
 <p>Друге попередження з'являється коли Ви робите спробу перейменувати або видалити щось у ієрархії системних файлів. При цьому, кнопка "<span class="button">Перейменувати</span>" стає доступною якщо утримувати натиснутою клавішу <span class="key">SHIFT</span>.</p>
-<p>При типовому варіанті інсталяції системи, завантажувальний том містить кореневий католог з двома окремими каталогами файлової ієрархії:</p>
+<p>При типовому варіанті інсталяції системи, завантажувальний том містить кореневий каталог з двома окремими каталогами файлової ієрархії:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/</span></td><td> </td><td>Містить системні файли та програми/пакети, до яких мають спільний доступ усі користувачі.</td></tr>
 <tr><td><span class="path">/boot/home/</span></td><td> </td><td>Це Ваш особистий каталог, де Ви зберігаєте свої дані та налаштування а також програми/пакети <i>без</i> спільного доступу для інших користувачів.</td></tr>
@@ -78,8 +79,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">Системний каталог - <span class="path">/boot/system/</span></a></h2>
-<p>У BeOS, попередниці Haiku, цей каталог мав назву <span class="path">/boot/beos/</span>. Ви все ще можете знайти його у деякій старій документації (наприклад, у оригінальній BeBook).<br />
-Більшість каталогів усередині <span class="path">/boot/system/</span> доступні лише для читання, що є розумним, оскільки вони містять файли, необхідні для коректної роботи Haiku і тому мають бути захищені від (випадкових) змін. Доступними для запису є каталоги:</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Містить файловий кеш і тимчасову папку, пов'язану з <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Містить папки та файли, які не входять до .hpkg (наприклад, як у старих архівів BeOS).</td></tr>
@@ -87,7 +88,7 @@
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Містить загальносистемні налаштування.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Містить журнали, такі як syslog (важливі для усунення несправностей) і є типовим місцем розташування файлу підкачки.</td></tr>
 </table>
-<p><span class="box-info">Додаткову інформацію про каталоги <span class="path">packages</span> і <span class="path">non-packaged</span> дивіться у розділі <a href="applications.html">Applications (Програми)</a>.</span></p>
+<p>Додаткову інформацію про каталоги <span class="path">packages</span> і <span class="path">non-packaged</span> дивіться у розділі <a href="applications.html">Applications (Програми)</a>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -106,20 +107,20 @@
 <td>Це стандартне розташування Ваших пошукових запитів, які зберігаються протягом 7 днів. Дивіться <a href="queries.html">Queries (Запити)</a>.</td></tr>
 </table>
 
-<p>Каталог <span class="path">/boot/home/config/</span> особливий: так само, як і <span class="path">/boot/system/</span> він здебільшого перебуває під контролем менеджменту пакетів і тому доступний лише для читання. Він також містить каталоги, подібні системним,  доступні для запису:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
 <td>Містить пакети Haiku (.hpkg). Ви можете додавати/вилучати пакети, до яких <i>не мають</i> спільного доступу усі інші користувачі.</td></tr>
 
 <tr><td class="onelinetop"><span class="path">~/config/non-packaged/</span></td><td> </td>
-<td>Містить папки та файли, які не входять до .hpkg (наприклад, як у старих архівів BeOS) та до яких <i>не мають</i> спільного доступу усі інші користувачі..</td></tr>
+<td>Містить папки та файли, які не входять до .hpkg (наприклад, як у старих архівів BeOS) та до яких <i>не мають</i> спільного доступу усі інші користувачі.</td></tr>
 
 <tr><td><span class="path">~/config/settings/</span></td><td> </td>
 <td>Цей каталог містить налаштування всіх програм і деякі настройки системи. Не всі програми зберігають свої налаштування у власних підкаталогах, багато таких, що просто поміщають сюди свої конфігураційні файли.</td></tr>
 </table>
 
-<p><span class="box-info">Додаткову інформацію про каталоги <span class="path">packages</span> і <span class="path">non-packaged</span> дивіться у розділі <a href="applications.html">Applications (Програми)</a>.</span></p>
+<p>Додаткову інформацію про каталоги <span class="path">packages</span> і <span class="path">non-packaged</span> дивіться у розділі <a href="applications.html">Applications (Програми)</a>.</p>
 <p>Це деякі з найбільш цікавих підкаталогів, які містить каталог <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
@@ -145,7 +146,7 @@
 
 <tr><td align="right"><span class="path">DefaultQueryTemplates/</span></td><td></td><td>Містить шаблони формату вікон результатів виконання запитів для певних типів файлів. Дивіться розділ <a href="queries.html#result-window">Запити: Вікно результатів пошуку</a>.</td></tr>
 
-<tr><td align="right"><span class="path">Go/</span></td><td></td><td>Додайте сюди посилання на Ваші обрані папки, щоб зробити їх доступними, наприклад, у діалогах «Відкрити» і «Зберегти». Дивіться розділ <a href="gui.html#favorites-recent">Haiku's GUI: Favorites and recent folders</a>.</td></tr>
+<tr><td align="right"><span class="path">Go/</span></td><td></td><td>Додайте сюди посилання на Ваші обрані папки, щоб зробити їх доступними, наприклад, у діалогах «Відкрити» і «Зберегти». Дивіться розділ <a href="gui.html#favorites-recent">GUI: Вибрані та недавні папки</a>.</td></tr>
 
 <tr><td align="right"><span class="path">Tracker New Template/</span></td><td></td><td>Додайте шаблон для будь-якого типу файлу, який потім буде доступний у меню <span class="menu">Файл | Новий…</span> файлового менеджера. Дивіться розділ <a href="tracker.html#working-with-files">Tracker: Робота з файлами</a>.</td></tr>
 </table>

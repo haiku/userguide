@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		Kacper Kasper
  *
 -->
@@ -61,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tłumaczenie tej strony jest niekompletne. Nieukończone części wyświetlane są w języku angielskim.</div>
 
 <h1>Układ systemu plików</h1>
 
@@ -78,9 +80,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">Katalog systemowy – <span class="path">/boot/system/</span></a></h2>
-<p>W poprzedniku Haiku, BeOS-ie, miał on nazwę <span class="path">/boot/beos</span>. Nadal można się niego natknąć w starszej dokumentacji (np. w BeBooku). <br />
-Większość katalogów w <span class="path">/boot/system</span> jest tylko do odczytu, co jest rozsądnym rozwiązaniem, biorąc pod uwagę że zawierają pliki niezbędne do poprawnego funkcjonowania Haiku, zatem muszą być odpowiednio zabezpieczone przed (przypadkowymi) zmianami.
-</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Zawiera pliki pamięci podręcznej i katalog tymczasowy dowiązany do <span class="path">/tmp</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Zawiera hierarchię dla plików, które nie są częścią pakietu .hpkg (np. ze starych archiwów BeOS).</td></tr>
@@ -88,7 +89,7 @@ Większość katalogów w <span class="path">/boot/system</span> jest tylko do o
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Zawiera ustawienia dotyczące całego systemu.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Zawiera dzienniki, takie jak syslog (istotne przy rozwiązywaniu problemów) oraz jest domyślnym położeniem pliku wymiany (swap).</td></tr>
 </table>
-<p><span class="box-info">Więcej informacji o katalogach <span class="path">packages</span> i <span class="path">non-packaged</span> w artykule <a href="applications.html">Aplikacje</a>.</span></p>
+<p><div class="box-info">Więcej informacji o katalogach <span class="path">packages</span> i <span class="path">non-packaged</span> w artykule <a href="applications.html">Aplikacje</a>.</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -107,7 +108,7 @@ Pliki udostępnione dla innych użytkowników w przyszłym środowisku wielu uż
 <td>Tutaj są zapisywane <a href="queries.html">zapytania</a>, domyślnie przechowywane przez 7 dni.</td></tr>
 </table>
 
-<p>Katalog <span class="path">/boot/home/config/</span> jest szczególny: tak jak <span class="path">/boot/system/</span> jest w większości pod kontrolą menedżera pakietów, a przez to jest tylko do odczytu. On także zawiera modyfikowalne katalogi:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -120,7 +121,7 @@ Pliki udostępnione dla innych użytkowników w przyszłym środowisku wielu uż
 <td>Ten katalog zawiera ustawienia wszystkich aplikacji oraz kilka ustawień systemowych. Niektóre aplikacje trzymają swoje ustawienia w podkatalogach, a inne zapisują plik konfiguracyjny bezpośrednio tutaj.</td></tr>
 </table>
 
-<p><span class="box-info">Więcej informacji o katalogach <span class="path">packages</span> i <span class="path">non-packaged</span> w artykule <a href="applications.html">Aplikacje</a>.</span></p>
+<p><div class="box-info">Więcej informacji o katalogach <span class="path">packages</span> i <span class="path">non-packaged</span> w artykule <a href="applications.html">Aplikacje</a>.</div></p>
 <p>Poniżej jeszcze kilka interesujących podkatalogów w <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

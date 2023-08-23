@@ -11,6 +11,7 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Barrett
+ *		Humdinger
  *		MichaelPeppers
  *		Gabriele
  *		Andrea
@@ -64,6 +65,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzione di questa pagina non è stata ancora completata. Finché non lo sarà, le parti non tradotte saranno visualizzate in inglese.</div>
 
 <h1>La struttura del FileSystem di Haiku</h1>
 
@@ -81,8 +83,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">La cartella system - <span class="path">/boot/system/</span></a></h2>
-<p>Su BeOS, il predecessore di Haiku, questa cartella era chiamata <span class="path">/boot/beos/</span>. È possibile incontrarla ancora leggendo della vecchia documetazione (ad esempio quella originale come il BeBook).<br />
-La maggior parte delle cartelle nel ramo <span class="path">/boot/system/</span> sono in sola lettura, in quanto il suo contenuto è necessario per il corretto funzionamento di Haiku e, pertanto, deve essere al sicuro da alterazioni accidentali. Le uniche cartelle scrivibili sono:</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Contiene i file in cache e una cartella per i file temporanei con un collegamento simbolico a  <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Contiene una gerarchia di file che non sono parte di un pacchetto .hpkg (probabilmente da un vecchio archivio BeOS)</td></tr>
@@ -90,7 +92,7 @@ La maggior parte delle cartelle nel ramo <span class="path">/boot/system/</span>
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Contiene tutte le impostazioni a livello di sistema.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Contiene i file di registro, come il syslog (molto importante per individuare la causa di errori e malfunzionamenti) ed è il percorso predefinito del file di swap.</td></tr>
 </table>
-<p><span class="box-info">Per ulteriori informazioni sulle cartelle <span class="path">packages</span> e <span class="path">non-packaged</span> consulta la guida alla sezione <a href="applications.html">Applicazioni</a>.</span></p>
+<p><div class="box-info">Per ulteriori informazioni sulle cartelle <span class="path">packages</span> e <span class="path">non-packaged</span> consulta la guida alla sezione <a href="applications.html">Applicazioni</a>.</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -109,7 +111,7 @@ I file che intendi condividere con altri utenti in un sistema multi-utente (che 
 <td>Le <a href="queries.html">interrogazioni</a> sono memorizzate qui, per un periodo predefinito di sette giorni.</td></tr>
 </table>
 
-<p>La cartella <span class="path">/boot/home/config/</span> è speciale: come la cartella <span class="path">/boot/system/</span> è per lo più sotto il controllo del gestore di pacchetti e, quindi, è protetta dalla scrittura. Anche qui, tuttavia, vi sono alcune cartelle che sono modificabili:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -122,7 +124,7 @@ I file che intendi condividere con altri utenti in un sistema multi-utente (che 
 <td>Questa cartella contiene le impostazioni per ogni applicazione e alcune configurazioni del sistema. Alcune applicazioni gestiscono le proprie impostazioni nelle loro sottocartelle, altre collocano semplicemente i loro file di configurazione qua.</td></tr>
 </table>
 
-<p><span class="box-info">Per ulteriori informazioni sulle cartelle <span class="path">packages</span> e <span class="path">non-packaged</span> consulta la guida alla sezione <a href="applications.html">Applicazioni</a>.</span></p>
+<p><div class="box-info">Per ulteriori informazioni sulle cartelle <span class="path">packages</span> e <span class="path">non-packaged</span> consulta la guida alla sezione <a href="applications.html">Applicazioni</a>.</div></p>
 <p>Ecco una lista di sottocartelle rilevanti di <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

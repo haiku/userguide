@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		mazbrili abu ibrahim
  *
 -->
@@ -61,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Terjemahan halaman ini belum lengkap. Sampai saat itu, bagian yang belum selesai menggunakan aslinya bahasa Inggris.</div>
 
 <h1>Layout Filesystem</h1>
 
@@ -78,8 +80,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">System folder - <span class="path">/boot/system/</span></a></h2>
-<p>Di bawah BeOS pendahulu Haiku, folder ini bernama <span class="path">/boot/beos/</span>. Anda masih dapat menemukannya di beberapa dokumentasi yang lebih lama (mis. Dalam BeBook asli).<br />
-Sebagian besar folder di dalam <span class="path">/boot/system/</span> adalah read-only, yang masuk akal karena mengandung file-file yang diperlukan agar Haiku berfungsi dengan benar dan karenanya harus aman dari perubahan (tidak disengaja). Hanya folder yang dapat ditulis pengguna adalah:</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td> Berisi file cache dan folder sementara yang ditautkan ke <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Berisi hierarki untuk file yang bukan bagian dari .hpkg (mungkin dari arsip BeOS lama).</td></tr>
@@ -87,8 +89,8 @@ Sebagian besar folder di dalam <span class="path">/boot/system/</span> adalah re
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Berisi pengaturan seluruh sistem.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Berisi log seperti syslog (penting saat pemecahan masalah) dan merupakan lokasi default untuk file swap.</td></tr>
 </table>
-<p><span class="box-info"> Informasi lebih lanjut tentang folder<span class="path">packages</span> and <span class="path">non-packaged</span> , bisa dilihat di topic <a href="applications.html">Aplikasi</a>.
-</span></p>
+<p><div class="box-info"> Informasi lebih lanjut tentang folder<span class="path">packages</span> and <span class="path">non-packaged</span> , bisa dilihat di topic <a href="applications.html">Aplikasi</a>.
+</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -107,7 +109,7 @@ File yang ingin Anda bagikan dengan pengguna lain di lingkungan multi-pengguna d
 <td><a href="queries.html">Kueri (Queries)</a>  disimpan di sini, secara bawaan sementara untuk 7 hari..</td></tr>
 </table>
 
-<p>Folder <span class="path">/boot/home/config/</span>adalah spesial: seperti  <span class="path">/boot/system/</span> sebagian besar di bawah kendali manajemen paket dan karenanya hanya-baca. Folder ini juga berisi folder serupa yang dapat ditulis pengguna:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -120,8 +122,8 @@ File yang ingin Anda bagikan dengan pengguna lain di lingkungan multi-pengguna d
 <td>Folder ini berisi pengaturan untuk semua aplikasi dan beberapa konfigurasi untuk sistem.Beberapa aplikasi mengelola pengaturan mereka dalam subfolder mereka sendiri, yang lain cukup meletakkan file konfigurasi mereka di sana.</td></tr>
 </table>
 
-<p><span class="box-info"> Informasi lebih lanjut tentang folder<span class="path">packages</span> and <span class="path">non-packaged</span> , bisa dilihat di topic <a href="applications.html">Aplikasi</a>.
-</span></p>
+<p><div class="box-info"> Informasi lebih lanjut tentang folder<span class="path">packages</span> and <span class="path">non-packaged</span> , bisa dilihat di topic <a href="applications.html">Aplikasi</a>.
+</div></p>
 <p>Berikut adalah beberapa subfolder yang lebih menarik di <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

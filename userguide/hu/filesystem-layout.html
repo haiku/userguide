@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		Dancsó Róbert
  *
 -->
@@ -61,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Az oldal fordítása még folyamatban van. Amíg tart a fordítás, addig a lefordítatlan részek angolul jelennek meg.</div>
 
 <h1>Fájlrendszer felépítése</h1>
 
@@ -78,8 +80,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">A rendszer mappa - <span class="path">/boot/system/</span></a></h2>
-<p>Az BeOS elődje után a Haiku rendszer mappája is a <span class="path">/boot/beos/</span>. Ezt régebbi dokumentációkban is megtalálod (például az eredeti BeBook-ban).<br />
-A legtöbb mappa a <span class="path">/boot/system/</span> mappán belül csak olvasható, ami abból adódik, hogy itt találhatóak a rendszer zavartalan működéséhez szükséges fájlok. Csak az alábbi mappák tartalma módosítható a felhasználó által:</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>A <span class="path">/tmp/</span> mappára hivatkozva ideiglenes fájlokat tartalmaz.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Azokat a fájlokat tartalmazza, amik nem részei egy .hpkg csomagnak (például régi BeOS archívumból).</td></tr>
@@ -87,7 +89,7 @@ A legtöbb mappa a <span class="path">/boot/system/</span> mappán belül csak o
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>A rendszer beállításait tartalmazza.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Naplókat tartalmaz (például a rendszer naplót), melyek hibakereséskor lehetnek a segítségünkre, illetve ez az eredeti helye a virtuális memória fájlnak is.</td></tr>
 </table>
-<p><span class="box-info">További információk a <span class="path">packages</span> és a <span class="path">non-packaged</span> mappákról a <a href="applications.html">Programok</a> fejezetben.</span></p>
+<p><div class="box-info">További információk a <span class="path">packages</span> és a <span class="path">non-packaged</span> mappákról a <a href="applications.html">Programok</a> fejezetben.</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -106,7 +108,7 @@ A megosztani kívánt fájlokat egy későbbi, többfelhasználós környezetben
 <td>A <a href="queries.html">Lekérdezések</a>et tartalmazza alap esetben 7 napig.</td></tr>
 </table>
 
-<p>A <span class="path">/boot/home/config/</span> egy speciális mappa: akárcsak a <span class="path">/boot/system/</span> ez is a csomagkezelő irányítása alatt áll, éppen ezért írásvédett. Csupán az alábbi mappák tartalma módosítható:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -119,7 +121,7 @@ A megosztani kívánt fájlokat egy későbbi, többfelhasználós környezetben
 <td>Itt találhatóak a programok beállításai és néhány rendszer-beállítás fájlja. Néhány program a saját mappáján belül tarja a beállításait, a többi egyszerűen csak ide rakja őket.</td></tr>
 </table>
 
-<p><span class="box-info">További információk a <span class="path">packages</span> és a <span class="path">non-packaged</span> mappákról a <a href="applications.html">Programok</a> fejezetben.</span></p>
+<p><div class="box-info">További információk a <span class="path">packages</span> és a <span class="path">non-packaged</span> mappákról a <a href="applications.html">Programok</a> fejezetben.</div></p>
 <p>Néhány kiemelt mappa a <span class="path">~/config/settings</span> mappán belül:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

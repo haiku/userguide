@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, 2019, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2023, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">このページの翻訳はまだ完全ではありません。完成するまでは、未完成の部分はオリジナルの英文を使用します。</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>インデックス</td></tr>
@@ -149,15 +150,15 @@
 <img src="../images/apps-images/mail-signature.png" alt="email-signature.png" /> 
 
 <p><span class="menu">署名の編集... (Edit signatures...)</span> を使って新規の署名または既存の署名を編集できます。ウィンドウが開き、新しい署名のタイトルとテキストを入力できます。ここで、<span class="menu">署名 (Signature)</span> メニューに、指定の署名を<span class="menu">開く (Open)</span>、または<span class="menu">保存 (Save)</span> する、または、現在読み込まれた署名を<span class="menu">削除 (Delete)</span> する 3 つの項目を見つけます。署名は <span class="path">~/config/settings/Mail/signatures</span> に保存されるはずです。</p>
-<p><span class="menu">添付ファイルを追加... (Add enclosure...)</span> と <span class="menu">添付ファイルを削除 (Remove enclosure)</span> を使って添付ファイルを追加 / 削除できます。また、Tracker ウィンドウからドラッグ＆ドロップでファイルを追加できます。ただし、ファイルはヘッダー部分 (上にある宛先、差出人、件名) にドロップしてください。でないと、ファイルがテキストファイルの場合メールの本文に貼り付けされてしまいます。</p>
+<p>Use <span class="menu">Add attachment…</span> and <span class="menu">Remove attachment</span> to add/remove files as enclosures. You can also drag &amp; drop files from a Tracker window. With text files you have to be careful not to drop them in the email body, or they'll get pasted as text instead.</p>
 
 <img src="../images/apps-images/mail-attachments.png" alt="email-attachments.png" /> 
 
-<p>添付ファイルはヘッダーセクションの下にリストされています。コンテキストメニューを開くか、ファイルを選択して <span class="key">DEL</span> を押すと削除できます。</p>
+<p>File attachments are listed below the email body. You can remove a file by invoking a context menu or by selecting it and pressing <span class="key">DEL</span>.</p>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>クエリ</h3>
-<p>この機能はまだ動作しませんが、現在開いているメッセージに関連するメッセージを表示するクエリ (同じ受信者や同じ件名) の表示が目的です。</p>
+<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

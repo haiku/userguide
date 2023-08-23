@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		Adriano Duarte
  *
 -->
@@ -79,8 +80,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">A pasta system - <span class="path">/boot/system/</span></a></h2>
-<p>No BeOS, antecessor do Haiku, esta pasta era chamada <span class="path">/boot/beos/</span>. Esta denominação ainda pode ser encontrada em alguns documentos antigos (por exemplo, o BeBook original).<br />
-A maioria das pastas dentro de <span class="path">/boot/system/</span> são somente-leitura, pois contém os arquivos necessários para o Haiku funcionar corretamente e portanto deve estar a salvo de alterações (acidentais). As únicas pastas que podem ser gravadas pelo usuário são:</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Contém arquivos em cache e a pasta temporária vinculada a <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Contém uma hierarquia para arquivos que não são parte de um .hpkg (provavelmente de antigos pacotes BeOS).</td></tr>
@@ -88,7 +89,7 @@ A maioria das pastas dentro de <span class="path">/boot/system/</span> são some
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Contém definições de todo o sistema.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Contém registros como o syslog (importante quando em problemas) e é a localização padrão para o arquivo swap.</td></tr>
 </table>
-<p><span class="box-info">For more information on the <span class="path">packages</span> and <span class="path">non-packaged</span> folders, see topic <a href="applications.html">Applications</a>.</span></p>
+<p><div class="box-info">Para mais informações sobre as pastas <span class="path">packages</span> e <span class="path">non-packaged</span>, veja o tópico <a href="applications.html">Instalando aplicativos</a>.</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -107,7 +108,7 @@ Arquivos que você gostaria de compartilhar com outros usuários num futuro ambi
 <td><a href="queries.html">Consultas</a> são armazenadas aqui, temporariamente por 7 dias, por padrão.</td></tr>
 </table>
 
-<p>A pasta <span class="path">/boot/home/config/</span> é especial: assim como <span class="path">/boot/system/</span> está principalmente sob o controle do gerenciamento de pacote e portanto somente-leitura. Ela também contém estas pastas, similarmente graváveis pelo usuário:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -120,7 +121,7 @@ Arquivos que você gostaria de compartilhar com outros usuários num futuro ambi
 <td>Esta pasta contém as definições de todas as aplicações e certas configurações para o sistema. Algumas aplicações gerenciam suas definições em subpastas próprias, outras simplesmente colocam seu arquivo de configuração aqui.</td></tr>
 </table>
 
-<p><span class="box-info">For more information on the <span class="path">packages</span> and <span class="path">non-packaged</span> folders, see topic <a href="applications.html">Applications</a>.</span></p>
+<p><div class="box-info">Para mais informações sobre as pastas <span class="path">packages</span> e <span class="path">non-packaged</span>, veja o tópico <a href="applications.html">Instalando aplicativos</a>.</div></p>
 <p>Aqui estão algumas das mais interessantes subpastas em <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

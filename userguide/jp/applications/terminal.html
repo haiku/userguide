@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,18 @@
 
 <div id="content">
 <div>
+<div class="box-info">このページの翻訳はまだ完全ではありません。完成するまでは、未完成の部分はオリジナルの英文を使用します。</div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td>
+                <a href="#windows-tabs">Windows and tabs</a><br />
+                <a href="#settings">Settings</a><br />
+                <a href="#colors">Colors</a><br />
+                <a href="#shortcuts">Keyboard shortcuts</a><br />
+                <a href="#hints">Hints for working with the Terminal</a><br />
+                <a href="#customization">Bash customization</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/terminal-icon_64.png" alt="terminal-icon_64.png" width="64" height="64" />ターミナル (Terminal)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -86,17 +98,15 @@
 標準 (<tt>%1d: %p</tt>) では、タブはカレントディレクトリを表示し、<tt>:</tt> で区切った後、現在実行中のプロセス (bash が実行中かアイドル中の場合は <tt>--</tt>) を表示します。上のスクリーンショットでは、<span class="path">Desktop</span> フォルダー内の FTP セッションを最初のタブで実行しており、二つ目のタブは、<span class="path">home</span> で待機中です。<br /><span class="menu">設定 | ウィンドウタイトル... (Edit | Window title...)</span> でターミナルのウィンドウタイトルも同様に編集できます。</p>
 <p>タブを右クリックすると、<span class="menu">タブを閉じる (Close tab)</span> か、ダブルクリックのように<span class="menu">タブタイトルの編集... (Edit tab title...)</span> をするコンテキストメニューが表示されます。</p>
 <p>ターミナルのウィンドウはほかのウィンドウのようにサイズを変更するか、<span class="menu">設定 | ウィンドウサイズ (Settings | Window size)</span> メニューでプリセットされたサイズを使えます。<span class="key">ALT</span> <span class="key">ENTER</span> で全画面表示に切り替えます。</p>
-<p>直接 <span class="menu">設定 (Settings)</span> メニューを介して変更したすべての設定 <span class="menu">ウィンドウタイトル (Window title)</span>、<span class="menu">ウィンドウサイズ (Window size)</span>、<span class="menu">テキストエンコーディング (Text encoding)</span>、または<span class="menu">フォントサイズ (Font size)</span> は、現在のセッション間だけ保存されます。変更を確定するなら、<span class="menu">設定… (Settings...)</span> パネルを使用する必要があります。</p>
+<p>All the settings you change directly through the <span class="menu">Settings</span> menu, like <span class="menu">Window title</span>, <span class="menu">Window size</span>, <span class="menu">Text encoding</span> or <span class="menu">Font size</span> are only kept for the current session. If you want to make permanent changes, you have to either invoke <span class="menu">Save as default</span> or apply them in the <span class="menu">Settings…</span> panel.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="settings" name="settings">設定</a></h2>
 <p><span class="menu">設定 | 設定... (Settings | Settings...)</span> ではターミナルの標準設定を変更できます。</p>
 <img src="../images/apps-images/terminal-settings.png" alt="terminal-settings.png" />
 <br />
-<p>用意された設定のほとんどは見ればわかるものですが、すべてが明らかなものではありません。フォントサイズは<span class="menu">フォント (Font)</span> ポップアップメニューのサブメニューで設定されます。<br />
-マウスポインターでタブとウィンドウタイトルの命名用の "式" を指すと、利用可能な変数についてのツールチップが表示されます。<br />
-<span class="menu">ミッドナイト (Midnight)</span> や<span class="menu">レトロ (Retro)</span> のような設定済み配色パターンを選択できます。また、<span class="menu">カラー (Color)</span> メニューで、変更する部位 (<span class="menu">テキスト (Text)</span>、<span class="menu">背景 (Background)</span>、<span class="menu">カーソル (Cursor)</span> など) を選び、下にあるカラーピッカーで、<span class="menu">カスタム (Custom)</span> 配色を作成できます。</p>
-<p>また、<span class="menu">カラー (Color)</span> メニューで "ANSI カラー" を構成できます。これらはターミナルアプリケーションのカラーパレット内の最初の 8 個の名前付きの色です。たとえば、"<i>ANSI レッドカラー</i>"を下のカラーピッカーで調整します。その効果は、その色を使用するターミナルアプリケーションを試用するまで見えません。いろいろな場所で使用されている正確な色は <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a> で文書化されています。</p>
+<p>Most of the offered settings speak for themselves. Not entirely obvious though, the font size is set in the submenu of the <span class="menu">Font</span> popup menu.<br />
+Hover your mouse over the "formulas" for naming tab and window titles to get tooltips for the available variables.</p>
 <p>続けて、いくつかのオプションについて: <span class="menu">カーソルを点滅させる (Blinking cursor)</span> を使用でき、<span class="menu">太字を有効にする (Allow bold text)</span> を選択できます。<br />
 <span class="menu">左オプションキーをメタキーとして使う (Use left Option as Meta key)</span> GNU Emacs や GNU readline ライブラリのような ASCII キャラクタセットの拡張部分へのアクセスに依存する特定のUNIXソフトワエアと作業する場合。<br />
 <span class="menu">実行中のプログラムがある場合、終了時に確認する (Confirm exit if active programs exist)</span> チェックボックスを有効にすると、アプリケーションがまだ実行されている時に、ターミナルウィンドウを閉じようとすると警告されるでしょう。</p>
@@ -105,6 +115,20 @@
 <tr><td><span class="button">元に戻す (Revert)</span></td><td> </td><td>設定パネルを開いた時の設定に戻す。</td></tr>
 <tr><td><span class="button">デフォルト (Defaults)</span></td><td> </td><td>すべての設定をデフォルト値にリセットします。</td></tr>
 </table>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="colors" name="colors">Colors</a></h2>
+<p><span class="menu">Settings | Colors…</span> opens a panel to configure the colors used by Terminal.</p>
+<img src="../images/apps-images/terminal-colors.png" alt="terminal-colors.png" />
+<p>From the top menu, you can choose a pre-defined <span class="menu">Color scheme</span> like <span class="menu">Midnight</span> or <span class="menu">Retro</span> or create a <span class="menu">Custom</span> one by selecting the color you want to change (<span class="menu">Text</span>, <span class="menu">Background</span>, <span class="menu">Cursor</span> etc.) and then use the color picker below.</p>
+<p>You can also configure "ANSI colors", which are the first 8 named colors in the color palette of terminal applications. You choose a color, for example "<i>ANSI red color</i>", and then adjust it with the color picker below. The effect is visible live in the open Terminal and in the preview below. The exact colors used in various places are documented at <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td class="onelinetop"><span class="button">ファイルに保存… (Save to file...)</span></td><td width="10"> </td><td>let's you save your custom color scheme under a name that will appear in the <span class="menu">Color scheme</span> menu at the top, if you put it in the default location <span class="path">~/config/settings/Terminal/Theme</span>.</td></tr>
+<tr><td><span class="button">元に戻す (Revert)</span></td><td> </td><td>brings back the colors that were active when you opened the colors panel.</td></tr>
+<tr><td><span class="button">デフォルト (Defaults)</span></td><td> </td><td>すべての設定をデフォルト値にリセットします。</td></tr>
+</table>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="shortcuts" name="shortcuts">キーボードショートカット</a></h2>

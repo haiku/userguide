@@ -82,7 +82,7 @@
 <a id="system" name="system">Der System-Ordner - <span class="path">/boot/system/</span></a></h2>
 <p>Bei Haikus Vorgänger BeOS hieß dieser Ordner <span class="path">/boot/beos/</span>. Ihn trifft man immer mal wieder in älterer Dokumentation an (z.B. im original BeBook).
 <br />
-Die meisten Ordner in <span class="path">/boot/system/</span> sind schreibgeschützt. Das ist auch vernünftig, schließlich befinden sich hier Dateien, die wichtig für das Funktionieren von Haiku sind. Daher sind sie vor (zufälligen) Änderungen geschützt. Die einzigen vom Benutzer veränderbaren Ordner sind:</p>
+Die meisten Ordner in <span class="path">/boot/system/</span> sind schreibgeschützt. Das ist auch vernünftig, schließlich befinden sich hier Dateien, die wichtig für das Funktionieren von Haiku sind. Daher sind sie vor (zufälligen) Änderungen geschützt. Damit das gleich erkennbar ist, ist der Hintergrund der Tracker-Fenster solch geschützter Ordner grau. Die einzigen vom Benutzer veränderbaren Ordner sind:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Enthält Cache-Dateien und den Ordner für temporäre Dateien, auf den <span class="path">/tmp/</span> verlinkt ist.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Enthält die Ordner-Hierarchie für Dateien, die nicht Teil eines .hpkg sind (wahrscheinlich aus einem alten BeOS Archiv).</td></tr>
@@ -90,7 +90,7 @@ Die meisten Ordner in <span class="path">/boot/system/</span> sind schreibgesch�
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Enthält systemweite Einstellungen.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Enthält Log-Dateien wie das syslog (wichtig bei der Fehlersuche) und standardmäßig die Auslagerungsdatei.</td></tr>
 </table>
-<p><span class="box-info">Weitere Informationen zum <span class="path">packages</span> und <span class="path">non-packaged</span> Ordner finden sich unter <a href="applications.html">Anwendungen</a>.</span></p>
+<p><div class="box-info">Weitere Informationen zum <span class="path">packages</span> und <span class="path">non-packaged</span> Ordner finden sich unter <a href="applications.html">Anwendungen</a>.</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -109,7 +109,7 @@ Dateien, auf die später mal in einer Mehrbenutzer-Umgebung die anderen Benutzer
 <td><a href="queries.html">Queries</a> werden generell für 7 Tage in diesem Ordner gespeichert, danach werden sie automatisch gelöscht.</td></tr>
 </table>
 
-<p>Der Ordner <span class="path">/boot/home/config/</span> ist besonders: Genauso wie <span class="path">/boot/system/</span> befindet der sich größtenteils unter der Kontrolle des Paketmanagments und daher schreibgeschützt. Und er enthält auch die gleichen vom Benutzer beschreibbaren Ordner:</p>
+<p>Der Ordner <span class="path">/boot/home/config/</span> ist besonders: Genauso wie <span class="path">/boot/system/</span> befindet der sich größtenteils unter der Kontrolle des Paketmanagments und daher schreibgeschützt. Tracker-Fenster geschützter Ordner sind hier ebenfalls grau. Und er enthält auch die gleichen vom Benutzer beschreibbaren Ordner:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -122,7 +122,7 @@ Dateien, auf die später mal in einer Mehrbenutzer-Umgebung die anderen Benutzer
 <td>Dieser Ordner enthält die eigenen Einstellungen für alle Anwendungen, sowie einige Systemkonfigurationen. Einige Anwendungen verwalten ihre Einstellungen in eigenen Unterverzeichnissen, andere schreiben ihre Einstellungsdatei direkt in diesen Ordner.</td></tr>
 </table>
 
-<p><span class="box-info">Weitere Informationen zum <span class="path">packages</span> und <span class="path">non-packaged</span> Ordner finden sich unter <a href="applications.html">Anwendungen</a>.</span></p>
+<p><div class="box-info">Weitere Informationen zum <span class="path">packages</span> und <span class="path">non-packaged</span> Ordner finden sich unter <a href="applications.html">Anwendungen</a>.</div></p>
 <p>Hier einige der interessanteren Unterordner von <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">

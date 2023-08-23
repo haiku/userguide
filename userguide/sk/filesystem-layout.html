@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Humdinger
  *		helix84
  *
 -->
@@ -61,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Preklad tejto stránky zatiaľ nie je dokončený. Dovtedy sa nedokončené časti zobrazia v anglickom origináli.</div>
 
 <h1>Rozloženie súborového systému Haiku</h1>
 
@@ -78,8 +80,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">Systémový priečinok - <span class="path">/boot/system/</span></a></h2>
-<p>V predchodcovi Haiku - BeOS - sa tento priečinok nazýval <span class="path">/boot/beos/</span>. Ešte stále ho môžete nájsť v staršej dokumentácii (napr. v pôvodnej BeBook).<br />
-Väčšina priečinkov v <span class="path">/boot/system/</span> je iba na čítanie, čo je rozumné, keďže obsahujú súbory nevyhnutné na správne fungovanie Haiku a preto musia byť ochránené pred neúmyselnou zmenou. Jediné priečinky, do ktorých môže používateľ zapisovať, sú:</p>
+<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
+Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Obsahuje súbory vo vyrovnávacej pamäti a dočasný priečinok s odkazom do <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Obsahuje hierarchiu súborov, ktoré nie sú súčasťou .hpkg (pravdepodobne zo starých archívov BeOS).</td></tr>
@@ -87,7 +89,7 @@ Väčšina priečinkov v <span class="path">/boot/system/</span> je iba na čít
 <tr><td><span class="path">/boot/system/settings/</span></td><td> </td><td>Obsahuje celosystémové nastavenia.</td></tr>
 <tr><td><span class="path">/boot/system/var/</span></td><td> </td><td>Obsahuje protokoly ako syslog (dôležitý pri riešení chýb) a je predvoleným umiestnením odkladacieho súboru.</td></tr>
 </table>
-<p><span class="box-info">Ďalšie informácie o pričinkoch <span class="path">packages</span> a <span class="path">non-packaged</span> nájdete v téme <a href="applications.html">Aplikácie</a>.</span></p>
+<p><div class="box-info">Ďalšie informácie o pričinkoch <span class="path">packages</span> a <span class="path">non-packaged</span> nájdete v téme <a href="applications.html">Aplikácie</a>.</div></p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -106,7 +108,7 @@ Súbory, ktoré chcete zdieľať s ostatnými používateľmi v budúcom viacpou
 <td>Tu sa ukladajú <a href="queries.html">Požiadavky</a>. Štandardne sa ukladajú dočasne, na 7 dní.</td></tr>
 </table>
 
-<p>Priečinok <span class="path">/boot/home/config/</span> je špeciálny: rovnako ako <span class="path">/boot/system/</span> je prevažne pod kontrolou správcu balíkov a preto je len na čítanie. Tiež obsahuje tieto podobné priečinky, do ktorých môže používateľ zapisovať:</p>
+<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>
@@ -119,7 +121,7 @@ Súbory, ktoré chcete zdieľať s ostatnými používateľmi v budúcom viacpou
 <td>Tento priečinok obsahuje nastavenia všetkých aplikácií a časť konfigurácie systému. Niektoré aplikácie svoje  nastavenia ukladajú do vlastných podpriečinkov, iné jednoducho umiestnia svoj konfiguračný súbor sem.</td></tr>
 </table>
 
-<p><span class="box-info">Ďalšie informácie o pričinkoch <span class="path">packages</span> a <span class="path">non-packaged</span> nájdete v téme <a href="applications.html">Aplikácie</a>.</span></p>
+<p><div class="box-info">Ďalšie informácie o pričinkoch <span class="path">packages</span> a <span class="path">non-packaged</span> nájdete v téme <a href="applications.html">Aplikácie</a>.</div></p>
 <p>Tu sú niektoré zo zaujímavejších podpriečinkov v <span class="path">~/config/settings/</span>:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
