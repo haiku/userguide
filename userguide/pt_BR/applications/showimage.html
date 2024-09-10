@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR">
 <head>
-<!-- 
+<!--
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -66,6 +66,17 @@
 <div>
 <div class="box-info">A tradução desta página ainda não está completa. Até lá, partes incompletas mostrarão o original em inglês.</div>
 
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td><a href="#file">File</a><br />
+                <a href="#edit">Edit</a><br />
+                <a href="#browse">Browse</a><br />
+                  <a href="#image">Image</a><br />
+                  <a href="#view">View</a><br />
+                  <a href="#attributes">Attributes</a><br />
+                  <a href="#shortcuts">Keyboard shortcuts</a></td></tr>
+</table>
+
 <h2><img src="../../images/apps-images/showimage-icon_64.png" alt="showimage-icon_64.png" width="64" height="64" />Exibir Imagem</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><i>Sem entrada, normalmente carregado via duplo clique em um arquivo suportado.</i></td></tr>
@@ -73,42 +84,67 @@
 <tr><td>Definições:</td><td></td><td><span class="path">~/config/settings/ShowImage_settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>Exibir Imagem permite ver imagens em todos os formatos que são suportados através dos <a href="../preferences/datatranslations.html">Tradutores de Dados</a>. Novos formatos são automaticamente reconhecidos quando seu tradutor é adicionado ao sistema. Isto é feito para arquivos de ícones vetoriais do Haiku, imagens do WonderBrush ou quando imagens WebP tornam-se disponíveis, por exemplo.<br />
-Exibir Imagem proporciona funcionalidades de edição mínimas para cortas, rotacionar e inverter imagens e para salvá-las em outro formato.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Visualização</h2>
-<img src="../images/apps-images/showimage-view.jpg" alt="showimage-view.jpg" />
+<p>ShowImage allows you to view images in all formats that are supported through <a href="../preferences/datatranslations.html">DataTranslators</a>. New formats are automatically recognized when their translator is added to the system. This has been done for Haiku's vector icon files, WonderBrush images or when WebP images became available, for example.<br />
+ShowImage doesn't provide editing features, but it does allow you to select a rectangular area and save it in any format. You can also rotate and flip images, but these operations don't physically change images. They only add an attribute that indicate to rotate or flip the image automatically when it's opened the next time.</p>
+<p>Let's go through the menus in order, leaving out the obvious items.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="file" name="file">File</a></h2>
+<img src="../images/apps-images/showimage-file.png" style="float:left;margin-right:15px" alt="showimage-file.png" />
+<p>The <span class="menu">Open…</span> sub-menu lists the most recently viewed images.<br />
+The <span class="menu">Open with…</span> lets you open the current image in any application supporting its filetype.<br />
+The <span class="menu">Save as…</span> sub-menu lets you choose a format to save the current image.<br />
+<span class="menu">Use as background…</span> opens the <a href="../preferences/backgrounds.html">Backgrounds</a> preferences to quickly set the current image as backdrop of your workspace(s).</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="edit" name="edit">Edit</a></h2>
+<img src="../images/apps-images/showimage-edit.png" style="float:left;margin-right:15px" alt="showimage-edit.png" />
+<p>When <span class="menu">Selection mode</span> is activated ̵ also available with the dashed rectangle icon of the tool bar ̵ you can select a rectangular area of the image that you can then drag&amp;drop to the Desktop or any folder to save it. Dragging with the right mouse button will show a menu when dropping the snippet that lets you choose another image format.<br />
+If you don't want to change modes first, you can create this selection frame in "normal mode" by simply holding <span class="key">CTRL</span> while left-click-dragging.</p>
+<p style="clear:left"><span class="menu">Clear selection</span> or <span class="key">ESC</span> will remove the selection frame.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="browse" name="browse">Browse</a></h2>
+<img src="../images/apps-images/showimage-browse.png" alt="showimage-browse.png" />
+<p>Após abrir uma imagem pode-se rapidamente navegar através de todas as imagens na sua pasta (ou janela de resultado de consulta) pressionando <span class="key">↑</span>/<span class="key">↓</span> ou <span class="key">←</span>/<span class="key">→</span>. Pode-se ver na janela do Rastreador a seleção mudar de acordo.</p>
+<p>There is a quick way to open the folder of the current image and even navigate to its parent and subfolders. It works just like with <a href="../tracker.html#drill-down">drill-down navigating</a> in Tracker by clicking in the info area in the status bar that shows size, zoom level and format of the current image.</p>
+<p>Olhar no menu <span class="menu">Navegar</span>, exibe outro tipo de navegação: Alguns formatos de imagem, como o TIFF, podem conter muita páginas em um arquivo. Comandos como <span class="menu">Primeira página</span> e <span class="menu">Próxima página</span> permitem navegar por aquelas páginas.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="image" name="image">Image</a></h2>
+<img src="../images/apps-images/showimage-image.png" style="float:left;margin-right:15px" alt="showimage-image.png" /><p>The <span class="menu">Image</span> menu offers the few image manipulations necessary for an image viewer: rotating and flipping the image.<br />
+Note however, that the actual image data won't be changed. Only an attribute is added to the file so it'll be shown rotated or flipped the next time you open it.</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="view" name="view">View</a></h2>
+<img src="../images/apps-images/showimage-view.png" style="float:left;margin-right:15px" alt="showimage-view.png" />
 <p>O menu <span class="menu">Visualizar</span> permite iniciar um <span class="menu">Slide show</span> de todas as imagens em uma pasta (ou janela de resultado de consulta) e definir um <span class="menu">Atraso de slide</span> de 2 a 20 segundos.</p>
 <p>Outros comandos aplicados à imagem atualmente mostrada (sem alterar o tamanho da janela):<br />
 <span class="menu">Tamanho original</span> exibe a imagem com um fator de aproximação de 100%.<br />
 <span class="menu">Ajustar à janela</span> encolhe a imagem dentro do quadro da janela, isto é após ter aproximado dentro dele ou após redimensionar a janela.<br />
 <span class="menu">Aproximar</span> e <span class="menu">Afastar</span> aproxima ou afasta a imagem em etapas de 10%. A aproximação também é feita com a roda do mouse; para rotacionar horizontalmente uma imagem maior do que a janela, simplesmente clique com o botão esquerdo e arraste o mouse.</p>
-<p>Duas definições não se aplicam apenas à imagem atualmente exibida e são lembradas ao navegar de uma imagem para a próxima:<br />
-<span class="menu">Aproximação em alta qualidade</span> aplica um filtro muito rápido ao aproximar para reduzir linhas denteadas e produzir um resultado mais suave.<br />
-<span class="menu">Esticar para a janela</span> esticará imagens menores para preencher o quadro da janela atual.</p>
+<p>Two settings don't just apply to the currently displayed image and are remembered when browsing from one image to the next:<br />
+<span class="menu">High-quality zooming</span> applies a very fast filter when zooming to reduce jagged lines and produce a smoother result.<br />
+<span class="menu">Stretch to window</span> will stretch smaller images to fill the current window frame.</p>
 <p>E há um modo <span class="menu">Tela cheia</span> com uma opção para <span class="menu">Exibir legenda no modo de tela cheia</span> a qual sobrepõe o nome do arquivo na parte inferior da imagem.</p>
 <p>Por último, <span class="menu">Exibir barra de ferramentas</span> irá exibir/ocultar os controles gráficos:</p>
 <img src="../../images/apps-images/showimage-toolbar.png" alt="showimage-toolbar.png" />
-<p>From left to right: Previous image, next image, start slide show (in full screen mode), selection mode, original size, fit to window, zoom in, zoom out, previous and next page (when an image format like TIFF allows multiple pages in one file, see below).</p>
+<p>From left to right: Previous image, next image, start slide show (in full screen mode), selection mode, original size, fit to window, zoom in, zoom out, previous and next page (when an image format like TIFF allows multiple pages in one file).</p>
 <p>Muitos dos comandos mais frequentemente utilizados também estão disponíveis a partir de um menu de contexto acionado pelo clique com o botão direito do mouse sobre a imagem. Conveniente quando em modo de tela cheia.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Navegando</h2>
-<img src="../images/apps-images/showimage-browse.jpg" alt="showimage-browse.jpg" />
-<p>Após abrir uma imagem pode-se rapidamente navegar através de todas as imagens na sua pasta (ou janela de resultado de consulta) pressionando <span class="key">↑</span>/<span class="key">↓</span> ou <span class="key">←</span>/<span class="key">→</span>. Pode-se ver na janela do Rastreador a seleção mudar de acordo.</p>
-<p>Existe uma maneira rápida para abrir a pasta de uma imagem atual e então navegar pela sua principal e subpastas. Ela funciona semelhantemente à <a href="../tracker.html#drill-down">navegação de pesquisa</a> no Rastreador pelo clique na área de informação na barra de estado que exibe tamanho e formato da imagem atual.</p>
-<p>Olhar no menu <span class="menu">Navegar</span>, exibe outro tipo de navegação: Alguns formatos de imagem, como o TIFF, podem conter muita páginas em um arquivo. Comandos como <span class="menu">Primeira página</span> e <span class="menu">Próxima página</span> permitem navegar por aquelas páginas.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Editando</h2>
-<img src="../images/apps-images/showimage-edit.jpg" alt="showimage-edit.jpg" />
-<p>O menu <span class="menu">Imagem</span> oferece umas poucas manipulações de imagem necessárias para um visualizador de imagem: rotacionar e inverter a imagem. Observe, contudo, que a imaem real não será alterada. Apenas um atributo é adicionado ao arquivo, então ele será exibido rotacionado ou invertido da próxima vez que for aberto.</p>
-<p><span class="menu">Utilizar como papel de parede...</span> irá abrir as preferências do <a href="../preferences/backgrounds.html">Papel de parede</a> para definir a imagem atual como fundo de seus espaços de trabalho.</p>
-<p>Cortar é outra funcionalidade necessária algumas vezes. Para definir o quadro para cortar, pode-se alternar para <span class="menu">Modo de seleção</span> a partir do menu <span class="menu">Editar</span> e arrastar uma caixa com o botão esquerdo do mouse. Se não deseja alterar os modos primeiro, pode criar esta caixa no "modo normal" simplesmente segurando <span class="key">CTRL</span> enquanto arrasta com o botão esquerdo, o que de outra maneira apenas rotacionaria horizontalmente a imagem.<br />
-<span class="menu">Limpar seleção</span> ou <span class="key">ESC</span> removerá a caixa de seleção.</p>
-<p>O capítulo seguinte exibe como realmente salvar uma área recortada.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Salvando e convertendo</h2>
-<p>Para salvar ou converter uma imagem em qualquer formato disponível, pode-se chamar o item normal <span class="menu">Salvar como...</span> a partir do menu <span class="menu">Arquivo</span>, selecionar o formato e escolher um nome de arquivo.<br />
-Frequentemente mais rápido, especialmente quando a janela do Rastreador com a pasta de destino já está aberta, é usar o arrastar e soltar.</p>
-<img src="../images/apps-images/showimage-dnd.jpg" alt="showimage-dnd.jpg" />
-<p>Esta é também a forma como o recorte acima mencionado é finalizado. Também selecione um quadro como descrito acima, ou escolha <span class="menu">Editar | Selecionar tudo</span> para a imagem inteira. Então arraste e solte a seleção na Área de Trabalho ou alguma janela do Rastreador para criar uma nova imagem do recorte no mesmo formato da imagem original.</p>
-<p>Para salvar em outro formato de arquivo, arraste como botão direito do mouse e escolha um formato do menu de contexto quando soltar a imagem.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Atalhos de teclado</h2>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="attributes" name="attributes">Attributes</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Here you can set a <span class="menu">Rating</span> of the current image between 1 and 10, or choose <span class="menu">Reset rating</span> to set it back to "unrated" (= "0").</p>
+<p>In Tracker, ratings are displayed in a "Rating" attribute column as a number of stars. Five stars represent the 10 possible values, resulting in half-star steps. For example, a rating of 7 is shown as 7 / 2 = 3.5 stars: ★★★⯪☆.<br />
+You can edit the rating directly in Tracker as well: Select the file, choose <span class="menu">Edit name</span> from the <span class="menu">File</span> menu and press <span class="key">TAB</span> to get into the "Rating" column. Now you can enter the new numerical value which will turn into a star rating after hitting <span class="key">ENTER</span>.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="shortcuts" name="shortcuts">Keyboard shortcuts</a></h2>
 <p>Aqui está uma lista dos atalhos mais úteis:</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">←</span> / <span class="key">↑</span></td><td style="width:15px;"></td><td>Imagem anterior</td></tr>

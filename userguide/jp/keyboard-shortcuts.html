@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -75,13 +75,14 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="general" name="general">一般的なショートカット</a></h2>
-<p>以下は、対応するメニューがない場合も常に使用できる、通常用いられるショートカットの多くが載っている表です。</p>
+<p>以下は、対応するメニューがない場合も常に使用できる、よく用いられるショートカットの表です。</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="key">ALT</span> <span class="key">Fx</span></td><td style="width:15px;"></td><td>X 番目の<a href="workspaces.html">ワークスペース</a> (<span class="key">Fx</span> はワークスペースに対応しているファンクションキー) に切り替えます。同時に <span class="key">SHIFT</span> を押すことでアクティブウィンドウも切り替え先に移動できます。</td></tr>
 <tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span> / <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>利用可能なワークスペースの行 / 列を空間的に切り替えます。同時に <span class="key">SHIFT</span> を押すことでアクティブウィンドウも切り替え先に移動できます。</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>ウィンドウを別のウィンドウのタブや境界の近くにドラッグしているときに、<span class="key">OPT</span> を押し続けていると、それらをスタック (Stack) またはタイル (Tile) します (<a href="gui.html#stack-tile">グラフィカルユーザーインターフェース</a>の章を参照してください)。</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>現在のワークスペース内で開いているウィンドウを順に切り替えます。</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>スタック＆タイルされたウィンドウ間を循環します。</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>現在のワークスペース内で開いているウィンドウを循環します。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + 左クリック</td><td></td><td>マウスの左ボタンでクリック、ドラッグしてウィンドウを移動します (<a href="gui.html#move-resize">グラフィカルユーザーインターフェース</a> の章を参照してください)。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + 右クリック</td><td></td><td>マウスの右ボタンでクリック＆ドラッグしてウィンドウのサイズを変更します (<a href="gui.html#move-resize">グラフィカルユーザーインターフェース</a> の章を参照してください)。</td></tr>
 <tr><td> </td></tr>
@@ -89,7 +90,7 @@
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">M</span></td><td></td><td>アクティブウィンドウを最小化します。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">H</span></td><td></td><td>アクティブアプリケーションのすべてのウィンドウを隠します (最小化します)。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">F</span></td><td></td><td>アクティブウィンドウを前面に移動します (マウス設定が <a href="preferences/input.html#mouse">Focus Follows Mouse</a> の場合のみ適用されます)。</td></tr>
-<tr><td><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">B</span></td><td></td><td>アクティブウィンドウを背後に移動します。</td></tr>
+<tr><td><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">B</span></td><td></td><td>アクティブウィンドウを背面に移動します。</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">TAB</span></td><td></td><td><a href="twitcher.html">Twitcher</a> を表示します。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">DEL</span></td><td></td><td><a href="teammonitor.html">チームモニター</a>を開きます。</td></tr>
@@ -142,14 +143,14 @@
 <tr><td><span class="key">ALT</span> + 左クリック</td><td style="width:15px;"></td><td><span class="key">ALT</span> を押しながらパスまたは URL を左クリックすると、優先アプリケーション (例　フォルダーを Trackerで、画像を 画像ビューワ (ShowImage)で) で開きます。さらに <span class="key">SHIFT</span> を押しながらパスを限定できます。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td></td><td>新しいウィンドウでもう 1 つ別のターミナルセッションを開きます。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td></td><td>新しいタブでもう 1 つ別のターミナルセッションを開きます。</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>対応するタブに切り替えます。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">TAB</span></td><td></td><td>次のターミナルウィンドウに切り替えます。</td></tr>
-<tr><td><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>左 / 右のタブに切り替えます。</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>対応するタブに切り替えます。</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>左 / 右のタブに切り替えます。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>現在のタブを左 / 右に移動します。</td></tr>
+<tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>ターミナルの出力を 1 行上 / 下にスクロールします。</td></tr>
+<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>ターミナルの出力を 1 ページ上 / 下にスクロールします。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td></td><td>フォントサイズを大きく / 小さくします。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>全画面モードのオン / オフを切り替えます。</td></tr>
-<tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>ターミナルの出力を 1 行上 / 下にスクロールします。</td></tr>
-<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>ターミナルの出力を 1 ページ上 / 下にスクロールします。</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>タブ補完。何文字か入力した後に <span class="key">TAB</span> を 1 回押すと、ファイル名やファイルパスを自動補完できます。複数の候補がある場合は、それぞれの名前が変わる位置で補完が止まるので、絞り込むためにもう何文字か入力する必要があります。<span class="key">TAB</span> を 2 回押してすべての候補を一覧表示することもできます。</td></tr>
 <tr><td><span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>以前に入力したすべてのコマンドの履歴を前 / 後に移動します。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">R</span></td><td></td><td>Bash の履歴。入力したコマンドはすべてファイル <span class="path">~/config/settings/bash_history</span> に格納されます。<span class="key">CTRL</span> <span class="key">R</span> を押して、コマンドを入力し始めると、Bash の履歴中で最初に一致したものが表示されます。正しいコマンドラインを見つけるまで <span class="key">CTRL</span> <span class="key">R</span> を繰り返し押し、<span class="key">ENTER</span> を押して実行してください。</td></tr>

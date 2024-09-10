@@ -85,10 +85,10 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="mounting-volumes" name="mounting-volumes">ボリュームのマウント</a></h2>
-<p>ハードディスク、CD、USB スティック等にアクセスするには、まずボリュームをマウントしなければなりません、すなわち、システムにそれが存在することを知らせます。ボリュームをマウントするには、デスクトップあるいはマウント済のボリューム (ブートディスク等) を右クリックして <span class="menu">マウント (Mount)</span> サブメニューからボリュームを選択します。Deskbar に同様のマウントメニューが見つかります。</p>
+<p>ハードディスク、CD、USB メモリー等にアクセスするには、まずボリュームをマウントしなければなりません、すなわち、システムにそれが存在することを知らせます。ボリュームをマウントするには、デスクトップあるいはマウント済のボリューム (ブートディスク等) を右クリックして <span class="menu">マウント (Mount)</span> サブメニューからボリュームを選択します。Deskbar に同様のマウントメニューが見つかります。</p>
 <img src="images/tracker-images/mount-settings.png" alt="drill-down.png" />
 <p><span class="menu">設定 (Settings)</span> もあるので、起動毎にすべてを手動でマウントする必要はありません。上図の設定は、接続や挿入されたあらゆる記憶装置を自動的にマウントし、以前にマウントされたすべてのディスクを起動時にマウントするでしょう。</p>
-<div class="box-warning">ハードドライブや USB スティック等を取り外す前に、ボリュームが正しくアンマウントされ、アイコンが消えていることを確かめてください。これはデータ転送がすべて終了したことを保証します。そうしないと、データを失うか、あるいはディスクを破損するかもしれません。</div>
+<div class="box-warning">ハードドライブや USB メモリー等を取り外す前に、ボリュームが正しくアンマウントされ、アイコンが消えていることを確かめてください。これはデータ転送がすべて終了したことを保証します。そうしないと、データを失うか、あるいはディスクを破損するかもしれません。</div>
 <div class="box-warning">Haiku は、BFS フォーマット以外のボリュームをマウントできます。しかし、これら BFS 以外のファイルシステムは詳しくテストされていないことに注意してください。これらのボリュームへの書き込みは場合によってはデータ破損の原因になるかもしれません。大事を取るなら、マウント時は常に <span class="button">読み取り専用 (Mount read-only)</span> を選んでください!</div>
 
 <h2>
@@ -148,9 +148,10 @@
 <li><p><span class="menu">閉じる (Close)</span> (<span class="key">ALT</span> <span class="key">W</span>) - ウィンドウを閉じます。<span class="key">SHIFT</span> を押しながら選択すると、メニューは<span class="menu">すべて閉じる (Close all)</span> となり、すべての Tracker ウィンドウを閉じます。</p></li>
 <li><p><span class="menu">ワークスペース内のすべてを閉じる (Close all in workspace)</span> (<span class="key">ALT</span> <span class="key">Q</span>) - 現在のワークスペース中のすべての Tracker ウィンドウを閉じます。フォルダーをクリックする時に <span class="key">OPT</span> キーを押し忘れ、結果として開いた Tracker ウィンドウでワークスペースが散らかった場合に便利です。</p></li>
 </ul>
-<div class="box-info"><p _translation_id="4341">完全な <span class="menu">アイコンの整列 (Clean up)</span> (<span class="key">ALT</span> <span class="key">K</span>)を用いずにいくつかのアイコンを再配列したいことがあります。その場合、これらのアイコンを選択して新しい場所へドラッグを開始し、ドロップする前に <span class="key">ALT</span> を押したままにします。これによりアイコンは見えないグリッドに整列されます。</p>
-<p><span class="menu">一覧表示</span>モードの最初の列は、<span class="menu">ミニアイコン表示</span>および<span class="menu">アイコン表示</span>モードのアイコンラベルを決定します。普通は、それはファイル名です。しかし、<span class="menu">一覧表示</span>に変更して、<span class="menu">サイズ (Size)</span> 列を左にドラッグすると<span class="menu">アイコン表示</span>モードに戻ったときアイコンラベルがサイズ表示になります。Neato!</p>
-</div>
+<div class="box-info">
+<p _translation_id="4341">Sometimes you just want to rearrange a few icons without doing a complete <span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>). In that case, you select these icons and start to drag them to their new location. Before you drop them there, keep <span class="key">ALT</span> pressed. This will align the icons to the invisible grid.</p>
+<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. That applies to the width of the labels as well: If a label gets truncated by the column width in <span class="menu">List view</span>, it'll be similarly truncated when switching to <span class="menu">Mini</span> and <span class="menu">Icon view</span>.<br />
+Normally, the first column is the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p></div>
 <p>その他の機能は、Tracker 設定を除いて説明を要しないものです。</p>
 
 <h3>
@@ -178,9 +179,12 @@
 <p>例によって、コマンドの使い方はかなり明白なものです。</p>
 <ul>
 <li><p><span class="menu">検索… (Find...)</span> - ファイルまたはフォルダーを検索します。より多くの情報を得るために<a href="queries.html">クエリ</a>のトピックを見てください。</p></li>
-<li><p><span class="menu">新規作成 (New)</span> - 新しいフォルダー、または<i>テンプレート</i>に基づいたファイルを作成します。<br /><br /></p>
+<li><p><span class="menu">新規作成 (New)</span> - 新しいフォルダー、またはテンプレートに基づいたファイルを作成します。
+</p>
 <img src="../en/images/tracker-images/new-menu.png" alt="new-menu.png" />
-<p><span class="menu">雛形を編集… (Edit templates...)</span> を選択すると、<span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span> フォルダーを開きます。そのフォルダーにファイルを作成すると、<span class="menu">新規作成 (New)</span> メニューのテンプレートとしてファイルの名前およびほかの属性を持ったファイルタイプを提供するでしょう。ここでは、ファイルタイプが <tt>text/plain</tt> であるファイル "Text" があります。より多くの情報については、<a href="filetypes.html">ファイルタイプ</a>のトピックを見てください。</p></li>
+<p>下にある<span class="menu">雛形を編集… (Edit templates...)</span> を選択すると、<span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span> フォルダーを開きます。そこにファイルやフォルダーを作成すると、<span class="menu">新規作成 (New)</span> メニュー内のテンプレートとして現れるでしょう。テンプレートで作成されたファイル / フォルダーは、テンプレートのファイルタイプ、ファイル名、内容およびその他すべての属性を持つでしょう。フォルダーの場合、ウィンドウの大きさ / 位置、属性列の配置も持つでしょう。</p>
+<p>上のスクリーンショット内に、カスタムテンプレートフォルダー "Email folder" と "Music folder" が見られます。どちらも同じカスタムオーバーレイアイコンを持つフォルダーを作成し、すでに設定された関連する属性を持ちます。</p>
+<p>カスタムサブメニュー内にテンプレートを並び替えることもできます。<span class="menu">新規サブメニューの追加… (Add new submenu…)</span> を選択して、<span class="path">新規 Tracker テンプレート (Tracker New Templates)</span> で新たな特別なフォルダーを作成し、目的に応じて名前を変更します。テンプレートファイルをここにコピーすれば、新しいサブメニュー内に表示されます。上のスクリーンショットでは、サブメニュー "C   dev files" と "Office files" が表示されています。</p></li>
 <li><p><span class="menu">指定アプリケーションで開く… (Open with...)</span> - このサブメニューは、このファイルタイプを扱えるアプリケーションをすべて表示します。<br /><br /></p>
 <img src="../en/images/tracker-images/open-with.png" alt="open-with.png" /><p>ファイルがダブルクリックされた時にファイルを開く優先アプリケーションにチェックマークがつきます。このサブメニューは最初に正確なファイルタイプ (この場合、タイプ <tt>text/plain</tt> であるテキストファイル) を扱えるアプリケーションをリストします。次に、一般にそのスーパータイプ (ここでは <tt>text/*</tt>) を扱えるすべてのアプリケーションが、最後に、任意のファイルを処理できるものがリストに入ります。サブメニュー中のアプリケーション名ではなく、<span class="menu">指定アプリケーションで開く… (Open with...)</span> をクリックすると、代わりにパネルが開きます。</p>
 <br /><br />
@@ -196,7 +200,7 @@
 <li><span class="menu">属性 (Attibutes)</span>: すべての追加属性を、その値と形と共に一覧します。</li>
 </ul></li>
 <li><p><span class="menu">名前の変更 (Edit name)</span>, <span class="menu">複製 (Duplicate)</span>、<span class="menu">ごみ箱に移動 (Move to Trash)</span> - ファイル名の編集、ファイルの複製、または選択したファイルをごみ箱へ移動できます。</p></li>
-<li><p><span class="menu">次へ移動 (Move to)</span>、<span class="menu">次へコピー (Copy to)</span>、<span class="menu">指定先にリンクを作成 (Create link)</span> - サブメニューナビゲーション方法を使用して、選択したファイルの移動、コピー、またはリンクができます。メニューを起動する間に <span class="key">SHIFT</span> を押し続けると、相対リンクを作成するオプションを提供します。</p></li>
+<li><p><span class="menu">次へ移動 (Move to)</span>、<span class="menu">次へコピー (Copy to)</span>、<span class="menu">指定先にリンクを作成 (Create link)</span> - サブメニューナビゲーション方法を使用して、選択したファイルの移動、コピー、またはリンクができます。メニューを起動する間に <span class="key">SHIFT</span> を押し続けると、相対リンクを作成するオプションを提供します。リンクは点線が下に引かれたアイコンで見分けられます。</p></li>
 <li><p><span class="menu">切り取り (Cut)</span>、<span class="menu">コピー (Copy)</span>、<span class="menu">貼り付け (Paste)</span> - クリップボードを使ってファイルのカット、コピー、そしてペーストができます。メニューを起動する間に <span class="key">SHIFT</span> を押し続けることによって、おそらく別のフォルダーからファイルを<span class="menu">さらにコピー / 切り取り (Copy/Cut more)</span> でき、後でほかのどこかにペーストできます。さらに、<span class="key">SHIFT</span> を押し続ける間、クリップボードにコピーされたファイルをリンクとしてペーストできます。</p></li>
 <li><p><span class="menu">ファイル形式を判別 (Identify)</span> - ファイルタイプを見つけ出して、たとえば、<span class="cli">wget</span> でファイルを転送した場合のように、ファイルがファイルタイプを持っていなければ、セットするでしょう。メニューを起動する間に <span class="key">SHIFT</span> を押していると、メニューは<span class="menu">ファイル形式を判別 (Force identify)</span> に変わります。これは、ファイルタイプを識別し、誤りだった場合は修正します。</p></li>
 <li><p><span class="menu">アドオン (Add-ons)</span> - すべての一般的な Tracker アドオンと、選択されたファイルを扱えるアドオンを表示します。詳しくは、<a href="tracker-add-ons.html">Tracker アドオン</a>のトピックを見てください。</p></li>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009, Haiku. All rights reserved.
+ * Copyright 2009-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -72,10 +72,20 @@
 <tr><td>Einstellungen:</td><td></td><td><span class="path">~/config/settings/CharacterMap settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>CharacterMap zeigt eine Übersicht aller Schriftzeichen und deren UTF-8 Code, die eine Schriftart enthält.</p>
+<p>CharacterMap zeigt eine Übersicht aller Schriftzeichen in allen Unicode-Blöcken.</p>
+
 <img src="../images/apps-images/charactermap.png" alt="charactermap.png" />
-<p>Links werden alle Standard-Blöcke innerhalb einer Schriftart angezeigt, die mittels Filter eingegrenzt werden können. Es ist auch möglich, zusätzlich enthaltene Schriftzeichen mit <span class="menu">Private Blöcke zeigen</span> aus dem Menü <span class="menu">Ansicht</span> einzublenden. Rechter Hand werden die einzelnen Schriftzeichen aus dem ausgewählten Block der im Menüpunkt <span class="menu">Schriftart</span> ausgewählten Schriftart angezeigt. Mit dem Schieberegler darunter kann die Schriftgröße eingestellt werden. Ganz unten wird der Code des Schriftzeichens unter dem Mauszeiger als Hex, Dezimal und UTF-8 angezeigt.</p>
-<p>Aus der Schriftzeichen-Tabelle lässt sich ein einzelnes Zeichen direkt in eine andere Anwendung ziehen. Es ist auch möglich, über einen Rechtsklick und <span class="menu">Zeichen kopieren</span> (<span class="key">ALT</span> <span class="key">C</span>) das Zeichen zu kopieren, oder mittels <span class="menu">Zeichen als Byte-Code kopieren</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">C</span>) das Zeichen als Code zu übernehmen. So erhält man beispielsweise entweder <tt>€</tt> oder  <tt>\\xe2\\x82\\xac</tt>.</p>
+
+<p>Links werden alle standartisierte Unicode-Blöcke angezeigt, die mittels Filter eingegrenzt werden können.<br />
+<span class="menu">Private Blöcke zeigen</span> aus dem <span class="menu">Ansicht</span> Menü bietet die Option zusätzlich enthaltene Schriftzeichen einzublenden. Der Inhalt dieser Blöcke wird nicht durch das Unicode Consortium bestimmt.<br />
+Man kann auch <span class="menu">Nur in Schriftart enthaltene Blöcke zeigen</span>. Dadurch werden nicht enthaltene Blöcke in der Liste links ausgeblendet und rechts gar nicht angezeigt.</p>
+
+<p>Rechter Hand werden die einzelnen Schriftzeichen aus dem ausgewählten Block  mit der im Menüpunkt <span class="menu">Schriftart</span> ausgewählten Schriftart angezeigt. Symbole, die aus der gewählten Schrift stammen werden schwarz dargestellt. Nicht enthaltene Symbole werden vom System mit welchen aus anderen Schriften ergänzt; diese werden grau dargestellt.<br />
+Mit dem Schieberegler darunter kann die Schriftgröße eingestellt werden. Ganz unten wird der Code des Schriftzeichens unter dem Mauszeiger als Hex, Dezimal und UTF-8 angezeigt.</p>
+
+<p>Aus der Schriftzeichen-Tabelle lässt sich ein einzelnes Zeichen direkt in eine andere Anwendung ziehen. Es ist auch möglich, über einen Rechtsklick und <span class="menu">Zeichen kopieren</span> (<span class="key">ALT</span> <span class="key">C</span>) das Zeichen zu kopieren, oder mittels <span class="menu">Zeichen als Byte-Code kopieren</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">C</span>) das Zeichen als Code zu übernehmen. So erhält man beispielsweise entweder <tt>€</tt> oder  <tt>\xe2\x82\xac</tt>.</p>
+
+<p>Klickt man auf ein Schriftzeichen, wird es vergrößert dargestellt. Nochmal angeklickt, verschwindet die Vergrößerung wieder.</p>
 
 </div>
 </div>

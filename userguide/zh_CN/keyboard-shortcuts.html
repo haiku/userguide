@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -79,7 +79,8 @@
 <tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span> / <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>导航至相应的可用工作区。同时按下 <span class="key">SHIFT</span> 将会连同活动窗口一起进行切换。</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>时按下 <span class="key">OPT</span> 拖动窗口到其他窗口的标签或者边界附近时，它们将会被重叠或者拼贴起来（详情查看 <a href="gui.html#stack-tile">图形用户界面</a>）。</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>循环切换当前工作区中的打开窗口。</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>Cycles through stack and tiled windows.</td></tr>
+<tr><td><span class="key"> OPT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>循环切换当前工作区中的打开窗口。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + 左键</td><td></td><td>点击并使用左键拖动窗口（查阅章节 <a href="gui.html#move-resize">GUI</a>）。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + 右键</td><td></td><td>点击并使用右键拖动窗口（查阅章节 <a href="gui.html#move-resize">GUI</a>）。</td></tr>
 <tr><td> </td></tr>
@@ -140,14 +141,14 @@
 <tr><td><span class="key">ALT</span> + left click</td><td style="width:15px;"></td><td>Left-clicking on a path or URL while holding <span class="key">ALT</span> opens it in the preferred application, e.g. folders in Tracker, pictures in ShowImage. You can limit the selected path by additionally holding <span class="key">SHIFT</span>.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td></td><td>在新窗口中打开终端会话。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td></td><td>在新标签中打开终端会话。</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>切换到相应的标签。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">TAB</span></td><td></td><td>切换到下一个终端窗口。</td></tr>
-<tr><td><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>切换到上一个/下一个标签。</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>切换到相应的标签。</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>切换到上一个/下一个标签。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>左/右移动当前标签。</td></tr>
+<tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>滚动到上一行或者下一行查看终端输出内容。</td></tr>
+<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>滚动到上一页或者下一页查看终端输出内容。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td></td><td>增大或者缩小字体。</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>进入或者离开全屏模式。</td></tr>
-<tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>滚动到上一行或者下一行查看终端输出内容。</td></tr>
-<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>滚动到上一页或者下一页查看终端输出内容。</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>Tab-补全命令。输入几个字符之后，按下 <span class="key">TAB</span> 来自动补全文件名和路径。如果遇到了多个匹配项，它将会停在出现不匹配的地方，然后您必须输入更多的字符来进一步加以区分。您也可以两次按下 <span class="key">TAB</span> 键来查看所有的匹配项，然后再从中加以选择。</td></tr>
 <tr><td><span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>上下移动查看所有已经输入的历史命令。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">R</span></td><td></td><td>Bash 命令历史。 您输入的所有命令保存在 <span class="path">~/config/settings/bash_history</span> 文件。 按下 <span class="key">CTRL</span> <span class="key">R</span> ，输入一个命令，然后您将会从bash的历史命令中获取第一个匹配的命令。 持续按下 <span class="key">CTRL</span> <span class="key">R</span> 直到您找到了正确的命令行，然后按下 <span class="key">ENTER</span> 键来运行该命令。</td></tr>

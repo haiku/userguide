@@ -4,12 +4,13 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		cafeina
  *		kervas
  *
 -->
@@ -86,6 +87,7 @@ De otra manera, <span class="button">Instalar</span> para continuar.</p>
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>Seleccione  la ubicación desino para el archivo de respaldo "<tt>MBR</tt>" o sino deje la ruta predeterminada. Luego de dar clic en el botón <span class="button">Siguiente</span> recibirá una confirmación en caso que el respaldo se haya realizado con éxito.</p>
+<div class="box-info">Tenga en cuenta que el "<span class="path">/boot</span>" en esa ruta es el medio de instalación (por ejemplo, una unidad USB). Esto tiene sentido si algo sale mal y necesita deshacer el cambio inmediatamente. Por una copia de seguridad a largo plazo, debería guardar el MBR también en su nuevo disco de Haiku, porque probablemente ya ha formateado y usado su unidad USB de instalación para otras cosas en ese momento...</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">Configuración del menú de arranque</a></h2>
@@ -99,7 +101,16 @@ De otra manera, <span class="button">Instalar</span> para continuar.</p>
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>Antes que el menú de arranque se escriba al MBR, recibirá un resumen de su configuración y luego una última oportunidad para abortar la operación. Pero no se preocupe, porque mientras conserve el respaldo del MBR en un lugar seguro, podrá revertir los cambios. En caso que tenga una situación donde se echa a perder, siempre tiene la alternativa de arrancar desde un USB o CD de instalación de Haiku y escribir el MBR de respaldo de vuelta con BootManager.</p>
-
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">Restablecer la copia de seguridad del Registro de arranque principal (MBR)</a></h2>
+<p>Actualmente no es posible desinstalar el menú de arranque con la aplicación BootManager. Sin embargo, existe una solución alternativa: puede usar el comando <span class="cli">dd</span> en Terminal para restaurar la copia de seguridad del MBR.</p>
+<div class="box-warning"><span class="cli">dd</span> puede ser una herramienta muy destructiva.<br />
+Tenga mucho cuidado y compruebe con detenimiento el parámetro de la ruta de dispositivo.</div>
+<p>La línea de comandos de <span class="cli">dd</span> puede verse como aparece a continuación:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>El parámetro de entrada ("<tt>if</tt>") es la ruta a la copia de seguridad del MBR.<br />
+El parámetro de salida (<tt>"of"</tt>) es la ruta al disco en bruto en donde se escribirá el MBR. Puede encontrar todos los dispositivos y sus rutas en la aplicación <a href="drivesetup.html">Configuración de discos</a>.</p>
 </div>
 </div>
 

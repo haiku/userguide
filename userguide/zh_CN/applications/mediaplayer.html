@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2010-2014, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -54,16 +54,25 @@
 <li><a href="../../jp/applications/mediaplayer.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="mail.html">电子邮箱</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">应用程序
-</a> 
-::  <a href="midiplayer.html">Midi播放器</a>  »
+ «  <a href="mail.html">电子邮箱</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">应用程序
+</a> 
+::  <a href="midiplayer.html">Midi播放器</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
 <div class="box-info">本节的翻译还未完成。在未完成之前，所有的未完成部分都将使用英语原文。</div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td><a href="#playback">Audio and video playback</a><br />
+                <a href="#playlists">Playlists</a><br />
+                <a href="#ratings">Ratings</a><br />
+                <a href="#settings">Settings</a><br />
+                <a href="#controls">Keyboard controls</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/mediaplayer-icon_64.png" alt="mediaplayer-icon_64.png" width="64" height="64" />媒体播放器</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -77,7 +86,8 @@
 <p>进度栏允许您快速的跳转到某个位置，将鼠标停放在其上将弹出显示当前和剩余时间。点击右边的时间显示，将会在总时间，当前时间和剩余时间之间切换。<br />
 在其下方，您可以看到常用的控件，下一个，播放/暂停，停止以及下一个。之后时声音控制（点击音响符号在静音之间切换）和音量计。</p>
 
-<h2>音频和视频播放</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playback" name="playback">Audio and video playback</a></h2>
 <p>因为音频播放没有任何特殊的效果，我们将直接介绍视频和通用特性。</p>
 <img src="../images/apps-images/mediaplayer-info.png" alt="mediaplayer-info.png" />
 <p>对所有媒体都可用的是 <span class="menu">文件信息...</span> (<span class="key">ALT</span><span class="key">I</span>)。它显示有关当前载入文件的信息，如播放时间或音频/视频轨道细节和它的编码。</p>
@@ -91,16 +101,26 @@ MyMovie.Français.srt</pre>
 <p>多声道音频，通常用于具有多语言的视频文件，并且在 <span class="menu">音频轨道</span> 子菜单中可用。当有可用的多声道视频时，<span class="menu">视频 | 轨道</span> 子菜单提供了同样的内容。</p>
 <p>您可以切换为 <span class="menu">全屏</span> 模式（<span class="key">ALT</span> <span class="key">ENTER</span> 或 <span class="key">F</span> 或双击左键），使用 <span class="menu">隐藏界面</span> 隐藏媒体播放器的窗口边框和控件（<span class="key">ALT</span> <span class="key">H</span> 或双击右键）或者可以让其 <span class="menu">置顶</span>（<span class="key">ALT</span> <span class="key">A</span>）。</p>
 
-<h2>播放列表</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playlists" nsame="playlists">Playlists</a></h2>
 <p><span class="menu">媒体播放器 | 播放列表...</span> (<span class="key">ALT</span> <span class="key">P</span>) 打开窗口显示当前播放队列中的文件。双击条目将会开始播放。</p>
 <img src="../images/apps-images/mediaplayer-playlist.png" alt="mediaplayer-playlist.png" />
 <p>You can add more files by dropping them into the list and rearrange their position via drag &amp; drop. New files are added in the order they were selected from a Tracker window. Drag &amp; dropping them with the right mouse button shows a context menu to insert them <span class="menu">sorted</span> (alphabetically).<br />
 From the <span class="menu">Edit</span> menu you can <span class="menu">Randomize</span> or <span class="menu">Remove</span> (<span class="key">DEL</span>) an entry from the list or delete the actual file with <span class="menu">Move to Trash</span> (<span class="key">ALT</span> <span class="key">T</span>).</p>
 <p>当然，您也可以 <span class="menu">保存</span> 播放列表以便之后 <span class="menu">打开</span>，或这双击播放列表文件打开。</p>
 
-<h2>设置</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="rating" name="rating">Rating</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Here you can set a <span class="menu">Rating</span> of the current clip between 1 and 10, or choose <span class="menu">Reset rating</span> to set it back to "unrated" (= "0").</p>
+<p>In Tracker, ratings are displayed in a "Rating" attribute column as a number of stars. Five stars represent the 10 possible values, resulting in half-star steps. For example, a rating of 7 is shown as 7 / 2 = 3.5 stars: ★★★⯪☆.<br />
+You can edit the rating directly in Tracker as well: Select the file, choose <span class="menu">Edit name</span> from the <span class="menu">File</span> menu and press <span class="key">TAB</span> to get into the "Rating" column. Now you can enter the new numerical value which will turn into a star rating after hitting <span class="key">ENTER</span>.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="settings" name="settings">Settings</a></h2>
 <p>有几个设置可以更好地控制媒体播放器的行为：</p>
-<img src="../images/apps-images/mediaplayer-settings.png" alt="mediaplayer-settings.png" />
+<img src="../images/apps-images/mediaplayer-settings.png" style="float:left;margin-right:15px" alt="mediaplayer-settings.png" />
 <p>The first batch, <span class="menu">Play mode</span>, is pretty self-explaining.<br />
 Start playback automatically, close windows when finished or play clips in a loop.<br />
 From the pop-up menu you choose MediaPlayer's launch behavior. Should it resume playing where it left off last time: <span class="menu">always</span>, <span class="menu">never</span>, or <span class="menu">ask every time</span>.</p>
@@ -110,8 +130,10 @@ You can <span class="menu">Scale movies smoothly</span> (when not in overlay mod
 <span class="menu">Scale controls in full-screen mode</span> if you prefer slightly bigger controls, maybe because you watch the screen from a bit farther away when in full-screen mode.<br />
 Then there are settings for <span class="menu">Subtitle size</span> and <span class="menu">Subtitle placement</span>. They can be shown at the <span class="menu">Bottom of video</span>, which will always have them overlayed over the picture. Or <span class="menu">Bottom of screen</span>, which allows you to resize the window vertically and have the subtitles appear in the black bar at the bottom instead.</p>
 <p>最后的设置用于决定未激活窗口的片段的音量。您可以将其设置为 <span class="menu">全音量</span>，至少为 <span class="menu">低音量</span> 或者直接 <span class="menu">静音</span>。</p>
+<p style="clear:left"></p>
 
-<h2>键盘控制</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="controls" name="controls">Keyboard controls</a></h2>
 <p>媒体播放器提供了简便的快捷键以控制媒体的播放。</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">Z</span></td><td style="width:15px;"></td><td>跳转到上一个。</td></tr>
@@ -140,10 +162,10 @@ Then there are settings for <span class="menu">Subtitle size</span> and <span cl
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="mail.html">电子邮箱</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">应用程序
-</a> 
-::  <a href="midiplayer.html">Midi播放器</a>  »
+ «  <a href="mail.html">电子邮箱</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">应用程序
+</a> 
+::  <a href="midiplayer.html">Midi播放器</a>  »
 </span></div>
 </div>
 

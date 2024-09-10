@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009, Haiku. All rights reserved.
+ * Copyright 2009-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -71,13 +71,20 @@
 <tr><td>Settings:</td><td></td><td><span class="path">~/config/settings/CharacterMap settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>CharacterMap affiche les code de tous les caractères UTF-8 qu'une police supporte.</p>
+<p>CharacterMap shows all characters of every Unicode block.</p>
+
 <img src="../images/apps-images/charactermap.png" alt="charactermap.png" />
-<p>Vous trouverez dans la zone de gauche les blocs Unicode standards, ainsi qu'une fonction de filtre. Si vous le désirez, vous pouvez aussi activer <span class="menu">Show Private Blocks</span> (afficher les blocs privés) depuis le menu <span class="menu">View</span>.
-À droite sont affichés les caractères de ces blocs, en utilisant la police de caractères spécifiée dans le menu <span class="menu">Font</span>. Vous pouvez modifier la taille d'affichage grâce à l'option  <i>Font Size</i>.
-En bas de la fenêtre, le code du caractère situé sous la souris est affiché en hexadécimal, décimal et en code UTF-8.</p>
+
+<p>To the left you have the standardized Unicode blocks, together with a handy filter function.<br />
+The <span class="menu">View</span> menu has an option to <span class="menu">Show private blocks</span>, which are areas that are untouched by the Unicode Consortium. If you activate <span class="menu">Only show blocks contained in font</span>, blocks not part of the current font are grayed out in the blocks list at the left and not shown in the list of characters on the right.</p>
+
+<p>The right shows the actual characters in these blocks, using the font specified in the <span class="menu">Font</span> menu. You can determine if a symbol is part of that font (it's drawn in black), or if the system supplies a fall-back symbol from some other font (then it's drawn with a gray color).<br />
+Below the symbols you can change the font size. And below that, the values of the character currently under the mouse pointer are displayed in hex, decimal and UTF-8 notation.</p>
+
 <p>Vous pouvez copier un caractères dans un éditeur de texte, avec <span class="menu">Copy Character</span> (<span class="key">ALT</span> <span class="key">C</span>),  ou en le faisant 
 directement glisser à partir de la table de caractères.vous pouvez aussi le copiez comme une chaîne encodée à l'aide de <span class="menu">Copy As Escaped Byte String</span> (<span class="key">ALT</span> <span class="key">MAJ</span> <span class="key">C</span>). Selon la méthode choisie, vous obtiendrez, par exemple, soit <tt>€</tt> soit <tt>\\xe2\\x82\\xac</tt>.</p>
+
+<p>Clicking on a symbol shows a magnified view of it, click again to close.</p>
 
 </div>
 </div>

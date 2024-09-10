@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2023, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,17 +63,16 @@
 
 <div id="content">
 <div>
-<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Index</td></tr>
+<tr class="heading"><td>Зміст</td></tr>
 <tr class="index"><td>
-                <a href="#windows-tabs">Windows and tabs</a><br />
-                <a href="#settings">Settings</a><br />
-                <a href="#colors">Colors</a><br />
-                <a href="#shortcuts">Keyboard shortcuts</a><br />
-                <a href="#hints">Hints for working with the Terminal</a><br />
-                <a href="#customization">Bash customization</a></td></tr>
+                <a href="#windows-tabs">Вікна та вкладки</a><br />
+                <a href="#settings">Налаштування</a><br />
+                <a href="#colors">Кольори</a><br />
+                <a href="#shortcuts">Клавіатурні скорочення</a><br />
+                <a href="#hints">Поради для роботи у Терміналі</a><br />
+                <a href="#customization">Настроювання Bash користувачем</a></td></tr>
 </table>
 
 <h2><img src="../../images/apps-images/terminal-icon_64.png" alt="terminal-icon_64.png" width="64" height="64" />   Terminal (Термінал)</h2>
@@ -85,13 +84,13 @@
 <span class="path">~/config/settings/inputrc</span> – додає нові/перевизначає типові значення в <span class="path">/boot/system/settings/etc/inputrc</span></td></tr>
 </table>
 <p><br /></p>
-<p>Програма Термінал – це інтерфейс Haiku до bash, командної оболонки Bourne Again Shell.</p>
+<p>Програма Термінал – це інтерфейс Haiku до командної оболонки, за замовчуванням це bash – Bourne Again Shell.</p>
 <p>Будь ласка, зверніться до розділу <a href="../bash-scripting.html">Написання сценаріїв</a>, де наведено кілька посилань на онлайн-уроки з роботи у командному рядку, а також подивіться розділ <a href="cli-apps.html">Програми командного рядка…</a>. Тут ми зосередимося на самій програмі Термінал.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="windows-tabs" name="windows-tabs">Вікна та вкладки</a></h2>
-<p>Ви можете відкрити стільки терміналів, скільки потрібно, кожен у власному вікні, просто запустивши більше Терміналів, або за допомогою комбінації клавіш <span class="key">ALT</span> <span class="key">N</span> з уже запущеного Термінала. Також Ви можете скористатися режимом вкладок Термінала і відкрити більше вкладок за допомогою комбінації клавіш <span class="key">ALT</span> <span class="key">T</span></p>
+<p>Ви можете відкрити стільки терміналів, скільки потрібно, кожен у власному вікні, просто запустивши більше Терміналів, або за допомогою комбінації клавіш <span class="key">ALT</span> <span class="key">N</span> з уже запущеного Термінала. Також Ви можете скористатися режимом вкладок Термінала і відкрити більше вкладок за допомогою комбінації клавіш <span class="key">ALT</span> <span class="key">T</span>. Ви можете переключитися на певну вкладку скориставшись клавішею <span class="key">ALT</span> і її номером, наприклад, <span class="key">ALT</span> <span class="key">2</span> перемикає на другу вкладку, <span class="key">ALT</span> <span class="key">4</span> - на четверту і т.д.</p>
 <img src="../images/apps-images/terminal.png" alt="terminal.png" />
 <br />
 <p>Подвійний клік на порожній частині панелі вкладок відкриє нову вкладку; подвійний клік на вкладці відкриє діалогове вікно для зміни її назви. Існує декілька параметрів, позначених символом «%», значення яких пояснюється підказкою при наведенні курсора миші на текстове поле вводу.<br />
@@ -99,15 +98,16 @@
 За допомогою пункту меню <span class="menu">Налаштування | Заголовок вікна…</span> можна аналогічно відредагувати заголовок вікна Термінала.</p>
 <p>Правий клік миші на вкладці відкриває контекстне меню з пунктами <span class="menu">Закрити вкладку</span>, <span class="menu">Закрити інші вкладки</span> та <span class="menu">Редагувати заголовок вкладки…</span>. Останній пункт працює як і подвійний клік на вкладці.</p>
 <p>Розмір вікна термінала можна змінити, як і будь-якого іншого вікна або скористатися заздалегідь визначеними значеннями у меню <span class="menu">Налаштування | Розмір вікна </span>. Комбінація клавіш <span class="key">ALT</span> <span class="key">ENTER</span> перемикає у повноекранний режим.</p>
-<p>All the settings you change directly through the <span class="menu">Settings</span> menu, like <span class="menu">Window title</span>, <span class="menu">Window size</span>, <span class="menu">Text encoding</span> or <span class="menu">Font size</span> are only kept for the current session. If you want to make permanent changes, you have to either invoke <span class="menu">Save as default</span> or apply them in the <span class="menu">Settings…</span> panel.</p>
+<p>Усі параметри, які Ви змінюєте безпосередньо через меню <span class="menu">Налаштування</span>, такі як <span class="menu">Заголовок вікна…</span>, <span class="menu">Розмір вікна</span>, <span class="menu">Кодування тексту</span> або <span class="menu">Розмір шрифту</span> будуть діяти лише у поточному сеансі. Якщо Ви хочете зробити зміни постійними, Вам слід використати пункт меню <span class="menu">Зберегти як типові</span> або застосувати їх на панелі <span class="menu">Налаштування…</span>.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="settings" name="settings">Налаштування</a></h2>
 <p>Пункт меню <span class="menu">Налаштування | Налаштування…</span> відкриває панель для настройки стандартних параметрів Термінала.</p>
 <img src="../images/apps-images/terminal-settings.png" alt="terminal-settings.png" />
 <br />
-<p>Most of the offered settings speak for themselves. Not entirely obvious though, the font size is set in the submenu of the <span class="menu">Font</span> popup menu.<br />
-Hover your mouse over the "formulas" for naming tab and window titles to get tooltips for the available variables.</p>
+<p>Більшість запропонованих параметрів говорять самі за себе. Хоча це не зовсім очевидно, розмір шрифту встановлюється у підменю елементів списку <span class="menu">Шрифт</span>.<br />
+Наведіть курсор миші на «формули» у текстових полях вводу для назв вкладок і вікон, щоб отримати підказки по доступним параметрам у цих полях.
+</p>
 <p>Далі доступні ще кілька опцій: Ви можете встановити <span class="menu">Мигання курсору</span> і вибрати <span class="menu">Дозволити жирний текст</span>.<br />
 Увімкніть опцію <span class="menu">Використовувати лівий Option як клавішу Meta</span>, якщо Ви працюєте з певним програмним забезпеченням UNIX, якому потрібен доступ до розширеної частини набору символів ASCII, наприклад, GNU Emacs і бібліотека GNU readline.<br />
 Увімкніть опцію <span class="menu">Підтверджувати вихід якщо присутні активні програми</span> і Ви отримаєте попередження про спробу закрити вікно термінала, коли програма все ще виконується.</p>
@@ -119,14 +119,14 @@ Hover your mouse over the "formulas" for naming tab and window titles to get too
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="colors" name="colors">Colors</a></h2>
-<p><span class="menu">Settings | Colors…</span> opens a panel to configure the colors used by Terminal.</p>
+<a id="colors" name="colors">Кольори</a></h2>
+<p>Пункт меню <span class="menu">Налаштування | Кольори…</span> відкриває панель для настройки кольорів, які використовує Термінал.</p>
 <img src="../images/apps-images/terminal-colors.png" alt="terminal-colors.png" />
-<p>From the top menu, you can choose a pre-defined <span class="menu">Color scheme</span> like <span class="menu">Midnight</span> or <span class="menu">Retro</span> or create a <span class="menu">Custom</span> one by selecting the color you want to change (<span class="menu">Text</span>, <span class="menu">Background</span>, <span class="menu">Cursor</span> etc.) and then use the color picker below.</p>
-<p>You can also configure "ANSI colors", which are the first 8 named colors in the color palette of terminal applications. You choose a color, for example "<i>ANSI red color</i>", and then adjust it with the color picker below. The effect is visible live in the open Terminal and in the preview below. The exact colors used in various places are documented at <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
+<p>У верхній частині панелі, зі списку який розкривається, Ви можете вибрати наперед визначену схему кольорів, наприклад, <span class="menu">Midnight</span> або <span class="menu">Retro</span>. Крім вибору уже готових схем, Ви можете створити власну через пункт у списку <span class="menu">Вибір користувача</span>. Для цього виберіть елемент, колір якого Ви хочете змінити (<span class="menu">Текст</span>, <span class="menu">Фон</span>, <span class="menu">Курсор</span> тощо) а потім скористайтеся інструментом настройки кольорів у нижній частині панелі.</p>
+<p>Ви можете зробити настройку «кольорів ANSI», це перші 8 названих кольорів у палітрі кольорів термінальних програм. Ви вибираєте колір, наприклад, «<i>ANSI червоний</i>» а потім регулюєте його за допомогою палітри кольорів у нижній частині панелі. Ефект видно у реальному часі на відкритому Терміналі та у вікні прев'ю біля палітри кольорів. Точні кольори, які використовуються у різних місцях, описано у <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Вікіпедії</a>.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td class="onelinetop"><span class="button">Зберегти у файл…</span></td><td width="10"> </td><td>let's you save your custom color scheme under a name that will appear in the <span class="menu">Color scheme</span> menu at the top, if you put it in the default location <span class="path">~/config/settings/Terminal/Theme</span>.</td></tr>
-<tr><td><span class="button">Відкат змін</span></td><td> </td><td>brings back the colors that were active when you opened the colors panel.</td></tr>
+<tr><td class="onelinetop"><span class="button">Зберегти у файл…</span></td><td width="10"> </td><td>дозволяє зберегти Вашу власну схему кольорів під назвою, яка з'явиться у списку <span class="menu">Схема кольорів</span> зверху, якщо Ви збережете її у каталозі типового  розташування <span class="path">~/config/settings/Terminal/Themes</span> (або у системному еквіваленті <span class="path">/boot/system/settings/Terminal/Themes</span>).</td></tr>
+<tr><td><span class="button">Відкат змін</span></td><td> </td><td>повертає настройки кольорів, які були встановлені до запуску панелі кольорів.</td></tr>
 <tr><td><span class="button">Типові настройки</span></td><td> </td><td>повертає все до стандартних (типових) значень.</td></tr>
 </table>
 

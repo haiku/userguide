@@ -161,8 +161,8 @@
 </ul>
 <div class="box-info">
 <p _translation_id="4341">Sometimes you just want to rearrange a few icons without doing a complete <span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>). In that case, you select these icons and start to drag them to their new location. Before you drop them there, keep <span class="key">ALT</span> pressed. This will align the icons to the invisible grid.</p>
-<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. Normally, that's the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p>
-</div>
+<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. That applies to the width of the labels as well: If a label gets truncated by the column width in <span class="menu">List view</span>, it'll be similarly truncated when switching to <span class="menu">Mini</span> and <span class="menu">Icon view</span>.<br />
+Normally, the first column is the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p></div>
 <p>除了文件浏览器首选项，其他的功能都是不言自明的。</p>
 
 <h3>
@@ -191,10 +191,12 @@
 <p>通常，这些命令是非常清晰的。</p>
 <ul>
 <li><p><span class="menu">查找...</span> - 查询文件或文件夹。详情查阅 <a href="queries.html">查询</a> 。</p></li>
-<li><p><span class="menu">新建</span> - 基于 <i>模板</i> 新建文件夹或其他文件。
-<br /><br /></p>
+<li><p><span class="menu">New</span> - Create a new folder or any other file based on a template.
+</p>
 <img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
-<p>选择 <span class="menu">编辑模板...</span> 将打开 <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span> 文件夹。在其中创建文件将会在 <span class="menu">新建</span> 菜单中提供以该文件的其他属性为模板，其文件名为类型名的类型。这里，有一个文件类型为 <tt>text/plain</tt> 的 “Text” 文件。详情查阅 <a href="filetypes.html">文件类型</a> 。</p></li>
+<p>Choosing <span class="menu">Edit templates…</span> at the bottom opens the folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Create a file or folder there and it will appear as a template in the <span class="menu">New</span> menu. The new file/folder created by the template will have its filetype, filename, contents, and all its other attributes. In case of a folder, it'll also have its window size/position and attribute column layout.</p>
+<p>In the screenshot above, you see the custom template folders "Email folder" and "Music folder". Both will create folders with those same custom overlay icons and have the relevant attributes already set.</p>
+<p>You can also sort your templates into custom submenus. Just choose <span class="menu">Add new submenu…</span> and a new special folder gets created in <span class="path">Tracker New Templates</span> that you then rename to fit its purpose. Copy your template files there to appear in the new submenu. The screenshot above shows the submenus "C   dev files" and "Office files".</p></li>
 <li><p><span class="menu">打开方式...</span>- 提供所有可以打开该类型文件的应用程序的子菜单。
 <br /><br /></p>
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
@@ -213,7 +215,7 @@
 <li><span class="menu">Attibutes</span>: Lists all extra file attributes with their value and type.</li>
 </ul></li>
 <li><p><span class="menu">重命名</span>，<span class="menu">复制</span>和<span class="menu">移动到垃圾箱</span> - 重命名，复制文件，或者将选中文件移动到垃圾箱。</p></li>
-<li><p><span class="menu">移动到</span>，<span class="menu">复制到</span>和<span class="menu">创建链接</span> - 让您使用子菜单导航方法移动，复制或者链接选中文件。调用菜单时，同时按下<span class="key">SHIFT</span> 键，将会提供一个选项已创建相对链接。</p></li>
+<li><p><span class="menu">Move to</span>, <span class="menu">Copy to</span> and <span class="menu">Create link</span> - lets you move, copy or link the selected file(s) using the submenu navigating method. Holding <span class="key">SHIFT</span> while invoking the menu offers the option to create a relative link. You recognize links by their dot-underlined icon label.</p></li>
 <li><p><span class="menu">剪切</span>，<span class="menu">复制</span>和<span class="menu">粘贴</span> - 让您使用剪贴板剪切，复制以及粘贴文件。在调用可以用于 <span class="menu">复制/剪切更多</span> 文件的菜单时，按下 <span class="key">SHIFT</span> 键，可能从其他目录中，您可以粘贴文件到其他地方。而且，按下 <span class="key">SHIFT</span> 键，您可以以链接的形式粘贴剪贴板中复制的文件。</p></li>
 <li><p><span class="menu">标识</span> - 将会找出之前没有文件类型的文件，并且为其设置类型，例如，使用 <span class="cli">wget</span> 获取了一些没有类型的文件。在调用菜单修改项目为 <span class="menu">强制标识</span> 时，按下 <span class="key">SHIFT</span> 键将会标识文件类型，并且修改之前错误的类型。</p></li>
 <li><p><span class="menu">附加组件</span> - 提供文件浏览器通用的和那些可以处理选中文件的附加组件。详情查阅 <a href="tracker-add-ons.html">文件浏览器附加组件</a> 。</p></li>

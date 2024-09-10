@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,7 +64,7 @@
 <div>
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Індекс</td></tr>
+<tr class="heading"><td>Зміст</td></tr>
 <tr class="index"><td><a href="#bitmap-vector">Растр BeOS проти вектора Haiku</a><br />
                 <a href="#icons-attributes">Значки – це атрибути</a><br />
                 <a href="#i-o-m">Створення значків в Icon-O-Matic</a><br />
@@ -219,7 +219,10 @@
 <p>Форми лежать одна над одною, кожна на своєму шарі, якщо хочете. Щоб змінити їхній порядок, перетягніть рядок із записом форми в іншу позицію у списку форм.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Меню «Форма»</a></h4>
-<p>Меню <span class="menu">Форма</span> пропонує вже згадану вище можливість <span class="menu">Додати порожню, з контуром/стилем/контуром &amp; стилем</span> а також, зробити <span class="menu">Дублікат</span> або <span class="menu">Прибрати</span> форму. Крім того є пункти:</p>
+<p>Меню <span class="menu">Форма</span> пропонує вже згадану вище можливість <span class="menu">Додати порожню, з контуром/стилем/контуром &amp; стилем</span> а також, зробити <span class="menu">Дублікат</span> або <span class="menu">Прибрати</span> форму.</p>
+<p>За допомогою пункту меню <span class="menu">Додати референсне зображення</span> Ви можете створити особливий тип форми. Він дозволяє завантажити будь-яке растрове зображення (наприклад, PNG або JPEG), щоб використовувати його як фон під час роботи над значком. Це дуже зручно, наприклад, при створенні векторної версії існуючого растрового значка. З референсним зображенням можна маніпулювати як з будь-якою іншою формою (переміщати, обертати, змінювати розмір), але воно не буде частиною значка, при збереженні у форматі HVIF.</p>
+
+<p>Крім того є пункти:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Скинути трансформацію</span></td><td style="width:15px;"></td><td>Скасовує усі застосовані до форми переміщення, зміни розміру, повороти та інші трансформації.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Зафіксувати трансформацію</span></td><td></td><td>Коли Ви трансформуєте форму, прив'язані до неї контури залишаються у початковому положенні. Така поведінка передбачена; можливо, цей контур використовується для кількох форм або Ви навмисно використали пункт меню <span class="menu">Налаштування | Припасувати до сітки</span>, щоб встановити точки на точних межах пікселів.<br />
@@ -233,6 +236,7 @@
 <tr><td><span class="menu">Мін. LOD</span></td><td></td><td>Мінімальний рівень деталізації</td></tr>
 <tr><td><span class="menu">Макс. LOD</span></td><td></td><td>Максимальний рівень деталізації</td></tr>
 </table>
+<p>Референсні зображення натомість мають властивість <span class="menu">Альфа</span>, значення якої задає їхню прозорість (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Рівень деталізації (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -286,13 +290,16 @@
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Обрис</span></td><td></td><td>Додає обрис (контур) до форми. Окреслює лінією.</td></tr>
 <tr><td><span class="menu">Штрих</span></td><td></td><td>Штрихує контур форми замість того, щоб застосувати стиль.</td></tr>
+<tr><td><span class="menu">Перспектива</span></td><td></td><td>Дозволяє переміщати, незалежно один від одного, кути форми для створення ефекту перспективи.</td></tr>
+
 </table>
 
 <p>Залежно від типу трансформатора, Ви отримаєте різний набір властивостей.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Властивості Трансформаторів</a></h4>
-<p>Окрім рядків <span class="menu">Назва</span> та <span class="menu">Ширина</span> трансформатора, у вікні <span class="menu">Властивості</span> є такі параметри (залежно від типу трансформатора вони дещо відрізняються):</p>
+<p>Окрім рядка <span class="menu">Назва</span> трансформатора, у вікні <span class="menu">Властивості</span> є такі параметри (залежно від типу трансформатора вони дещо відрізняються):</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Ширина</span></td><td></td><td>Задає ширину Штриху або Обрису.</td></tr>
 <tr><td><span class="menu">Кінці ліній</span></td><td style="width:15px;"></td><td><i>Тільки для Тр «Штрих»</i>. Визначає кінцеві точки лінії: <span class="menu">Butt</span>, <span class="menu">Square</span> або <span class="menu">Round</span>.</td></tr>
 <tr><td><span class="menu">Зовні/Зсередини</span></td><td></td><td><i>Тільки для Тр «Обрис»</i>. Визначає, де знаходиться лінія окреслення (обвідна) – всередині або зовні контуру.</td></tr>
 <tr><td><span class="menu">З'єднання</span></td><td></td><td>Визначає спосіб з'єднання ліній у точці: <span class="menu">Miter</span>, <span class="menu">Round</span> або <span class="menu">Bevel</span>.</td></tr>

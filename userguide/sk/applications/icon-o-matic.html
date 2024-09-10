@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -220,7 +220,10 @@ Ak chcete do existujúcej cesty pridať bod, kliknite na čiaru medzi bodmi, kto
 <p>Tvary na sebe ležia, dalo by sa povedať, že každý vo svojej vlastnej vrstve. Ak chcete zmeniť poradie týchto vrstiev, môžete tak urobiť jednoduchým uchopením a pretiahnutím na inú pozíciu v zozname tvarov.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Menu tvaru</a></h4>
-<p>Menu <span class="menu">Tvaru</span> ponúka už spomenutú možnosť <span class="menu">Pridať prázdny, s cestou/štýlom/cestou a štýlom</span> a <span class="menu">Duplikovať</span> alebo <span class="menu">Odstrániť</span> tvar. Ďalej sú tu možnosti:</p>
+<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape.</p>
+<p>With <span class="menu">Add reference image</span> you can create a special kind of shape. It lets you load any bitmap image (e.g. PNG or JPEG) to use as a background while working on the icon. Very handy when creating a vector version of an existing bitmap icon, for example. The reference image can be manipulated like any other shape (moved, rotated, resized), but will not be part of the icon when saved as HVIF.</p>
+
+<p>Then there is:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Obnoviť transformáciu</span></td><td style="width:15px;"></td><td>Vráti späť všetky presuny, zmeny veľkosti a rotácie, ktoré ste aplikovali na daný tvar.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Zmraziť transformáciu</span></td><td></td><td>Keď transformujete tvar, jeho pridelené cesty zostanú v pôvodnej pozícii. Je to tak úmyselne; možno viac ako jeden tvar používa danú cestu, možno ste úmyselne použili <span class="menu">Možnosti | Prichytávať k mriežke</span> aby ste umiestnili body na presných okrajoch. <br />
@@ -235,6 +238,7 @@ Ak nie, „Zmraziť transformáciu“ aplikuje aktuálnu transformáciu tvaru na
 <tr><td><span class="menu">Min. detail</span></td><td></td><td>Minimálna úroveň detailov</td></tr>
 <tr><td><span class="menu">Max. detail</span></td><td></td><td>Maximálna úroveň detailov</td></tr>
 </table>
+<p>Reference images have instead an <span class="menu">Alpha</span> value to set their transparency (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Úroveň detailov (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -288,13 +292,16 @@ Samozrejme, tieto indikátory môžete presúvať a meniť tak farebný prechod 
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Obrys</span></td><td></td><td>Pridá tvaru obrys.</td></tr>
 <tr><td><span class="menu">Ťah</span></td><td></td><td>Nakreslí cestu tvaru namiesto vyplnenia štýlom.</td></tr>
+<tr><td><span class="menu">Perspective</span></td><td></td><td>Allows to individually move the four corners of the shape to create the effect of perspective.</td></tr>
+
 </table>
 
 <p>V závislosti od druhu Transformátora môžete nastavovať rôzne vlastnosti.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Vlastnosti transformátora</a></h4>
-<p>Okrem <span class="menu">Názvu</span> a  <span class="menu">Šírky</span> ponúka okno  <span class="menu">Vlastností</span> transformátora (v závislosti od typu mierne odlišné) možnosti:</p>
+<p>Besides a <span class="menu">Name</span> the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Width</span></td><td></td><td>The width of Stroke or Contour.</td></tr>
 <tr><td><span class="menu">Zakončenia</span></td><td style="width:15px;"></td><td><i>Iba pre Ťah</i>. Definuje zakončenia čiary: <span class="menu">Rovné</span>, <span class="menu">Štvorcové</span> alebo <span class="menu">Okrúhle</span>.</td></tr>
 <tr><td><span class="menu">Detegovať orient.</span></td><td></td><td><i>Iba pre Obrys</i>. Určuje, či sa obrys nachádza vo vnútornej alebo vonkajšej strane cesty.</td></tr>
 <tr><td><span class="menu">Spoje</span></td><td></td><td>Určuje akým spôsobom sa čiary spájajú v bode: <span class="menu">Ostrý</span>, <span class="menu">Oblý</span> alebo <span class="menu">Zrazený</span>.</td></tr>

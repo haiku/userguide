@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
-<!-- 
+<!--
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,6 +64,17 @@
 <div id="content">
 <div>
 
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Índice</td></tr>
+<tr class="index"><td><a href="#file">Archivo</a><br />
+                <a href="#edit">Edición</a><br />
+                <a href="#browse">Navegación</a><br />
+                  <a href="#image">Imagen</a><br />
+                  <a href="#view">Visualización</a><br />
+                  <a href="#attributes">Atributos</a><br />
+                  <a href="#shortcuts">Teclas de acceso rápido</a></td></tr>
+</table>
+
 <h2><img src="../../images/apps-images/showimage-icon_64.png" alt="showimage-icon_64.png" width="64" height="64" />Mostrar Imagen (ShowImage)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Barra de escritorio:</td><td style="width:15px;"></td><td><i>Sin acceso, normalmente se abre al dar doble clic en un archivo soportado.</i></td></tr>
@@ -71,52 +82,77 @@
 <tr><td>Configuraciones:</td><td></td><td><span class="path">~/config/settings/ShowImage_settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>ShowImage le permite ver imagenes en todos los formatos soportados por los <a href="../preferences/datatranslations.html">DataTranslators</a>. Los nuevos formatos son reconocidos automaticamente cuando añade un nuevo traductor al sistema. Esto ya se ha hecho así con los archivos de íconos de vectores de Haiku, imagenes de WonderBrush o cuando las imagenes WebP estuvieron disponibles, por ejemplo.<br />
-ShowImage brinda caracteristicas mínimas para recortar, rotar y dar vuelta a imagenes y guardarlas en un formato diferente.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Visualización</h2>
-<img src="../images/apps-images/showimage-view.jpg" alt="showimage-view.jpg" />
-<p>El menú <span class="menu">Ver</span> le permite iniciar una <span class="menu">Vista de diapositivas</span> de todas las imagenes de una carpeta (o ventana con resultados de una consulta) y establecer un <span class="menu">Retardo de diapositiva</span> desde 2 hast 20 segundos.</p>
+<p>ShowImage le permite ver imágenes en todos los formatos soportados por los <a href="../preferences/datatranslations.html">Traductores de datos</a>. Al instalar en el sistema un nuevo traductor de datos, los nuevos formatos son reconocidos automaticamente. Por ejemplo, esto ya sucedió con los archivos de íconos de vectores de Haiku, imagenes de WonderBrush o cuando las imagenes WebP se pusieron a disposición.<br />
+ShowImage no provee funcionalidades de edición, pero sí le permite seleccionar un área rectangular  y guardarla en cualquier formato. También puede rotar y voltear imágenes, aunque estas operaciones no modifican los datos de las imágenes, sino que meramente añaden un atributo que indica que la imagen debe mostrarse rotada o volteada la próxima vez que se abra.</p>
+<p>Recorramos los menús en orden, dejando atrás los elementos evidentes.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="file" name="file">Archivo</a></h2>
+<img src="../images/apps-images/showimage-file.png" style="float:left;margin-right:15px" alt="showimage-file.png" />
+<p>El submenú <span class="menu">Abrir…</span> enumera las imágenes vistas más recientemente.<br />
+La opción <span class="menu">Abrir con…</span> le permite abrir la imagen actual en cualquier programa que pueda leer su tipo de archivo.<br />
+El submenú <span class="menu">Guardar como…</span> le permite elegir un formato en el que guardar la imagen actual.<br />
+<span class="menu">Usar como fondo de pantalla…</span> abre el panel de ajustes de <a href="../preferences/backgrounds.html">Fondos</a> para establecer de forma rápida la imagen actual como el telón de fondo de su(s) espacio(s) de trabajo.</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="edit" name="edit">Edición</a></h2>
+<img src="../images/apps-images/showimage-edit.png" style="float:left;margin-right:15px" alt="showimage-edit.png" />
+<p>Al activar el <span class="menu">Modo de selección</span> —lo que también se puede hacer al hacer clic en el botón de rectángulo con borde en rayas de la barra de herramientas— es posible seleccionar un área rectangular de la imagen para luego arrastrarla y soltarla en el escritorio o en cualquier otra carpeta para guardarla. Arrastrarla con el botón derecho del ratón abrirá un menú que le permitirá elegir el formato de imagen con el cual guardar el fragmento de imagen.<br />
+Si no quiere estar cambiando de modo, puede realizar este marco de selección en "modo normal" al mantener presionada la tecla <span class="key">CTRL</span> mientras arrastra con el botón izquierdo del ratón.</p>
+<p style="clear:left"><span class="menu">Limpiar selección</span> o presionar la tecla <span class="key">ESC</span> quitará el marco de selección.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="browse" name="browse">Navegación</a></h2>
+<img src="../images/apps-images/showimage-browse.png" alt="showimage-browse.png" />
+<p>Luego de abrir una imagen puede navegar rapidamente a través de todas las demás imagenes en su carpeta (o ventana de resultados de consulta), presionando <span class="key">↑</span>/<span class="key">↓</span> o <span class="key">←</span>/<span class="key">→</span>. Puede ver el cambio de selección acorde en la ventana del Tracker.</p>
+<p>Existe una forma rápida de abrir la carpeta de la imagen actual e incluso navegar a sus carpetas superiores e inferiores. Funciona justo como con la <a href="../tracker.html#drill-down">navegación sumergible</a> en Tracker al hacer clic en el área de información de la imagen en la barra de estado que muestra el formato y tamaño de la imagen actual.</p>
+<p>Si ve en el menú de <span class="menu">Navegar</span>, encontrará otro tipo de navegación: algunos formatos, como el TIFF, contienen varias páginas dentro de un archivo. Ordenes como <span class="menu">Primer página</span> y <span class="menu">Siguiente Página</span> le permiten navegar esas páginas.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="image" name="image">Imagen</a></h2>
+<img src="../images/apps-images/showimage-image.png" style="float:left;margin-right:15px" alt="showimage-image.png" /><p>El menú <span class="menu">Imagen</span> contiene los pocos comandos de manipulación de imágenes necesarios para un visor de imágenes: rotar dar vuelta la imagen.<br />
+Sin embargo, téngase en cuenta que los datos en sí mismos de la imagen no serán alterados. Lo que harán estos comandos es solamente añadir un atributo al archivo de forma que se muestre rotado o dado vuelta la próxima vez que lo abra.</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="view" name="view">Visualización</a></h2>
+<img src="../images/apps-images/showimage-view.png" style="float:left;margin-right:15px" alt="showimage-view.png" />
+<p>El menú <span class="menu">Ver</span> le permite iniciar una <span class="menu">Vista de diapositivas</span> de todas las imagenes de una carpeta (o ventana con resultados de una consulta) y establecer un <span class="menu">Retardo de diapositiva</span> desde 2 hasta 20 segundos.</p>
 <p>Otras ordenes aplican a la imagen mostrada (sin cambiar el tamaño de la ventan):<br />
 <span class="menu">Tamaño original</span> muestra la imagen con factor de acercamiento en 100%.<br />
 <span class="menu">Ajustar a ventana</span> reduce la imagen al tamaño del marco de la ventana, por ejemplo luego de haber hecho un acercamiento o después de cambiar el tamaño de la ventana.<br />
 <span class="menu">Acercar</span> y <span class="menu">Alejar</span> cambian la vista de la imagen en escalas de 10%. También puede hacer acercamiento con la rueda del ratón; para moverse dentro de una imagen más grande que la ventana, simplemente hace clic con el botón izquierdo y arrastre el ratón.</p>
-<p>Hay dos ajustes que no aplican solamente a la imagen actual y son recordados cuando cambia de una imagen a la siguiente:<br />
-<span class="menu">Acercamiento de alta calidad</span> aplica un filtro rápido cuando se hace acercamiento para disminuir las líneas dentadas y generar un resultado más suave.<br />
-<span class="menu">Alargar a la ventana</span> alargará imagenes pequeñas para que llenen el marco actual de la ventana.</p>
+<p>Hay dos ajustes que no sólo se aplican a la imagen actual, sino que también se mantienen al navegar de una imagen a la siguiente:<br />
+<span class="menu">Acercamiento de alta calidad</span> aplica un filtro rápido al acercar para disminuir las líneas dentadas y generar un resultado más suavizado.<br />
+<span class="menu">Estirar a la ventana</span> estirará las imágenes más pequeñas para cubrir el marco de la ventana actual.</p>
 <p>Luego está la modalidad <span class="menu">Pantalla completa</span> con una opción para <span class="menu">Mostrar leyenda en pantalla completa</span> que sobrepone el nombre del archivo en la parte inferior de la imagen.</p>
 <p>Por último, <span class="menu">Mostrar barra de herramientas</span> mostrará/esconderá los controles gráficos:</p>
 <img src="../../images/apps-images/showimage-toolbar.png" alt="showimage-toolbar.png" />
-<p>De izquierda a derecha: imagen anterior, imagen siguiente, iniciar vista de diapositivas (en pantalla completa), modo de selección, tamaño original, ajustar a ventana, acercar, alejar, página anterior y siguiente (cuando un formato de imagen como TIFF soporta múltiples páginas en un mismo archivo, véase más abajo).</p>
+<p>De izquierda a derecha: imagen anterior, imagen siguiente, iniciar vista de diapositivas (en pantalla completa), modo de selección, tamaño original, ajustar a ventana, acercar, alejar, página anterior y siguiente (cuando un formato de imagen como TIFF admite múltiples páginas en un mismo archivo).</p>
 <p>La mayor parte de la ordenes utilizadas frecuentemente también estan disponibles desde un menú contextual de botón derecho en la imagen. Esto es cómodo cuando se encuentra en modo de pantalla completa.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Navegar</h2>
-<img src="../images/apps-images/showimage-browse.jpg" alt="showimage-browse.jpg" />
-<p>Luego de abrir una imagen puede navegar rapidamente a través de todas las demás imagenes en su carpeta (o ventana de resultados de consulta), presionando <span class="key">↑</span>/<span class="key">↓</span> o <span class="key">←</span>/<span class="key">→</span>. Puede ver el cambio de selección acorde en la ventana del Tracker.</p>
-<p>Existe una forma rápida de abrir la carpeta de la imagen actual e incluso navegar a sus carpetas superiores e inferiores. Funciona justo como con la <a href="../tracker.html#drill-down">navegación sumergible</a> en el Tracker al dar clic en el área de información de la imagen en la barra de estado que muestra el formato y tamaño de la imagen actual.</p>
-<p>Si ve en el menú de <span class="menu">Navegar</span>, encontrará otro tipo de navegación: algunos formatos, como el TIFF, contienen varias páginas dentro de un archivo. Ordenes como <span class="menu">Primer página</span> y <span class="menu">Siguiente Página</span> le permiten navegar esas páginas.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Edición</h2>
-<img src="../images/apps-images/showimage-edit.jpg" alt="showimage-edit.jpg" />
-<p>El menú <span class="menu">Imagen</span> ofrece algunas manipulaciones necesarias para un visualizador de imagenes: rotar y dar vuelta a la imagen. Tome nota que la imagen en sí no será modificada. Solamente se le añade un atributo al archivo para que sea mostrado rotado o dado vuelta la próxima vez que la abra.</p>
-<p><span class="menu">Usar como fondo…</span> abrirá las preferencias de <a href="../preferences/backgrounds.html">Fondos</a> para establecer la imagen actual como imagen para su espacios de trabajo.</p>
-<p>Hay momentos que también se necesita hacer un recorte. Para definir el marco a cortar, puede cambiarse a <span class="menu">Modo de Selección</span> desde el menú <span class="menu">Editar</span> y arrastrar un cuadro con su botón izquierdo del ratón. En caso que no quiera cambiar de modos antes, también puede crear este cuadro en "modo normal" al simplemente mantener presionado <span class="key">CTRL</span> mientras arrastra con el botón izquierdo, que de otra forma solo se movería a través de la imagen.<br />
-<span class="menu">Borrar selección</span> o <span class="key">ESC</span> quitarán el cuadro de selección.</p>
-<p>El siguiente capítulo muestra como guardar el área recortada.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Guardar y convertir</h2>
-<p>Para guardar o convertir una imagen en cualquier otro formato disponible, puede invocar el tradicional <span class="menu">Guardar como…</span> del menú <span class="menu">Archivo</span>, seleccionar el formato y escoger un nombre de archivo.<br />
-A menudo es más rápido arrastrar y tirar, especialmente si hay una ventana del Tracker abierta con la carpeta destino ya abierta.</p>
-<img src="../images/apps-images/showimage-dnd.jpg" alt="showimage-dnd.jpg" />
-<p>Así es también como el recorte mencionado arriba se finaliza. Ya sea seleccione un marco como se describe arriba, o escoja <span class="menu">Editar | Seleccionar todo</span> para la imagen completa. Luego arrastre y tire la selección en el Escritorio o cualquier ventan activa del Tracker para crear un nuevo recorte de imagen del mismo formato que la imagen original.</p>
-<p>Para guardar en un formato diferente, haga el arrastre con el botón derecho y escoja un formato del menú contextual cuando suelte la imagen.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Teclas de acceso rápido</h2>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="attributes" name="attributes">Atributos</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Aquí es posible establecer una <span class="menu">Calificación</span> a la imagen actual, en un rango de 1 a 10, elegir <span class="menu">Restablecer calificación</span> para volverlo a poner como "sin calificar" (= "0").</p>
+<p>En Tracker, las calificaciones se muestran en la columna de atributo "Rating" como una serie de estrellas. Las cinco estrellas representan los diez valores posibles, en donde cada etapa equivale a media estrella. Por ejemplo, una calificación de 7 se muestra como 7 / 2 = 3,5 estrellas: ★★★⯪☆.<br />
+Pero también puede editar la calificación directamente en Tracker: seleccione el archivo, elija <span class="menu">Editar nombre</span> en el menú <span class="menu">Archivo</span> y presione <span class="key">TAB</span> para trasladarse a la columna "Rating". Entonces puede ingresar el valor numérico nuevo, que se convertirá en una calificación en estrellas al presionar <span class="key">ENTRAR</span>.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="shortcuts" name="shortcuts">Teclas de acceso rápido</a></h2>
 <p>A continuación se muestra una lista con los accesos directos más comunes:</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">←</span> / <span class="key">↑</span></td><td style="width:15px;"></td><td>Imagen previa</td></tr>
 <tr><td><span class="key">→</span> / <span class="key">↓</span></td><td></td><td>Imagen siguiente</td></tr>
-<tr><td><span class="key">DEL</span></td><td></td><td>Mover a Papelera</td></tr>
+<tr><td><span class="key">SUPR</span></td><td></td><td>Mover a la papelera</td></tr>
 <tr><td><span class="key">+</span></td><td></td><td>Acercar</td></tr>
 <tr><td><span class="key">-</span></td><td></td><td>Alejar</td></tr>
 <tr><td><span class="key">0</span></td><td></td><td>Tamaño original (vista al 100%)</td></tr>
 <tr><td><span class="key">1</span></td><td></td><td>Ajustar a ventana</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Alternar modo de pantalla completa (también con doble clic)</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">ENTRAR</span></td><td></td><td>Alternar modo de pantalla completa (también con doble clic)</td></tr>
 <tr><td><span class="key">CTRL</span></td><td></td><td>Mientras mantiene presionado <span class="key">CTRL</span> puede crear un marco de selección sin cambiar especificamente a modo de selección.</td></tr>
 </table>
 

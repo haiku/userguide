@@ -150,8 +150,8 @@ Ez a típusú szűrés beállítható a <a href="#tracker-preferences.html">Nyom
 </ul>
 <div class="box-info">
 <p _translation_id="4341">Sometimes you just want to rearrange a few icons without doing a complete <span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>). In that case, you select these icons and start to drag them to their new location. Before you drop them there, keep <span class="key">ALT</span> pressed. This will align the icons to the invisible grid.</p>
-<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. Normally, that's the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p>
-</div>
+<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. That applies to the width of the labels as well: If a label gets truncated by the column width in <span class="menu">List view</span>, it'll be similarly truncated when switching to <span class="menu">Mini</span> and <span class="menu">Icon view</span>.<br />
+Normally, the first column is the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p></div>
 <p>A funkciók többsége magától értetődő.</p>
 
 <h3>
@@ -180,10 +180,12 @@ Ez a típusú szűrés beállítható a <a href="#tracker-preferences.html">Nyom
 <p>Mint mindig, a parancsok itt is egyértelműek.</p>
 <ul>
 <li><p><span class="menu">Keresés...</span> - Egy fájl vagy mappa megkeresése. További információk a <a href="queries.html">Lekérdezések</a> fejezetben.</p></li>
-<li><p><span class="menu">Új</span> - Új fájlt vagy mappát készíthetünk <i>sablon</i> alapján.
-<br /><br /></p>
+<li><p><span class="menu">New</span> - Create a new folder or any other file based on a template.
+</p>
 <img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
-<p>A <span class="menu">Sablonok szerkesztése...</span> megnyitja a <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span> mappát. Az ebben a mappában létrehozott fájlok fognak megjelenni sablonként az <span class="menu">Új</span> menüben A sablon alapján kap a fájl egy nevet, illetve a jellemzői is megegyeznek a sablonéval. Jelen példában van egy "Text" fájlunk, aminek a típusa <tt>text/plain</tt>. További információk a <a href="filetypes.html">Fájltípusok</a> fejezetben.</p></li>
+<p>Choosing <span class="menu">Edit templates…</span> at the bottom opens the folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Create a file or folder there and it will appear as a template in the <span class="menu">New</span> menu. The new file/folder created by the template will have its filetype, filename, contents, and all its other attributes. In case of a folder, it'll also have its window size/position and attribute column layout.</p>
+<p>In the screenshot above, you see the custom template folders "Email folder" and "Music folder". Both will create folders with those same custom overlay icons and have the relevant attributes already set.</p>
+<p>You can also sort your templates into custom submenus. Just choose <span class="menu">Add new submenu…</span> and a new special folder gets created in <span class="path">Tracker New Templates</span> that you then rename to fit its purpose. Copy your template files there to appear in the new submenu. The screenshot above shows the submenus "C   dev files" and "Office files".</p></li>
 <li><p><span class="menu">Megnyitás ezzel...</span> - Ez a menü tartalmazza az összes programot, ami kezelni tudja az adott fájlt.
 <br /><br /></p>
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
@@ -202,7 +204,7 @@ Ez a típusú szűrés beállítható a <a href="#tracker-preferences.html">Nyom
 <li><span class="menu">Attibutes</span>: Lists all extra file attributes with their value and type.</li>
 </ul></li>
 <li><p><span class="menu">Név szerkesztése</span>, <span class="menu">Megdupláz</span> és <span class="menu">Mozgatás a Szemetesbe</span> - Egy fájl átnevezése, megduplázása vagy a Szemetesbe helyezése.</p></li>
-<li><p><span class="menu">Mozgatás</span>, <span class="menu">Másolás</span> és <span class="menu">Hivatkozás létrehozása</span> - Az almenün keresztül navigálva eljutunk abba a mappába, ahová a fájlt át szeretnénk másolni, mozgatni, vagy ahová hivatkozást szeretnénk létrehozni hozzá. A <span class="key">SHIFT</span>-et lenyomva tartva relatív hivatkozás létrehozására lesz lehetőségünk.</p></li>
+<li><p><span class="menu">Move to</span>, <span class="menu">Copy to</span> and <span class="menu">Create link</span> - lets you move, copy or link the selected file(s) using the submenu navigating method. Holding <span class="key">SHIFT</span> while invoking the menu offers the option to create a relative link. You recognize links by their dot-underlined icon label.</p></li>
 <li><p><span class="menu">Kivágás</span>, <span class="menu">Másolás</span> és <span class="menu">Beillesztés</span> - A vágólap használatával kivághatunk, másolhatunk egy bejegyzést a mappából vagy beilleszthetünk egy bejegyzést a jelenlegi mappába. A <span class="key">SHIFT</span>-et lenyomva tartva pedig megjelenik a <span class="menu">Több kivágása/másolása</span> menü, ami több fájlon engedi elvégezni ezeket a műveleteket, amiket majd később beszúrhatunk egy másik mappába. Szintén a <span class="key">SHIFT</span>-et lenyomva tartva a kimásolt fájloknak a hivatkozását a vágólapra másolhatjuk.</p></li>
 <li><p><span class="menu">Azonosítás</span> -  Meghatározza a fájlok típusát, ha jelenleg még nem azonosítottak, például ha az internetről töltöttük le azt  <span class="cli">wget</span> használatával, ami nem állítja be letöltés után a fájl típusát. A menü megnyitásakor a <span class="key">SHIFT</span>-et lenyomva ez megváltozik <span class="menu">Kényszerített azonosítás</span>ra, ami megállapítja a fájl típusát, és kijavítja azt hibás típus esetén.</p></li>
 <li><p><span class="menu">Kiegészítők</span> - Az összes alap Nyomkövető kiegészítő és azok, melyek az adott fájlt képesek kezelni. További információk a <a href="tracker-add-ons.html">Nyomkövető kiegészítők</a> fejezetben.</p></li>

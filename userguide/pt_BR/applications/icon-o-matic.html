@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -221,7 +221,10 @@ Pontos selecionados são eliminados pressionando <span class="key">DEL</span> ou
 <p>As formas ficam no topo umas das outras, cada qual em sua própria camada, caso deseje. Para reordená-los, arraste e solte suas entradas para uma diferente posição na lista.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Menu Forma</a></h4>
-<p>O menu <span class="menu">Forma</span> oferece a já mencionada possibilidade de <span class="menu">Adicionar vazio, com caminho/estilo/caminho &amp; estilo</span> e de <span class="menu">Duplicar</span> ou <span class="menu">Remover</span> uma forma. Então, existe:</p>
+<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape.</p>
+<p>With <span class="menu">Add reference image</span> you can create a special kind of shape. It lets you load any bitmap image (e.g. PNG or JPEG) to use as a background while working on the icon. Very handy when creating a vector version of an existing bitmap icon, for example. The reference image can be manipulated like any other shape (moved, rotated, resized), but will not be part of the icon when saved as HVIF.</p>
+
+<p>Then there is:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Desfazer transformação</span></td><td style="width:15px;"></td><td>Reverte todas as transformações de deslocamento, redimensionamento e rotação que tenham sido aplicadas à forma.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Congelar transformação</span></td><td></td><td>Quando se transforma uma forma, seu(s) caminho(s) atribuído(s) permanece(m) em sua(s) posição(ões) original(is). Isto pode ser proposital; talvez mais de uma forma esteja utilizando aquele caminho, talvez você intencionalmente usou <span class="menu">Opções | Alinhar à grade</span> para definir os pontos em bordas com precisão de pixel.<br />
@@ -235,6 +238,7 @@ Se não, "Congelar transformação" irá plicar a transformação de forma atual
 <tr><td><span class="menu">Min LOD</span></td><td></td><td>Mínimo Nível de Detalhe</td></tr>
 <tr><td><span class="menu">Max LOD</span></td><td></td><td>Máximo Nível de Detalhe</td></tr>
 </table>
+<p>Reference images have instead an <span class="menu">Alpha</span> value to set their transparency (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Nível de Detalhe (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -288,13 +292,16 @@ Naturalmente pode-se mover estes indicadores para alterar o gradiente ao seu gos
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Contorno</span></td><td></td><td>Adiciona um contorno à forma.</td></tr>
 <tr><td><span class="menu">Linha</span></td><td></td><td>Desenha o caminho de uma forma ao invés de preenchê-lo com um estilo.</td></tr>
+<tr><td><span class="menu">Perspective</span></td><td></td><td>Allows to individually move the four corners of the shape to create the effect of perspective.</td></tr>
+
 </table>
 
 <p>Dependendo do tipo de Transformador, obterá um conjunto diferente de propriedades.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Propriedades de Transformador</a></h4>
-<p>Além de um <span class="menu">Nome</span> e a atual <span class="menu">Largura</span> para o transformador, a visão de <span class="menu">Propriedades</span> tem estas (dependendo do seu tipo, diferindo levemente) opções:</p>
+<p>Besides a <span class="menu">Name</span> the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Width</span></td><td></td><td>The width of Stroke or Contour.</td></tr>
 <tr><td><span class="menu">Ponteiras</span></td><td style="width:15px;"></td><td><i>Apenas Linhas</i>. Define as ponteiras finais de uma linha: <span class="menu">Coronha</span>, <span class="menu">Quadrado</span> ou <span class="menu">Redondo</span>.</td></tr>
 <tr><td><span class="menu">Detectar orientação</span></td><td></td><td><i>Apenas no Contorno</i>. Determina se o contorno está do lado de dentro ou do lado de fora do caminho.</td></tr>
 <tr><td><span class="menu">Juntar</span></td><td></td><td>Define como as linhas são unidas a um ponto: <span class="menu">Mitra</span>, <span class="menu">Redondo</span> ou <span class="menu">Chanfrado</span>.</td></tr>

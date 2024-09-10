@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		cafeina
  *		kervas
  *		miguel~1.mx
  *
@@ -62,16 +63,15 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Índice</td></tr>
-<tr class="index"><td><a href="#reading">Lectura de Mensajes</a><br />
-	<a href="#creating">Creación de Mensajes</a><br />
+<tr class="index"><td><a href="#reading">Lectura de mensajes</a><br />
+	<a href="#creating">Creación de mensajes</a><br />
 	<a href="#preferences">Preferencias</a></td></tr>
 </table>
 
-<h2><img src="../../images/apps-images/mail-icon_64.png" alt="mail-icon_64.png" width="64" height="64" />Mail</h2>
+<h2><img src="../../images/apps-images/mail-icon_64.png" alt="mail-icon_64.png" width="64" height="64" />Correo</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Barra de escritorio:</td><td style="width:15px;"></td><td><span class="menu">Aplicaciones</span></td></tr>
 <tr><td>Ubicación:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
@@ -81,14 +81,14 @@
 <span class="path">~/config/settings/Mail/status/</span> - Ubicación para almacenar los estados personalizados</td></tr>
 </table>
 <p><br /></p>
-<p>Mail es el visor y editor predeterminado de correos electrónicos de Haiku. No tiene nada que ver con el envío y recepción de los mensajes, que es hecho por el mail_daemon y puede ser configurado a través de las preferencias de <a href="../preferences/e-mail.html">Correo electrónico</a>.</p>
-<p>Esta página es una vista general de la aplicación Mail. Para más información sobre como funciona el correo electrónico en Haiku, refierase al <a href="../workshop-email.html">Taller sobre administración de correo electrónico</a>.</p>
+<p>Correo es el visor y editor predeterminado de correos electrónicos de Haiku. No tiene nada que ver con el envío y recepción de los mensajes, que es hecho por el mail_daemon y puede ser configurado a través de las preferencias de <a href="../preferences/e-mail.html">Correo electrónico</a>.</p>
+<p>Esta página es una vista general de la aplicación Correo. Para más información sobre como funciona el correo electrónico en Haiku, léase <a href="../workshop-email.html">Taller sobre administración de correo electrónico</a>.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="reading" name="reading">Lectura de mensajes</a></h2>
 <p>Para abrir un correo, hace doble clic sobre un archivo de correo. La interfaz es bastante sencilla:</p>
 <img src="../images/apps-images/mail-read.png" alt="email-read.png" /> 
-<p>A menu and optional tool bar on top, with an area of the interesting attributes of a mail (to, from, subject, date) below that, and then the actual body of the mail. If the mail appears with strange characters or empty, try to change the <span class="menu">Encoding</span> in the <span class="menu">Message</span> menu.</p>
+<p>Verá en la parte superior una barra de menú y una barra de herramientas (opcional), debajo de ellas se encuentra un área en donde se muestran los atributos más importantes del mensaje de correo electrónico (de, para, asunto y fecha), y a continuación el cuerpo del mensaje. Si el contenido del mensaje de correo aparece con caracteres extraños o vacío, intente cambiar la <span class="menu">Codificación</span> desde el menú <span class="menu">Mensaje</span>.</p>
 <p>Si hay archivos adjuntos a un correo, se muestran en lista al final del mensaje. Si da clic derecho sobre uno, abrirá un menú contextual para <span class="menu">Guardar adjunto...</span> (Save attachment...) o <span class="menu">Abrir adjunto</span> (Open attachment). También puede arrastrar y tirar directamente sobre el Escritorio u otra ventana de Tracker.</p>
 <p>La mayoría de los elementos de la barra de herramientas y del menú se explican por si solos, así que nos enfocaremos en los aspectos destacados.</p>
 <h3>
@@ -96,7 +96,7 @@
 <p>Cuando cierra la ventana de un correo nuevo, su estado normalmente cambia de "Nuevo" a "Leído". Pero también puede establacer otros estados, escogiendolos desde el submenú <span class="menu">Cerrar y...</span>. Ahí también encontrará la opción <span class="menu">Establecer a...</span> para crear sus propios estados personalizados, que son guardados en <span class="path">~/config/settings/Mail/status/</span>.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Editar</h3>
-<p>Aquí podrá encontrar la opción para abrir las <span class="menu">Preferencias...</span>  (<a href="#preferences">vea abajo</a>) de Mail y un acceso directo para administrar su <span class="menu">Cuentas...</span>, que abrirán el panel de preferencias de <a href="../preferences/e-mail.html">Correo electrónico</a>.</p>
+<p>Aquí podrá encontrar la opción para abrir las <span class="menu">Preferencias...</span>  (<a href="#preferences">véase abajo</a>) de Mail y un acceso directo para administrar su <span class="menu">Cuentas...</span>, que abrirán el panel de preferencias de <a href="../preferences/e-mail.html">Correo electrónico</a>.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Ver</h3>
 <p>Raras veces tendrá la necesidad los siguientes elementos, si es que alguna vez:</p>
@@ -115,15 +115,15 @@
 <div class="box-info">Si marca un pasaje en el mensaje antes de responder a él, sólo el texto marcado será citado en su mensaje de respuesta. Esta es una buena manera de reducir la inclusión de estar citando múltiples veces, que es una práctica desaprobada por gran cantidad de gente</div>
 <p>The items to <span class="menu">Forward</span>, <span class="menu">Re-enviar</span> y <span class="menu">Copiar a nuevo</span> se explican solos.</p>
 <p>Cuando haya abierto un correo desde una ventana de resultados de una consulta o desde una ventana de Tracker, <span class="menu">Mensaje previo</span> y <span class="menu">Siguiente mensaje</span> moverá al mensaje previo/siguiente en la lista.</p>
-<p><span class="menu">Save address</span> collects all email addresses from the header and the actual email body in a submenu. Choosing an address will open the <a href="people.html">People</a> application in order to complete and save the contact information.</p>
+<p><span class="menu">Guardar dirección</span> recopila todas las direcciones de correo electrónico del encabezado y del propio cuerpo del mensaje en un submenú. Al elegir una dirección se abrirá la aplicación <a href="people.html">Personas</a> para completar y guardar la información del contacto.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Consultas</h3>
-<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all corresponding mails:</p>
+<p>Este menú contiene consultas que muestran todos los mensajes relacionados con el mensaje abierto actualmente. Al elegir <span class="menu">El mismo destinatario</span>, <span class="menu">El mismo remitente</span> o <span class="menu">El mismo asunto</span> abre una consulta que enumera todos los mensajes correspondientes:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="creating" name="creating">Creación de mensajes</a></h2>
-<p>A new email is created by invoking <span class="menu">New mail message</span> of the <span class="menu">File</span> menu or the corresponding icon from the tool bar of an open email. Or you just start the Mail application or choose <span class="menu">Create new message…</span> from the context menu of the mailbox icon in the Deskbar.</p>
+<p>Puede crear un nuevo mensaje con la opción <span class="menu">Crear mensaje de correo</span> del menú <span class="menu">Archivo</span> o con su icono correspondiente de la barra de herramientas de un mensaje abierto. También puede iniciar la aplicación Correo o escoger <span class="menu">Crear mensaje…</span> desde el menú contextual del buzón de correo en la barra de escritorio.</p>
 <img src="../images/apps-images/mail-write.png" alt="email-write.png" /> 
 <p>La ventana es bastante similar a la que le permite leer correos. Los elementos de la barra de herramientas y del menú son levemente diferentes y los cuadros de texto deben ser llenados con la dirección de correo electrónico del destinatario, el asunto, y demás.</p>
 <p><span class="menu">cc</span> significa "<i>con copia</i>" y envía copias de su mensaje a las personas en la lista. La diferencia entre esto e incluir direcciones en el campo "Para" es que no se estará abordando directamente a las personas bajo cc, por ende señalizando que probablemente no espera respuesta de ellos.<br />
@@ -136,7 +136,7 @@
 <p>Puede guardar su trabajo hasta el momento con <span class="menu">Guardar como borrador</span> y seguir trabajando en él después. Para cargarlo de nuevo, seleccionelo desde el submenú <span class="menu">Abrir borrador</span> que mostrará una lista con el resultado de todos los correos con el estado "Borrador".</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Editar</h3>
-<p><span class="menu">Increase</span> and <span class="menu">Decrease quote level</span> or their respective shortcuts <span class="key">ALT</span> <span class="key"> </span> / <span class="key">-</span> are used to add/remove a level of quoting by adjusting the number of "&gt;" symbols in front of quoted lines. Just select some text in all the lines you want un/quoted and invoke the menu item.</p>
+<p>Las opciones <span class="menu">Aumentar</span> y <span class="menu">Reducir nivel de cita</span> o sus respectivos atajos <span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span> se utilizan para añadir o remover un nivel de cita al ajustar el número de símbolos "&gt;" al frente de las líneas citadas. Simplemente seleccione de todas las líneas el fragmento de texto al que desee señalar como cita o quitarle esa marca e invoque el elemento del menú correspondiente.</p>
 
 <img src="../images/apps-images/mail-spellcheck.png" alt="email-spellcheck.png" /> 
 
@@ -150,15 +150,15 @@ Si le da clic derecho en una de esas palabras, se abrirá un menú contextual qu
 <img src="../images/apps-images/mail-signature.png" alt="email-signature.png" /> 
 
 <p>Puede crear o editar firmas existentes bajo <span class="menu">Editar firmas...</span>, que abrirá una ventana donde puede ingresar el propio texto y el título de su nueva firma. Ahí, en el menú <span class="menu">Firma</span>, puede encontrar elementos para <span class="menu">Abrir</span> una firma particular o <span class="menu">Guardar</span> o <span class="menu">Borrar</span> la firma cargada actualmente. Las Firmas deben guardarse en el archivo <span class="path">~/config/settings/Mail/signatures</span>.</p>
-<p>Use <span class="menu">Add attachment…</span> and <span class="menu">Remove attachment</span> to add/remove files as enclosures. You can also drag &amp; drop files from a Tracker window. With text files you have to be careful not to drop them in the email body, or they'll get pasted as text instead.</p>
+<p>Utilice <span class="menu">Añadir archivo adjunto…</span> y <span class="menu">Quitar archivo adjunto</span> para añadir o quitar archivos como adjuntos. También puede arrastrar y soltar archivos desde una ventana de Tracker. En caso de que el archivo a adjuntar sea un archivo de texto, hay que tener cuidado de no soltarlos en el área del cuerpo del mensaje, de lo contrario su contenido se pegará como texto del mensaje.</p>
 
 <img src="../images/apps-images/mail-attachments.png" alt="email-attachments.png" /> 
 
-<p>File attachments are listed below the email body. You can remove a file by invoking a context menu or by selecting it and pressing <span class="key">DEL</span>.</p>
+<p>Los archivos adjuntos se muestran debajo del cuerpo del mensaje. Puede eliminar un archivo invocando la opción correspondiente del menú contextual, o si no, seleccionarlo y presionar la tecla <span class="key">SUPR</span>.</p>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Consultas</h3>
-<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.</p>
+<p>De la misma forma que al leer un mensaje, este menú contiene consultas que muestran todos los mensajes relacionados con el que está siendo redactado. Al elegir <span class="menu">El mismo destinatario</span>, <span class="menu">El mismo remitente</span> o <span class="menu">El mismo asunto</span> se abrirá una consulta que muestra todos los mensajes que coinciden con el criterio de la consulta.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,6 +64,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Перевод этой страницы еще не завершен. Пока это не произойдет, незавершенные части будут на английском.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Содержание</td></tr>
@@ -221,7 +222,10 @@
 <p>Формы лежат друг на друге, каждая - в своем слое, если хотите. Для их реорганизации перетащите нужную форму в другое место в списке.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Меню Форма (Shape)</a></h4>
-<p>Помимо упомянутых ниже возможностей, меню <span class="menu">Форма (Shape)</span> позволяет <span class="menu">Добавить пустую (Add Empty), С Контуром/Стилем/Контуром и стилем (With Path/Style/Path&amp;Style)</span>, а так же <span class="menu">Дублировать (Duplicate)</span> или <span class="menu">Удалить (Remove)</span> форму. Приведем оставшиеся:</p>
+<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape.</p>
+<p>With <span class="menu">Add reference image</span> you can create a special kind of shape. It lets you load any bitmap image (e.g. PNG or JPEG) to use as a background while working on the icon. Very handy when creating a vector version of an existing bitmap icon, for example. The reference image can be manipulated like any other shape (moved, rotated, resized), but will not be part of the icon when saved as HVIF.</p>
+
+<p>Then there is:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Сбросить изменения (Reset Transformation)</span></td><td style="width:15px;"></td><td>Отменяет все перемещения, изменения масштаба и вращения, примененные к форме.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Применить изменения (Freeze Transformation)</span></td><td></td><td>Когда вы изменяете форму, контур, связанный с ней остается в прежнем месте. Возможно, этот контур используется где-либо еще, более чем в одной фигуре, возможно он просто нужен вам в таком начальном виде или вы использовали пункт меню <span class="menu">Свойства | Выровнять по сетке (Options | Snap to Grid)</span> для выравнивания точек по пиксельным границам.<br />
@@ -235,6 +239,7 @@
 <tr><td><span class="menu">Минимальный УД (Min LOD)</span></td><td></td><td>Минимальный уровень детализации</td></tr>
 <tr><td><span class="menu">Максимальный УД (Max LOD)</span></td><td></td><td>Максимальный уровень детализации</td></tr>
 </table>
+<p>Reference images have instead an <span class="menu">Alpha</span> value to set their transparency (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Уровень детализации (УД)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -288,13 +293,16 @@
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Обводка (Contour)</span></td><td></td><td>Добавляет обводку к форме.</td></tr>
 <tr><td><span class="menu">Штрих (Stroke)</span></td><td></td><td>Штрихует контур фигуры, вместо закрашивания его стилем.</td></tr>
+<tr><td><span class="menu">Perspective</span></td><td></td><td>Allows to individually move the four corners of the shape to create the effect of perspective.</td></tr>
+
 </table>
 
 <p>В зависимости от вида транформатора, вы получите различные наборы свойств.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Свойства трансформатора</a></h4>
-<p>Кроме пункта <span class="menu">Имя (Name)</span> и текущей <span class="menu">Ширины (Width)</span> для трансформаторов, в меню <span class="menu">Свойства (Properties)</span> имеются следующие пункты (в зависимости от типа трансформатора могут слегка различаться):</p>
+<p>Besides a <span class="menu">Name</span> the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Width</span></td><td></td><td>The width of Stroke or Contour.</td></tr>
 <tr><td><span class="menu">Конец линий (Caps)</span></td><td style="width:15px;"></td><td><i>Только для штриха</i>. Определяет форму конца линий: <span class="menu">Встык (Butt)</span>, <span class="menu">Квадратный (Square)</span> or <span class="menu">Скругленный (Round)</span>.</td></tr>
 <tr><td><span class="menu">Определить положение (Detect Orient.)</span></td><td></td><td><i>Только для обводки</i>. Определяет расположение обводки - внутри или снаружи контура.</td></tr>
 <tr><td><span class="menu">Соединение (Joins)</span></td><td></td><td>Опрелеляет вид соединения линии и точки: <span class="menu">Клин (Miter)</span>, <span class="menu">Округлость (Round)</span> или <span class="menu">Скос (Bevel)</span>.</td></tr>

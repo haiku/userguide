@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -82,7 +82,8 @@
 <tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span> / <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Permette di navigare spazialmente tra le righe/colonne delle aree di lavoro disponibili, è sufficiente aggiungere <span class="key">SHIFT</span> per trascinare la finestra attiva verso il nuovo workspace.</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>Tenendo premuto <span class="key">OPT</span> mentre trascini una finestra vicino alla tab o al boardo di un'altra finestra, queste verranno affiancate o sovrapposte (consulta la guida al capitolo <a href="gui.html#stack-tile">Interfaccia utente</a>).</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Cicla attraverso tutte le finestre aperte dello spazio di lavoro corrente</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>Cycles through stack and tiled windows.</td></tr>
+<tr><td><span class="key"> OPT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Cicla attraverso tutte le finestre aperte dello spazio di lavoro corrente</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + tasto sinisto del mouse</td><td></td><td>Clicca e trascina con il pulsante sinistro del mouse per spostare una finestra (consulta la guida al capitolo <a href="gui.html#move-resize">Interfaccia utente</a>).</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + tasto destro del mouse</td><td></td><td>Clicca e trascina con il pulsante destro del mouse per ridimensionare una finestra (consulta al guida al capitolo <a href="gui.html#move-resize">Interfaccia utente</a>).</td></tr>
 <tr><td> </td></tr>
@@ -143,14 +144,14 @@
 <tr><td><span class="key">ALT</span> + left click</td><td style="width:15px;"></td><td>Left-clicking on a path or URL while holding <span class="key">ALT</span> opens it in the preferred application, e.g. folders in Tracker, pictures in ShowImage. You can limit the selected path by additionally holding <span class="key">SHIFT</span>.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td></td><td>Apre un'altra sessione del terminale in una nuova finestra.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td></td><td>Apre un'altra sessione del terminale in una nuova scheda.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>Passa alla scheda corrispondente.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">TAB</span></td><td></td><td>Passa alla prossima finestra del Terminale.</td></tr>
-<tr><td><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Passa alla scheda a sinistra/destra.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>Passa alla scheda corrispondente.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Passa alla scheda a sinistra/destra.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Sposta la scheda corrente a sinistra/destra.</td></tr>
+<tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Scorre il terminale di uscita su/ giù di una riga.</td></tr>
+<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Scorre l'output del terminale su/giù di una pagina.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key"> </span> / <span class="key">-</span></td><td></td><td>Aumenta/Diminuisce la dimensione del carattere.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">INVIO</span></td><td></td><td>Entra/esce dalla modalità a schermo intero.</td></tr>
-<tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Scorre il terminale di uscita su/ giù di una riga.</td></tr>
-<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Scorre l'output del terminale su/giù di una pagina.</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>Completamento da Tab, dopo aver immesso alcune lettere, è possibile premere una volta il tasto <span class="key">TAB</span> per auto-completare il nome di un file o di un percorso. Quando c'è più di un elemento, si ferma dove il nome inizia a differire e sarà necessario fornire alcune lettere in più per contraddistinguerlo ulteriormente. Premendo due volte il tasto <span class="key">TAB</span> sarà possibile visualizzare tutte le corrispondenze.</td></tr>
 <tr><td><span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Sposta verso l'alto o verso il basso nella cronologia di tutti i comandi precedentemente inseriti.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">R</span></td><td></td><td>Cronologia della bash. Tutti i comandi digitati vengono salvati nel file <span class="path">~/config/settings/bash_history</span>. Premendo il tasto <span class="key">CTRL</span> <span class="key">R</span> ed iniziando a inserire un comando, verrà fornita la prima corrispondenza all'interno della cronologia della bash. Continua a premere la combinazione <span class="key">CTRL</span> <span class="key">R</span> fino a trovare il comando desiderato e premi <span class="key">INVIO</span> per eseguirlo.</td></tr>

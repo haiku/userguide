@@ -65,7 +65,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">このページの翻訳はまだ完全ではありません。完成するまでは、未完成の部分はオリジナルの英文を使用します。</div>
 
 <h1>ファイルシステムレイアウト</h1>
 
@@ -83,8 +82,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">システムフォルダー - <span class="path">/boot/system/</span></a></h2>
-<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
-Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
+<p>Haiku の前身である BeOS では、このフォルダーは <span class="path">/boot/beos/</span> と名付けられていました。まだその名称をいくつかの古いドキュメント (たとえば、オリジナルの BeBook) 中に見ることがあるでしょう。<br />
+<span class="path">/boot/system/</span> 内のほとんどのフォルダーは読み取り専用です。それは理にかなったことです。なぜなら、それらは Haiku が正常に動作するために必要なファイルを含んでおり、そのために、(不慮の) 変更から安全である必要があるからです。フォルダーの書き込み禁止を示すために、その Tracker ウインドウは灰色の背景です。ユーザーが書き込めるフォルダーは下のものだけです。</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>キャッシュファイルや、<span class="path">/tmp/</span> にリンクされた一時フォルダーを含みます。</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>.hpkg の一部でない (おそらく古い BeOS アーカイブ由来の) ファイル用のフォルダー階層を含みます。</td></tr>
@@ -111,7 +110,7 @@ Most of the folders inside <span class="path">/boot/system/</span> are read-only
 <td><a href="queries.html">クエリ</a>がここに保存されます。標準では 7 日間仮保存されます。</td></tr>
 </table>
 
-<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
+<p><span class="path">/boot/home/config/</span> フォルダーは特別です。<span class="path">/boot/system/</span> のように、そのほとんどはパッケージ管理のコントロール下にあり、したがって読み取り専用です。ここでも、書き込み禁止フォルダーの Tracker ウィンドウは灰色の背景です。さらにそこにはユーザーが書き込める以下の同様なフォルダーがあります:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>

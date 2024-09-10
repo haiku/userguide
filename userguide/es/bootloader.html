@@ -66,7 +66,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h1>Cargador de arranque</h1>
 
@@ -80,7 +79,7 @@ En computadoras que para arrancar usan UEFI en vez del antiguo BIOS, tendrá que
 <a id="options" name="options">Opciones del Cargador de Arranque</a></h2>
 <p>Una vez allí, se le ofrecerán tres menús:</p>
 <table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
-<tr><td><b>Select boot volume/state</b></td><td> </td><td>Elija qué instalación/versión de Haiku desea iniciar (vea <a href="#troubleshooting">Diagnóstico de Problemas</a> below).</td></tr>
+<tr><td><b>Seleccionar volumen o estado de arranque</b></td><td> </td><td>Elija qué instalación/versión de Haiku desea iniciar (vea <a href="#troubleshooting">Diagnóstico de Problemas</a> below).</td></tr>
 <tr><td><b>Seleccionar opciones de modo seguro</b><br />
 </td><td> </td><td>Existen muchas opciones para probarse en caso de que tenga un problema de hardware o si el sistema se vuelve inestable o no arranca debido a una extensión (add-on) con mal comportamiento. Al mover la barra de selección a una opción, una pequeña explicación aparecerá en la parte inferior de la pantalla.
 </td></tr>
@@ -149,8 +148,8 @@ En computadoras que para arrancar usan UEFI en vez del antiguo BIOS, tendrá que
 <li><p>Si logra resolver sus problemas al activar la opción de <span class="menu">Utilizar controlador de gráficos a prueba de fallas</span> recurriendo a gráficos VESA, puede hacer que el ajuste sea permanente, quitando el <tt>#</tt> de la línea que dice <i>#fail_safe_video_mode true</i> en el archivo de texto <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span>.</p></li>
 <li><p>Si un controlador, extensión, etc. problemático está instalado bajo la jerarquía del sistema, las cosas se vuelven un poco más complicadas, porque esa área es de sólo léctura. En estos casos es que la opción <span class="menu">Disable system components (Desactivar componentes del sistema)</span> resulta útil. Con ella, puede navegar a través de todo el árbol del sistema y deshabilitar el componente que está causando problemas, al activar una de las entradas con la <span class="key">BARRA ESPACIADORA</span> o con <span class="key">RETORNO</span>. <span class="key">ESC</span> lo regresa un nivel arriba al directorio padre.</p>
 <p>Existe un artículo en línea, <a href="http://www.haiku-os.org/blog/barrett/2013-12-15_how_permanently_blacklist_package_file">Cómo deshabilitar componentes de paquetes (en inglés)</a>, que muestra cómo lograr que se mantengan los cambios.</p></li>
-<li><p>Under <span class="menu">Select boot volume/state</span> you can specify what former "version" of Haiku to boot. Every time you un/install a package, the old state is saved and you can boot into it by choosing it from the list presented in the boot loader options.<br />
-So, if you encounter boot problems after installing some package, boot a Haiku state from before that time and uninstall the offending package. You can permanently revert to a specific Haiku revision as described in the topic <a href="applications/softwareupdater.html#downgrading">SoftwareUpdater</a>.</p></li>
+<li><p>Dentro de <span class="menu">Select boot volume/state (Eligir el volumen o estado de arranque)</span> puede especificar cuál «versión» anterior de Haiku arrancar. Cada vez que instale/desinstale un paquete, el estado anterior se guarda y puede iniciar en él seleccionandolo de la lista presentada en las opciones del cargador de arranque.<br />
+Por tanto, si encuentra problemas de arranque después de instalar algún paquete, arranque en una versión de Haiku anterior a esa instalación y desinstale el paquete problemático. Puede regresar permanentemente a un estado determinado de Haiku como se describe en el tema <a href="applications/softwareupdater.html#downgrading">SoftwareUpdater</a>.</p></li>
 </ul>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>

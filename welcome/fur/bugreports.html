@@ -60,7 +60,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Tabele</td></tr>
@@ -141,16 +140,16 @@ Note che al è pussibil che in KDL la tô tastiere no funzioni. Lis tastieris PS
 <a id="syslog" name="syslog">Syslog</a></h3>
 <p><b>Chest al è il metodi preferît par tirâ fûr informazions di un sisteme che no si invie.</b><br />
 Il syslog (scurte di system log, vâl a dî regjistri di sisteme) al conten informazions preciosis in merit a ce che al è sucedût tal to sisteme, includûts i outputs des sessions di KDL. Di solit e je une buine idee chê di zontâlu al relatîf cartelin su Trac. Il syslog al ven scrit sul file <span class="path">/boot/system/var/log/syslog</span>. Viodût che la scriture suntun file e necessite di un sisteme funzionant, la jessude plui resinte e podarès no stâ sul syslog cuant che al capite un probleme sul kernel (in particolâr cuant che il computer al torne a inviâsi di bessôl opûr sessions KDL che no ti permetin di continuâ).</p>
-<p>The option <span class="menu">Enable debug syslog</span> in the boot loader's <span class="menu">Debug menu</span> makes the syslog persistent. If the option <span class="menu">Save syslog from previous session during boot</span> is activated in the boot loader options (as it is by default), you'll find the syslog of your last session as <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
-If you're not able to boot to get to the previous_syslog, you have to enter the boot loader menu by holding down <span class="key">SHIFT</span> (or <span class="key">SPACE</span> when booting via UEFI) while booting.<br />
-In the boot loader's <span class="menu">Debug menu</span> you should find the entries <span class="menu">Display syslog from previous session</span> and <span class="menu">Save syslog from previous session</span>. The former displays the syslog on screen, the latter allows you to save it as a file to disk. Note that at the moment only FAT32 volumes are supported for saving the file. If you want to use a USB stick, but have plugged it in too late so that it isn't recognized yet, you can reset the machine and re-enter the boot loader menu. Note: Don't accidentally boot any operating system or the data will be lost.</p>
+<p>La opzion <span class="menu">Enable debug syslog</span> tal menù <span class="menu">Debug menu</span> dal boot loader al rint persistent il regjistri di sisteme. Se la opzion <span class="menu">Save syslog from previous session during boot</span> e ven ativade intes opzions dal boot loader (come che e je la impostazion predefinide), tu cjatarâs il syslog de tô ultime session come <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
+Se no tu rivis a inviâ il sisteme par otignî il previous_syslog, tu âs di jentrâ tal menù dal boot loader tignint fracât <span class="key">MAIUSC</span> (o <span class="key">SPAZI</span> se tu inviis il sisteme midiant UEFI) intant che tu inviis il computer.<br />
+Tal <span class="menu">Debug menu</span> dal boot loader tu varessis di cjatâ lis vôs <span class="menu">Display syslog from previous session</span> e <span class="menu">Save syslog from previous session</span>. Il prin al mostre sul schermi il regjistri di sisteme, l'ultin ti permet di salvâlu come file su disc. Note che pal moment a son supuartâts pal salvament dal file dome i volums FAT32. Se tu desideris doprâ une clavute USB, ma tu le âs tacade masse tart e duncje no je stade ancjemò ricognossude, tu puedis tornâ a inviâ la machine e tornâ a jentrâ tal menù dal boot loader. Atenzion: No sta inviâ nissun sisteme operatîf o i dâts a laran pierdûts.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">Jessude su schermi dal debug</a></h3>
-<p><b>The on-screen debug output is useful only for debugging very specific issues and is known to have (timing) issues. Don't use it, if you don't have to.</b><br />
-This is only relevant when Haiku fails to boot on your machine and the <span class="menu">Debug syslog</span> option doesn't work for some reason. Before the Haiku boot logo appears, hold <span class="key">SHIFT</span> (or <span class="key">SPACE</span> when booting via UEFI) to enter the boot loader menu. Select <span class="menu">Select debug options</span>. Near the bottom, <span class="menu">Enable on screen debug output</span> will be listed. (Note: The other options could be enabled in an attempt to boot Haiku. If Haiku will boot only when one or more options are activated, be sure to mention which ones.)<br />
-Finally select <span class="menu">Return to main menu</span> and then <span class="menu">Continue booting</span>.<br />
-One or more pages of text will display on the screen, only the last few lines need to be included on your ticket. There's more information on the <a href="../../userguide/fur/bootloader.html">Boot Loader</a>.</p>
+<p><b>La jessude su schermi dal debug e je utile dome par fâ il debug di cualchi specific probleme e si sa che al à problemis (di temporizazion). No sta doprâlu, se no tu scugnis.</b><br />
+Chest al è impuartant cuant che Haiku nol rive a inviâsi te tô machine e la opzion <span class="menu">Debug syslog</span> no funzione par cualchi motîf. Prime che al vegni fûr il logo di inviament di Haiku, ten fracât <span class="key">MAIUSC</span> (o <span class="key">SPAZI</span> se tu inviis il sisteme midiant UEFI) par jentrâ tal menù dal boot loader. Selezione <span class="menu">Select debug options</span>. In bas al sarà listât <span class="menu">Enable on screen debug output</span>. (Note: a puedin jessi abilitadis altris opzions tal tentatîf di inviâ Haiku. Se Haiku si inviarà dome cuant che une o plui opzions a son ativadis, impensiti di nomenâ cualis.)<br />
+Intal ultin selezione <span class="menu">Return to main menu</span> e dopo <span class="menu">Continue booting</span>.<br />
+Une o plui pagjinis di test a vignaran visualizadis sul schermi, al covente includi dome lis ultimis riis sul to cartelin. Altris informazions a son su <a href="../../userguide/fur/bootloader.html">Il Boot Loader</a>.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="hardware" name="hardware">Erôrs dal hardware/driver</a></h2>
@@ -163,7 +162,7 @@ One or more pages of text will display on the screen, only the last few lines ne
 <tr><td class="onelinetop">- <span class="cli">listimage | grep drivers/</span></td><td> </td><td>Al liste ducj i drivers doprâts.</td></tr>
 <tr><td>- <span class="cli">usb_hid_report</span></td><td> </td><td>Tal câs di dispositîfs di input USB, zonte il file <span class="cli">/tmp/usb_hid_report_descriptor_*.bin</span> .</td></tr>
 <tr><td>- <span class="cli">ints</span></td><td> </td><td>Disponibil dome dentri dal <i>Kernel Debugging Land</i> (viôt parsore). Al mostre l'utilizazion dal interrupt. No'ndi varessin di sei masse di chei condividûts tra dispositîfs diferents.</td></tr>
-<tr><td colspan="3">- On screen debug output (a debug boot time option, see <a href="#onscreen">above</a>).</td></tr>
+<tr><td colspan="3">- Jessude su schermi dal debug (une opzion relative al debug che tu puedis ativâ al moment dal inviament, viôt <a href="#onscreen">parsore</a>).</td></tr>
 </table>
 
 <p>I prins cuantri comants a vegnin scrits intal Terminâl. Zonte un <span class="cli">&gt; output.txt</span> dopo di un comant, e al ven incanalât intun file di test clamât "<tt>output.txt</tt>" che tu puedis zontâ ae tô segnalazion di erôr o te e-mail.</p>

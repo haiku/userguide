@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009, Haiku. All rights reserved.
+ * Copyright 2009-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">本节的翻译还未完成。在未完成之前，所有的未完成部分都将使用英语原文。</div>
 
 <h2><img src="../../images/apps-images/charactermap-icon_64.png" alt="charactermap-icon_64.png" width="64" height="64" />字符映射表</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -70,11 +71,19 @@
 <tr><td>设置:</td><td></td><td><span class="path">~/config/settings/CharacterMap settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>字符映射表用于显示字体支持的所有字符的UTF-8编码。</p>
+<p>CharacterMap shows all characters of every Unicode block.</p>
+
 <img src="../images/apps-images/charactermap.png" alt="charactermap.png" />
-<p>在窗口左边，有一个标准化的分组和方便的筛选功能。
-而且，您也可以从 <span class="menu">View</span> 菜单中选择 <span class="menu">Show Private Blocks</span> 。 右边的文本框中显示了这些分组中的实际字符，而这些字符则属于 <span class="menu">Font</span> 菜单中指定的字体。在该文本框下，您可以调节字体的大小。再向下， 显示了鼠标指针所指向字符的十六进制，十进制，和UTF-8表示方法。</p>
+
+<p>To the left you have the standardized Unicode blocks, together with a handy filter function.<br />
+The <span class="menu">View</span> menu has an option to <span class="menu">Show private blocks</span>, which are areas that are untouched by the Unicode Consortium. If you activate <span class="menu">Only show blocks contained in font</span>, blocks not part of the current font are grayed out in the blocks list at the left and not shown in the list of characters on the right.</p>
+
+<p>The right shows the actual characters in these blocks, using the font specified in the <span class="menu">Font</span> menu. You can determine if a symbol is part of that font (it's drawn in black), or if the system supplies a fall-back symbol from some other font (then it's drawn with a gray color).<br />
+Below the symbols you can change the font size. And below that, the values of the character currently under the mouse pointer are displayed in hex, decimal and UTF-8 notation.</p>
+
 <p>您可以直接从字符映射表中拖拽字符到文本编辑器中，或者右键点击字符，然后选择 <span class="menu">Copy Character</span> (<span class="key">ALT</span> <span class="key">C</span>) 或 <span class="menu">Copy As Escaped Byte String</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">C</span>)，则结果为 <tt>€</tt> 或 <tt>\\xe2\\x82\\xac</tt> 。</p>
+
+<p>Clicking on a symbol shows a magnified view of it, click again to close.</p>
 
 </div>
 </div>

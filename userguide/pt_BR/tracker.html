@@ -152,8 +152,8 @@ Este filtro de autocompletar é definido nas <a href="#tracker-preferences.html"
 </ul>
 <div class="box-info">
 <p _translation_id="4341">Sometimes you just want to rearrange a few icons without doing a complete <span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>). In that case, you select these icons and start to drag them to their new location. Before you drop them there, keep <span class="key">ALT</span> pressed. This will align the icons to the invisible grid.</p>
-<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. Normally, that's the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p>
-</div>
+<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. That applies to the width of the labels as well: If a label gets truncated by the column width in <span class="menu">List view</span>, it'll be similarly truncated when switching to <span class="menu">Mini</span> and <span class="menu">Icon view</span>.<br />
+Normally, the first column is the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p></div>
 <p>O resto das funções é auto-explicativa, deixando as preferências do Rastreador.</p>
 
 <h3>
@@ -182,11 +182,12 @@ Este filtro de autocompletar é definido nas <a href="#tracker-preferences.html"
 <p>Como de costume, os comandos são bastante claros.</p>
 <ul>
 <li><p><span class="menu">Localizar...</span> - Procura um arquivo ou pasta. Veja o tópico <a href="queries.html">Consulta</a> para mais informações.</p></li>
-<li><p><span class="menu">Novo</span> - Cria uma nova pasta ou qualquer outro arquivo baseado em um <i>modelo</i>.
-<br /><br /></p>
+<li><p><span class="menu">New</span> - Create a new folder or any other file based on a template.
+</p>
 <img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
-<p>Escolhendo <span class="menu">Editar modelos...</span> abre a pasta <span class="path">/boot/home/configuração/settings/Tracker/Novos Modelos do Rastreador</span>. Criar um arquivo naquela pasta irá oferecer seu tipo de arquivo com o nome do arquivo e outros atributos como modelo no menu <span class="menu">Novo</span>.
-Neste exemplo, existe um arquivo "Texto" com o tipo de arquivo <tt>text/plain</tt>. Veja o tópico <a href="filetypes.html">Tipos de arquivo</a> para mais informações.</p></li>
+<p>Choosing <span class="menu">Edit templates…</span> at the bottom opens the folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Create a file or folder there and it will appear as a template in the <span class="menu">New</span> menu. The new file/folder created by the template will have its filetype, filename, contents, and all its other attributes. In case of a folder, it'll also have its window size/position and attribute column layout.</p>
+<p>In the screenshot above, you see the custom template folders "Email folder" and "Music folder". Both will create folders with those same custom overlay icons and have the relevant attributes already set.</p>
+<p>You can also sort your templates into custom submenus. Just choose <span class="menu">Add new submenu…</span> and a new special folder gets created in <span class="path">Tracker New Templates</span> that you then rename to fit its purpose. Copy your template files there to appear in the new submenu. The screenshot above shows the submenus "C   dev files" and "Office files".</p></li>
 <li><p><span class="menu">Abrir com...</span> - Um submenu oferece todos os aplicativos que podem lidar com este tipo de arquivo.
 <br /><br /></p>
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
@@ -205,7 +206,7 @@ Neste exemplo, existe um arquivo "Texto" com o tipo de arquivo <tt>text/plain</t
 <li><span class="menu">Attibutes</span>: Lists all extra file attributes with their value and type.</li>
 </ul></li>
 <li><p><span class="menu">Editar nome</span>, <span class="menu">Duplicar</span> e <span class="menu">Mover para a lixeira</span> - permite renomear ou duplicar uma arquivo ou colocar o arquivo selecionado na lixeira.</p></li>
-<li><p><span class="menu">Mover para</span>, <span class="menu">Copiar para</span> e <span class="menu">Criar vínculo</span> - permite mover, copiar ou vincular o(s) arquivo(s) selecionado(s) usando o método de navegação por submenu. Pressionar <span class="key">SHIFT</span> enquanto chama o menu oferece a opção para criar um vínculo relativo.</p></li>
+<li><p><span class="menu">Move to</span>, <span class="menu">Copy to</span> and <span class="menu">Create link</span> - lets you move, copy or link the selected file(s) using the submenu navigating method. Holding <span class="key">SHIFT</span> while invoking the menu offers the option to create a relative link. You recognize links by their dot-underlined icon label.</p></li>
 <li><p><span class="menu">Recortar</span>, <span class="menu">Copiar</span> e <span class="menu">Colar</span> - permite recortar, copiar e cloar arquivos usando a área de transferência. Ao pressionar <span class="key">SHIFT</span> enquanto chama o menu pode-se <span class="menu">Copiar/Recortar mais</span> arquivos, talvez de outra pasta que possa colar em outro lugar mais tarde. Também, enquanto pressiona <span class="key">SHIFT</span> pode-se colar os arquivos copiados na área de transferência como vínculos.</p></li>
 <li><p><span class="menu">Identificar</span> - irá farejar e definir o tipo dos arquivos se eles não tiverem um anterior, por exemplo, se transferiu um arquivo com <span class="cli">wget</span> o qual não define o tipo de arquivo por si mesmo. Pressionar <span class="key">SHIFT</span> enquanto chama o menu muda o item para <span class="menu">Forçar identificação</span> o qual identifica o tipo de arquivo e o corrige se o anterior for falso.</p></li>
 <li><p><span class="menu">Adicionais</span> - oferece todos os adicionais genéricos do Rastreador e aqueles que podem manipular o(s) arquivos(s) selecionaido(s). Veja o tópico <a href="tracker-add-ons.html">Adicionais do Rastreador</a> para mais informações.</p></li>

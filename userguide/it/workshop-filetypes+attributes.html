@@ -149,21 +149,21 @@ In ogni caso, andremo ad aggiungere al file un paio di attributi. È in questa f
 <ul>
 <li><p><i>Nome Attributo</i> - Appare, ad esempio, come colonna in alto nella finestra di Tracker.</p></li>
 <li><p><i>Nome Interno</i> - È utilizzato per indicizzare l'attributo.</p></li>
-<li><i>Tipo</i> - Definisce che tipo di valore può essere conservato dall'attributo e come può essere richiesto attraverso un'interrogazione.
+<li><i>Type</i> - Defines the value the attribute can hold and therefore how it can be queried.
     <ul>
-    <li><span class="menu">Stringa</span> per il semplice testo</li>
-    <li><span class="menu">Booleano</span> per dati binari: 0 oppure 1</li>
-    <li><span class="menu">Intero</span> per i numeri interi, si dividono in base ai valori rappresentabili:
+    <li><span class="menu">String</span> for normal text</li>
+    <li><span class="menu">Boolean</span> for binary data: 0 (false) or &gt;=1 (true)</li>
+    <li><span class="menu">Integer</span> for integer numbers with different ranges:
         <ul>
-        <li><span class="menu">8 bit</span>: ± 255</li>
-        <li><span class="menu">16 bit</span>: ± 65,535</li>
-        <li><span class="menu">32 bit</span>: ± 4,294,967,295</li>
-        <li><span class="menu">64 bit</span>: ± 18,446,744,073,709,551,615</li>
+        <li><span class="menu">8 bit</span>: -128 to 127</li>
+        <li><span class="menu">16 bit</span>: -32,768 to 32,767</li>
+        <li><span class="menu">32 bit</span>: -2,147,483,648 to 2,147,483,647</li>
+        <li><span class="menu">64 bit</span>: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</li>
         </ul>
     </li>
-    <li><span class="menu">Float</span> per i numeri a virgola mobile con precisione singola</li>
-    <li><span class="menu">Double</span> per i numeri a virgola mobile con precisione doppia</li>
-    <li><span class="menu">Time</span> per i formati di date e orari</li>
+    <li><span class="menu">Float</span> for floating-point numbers, single precision</li>
+    <li><span class="menu">Double</span> for floating-point numbers, double precision</li>
+    <li><span class="menu">Time</span> for time and date format</li>
     </ul>
 </li>
 </ul>

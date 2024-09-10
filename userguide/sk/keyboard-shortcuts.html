@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -81,7 +81,8 @@ Používateľská príručka popisuje predvolenú konfiguráciu s príkazovým k
 <tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span> / <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Naviguje po riadkoch/stĺpcoch dostupných pracovných plôch. Pridaním <span class="key">SHIFT</span> sa presunie aj aktívne okno.</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>Držaním <span class="key">OPT</span> počas ťahania okna v blízkosti karty alebo okraja iného okna ho naskladá alebo dlaždicovo rozloží (pozri kapitolu <a href="gui.html#stack-tile">Používateľské rozhranie Haiku</a>).</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Dokola prepína medzi otvorenými oknami na aktuálnej pracovnej ploche.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>Cycles through stack and tiled windows.</td></tr>
+<tr><td><span class="key"> OPT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Dokola prepína medzi otvorenými oknami na aktuálnej pracovnej ploche.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + left mouse</td><td></td><td>Držaním ľavého tlačidla myši a ťahaním presúvate okno  (pozri kapitolu <a href="gui.html#move-resize">Používateľské rozhranie Haiku</a>).</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + right mouse</td><td></td><td>Držaním pravého tlačidla myši a ťahaním meníte veľkosť okna  (pozri kapitolu <a href="gui.html#move-resize">Používateľské rozhranie Haiku</a>).</td></tr>
 <tr><td> </td></tr>
@@ -143,14 +144,14 @@ Používateľská príručka popisuje predvolenú konfiguráciu s príkazovým k
 <tr><td><span class="key">ALT</span> + left click</td><td style="width:15px;"></td><td>Left-clicking on a path or URL while holding <span class="key">ALT</span> opens it in the preferred application, e.g. folders in Tracker, pictures in ShowImage. You can limit the selected path by additionally holding <span class="key">SHIFT</span>.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td></td><td>Otvorí nový Terminál v ďalšom okne.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td></td><td>Otvorí nový Terminál v ďalšej karte.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>Prepne na zodpovedajúcu kartu.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">TAB</span></td><td></td><td>Prepne na ďalšie okno Terminálu.</td></tr>
-<tr><td><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Prepne na kartu vľavo/vpravo.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>Prepne na zodpovedajúcu kartu.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Prepne na kartu vľavo/vpravo.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Presunie aktuálnu kartu doľava/doprava.</td></tr>
+<tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Posunie výstup Terminálu o jeden riadok hore/dole.</td></tr>
+<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Posunie výstup Terminálu o jednu stranu hore/dole.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td></td><td>Zväčší/Zmenší veľkosť písma.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Zapne/vypne celoobrazovkový režim.</td></tr>
-<tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Posunie výstup Terminálu o jeden riadok hore/dole.</td></tr>
-<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Posunie výstup Terminálu o jednu stranu hore/dole.</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>Doplňovanie. Po zadaní niekoľkých znakov stlačte <span class="key">TAB</span> raz, čím sa automaticky doplní názov súboru alebo cesta. Ak existuje viac ako jedna zhoda, doplňovanie sa skončí vtedy, keď sa názvy začnú líšiť a vy musíte doplniť niekoľko ďalších znakov na rozlíšenie. Tiež môžete stlačiť <span class="key">TAB</span> dvakrát, čím získate zoznam všetkých zhôd.</td></tr>
 <tr><td><span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Posúvanie hore alebo dole v histórii všetkých predtým zadaných príkazov.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">R</span></td><td></td><td>História príkazov shellu Bash. Všetky zadané príkazy sa ukladajú do súboru <span class="path">~/config/settings/bash_history</span>. Stlačte <span class="key">CTRL</span> <span class="key">R</span> a začnite zadávať príkaz, čím vám bude poskytnutá prvá zhoda z histórie Bash. Ďalej stláčajte <span class="key">CTRL</span> <span class="key">R</span> až kým nenájdete želaný príkaz a vykonajte ho stlačením <span class="key">ENTER</span>.</td></tr>

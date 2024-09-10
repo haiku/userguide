@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2023, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,17 +62,16 @@
 
 <div id="content">
 <div>
-<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Index</td></tr>
+<tr class="heading"><td>Hakemisto</td></tr>
 <tr class="index"><td>
-                <a href="#windows-tabs">Windows and tabs</a><br />
-                <a href="#settings">Settings</a><br />
-                <a href="#colors">Colors</a><br />
-                <a href="#shortcuts">Keyboard shortcuts</a><br />
-                <a href="#hints">Hints for working with the Terminal</a><br />
-                <a href="#customization">Bash customization</a></td></tr>
+                <a href="#windows-tabs">Ikkunat ja välilehdet</a><br />
+                <a href="#settings">Asetukset</a><br />
+                <a href="#colors">Värit</a><br />
+                <a href="#shortcuts">Pikanäppäimet</a><br />
+                <a href="#hints">Vihjeitä pääteikkunatyöskentelyyn</a><br />
+                <a href="#customization">Bash-räätälöinti</a></td></tr>
 </table>
 
 <h2><img src="../../images/apps-images/terminal-icon_64.png" alt="terminal-icon_64.png" width="64" height="64" />Pääteikkuna</h2>
@@ -84,13 +83,13 @@
 <span class="path">~/config/settings/inputrc</span> - lisää/korvaa oletukset tiedostossa <span class="path">/boot/system/settings/etc/inputrc</span></td></tr>
 </table>
 <p><br /></p>
-<p>Pääteikkuna on Haikun käyttöliittymä bash-komentotulkkiin, the Bourne Again Shell.</p>
+<p>Pääteikkuna on Haikun käyttöliittymä komentotulkkiin, oletuksena on bash, the Bourne Again Shell.</p>
 <p>Komentotulkin alla toimimisessa viittaan aiheen <a href="../bash-scripting.html">Skriptaus</a> muutamien verkko-oppituntien linkkeihin ja kannattaa myös katsoa <a href="cli-apps.html">Haikun komentorivisovellukset</a>. Tässä keskitymme itse Pääteikkuna-sovellukseen.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="windows-tabs" name="windows-tabs">Ikkunat ja välilehdet</a></h2>
-<p>Voit avata niin monta Pääteikkunaa kuin tarvitset, joko jokainen omana ikkunana käynnistämällä Pääteikkuna tai näppäimillä <span class="key">ALT</span> <span class="key">N</span> jo käynnissä olevasta Pääteikkunasta. Tai voit käyttää Pääteikkunan välilehtinäkymää ja avata lisää välilehtiä näppäimillä <span class="key">ALT</span> <span class="key">T</span>.</p>
+<p>Voit avata niin monta Pääteikkunaa kuin tarvitset, joko jokainen omana ikkunana käynnistämällä Pääteikkunia tai näppäimillä <span class="key">ALT/OPTION</span> <span class="key">N</span> jo käynnissä olevasta Pääteikkunasta. Tai voit käyttää Pääteikkunan välilehtinäkymää ja avata lisää välilehtiä näppäimillä <span class="key">ALT/OPTION</span> <span class="key">T</span>. Voit vaihtaa tiettyyn välilehteen napauttamalla <span class="key">ALT/OPTION</span>-näppäintä ja välilehden numeroa, esim.: <span class="key">ALT/OPTION</span>- <span class="key">2</span>-näppäimillä voit vaihtaa toiseen välilehteen, <span class="key">ALT/OPTION</span>- <span class="key">4</span>-näppäimillä neljänteen välilehteen jne.</p>
 <img src="../images/apps-images/terminal.png" alt="terminal.png" />
 <br />
 <p>Kaksoisnapsautus välilehtipalkin tyhjään osaan avaa uuden välilehden; kaksoisnapsautus välilehteen avaa valintaikkunan otsikon uudelleennimeämiseksi. Kun siirrät hiiren osoittimen tekstikentän yläpuolelle niin käytettävissä on useita työkaluvihjeessä selitettyjä %-suunniteltuja muuttujia.<br />
@@ -98,15 +97,15 @@ Välilehti näyttää oletuksena <tt>%1d: %p</tt> nykyisen kansion ja merkillä 
 Valikon <span class="menu">Asetukset | Ikkunaotsikko...</span> avulla Pääteikkunaotsikkoa voidaan muokata samalla tavoin.</p>
 <p>Välilehden napsauttaminen hiiren kakkospainikkeella näyttää asiayhteysvalikon <span class="menu">Sulje välilehti</span>, <span class="menu">Sulje muut välilehdet</span> tai, kuten kaksoisnapsautuksessa, <span class="menu">Muokkaa välilehtiotsikkoa...</span>.</p>
 <p>Pääteikkunan kokoa voidaan muuttaa kuten kaikkia muitakin ikkunoita tai voit käyttää uudelleenasetuksia valikosta <span class="menu">Asetukset | Ikkunakoko</span>. Näppäimet <span class="key">ALT</span> <span class="key">ENTER</span> vaihtavat kokonäyttötilaan.</p>
-<p>All the settings you change directly through the <span class="menu">Settings</span> menu, like <span class="menu">Window title</span>, <span class="menu">Window size</span>, <span class="menu">Text encoding</span> or <span class="menu">Font size</span> are only kept for the current session. If you want to make permanent changes, you have to either invoke <span class="menu">Save as default</span> or apply them in the <span class="menu">Settings…</span> panel.</p>
+<p>Kaikki asetukset, jotka muutat suoraan <span class="menu">Asetukset</span>-valikon kautta, kuten <span class="menu">Ikkunaotsikko</span>, <span class="menu">Ikkunakoko</span>, <span class="menu">Tekstikoodaus</span> tai <span class="menu">Kirjasinkoko</span> säilytetään vain nykyisessä istunnossa. Jos haluat tehdä pysyvät muutokset, sinun on joko kutsuttava <span class="menu">Tallenna oletuksena</span> tai toteuttaa ne <span class="menu">Asetukset...</span>-paneelissa.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="settings" name="settings">Asetukset</a></h2>
 <p><span class="menu">Asetukset | Asetukset...</span> avaa paneelin Pääteikkunan vakioasetusten asettamiseksi.</p>
 <img src="../images/apps-images/terminal-settings.png" alt="terminal-settings.png" />
 <br />
-<p>Most of the offered settings speak for themselves. Not entirely obvious though, the font size is set in the submenu of the <span class="menu">Font</span> popup menu.<br />
-Hover your mouse over the "formulas" for naming tab and window titles to get tooltips for the available variables.</p>
+<p>Useimmat tarjotut asetukset selittävät itsensä. Ei ole kuitenkaan täysin ilmeistä, että kirjasinkoko asetetaan <span class="menu">Kirjasin</span>-ponnahdusvalikon alivalikossa.<br />
+Välilehden ja ikkunaotsikon nimeämiseksi liikuta hiiren kohdistinta Välilehtiotsikko- ja Ikkunaotsikko-"kaavojen" päällä, jolloin saat työkaluvihjeet saatavilla olevista muuttujista.</p>
 <p>Sitten seuraa lisää valitsimia: sinulla voi olla <span class="menu">Vilkkuva kohdistin</span> ja valitse <span class="menu">Salli lihavoitu teksti</span><br /><span class="menu">Käytä vasenta Option-painiketta Meta-näppäimenä</span> jos työskentelet tiettyjen laajennetun ASCII-kirjaimiston merkistön osuutta käyttävien UNIX-ohjelmistojen (kuten esimerkiksi GNU Emacs ja GNU readline-kirjasto) kanssa.<br /> 
 Aktivoi valintaruutu <span class="menu">Vahvista poistuminen, jos ohjelmia on käytössä</span> ja sinua varoitetaan, kun yrität sulkea Pääteikkunan, jossa suoritetaan sovellusta.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
@@ -117,14 +116,14 @@ Aktivoi valintaruutu <span class="menu">Vahvista poistuminen, jos ohjelmia on k�
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="colors" name="colors">Colors</a></h2>
-<p><span class="menu">Settings | Colors…</span> opens a panel to configure the colors used by Terminal.</p>
+<a id="colors" name="colors">Värit</a></h2>
+<p><span class="menu">Asetukset | Värit…</span> avaa paneelin Pääteikkunan käyttämien värien asettamiseksi.</p>
 <img src="../images/apps-images/terminal-colors.png" alt="terminal-colors.png" />
-<p>From the top menu, you can choose a pre-defined <span class="menu">Color scheme</span> like <span class="menu">Midnight</span> or <span class="menu">Retro</span> or create a <span class="menu">Custom</span> one by selecting the color you want to change (<span class="menu">Text</span>, <span class="menu">Background</span>, <span class="menu">Cursor</span> etc.) and then use the color picker below.</p>
-<p>You can also configure "ANSI colors", which are the first 8 named colors in the color palette of terminal applications. You choose a color, for example "<i>ANSI red color</i>", and then adjust it with the color picker below. The effect is visible live in the open Terminal and in the preview below. The exact colors used in various places are documented at <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
+<p>Ylimpänä valikosta voit valita ennakkoon määritellyn <span class="menu">Värikaavio</span>n kuten <span class="menu">Midnight</span>in tai <span class="menu">Retro</span>n tai luoda <span class="menu">Oma</span>n valitsemalla värin, jonka haluat vaihtaa (<span class="menu">Teksti</span>, <span class="menu">Tausta</span>, <span class="menu">Kohdistin</span> jne.) ja käytä sitten väripoimijaa alla.</p>
+<p>Voit myös asettaa "ANSI-värit", jotka ovat ensimmäiset 8 nimettyä väriä pääteikkunasovellusten väripaletissa. Voit valita värin, esimerkiksi "<i>ANSI-punainen väri</i>", ja sen jälkeen säädät sitä alla olevalla väripoimijalla. Vaikutus on näkyvä kun avaat väriä käyttävän pääteikkunasovelluksen ja alla olevassa esikatselussa. Eri paikoissa käytetyt tarkat värit on dokumentoitu sivustolla <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td class="onelinetop"><span class="button">Tallenna tiedostoon...</span></td><td width="10"> </td><td>let's you save your custom color scheme under a name that will appear in the <span class="menu">Color scheme</span> menu at the top, if you put it in the default location <span class="path">~/config/settings/Terminal/Theme</span>.</td></tr>
-<tr><td><span class="button">Palauta</span></td><td> </td><td>brings back the colors that were active when you opened the colors panel.</td></tr>
+<tr><td class="onelinetop"><span class="button">Tallenna tiedostoon...</span></td><td width="10"> </td><td>tallenna räätälöidyt värikaaviosi sen nimen alle, joka esiintyy ylimpänä <span class="menu">Värikaavio</span>-valikossa, jos laitat sen oletussijaintiin <span class="path">~/config/settings/Terminal/Themes</span> (tai sen järjestelmävastaavaan <span class="path">/boot/system/settings/Terminal/Themes</span>).</td></tr>
+<tr><td><span class="button">Palauta</span></td><td> </td><td>palauttaa takaisin värit, jotka olivat aktiivisia, kun avasit väripaneelin.</td></tr>
 <tr><td><span class="button">Oletukset</span></td><td> </td><td>nollaa kaikki oletusarvoihin.</td></tr>
 </table>
 

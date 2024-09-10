@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -221,8 +221,11 @@ Selected points are deleted by pressing <span class="key">DEL</span> or by click
 
 <p>Shapes lie on top of each other, each is on its own layer, if you will. To reorder them you drag &amp; drop their entry to a different position in the list.</p>
 
-<h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Shape Menu</a></h4>
-<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape. Then, there is:</p>
+<h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Shape menu</a></h4>
+<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape.</p>
+<p>With <span class="menu">Add reference image</span> you can create a special kind of shape. It lets you load any bitmap image (e.g. PNG or JPEG) to use as a background while working on the icon. Very handy when creating a vector version of an existing bitmap icon, for example. The reference image can be manipulated like any other shape (moved, rotated, resized), but will not be part of the icon when saved as HVIF.</p>
+
+<p>Then there is:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Reset Transformation</span></td><td style="width:15px;"></td><td>Reverts all the move, resize and rotate transformations you have applied to the shape.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Freeze Transformation</span></td><td></td><td>When you transform a shape, its assigned path(s) stay in their original position. This may be intended; maybe more than one shape is using that path, maybe you intentionally used <span class="menu">Options | Snap to grid</span> to set the points at precise pixel borders.<br />
@@ -236,6 +239,7 @@ If not, "Freeze transformation" will apply the current shape transformation to t
 <tr><td><span class="menu">Min LOD</span></td><td></td><td>Livello minimo di dettaglio</td></tr>
 <tr><td><span class="menu">Max LOD</span></td><td></td><td>Livello massimo di dettaglio</td></tr>
 </table>
+<p>Reference images have instead an <span class="menu">Alpha</span> value to set their transparency (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Livello di Dettaglio (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -285,17 +289,20 @@ Of course you can move these indicators to change the gradient to your liking. Y
 <a id="i-o-m-transformer" name="i-o-m-transformer">Trasformatori</a></h3>
 <p>A shape can have Transformers which change its appearance. The effects, however, are more subtle than a truck turning into a battle robot…</p>
 
-<h4><a id="i-o-m-transformer-menu" name="i-o-m-transformer-menu">Transformer Add Menu</a></h4>
+<h4><a id="i-o-m-transformer-menu" name="i-o-m-transformer-menu">Transformer Add menu</a></h4>
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Contour</span></td><td></td><td>Adds an outline to a shape.</td></tr>
 <tr><td><span class="menu">Stroke</span></td><td></td><td>Strokes the path of a shape instead of filling it with a style.</td></tr>
+<tr><td><span class="menu">Perspective</span></td><td></td><td>Allows to individually move the four corners of the shape to create the effect of perspective.</td></tr>
+
 </table>
 
 <p>Depending on the kind of Transformer, you'll get a different set of properties.</p>
 
-<h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Transformer Properties</a></h4>
-<p>Besides a <span class="menu">Name</span> and the actual <span class="menu">Width</span> for the transformer, the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
+<h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Transformer properties</a></h4>
+<p>Besides a <span class="menu">Name</span> the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Width</span></td><td></td><td>The width of Stroke or Contour.</td></tr>
 <tr><td><span class="menu">Caps</span></td><td style="width:15px;"></td><td><i>Stroke only</i>. Defines the end caps of a line: <span class="menu">Butt</span>, <span class="menu">Square</span> or <span class="menu">Round</span>.</td></tr>
 <tr><td><span class="menu">Detect Orient.</span></td><td></td><td><i>Contour only</i>. Determines if the contour is to the inside or outside the path.</td></tr>
 <tr><td><span class="menu">Joins</span></td><td></td><td>Defines how lines are joined at a point: <span class="menu">Miter</span>, <span class="menu">Round</span> or <span class="menu">Bevel</span>.</td></tr>

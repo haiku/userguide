@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -86,6 +86,7 @@
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>Just select a destination for the backup file "<tt>MBR</tt>" or leave the default path. After clicking <span class="button">Next</span> you'll get a confirmation if the backup was successful.</p>
+<div class="box-info">Be aware that the "<span class="path">/boot</span>" in that path is the install media (e.g. USB stick). Makes sense if something goes wrong and you need to revert immediately. For a long term backup, you should save the MBR on your new Haiku disk as well, because likely as not, you've already formatted and used your install USB stick for other things in the meantime...</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">Configuring the boot menu</a></h2>
@@ -99,7 +100,16 @@
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>Before the boot menu is written to the MBR, you'll get a summary of your configuration and then one last chance to abort the operation. Don't worry though, as long as you keep the MBR backup safe, you can easily revert the changes. Should things get thoroughly messed up, you can always boot from a Haiku install CD or USB stick and write back the MBR backup with BootManager.</p>
-
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">Restoring the backup of the Master Boot Record (MBR)</a></h2>
+<p>It's currently not possible to uninstall the boot menu with the BootManager application. There is a workaround however: You can use the <span class="cli">dd</span> command in Terminal to restore the backup of the MBR.</p>
+<div class="box-warning"><span class="cli">dd</span> can be a very destructive tool.<br />
+Be very careful and check especially the device path parameter!</div>
+<p>The <span class="cli">dd</span> commandline is something like this:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>The input parameter ("<tt>if</tt>") is the path to the backup of the MBR.<br />
+The output parameter (<tt>"of"</tt>) is the path to the raw disk the MBR will be written to. You find all devices and their paths in the <a href="drivesetup.html">DriveSetup</a> application.</p>
 </div>
 </div>
 

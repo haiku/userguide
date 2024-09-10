@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -220,7 +220,10 @@ Les points sléectionnés peuvent être supprimés en tapant <span class="key">S
 <p>Les formes sont placées l’une sur l’autre, sur leur propre calque en quelque sorte. Pour les réordonnez, effectuez des glisser-déposer dans leur liste.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Menu Shape (Forme)</a></h4>
-<p>Le menu <span class="menu">Shape</span> permet comme mentionné d’ajouter une forme vide (<span class="menu">Add Empty</span>), avec un chemin, style, chemin et style (<span class="menu">Add With Path/Style/Path&amp;Style</span>), de dupliquer (<span class="menu">Duplicate</span>) ou de supprimer (<span class="menu">Remove</span>) une forme. De plus, il contient :</p>
+<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape.</p>
+<p>With <span class="menu">Add reference image</span> you can create a special kind of shape. It lets you load any bitmap image (e.g. PNG or JPEG) to use as a background while working on the icon. Very handy when creating a vector version of an existing bitmap icon, for example. The reference image can be manipulated like any other shape (moved, rotated, resized), but will not be part of the icon when saved as HVIF.</p>
+
+<p>Then there is:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Reset Transformation</span></td><td style="width:15px;"></td><td>Annule toutes les opérations (déplacement, redimensionnement, rotation) que vous avez appliqué à la forme.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Freeze Transformation</span></td><td></td><td>Lorsque vous transformez une forme, les chemins associés restent à leur position d’origine. Ceci peut être utile : Le chemin peut être utilisé par plus d’une forme, ou peut-être que vous avez utilisé <span class="menu">Options | Snap to Grid</span> pour placer les points sur des bordures de pixels.<br />
@@ -234,6 +237,7 @@ Dans le cas contraire, « Freeze Transformation » appliquera la transformatio
 <tr><td><span class="menu">Min LOD</span></td><td></td><td>Niveau de détail minimum</td></tr>
 <tr><td><span class="menu">Max LOD</span></td><td></td><td>Niveau de détail maximum</td></tr>
 </table>
+<p>Reference images have instead an <span class="menu">Alpha</span> value to set their transparency (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Niveau de détail (Level of Detail, LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -287,13 +291,16 @@ Vous pouvez bien sûr déplacer ces indicateurs pour changer l’apparence du d�
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Contour</span></td><td></td><td>Ajoute une bordure à une forme.</td></tr>
 <tr><td><span class="menu">Stroke</span></td><td></td><td>Dessine le chemin d’une forme au lieu de le remplir avec un style.</td></tr>
+<tr><td><span class="menu">Perspective</span></td><td></td><td>Allows to individually move the four corners of the shape to create the effect of perspective.</td></tr>
+
 </table>
 
 <p>Suivant la transformation que vous utilisez, vous pourrez définir différentes propriétés.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Propriétés des transformations</a></h4>
-<p>En plus du nom (<span class="menu">Name</span>) et de la largeur (<span class="menu">Width</span>) utilisée par la transformation, la zone des propriétés permet de définir ces options (avec quelques variantes suivant la transformation) :</p>
+<p>Besides a <span class="menu">Name</span> the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Width</span></td><td></td><td>The width of Stroke or Contour.</td></tr>
 <tr><td><span class="menu">Caps</span></td><td style="width:15px;"></td><td><i>Seulement pour « Stroke »</i>. Définit la forme des extrémités de ligne : <span class="menu">Butt</span> (pointe), <span class="menu">Square</span> (carré) ou <span class="menu">Round</span> (arrondi).</td></tr>
 <tr><td><span class="menu">Detect Orient.</span></td><td></td><td><i>Seulement pour « Contour »</i>. Détermine si la bordure est à l’intérieur ou l’extérieur du chemin.</td></tr>
 <tr><td><span class="menu">Joins</span></td><td></td><td>Indique comment les lignes sont jointes à un point : <span class="menu">Miter</span> (en biseau), <span class="menu">Round</span> (arrondi) ou <span class="menu">Bevel</span> (pente).</td></tr>

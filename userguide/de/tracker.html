@@ -153,7 +153,8 @@ Dieses "type-ahead"-Filtern wird in den <a href="#tracker-preferences.html">Trac
 </ul>
 <div class="box-info">
 <p _translation_id="4341">Wenn man nicht alle Icons mittels <span class="menu">Icons ausrichten</span> (<span class="key">ALT</span> <span class="key">K</span>) neu ausrichten möchte, sondern nur einige, dann kann man diese markieren und sie bei gedrückter <span class="key">ALT</span>-Taste verschieben. Sie werden dann am Raster ausgerichtet.</p>
-<p>Die erste Spalte in der <span class="menu">Listen-Ansicht</span> bestimmt die Icon-Beschriftung der <span class="menu">Mini</span> und <span class="menu">Icon-Ansicht</span>. Normalerweise ist das der Dateiname, man kann aber genauso gut kurz in die <span class="menu">Listen-Ansicht</span> wechseln, die <span class="menu">Größe</span> Spalte ganz nach links ziehen und schon werden alle Icons mit der Dateigröße beschriftet, wenn man zurück in die <span class="menu">Icon-Ansicht</span> wechselt. Klasse!</p>
+<p>Die erste Spalte der <span class="menu">Listen-Ansicht</span> bestimmt die Icon-Beschriftung in der <span class="menu">Mini--</span> und <span class="menu">Icon-Ansicht</span>. Dies gilt auch für die Breite der Beschriftungen: Wird eine Beschriftung durch die Spaltenbreite in der <span class="menu">Listen-Ansicht</span> beschnitten, erscheint sie ebenso beschnitten in der <span class="menu">Mini-</span> und <span class="menu">Icon-Ansicht</span>.<br />
+Normalerweise enthält die erste Spalte den Dateinamen, man kann aber genauso gut kurz in die <span class="menu">Listen-Ansicht</span> wechseln, die <span class="menu">Größe</span> Spalte ganz nach links ziehen und schon werden alle Icons mit der Dateigröße beschriftet, wenn man zurück in die <span class="menu">Icon-Ansicht</span> wechselt. Klasse!</p>
 </div>
 <p>Die restlichen Unterpunkte sind hinreichend selbsterklärend. Genauer soll jedoch auf den Punkt "Einstellungen" eingegangen werden:</p>
 
@@ -182,11 +183,13 @@ Dieses "type-ahead"-Filtern wird in den <a href="#tracker-preferences.html">Trac
 <p>Die Menüpunkte sind im Großen und Ganzen selbsterklärend.</p>
 <ul>
 <li><p><span class="menu">Suchen...</span> - Suche nach einer Datei oder einem Ordner (siehe hierzu näheres unter: <a href="queries.html">Query</a>).</p></li>
-<li><p><span class="menu">Neu</span> - Erstellt einen neuen Ordner oder eine neue Datei basierend auf einer Vorlage.
+<li><p><span class="menu">Neu</span> - Erstellt einen neuen Ordner oder Datei basierend auf einer Vorlage.
 <br /><br />
 <img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
 </p>
-<p>Wählt man <span class="menu">Vorlagen bearbeiten...</span> aus, öffnet sich der Ordner <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Wird in diesem Verzeichnis eine Datei angelegt, wird diese - zusammen mit ihrem Dateityp und sämtlichen Attributen - als Vorlage im Menü <span class="menu">Neu</span> angezeigt. In dem Beispiel ist das die Datei "Text" mit dem Dateityp <tt>text/plain</tt>. Näher wird darauf unter <a href="filetypes.html"><acronym title="Filetypes">Dateitypen</acronym></a> eingegangen.</p></li>
+<p><span class="menu">Vorlagen bearbeiten...</span> öffnet den Ordner <span class="path"><acronym title="/boot/home/config/settings/Tracker/Tracker New Templates">/boot/home/config/settings/Tracker/Trackers 'Neu' Vorlagen</acronym></span>. Legt man hier Dateien oder Ordner an, erscheinen sie als Vorlagen im <span class="menu">Neu</span> Menü. Aus diesen Vorlagen erstellte Dateien/Ordner haben deren Dateityp, Name, Inhalt und all ihre Attribute. Handelt es sich um einen Ordner, erbt man auch dessen Fenstergröße und -position und Attributspalten-Anordnung.</p>
+<p>Im obigen Screenshot sieht man die selbst erstellten Vorlageordner "Email Ordner" und "Musik Ordner". Beide erzeugen Ordner mit den selben geänderten Icons und den entsprechend gesetzten Attributspalten.</p>
+<p>Vorlagen lassen sich auch in eigene Untermenüs sortieren. <span class="menu">Neues Untermenü erstellen…</span> erzeugt einen speziellen Ordner in <span class="path"><acronym title="Tracker New Templates">Trackers 'Neu' Vorlagen</acronym></span>, den man anschließend passend umbenennt. Hierhin kopierte Vorlagen erscheinen im neuen Untermenü. Der obige Screenshot zeigt die Untermenüs "C++ Entwicklung" und "Office Dateien".</p></li>
 <li><p><span class="menu">Öffnen mit...</span> - Ein Untermenü mit allen Anwendungen, die diese Datei - besser: diesen Dateityp - öffen können.
 <br /><br />
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
@@ -195,17 +198,17 @@ Dieses "type-ahead"-Filtern wird in den <a href="#tracker-preferences.html">Trac
 <br /><br />
 <img src="images/tracker-images/open-with-preferred.png" alt="open-with-preferred" />
 <p>Hier werden nochmals alle Programme aufgelistet, die bereits im Untermenü zu sehen waren, jedoch mit zusätzlichen Informationen. Wenn man ein Programm auswählt und auf <span class="button">Öffnen und zur Bevorzugten machen</span> klickt, kann man gleichzeitig die bevorzugte Anwendung für diesen Dateityp, hier <tt>text/plain</tt>, setzen.</p></li>
-<li><span class="menu">Datei-Info</span>
+<li><span class="menu">Informationen</span>
 <p>Hier werden Informationen zur ausgewählten Datei gezeigt. Hier können Dateirechte geändert werden und der Dateiname, indem man auf ihn doppelklickt.</p>
 <img src="images/tracker-images/get-info.png" alt="get-info" />
 <p>Das Panel besteht aus drei Reitern:</p>
 <ul>
-<li><span class="menu">Information</span>: Zeigt Standard-Daten wie Größe, Datum der Erstellung/Veränderung, Dateiart und Speicherort an. Klickt man auf den Pfad des Ortes, öffnet sich der Ordner in der sich die Datei befindet. Das <span class="menu">Wird geöffnet mit</span> Menü bestimmt, mit welcher Anwendung diese bestimmte Datei geöffnet wird.</li>
+<li><span class="menu">Informationen</span>: Zeigt Standard-Daten wie Größe, Datum der Erstellung/Veränderung, Dateiart und Speicherort an. Klickt man auf den Pfad des Ortes, öffnet sich der Ordner in der sich die Datei befindet. Das <span class="menu">Wird geöffnet mit</span> Menü bestimmt, mit welcher Anwendung diese bestimmte Datei geöffnet wird.</li>
 <li><span class="menu">Berechtigungen</span>: Hier kann man 'Besitzer', 'Gruppe' und 'Andere' Dateirechte ändern.</li>
 <li><span class="menu">Attibute</span>: Listet alle extra Dateiattribute mitsamt Wert und Typ auf.</li>
 </ul></li>
 <li><p><span class="menu">Umbenennen</span>, <span class="menu">Duplizieren</span> und <span class="menu">In Papierkorb verschieben</span> - Hiermit wird die Datei umbenannt, dupliziert oder in den Papierkorb verschoben.</p></li>
-<li><p><span class="menu">Verschieben nach</span>, <span class="menu">Kopieren nach</span> and <span class="menu">Verknüpfung erstellen</span> - Über die Navigation durch Untermenüs wird die Datei zum Ziel verschoben, kopiert oder dort ein Verweis zu der Datei erzeugt. Wenn man gleichzeitig <span class="key">SHIFT</span> drück, kann man einen relativen Verweis anlegen.</p></li>
+<li><p><span class="menu">Verschieben nach</span>, <span class="menu">Kopieren nach</span> and <span class="menu">Verknüpfung erstellen</span> - Über die Navigation durch Untermenüs wird die Datei zum Ziel verschoben, kopiert oder dort ein Verweis zu der Datei erzeugt. Wird dabei zusätzlich <span class="key">SHIFT</span> gehalten, wird eine relative Verknüpfung angelegt. Verknüpfungen erkennt man an der gepunkteten Linie unter der Icon-Beschriftung.</p></li>
 <li><p><span class="menu">Ausschneiden</span>, <span class="menu">Kopieren</span> und <span class="menu">Einfügen</span> - Die Datei wird mittels Zwischenablage ausgeschnitten, kopiert oder eingefügt. Wenn beim Aufrufen dieses Menüpunktes gleichzeitig <span class="key">SHIFT</span> gedrückt wird, können per <span class="menu">Mehr kopieren/ausschneiden</span> mehrere Dateien in die Zwischenablage kopiert/ausgeschnitten werden. Beim Drücken von <span class="key">SHIFT</span> wird die Datei bei der entsprechenden Auswahl nicht eingefügt, sondern lediglich ein Verweis auf sie.</p></li>
 <li><p><span class="menu">Identifizieren</span> - Hiermit wird der Dateityp einer Datei festgestellt, wenn sie keinen Dateityp hat. Dies ist beispielsweise der Fall, wenn eine Datei mittels <span class="cli">wget</span> in das Dateisystem kopierten wird. Sie erhält dann keinen Dateityp. Hält man <span class="key">SHIFT</span> beim Aufruf des Kontextmenüs gedrückt, ändert sich dieser Eintrag zu <span class="menu">Identifizierung erzwingen</span>. Dann wird der Dateityp nochmals erkannt und gesetzt, auch wenn schon eine Zuordnung besteht.</p></li>
 <li><p><span class="menu">Add-ons</span> - Öffnet ein Untermenü mit allen <a href="tracker-add-ons.html">Tracker Add-ons</a>, die für diesen Dateityp angewendet werden können.</p></li>

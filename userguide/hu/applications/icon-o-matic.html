@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -220,7 +220,10 @@ A kijelölt pontok a <span class="key">DEL</span> lenyomásával törölhetőek 
 <p>Az alakzatok egymás felett helyezkednek el, mindegyik egy külön rétegen. Hogy változtassunk a régetek sorrendjén, a listában a régetegeket másik pozícióba kell húzni.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Alakzat menü</a></h4>
-<p>Az <span class="menu">Alakzat</span> menü az alábbi lehetőségeket nyújtja: <span class="menu">Hozzáadás, Hozzáadás útvonallal, Hozzáadás stílussal, Hozzáadás útvonallal és stílussal, Megkettőzés</span> és <span class="menu">Eltávolítás</span>. Továbbá:</p>
+<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape.</p>
+<p>With <span class="menu">Add reference image</span> you can create a special kind of shape. It lets you load any bitmap image (e.g. PNG or JPEG) to use as a background while working on the icon. Very handy when creating a vector version of an existing bitmap icon, for example. The reference image can be manipulated like any other shape (moved, rotated, resized), but will not be part of the icon when saved as HVIF.</p>
+
+<p>Then there is:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Átalakítások visszaállítása</span></td><td style="width:15px;"></td><td>Az alakzaton alkalmazott összes mozgatás, méretezés és forgatás visszavonása.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Átalakítás rögzítése</span></td><td></td><td>Egy alakzat átalakításakor a hozzá rendelt útvonal(ak) eredeti pozíciója megmarad. Ha több alakzat is használja ugyan azt az útvonalat, akkor válasszuk a <span class="menu">Beállítások | Rácshoz illesztés</span> menüt, hogy pontosan megadjuk a pontokat.<br />
@@ -234,6 +237,7 @@ Ha nem, akkor az "Átalakítás rögzítése" a jelenlegi alakzathoz rendelt út
 <tr><td><span class="menu">Min RSz</span></td><td></td><td>Minimális részletességi szint</td></tr>
 <tr><td><span class="menu">Max RSz</span></td><td></td><td>Maximális részletességi szint</td></tr>
 </table>
+<p>Reference images have instead an <span class="menu">Alpha</span> value to set their transparency (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Részletességi szint</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -288,13 +292,16 @@ Természetesen, ezek a színek tetszés szerint mozgathatóak is. További szín
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Körvonal</span></td><td></td><td>Egy körvonalat ad az alakzathoz.</td></tr>
 <tr><td><span class="menu">Kihúzás</span></td><td></td><td>Kiemeli az útvonalat az alakzat sílussal való kitöltése helyett.</td></tr>
+<tr><td><span class="menu">Perspective</span></td><td></td><td>Allows to individually move the four corners of the shape to create the effect of perspective.</td></tr>
+
 </table>
 
 <p>Az átalakítók függvényében változik a tulajdonságok listája.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Átalakító tulajdonságai</a></h4>
-<p>Az átalakítóhoz a <span class="menu">Név</span> és a <span class="menu">Szélesség</span> beállításain túl az alábbiakat is módosíthatjuk a <span class="menu">Tulajdonságok</span> között:</p>
+<p>Besides a <span class="menu">Name</span> the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Width</span></td><td></td><td>The width of Stroke or Contour.</td></tr>
 <tr><td><span class="menu">Vonalvég</span></td><td style="width:15px;"></td><td><i>Kihúzás esetén</i>. A vonalvégek megadása: <span class="menu">Lapos</span>, <span class="menu">Kerek</span> vagy <span class="menu">Szögletes</span>.</td></tr>
 <tr><td><span class="menu">Tájolás érzékelése</span></td><td></td><td><i>Körvonal esetén</i>. A körvonal az útvonalon belül vagy azon kívül helyezkedik el.</td></tr>
 <tr><td><span class="menu">Csatlakozási pontok</span></td><td></td><td>A pontok vonalhoz kapcsolódása: <span class="menu">Süveg</span>, <span class="menu">Kerek</span> vagy <span class="menu">Kúp</span>.</td></tr>

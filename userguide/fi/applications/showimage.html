@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fi" xml:lang="fi">
 <head>
-<!-- 
+<!--
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,17 @@
 <div id="content">
 <div>
 
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Hakemisto</td></tr>
+<tr class="index"><td><a href="#file">Tiedosto</a><br />
+                <a href="#edit">Muokkaa</a><br />
+                <a href="#browse">Selaa</a><br />
+                  <a href="#image">Kuva</a><br />
+                  <a href="#view">Näkymä</a><br />
+                  <a href="#attributes">Attribuutit</a><br />
+                  <a href="#shortcuts">Pikanäppäimet</a></td></tr>
+</table>
+
 <h2><img src="../../images/apps-images/showimage-icon_64.png" alt="showimage-icon_64.png" width="64" height="64" />Kuvakatselin</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Työpöytäpalkki:</td><td style="width:15px;"></td><td><i>Ei löydy Työpöytäpalkista, käynnistetään normaalisti kaksoisnapsauttamalla tuettua tiedostoa.</i></td></tr>
@@ -70,10 +81,42 @@
 <tr><td>Asetukset:</td><td></td><td><span class="path">~/config/settings/ShowImage_settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>Kuvakatselin sallii sinun katsella kuvatiedostoja kaikisssa muodoissa, jotka <a href="../preferences/datatranslations.html">Tietomuuntimet</a> tukevat. Uudet muodot tunnistetaan automaattisesti, kun niiden muuntimet lisätään järjestelmään. Tämä on tehty esimerkiksi Haikun vektorikuvaketiedostoille, WonderBrush-kuville tai kun WebP-kuvat tulivat käytettäviksi.<br />
-Kuvakatselin tarjoaa minimaalisia editointiominaisuuksia karsimalla, kiertämällä tai kääntämällä kuvia ja tallentaen niitä toisiin muotoihin.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Katsotaan</h2>
-<img src="../images/apps-images/showimage-view.jpg" alt="showimage-view.jpg" />
+<p>Kuvakatselin sallii sinun katsella kuvatiedostoja kaikisssa muodoissa, joita <a href="../preferences/datatranslations.html">Tietomuuntimet</a> tukevat. Uudet muodot tunnistetaan automaattisesti, kun niiden muuntimet lisätään järjestelmään. Tämä on tehty esimerkiksi Haikun vektorikuvaketiedostoille, WonderBrush-kuville tai kun WebP-kuvat tulivat käytettäviksi.<br />
+Kuvakatselin ei tarjoa muokkausmahdollisuuksia, mutta se sallii nelikulmaisen alueen valinnan ja sen tallennuksen missä tahansa muodossa. Voit myös kiertää ja kääntää kuvia, mutta nämä toiminnot eivät muuta kuvia fyysisesti. Ne lisäävät vain attribuutin, joka näyttää kuvan automaattisesti kierretyssä tai käännetyssä muodosssa, kun kuva avataan seuraavan kerran.</p>
+<p>Käydään valikot lävitse järjestyksessä jättäen pois ilmeisimmät kohdat.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="file" name="file">Tiedosto</a></h2>
+<img src="../images/apps-images/showimage-file.png" style="float:left;margin-right:15px" alt="showimage-file.png" />
+<p><span class="menu">Avaa…</span>-alivalikko luettelee viimeisimmät katsetut kuvat.<br />
+<span class="menu">Avaa sovelluksella…</span> sallii sinun avata kuvan millä tahansa sen tiedostomuotoa tukevalla sovelluksella.<br />
+<span class="menu">Tallenna nimellä…</span>-alivalikko sallii sinun valita kuvan tiedostomuodon nykyisen kuvan tallentamiseksi.<br />
+<span class="menu">Käytä taustana…</span> avaa nopeasti <a href="../preferences/backgrounds.html">Tausta</a>-asetukset nykyisen kuvan asettamiseksi työtilasi(työtilojesi) taustakuvaksi.</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="edit" name="edit">Muokkaa</a></h2>
+<img src="../images/apps-images/showimage-edit.png" style="float:left;margin-right:15px" alt="showimage-edit.png" />
+<p>Kun <span class="menu">Valintatila</span> on aktivoitu  ̵  käytettävissä myös työkalupalkin katkoviivareunaisessa nelikulmiokuvakkeessa ̵ voit valita kuvan nelikulmaisen alueen, jonka voit raahata&amp;pudottaa tiedoston tallentamiseksi Työpöydälle tai mihin tahansa kansioon. Raahaaminen hiiren kakkospainikkeella näyttää valikon, joka sallii sinun valita kuvan toisen tiedostomuodon.<br />
+Jos et halua vaihtaa tilaa etukäteen, niin voit luoda tämän valintakehyksen "normaalitilassa" pitämällä yksinkertaisesti <span class="key">CTRL</span>-näppäimen alhaalla kun raahaat kuvaa hiiren ykköspainikkeella.</p>
+<p style="clear:left"><span class="menu">Nolla valinta</span> tai <span class="key">ESC</span>-näppäin poistaa valintakehyksen.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="browse" name="browse">Selaa</a></h2>
+<img src="../images/apps-images/showimage-browse.png" alt="showimage-browse.png" />
+<p>Kuvan avaamisen jälkeen voit nopeasti selata lävitse kaikki muut kuvat samassa kansiossa (tai kyselytulosikkunassa) painamalla näppäimiä <span class="key">↑</span>/<span class="key">↓</span> tai <span class="key">←</span>/<span class="key">→</span>. Voit nähdä, kuinka valinta vaihtuu vastaavasti Seuraaja-ikkunassa.</p>
+<p>On eräs nopea tapa avata nykyisen kuvan kansio ja jopa navigoida sen yläkansioon ja alikansioon. Se toimii juuri kuin <a href="../tracker.html#drill-down">alasporautumisnavigointi</a> Seuraajassa napsauttamalla tilapalkin tietoaluetta, joka näyttää nykyisen kuvan koon, suurennustason ja muodon.</p>
+<p>Valikon <span class="menu">Selaa</span> katsominen näyttää toisen selaustyypin: Jotkut kuvamuodot, kuten TIFF, voivat sisältää useita sivuja yhdessä tiedostossa. Komennot kuten <span class="menu">Ensimmäinen sivu</span> ja <span class="menu">Seuraava sivu</span> sallivat sinun navigoida noilla sivuilla.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="image" name="image">Kuva</a></h2>
+<img src="../images/apps-images/showimage-image.png" style="float:left;margin-right:15px" alt="showimage-image.png" /><p><span class="menu">Kuva</span>-valikko  tarjoaa muutamia kuvakatseluun välttämättömiä manipulaatioita: kuvan kiertoa ja kääntämistä.<br />
+Huomaa kuitenkin, että todellinen kuvatiedosto ei muutu. Tiedostoon lisätään vain attribuutti niin että ne näytetään kierrettynä tai käännettynä kun avaat kuvan seuraavan kerran.</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="view" name="view">Näkymä</a></h2>
+<img src="../images/apps-images/showimage-view.png" style="float:left;margin-right:15px" alt="showimage-view.png" />
 <p><span class="menu">Näkymä</span>-valikko tarjoaa aluksi kansion kaikkien kuvatiedostojen <span class="menu">Diaesityksen</span> (tai kyselytulosikkunan) ja asettaa <span class="menu">Esitysviiveen</span> 2:sta sekunnista 20:een sekuntiin.</p>
 <p>Muut komennot koskevat parhaillaan näytettävää kuvatiedostoa (muuttamatta ikkunan kokoa):<br />
 <span class="menu">Alkuperäinen koko</span> näyttää kuvan 100 prosentin loitonnustekijällä.<br />
@@ -85,27 +128,20 @@ Kuvakatselin tarjoaa minimaalisia editointiominaisuuksia karsimalla, kiertämäl
 <p>Sitten on <span class="menu">Kokonäyttö</span>-tila valitsimella <span class="menu">Näytä kuvakaappaus kokonäyttötilassa</span>  joka korvaa kuvan alalaidan tiedostonimen.</p>
 <p>Viimeiseksi, <span class="menu">Näytä työkalupalkki</span> näyttää tai piilottaa graafiset ohjauskomponentit:</p>
 <img src="../../images/apps-images/showimage-toolbar.png" alt="showimage-toolbar.png" />
-<p>Vasemmalta oikealle: Edellinen kuva, seuraava kuva, aloita diaesitys (kokonäyttötilassa), valintatila, alkuperäinen koko, sovita ikkunaan, lähennä, loitonna, edellinen ja seuraava sivu (kun kuvamuoto, kuten TIFF salllii useita sivuja yhdessä tiedostossa, katso alla) .</p>
+<p>Vasemmalta oikealle: Edellinen kuva, seuraava kuva, aloita diaesitys (kokonäyttötilassa), valintatila, alkuperäinen koko, sovita ikkunaan, lähennä, loitonna, edellinen ja seuraava sivu (kun kuvamuoto, kuten TIFF salllii useita sivuja yhdessä tiedostossa) .</p>
 <p>Useimmat yleisimmin käytetyistä komennoista on saatavilla asiayhteysvalikosta napsauttamalla hiiren kakkospainikketta kuvan päällä. Näppärää, kun ollaan kokonäyttötilassa.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Selataan</h2>
-<img src="../images/apps-images/showimage-browse.jpg" alt="showimage-browse.jpg" />
-<p>Kuvan avaamisen jälkeen voit nopeasti selata lävitse kaikki muut kuvat samassa kansiossa (tai kyselytulosikkunassa) painamalla näppäimiä <span class="key">↑</span>/<span class="key">↓</span> tai <span class="key">←</span>/<span class="key">→</span>. Voit nähdä, kuinka valinta vaihtuu vastaavasti Seuraaja-ikkunassa.</p>
-<p>On eräs nopea tapa avata nykyisen kuvan kansio ja jopa navigoida sen yläkansioon ja alikansioon. Se toimii juuri kuin <a href="../tracker.html#drill-down">alasporautumisnavigointi</a> Seuraajassa napsauttamalla tilapalkin tietoaluetta, joka näyttää nykyisen kuvan koon ja muodon.</p>
-<p>Valikon <span class="menu">Selaa</span> katsominen näyttää toisen selaustyypin: Jotkut kuvamuodot, kuten TIFF, voivat sisältää useita sivuja yhdessä tiedostossa. Komennot kuten <span class="menu">Ensimmäinen sivu</span> ja <span class="menu">Seuraava sivu</span> sallivat sinun navigoida noilla sivuilla.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Muokataan</h2>
-<img src="../images/apps-images/showimage-edit.jpg" alt="showimage-edit.jpg" />
-<p><span class="menu">Kuva</span>-valikko  tarjoaa muutamia kuvakatseluun välttämättömiä manipulaatioita: kuvan kiertoa ja kääntämistä. Huomaa kuitenkin, että todellinen kuvatiedosto ei muutu. Tiedostoon lisätään vain attribuutti niin että ne näytetään pyöritettynä tai käännettynä kun avaat sen seuraavan kerran.</p>
-<p><span class="menu">Käytä taustana...</span> avaa asetusohjelman <a href="../preferences/backgrounds.html">Tausta-asetukset</a> kuvan asettamiseksi taustakuvaksi työtilaasi.</p>
-<p>Rajaus on eräs toisinaan tarvittu ominaisuus. Leikattavan kehyksen rajaamiseksi voit vaihtaa <span class="menu">Valintatila</span>an valikosta <span class="menu">Muokkaa</span> ja raahata ruutu hiiren ykköspainikkeella. Jos ett halua ensin vaihtaa tilaa, voit luoda tämän ruudun "normaalitilassa" pitämällä yksinkertaisesti alhaalla näppäintä <span class="key">CTRL</span> samalla kun raahaat hiiren ykköspainikkeella, mikä normaalisti siirtää kuvaa sivusuunnasa.<br />
-<span class="menu">Nolla valinta</span> tai näppäin <span class="key">ESC</span> poistaa valintaruudun.</p>
-<p>Seuraava kappale näyttää kuinka itse asiassa tallennetaan rajattu alue.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Tallennetaan ja muunnetaan</h2>
-<p>Kuvan tallentamiseksi tai muuntamiseksi kaikkiin käytettävissä oleviin muotoihin voit kutsua normaalin <span class="menu">Tallenna nimellä...</span>-valikkorivin valikosta <span class="menu">Tiedosto</span> sekä valita muodon ja tiedostonimen.<br />
-Usein vielä nopeampaa, erityisesti jos Seuraaja-ikkuna on jo avoinna, on raahaa ja pudota -toiminnon käyttäminen.</p>
-<img src="../images/apps-images/showimage-dnd.jpg" alt="showimage-dnd.jpg" />
-<p>Näin yllä mainittu rajaaminen lopetetaan. Joko valitaan yllä kuvattu kehys, tai valitaan <span class="menu">Muokka | Valitse kaikki</span> koko kuvalle. Raahaa ja pudota valinta Työpöydälle tai mihin tahansa Seuraaja-ikkunaan uuden kuvaleikkauksen luomiseksi samassa muodossa kuin alkuperäinen kuva.</p>
-<p>Toisen tiedostomuodon tallentamiseksi raahaa hiiren kakkospainikkeella ja valitse muoto asiayhteysvalikosta tiedostoa pudotettaessa.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Pikanäppäimet</h2>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="attributes" name="attributes">Attribuutit</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Tässä voit asettaa nykyisen kuvan <span class="menu">Arvosanat</span> välille 1 ja 10, tai valita <span class="menu">Nolla arvosanat</span> sem asettamiseksi takaisin "arvioimaton"-tilaan (= "0").</p>
+<p>Seuraajassa arvosanat näytetään sarakkeessa "Arvosanat" tähtien lukumääränä. Viisi tähteä esittää kymmentä mahdollista arvoa puolen tähden askelin. Esimerkiksi, arvosana 7 näytetään 7 / 2 = 3.5 tähteä: ★★★⯪☆.<br />
+Voit muokata arvosanoja suoraan myös Seuraajassa: Valitse tiedosto, valitse <span class="menu">Muokkaa nimeä</span> valikosta <span class="menu">Tiedosto</span> ja <span class="key">Sarkain</span>-näppäimellä askeltamalla pääset "Arvosanat"-sarakkeeseen. Nyt voit kirjoittaa uuden numeroarvon, joka muuttuu tähdiksi napauttamalla <span class="key">ENTER</span>-näppäintä.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="shortcuts" name="shortcuts">Pikanäppäimet</a></h2>
 <p>Tässä on hyödyllisimpien pikanäppäinten luettelo:</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">←</span> / <span class="key">↑</span></td><td style="width:15px;"></td><td>Edellinen kuva</td></tr>
@@ -115,7 +151,7 @@ Usein vielä nopeampaa, erityisesti jos Seuraaja-ikkuna on jo avoinna, on raahaa
 <tr><td><span class="key">-</span></td><td></td><td>Loitonna</td></tr>
 <tr><td><span class="key">0</span></td><td></td><td>Alkuperäinen koko (100% loitonnus/lähennys)</td></tr>
 <tr><td><span class="key">1</span></td><td></td><td>Sovita ikkunaan</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Vaihtele kokonäyttötilaa (myös kaksoisnapsautuksen kautta)</td></tr>
+<tr><td><span class="key">ALT/OPTION</span> <span class="key">ENTER</span></td><td></td><td>Vaihtele kokonäyttötilaa (myös kaksoisnapsautuksen kautta)</td></tr>
 <tr><td><span class="key">CTRL</span></td><td></td><td>Pitämällä alhaalla näppäintä <span class="key">CTRL</span> voit luoda valintakehyksen vaihtamatta valintatilaa eksplisiittisesti.</td></tr>
 </table>
 

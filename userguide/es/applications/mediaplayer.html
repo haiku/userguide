@@ -4,13 +4,14 @@
 <head>
 <!--
  *
- * Copyright 2010-2014, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  *		Szymon Barczak (Google Code-In student)
  * Translators:
+ *		cafeina
  *		kervas
  *		miguel~1.mx
  *
@@ -55,15 +56,23 @@
 <li><a href="../../jp/applications/mediaplayer.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="mail.html">Mail (Correo)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Aplicaciones</a> 
-::  <a href="midiplayer.html">MidiPlayer</a>  »
+ «  <a href="mail.html">Mail (Correo)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Aplicaciones</a> 
+::  <a href="midiplayer.html">MidiPlayer</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Índice</td></tr>
+<tr class="index"><td><a href="#playback">Reproducción de audio y video</a><br />
+                <a href="#playlists">Listas de reproducción</a><br />
+                <a href="#ratings">Calificación</a><br />
+                <a href="#settings">Configuración</a><br />
+                <a href="#controls">Controles de teclado</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/mediaplayer-icon_64.png" alt="mediaplayer-icon_64.png" width="64" height="64" />MediaPlayer</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -72,12 +81,13 @@
 <tr><td>Configuraciones:</td><td></td><td><span class="path">~/config/settings/MediaPlayer</span></td></tr>
 </table>
 <p><br /></p>
-<p>MediaPlayer is the default player for all audio and video files. Thanks to its <a href="http://www.ffmpeg.org/">ffmpeg</a> backend, a plethora of widely used formats are supported. Its simple interface has all the controls you'd expect:</p>
+<p>MediaPlayer es el reproductor predeterminado para todos los archivos de audio y video. Gracias a su motor <a href="http://www.ffmpeg.org/">ffmpeg</a>, soporta una gran cantidad de formatos ampliamente usados. Su interfaz sencilla tiene todos los controles que esperaría tener:</p>
 <img src="../images/apps-images/mediaplayer.png" alt="mediaplayer.png" />
 <p>El deslizador de la barra de progreso le permite saltar rapidamente a una posición, y si descansa el puntero sobre él, mostrará el tiempo actual y restante del clip. Si hace clic en la visualización a la derecha, alternando entre el tiempo total, el tiempo actual y el tiempo restante.<br />
 Debajo de eso encontrará los controles habituales para saltar a la pista anterior, reproducir/pausar, detener y saltar a la siguiente pista. Luego se muestra el control de volumen (si le da clic en el símbolo de parlante alterna el modo de silencio) y un medidor VU.</p>
 
-<h2>Reproducción de audio y video</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playback" name="playback">Reproducción de audio y video</a></h2>
 <p>Debido a que no hay características especiales para reproducción de audio, mostraremos las caracteristicas generales del uso de videos.</p>
 <img src="../images/apps-images/mediaplayer-info.png" alt="mediaplayer-info.png" />
 <p>Todos los archivos de medios tienen a su disposición su <span class="menu">Información de archivo…</span> (<span class="key">ALT</span> <span class="key">I</span>). Muestra información sobre el archivo cargado actualmente, como por ejemplo el tiempo de reproducción o detalles de la pista de audio/video y su codec.</p>
@@ -91,27 +101,39 @@ MyMovie.Français.srt</pre>
 <p>Pistas multiples de audio, que son principalmente utilizadas para diferentes idiomas dentro de un sólo archivo de video, se pueden acceder desde el submenú <span class="menu">Pista de audio</span>. El submenú <span class="menu">Video | Pista</span> ofrece lo mismo cuando existen diferentes <i>streams</i> de video.</p>
 <p>Puede alternar entre modalidad de <span class="menu">Pantalla completa</span> (<span class="key">ALT</span> <span class="key">ENTER</span> o <span class="key">F</span> o con un doble clic izquierdo ), esconder los controles y bordes de la ventana de MediaPlayer con <span class="menu">Esconder interfaz</span> (<span class="key">ALT</span> <span class="key">H</span> o un doble clic derecho) o puede tener su ventana <span class="menu">Siempre encima</span> (<span class="key">ALT</span> <span class="key">A</span>).</p>
 
-<h2>Listas de reproducción</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playlists" nsame="playlists">Listas de reproducción</a></h2>
 <p><span class="menu">MediaPlayer | Lista de reproducción...</span> (<span class="key">ALT</span> <span class="key">P</span>) abre una ventana con los archivos en espera para reproducción. Si hace doble clic en cualquier entrada de la lista, este empezará a reproducir.</p>
 <img src="../images/apps-images/mediaplayer-playlist.png" alt="mediaplayer-playlist.png" />
-<p>You can add more files by dropping them into the list and rearrange their position via drag &amp; drop. New files are added in the order they were selected from a Tracker window. Drag &amp; dropping them with the right mouse button shows a context menu to insert them <span class="menu">sorted</span> (alphabetically).<br />
-From the <span class="menu">Edit</span> menu you can <span class="menu">Randomize</span> or <span class="menu">Remove</span> (<span class="key">DEL</span>) an entry from the list or delete the actual file with <span class="menu">Move to Trash</span> (<span class="key">ALT</span> <span class="key">T</span>).</p>
+<p>Puede añadir más archivos arrastrandolos a la lista y reordenando su posición con el ratón con la función de arrastrar y soltar. Los archivos recién añadidos se insertan en el orden en que fueron seleccionados en una ventana de Tracker. Arrastrarlos y soltarlos con el botón derecho del ratón hará aparecer un menú contextual para insertarlos <span class="menu">ordenados</span> (alfabéticamente).<br />
+Desde el menú <span class="menu">Editar</span> puede <span class="menu">Volver aleatorio</span> o <span class="menu">Quitar</span> (<span class="key">SUPR</span>) una de las entradas de la lista o borrar el propio archivo con <span class="menu">Mover a la papelera</span> (<span class="key">ALT</span> <span class="key">T</span>).</p>
 <p>Desde luego, puede <span class="menu">Guardar</span> una lista de reproducción y luego la puede <span class="menu">Abrir</span> de nuevo, o iniciarla sencillamente haciendo doble clic en su archivo de lista de reproducción.</p>
 
-<h2>Configuración</h2>
-<p>Hay varias opciones para ajustar el comportamiento de MediaPlayer:</p>
-<img src="../images/apps-images/mediaplayer-settings.png" alt="mediaplayer-settings.png" />
-<p>The first batch, <span class="menu">Play mode</span>, is pretty self-explaining.<br />
-Start playback automatically, close windows when finished or play clips in a loop.<br />
-From the pop-up menu you choose MediaPlayer's launch behavior. Should it resume playing where it left off last time: <span class="menu">always</span>, <span class="menu">never</span>, or <span class="menu">ask every time</span>.</p>
-<p>Next are different <span class="menu">View options</span>.<br />
-You can opt to <span class="menu">Use hardware overlay if available</span>, which cuts down CPU usage but only works for one video window and needs a supporting video card driver.<br />
-You can <span class="menu">Scale movies smoothly</span> (when not in overlay mode) which uses very fast filtering to smooth over otherwise blocky pixels when zooming video or watching in full-screen mode.<br />
-<span class="menu">Scale controls in full-screen mode</span> if you prefer slightly bigger controls, maybe because you watch the screen from a bit farther away when in full-screen mode.<br />
-Then there are settings for <span class="menu">Subtitle size</span> and <span class="menu">Subtitle placement</span>. They can be shown at the <span class="menu">Bottom of video</span>, which will always have them overlayed over the picture. Or <span class="menu">Bottom of screen</span>, which allows you to resize the window vertically and have the subtitles appear in the black bar at the bottom instead.</p>
-<p>El último ajuste determina el volumen de los clips cuyas ventanas no se muestran activas actualmente. Puede hacer que todas esten funcionando a <span class="menu">Volumen completo</span>, a un <span class="menu">Volumen bajo</span> menos confuso o en <span class="menu">Silencio</span>.</p>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="rating" name="rating">Calificación</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Aquí puede establecer una <span class="menu">Calificación</span> del archivo multimedia actual entre 1 y 10, o elegir la opción <span class="menu">Restablecer calificación</span> para volver a ponerla como "sin calificar" (= "0").</p>
+<p>En Tracker, las calificaciones se muestran en la columna de atributo "Rating" como una serie de estrellas. Las cinco estrellas representan los diez valores posibles, en donde cada etapa equivale a media estrella. Por ejemplo, una calificación de 7 se muestra como 7 / 2 = 3,5 estrellas: ★★★⯪☆.<br />
+Pero también puede editar la calificación directamente en Tracker: seleccione el archivo, elija <span class="menu">Editar nombre</span> en el menú <span class="menu">Archivo</span> y presione <span class="key">TAB</span> para trasladarse a la columna "Rating". Entonces puede ingresar el valor numérico nuevo, que se convertirá en una calificación en estrellas al presionar <span class="key">ENTRAR</span>.</p>
+<p style="clear:left"></p>
 
-<h2>Controles de teclado</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="settings" name="settings">Configuración</a></h2>
+<p>Hay varias opciones para ajustar el comportamiento de MediaPlayer:</p>
+<img src="../images/apps-images/mediaplayer-settings.png" style="float:left;margin-right:15px" alt="mediaplayer-settings.png" />
+<p>La primera parte, <span class="menu">Modo de reproducción</span>, se explica sola.<br />
+Puede iniciar la reproducción automaticamente, cerrar las ventanas al terminar la reproducción, o reproducir en ciclo.<br />
+En el menú emergente "Continuar" puede determinar el comportamiento de MediaPlayer al inicio. Puede continuar con la reproducción en el estado que quedó en la última sesión: <span class="menu">siempre</span>, <span class="menu">nunca</span>, o <span class="menu">preguntar cada vez</span>.</p>
+<p>Luego estan las diferentes <span class="menu">Opciones de visualización</span>.<br />
+Puede optar por <span class="menu">Usar sobreposición por hardware si está disponible</span>, que reduce el uso del CPU pero sólo funciona para una ventana de video y necesita tener una tarjeta de video soportada.<br />
+Puede <span class="menu">Escalar las películas suavemente</span> (cuando no está en modalidad sobrepuesta) que usa un filtrado muy rápido para añadir un suavizado sobre pixeles que de otra forma se verían granulados cuando se aumenta el video o cuando se ve en modalidad de pantalla completa.<br />
+Puede <span class="menu">Escalar controles en modo de pantalla completa</span> si prefiere tener los controles un poco más grandes, quizá para ver la pantalla desde un poco más lejos cuando está en pantalla completa.<br />
+Luego se encuentran los ajustes para el <span class="menu">Tamaño de subtítulo</span> y <span class="menu">Posición del subtítulo</span>. Estos se pueden mostrar en la parte <span class="menu">Inferior del video</span>, lo que los tendrá siempre sobrepuestas a la imagen. O pueden estar en la parte <span class="menu">Inferior de la pantalla</span>, que le permitiran cambiar el tamaño de la ventana verticalmente y los subtítulos apareceran en cambio en la barra oscura de abajo.</p>
+<p>El último ajuste determina el volumen de los clips cuyas ventanas no se muestran activas actualmente. Puede hacer que todas esten funcionando a <span class="menu">Volumen completo</span>, a un <span class="menu">Volumen bajo</span> menos confuso o en <span class="menu">Silencio</span>.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="controls" name="controls">Controles de teclado</a></h2>
 <p>El MediaPlayer ofrece combinaciones de teclado cómodas para controlar la reproducción sin usar el ratón.</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">Z</span></td><td style="width:15px;"></td><td>Saltar a pista anterior</td></tr>
@@ -131,7 +153,7 @@ Then there are settings for <span class="menu">Subtitle size</span> and <span cl
 <tr><td align="right"><span class="key">ALT</span> <span class="key">↓</span> / <span class="key">↑</span></td><td></td><td>Salta a la pista siguienta/previa</td></tr>
 
 <tr><td align="right"><span class="key">Barra espaciadora</span></td><td></td><td>Alterna entre reproducir y pausa</td></tr>
-<tr><td align="right"><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Alterna entre modo pantalla completa (tambíen puede hacer doble clic izquierdo en el área del video o presionar <span class="key">F</span> o <span class="key">TAB</span>)</td></tr>
+<tr><td align="right"><span class="key">ALT</span> <span class="key">ENTRAR</span></td><td></td><td>Alterna entre modo pantalla completa (tambíen puede hacer doble clic izquierdo en el área del video o presionar <span class="key">F</span> o <span class="key">TAB</span>)</td></tr>
 <tr><td class="onelinetop" align="right"><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">0</span> / <span class="key">1</span> / <span class="key">2</span> / <span class="key">3</span></td><td></td><td>Cambia la relación de aspecto a <span class="menu">Configuración del stream</span> (la forma en la cual el video fue codificado), <span class="menu">Sin corrección de aspecto </span> (hace ajuste de los pixeles del video a la pantalla en relación 1:1), <span class="menu">4:3</span>, <span class="menu">16:9</span></td></tr>
 </table>
 
@@ -140,9 +162,9 @@ Then there are settings for <span class="menu">Subtitle size</span> and <span cl
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="mail.html">Mail (Correo)</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Aplicaciones</a> 
-::  <a href="midiplayer.html">MidiPlayer</a>  »
+ «  <a href="mail.html">Mail (Correo)</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Aplicaciones</a> 
+::  <a href="midiplayer.html">MidiPlayer</a>  »
 </span></div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Terjemahan halaman ini belum lengkap. Sampai saat itu, bagian yang belum selesai menggunakan aslinya bahasa Inggris.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Indeks</td></tr>
@@ -219,7 +220,10 @@ Poin yang dipilih dihapus dengan menekan <span class="key">DEL</span> atau denga
 <p>Bentuk berbaring di atas satu sama lain, masing-masing pada lapisannya sendiri, jika Anda mau. Untuk menyusun ulang mereka, Anda seret &amp; jatuhkan entri mereka ke posisi yang berbeda dalam daftar.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Menu Bentuk</a></h4>
-<p>Menu <span class="menu">Shape</span> menawarkan kemungkinan yang disebutkan sebelumnya untuk <span class="menu">Tambahkan kosong, dengan jalur/gaya/jalur &amp; gaya</span> dan untuk <span class="menu">Gandakan </span> atau <span class="menu">Hapus </span> bentuk. Lalu ada:</p>
+<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape.</p>
+<p>With <span class="menu">Add reference image</span> you can create a special kind of shape. It lets you load any bitmap image (e.g. PNG or JPEG) to use as a background while working on the icon. Very handy when creating a vector version of an existing bitmap icon, for example. The reference image can be manipulated like any other shape (moved, rotated, resized), but will not be part of the icon when saved as HVIF.</p>
+
+<p>Then there is:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Atur ulang transformasi</span></td><td style="width:15px;"></td><td>Mengembalikan semua gerakan, mengubah ukuran, dan memutar transformasi yang telah Anda terapkan pada bentuk.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Bekukan transformasi</span></td><td></td><td>Ketika Anda mengubah bentuk, jalur yang ditugaskan tetap pada posisi aslinya. Ini mungkin dimaksudkan; mungkin lebih dari satu bentuk menggunakan jalur itu, mungkin Anda sengaja menggunakan <span class="menu"> Pilihan | Jepret ke kisi</span> untuk mengatur titik pada batas piksel yang tepat.<br />
@@ -234,6 +238,7 @@ Jika tidak, "Pembekuan Transformasi" akan menerapkan transformasi bentuk saat in
 <tr><td><span class="menu">Min LOD</span></td><td></td><td>Level Minimum Detail</td></tr>
 <tr><td><span class="menu">Maks LOD</span></td><td></td><td>Level Maksimum Detail</td></tr>
 </table>
+<p>Reference images have instead an <span class="menu">Alpha</span> value to set their transparency (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Level Detail (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -287,13 +292,16 @@ Tentu saja Anda dapat memindahkan indikator ini untuk mengubah gradien sesuai ke
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Kontur</span></td><td></td><td>Menambahkan garis besar ke bentuk.</td></tr>
 <tr><td><span class="menu">Ketukan</span></td><td></td><td>Mengelus jalur bentuk bukannya mengisinya dengan gaya.</td></tr>
+<tr><td><span class="menu">Perspective</span></td><td></td><td>Allows to individually move the four corners of the shape to create the effect of perspective.</td></tr>
+
 </table>
 
 <p>Bergantung pada jenis Transformer, Anda akan mendapatkan serangkaian properti yang berbeda.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Properti Transformer </a></h4>
-<p>Selain <span class="menu">Nama</span> dan <span class="menu">Lebar</span> aktual untuk transformator, tampilan <span class="menu">Properti</span>  memiliki opsi (tergantung pada jenisnya yang sedikit berbeda):</p>
+<p>Besides a <span class="menu">Name</span> the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Width</span></td><td></td><td>The width of Stroke or Contour.</td></tr>
 <tr><td><span class="menu">Caps</span></td><td style="width:15px;"></td><td><i>Stroke saja</i>. mendefinisikan tutup ujung dari garis: <span class="menu">Butt</span>, <span class="menu">Square</span> atau <span class="menu">Round</span>.</td></tr>
 <tr><td><span class="menu">Deteksi orient.</span></td><td></td><td><i>Hanya kontur. </i>. Menentukan apakah kontur berada di dalam atau di luar jalur.</td></tr>
 <tr><td><span class="menu">Gabung</span></td><td></td><td>Menentukan bagaimana garis digabungkan pada satu titik: <span class="menu">Miter</span>, <span class="menu">Round</span> atau <span class="menu">Bevel</span>.

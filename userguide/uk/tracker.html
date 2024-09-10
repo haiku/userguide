@@ -17,7 +17,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>Tracker – Префлет</title>
+	<title>Tracker (Файловий менеджер)</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../Haiku-doc.css" />
 </head>
@@ -66,7 +66,7 @@
 
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Індекс</td></tr>
+<tr class="heading"><td>Зміст</td></tr>
 <tr class="index"><td>
 	<a href="#mounting-volumes">Підключення дисків</a><br />
 	<a href="#navigating">Навігація</a><br />
@@ -77,7 +77,7 @@
 </td></tr>
 </table>
 
-<h1>Tracker – Префлет</h1>
+<h1>Tracker (Файловий менеджер)</h1>
 
 <p>Tracker – комп'ютерна програма, що надає інтерфейс користувача для роботи з файловою системою та файлами. Це навігаційний файловий менеджер, який фактично являє собою основу графічної оболонки користувача Haiku.<br />Дозволяє виконувати найчастіші операції з    папками і файлами: створення, відкриття/програвання/запуск/перегляд, редагування, переміщення, перейменування, копіювання, вилучення, зміну атрибутів та властивостей, пошук файлів та призначення прав.</p>
 <p>Як і будь-яка інша програма (Робочий стіл з його значками – це просто повноекранне вікно у фоновому режимі), Tracker з'являється зі своїми вікнами на панелі задач Deskbar, і його можна закрити і перезапустити. Найпростіший спосіб завершити роботу і перезапустити аварійно завершений чи завислий Tracker (або Deskbar) – це викликати <a href="teammonitor.html"> Team Monitor</a>.</p>
@@ -153,7 +153,8 @@
 </ul>
 <div class="box-info">
 <p _translation_id="4341">Іноді Ви просто хочете переставити кілька значків, не застосовуючи пункт <span class="menu">Очистити</span> (<span class="key">ALT</span> <span class="key">K</span>). У такому разі Ви виділяєте ці значки і починаєте перетягувати їх на нове місце. Перш ніж перетягнути їх туди, утримуйте натиснутою клавішу <span class="key">ALT</span>. Це вирівняє значки за невидимою сіткою.</p>
-<p>Перший стовпець у режимі <span class="menu">У вигляді списку</span> визначає підписи значків у режимах <span class="menu">У вигляді міні-значків</span> та <span class="menu">У вигляді значків</span>. Зазвичай це назва файлу, але Ви можете переключитися у режим <span class="menu">У вигляді списку</span>, перетягнути стовпець <span class="menu">Розмір</span> ліворуч і отримати значки з підписами їхнього розміру при поверненні назад у режим <span class="menu">У вигляді значків</span>. А то!</p>
+<p>Перший стовпець у режимі <span class="menu">У вигляді списку</span> визначає підписи значків у режимах <span class="menu">У вигляді міні-значків</span> та <span class="menu">У вигляді значків</span>. Це стосується і ширини підписів: Якщо підпис обрізається по ширині колонки у режимі <span class="menu">У вигляді списку</span>, він буде аналогічно обрізаний при перемиканні в режим <span class="menu">У вигляді міні-значків</span> та <span class="menu">У вигляді значків</span>.<br />
+Зазвичай, перший стовпчик - це назва файлу, але Ви можете переключитися у режим <span class="menu">У вигляді списку</span>, перетягнути стовпець <span class="menu">Розмір</span> ліворуч і отримати значки позначені їх розміром, коли повернетеся назад у режим <span class="menu">У вигляді значків</span>. А то!</p>
 </div>
 <p>Решта функцій є досить зрозумілими, залишаються лише налаштування Tracker.</p>
 
@@ -183,9 +184,12 @@
 <p>Як завжди, команди досить зрозумілі.</p>
 <ul>
 <li><p><span class="menu">Знайти…</span> – пошук файлів або папок. Додаткову інформацію дивіться у розділі <a href="queries.html">Запити</a>.</p></li>
-<li><p><span class="menu">Новий…</span> – дозволяє створити новий каталог/папку або файл на основі <i>шаблону</i>.</p>
+<li><p><span class="menu">New</span> - Create a new folder or any other file based on a template.
+</p>
 <img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
-<p>Вибір пункту меню <span class="menu">Редагувати шаблони…</span> відкриває каталог <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Створений у цьому каталозі файл з'явиться зі своєю назвою, типом та іншими атрибутами в якості шаблону у підменю <span class="menu">Новий…</span>. Наприклад, зараз Ви бачите файл «text file» з типом файлу <tt>Text file</tt>. Додаткову інформацію дивіться у розділі <a href="filetypes.html">Типи файлів</a>.</p></li>
+<p>Choosing <span class="menu">Edit templates…</span> at the bottom opens the folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Create a file or folder there and it will appear as a template in the <span class="menu">New</span> menu. The new file/folder created by the template will have its filetype, filename, contents, and all its other attributes. In case of a folder, it'll also have its window size/position and attribute column layout.</p>
+<p>In the screenshot above, you see the custom template folders "Email folder" and "Music folder". Both will create folders with those same custom overlay icons and have the relevant attributes already set.</p>
+<p>You can also sort your templates into custom submenus. Just choose <span class="menu">Add new submenu…</span> and a new special folder gets created in <span class="path">Tracker New Templates</span> that you then rename to fit its purpose. Copy your template files there to appear in the new submenu. The screenshot above shows the submenus "C   dev files" and "Office files".</p></li>
 <li><p><span class="menu">Відкрити у…</span> – підменю, яке показує усі програми, які можуть працювати з таким типом файлів.</p>
 
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
@@ -206,7 +210,7 @@
 </ul></li>
 <li><p><span class="menu">Редагувати ім'я</span>, <span class="menu">
 Дублювати</span>, <span class="menu">До смітника</span> – пункти меню, які дозволяють перейменувати файл, зробити дублікат файлу, перемістити вибраний файл (файли) до смітника.</p></li>
-<li><p><span class="menu">Перемістити до</span>, <span class="menu">Копіювати до</span>, <span class="menu">Створити посилання</span> – підменю, які дозволяють переміщати, копіювати та створювати посилання на вибраний файл(и) використовуючи метод деталізації по підменю. Утримання клавіші <span class="key">SHIFT</span> під час виклику меню надає можливість створити відносне посилання.</p></li>
+<li><p><span class="menu">Перемістити до</span>, <span class="menu">Копіювати до</span>, <span class="menu">Створити посилання</span> – підменю, які дозволяють переміщати, копіювати та створювати посилання на вибраний файл(и) використовуючи метод деталізації по підменю. Утримання клавіші <span class="key">SHIFT</span> під час виклику меню надає можливість створити відносне посилання. Таке посилання позначається лінією з крапок, якою підкреслено значок файлу</p></li>
 <li><p><span class="menu">Вирізати</span>, <span class="menu">Копіювати</span>,  <span class="menu">Вставити</span> – пункти меню, які дозволяють вирізати, копіювати та вставляти файли через буфер обміну. Утримання клавіші <span class="key">SHIFT</span> під час виклику меню змінює пункти на <span class="menu">Вирізати ще</span>, <span class="menu">Копіювати ще</span>, щоб Ви могли обробити більше файлів, можливо з іншої папки, які Ви можете вставити куди-небудь пізніше. Крім того, з натиснутою клавішею <span class="key">SHIFT</span> Ви можете вставляти копійовані в буфер обміну файли як посилання.</p></li>
 <li><p><span class="menu">Визначити</span> – пункт меню, який дозволяє встановити тип файлу, якщо тип не було визначено раніше, наприклад, у випадку передачі файлу за допомогою команди <span class="cli">wget</span>, при виконанні якої  тип файлу не встановлюється. Утримання клавіші <span class="key">SHIFT</span> під час виклику меню змінює пункт на <span class="menu">Ідентифікувати примусово</span>, який ідентифікує тип файлу і виправить його, якщо раніше він був помилковим.</p></li>
 <li><p><span class="menu">Доповнення</span> – підменю, яке пропонує Вам стандартні доповнення Tracker та програми які можуть обробляти конкретний вибраний файл(и). Додаткову інформацію дивіться у розділі <a href="tracker-add-ons.html">Tracker – Доповнення</a>.</p></li>

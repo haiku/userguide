@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		cafeina
  *		kervas
  *		miguel~1.mx
  *		Oscar Carballal
@@ -63,7 +64,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Índice</td></tr>
@@ -96,7 +96,7 @@ Se puede comenzar haciendo clic en el botón  <span class="button">Add (Añadir)
 <p>Ahora se introduce la <i>dirección de correo electrónico (E-mail Address)</i>, <i>nombre de usuario (Login Name)</i> y <i>clave (Password)</i>, escriba un  <i>nombre para la cuenta (Account Name)</i> que será como se muestre en Haiku, y su <i>nombre real (Real Name)</i>.</p>
 <p>Si la cuenta es de una de los mayores proveedores de correo electrónico, Haiku ya conoce todos los detalles técnicos como las direcciones IP del servidor y la información se rellena automáticamente. Si ese no es el caso, un clic en <span class="button">Next</span> (Siguiente) abrirá otra ventana para ingresar esta información manualmente:</p>
 <img src="../images/prefs-images/e-mail-new-account-2.png" alt="e-mail-new-account-2.png" />
-<div class="box-info">If you use GMail as your e-mail provider, you'll have to create a special app password.<br />See Google's support page on how to <a href="https://support.google.com/mail/answer/185833">Sign in with app passwords</a>.</div>
+<div class="box-info">Para los usuarios que usen como su proveedor de correo electrónico a GMail, deben configurar una contraseña especial de aplicación.<br />Véase la página de soporte de Google sobre cómo <a href="https://support.google.com/mail/answer/185833">iniciar sesión con contraseñas de aplicación</a>.</div>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -112,7 +112,7 @@ Se puede comenzar haciendo clic en el botón  <span class="button">Add (Añadir)
 <p>Haga clic en <span class="menu">Incoming (Entrante)</span> bajo el nombre de su cuenta para configurar cómo se reciben los correos.</p>
 <img src="../images/prefs-images/e-mail-in.png" alt="e-mail-in.png" />
 <p>Primero está la dirección del <span class="menu">Servidor de correo</span> para correos entrantes. Si su proveedor requiere que inicie sesión en un puerto específico, añada la dirección separada por dos puntos (:). Por ejemplo, <tt>pop.su-proveedor.org:1400</tt>.</p>
-<p>Then you enter your login information, <i>Username</i> and <i>Password</i>, and if necessary change <i>Connection type</i> from <span class="menu">No encryption</span> to <span class="menu">SSL</span> and the <i>Login type</i> from the default <span class="menu">Plain text</span> to <span class="menu">APOP</span> for authentication.</p>
+<p>Luego ingrese su información de inicio de sesión, <i>Nombre de usuario</i> y <i>Contraseña</i>, y si es necesario cambie el <i>Tipo de acceso</i> de <span class="menu">Sin cifrado</span> a <span class="menu">SSL</span> y el <i>Tipo de inicio de sesión</i> del valor predeterminado  <span class="menu">Texto plano</span> a <span class="menu">APOP</span> para autenticarse.</p>
 <p>Si usa <i>POP3</i> y recibe correos de esta cuenta desde diferentes computadoras, tal vez querrá activar la opción para <span class="menu">Leave mail on server</span> (dejar los correos en el servidor) y únicamente <span class="menu">&gt;Remove mail from server when deleted </span> (borrar correo del servidor cuando se borre) en carpetas locales.</p>
 <p>Si en cambio utiliza <i>IMAP</i>, tiene la opción de <span class="menu">Remove mail from server when deleted</span> (Quitar correo del servidor al borrar) en carpetas locales. Puede especificar <span class="menu">carpetas de IMAP</span> para  sincronizar únicamente con una carpeta específica y sus subcarpetas.</p>
 <p>También, puede optar por sólo <span class="menu">Partially download messages larger than</span> (descargar parcialmente mensaje mayores a) un cierto tamaño. Esto sólo obtendrá el encabezado y así podrá decidir si quiere descargar el resto del mensaje, más posibles archivos adjuntos después de ver el asunto y quién lo envió. Esto es muy útil si se tiene una conexión lenta.</p>
@@ -124,7 +124,7 @@ Se puede comenzar haciendo clic en el botón  <span class="button">Add (Añadir)
 <a id="outgoing" name="outgoing">Información adicional sobre configuración para el envío de mensajes</a></h2>
 <p>Haga clic en <span class="menu">Outgoing</span> debajo de su nombre de la cuenta para seleccionar cómo se enviarán los correos electrónicos.</p>
 <img src="../images/prefs-images/e-mail-out.png" alt="e-mail-out.png" />
-<p>First is the <i>SMTP server</i> address for outgoing mails. As with the incoming server before, you can use a specific port if needed, e.g. <tt>mail.your-provider.org:1200</tt> and change <i>Username</i>, <i>Password</i> and <i>Connection type</i>.</p>
+<p>Primero está la dirección del <i>Servidor SMTP</i> para los correos salientes. Al igual que con el servidor de entrada, puede usar un puerto específico si lo necesita, por ejemplo, <tt>correo.su-proveedor.org:1200</tt> y cambiar el <i>Nombre de usuario</i>, <i>Contraseña</i> and <i>Tipo de acceso</i>.</p>
 <p>Si necesita registrarse, cambie el <i>Login Type</i> a <span class="menu">ESMTP</span> e ingrese el nombre de usuario y contraseña debajo. El otro tipo se usa con proveedores que le requeren comprobar el correo con <span class="menu">POP3 before SMTP</span> (POP3 antes que SMTP) para identificarse.</p>
 <p>Al igual que con el correo entrante, también puede cambiar la ubicación de su bandeja de salida en <i>Location (Ubicación)</i> (predeterminada: <span class="path">/boot/home/mail/out/</span>).</p>
 
@@ -214,10 +214,10 @@ Adjuntará una "galleta de la fortuna" sabia o graciosa al azar al final de cada
 <a id="settings" name="settings">Configuración del Servicio de Correo</a></h2>
 <p>Ahora que ha configurado los servidores de correo entrante y saliente (y tal vez algunos filtros también), tiene que decirle al Mail Service que haga toda la comprobación y atractivo de cómo hacer su trabajo.</p>
 <img src="../images/prefs-images/e-mail-settings.png" alt="e-mail-settings.png" />
-<p>After ticking the checkmark, you can configure the interval at which the account's mail server is probed for new mail.</p>
-<p>The Mail Service can trigger notifications that can be set to show up <span class="menu">Never</span>, <span class="menu">While sending</span> or <span class="menu">While sending and receiving</span>.</p>
+<p>Después de activar la casilla de verificación, podrá configurar el intervalo en el que se consultará al servidor de correo por nuevos mensajes de correo.</p>
+<p>El servicio de correo puede mostrar notificaciones que se pueden configurar para que <span class="menu">Nunca</span> se muestren, aparezcan <span class="menu">Mientras se envía</span> o <span class="menu">Mientras se envía y recibe</span>.</p>
 <p><span class="menu">Edit Mailbox Menu...</span> (editar el menú de correo entrante) abrirá la carpeta <span class="path">/boot/home/config/Mail/Menu Links/</span>. Todas las carpetas o consultas (¡!) o sus enlaces puestos en esta carpeta aparecerán en el menú contextual del icono de bandeja de entrada de la bandeja del Deskbar "Mail Services" (servicios de correo).</p>
-<p>From that context menu, you can also <span class="menu">Create new message…</span>, <span class="menu">Check for mail now</span> or edit <span class="menu">Settings…</span>:</p>
+<p>Desde ese menú, también puede seleccionar <span class="menu">Crear mensaje…</span>, <span class="menu">Mirar si hay correo ahora</span> o editar la <span class="menu">Configuración…</span>:</p>
 <img src="../images/prefs-images/e-mail-mailbox.png" alt="e-mail-mailbox.png" />
 <p>Si mantiene presionada la tecla <span class="key">MAYÚS</span> (SHIFT) cuando invoca el menú contextual, obtendrá opciones adicionales:</p>
 <table summary="notofications" border="0" cellpadding="2" cellspacing="0"> 

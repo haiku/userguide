@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009, Haiku. All rights reserved.
+ * Copyright 2009-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Preklad tejto stránky zatiaľ nie je dokončený. Dovtedy sa nedokončené časti zobrazia v anglickom origináli.</div>
 
 <h2><img src="../../images/apps-images/charactermap-icon_64.png" alt="charactermap-icon_64.png" width="64" height="64" />Mapa znakov</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -70,10 +71,19 @@
 <tr><td>Nastavenia:</td><td></td><td><span class="path">~/config/settings/CharacterMap settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>Mapa znakov zobrazí UTF-8 kód každého znaku, ktorý písmo podporuje.</p>
+<p>CharacterMap shows all characters of every Unicode block.</p>
+
 <img src="../images/apps-images/charactermap.png" alt="charactermap.png" />
-<p>Vľavo máte štandardizované bloky, spolu s užitočnou filtrovaciou funkciou. Môžete si tiež vybrať <span class="menu">Zobraziť privátne bloky</span> z menu <span class="menu">Zobraziť</span>. Pravá strana zobrazuje skutočné znaky v týchto blokoch, s použitím písma, vybraného v menu <span class="menu">Písmo</span>. Pod tým môžete zmeniť veľkosť písma. A ešte nižšie sa zobrazujú hodnoty znaku, nad ktorým sa nachádza kurzor, v šestnástkovej, desiatkovej a UTF-8 notácii.</p>
+
+<p>To the left you have the standardized Unicode blocks, together with a handy filter function.<br />
+The <span class="menu">View</span> menu has an option to <span class="menu">Show private blocks</span>, which are areas that are untouched by the Unicode Consortium. If you activate <span class="menu">Only show blocks contained in font</span>, blocks not part of the current font are grayed out in the blocks list at the left and not shown in the list of characters on the right.</p>
+
+<p>The right shows the actual characters in these blocks, using the font specified in the <span class="menu">Font</span> menu. You can determine if a symbol is part of that font (it's drawn in black), or if the system supplies a fall-back symbol from some other font (then it's drawn with a gray color).<br />
+Below the symbols you can change the font size. And below that, the values of the character currently under the mouse pointer are displayed in hex, decimal and UTF-8 notation.</p>
+
 <p>Môžete chytiť a ťahať znak priamo z Mapy znakov do textového editora alebo na nejaký kliknúť pravým tlačidlom a buď vybrať <span class="menu">Kopírovať znak</span> (<span class="key">ALT</span> <span class="key">C</span>) alebo <span class="menu">Kopírovať ako reťazec bajtov s únikovými klauzulami</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">C</span>). Výsledkom bude napr. buď <tt>€</tt> alebo <tt>\\xe2\\x82\\xac</tt>.</p>
+
+<p>Clicking on a symbol shows a magnified view of it, click again to close.</p>
 
 </div>
 </div>

@@ -4,13 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Humdinger
+ *		cafeina
  *		kervas
  *		miguel~1.mx
  *		Oscar Carballal
@@ -63,7 +64,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h2><img src="../../images/prefs-images/appearance-icon_64.png" alt="appearance-icon_64.png" width="64" height="64" />Apariencia (Appearance)</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
@@ -83,7 +83,7 @@
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="installing_fonts" name="installing_fonts">Instalación de nuevos tipos de letra</a></h3>
-<p>New fonts that don't come as part of a regular .hpkg package, can be installed by copying them into a subfolder according to the font type (<tt>otfonts</tt>, <tt>psfonts</tt> or <tt>ttfonts</tt>) into their respective <tt>non-packaged</tt> folder (see topic <a href="../filesystem-layout.html">Filesystem layout</a>). For TrueType fonts that would be:</p>
+<p>Las fuentes nuevas que no vienen como parte de un paquete .hpkg normal se pueden instalar copiándolas a una subcarpeta de acuerdo al tipo de fuente (<tt>otfonts</tt>, <tt>psfonts</tt> o <tt>ttfonts</tt>) en sus carpetas <tt>non-packaged</tt> respectivas (véase el tema <a href="../filesystem-layout.html">Disposición del sistema de archivos</a>). Para fuentes TrueType esto sería:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>para tipos de letra disponibles para todos los usuarios.</td></tr>
 <tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>para tipos de letra disponibles solamente para su usuario.</td></tr>
@@ -94,6 +94,14 @@
 <a id="colors" name="colors">Colores</a></h2>
 <img src="../images/prefs-images/appearance-colors.png" alt="appearance-colors.png" />
 <p>En la primera ficha, <span class="menu">Colores</span>, puede cambiar los colores de diferentes partes de la interfaz de usuario. El pozo de colores acepta arrastrar y colocar desde otros programas, permitiéndole arrastrar colores, p. ej., desde <span class="app">WonderBrush</span>, <span class="app">Icon-O-Matic</span> o del panel <span class="app">Backgrounds</span> (Fondos de Pantalla).</p>
+<p>Al activar la casilla de verificación <span class="menu">Elegir automáticamente los colores secundarios</span>, la lista de colores de la interfaz de usuario se reduce a:</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Fondo de panel</span></td><td style="width:15px;"></td><td>predeterminado: gris</td></tr>
+<tr><td><span class="menu">Barra de estado</span></td><td></td><td>predeterminado: azul, utilizado por ejemplo para delinear el control activo, como un botón o una lista</td></tr>
+<tr><td><span class="menu">Pestaña de ventana</span></td><td></td><td>predeterminado: el icónico amarillo de la pestaña de ventana</td></tr>
+</table>
+<p>Con este ajuste, todos los otros colores se configuran automáticamente. Por ejemplo, el color de texto se vuelve blanco al elegir un color de panel oscuro.</p>
+<p>También es posible primero elegir aquellos colores primarios primero para hacer que los colores secundarios se ajusten automáticamente, para después desactivar la casilla de ajuste automático y configurar los colores secundarios manualmente.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -129,7 +137,7 @@ Tipos de Antialiasing</h3>
 <tr><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-off.png" alt="appearance-glyph-off.png" /><br />Escala de grises, definición adicional: apagada</td><td style="width:15px;"></td><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-subpixel.png" alt="appearance-subpixel.png" /><br />Subpixel LCD, definición adicional: apagada</td></tr>
 </table>
 <p>El antialias basado en subpixel agrega un brillo ligeramente coloreado a los objetos. Algo que no todos toleran. En Haiku se pueden combinar los dos métodos de antialias y encontrar la selección adecuada al usar una guía de selección.</p>
-<p>This is how hinting with <span class="menu">LCD subpixel</span> compares to Grayscale:</p>
+<p>Así es como se compara el suavizado adicional con <span class="menu">subpíxel LCD</span> con el realizado con escala de grises:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-on.png" alt="appearance-glyph-on.png" /><br />Escala de grises, definición adicional: encendida</td><td style="width:15px;"></td><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-on-subpixel.png" alt="appearance-glyph-on-subpixel.png" /><br />Subpixel de LCD, definición adicional: encendida</td></tr>
 </table>

@@ -62,7 +62,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <h1>Tiedostojärjestelmäsijoittelu</h1>
 
@@ -80,8 +79,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">Järjestelmäkansio - <span class="path">/boot/system/</span></a></h2>
-<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
-Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
+<p>Haikun edeltäjässä BeOS-käyttöjärjestelmässä tämä kansio oli nimeltään <span class="path">/boot/beos/</span>. Saatat yhä löytää sen joissakin vanhemmissa dokumenteissa (esimerkiksi alkuperäisessä BeBook-kirjassa).<br />
+Useimmat kansion <span class="path">/boot/system/</span> sisällä olevat kansiot ovat kirjoitussuojattuja, mikä on järkevää, koska ne sisältävät tiedostoja, jotka ovat välttämättömiä Haikun toimimiseksi oikein ja siksi niiden on oltava turvassa (vanhingossa tapahtuvalta) muuttamiselta. Kirjoitussuojattu kansio indikoidaan harmaalla värillä. Ainoat käyttäjän kirjoitettavissa olevat kansiot ovat:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Sisältää välimuistitiedostoja ja tilapäisen kansion, joka on linkitetty osoitteeseen <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Sisältää hierarkian tiedostoille, jotka eivät ole osa pakkauksesta .hpkg (luultavasti vanhoja BeOS-arkistotiedostoja).</td></tr>
@@ -108,7 +107,7 @@ Ne tiedostot, jotka haluat tulevaisuudessa jakaa monikäyttäjäympäristössä 
 <td><a href="queries.html">Kyselyt</a> tallennetaan tähän, oletuksella tilapäisesti 7 päivää.</td></tr>
 </table>
 
-<p>The folder <span class="path">/boot/home/config/</span> is special: just like <span class="path">/boot/system/</span> it's mostly under the control of the package management and therefore read-only. Here too, the Tracker windows of these write-protected folders have a gray background. It also contains these similar user-writable folders:</p>
+<p>Kansio <span class="path">/boot/home/config/</span> on erityinen: se on kuten <span class="path">/boot/system/</span> enimmäksen paketinhallinnan alainen ja siksi kirjoitussuojattu. Seuraaja-ikkunoissa myös näillä on harmaa taustaväri. Se sisältää myös nämä samanlaiset kirjoitussuojatut kansiot:</p>
 
 <table summary="layout" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="path">~/config/packages/</span></td><td style="width:10px;"> </td>

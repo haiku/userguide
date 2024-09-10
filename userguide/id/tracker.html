@@ -152,8 +152,8 @@ Pemfilteran jenis-depan ini diatur dalam <a href="#tracker-preferences.html">pre
 </ul>
 <div class="box-info">
 <p _translation_id="4341">Sometimes you just want to rearrange a few icons without doing a complete <span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>). In that case, you select these icons and start to drag them to their new location. Before you drop them there, keep <span class="key">ALT</span> pressed. This will align the icons to the invisible grid.</p>
-<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. Normally, that's the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p>
-</div>
+<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. That applies to the width of the labels as well: If a label gets truncated by the column width in <span class="menu">List view</span>, it'll be similarly truncated when switching to <span class="menu">Mini</span> and <span class="menu">Icon view</span>.<br />
+Normally, the first column is the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p></div>
 <p>Fungsi lainnya cukup jelas, kita lanjutkan ke preferensi Tracker .</p>
 
 <h3>
@@ -185,10 +185,12 @@ Pemfilteran jenis-depan ini diatur dalam <a href="#tracker-preferences.html">pre
 <p>Seperti biasa perintahnya cukup jelas.</p>
 <ul>
 <li><p><span class="menu">Cari...</span> - Temukan file atau folder. Lihat topik <a href="queries.html">Kueri</a> untuk info lebih lanjut.</p></li>
-<li><p><span class="menu">Baru</span> - Buat folder baru atau file lain berdasarkan pada  <i>template</i>.
+<li><p><span class="menu">New</span> - Create a new folder or any other file based on a template.
 </p>
 <img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
-<p>Memilih <span class="menu">Edit templates...</span> buka folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Membuat file di folder itu akan menawarkan filetype dengan nama file dan atribut lainnya sebagai templat di menu <span class="menu">Baru</span>. Di sini, ada file "Text" dengan teks tipe file <tt>text/plain</tt>. Lihat topik <a href="filetypes.html">Filetypes</a> untuk info lebih lanjut.</p> </li>
+<p>Choosing <span class="menu">Edit templates…</span> at the bottom opens the folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Create a file or folder there and it will appear as a template in the <span class="menu">New</span> menu. The new file/folder created by the template will have its filetype, filename, contents, and all its other attributes. In case of a folder, it'll also have its window size/position and attribute column layout.</p>
+<p>In the screenshot above, you see the custom template folders "Email folder" and "Music folder". Both will create folders with those same custom overlay icons and have the relevant attributes already set.</p>
+<p>You can also sort your templates into custom submenus. Just choose <span class="menu">Add new submenu…</span> and a new special folder gets created in <span class="path">Tracker New Templates</span> that you then rename to fit its purpose. Copy your template files there to appear in the new submenu. The screenshot above shows the submenus "C   dev files" and "Office files".</p></li>
 <li><p><span class="menu">Buka dengan...</span> - Submenu menawarkan semua aplikasi yang dapat menangani jenis file ini.
 </p>
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
@@ -209,8 +211,7 @@ Informasi</span>: Menampilkan data standar seperti ukuran, tanggal pembuatan / m
 </ul>
 </li>
 <li><p><span class="menu">Edit nama</span>, <span class="menu">Duplikasi </span> and <span class="menu">Pindahkan ke tempat sampah</span> - memungkinkan Anda mengubah nama atau menggandakan file atau memasukkan file yang dipilih ke tempat sampah.</p></li>
-<li><p><span class="menu">Pindah ke</span>, <span class="menu">Salin ke</span> dan <span class="menu">Buat tautan</span> - memungkinkan Anda memindahkan, menyalin, atau menautkan file yang dipilih menggunakan metode navigasi submenu. Memegang <span class="key">SHIFT</span> sambil menjalankan menu menawarkan opsi untuk membuat tautan relatif.</p>
-</li>
+<li><p><span class="menu">Move to</span>, <span class="menu">Copy to</span> and <span class="menu">Create link</span> - lets you move, copy or link the selected file(s) using the submenu navigating method. Holding <span class="key">SHIFT</span> while invoking the menu offers the option to create a relative link. You recognize links by their dot-underlined icon label.</p></li>
 <li><p><span class="menu">Potong</span>, <span class="menu">Salin </span> dan <span class="menu">Tempel</span> - memungkinkan Anda memotong, menyalin, dan menempel file menggunakan clipboard. Dengan menahan <span class="key">SHIFT</span> saat menjalankan menu, Anda dapat <span class="menu">menyalin/memotong lebih banyak </span> file, mungkin dari folder lain yang dapat Anda tempelkan di tempat lain nanti. Selain itu, sambil menahan <span class="key">SHIFT</span> Anda dapat menempelkan file yang disalin di clipboard sebagai tautan.</p></li>
 <li><p><span class="menu">Identifikasi </span> -  akan mengendus-endus dan menetapkan jenis file jika sebelumnya tidak memilikinya, mis. jika Anda mentransfer file dengan <span class="cli">wget</span> yang tidak menetapkan tipe file itu sendiri. Memegang <span class="key">SHIFT</span> sambil menjalankan menu akan mengubah item menjadi <span class="menu">identifikasi paksa</span> yang mengidentifikasi jenis file dan memperbaikinya jika itu salah sebelumnya.</p></li>
 <li><p><span class="menu">Pengaya</span> - menawarkan Anda setiap add-on Tracker generik dan yang dapat menangani file yang dipilih. Lihat topik <a href="tracker-add-ons.html">pengaya Tracker</a>  untuk informasi lebih lanjut.</p></li>

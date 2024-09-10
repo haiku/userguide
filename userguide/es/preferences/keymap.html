@@ -11,6 +11,7 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Humdinger
+ *		cafeina
  *		kervas
  *		miguel~1.mx
  *
@@ -63,7 +64,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h2><img src="../../images/prefs-images/keymap-icon_64.png" alt="keymap-icon_64.png" width="64" height="64" />Keymap</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
@@ -84,11 +84,11 @@ Así, las preferencias de distribución de teclado no sólo están para configur
 <tr><td class="onelinetop"><span class="menu">Switch Shortcut Key...</span></td><td> </td><td>(Cambiar tecla de atajos) para usar la tecla de atajos en modo Windows/Linux, p. ej., <span class="key">Control</span> (normalmente <span class="key">Ctrl</span>) o el modo de Haiku, p. ej., <span class="key">Command</span> (normalmente <span class="key">ALT</span>).</td></tr>
 </table>
 <p>Los listados de la izquierda ofrecen las distribuciones de teclado preconfiguradas del sistema, y bajo ellas, si estuvieran disponible, están los mapas definidos por el usuario. Puede cambiar una distribución de teclado en la imagen de teclado: arrastre una tecla hacia otra y estas se intercambiaran.</p>
-<p>You can also create an individual mapping by drag &amp; dropping a character from another app onto the key. For example, you could extend your regular keymap with often used currency symbols. Just click on the <span class="key">CONTROL</span> key and drag &amp; drop the pound symbol from CharacterMap onto the 'P' key to get a ₤ when you press <span class="key">CTRL</span> <span class="key">P</span>.
+<p>También es posible crear una asignación individual al arrastrar y soltar un carácter desde otra aplicación sobre la tecla. Por ejemplo, puede extender su distribución de teclado con algunos símbolos monetarios usados frecuentemente. Tan solo hay que hacer clic en la tecla <span class="key">CONTROL</span> y a continuación arrastrar y soltar el símbolo de libra esterlina del Mapa de caracteres sobre la tecla 'P' para obtener una ₤ al presionar <span class="key">CTRL</span> <span class="key">P</span>.
 <br />
-By right-clicking a normal key, the context menu offers to <span class="menu">Remove</span> its mapping. Modifier keys can have alternative mappings, like using <span class="key">CAPS LOCK</span> as <span class="key">CTRL</span> key:</p>
+Al hacer clic derecho sobre una tecla normal, el menú contextual ofrece la opción de <span class="menu">Quitar</span> la asignación. Las teclas modificadoras pueden tener asignaciones alternativas, como usar <span class="key">BLOQ MAYÚS</span> como la tecla <span class="key">CTRL</span>:</p>
 <img src="../images/prefs-images/keymap-context.png" alt="keymap-context.png" />
-<p>Alternatively to this or drag &amp; dropping of keys, there's the menu <span class="menu">File | Set modifier keys…</span> that opens this window:</p>
+<p>Aparte de esto y del arrastrar y soltar teclas, hay una opción en el menú <span class="menu">Archivo | Establecer teclas modificadoras…</span> que abre esta ventana:</p>
 <img src="../images/prefs-images/keymap-modifiers.png" alt="keymap-modifiers.png" />
 <p>Aquí puede asignar las teclas a sus funciones respectivas o incluso desactivar por completo el funcionamiento de una tecla. También puede asignar la misma tecla a diferentes funciones, aunque esa no es una buena idea la mayor parte del tiempo, y será advertido por un pequeño signo de exclamación al lado de los menus emergentes si lo hace.<br />
 El presionar <span class="button">Establecer teclar modificadoras</span> aplica los cambios y cierra la ventana.</p>
@@ -96,7 +96,7 @@ El presionar <span class="button">Establecer teclar modificadoras</span> aplica 
 <p>Para equiparar mejor el panel Distribución de teclado a su teclado físico, hay algunas configuraciones diferentes disponibles desde el menú <span class="menu">Layout</span> (Disposición).</p>
 <p>El tipo de letra utilizado en la representación del teclado se selecciona desde el menú <span class="menu">Font</span> (Tipografía). Note que puede o no contener todos los símbolos para una Distribución de teclado específica.</p>
 <p>Finalmente, hay un botón <span class="button">Revert</span> (Revertir) para regresar las configuraciones que estaban activas cuando se inició el panel preferencias de Distribución de teclado.</p>
-<div class="box-info">The <a href="../applications/haikudepot.html">HaikuDepot</a> application offers a number of input methods for Chinese, Japanese and Korean to download and install.</div>
+<div class="box-info">En la aplicación <a href="../applications/haikudepot.html">HaikuDepot</a> podrá encontrar unos cuantos métodos de entrada para chino, coreano y japonés que podrá descargar e instalar.</div>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="advanced-keymapping" name="advanced-keymapping">Manipulación avanzada de distribución de teclado</a></h2>
@@ -110,7 +110,7 @@ Al inicio de ese archivo, encontrará una leyenda del teclado estilizado con el 
 <p>Si quisiera importar esta distribución dentro del panel Distribución de teclado, tiene que compilarla primero en un formato binario:</p>
 <pre class="terminal">keymap -c &lt; MyKeymap</pre>
 <p>Esto producirá un archivo <span class="cli">keymap.out</span> el cual se puede cargar mediante el menú <span class="menu">Open...</span> (Abrir). Por cierto, el comando keymap es capaz de cargar también este formato binario: <span class="cli">keymap -l &lt; keymap.out</span></p>
-<p>Este es el archivo arrojado (las teclas en extrema derecha del teclado estilizado se cortan para un desplegado más agradable en esta página):</p>
+<p>Este es el archivo de volcado (las teclas en extrema derecha del teclado estilizado se cortan para un desplegado más agradable en esta página):</p>
 
 <pre>#!/bin/keymap -s
 #

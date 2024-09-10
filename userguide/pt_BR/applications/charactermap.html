@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009, Haiku. All rights reserved.
+ * Copyright 2009-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">A tradução desta página ainda não está completa. Até lá, partes incompletas mostrarão o original em inglês.</div>
 
 <h2><img src="../../images/apps-images/charactermap-icon_64.png" alt="charactermap-icon_64.png" width="64" height="64" />Mapa de Caracteres</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -70,10 +71,19 @@
 <tr><td>Definições:</td><td></td><td><span class="path">~/config/settings/CharacterMap settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>O Mapa de Caracteres mostrará ao usuário o código UTF-8 de cada caractere que uma fonte suporta.</p>
+<p>CharacterMap shows all characters of every Unicode block.</p>
+
 <img src="../images/apps-images/charactermap.png" alt="charactermap.png" />
-<p>À esquerda temos os blocos padronizados, junto com uma função de filtro acessível. Opcionalmente, pode-se escolher também <span class="menu">Mostrar blocos privados</span> do menu <span class="menu">Ver</span>. A direita mostra os caracteres reais nesses blocos, usando a fonte especificado no menu <span class="menu">Fonte</span>. Abaixo pode-se mudar o tamanho da fonte. E mais abaixo, os valores do caractere atualmente sob o cursor do mouse é mostrado em hexadecimal, decimal e notação UTF-8.</p>
+
+<p>To the left you have the standardized Unicode blocks, together with a handy filter function.<br />
+The <span class="menu">View</span> menu has an option to <span class="menu">Show private blocks</span>, which are areas that are untouched by the Unicode Consortium. If you activate <span class="menu">Only show blocks contained in font</span>, blocks not part of the current font are grayed out in the blocks list at the left and not shown in the list of characters on the right.</p>
+
+<p>The right shows the actual characters in these blocks, using the font specified in the <span class="menu">Font</span> menu. You can determine if a symbol is part of that font (it's drawn in black), or if the system supplies a fall-back symbol from some other font (then it's drawn with a gray color).<br />
+Below the symbols you can change the font size. And below that, the values of the character currently under the mouse pointer are displayed in hex, decimal and UTF-8 notation.</p>
+
 <p>Você pode arrastar e soltar um caractere diretamente do mapa de caracteres para dentro de um editor de texto ou clicar com o botão direito do mouse em um deles para então <span class="menu">Copiar caractere</span> (<span class="key">ALT</span> <span class="key">C</span>) ou <span class="menu">Copiar como cadeia de byte de escape</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">C</span>). Resultando, então, <tt>€</tt> ou <tt>\\xe2\\x82\\xac</tt>.</p>
+
+<p>Clicking on a symbol shows a magnified view of it, click again to close.</p>
 
 </div>
 </div>

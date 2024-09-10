@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -81,7 +81,7 @@
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="installing_fonts" name="installing_fonts">新しいフォントのインストール</a></h3>
-<p>正規の .hpkg パッケージではない新しいフォントは、<tt>non-packaged</tt> フォルダーのフォントの種類 (<tt>otfonts</tt>、<tt>psfonts</tt> または <tt>ttfonts</tt>) に応じたサブフォルダーへコピーすることでインストールできます (<a href="../filesystem-layout.html">ファイルシステムレイアウト</a>のトピックを参照ください)。TrueType フォントでは、コピー先は以下のようになるでしょう。</p>
+<p>正規の .hpkg パッケージ以外の新しいフォントは、<tt>non-packaged</tt> フォルダーのフォントの種類 (<tt>otfonts</tt>、<tt>psfonts</tt> または <tt>ttfonts</tt>) に応じたサブフォルダーへコピーすることでインストールできます (<a href="../filesystem-layout.html">ファイルシステムレイアウト</a>のトピックを参照ください)。TrueType フォントでは、コピー先は以下のようになるでしょう。</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>すべてのユーザー用フォント</td></tr>
 <tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>ユーザーの専用フォント</td></tr>
@@ -89,9 +89,17 @@
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="colors" name="colors">色 (Colors)</a></h2>
+<a id="colors" name="colors">色</a></h2>
 <img src="../images/prefs-images/appearance-colors.png" alt="appearance-colors.png" />
 <p><span class="menu">色 (Colors)</span> タブで、ユーザーインターフェースの各部の色を変更できます。カラーウェルは、ほかのアプリケーションからのドラッグ＆ドロップを受け付けます。たとえば、<span class="app">WonderBrush</span>、<span class="app">Icon-O-Matic</span>、または<span class="app">背景</span>パネルなどから色をドラッグできます。</p>
+<p><span class="menu">自動的にセカンダリーカラーを選択する</span>チェックボックスを有効にすると、ユーザーインターフェース色のリストは次のものに減らされます:</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">パネルの背景</span></td><td style="width:15px;"></td><td>既定値: 灰色</td></tr>
+<tr><td><span class="menu">ステータスバー</span></td><td></td><td>既定値: 青。例えばボタンやリストのようなアクティブなウィジェットのアウトラインに用いられる</td></tr>
+<tr><td><span class="menu">ウィンドウタブ</span></td><td></td><td>既定値: 象徴的な黄色いウィンドウタブ</td></tr>
+</table>
+<p>この設定により、他のすべての色は自動的に設定されます。例として、暗いパネルカラーを選択すればテキストカラーは白になります。</p>
+<p>これら 3 つのプライマリーカラーを最初に選択し、システムがそれに従ってセカンダリーカラーを設定した後にチェックボックスを解除して個々の色を微調整することもできます。</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="decorators" name="decorators">ウィンドウデコレーター (Window decorators)</a></h2>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009, Haiku. All rights reserved.
+ * Copyright 2009-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -69,11 +69,20 @@
 <tr><td>Asetukset:</td><td></td><td><span class="path">~/config/settings/CharacterMap settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>Merkkikuvaus näyttää sinulle UTF-8-koodin jokaisesta kirjaimesta, jota kirjasin tukee.</p>
+<p>Merkkikuvaus näyttää kaikki jokaisen Unicode-lohkon kirjasimet.</p>
+
 <img src="../images/apps-images/charactermap.png" alt="charactermap.png" />
-<p>Vasemmalla on vakiolohkot yhdessä kätevien suodatintoimintojen kanssa. Valinnaisesti voit valita myös  <span class="menu">Näkymä</span>-valikosta <span class="menu">Näytä yksityiset lohkot</span>. Oikealla näytetään todelliset merkit näissä lohkoissa, käyttäen kirjasinta, joka on määritelty <span class="menu">Kirjasin</span>-valikossa. Alla voit muuttaa kirjasimen kokoa. Ja sen alla näytetään hiiren kohdistimen kohdalla olevan kirjainmerkin heksadesimaali-, desimaali ja UTF-8 -arvo.</p>
+
+<p>Vasemmalla on vakiot Unicode-lohkot yhdessä kätevän suodatintoiminnon kanssa.
+<br />
+Valikossa  <span class="menu">Näkymä</span> on <span class="menu">Näytä yksityiset lohkot</span>-valinta, jotka ovat alueita, joihin Unicode-konsortio ei koske. Jos aktivoit <span class="menu">Näytä vain kirjasintyypin sisältämät lohkot</span>-valikon, lohkot eivät ole osa tällä hetkellä harmaana näkyvää kirjasintyyppiä vasemmalla näkyvässä kirjasintyyppiluettelossa eikä oikealla näytetä kirjasimien luetteloa.</p>
+
+<p>Oikealla näytetään näiden lohkojen todelliset merkit käyttäen <span class="menu">Kirjasintyyppi</span>-valikon määrittelyjä. Voit määritellä, että onko symboli osa tuota kirjasinta (se piirretään mustalla), vai toimittaako järjestelmä korvaussymbolin jostain muusta kirjasintyypistä (silloin se piirretään harmaalla värillä).<br /> Symbolien alla voit vaihtaa symbolin kokoa. Ja sen alapuolella näytetään hiiren kohdistimen alla olevan kirjaimen heksadesimaalikoodi, desimaalikoodi ja UTF-8-merkintätapa.</p>
+
 <p>Voit raahata ja pudottaa merkin suoraan merkkikuvauksesta tekstieditoriin, tai valita hiiren kakkospainikkeella yhden seuraavista vaihtoehdoista:
 <span class="menu">Kopioi merkki</span> (<span class="key">ALT</span> <span class="key">C</span>) tai <span class="menu">Kopioi koodinvaihtomerkkijonona</span> (<span class="key">VAIHTO</span> <span class="key">ALT</span> <span class="key">C</span>). Tuloksena on esimerkiksi joko <tt>€</tt> tai <tt>\\xe2\\x82\\xac</tt>.</p>
+
+<p>Symbolin napsauttaminen näyttää suurennetun näkymän siihen, uudelleennapsautus sulkee näkymän.</p>
 
 </div>
 </div>

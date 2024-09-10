@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -85,6 +85,7 @@
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>Juste selezione une destinazion pal file di backup "<tt>MBR</tt>" o lasse il paercors predefinît. Dopo vê fat clic su <span class="button">Sucessîf</span> tu varâs une conferme se il backup al è lât a bon fin.</p>
+<div class="box-info">Viôt che il "<span class="path">/boot</span>" tal percors al è il supuart di instalazion (p.e. la clavute USB). Chest al à sens se alc al va strucj e tu scugnis ripristinâ daurman il MBR origjinâl. Par fâ un backup a tiermin lunc, tu varessis di salvâ ancje il MBR sul to gnûf disc Haiku, parcè che se un dì al ves di capitâ che al coventi ripristinâ il MBR, al è probabil che la clavute USB e sedi za stade formatade e doprade par alcaltri...</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">Configurâ il menù di inviament</a></h2>
@@ -98,7 +99,16 @@
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>Prime di scrivi il menù di inviament sul MBR, ti varâs une sintesi de tô configurazion e dopo une ultime pussibilitât di interompi la operazion. Nuie pôre però, fintant che tu tegnis il backup dal MBR al sigûr, tu puedis simpri tornâ a prime des modifichis. Se lis robis si ruvinin dal dut, al è simpri pussibil inviâ un CD di instalazion di Haiku o une clavute USB e tornâ a scrivi il backup MBR cun Gjestôr di inviament.</p>
-
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">Ripristinament dal backup dal Master Boot Record (MBR)</a></h2>
+<p>Pal moment nol è pussibil disinstalâ il menù di inviament cu la aplicazion BootManager (Gjestôr di inviament). Dut câs e esist une soluzion alternative: tu puedis doprâ il comant <span class="cli">dd</span> tal Terminâl par ripristinâ il backup dal MBR.</p>
+<div class="box-warning"><span class="cli">dd</span> al pues jessi un strument une vore distrutîf.<br />
+Puarte une vore di atenzion e controle soredut il percors dal dispositîf!</div>
+<p>La rie di comant di <span class="cli">dd</span> e somee a cheste:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>Il parametri di jentrade ("<tt>if</tt>") al è il percors dal backup dal MBR.<br />
+Il parametri di jessude (<tt>"of"</tt>) al è il percors dal disc grês dulà che al larà scrit il MBR. Tu puedis cjatâ ducj i dispositîfs e i lôr percors inte aplicazion <a href="drivesetup.html">Gjestion disc</a>.</p>
 </div>
 </div>
 

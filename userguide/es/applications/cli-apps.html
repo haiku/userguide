@@ -11,6 +11,7 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Humdinger
+ *		cafeina
  *		kervas
  *		miguel~1.mx
  *		Oscar Carballal
@@ -64,7 +65,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Aplicaciones de línea de comandos específicas de Haiku</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -143,9 +143,9 @@ Un ejemplo:</p>
 		<td valign="top"><p><span class="cli">diskimage</span> le permite registrar un archivo normal como un dispositivo de disco. Por ejemplo, puede registrar una imagen anyboot de Haiku, montarla en el Tracker y copiar, editar o quitar archivos de ahí antes de usarla como origen en el Instalador.</p>
 </td></tr>
 <tr><td><p><span class="cli">launch_roster</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>The launch_daemon starts all sorts of services and applications at boot-up. For some it was instructed to re-start them if they were quit. If you don't want that – maybe you'd like to test a modified Tracker, for example – you use <span class="cli">launch_roster</span> to <tt>stop</tt> the re-starting of the application before quitting it. Similarly, you can <tt>start</tt> it again or get <tt>info</tt> about it.  The parameter <tt>log</tt> prints out a log of all launch_daemon related events.<br />
-Without parameter, <span class="cli">launch_roster</span> lists all apps/services that are under its control.<br />
-For example, this will stop the re-launching of the Deskbar:</p>
+		<td valign="top"><p>launch_daemon inicia todo tipo de servicios y aplicaciones en el arranque. Para algunos de ellos tiene instrucciones de reiniciarlos si fueron terminados. Si no pretende que suceda esto, —por ejemplo, porque quiere probar una versión modificada de Tracker— puede usar <span class="cli">launch_roster</span> para detener (<tt>stop</tt>) el reinicio de esa aplicación antes de terminarla. De forma análoga, puede volver a iniciarla (<tt>start</tt>) u obtener más información sobre ella (<tt>info</tt>). El parámetro <tt>log</tt> imprime en pantalla un registro de todos los eventos vinculados con launch_daemon.<br />
+Al lanzarlo sin parámetros, <span class="cli">launch_roster</span> enumera todas las aplicaciones y servicios que están bajo su control.<br />
+Por ejemplo, eso detendrá el reinicio de la Barra de escritorio:</p>
 <pre class="terminal">launch_roster stop x-vnd.be-tskb</pre></td></tr>
 <tr><td><p><span class="cli">mountvolume</span><br /><span class="cli">mount</span></p></td><td style="width:10px;"> </td>
 		<td valign="top"><p>La orden <span class="cli">mountvolume</span> es preferida por muchos para montar discos y particiones locales, porque su formato de uso es muy fácil: sólo debe invocarlo con el nombre de la partición y eso es todo. Ingrese la orden junto a <tt>--help</tt> para conocer más opciones.</p>
@@ -172,10 +172,9 @@ mountvolume RAMimage</pre>
 <p>Es muy importante que siempre desmonte su ramdisk de manera limpia, ya sea desde el Tracker o con la orden <span class="cli">unmount /RAMimage</span>, de lo contrario los cambios no se escribirán de vuelta en el archivo imagen!</p>
 </td></tr>
 <tr><td><p><span class="cli">screenmode</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>This command sets the screen mode (resolution, bit depth, refresh rate). Normally, you'd set that in the Screen preferences. Another parameter makes it useful in combination with the Shortcuts preferences: e.g. <span class="cli">--brightness +3</span> increases the brightness by "3". Useful to change the backlight with a key combination.</p>
-</td></tr>
+		<td valign="top"><p>Este comando establece el modo de pantalla (resolución, profundidad de color, tasa de refresco). Normalmente estas opciones las configuraría a través del panel de ajustes de Pantalla. Hay un parámetro en esta herramienta que la hace útil en combinación con el panel de ajustes de Atajos: por ejemplo, <span class="cli">--brightness +3</span> aumenta el brillo en "3" unidades, útil para cambiar el brillo mediante una combinación de teclas.</p></td></tr>
 <tr><td><p><span class="cli">setvolume</span></p></td><td style="width:10px;"> </td>
-		<td valign="top"><p>This command sets the volume of the system master output. Besides specific values in dB, you can <span class="cli">--togglemute</span>, <span class="cli">--mute</span> or <span class="cli">--unmute</span> and <span class="cli">--increase</span> or <span class="cli">--decrease</span> the volume. Useful to assign key combinations with the Shortcuts preferences.</p></td></tr>
+		<td valign="top"><p>Este comando establece el volumen de la salida maestra de audio del sistema. Además de hacerlo con valores específicos en dB, puede alternar el estado de silencio (con <span class="cli">--togglemute</span>), silenciar (con <span class="cli">--mute</span>) o reactivar el audio (con <span class="cli">--unmute</span>), y aumentar (<span class="cli">--increase</span>) o reducir (<span class="cli">--decrease</span>) el volumen. Estas opciones son particularmente útiles para utilizarlas con combinaciones de teclas en el panel de ajustes de Atajos.</p></td></tr>
 </table>
 </div>
 </div>

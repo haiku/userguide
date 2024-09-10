@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -87,6 +87,7 @@
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>Просто вкажіть шлях де буде збережено файл резервної копії «<tt>MBR</tt>» або залиште стандартний. Після натискання кнопки <span class="button">Далі</span>, Ви отримаєте підтвердження успішного створення резервної копії.</p>
+<div class="box-info">Зверніть увагу, що «<span class="path">/boot</span>» у цьому шляху – це інсталяційний носій (наприклад, флешка). Це має сенс, якщо щось піде не так і Вам потрібно буде негайно повернутися до початкового стану. Для тривалого зберігання резервної копії Вам слід зберегти MBR на новому диску Haiku, тому що, швидше за все, Ви вже відформатували і використовували інсталяційний USB-накопичувач для інших речей…</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">Конфігурація меню загрузки</a></h2>
@@ -100,7 +101,16 @@
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>Перед тим, як меню загрузки буде записано в MBR, Ви отримаєте підсумок конфігурації а потім останню можливість перервати операцію. Не хвилюйтеся, до тих пір поки Ви зберігаєте резервну копію MBR, Ви можете легко скасувати зміни. Якщо станеться щось суттєве, Ви завжди можете загрузитися з інсталяційного компакт-диска Haiku або USB-накопичувача та відновити MBR за допомогою BootManager і резервної копії.</p>
-
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">Відновлення основного загрузочного запису (MBR) з резервної копії</a></h2>
+<p>Наразі неможливо видалити меню загрузки за допомогою програми BootManager. Однак існує обхідний шлях: Ви можете скористатися командою <span class="cli">dd</span> у терміналі, щоб відновити MBR з резервної копії.</p>
+<div class="box-warning"><span class="cli">dd</span> може бути дуже руйнівним інструментом.<br />
+Будьте дуже обережні і особливо перевіряйте параметр шляху пристрою!</div>
+<p>У терміналі командний рядок <span class="cli">dd</span> має такий вигляд:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>Вхідний параметр («<tt>if</tt>») – це шлях до резервної копії MBR.<br />
+Вихідний параметр («<tt>of</tt>») – це шлях до вихідного диска, на який буде записано MBR. Усі пристрої та шляхи до них можна знайти у програмі <a href="drivesetup.html">DriveSetup</a>.</p>
 </div>
 </div>
 

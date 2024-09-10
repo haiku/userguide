@@ -63,7 +63,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 
 <table class="index" id="index" summary="index">
@@ -76,16 +75,16 @@
 
 <h1>Taller: Redes inalámbricas</h1>
 
-<p>Getting the networking to run is essential in today's need for permanent internet connection. As keeping up to date with all the different and ever changing hardware and drivers is quite impossible for a small project, Haiku relies on a compatibility layer to make use of <a href="http://www.freebsd.org">FreeBSD</a> and some <a href="https://www.openbsd.org/">OpenBSD</a> networking drivers. This ensures a massive amount of supported hardware, though probably not 100% of what's out there.</p>
+<p>Tener conectividad de red es esencial para las necesidades de hoy en día de una conexión permanente a internet. Dado que estar al corriente con todas las diferentes opciones de hardware y controladores que están cambiando constantemente es casi imposible para un proyecto pequeño,  por lo que Haiku depende de una capa de compatibilidad para hacer uso de los controladores de red de <a href="http://www.freebsd.org">FreeBSD</a> y algunos de <a href="https://www.openbsd.org/">OpenBSD</a>. Esto garantiza un soporte considerable de hardware, aunque no la totalidad de lo que hay en el mercado.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">Como unirse a una red inalámbrica</a></h2>
-<p>You can use the Desktop applet <a href="desktop-applets/networkstatus.html">NetworkStatus</a> to connect to a specific network.</p>
+<p>Puede usar el accesorio de escritorio <a href="desktop-applets/networkstatus.html">NetworkStatus</a> para conectarse a una red determinada.</p>
 <p>Dele un clic derecho en el ícono de la Barra de Escritorio y seleccione el nombre público de la red (que es la "SSID" que difunde) desde el menú contextual.</p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
-<p>A window opens where you enter the type of authentication (probably WPA/WPA2, WEP is not a secure encryption anymore!) and the password for that wireless network. Tick the checkbox below to <span class="menu">Store this configuration</span> so you don't have to enter all the information again next time you connect to this network.<br />
-Click <span class="button">OK</span> to start the login process.<br /> Depending on your hardware and network configuration this may take a while. You'll be kept informed of the progress by notifications:</p>
+<p>Se abrirá una ventana en donde podrá establecer el tipo de autenticación (probablemente WPA/WPA2, porque WEP ya no es un método seguro de cifrado) y la contraseña de esa red inalámbrica. Active la casilla de verificación debajo para <span class="menu">Guardar esta configuración</span> así ya no tiene que ingresar toda esta información de nuevo la próxima vez que se conecte a esta red.<br />
+Al hacer clic en <span class="button">Aceptar</span> comenzará el proceso de autenticación.<br /> Esto podría tomar un momento dependiendo de su hardware y de la configuración de red. Será informado del progreso mediante notificaciones:</p>
 <img src="images/workshop-wlan-images/join-status.gif" alt="join-network.gif" />
 <p>Una vez que aparezca "Listo" y el ícono NetworkStatus de la Barra de Escritorio muestre una luz verde, la conexión estará establecida. Si las notificaciones terminan en "Sin conexión" y un triángulo amarillo, algo salió mal, tal vez una contraseña incorrecta.</p>
 
@@ -118,7 +117,7 @@ La salida muestra el nombre público (SSID), dirección MAC, intensidad de la se
 Los usuarios de Windows deberán tener <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">wget</a> y <a href="http://gnuwin32.sourceforge.net/packages/zip.htm">zip</a> para Windows instalados en sus ubicaciones predeterminadas y usar <a href="https://www.haiku-os.org/files/download-data-for-wlan-firmwares.bat">este archivo por lotes</a>.<br />
 Con esto se descargaran los archivos requeridos, y se creará una archivo zip que deberá ser extraído en el directorio <tt>/boot</tt> de Haiku. Una vez desempacado, abra una Terminal e ingrese:</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
-<p>Repase las licencias y aceptela si está de acuerdo para instalar los archivos de firmware que estan ahora disponibles.</p>
+<p>Revise las licencias y acéptelas si está de acuerdo para instalar los archivos de firmware que estan ahora disponibles.</p>
 
 </div>
 </div>

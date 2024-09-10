@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2010-2014, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -54,15 +54,24 @@
 <li><a href="../../jp/applications/mediaplayer.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="mail.html">Mail</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Aplikasi</a> 
-::  <a href="midiplayer.html">MidiPlayer</a>  »
+ «  <a href="mail.html">Mail</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Aplikasi</a> 
+::  <a href="midiplayer.html">MidiPlayer</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
 <div class="box-info">Terjemahan halaman ini belum lengkap. Sampai saat itu, bagian yang belum selesai menggunakan aslinya bahasa Inggris.</div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td><a href="#playback">Audio and video playback</a><br />
+                <a href="#playlists">Playlists</a><br />
+                <a href="#ratings">Ratings</a><br />
+                <a href="#settings">Settings</a><br />
+                <a href="#controls">Keyboard controls</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/mediaplayer-icon_64.png" alt="mediaplayer-icon_64.png" width="64" height="64" />Pemutar Media (MediaPlayer)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -76,7 +85,8 @@
 <p>Slider dari progress bar memungkinkan Anda untuk dengan cepat menelusuri posisi, meletakkan mouse di atasnya menunjukkan waktu saat ini dan sisa klip. Mengklik tampilan waktu di sebelah kanannya, beralih antara panjang, saat ini dan waktu yang tersisa. <br />
 Di bawah ini Anda menemukan kontrol yang biasa untuk lompat ke trek sebelumnya, main / jeda, berhenti dan lompat ke trek berikutnya. Kemudian datang kontrol volume (mengklik simbol speaker matikan mematikan) dan VU meter.</p>
 
-<h2>Pemutaran audio dan video</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playback" name="playback">Audio and video playback</a></h2>
 <p>Karena tidak ada fitur khusus untuk pemutaran audio, kami akan langsung ke fitur video atau umum.</p>
 <img src="../images/apps-images/mediaplayer-info.png" alt="mediaplayer-info.png" />
 <p>Yang tersedia untuk semua media adalah info File ...  (<span class="key">ALT</span> <span class="key">I</span>).Ini menampilkan informasi tentang file yang sedang dimuat, seperti waktu pemutaran atau detail trek audio / video dan codec-nya.</p>
@@ -91,7 +101,8 @@ MyMovie.Français.srt</pre>
 <p>Beberapa trek audio, paling sering digunakan untuk beberapa bahasa di dalam satu file video, tersedia dari submenu <span class="menu">Audio track</span> submenu. The <span class="menu">submenu Video | Track</span> menawarkan hal yang sama ketika memiliki beberapa stream video tersedia.</p>
 <p>Anda dapat beralih ke mode <span class="menu">layar penuh</span> (<span class="key">ALT</span> <span class="key">ENTER</span> atau <span class="key">F</span> atau double-click kiri ), sembunyikan perbatasan MediaPlayer dan kontrol dengan <span class="menu">Hide interface</span> (<span class="key">ALT</span> <span class="key">H</span> atau klik kanan dua kali) or have it's window <span class="menu">Selalu di atas</span> (<span class="key">ALT</span> <span class="key">A</span>).</p>
 
-<h2>Daftar putar (playlist)</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playlists" nsame="playlists">Playlists</a></h2>
 <p><span class="menu">MediaPlayer | Daftar putar...</span> (<span class="key">ALT</span> <span class="key">P</span>) membuka jendela dengan file yang saat ini antri untuk diputar. Mengklik dua kali entri mulai memainkannya.
 </p>
 <img src="../images/apps-images/mediaplayer-playlist.png" alt="mediaplayer-playlist.png" />
@@ -99,9 +110,18 @@ MyMovie.Français.srt</pre>
 From the <span class="menu">Edit</span> menu you can <span class="menu">Randomize</span> or <span class="menu">Remove</span> (<span class="key">DEL</span>) an entry from the list or delete the actual file with <span class="menu">Move to Trash</span> (<span class="key">ALT</span> <span class="key">T</span>).</p>
 <p>Tentu saja, Anda dapat <span class="menu">Menyimpan </span>  daftar putar dan kemudian  <span class="menu">Buka</span> lagi, atau mulai dengan mengklik dua kali file daftar putar.</p>
 
-<h2>Pengaturan</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="rating" name="rating">Rating</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Here you can set a <span class="menu">Rating</span> of the current clip between 1 and 10, or choose <span class="menu">Reset rating</span> to set it back to "unrated" (= "0").</p>
+<p>In Tracker, ratings are displayed in a "Rating" attribute column as a number of stars. Five stars represent the 10 possible values, resulting in half-star steps. For example, a rating of 7 is shown as 7 / 2 = 3.5 stars: ★★★⯪☆.<br />
+You can edit the rating directly in Tracker as well: Select the file, choose <span class="menu">Edit name</span> from the <span class="menu">File</span> menu and press <span class="key">TAB</span> to get into the "Rating" column. Now you can enter the new numerical value which will turn into a star rating after hitting <span class="key">ENTER</span>.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="settings" name="settings">Settings</a></h2>
 <p>Ada beberapa pengaturan untuk menyempurnakan perilaku MediaPlayer:</p>
-<img src="../images/apps-images/mediaplayer-settings.png" alt="mediaplayer-settings.png" />
+<img src="../images/apps-images/mediaplayer-settings.png" style="float:left;margin-right:15px" alt="mediaplayer-settings.png" />
 <p>The first batch, <span class="menu">Play mode</span>, is pretty self-explaining.<br />
 Start playback automatically, close windows when finished or play clips in a loop.<br />
 From the pop-up menu you choose MediaPlayer's launch behavior. Should it resume playing where it left off last time: <span class="menu">always</span>, <span class="menu">never</span>, or <span class="menu">ask every time</span>.</p>
@@ -111,8 +131,10 @@ You can <span class="menu">Scale movies smoothly</span> (when not in overlay mod
 <span class="menu">Scale controls in full-screen mode</span> if you prefer slightly bigger controls, maybe because you watch the screen from a bit farther away when in full-screen mode.<br />
 Then there are settings for <span class="menu">Subtitle size</span> and <span class="menu">Subtitle placement</span>. They can be shown at the <span class="menu">Bottom of video</span>, which will always have them overlayed over the picture. Or <span class="menu">Bottom of screen</span>, which allows you to resize the window vertically and have the subtitles appear in the black bar at the bottom instead.</p>
 <p>Pengaturan terakhir menentukan volume klip yang jendelanya sedang tidak aktif. Anda dapat membuat semuanya menggelegar <span class="menu">Full volume</span>, menurunkan rasa pusing dengan <span class="menu">volume rendah </span> atau Diam-diam  <span class="menu">Dibisukan</span>.</p>
+<p style="clear:left"></p>
 
-<h2>Kontrol keyboard</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="controls" name="controls">Keyboard controls</a></h2>
 <p>MediaPlayer menawarkan kombinasi tombol yang nyaman untuk mengontrol pemutaran tanpa menggunakan mouse.</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">Z</span></td><td style="width:15px;"></td><td>Lompat ke trek sebelumnya</td></tr>
@@ -141,9 +163,9 @@ Then there are settings for <span class="menu">Subtitle size</span> and <span cl
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="mail.html">Mail</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Aplikasi</a> 
-::  <a href="midiplayer.html">MidiPlayer</a>  »
+ «  <a href="mail.html">Mail</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Aplikasi</a> 
+::  <a href="midiplayer.html">MidiPlayer</a>  »
 </span></div>
 </div>
 

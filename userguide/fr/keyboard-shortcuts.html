@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -81,7 +81,8 @@
 <tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">CMD</span> <span class="key">←</span>/<span class="key">→</span>/<span class="key">↑</span>/<span class="key">↓</span></td><td></td><td>Se déplace entre les lignes/colonnes des espaces de travail disponibles. Comme ci-dessus, utilisez <span class="key">Maj</span> pour déplacer la fenêtre active.</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>En maintenant la touche <span class="key">OPT</span> pendant que vous déplacer une fenêtre au dessus du titre d'une autre fenêtre ou à coté de sa bordure, vous permettra d'empiler ou d'accoler les deux fenêtres (Voir le chapitre <a href="gui.html#stack-tile">GUI</a>).</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Fait défiler les fenêtres ouvertes dans l'espace de travail courant.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>Cycles through stack and tiled windows.</td></tr>
+<tr><td><span class="key"> OPT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Fait défiler les fenêtres ouvertes dans l'espace de travail courant.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">CMD</span> + left mouse</td><td></td><td>cliquez avec le bouton gauche de la souris et faites glisser pour déplacer une fenêtre (voir le chapitre sur l'<a href="gui.html#move-resize">Interface graphique</a>).</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">CMD</span> + right mouse</td><td></td><td>cliquez avec le bouton droit de la souris et faites glisser pour redimensionner une fenêtre (voir le chapitre sur l'<a href="gui.html#move-resize">Interface graphique</a>).</td></tr>
 <tr><td> </td></tr>
@@ -142,14 +143,14 @@
 <tr><td><span class="key">ALT</span> + left click</td><td style="width:15px;"></td><td>Left-clicking on a path or URL while holding <span class="key">ALT</span> opens it in the preferred application, e.g. folders in Tracker, pictures in ShowImage. You can limit the selected path by additionally holding <span class="key">SHIFT</span>.</td></tr>
 <tr><td><span class="key">Alt</span> <span class="key">N</span></td><td></td><td>Ouvre un autre Terminal dans une nouvelle fenêtre.</td></tr>
 <tr><td><span class="key">Alt</span> <span class="key">T</span></td><td></td><td>Ouvre un autre Terminal dans un nouvel onglet.</td></tr>
-<tr><td><span class="key">CMD</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span>...</td><td></td><td>Passe à l'onglet correspondant.</td></tr>
 <tr><td><span class="key">CMD</span> <span class="key">TAB</span></td><td></td><td>Passe à la fenêtre Terminal suivante.</td></tr>
-<tr><td><span class="key">Maj</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Bascule vers l'onglet à gauche ou à droite.</td></tr>
+<tr><td><span class="key">CMD</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span>...</td><td></td><td>Passe à l'onglet correspondant.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Bascule vers l'onglet à gauche ou à droite.</td></tr>
 <tr><td><span class="key">CMD</span> <span class="key">Maj</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Déplace l'onglet courant à gauche ou à droite.</td></tr>
+<tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Fait défiler d'une ligne vers le haut ou vers le bas la sortie du Terminal.</td></tr>
+<tr><td class="onelinetop"><span class="key">Maj</span> <span class="key">PageUp</span>/<span class="key">PageDown</span></td><td></td><td>Fait défiler d'une page vers le haut ou vers le bas la sortie du Terminal.</td></tr>
 <tr><td><span class="key">CMD</span> <span class="key">+</span>, <span class="key">-</span></td><td></td><td>Agrandit/Réduit la taille de la police.</td></tr>
 <tr><td><span class="key">Alt</span> <span class="key">Entrée</span></td><td></td><td>Entre/sort du mode plein écran.</td></tr>
-<tr><td class="onelinetop"><span class="key">Maj</span> <span class="key">↑</span>/<span class="key">↓</span></td><td></td><td>Fait défiler d'une ligne vers le haut ou vers le bas la sortie du Terminal.</td></tr>
-<tr><td class="onelinetop"><span class="key">Maj</span> <span class="key">PageUp</span>/<span class="key">PageDown</span></td><td></td><td>Fait défiler d'une page vers le haut ou vers le bas la sortie du Terminal.</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>Complétion. Après avoir entré quelques lettres, tapez <span class="key">TAB</span> une fois pour complétez automatiquement un nom de fichier ou un chemin d’accès. Si plus d’un fichier convient, il s’arrêtera à l’endroit où les noms commencent à être distincts et vous devrez ajouter des lettres pour les distinguer. Vous pourrez aussi taper deux fois <span class="key">TAB</span> pour obtenir la liste de toutes les correspondances.</td></tr>
 <tr><td><span class="key">↑</span>/<span class="key">↓</span></td><td></td><td>Remonte ou descend dans la liste de l'historique des commandes entrées précédemment.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">R</span></td><td></td><td>Historiques des commandes Bash. Toutes les commandes que vous entrez sont enregistrées dans le fichier <span class="path">~/.bash_history</span>. Tapez <span class="key">CTRL</span> <span class="key">R</span> et commencez à entrer une commande et vous obtiendrez la première commande correspondante dans l’historique de bash. Continuez à taper <span class="key">CTRL</span> <span class="key">R</span> jusqu’à trouver la commande que vous recherchez et tapez <span class="key">Entrée</span> pour l’exécuter.</td></tr>

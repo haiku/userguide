@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2010-2014, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -55,15 +55,24 @@
 <li><a href="../../jp/applications/mediaplayer.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="mail.html">Pošta</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Aplikácie</a> 
-::  <a href="midiplayer.html">Prehrávač MIDI</a>  »
+ «  <a href="mail.html">Pošta</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Aplikácie</a> 
+::  <a href="midiplayer.html">Prehrávač MIDI</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
 <div class="box-info">Preklad tejto stránky zatiaľ nie je dokončený. Dovtedy sa nedokončené časti zobrazia v anglickom origináli.</div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td><a href="#playback">Audio and video playback</a><br />
+                <a href="#playlists">Playlists</a><br />
+                <a href="#ratings">Ratings</a><br />
+                <a href="#settings">Settings</a><br />
+                <a href="#controls">Keyboard controls</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/mediaplayer-icon_64.png" alt="mediaplayer-icon_64.png" width="64" height="64" />Prehrávač multimédií</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -77,7 +86,8 @@
 <p>Posuvník indikátora priebehu vám umožňuje rýchlo preskočiť na požadovanú pozíciu, držanie myši nad ním zobrazí aktuálny a zostávajúci čas klipu. Kliknutím na ukazovateľa času vpravo prepínate medzi dĺžkou, aktuálnym a zostávajúcim časom.<br />
 Pod tým nájdete obvyklé ovládacie prvky na preskočenie do ďalšej/predošlej stopy, prehrať/pozastaviť alebo zastaviť. Ďalej nasleduje ovládanie hlasitosti (kliknutím na reproduktor stlmíte zvuk) a VU meter. </p>
 
-<h2>Prehrávanie audio a videa</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playback" name="playback">Audio and video playback</a></h2>
 <p>Pretože neexistujú žiadne funkcie špecifické pre prehrávanie zvukových súborov, budeme sa zaoberať videom a všeobecnými funkciami.</p>
 <img src="../images/apps-images/mediaplayer-info.png" alt="mediaplayer-info.png" />
 <p>Pre všetky multimediálne súbory je dostupná možnosť <span class="menu">Info o súbore…</span> (<span class="key">ALT</span> <span class="key">I</span>). Zobrazuje informácie o momentálne načítanom súbore, ako napr. dĺžka prehrávania alebo podrobnosti o audio/video stope a jej kodeku.</p>
@@ -91,16 +101,26 @@ MyMovie.Français.srt</pre>
 <p>Viaceré zvukové stopy, väčšinou používane vo video súboroch s viacerými jazykmi, môžete prepínať v submenu <span class="menu">Zvuková stopa</span>. Submenu <span class="menu">Video stopa</span> ponúka to isté v prípade, že je dostupných viac video streamov.</p>
 <p>Spustiť <span class="menu">Celoobrazovkový režim</span> môžete klávesmi (<span class="key">ALT</span> <span class="key">ENTER</span> or <span class="key">F</span> alebo dvojklikom lavým tlačidlom), skryť rámy okna Prehrávača multimédií a ovládacie prvky možnosťou <span class="menu">Skryť rozhranie</span> (<span class="key">ALT</span> <span class="key">H</span> alebo dvojklikom pravým tlačidlom) alebo mať jeho okno  <span class="menu">Vždy na vrchu</span> (<span class="key">ALT</span> <span class="key">A</span>).</p>
 
-<h2>Zoznamy stôp</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playlists" nsame="playlists">Playlists</a></h2>
 <p><span class="menu">Prehrávač multimédií | Zoznam stôp...</span> (<span class="key">ALT</span> <span class="key">P</span>) otvorí okno so súbormi, ktoré sú momentálne v poradí na prehrávanie. Dvojitým kliknutím na položku sa súbor začne prehrávať. </p>
 <img src="../images/apps-images/mediaplayer-playlist.png" alt="mediaplayer-playlist.png" />
 <p>You can add more files by dropping them into the list and rearrange their position via drag &amp; drop. New files are added in the order they were selected from a Tracker window. Drag &amp; dropping them with the right mouse button shows a context menu to insert them <span class="menu">sorted</span> (alphabetically).<br />
 From the <span class="menu">Edit</span> menu you can <span class="menu">Randomize</span> or <span class="menu">Remove</span> (<span class="key">DEL</span>) an entry from the list or delete the actual file with <span class="menu">Move to Trash</span> (<span class="key">ALT</span> <span class="key">T</span>).</p>
 <p>Samozrejme môžete <span class="menu">Uložiť</span> zoznam stôp a neskôr ho znova <span class="menu">Otvoriť</span> alebo spustiť ho jednoduchým dvojklikom na súbor zoznamu stôp.</p>
 
-<h2>Nastavenia</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="rating" name="rating">Rating</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Here you can set a <span class="menu">Rating</span> of the current clip between 1 and 10, or choose <span class="menu">Reset rating</span> to set it back to "unrated" (= "0").</p>
+<p>In Tracker, ratings are displayed in a "Rating" attribute column as a number of stars. Five stars represent the 10 possible values, resulting in half-star steps. For example, a rating of 7 is shown as 7 / 2 = 3.5 stars: ★★★⯪☆.<br />
+You can edit the rating directly in Tracker as well: Select the file, choose <span class="menu">Edit name</span> from the <span class="menu">File</span> menu and press <span class="key">TAB</span> to get into the "Rating" column. Now you can enter the new numerical value which will turn into a star rating after hitting <span class="key">ENTER</span>.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="settings" name="settings">Settings</a></h2>
 <p>Existuje viacero nastavení na doladenie správania Prehrávača multimédií:</p>
-<img src="../images/apps-images/mediaplayer-settings.png" alt="mediaplayer-settings.png" />
+<img src="../images/apps-images/mediaplayer-settings.png" style="float:left;margin-right:15px" alt="mediaplayer-settings.png" />
 <p>The first batch, <span class="menu">Play mode</span>, is pretty self-explaining.<br />
 Start playback automatically, close windows when finished or play clips in a loop.<br />
 From the pop-up menu you choose MediaPlayer's launch behavior. Should it resume playing where it left off last time: <span class="menu">always</span>, <span class="menu">never</span>, or <span class="menu">ask every time</span>.</p>
@@ -110,8 +130,10 @@ You can <span class="menu">Scale movies smoothly</span> (when not in overlay mod
 <span class="menu">Scale controls in full-screen mode</span> if you prefer slightly bigger controls, maybe because you watch the screen from a bit farther away when in full-screen mode.<br />
 Then there are settings for <span class="menu">Subtitle size</span> and <span class="menu">Subtitle placement</span>. They can be shown at the <span class="menu">Bottom of video</span>, which will always have them overlayed over the picture. Or <span class="menu">Bottom of screen</span>, which allows you to resize the window vertically and have the subtitles appear in the black bar at the bottom instead.</p>
 <p>Posledné nastavenie určuje hlasitosť klipov, ktoré sa prehrávajú na pozadí. Môžete ich nechať revať na <span class="menu">Plnej hlasitosti</span>, menej mätúcej <span class="menu">Nízkej hlasitosti</span> alebo ich mať <span class="menu">Stlmené</span>.</p>
+<p style="clear:left"></p>
 
-<h2>Ovládanie klávesnicou</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="controls" name="controls">Keyboard controls</a></h2>
 <p>Prehrávač multimédií ponúka pohodlné kombinácie klávesov na ovládanie prehrávania bez použitia myši.</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">Z</span></td><td style="width:15px;"></td><td>Preskočiť na predchádzajúcu stopu</td></tr>
@@ -140,9 +162,9 @@ Then there are settings for <span class="menu">Subtitle size</span> and <span cl
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="mail.html">Pošta</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Aplikácie</a> 
-::  <a href="midiplayer.html">Prehrávač MIDI</a>  »
+ «  <a href="mail.html">Pošta</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Aplikácie</a> 
+::  <a href="midiplayer.html">Prehrávač MIDI</a>  »
 </span></div>
 </div>
 

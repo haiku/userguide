@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -69,7 +69,7 @@
 <tr><td>Asetukset:</td><td></td><td><i>ei ole</i><br />MBR-varmuuskopiot tallennetaan oletuksena hakemistoon <span class="path">~/config/settings/bootman/</span></td></tr>
 </table>
 <p><br /></p>
-<p>Jos et lisää Haiku-osiota sellaiseen olemassa olevaan käynnistyshallintaan kuin esimerkiksi GRUB, Käynnistyshallinta-sovellus voi asentaa Master Boot Record (MBR) -tietueeseen pienen käynnistysvalikon, joka näyttää likimain tällaiselta:</p>
+<p>Jos et lisää Haiku-osiota olemassa olevaan käynnistyshallintaan kuten esimerkiksi GRUB:iin, Käynnistyshallinta-sovellus voi asentaa Master Boot Record (MBR) -tietueeseen pienen käynnistysvalikon, joka näyttää likimain tällaiselta:</p>
 <img src="../images/apps-images/bootmenu.png" alt="bootmenu.png" />
 <div class="box-info">Käynnistyshallintaa ei ole vielä testattu kovin hyvin ja siinä on vielä joitakin rajoituksia, joista se valittaa, jos ne kohdataan: valikko voidaan asentaa vain ensimmäiselle kiintolevylle ja siinä on oltava 2 kibitavua tilaa Master Boot Record (MBR) -tietueen jälkeen.</div>
 <p>Käynnistyshallinta ohjaa sinut käynnistysvalikon asennusprosessin lävitse.</p>
@@ -85,6 +85,8 @@
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>Valitse vain varmuuskopiotiedoston "<tt>MBR</tt>" kohde tai jätä oletuspolku. <span class="button">Seuraava</span>-painikkeen napsauttamisen jälkeen saat vahvistuksen siitä, että varmuuskopiointi onnistui.</p>
+<div class="box-info">Varmista, että "<span class="path">/boot</span>" on asennuslevysi (esim.: USB-tikku) polussa. Se on järkevää, jos jokin menee pieleen ja sinun tarvitsee palauttaa asetukset välittömästi. Pitkäaikaista varmuuskopiointia varten sinun pitäisi tallentaa MBR-tietue myös uudelle Haiku-levyllesi, koska oli se todennäköistä tai ei, olet jo formatoinnut ja käyttänyt asennus-USB-tikkuasi muihin tarkoituksiin sen jälkeen...
+</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">Käynnistysvalikon asettaminen</a></h2>
@@ -98,7 +100,16 @@
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>Ennen kuin käynnistysvalikko kirjoitetaan MBR-tietueeseen, saat asetuksesi yhteenvedon ja siten viimeisen mahdollisuuden keskeyttää toiminnon. Älä silti murehdi, niin kauan kuin pidät MBR-varmuuskopion tallessa, voit helposti perua muutokset. Jos asiat menevät kunnolla sekaisin, voit aina käynnistää Haikun asennus-CD-levyltä tai USB-tikulta ja kirjoittaa MBR-varmuuskopion takaisin kiintolevylle Käynnistyshallinnan avulla.</p>
-
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">Master Boot Record (MBR)-tietueen varmuuskopion palauttaminen</a></h2>
+<p>Nykyisin ei ole mahdollista poistaa asennettua käynnistysvalikkoa Käynnistyshallinta-sovelluksella. Puutteen voi kuitenkin kiertää: Voit käyttää Pääteikkunan <span class="cli">dd</span>-komentoa MBR-tietueen varmuuskopion palauttamiseen.</p>
+<div class="box-warning"><span class="cli">dd</span> voi olla hyvin tuhoisa työkalu.<br />
+Ole hyvin varovainen ja tarkista erityisesti laitteen polkuparametrit!</div>
+<p><span class="cli">dd</span>-komentorivi näyttää joltain tämän näköiseltä:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>Syöteparametri ("<tt>if</tt>") on polku MBR-tietueen varmuuskopioon.<br />
+Tulosteparametri (<tt>"of"</tt>) on polku siihen raakelevyyn, johon MBR-tietue halutaan kirjoittaa. Löydät kaikki laitteet ja niiden polut <a href="drivesetup.html">Laitehallinta</a>-sovelluksella.</p>
 </div>
 </div>
 

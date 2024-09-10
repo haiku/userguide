@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2010-2014, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -57,14 +57,23 @@
 <li><a href="../../jp/applications/mediaplayer.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="mail.html">Mail</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Anwendungen</a> 
-::  <a href="midiplayer.html">MidiPlayer</a>  »
+ «  <a href="mail.html">Mail</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Anwendungen</a> 
+::  <a href="midiplayer.html">MidiPlayer</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td><a href="#playback">Wiedergabe von Audio- und Videodateien</a><br />
+                <a href="#playlists">Playlisten</a><br />
+                <a href="#ratings">Bewertungen</a><br />
+                <a href="#settings">Einstellungen</a><br />
+                <a href="#controls">Tastatursteuerung</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/mediaplayer-icon_64.png" alt="mediaplayer-icon_64.png" width="64" height="64" />MediaPlayer</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -78,10 +87,11 @@
 <p>Mit dem Zeiger auf dem Fortschrittsbalken lässt sich schnell zur gewünschten Position springen. Hält man den Mauszeiger über den Balken, wird die aktuelle und verbleibende Zeit für diesen Clip eingeblendet. Mit Klicken auf die Zeitanzeige rechts davon lässt sich zwischen Gesamtzeit, momentaner Zeit und Restzeit wechseln.<br />
 Darunter befinden sich die üblichen Abspiel-Tasten: zum vorigen Clip springen, Wiedergabe/Pause, Stopp und zum nächsten Clip springen. Daneben befindet sich ein Lautstärkeregler und eine Pegelanzeige. Das Lautsprechersymbol schaltet stumm.</p>
 
-<h2>Wiedergabe von Audio- und Videodateien</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playback" name="playback">Wiedergabe von Audio- und Videodateien</a></h2>
 <p>Weil es keine Features gibt, die nur auf Audio zutreffen, geht's gleich weiter mit den allgemeinen bzw. Videofunktionen.</p>
 <img src="../images/apps-images/mediaplayer-info.png" alt="mediaplayer-info.png" />
-<p>Für alle Medien zeigt <span class="menu">Datei Info...</span> (<span class="key">ALT</span> <span class="key">I</span>) Informationen wie Spieldauer oder Details zu den Audio- und Video-Spuren und den verwendeten Codecs der aktuellen Datei.</p>
+<p>Für alle Medien zeigt <span class="menu">Informationen</span> (<span class="key">ALT</span> <span class="key">I</span>)  die Spieldauer oder Details zu den Audio- und Video-Spuren und den verwendeten Codecs der aktuellen Datei.</p>
 <p>Die meisten der oft benutzten Menü-Befehle stehen auch in einem Kontextmenü mittels Rechtsklick auf die Videofläche zur Verfügung. Das ist vor allem im Vollbildmodus praktisch.<br />
 Unter <span class="menu">Video</span> befinden sich Befehle, um das Fenster auf verschiedene Größen zu zoomen oder das Seitenverhältnis auf diverse Standardwerte zu erzwingen. Für korrekt erstellte Dateien fährt man mit <span class="menu">Stream-Einstellungen</span> am besten.</p>
 <p>MediaPlayer kann Untertitel im <a href="http://en.wikipedia.org/wiki/SubRip">SRT</a>-Format darstellen. Damit sie unter <span class="menu">Untertitel</span> auftauchen, muss ihr Dateiname identisch zu der Videodatei sein, allerdings mit einem angehängten Sprachkürzel und der Endung ".srt" statt der Videoformat-Endung. Also:</p>
@@ -92,16 +102,26 @@ DerFilm.Français.srt</pre>
 <p>Mehrere Audiotracks, meist für unterschiedliche Sprachen innerhalb einer Videodatei benutzt, finden sich im Menü <span class="menu">Audiospur</span>. <span class="menu">Videospur</span> bietet das entsprechend an, falls mehrere Videostreams vorhanden sind.</p>
 <p>Mittels <span class="menu">Vollbild-Mode</span> (<span class="key">ALT</span> <span class="key">RETURN</span> oder <span class="key">F</span> oder einen Doppel-Linksklick) lässt sich in den Vollbildmodus wechseln, <span class="menu">Oberfläche ausblenden</span> (<span class="key">ALT</span> <span class="key">H</span> oder ein Doppel-Rechtsklick) blendet MediaPlayers Fensterrahmen und Bedienelemente aus, und durch <span class="menu">Immer im Vordergrund</span> (<span class="key">ALT</span> <span class="key">A</span>) schwebt der MediaPlayer immer über allen anderen Fenstern.</p>
 
-<h2>Playlisten</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playlists" nsame="playlists">Playlisten</a></h2>
 <p><span class="menu">MediaPlayer | Playliste...</span> (<span class="key">ALT</span> <span class="key">P</span>) öffnet ein Fenster mit allen Dateien die zur Wiedergabe anstehen. Ein Doppelklick auf einen Eintrag startet die Wiedergabe.</p>
 <img src="../images/apps-images/mediaplayer-playlist.png" alt="mediaplayer-playlist.png" />
 <p>Um weitere Dateien einzufügen, lässt man sie einfach über der Liste fallen und ändert ihre Position per Drag &amp; Drop. Die neuen Dateien werden dabei in der Reihenfolge eingefügt, in der sie im Trackerfenster ausgewählt wurden. Wird mit der rechten Maustaste in die Playliste gezogen, erlaubt ein Kontextmenü eine (alphabetische) Sortierung der neuen Dateien.<br />
 Aus dem Menü <span class="menu">Bearbeiten</span> lässt sich eine <span class="menu">Zufällige Reihenfolge</span> erzeugen oder einzelne Einträge aus der Liste <span class="menu">Entfernen</span> (<span class="key">ENTF</span>). Die eigentliche Datei lässt sich auch direkt von hier <span class="menu">In Papierkorb verschieben</span> (<span class="key">ALT</span> <span class="key">T</span>).</p>
 <p>Natürlich lässt sich eine Playlist auch <span class="menu">Speichern</span> und später wieder <span class="menu">Öffnen</span>. Oder man startet die Wiedergabe gleich mit einem Doppelklick auf eine Playlist-Datei.</p>
 
-<h2>Einstellungen</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="rating" name="rating">Bewertungen</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Hier lässt sich für den aktuellen Clip eine Bewertung zwischen 1 und 10 vergeben, oder die Bewertung zurücksetzen damit das Bild wieder als "unbewertet" (= "0") erscheint.</p>
+<p>Im Tracker wird die Bewertung in einer Attributspalte "Rating" als eine Reihe von Sternen dargestellt. Fünf Sterne repräsentieren die 10 möglichen Werte in "Halbstern" Stufen. Beispielsweise wird eine Bewertung von 7 dargestellt als 7 / 2 = 3,5 Sterne: ★★★⯪☆.<br />
+Die Bewertung lässt sich auch direkt in Tracker vornehmen: Datei auswählen, <span class="menu">Umbenennen</span> aus dem <span class="menu">Datei</span> Menü wählen und die <span class="key">TAB</span> Taste so oft drücken, bis die "Rating" Spalte erreicht ist. Nun lässt sich der numerische Wert eingeben, der zu einer Sternebewertung wird sobald man <span class="key">RETURN</span> drückt.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="settings" name="settings">Einstellungen</a></h2>
 <p>Das Verhalten des MediaPlayers lässt sich mit ein paar Einstellungen verändern:</p>
-<img src="../images/apps-images/mediaplayer-settings.png" alt="mediaplayer-settings.png" />
+<img src="../images/apps-images/mediaplayer-settings.png" style="float:left;margin-right:15px" alt="mediaplayer-settings.png" />
 <p>Die ersten Optionen unter <span class="menu">Wiedergabe</span> sind ziemlich selbsterklärend. Wiedergabe automatisch starten, Fenster nach vollendetem Abspielen schließen, oder Clips in Endlosschleife spielen.<br />
 Mit dem Pop-up Menü darunter bestimmt man das Startverhalten des MediaPlayers. Soll das Abspielen an der Stelle fortgesetzt werden, an der zuletzt aufgehört wurde: <span class="menu">nie</span>, <span class="menu">immer</span>, oder <span class="menu">jedesmal fragen</span>.</p>
 <p>Es folgen Einstellungen zur <span class="menu">Darstellung</span>.<br />
@@ -110,8 +130,10 @@ Es lässt sich ein <span class="menu">Zoom mit hoher Qualität</span> einschalte
 Durch <span class="menu">Bedienelemente im Vollbildmodus vergrößern</span> werden die Bedienelemente etwas größer dargestellt, vielleicht sitzt man bei bildfüllendem Video ja etwas weiter weg vom Bildschirm.<br />
 Dann folgen Optionen zur <span class="menu">Untertitelgröße</span> und <span class="menu">Untertitelposition</span>. Sie können <span class="menu">Unten im Video</span> eingeblendet werden, wodurch sie immer im Bild sind. Oder <span class="menu">Unten im Fenster</span>, was es erlaubt die Fensterhöhe so zu ändern, dass die Untertitel immer unten im schwarzen Balken erscheinen.</p>
 <p>Die letzte Option bestimmen, in welcher Lautstärke Clips abgespielt werden, deren Fenster gerade nicht im Vordergrund sind. Entweder alle spielen immer <span class="menu">Volle Lautstärke</span>, mit weniger störender <span class="menu">Niedrige Lautstärke</span> oder ganz <span class="menu">Stumm geschaltet</span>.</p>
+<p style="clear:left"></p>
 
-<h2>Tastenkürzel</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="controls" name="controls">Tastatursteuerung</a></h2>
 <p>MediaPlayer kennt einige nützliche Tastenkürzel um die Wiedergabe zu steuern ohne die Maus zu benutzen.</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">Y</span></td><td style="width:15px;"></td><td>Vorheriger Track</td></tr>
@@ -124,7 +146,7 @@ Dann folgen Optionen zur <span class="menu">Untertitelgröße</span> und <span c
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td align="right"><span class="key">←</span> / <span class="key">→</span></td><td style="width:15px;"></td><td>Rückwärts/Vorwärts spulen</td></tr>
 <tr><td align="right"><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>10 Sekunden rückwärts/vorwärts springen</td></tr>
-<tr><td align="right"><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>30 Sekunden rückwärts/vorwärts springen</td></tr>
+<tr><td align="right"><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>30 Sekunden rückwärts/vorwärts springen</td></tr>
 
 <tr><td align="right"><span class="key">↓</span> / <span class="key">↑</span></td><td></td><td>Leiser/Lauter</td></tr>
 
@@ -140,9 +162,9 @@ Dann folgen Optionen zur <span class="menu">Untertitelgröße</span> und <span c
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="mail.html">Mail</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Anwendungen</a> 
-::  <a href="midiplayer.html">MidiPlayer</a>  »
+ «  <a href="mail.html">Mail</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Anwendungen</a> 
+::  <a href="midiplayer.html">MidiPlayer</a>  »
 </span></div>
 </div>
 

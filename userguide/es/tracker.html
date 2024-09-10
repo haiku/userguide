@@ -152,8 +152,8 @@ Este filtrado de type-ahead se selecciona en las <a href="#tracker-preferences.h
 </ul>
 <div class="box-info">
 <p _translation_id="4341">Sometimes you just want to rearrange a few icons without doing a complete <span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>). In that case, you select these icons and start to drag them to their new location. Before you drop them there, keep <span class="key">ALT</span> pressed. This will align the icons to the invisible grid.</p>
-<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. Normally, that's the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p>
-</div>
+<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. That applies to the width of the labels as well: If a label gets truncated by the column width in <span class="menu">List view</span>, it'll be similarly truncated when switching to <span class="menu">Mini</span> and <span class="menu">Icon view</span>.<br />
+Normally, the first column is the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p></div>
 <p>El resto de las funciones son muy autoexplicativas, vayamos a las preferencias de Tracker.</p>
 
 <h3>
@@ -182,11 +182,12 @@ Este filtrado de type-ahead se selecciona en las <a href="#tracker-preferences.h
 <p>Como siempre, los comandos son muy claros.</p>
 <ul>
 <li><p><span class="menu">Buscar…</span> - Localiza un archivo o carpeta. Vea el tema <a href="queries.html">Consultas</a> para mayor información.</p></li>
-<li><p><span class="menu">Nuevo</span> - Crea una carpeta nueva o cualquier otro archivo basado en una <i>plantilla</i>.
-<br /><br />
-<img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
+<li><p><span class="menu">New</span> - Create a new folder or any other file based on a template.
 </p>
-<p>Al seleccionar <span class="menu">Editar Plantillas…</span> se abre la carpeta <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Al crearse un archivo en ese folder se ofrecerá su tipo de archivo con el nombre del archivo y otros atributos como plantilla en el menú <span class="menu">New</span>. Aquí hay un archivo "Text" con el tipo de archivo <tt>text/plain</tt>. Vea el tema <a href="filetypes.html">Tipos de archivo</a> para más información.</p></li>
+<img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
+<p>Choosing <span class="menu">Edit templates…</span> at the bottom opens the folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Create a file or folder there and it will appear as a template in the <span class="menu">New</span> menu. The new file/folder created by the template will have its filetype, filename, contents, and all its other attributes. In case of a folder, it'll also have its window size/position and attribute column layout.</p>
+<p>In the screenshot above, you see the custom template folders "Email folder" and "Music folder". Both will create folders with those same custom overlay icons and have the relevant attributes already set.</p>
+<p>You can also sort your templates into custom submenus. Just choose <span class="menu">Add new submenu…</span> and a new special folder gets created in <span class="path">Tracker New Templates</span> that you then rename to fit its purpose. Copy your template files there to appear in the new submenu. The screenshot above shows the submenus "C   dev files" and "Office files".</p></li>
 <li><p><span class="menu">Abrir con…</span> - Un submenú ofrece todas las aplicaciones que pueden manejar este tipo de archivo.
 <br /><br />
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
@@ -195,17 +196,17 @@ Este filtrado de type-ahead se selecciona en las <a href="#tracker-preferences.h
 <br /><br />
 <img src="images/tracker-images/open-with-preferred.png" alt="open-with-preferred" />
 <p>Aquí de nuevo encontrará los programas que se listaron en el submenú. Al seleccionar uno y dar clic en el botón <span class="button">Open and Make Preferred</span> (abrir y hacerla preferida), puede cambiarse la aplicación preferida para todos los archivos con ese tipo de archivo, en este ejemplo <tt>text/plain</tt>.</p></li>
-<li><span class="menu">Get info</span>
-<p>This opens a panel that shows the meta data of a file and lets you edit its permissions. You can rename it by clicking on the file name at the top.</p>
+<li><span class="menu">Obtener información</span>
+<p>Abre un cuadro de diálogo que muestra los metadatos de un archivo y permite editar sus permisos. Al hacer clic sobre su nombre se puede renombrar el archivo.</p>
 <img src="images/tracker-images/get-info.png" alt="get-info" />
-<p>The panel consists of three tabs:</p>
+<p>El panel se compone de tres pestañas:</p>
 <ul>
-<li><span class="menu">Information</span>: Shows standard data like size, date of creation/modification, file type and location. Click on the location path to open the file's parent folder. The <span class="menu">Open with</span> menu sets the preferred application to open this particular file.</li>
-<li><span class="menu">Permissions</span>: Lets you change 'owner', 'group' and 'other' file permissions.</li>
-<li><span class="menu">Attibutes</span>: Lists all extra file attributes with their value and type.</li>
+<li><span class="menu">Información</span>: muestra datos comúnes como el tamaño, fecha de creación y modificación, tipo de archivo y ubicación. Al hacer clic sobre la ruta de ubicación abre la carpeta contenedora del archivo. El menú <span class="menu">Abrir con</span> establece la aplicación preferida para abrir este archivo en particular.</li>
+<li><span class="menu">Permisos</span>: permite cambiar los permisos de «propietario», «grupo» y «otros» del archivo.</li>
+<li><span class="menu">Atributos</span>: enumera todos los atributos del archivo junto con su tipo y valor.</li>
 </ul></li>
 <li><p><span class="menu">Editar nombre</span>, <span class="menu">Duplicar</span> y <span class="menu">Mover a la papelera</span> - le permite renombrar o duplicar un archivo o poner el (los) archivo(s) seleccionado(s) en la papelera.</p></li>
-<li><p><span class="menu">Mover a</span>, <span class="menu">Copiar a</span> y <span class="menu">Crear enlace</span> - le permiten mover, copiar o hacer un enlace al (a los) archivo(s) seleccionado(s) usando el método de navegación de submenús. Al mantener presionada la tecla <span class="key">MAYÚSCULAS</span> mientras invoca el menú ofrece la opción de crear un enlace relativo.</p></li>
+<li><p><span class="menu">Move to</span>, <span class="menu">Copy to</span> and <span class="menu">Create link</span> - lets you move, copy or link the selected file(s) using the submenu navigating method. Holding <span class="key">SHIFT</span> while invoking the menu offers the option to create a relative link. You recognize links by their dot-underlined icon label.</p></li>
 <li><p><span class="menu">Cortar</span>,  <span class="menu">Copiar</span> y <span class="menu">Pegar</span> - le permiten cortar, copiar y pegar archivos usando el portapapeles. Al mantener presionada la tecla <span class="key">MAYÚSCULAS</span> mientras se invoca el menú se pueden <b>Copiar/Cortar más</b> archivos, tal vez desde otra carpeta que puede pegar en algún otro lugar después. También, mientras se mantiene presionada la tecla <span class="key">MAYÚSCULAS</span> se pueden pegar los archivos copiados en el portapapeles como enlaces.</p></li>
 <li><p><span class="menu">Identificar</span> - Investigará y seleccionará el tipo de los archivos si no lo tuvieran antes, p. ej., si se transfirió el archivo con el comando <span class="cli">wget</span> el cual no selecciona por sí mismo un tipo de archivo. Al mantener la tecla <span class="key">MAYÚSCULAS</span> presionada mientras se invoca al menú cambia el item a <b>Forzar identificación</b> lo cual identifica el tipo de archivo y lo corrige si antes estuviera equivocado.</p></li>
 <li><p><span class="menu">Add-Ons</span> (Agregados) - le ofrece todos los agregados genéricos de Tracker y aquellos que puedan manejar el (los) archivo(s) seleccionado(s). Vea el tema <a href="tracker-add-ons.html">Agregados de Tracker</a> para más información.</p></li>

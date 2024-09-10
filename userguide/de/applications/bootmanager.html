@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -88,6 +88,7 @@ Mit <span class="button">Installieren</span> wird der Installationsprozess fortg
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>Der Standardpfad für die Sicherungsdatei "<tt>MBR</tt>" kann beibehalten oder ein neues Zielverzeichnis angegeben werden. Ein Klick auf <span class="button">Weiter</span> liefert eine Bestätigung, ob die Sicherung erfolgreich war.</p>
+<div class="box-info">Das "<span class="path">/boot</span>" im Pfad ist das Installier-Medium (z. B. ein USB-Stick). Das ist sinnvoll, wenn etwas nicht klappt und man den Original-MBR sofort zurückschreiben will. Für eine längerfristige Sicherung sollte der MBR aber auch auf die neue Haiku Disk gespeichert werden. Wenn der Original-MBR nämlich irgendwann mal gebraucht wird, wurde der USB-Stick in der Zwischenzeit bestimmt schon mal formatiert und für etwas anderes benutzt...</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">Konfigurieren des Bootmenüs</a></h2>
@@ -101,7 +102,16 @@ Mit <span class="button">Installieren</span> wird der Installationsprozess fortg
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>Bevor das Bootmenü in den MBR geschrieben wird, werden alle Einstellungen noch einmal zusammengefasst. Danach besteht die letzte Möglichkeit, die Operation doch noch abzubrechen. Aber keine Sorge, solange die Sicherung des MBR nicht gelöscht wird, können die Änderungen rückgängig gemacht werden. Sollte etwas schiefgehen, kann jederzeit von einer Haiku-Installations-CD oder einem USB-Stick gebootet werden, um die Sicherung des MBR mittels BootManager zurückzuschreiben.</p>
-
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">Gesicherten Master Boot Record (MBR) wiederherstellen</a></h2>
+<p>Zur Zeit ist es noch nicht möglich das Bootmenü mit der BootManager Anwendung wieder zu entfernen. Die Sicherung des MBR kann jedoch im Terminal mit dem <span class="cli">dd</span> Befehl wiederhergestellt werden.</p>
+<div class="box-warning"><span class="cli">dd</span> kann ein sehr zerstörerisches Tool sein.<br />
+Darum äußerste Vorsicht walten lassen, insbesondere beim Gerätepfad-Parameter!</div>
+<p>Die <span class="cli">dd</span> Kommandozeile sieht etwa so aus:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>Der Input-Parameter ("<tt>if</tt>") ist der Pfad zur MBR Sicherungsdatei.<br />
+Der Output-Parameter (<tt>"of"</tt>) ist der Pfad zum Raw-Gerät, auf das der MBR geschrieben werden soll. Alle Geräte und ihre Pfade finden sich in der <a href="drivesetup.html">DriveSetup</a> Anwendung.</p>
 </div>
 </div>
 

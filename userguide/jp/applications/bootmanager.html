@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -70,7 +70,7 @@
 <tr><td>設定ファイル:</td><td></td><td><i>無し。</i><br />MBR のバックアップはデフォルトで <span class="path">~/config/settings/bootman/</span> に保存されます。</td></tr>
 </table>
 <p><br /></p>
-<p>GRUB のような既存のブートマネージャーに Haiku のパーティションを追加しない場合、ブートマネージャーはマスターブートレコード (MBR) に以下の図のような小さなブートメニューをインストールできます。</p>
+<p>GRUB のような既存のブートマネージャーに Haiku のパーティションを追加しない場合、ブートマネージャーはマスターブートレコード (MBR) に下図のような小さなブートメニューをインストールできます。</p>
 <img src="../images/apps-images/bootmenu.png" alt="bootmenu.png" />
 <div class="box-info">ブートマネージャーは充分にテストされていません、さらに、いくつかの制限を満たしていない場合、動かなくなります。メニューは最初のハードディスクのみにインストールでき、マスターブートレコード (MBR) のうしろに 2KiB のスペースを必要とします。</div>
 <p>ブートマネージャーは、ブートメニューのインストール作業全体を案内してくれます。</p>
@@ -88,6 +88,7 @@
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>単に、バックアップファイル "<tt>MBR</tt>" の保存先を選択するか、デフォルトのパスのままにするかです。<span class="button">次へ (Next)</span> を押した後に、バックアップが成功したかどうかの確認が表示されます。</p>
+<div class="box-info">パスの "<span class="path">/boot</span>" は、インストールメディア (例 USB メモリー) です。何か失敗してすぐに戻る必要があるときに意味があります。長期間のバックアップ用に、MBR を新しい Haiku ディスクにも保存するべきです。おそらく、その間にインストール USB メモリーをフォーマットして他のことに使用しているからです…</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">ブートメニューの設定</a></h2>
@@ -100,8 +101,17 @@
 <a name="4-mbr" id="4-mbr">ブートメニューの書き込み</a></h2>
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
-<p>ブートメニューが MBR に書き込まれる前に、設定の概要が表示され、次に作業を中止する最後のチャンスがあります。しかし、慌てないでください。MBR のバックアップを安全に保存していれば、変更は容易に戻せます。めちゃくちゃになってしまったとしても、いつでも Haiku インストール CD や USB スティックから立ち上げて、MBR バックアップをブートマネージャーで書き戻せます。</p>
-
+<p>ブートメニューが MBR に書き込まれる前に、設定の概要が表示され、次に作業を中止する最後のチャンスがあります。しかし、慌てないでください。MBR のバックアップを安全に保存していれば、変更は容易に戻せます。めちゃくちゃになってしまったとしても、いつでも Haiku インストール CD や USB メモリーから立ち上げて、MBR バックアップをブートマネージャーで書き戻せます。</p>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">マスターブートレコード (MBR) のバックアップのリストア</a></h2>
+<p>現在、ブートマネージャーアプリケーションでブートメニューのアンインストールはできません。しかし、以下の回避策があります: ターミナル内で、<span class="cli">dd</span> コマンドを使って MBR のバックアップをリストアできます。</p>
+<div class="box-warning"><span class="cli">dd</span> はとても危険なツールになりえます。<br />
+特にデバイスパス引数は十分注意してチェックしてください!</div>
+<p><span class="cli">dd</span> のコマンドラインはこのようなものです:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>入力の引数 ("<tt>if</tt>") は、MBR のバックアップへのパスです。<br />
+出力の引数 (<tt>"of"</tt>) は、MBR が書き込まれる raw ディスクへのパスです。すべてのデバイスとパスは、<a href="drivesetup.html">DriveSetup</a> アプリケーションで見られます。</p>
 </div>
 </div>
 

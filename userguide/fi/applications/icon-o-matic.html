@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -215,7 +215,10 @@ Ota esimerkiksi tämä Pääteikkunakuvake:</p>
 <p>Hahmot sijaitsevat toistensa päällä, jokainen omassa kerroksessaan, jos niin halutaan. Ne voi järjestää uudelleen rahaamalla ja pudottamalla komponenttirivin eri kohtaan luettelossa.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Hahmovalikko</a></h4>
-<p><span class="menu">Hahmo</span>-valikko tarjoaa aiemmin mainitut mahdollisuudet <span class="menu">Lisää tyhjä, path/style/path-polku ja tyyli</span> ja hahmolle <span class="menu">Tee kaksoiskappale</span> tai <span class="menu">Poista</span>. Sitten on myös:</p>
+<p><span class="menu">Hahmo</span>-valikko tarjoaa aiemmin mainitut mahdollisuudet <span class="menu">Lisää tyhjä, polku/tyyli/polulla &amp; tyylillä</span> ja hahmolle <span class="menu">Tee kaksoiskappale</span> tai <span class="menu">Poista</span> hahmo.</p>
+<p>Toiminnolla <span class="menu">Lisää viitekuva</span> kykenet luomaa erityisen tyyppisen muodon. Se sallii sinun ladata minkä tahansa bittikarttakuvan (esim.: PNG tai JPEG) käytettäväksi taustana kuvaketta työstettäessä. Se on kätevää, kun luodaan esimerkiksi vektorigrafiikkaversio olemassa olevasta bittikarttakuvakkeesta. Viitekuva voidaan manipuloida kuten kaikkia muita muotoja (siirretty, kieretty, muutettu kokoa), mutta se ei ole osa kuvaketta, kun se tallennetaan HVIF-kuvakkeena.</p>
+
+<p>Sitten tässä on:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Nollaa muunnos</span></td><td style="width:15px;"></td><td>Palauttaa kaikki hahmon siirrot, koon muuttamiset ja pyörittämiset, joita olet toteuttanut hahmoon.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Jäädytä muunnos</span></td><td></td><td>Kun muunnat hahmoa, siihen liitetyt polut pysyvät alkuperäisillä paikoillaan. Tämä voi olla tarkoituksellista; ehkä useampi hahmo käyttää tuota polkua, ehkä tarkoituksellisesti käytit  <span class="menu">Valitsimet | Napsauta rasteriin</span> pisteiden asettamiseksi tarkkoihin pikselirajoihin.<br />
@@ -229,6 +232,7 @@ Jos näin ei ole, "Jäädytä muunnos" soveltaa nykyistä hahmomuunnosta liitett
 <tr><td><span class="menu">Minimi-LOD</span></td><td></td><td>Yksityiskohtatason minimi</td></tr>
 <tr><td><span class="menu">Maksimi-LOD</span></td><td></td><td>Yksityiskohtatason maksimi</td></tr>
 </table>
+<p>Viitekuvilla on sen sijaan <span class="menu">Alfa</span>-arvo, jolla asetetaan niiden läpinäkyvyys (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Yksityiskohtataso (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -282,13 +286,16 @@ Voit tietysti siirtää nämä indikaattorit vaihtamaan liukuväriä halusi muka
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Ääriviiva</span></td><td></td><td>Lisää ääriviivan hahmoon.</td></tr>
 <tr><td><span class="menu">Viiva</span></td><td></td><td>Viivoittaa hahmon polun eikä täytä sitä tyylillä.</td></tr>
+<tr><td><span class="menu">Perspektiivi</span></td><td></td><td>Sallii yksilöllisesti muodon neljän kulman siirron tehokkaan perspektiivin luomiseksi.</td></tr>
+
 </table>
 
 <p>Muuntimen tyypistä riippuen saat erilaisia ominaisjoukkoja.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Muunninominaisuudet</a></h4>
-<p>Paitsi Muuntimen <span class="menu">Nimi</span> ja todellinen <span class="menu">Leveys</span>, <span class="menu">Ominaisuudet</span>-valikkonäkymällä on nämä (riippuen lievästi sen tyyppieroista) valitsimet:</p>
+<p>Paitsi Muuntimen <span class="menu">Nimi</span> <span class="menu">Ominaisuudet</span>-näkymässä on nämä (muuntimen tyypistä riippuen niukasti eroavat) valitsimet:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Leveys</span></td><td></td><td>Piirron tai ääriviivan leveys.</td></tr>
 <tr><td><span class="menu">Pääteholkit</span></td><td style="width:15px;"></td><td><i>Vain piirrosviiva</i>. Määrittää viivan suojaholkit: <span class="menu">Nuppi</span>, <span class="menu">Neliö</span> tai <span class="menu">Pyöreä</span>.</td></tr>
 <tr><td><span class="menu">Havaitse suunta</span></td><td></td><td><i>Vain ääriiva</i>. Määrittää, onko ääriviiva polun sisäpuolella vai ulkopuolella.</td></tr>
 <tr><td><span class="menu">Liitokset</span></td><td></td><td>Määrittää, kuinka viivat yhdistetään pisteessä: <span class="menu">Viistekulma</span>, <span class="menu">Pyöreä</span> tai <span class="menu">Särmä</span>.</td></tr>

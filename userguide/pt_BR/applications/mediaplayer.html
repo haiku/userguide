@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2010-2014, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -54,16 +54,25 @@
 <li><a href="../../jp/applications/mediaplayer.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="mail.html">Correio</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Aplicativos
-</a> 
-::  <a href="midiplayer.html">Tocador de Midi</a>  »
+ «  <a href="mail.html">Correio</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Aplicativos
+</a> 
+::  <a href="midiplayer.html">Tocador de Midi</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
 <div class="box-info">A tradução desta página ainda não está completa. Até lá, partes incompletas mostrarão o original em inglês.</div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td><a href="#playback">Audio and video playback</a><br />
+                <a href="#playlists">Playlists</a><br />
+                <a href="#ratings">Ratings</a><br />
+                <a href="#settings">Settings</a><br />
+                <a href="#controls">Keyboard controls</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/mediaplayer-icon_64.png" alt="mediaplayer-icon_64.png" width="64" height="64" />Tocador de Mídia</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -77,7 +86,8 @@
 <p>A botão deslizante da barra de progresso permite rapidamente mover a uma posição, deixar o mouse sobre ele mostra o tempo atual e restante do clipe. Clicando na exibição de tempo à direita dele, alterna entre tempo total, atual e restante.<br />
 Abaixo encontram-se os controles usuais para pular para a faixa anterior, tocar/pausar, parar e saltar para a próxima faixa. Então segue o controle de volume (clicando no símbolo do alto-falante alterna para mudo) e um indicador  VU.</p>
 
-<h2>Reprodução de áudio e vídeo</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playback" name="playback">Audio and video playback</a></h2>
 <p>Uma vez que não existem quaisquer funcionalidades específicas para reprodução de áudio, iremos direto para as funcionalidades de vídeo ou gerais.</p>
 <img src="../images/apps-images/mediaplayer-info.png" alt="mediaplayer-info.png" />
 <p>Disponível para todas as mídias está a <span class="menu">Informação de arquivo...</span> (<span class="key">ALT</span> <span class="key">I</span>). Ela exibe informações sobre o arquivo atualmente carregado, como tempo de exibição ou detalhes da faixa de áudio/vídeo e seu codec.</p>
@@ -91,16 +101,26 @@ MeuFilme.Frances.srt</pre>
 <p>Faixas de áudio múltiplas, muito frequentemente utilizadas por vários idiomas dentro de um único arquivo de vídeo, estão disoníveis a partir do submenu <span class="menu">Faixa de áudio</span>. O submernu <span class="menu">Vídeo | Faixa</span> oferece o mesmo quando existem múltiplas transmissões de vpideo disponíveis.</p>
 <p>Pode-se fixar o modo <span class="menu">Tela cheia</span> (<span class="key">ALT</span> <span class="key">ENTER</span> ou <span class="key">F</span> ou um clique duplo com o botão esquerdo do mouse), ocultar as bordas da janela e os controles do Tocador de Mídia with <span class="menu">Ocultar interface</span> (<span class="key">ALT</span> <span class="key">H</span> ou um duplo clique com o botão direito do mouse) ou ter sua janela <span class="menu">Sempre no topo</span> (<span class="key">ALT</span> <span class="key">A</span>).</p>
 
-<h2>Listas de Reprodução</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playlists" nsame="playlists">Playlists</a></h2>
 <p><span class="menu">Tocador de Mídia | Lista de Reprodução...</span> (<span class="key">ALT</span> <span class="key">P</span>) abre uma janela com os arquivos atualmente listados para reprodução. O clique duplo em uma entrada faz com que comece a tocar.</p>
 <img src="../images/apps-images/mediaplayer-playlist.png" alt="mediaplayer-playlist.png" />
 <p>You can add more files by dropping them into the list and rearrange their position via drag &amp; drop. New files are added in the order they were selected from a Tracker window. Drag &amp; dropping them with the right mouse button shows a context menu to insert them <span class="menu">sorted</span> (alphabetically).<br />
 From the <span class="menu">Edit</span> menu you can <span class="menu">Randomize</span> or <span class="menu">Remove</span> (<span class="key">DEL</span>) an entry from the list or delete the actual file with <span class="menu">Move to Trash</span> (<span class="key">ALT</span> <span class="key">T</span>).</p>
 <p>Naturalmente, pode-se <span class="menu">Salvar</span> uma lista de reprodução e mais tarde <span class="menu">Abrir</span> novamente, ou iniciá-la simplesmente com um duplo clique no arquivo da lista de reprodução.</p>
 
-<h2>Definições</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="rating" name="rating">Rating</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Here you can set a <span class="menu">Rating</span> of the current clip between 1 and 10, or choose <span class="menu">Reset rating</span> to set it back to "unrated" (= "0").</p>
+<p>In Tracker, ratings are displayed in a "Rating" attribute column as a number of stars. Five stars represent the 10 possible values, resulting in half-star steps. For example, a rating of 7 is shown as 7 / 2 = 3.5 stars: ★★★⯪☆.<br />
+You can edit the rating directly in Tracker as well: Select the file, choose <span class="menu">Edit name</span> from the <span class="menu">File</span> menu and press <span class="key">TAB</span> to get into the "Rating" column. Now you can enter the new numerical value which will turn into a star rating after hitting <span class="key">ENTER</span>.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="settings" name="settings">Settings</a></h2>
 <p>Existem muitas definições para o ajuste fino do comportamento do Tocador de Mídia:</p>
-<img src="../images/apps-images/mediaplayer-settings.png" alt="mediaplayer-settings.png" />
+<img src="../images/apps-images/mediaplayer-settings.png" style="float:left;margin-right:15px" alt="mediaplayer-settings.png" />
 <p>The first batch, <span class="menu">Play mode</span>, is pretty self-explaining.<br />
 Start playback automatically, close windows when finished or play clips in a loop.<br />
 From the pop-up menu you choose MediaPlayer's launch behavior. Should it resume playing where it left off last time: <span class="menu">always</span>, <span class="menu">never</span>, or <span class="menu">ask every time</span>.</p>
@@ -110,8 +130,10 @@ You can <span class="menu">Scale movies smoothly</span> (when not in overlay mod
 <span class="menu">Scale controls in full-screen mode</span> if you prefer slightly bigger controls, maybe because you watch the screen from a bit farther away when in full-screen mode.<br />
 Then there are settings for <span class="menu">Subtitle size</span> and <span class="menu">Subtitle placement</span>. They can be shown at the <span class="menu">Bottom of video</span>, which will always have them overlayed over the picture. Or <span class="menu">Bottom of screen</span>, which allows you to resize the window vertically and have the subtitles appear in the black bar at the bottom instead.</p>
 <p>a última definição determina o volume de áudio dos clipes cujas janelas não estão atualmente ativas. Pode-se tê-las todas tocando em <span class="menu">Volume total</span>, no menos confuso <span class="menu">Volume baixo</span> ou silenciosamente <span class="menu">Mudo</span>.</p>
+<p style="clear:left"></p>
 
-<h2>Controles de teclado</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="controls" name="controls">Keyboard controls</a></h2>
 <p>O Tocador de Mídia oferece convenientes combinações de teclas para controlar a reprodução sem utilizar o mouse.</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">Z</span></td><td style="width:15px;"></td><td>Pular para a faixa anterior</td></tr>
@@ -140,10 +162,10 @@ Then there are settings for <span class="menu">Subtitle size</span> and <span cl
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="mail.html">Correio</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Aplicativos
-</a> 
-::  <a href="midiplayer.html">Tocador de Midi</a>  »
+ «  <a href="mail.html">Correio</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Aplicativos
+</a> 
+::  <a href="midiplayer.html">Tocador de Midi</a>  »
 </span></div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducció d'aquesta pàgina encara no està acabada. Fins que ho sigui, algunes part correspondrà a la versió anglesa.</div>
 
 <h2><img src="../../images/apps-images/bootmanager-icon_64.png" alt="bootmanager-icon_64.png" width="64" height="64" />Gestor d'Arrencada</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -86,6 +87,7 @@ Altrament, trieu <span class="button">Instal·la</span> per continuar.</p>
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>Simplement trieu un destí per la còpia del "<tt>MBR</tt>" o bé deixeu la ruta per omisió. Després de clicar <span class="button">Següent</span> rebreu la confirmació de que la còpia ha estat realitzada correctament.</p>
+<div class="box-info">Be aware that the "<span class="path">/boot</span>" in that path is the install media (e.g. USB stick). Makes sense if something goes wrong and you need to revert immediately. For a long term backup, you should save the MBR on your new Haiku disk as well, because likely as not, you've already formatted and used your install USB stick for other things in the meantime...</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">Configuració del menú d'arrencada</a></h2>
@@ -99,7 +101,16 @@ Altrament, trieu <span class="button">Instal·la</span> per continuar.</p>
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>Abans d'escriure el menú d'arrencada al MBR, se us mostrarà un resum de la vostra configuració i se us oferirà una darrera oportunitat d'anul·lar la operació. Però no us preocupeu, ja que mentre guardeu bé la còpia del MBR, podeu fàcilment recuperar la situació anterior. Si les coses es torcen, sempre podeu arrencar amb un CD d'instal·lació del Haiku o amb un llapis USB i restaurar la còpia del MBR amb el Gestor d'Arrencada.</p>
-
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">Restoring the backup of the Master Boot Record (MBR)</a></h2>
+<p>It's currently not possible to uninstall the boot menu with the BootManager application. There is a workaround however: You can use the <span class="cli">dd</span> command in Terminal to restore the backup of the MBR.</p>
+<div class="box-warning"><span class="cli">dd</span> can be a very destructive tool.<br />
+Be very careful and check especially the device path parameter!</div>
+<p>The <span class="cli">dd</span> commandline is something like this:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>The input parameter ("<tt>if</tt>") is the path to the backup of the MBR.<br />
+The output parameter (<tt>"of"</tt>) is the path to the raw disk the MBR will be written to. You find all devices and their paths in the <a href="drivesetup.html">DriveSetup</a> application.</p>
 </div>
 </div>
 

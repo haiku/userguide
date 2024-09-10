@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -67,15 +67,15 @@
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Index</td></tr>
-<tr class="index"><td><a href="#bitmap-vector">BeOS Pixel- ./. Haiku Vektoricons</a><br />
-                <a href="#icons-attributes">Icons = Attribute</a><br />
-                <a href="#i-o-m">Icon-Erstellung mit Icon-O-Matic</a><br />
-                  <a href="#i-o-m-path">Pfad</a><br />
-                  <a href="#i-o-m-shape">Form</a><br />
-                  <a href="#i-o-m-style">Stil</a><br />
-                  <a href="#i-o-m-transformer">Transformator</a><br />
-                  <a href="#i-o-m-save">Über das Abspeichern</a><br />
-                  <a href="#i-o-m-tips">Tipps &amp; Tricks</a></td></tr>
+<tr class="index"><td><a href="#bitmap-vector">BeOS Pixelicons ./. Haiku Vektoricons</a><br />
+<a href="#icons-attributes">Icons sind Attribute</a><br />
+<a href="#i-o-m">Icon-Erstellung mit Icon-O-Matic</a><br />
+<a href="#i-o-m-path">Pfad</a><br />
+<a href="#i-o-m-shape">Form</a><br />
+<a href="#i-o-m-style">Stil</a><br />
+<a href="#i-o-m-transformer">Transformator</a><br />
+<a href="#i-o-m-save">Icons speichern</a><br />
+<a href="#i-o-m-tips">Tipps &amp; Tricks</a></td></tr>
 </table>
 
 <h2><img src="../../images/apps-images/icon-o-matic-icon_64.png" alt="icon-o-matic-icon_64.png" width="64" height="64" />Icon-O-Matic</h2>
@@ -92,7 +92,7 @@
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="bitmap-vector" name="bitmap-vector">BeOS Pixelgraphik im Vergleich zu Haiku Vektoricons</a></h2>
+<a id="bitmap-vector" name="bitmap-vector">BeOS Pixelicons im Vergleich zu Haiku Vektoricons</a></h2>
 <p>Im Gegensatz zum BeOS verwendet Haiku vektor-basierte Icons an Stelle von pixel-basierten. Für diesen Zweck wurde ein eigenes "Haiku Vector Icon Format" (HVIF) entwickelt, das für eine kleine Dateigröße und schnelle Anzeige optimiert ist. Aus diesem Grund sind Haiku-Icons normalerweise <i>erheblich</i> kleiner als ein Pixelbild oder das weit verbreiteten SVG-Format. Ebenso sind Haiku-Icons nicht wie im BeOS auf 256 Farben (8bit Palette) beschränkt.<br />
 Als Beispiel das Icon vom Terminal:</p>
 <table border="0" cellpadding="10">
@@ -221,7 +221,10 @@ Ausgewählte Punkte lassen sich mit <span class="key">ENTF</span> entfernen. Alt
 <p>Formen liegen - jede für sich in einer separaten Ebene - übereinander. Die Position in der Z-Achse (also welche Form über oder unter welcher liegt) wird über die Reihenfolge in der Liste aller Formen festgelegt. Hier kann eine Form mit der Maus nach oben oder unten gezogen werden.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Form Menü</a></h4>
-<p>Das Menü <span class="menu">Form</span> beinhaltet neben der bereits erwähnten Möglichkeit eine "leere" Form, eine Form zusammen mit einem Pfad, einem Stil oder beidem zu erstellen, also <span class="menu">Hinzufügen</span> bzw. <span class="menu">Mit Pfad/Stil/Pfad &amp; Stil hinzufügen</span>, sowie <span class="menu">Duplizieren</span> und <span class="menu">Entfernen</span>  noch:</p>
+<p>Das Menü <span class="menu">Form</span> bietet die bereits erwähnten Möglichkeiten eine "leere" Form, eine Form zusammen mit einem Pfad, einem Stil oder beidem zu erstellen, also <span class="menu">Hinzufügen</span> bzw. <span class="menu">Mit Pfad/Stil/Pfad &amp; Stil hinzufügen</span>, sowie <span class="menu">Duplizieren</span> und <span class="menu">Entfernen</span> einer Form.</p>
+<p><span class="menu">Referenzbild hinzufügen</span> erstellt eine besondere 'Form'. Mit dieser Funktion lässt sich jede Pixel-Grafik (z. B. PNG oder JPEG) laden und als Hintergrund verwenden, während man an dem Icon arbeitet. Nützlich wenn man beispielsweise eine Vektorversion eines bestehenden Pixel-Icons erstellt. Dieses Referenzbild kann wie jede andere Form verändert werden (verschieben, drehen, Größe ändern), ist jedoch nicht Teil des Icons wenn es als HVIF gespeichert wird.</p>
+
+<p>Weitere Menüpunkte:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Transformation zurücksetzen</span></td><td style="width:15px;"></td><td>Alle Veränderungen an der Form (Größe, Verschieben, Drehen) werden zurückgesetzt.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Transformation einfrieren</span></td><td></td><td>Bei der Transformierung einer Form verbleiben die zugewiesenen Pfade an ihrer ursprünglichen Position. Das kann durchaus gewollt sein, so zum Beispiel, wenn mehrere Formen auf einen Pfad zurückgreifen oder man die Option "Am Raster ausrichten", also <span class="menu">Optionen | Am Gitter einrasten</span>, aktiviert hat.<br />
@@ -235,6 +238,7 @@ Anderenfalls wird durch diesen Menüpunkt die Transformation auf die Pfade angew
 <tr><td><span class="menu">Min LOD</span></td><td></td><td>Minimaler "Level of Detail" - also Detail-Grad.</td></tr>
 <tr><td><span class="menu">Max LOD</span></td><td></td><td>Maximaler Detail-Grad</td></tr>
 </table>
+<p>Referenzbilder haben stattdessen einen <span class="menu">Alpha</span> Wert, um deren Transparenz einzustellen (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Level of Detail (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -289,13 +293,16 @@ Natürlich kann der Marker verschoben werden, um den Farbverlauf anzupassen. Zus
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Kontur</span></td><td></td><td>Fügt einen Umriss um die ausgewählte Form hinzu.</td></tr>
 <tr><td><span class="menu">Umrandung</span></td><td></td><td>Die ausgewählte Form wird mit einem Strich gezeichnet, statt mit dem Stil gefüllt.</td></tr>
+<tr><td><span class="menu">Perspektive</span></td><td></td><td>Die vier Eckpunkte der Form lassen sich einzeln verschieben, um einen perspektivischen Effekt zu erzielen.</td></tr>
+
 </table>
 
 <p>Abhängig von der Art des Transformators erhält man unterschiedliche Eigenschaften.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Transformator Eigenschaften</a></h4>
-<p>Neben dem Namen <span class="menu">Name</span> und der Breite <span class="menu">Strichstärke</span> für den Transformator können unter den <span class="menu">Eigenschaften</span> diese (je nach Art leicht unterschiedlichen) Einstellungen vorgenommen werden:</p>
+<p>Neben dem <span class="menu">Namen</span> zeigen die <span class="menu">Eigenschaften</span> noch folgende (je nach Art leicht unterschiedliche) Optionen:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Strichstärke</span></td><td></td><td>Die Breite der Kontur oder Umrandung.</td></tr>
 <tr><td><span class="menu">Enden</span></td><td style="width:15px;"></td><td>(<i>nur bei "Stroke"</i>) Definiert die Endpunkte einer Linie: <span class="menu">Butt</span> - abgeflacht, <span class="menu">Square</span> - die Linienbreite wird auf die Linie als Abschluss-Quadrat aufgesetzt, oder <span class="menu">Round</span>, die Linie wird abgerundet.</td></tr>
 <tr><td><span class="menu">Ausrichtung erk.</span></td><td></td><td>(<i>nur bei "Contour"</i>) Stellt sicher, dass Icon-O-Matic - insbesondere bei Pfaden, die sich selbst schneiden - die Kontur um einen Pfad immer außen anbringt.</td></tr>
 <tr><td><span class="menu">Verbindungen</span></td><td></td><td>Definiert, wie Linien an einem Punkt miteinander verbunden werden: <span class="menu">Miter</span> (auf Gehrung), <span class="menu">Round</span> (abgerundet) oder <span class="menu">Bevel</span> (abgeschrägt).</td></tr>

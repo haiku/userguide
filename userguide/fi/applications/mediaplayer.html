@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2010-2014, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -54,14 +54,23 @@
 <li><a href="../../jp/applications/mediaplayer.html">日本語</a></li>
 </ul>
 <span>
- «  <a href="mail.html">Sähköposti</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Sovellukset</a> 
-::  <a href="midiplayer.html">Midi-soitin</a>  »
+ «  <a href="mail.html">Sähköposti</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Sovellukset</a> 
+::  <a href="midiplayer.html">Midi-soitin</a>  »
 </span></div>
 </div>
 
 <div id="content">
 <div>
+
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Hakemisto</td></tr>
+<tr class="index"><td><a href="#playback">Ääni- ja videotoisto</a><br />
+                <a href="#playlists">Soittoluettelot</a><br />
+                <a href="#ratings">Arvosanat</a><br />
+                <a href="#settings">Asetukset</a><br />
+                <a href="#controls">Näppäimistöohjaimet</a></td></tr>
+</table>
 
 <h2><img src="../../images/apps-images/mediaplayer-icon_64.png" alt="mediaplayer-icon_64.png" width="64" height="64" />Mediasoitin</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -75,13 +84,14 @@
 <p>Edistymispalkin liukukytkin sallii sinun vaihtaa nopeasti sijaintia. Hiiren kohdistimen pitäminen palkin päällä näyttää nykyisen ajan ja leikkeen jäljellä olevan ajan. Oikealla olevan aika-näytön napsauttaminen vuorottelee pituuden, nykyisen ja jäljellä olevan ajan välillä.<br />
 Sen alta löydät tavalliset ohjaimet paluuseen edelliseen kappaleeseen, soitolle, tauolle, pysähtymiselle ja siirtymiselle seuraavaan kappaleeseen. Sitten on äänenvoimakkuuden säädin (kaiutinsymbolin napsauttaminen vuorottelee mykistämistä) ja voltti-/jännitemittari.</p>
 
-<h2>Ääni- ja videosoitto</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playback" name="playback">Ääni- ja videotoisto</a></h2>
 <p>Koska äänisoitossa ei ole mitään erikoisominaisuuksia, siirrymme suoraan videoon ja yleisiin ominaisuuksiin.</p>
 <img src="../images/apps-images/mediaplayer-info.png" alt="mediaplayer-info.png" />
 <p>Kaikille medioille on käytettävissä valikko <span class="menu">Tiedostotiedot...</span> (<span class="key">ALT</span> <span class="key">I</span>). Se näyttää tiedot parhaillaan ladatusta tiedostosta, kuten soittoajan tai ääni- tai videokappaleen yksityiskohdata ja sen koodekin.</p>
 <p>Useimmin käytetyt valikkokomennot ovat käytettävissä myös videoalueella hiiren kakkospainikkeen asiayhteysvalikosta. Se näppärää, kun ollaan kokonäyttötilassa.<br />
-Valikon <span class="menu">Video</span> alta löydät valitsimia kaventaa tai laajentaa ikkunaa eri tasoille tai pakottamiseksi vaioarvoiseen kuvasuhteisiin. Kuvasuhteen jättämiseksi oletukseen <span class="menu">Virta-asetukset</span> pitäisi toimia parhaiten oikein koodatuilla tiedostoilla.</p>
-<p>Mediasoitin tukee aliotsikoita <a href="http://en.wikipedia.org/wiki/SubRip">SRT</a>-muodossa. Jotta ne näkyvät valikon <span class="menu">Aliotsakkeet</span> alla, niiden tiedostonimet ovat samat kuin niiden videotiedostonimet, kielinimitarkentimella ja tarkentimella ".srt" eikä videotarkentimella. Esimerkiksi:</p>
+Valikon <span class="menu">Video</span> alta löydät valitsimia kaventaa tai laajentaa ikkunaa eri tasoille tai ikkunan pakottamiseksi vakioarvoisiin kuvasuhteisiin. Kuvasuhteen jättäminen oletusarvoiseksi valikossa <span class="menu">Virta-asetukset</span> pitäisi toimia parhaiten oikein koodatuilla tiedostoilla.</p>
+<p>Mediasoitin tukee tekstityksiä <a href="http://en.wikipedia.org/wiki/SubRip">SRT</a>-muodossa. Jotta ne näkyvät valikon <span class="menu">Tekstitykset</span> alla, tekstitysten tiedostonimien on oltava samat kuin niiden videotiedostonimet, kielinimitarkentimella ja tarkentimella ".srt" eikä videotarkentimella. Esimerkiksi:</p>
 <pre>MyMovie.avi
 MyMovie.Deutsch.srt
 MyMovie.English.srt
@@ -89,27 +99,39 @@ MyMovie.Français.srt</pre>
 <p>Moniäänikappaleet, useimmiten käytetty useaa kieltä varten yhden videotiedoston sisällä, ovat käytettävissä alivalikosta <span class="menu">Ääniraita</span>. Alivalikko <span class="menu">Video | Kappale</span> tarjoaa saman, kun useita videovirtoja on käytettävissä.</p>
 <p>Voit vuorotella <span class="menu">Koko näyttö</span>-tilaa (<span class="key">ALT</span> <span class="key">ENTER</span> tai <span class="key">F</span> tai hiiren ykköspainikkeen kaksoisnapsautuksella), piilottaa Mediasoittimen ikkunarajat ja ohjaimet <span class="menu">Piilota käyttöliittymä</span> (<span class="key">ALT</span> <span class="key">H</span> tai hiiren kakkospainikkeen kaksoisnapsautuksella) tai pitää sen ikkunaa <span class="menu">Aina päällimmäisenä</span> (<span class="key">ALT</span> <span class="key">A</span>).</p>
 
-<h2>Soittoluettelot</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="playlists" nsame="playlists">Soittoluettelot</a></h2>
 <p><span class="menu">Mediasoitin | Soittoluettelo...</span> (<span class="key">ALT</span> <span class="key">P</span>) avaa ikkunan, jossa näkyy soittamista odottavien tiedostojen jono. Rivin kaksoisnapsautus aloittaa sen soittamisen.</p>
 <img src="../images/apps-images/mediaplayer-playlist.png" alt="mediaplayer-playlist.png" />
 <p>Voit lisätä lisää tiedostoja pudottamalla ne luetteloon ja järjestämällä niiden sijainti raahaa ja pudota -toiminnolla. Uudet tiedostot lisätään siinä järjestyksessä, jossa ne valitaan Seuraaja-ikkunasta. Raahaa &amp; pudota ne näyttäen hiiren kakkospainikkeella (yleensä oikeanpuoleinen painike) asiayhteysvalikon niiden lisäämiseksi <span class="menu">lajiteltuna</span> (aakkosjärjestyksessä).<br />
 Valikosta <span class="menu">Muokkaa</span> voit <span class="menu">Satunnaista</span>a tai <span class="menu">Poista</span>a (<span class="key">DEL</span>) luettelorivin tai poistaa todellisen tiedoston valikolla <span class="menu">Siirrä roskakoriin</span> (<span class="key">ALT</span> <span class="key">T</span>).</p>
 <p>Voit tietysti tallentaa valikolla <span class="menu">Tallenna</span> soittoluettelon ja myöhemmin avata se uudelleen valikolla <span class="menu">Avaa</span>, tai aloittaa se yksinkertaisesti kaksoisnapsauttamalla soittoluettelotiedostoa.</p>
 
-<h2>Asetukset</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="rating" name="rating">Arvosanat</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Tässä voit asettaa nykyisen leikkeen <span class="menu">Arvosanat</span> välille 1 ja 10, tai valita <span class="menu">Nollaa arvosanat</span> arvosanojen asettamiseksi takaisin arvoon "arvioimaton" (= "0").</p>
+<p>Seuraajassa arvosanat näytetään sarakkeessa "Arvosanat" tähtien lukumääränä. Viisi tähteä esittää kymmentä mahdollista arvoa puolen tähden askelin. Esimerkiksi, arvosana 7 näytetään 7 / 2 = 3.5 tähteä: ★★★⯪☆.<br />
+Voit muokata arvosanoja suoraan myös Seuraajassa: Valitse tiedosto, valitse <span class="menu">Muokkaa nimeä</span> valikosta <span class="menu">Tiedosto</span> ja <span class="key">Sarkain</span>-näppäimellä askeltamalla pääset "Arvosanat"-sarakkeeseen. Nyt voit kirjoittaa uuden numeroarvon, joka muuttuu tähdiksi napauttamalla <span class="key">ENTER</span>-näppäintä.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="settings" name="settings">Asetukset</a></h2>
 <p>Mediasoittimen käyttäytymisen hienosäätöön on useita asetuksia:</p>
-<img src="../images/apps-images/mediaplayer-settings.png" alt="mediaplayer-settings.png" />
+<img src="../images/apps-images/mediaplayer-settings.png" style="float:left;margin-right:15px" alt="mediaplayer-settings.png" />
 <p>Ensimmäinen kohta, <span class="menu">Soittotila</span>, on aika itsestäänselvä.<br />
 Aloita soittaminen automaattisesti, sulje ikkunat kun lopetetaan tai soita leikkeitä silmukassa.<br />
 Ponnahdusvalikosta valitset Mediasoittimen käynnistymiskäyttäytymisen. Pitäisikö sen käynnistyä siitä kohdasta, jossa soittaminen loppui edellisellä kerralla: <span class="menu">aina</span>, <span class="menu">ei koskaan</span>, tai <span class="menu">kysy joka kerta</span>.</p>
 <p>Seuraavana on erilainen <span class="menu">Katso valitsimia</span>.<br />
-Voit valita <span class="menu">Käytä laitteistovideokerrosta, jos se on käytettävissä</span>, mikä alentaa suoritinkäyttöä, mutta toimii vain yhdessä videoikkunassa ja tarvitsee tukevan videokorttiajurin.<br />
+Voit valita <span class="menu">Käytä laitteistovideokerrostusta, jos se on käytettävissä</span>, mikä alentaa suoritinkäyttöä, mutta toimii vain yhdessä videoikkunassa ja tarvitsee tukevan videokorttiajurin.<br />
 Voit valita <span class="menu">Skaalaa elokuvat pehmeästi</span> (kun ei olla kerrostustilassa) mikä käyttää hyvin nopeaa suodatusta pehmentäen muuten lohkomaisia pikseleitä, kun kavennetaan videonäkymää tai katsotaan kokonäyttötilassa.<br />
 <span class="menu">Skaalausohjaimet kokonäyttötilassa</span> jos pidät parempana hiukan isompia ohjaimia, ehkä katselet näyttöä hiukan kauempaa kokonäyttötilassa.<br />
 Sitten on asetukset <span class="menu">Tekstityskoko</span> ja <span class="menu">Tekstityksen sijainti</span>. Ne voidaan näyttää <span class="menu">Videon alareuna</span>ssa, jossa ne ovat aina kuvan päällä. Tai <span class="menu">Ikkunan alareuna</span>ssa, mikä sallii sinun muuttaa ikkunan kokoa pystysuoraan ja näyttää tekstitykset sen sijaan alhaalla mustana palkkina.</p>
 <p>Viimeinen asetus määrittelee äänenvoimakkuuden niille leikkeille, jotka eivät ole parhaillaan aktiviisia. Voit kailottaa niitä kaikkia voimakkuudella <span class="menu">Täysi äänenvoimakkuus</span>, vähemmän häiritsevällä <span class="menu">Alenna äänenvoimakkuutta</span> tai hiljentää <span class="menu">Mykistä</span>.</p>
+<p style="clear:left"></p>
 
-<h2>Näppäimistöohjaimet</h2>
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="controls" name="controls">Näppäimistöohjaimet</a></h2>
 <p>Mediasoitin tarjoaa näppäriä näppäinyhdistelmiä soiton ohjaamiseksi ilman hiiren käyttöä.</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">Z</span></td><td style="width:15px;"></td><td>Hyppää edelliseen kappaleeseen</td></tr>
@@ -118,18 +140,18 @@ Sitten on asetukset <span class="menu">Tekstityskoko</span> ja <span class="menu
 <tr><td><span class="key">V</span></td><td></td><td>Pysäytä</td></tr>
 <tr><td><span class="key">B</span></td><td></td><td>Hyppää seuraavaan kappaleeseen</td></tr>
 </table>
-<p>Nämä näppäimet on liitetty ohjainpainikkeiden toimintoihin. Ne ovat aina näppäimistön vasemman alakulman näppäimiä, toisin sanoen riippumattomia nykyisestä näppäinkuvauksesta. Yllä olevat näppäimet vastaavat vakiota US-amerikkalaista näppäinkuvausta.</p>
+<p>Nämä näppäimet on liitetty ohjainpainikkeiden toimintoihin. Ne ovat aina näppäimistön vasemman alakulman kirjainnäppäimiä, toisin sanoen riippumattomia nykyisestä näppäinkuvauksesta. Yllä olevat näppäimet vastaavat vakiota US-amerikkalaista näppäinkuvausta.</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td align="right"><span class="key">←</span> / <span class="key">→</span></td><td style="width:15px;"></td><td>Etsi taaksepäin/eteenpäin</td></tr>
 <tr><td align="right"><span class="key">VAIHTO</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Hyppää taaksepäin/eteenpäin 10 sekuntia</td></tr>
-<tr><td align="right"><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Hyppää taaksepäin/eteenpäin 30 sekuntia</td></tr>
+<tr><td align="right"><span class="key">ALT/OPTION</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Hyppää taaksepäin/eteenpäin 30 sekuntia</td></tr>
 
 <tr><td align="right"><span class="key">↓</span> / <span class="key">↑</span></td><td></td><td>Vaimenna/Kasvata äänenvoimakkuutta</td></tr>
 
 <tr><td align="right"><span class="key">ALT</span> <span class="key">↓</span> / <span class="key">↑</span></td><td></td><td>Hyppää seuraavaan/edelliseen Kappaleeseen</td></tr>
 
 <tr><td align="right"><span class="key">Välilyöntipainike</span></td><td></td><td>Vuorottele soita/tauko -tiloja</td></tr>
-<tr><td align="right"><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Vuorottele kokonäyttötila (tehdään myös kaksoisnapsauttamalla hiiren ykköspainikkeella videoaluetta tai painamalla <span class="key">F</span> tai <span class="key">TAB</span>)</td></tr>
+<tr><td align="right"><span class="key">ALT/OPTION</span> <span class="key">ENTER</span></td><td></td><td>Vuorottele kokonäyttötila (tehdään myös kaksoisnapsauttamalla hiiren ykköspainikkeella videoaluetta tai painamalla <span class="key">F</span> tai <span class="key">TAB</span>)</td></tr>
 <tr><td class="onelinetop" align="right"><span class="key">ALT</span> <span class="key">VAIHTO</span> <span class="key">0</span> / <span class="key">1</span> / <span class="key">2</span> / <span class="key">3</span></td><td></td><td>Vaihtaa kuvasuhteen <span class="menu">Virta-asetuksiin</span> (kuinka video koodataan), <span class="menu">Ei kuvasuhdekorjausta</span> (kartoittaa videon pikselit 1:1 näytölle), <span class="menu">4:3</span>, <span class="menu">16:9</span></td></tr>
 </table>
 
@@ -138,9 +160,9 @@ Sitten on asetukset <span class="menu">Tekstityskoko</span> ja <span class="menu
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="mail.html">Sähköposti</a> 
-::  <a href="../applications.html#list-of-apps" class="uplink">Sovellukset</a> 
-::  <a href="midiplayer.html">Midi-soitin</a>  »
+ «  <a href="mail.html">Sähköposti</a> 
+::  <a href="../applications.html#list-of-apps" class="uplink">Sovellukset</a> 
+::  <a href="midiplayer.html">Midi-soitin</a>  »
 </span></div>
 </div>
 

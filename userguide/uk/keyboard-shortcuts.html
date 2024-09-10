@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h1>Клавіші швидкого доступу та комбінації клавіш</h1>
 
@@ -79,7 +80,8 @@
 <tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span> / <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Навігація по рядках/стовпчиках доступних робочих областей. Додайте <span class="key">SHIFT</span>, щоб тягати активне вікно з собою.</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>Якщо утримувати клавішу <span class="key">OPT</span> під час перетягування вікна біля вкладки або рамки іншого вікна, вікна будуть згуртовані або склеєні (дивіться розділ <a href="gui.html#stack-tile">Графічний інтерфейс…</a>).</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Циклічно перебирає відкриті вікна в поточній робочій області.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>Циклічно перебирає вікна з'єднані у групу за допомогою функції «Згуртувати» або «Склеїти».</td></tr>
+<tr><td><span class="key"> OPT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Циклічно перебирає відкриті вікна в поточній робочій області.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + ліва миші</td><td></td><td>Натисніть і перетягніть утримуючи ліву кнопку миші, щоб перемістити вікно (дивіться розділ <a href="gui.html#move-resize">Графічний інтерфейс…</a>).</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + права миші</td><td></td><td>Натисніть і перетягніть утримуючи праву кнопку миші, щоб змінити розмір вікна (див розділ  <a href="gui.html#move-resize">Графічний інтерфейс…</a>).</td></tr>
 <tr><td> </td></tr>
@@ -140,14 +142,14 @@
 <tr><td><span class="key">ALT</span> + лівий клік</td><td style="width:15px;"></td><td>Лівий клік миші на шляху або URL-адресі з натиснутою клавішею <span class="key">ALT</span> відкриває його у пріоритетній програмі, наприклад, папки у Tracker, зображення у ShowImage. Ви можете обмежити виділений шлях, додатково утримуючи клавішу <span class="key">SHIFT</span>.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td></td><td>Відкриває іншу сесію термінала у новому вікні.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td></td><td>Відкриває іншу сесію термінала у новій вкладці.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>Перейти до відповідної вкладки.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">TAB</span></td><td></td><td>Перейти до наступного вікна термінала.</td></tr>
-<tr><td><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Перейти до вкладки зліва/справа.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>Перейти до відповідної вкладки.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Перейти до вкладки зліва/справа.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Перемістити поточну вкладку вліво/вправо.</td></tr>
+<tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Прокручує вивод термінала вгору/вниз на один рядок.</td></tr>
+<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Прокручує вивод термінала вгору/вниз на одну сторінку.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td></td><td>Збільшити/Зменшити розмір шрифту.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Увімкнути/вимкнути повноекранний режим.</td></tr>
-<tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Прокручує вивод термінала вгору/вниз на один рядок.</td></tr>
-<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Прокручує вивод термінала вгору/вниз на одну сторінку.</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>Завершення вводу за допомогою табуляції. Після введення кількох літер натисніть <span class="key">TAB</span> один раз, щоб автоматично доповнити ім'я файлу або шлях до нього. Якщо знайдено більше одного збігу, пошук зупиниться там, де назви починають відрізнятися і Вам доведеться ввести ще кілька літер, щоб розрізнити їх. Ви також можете двічі натиснути клавішу <span class="key">TAB</span>, щоб переглянути усі збіги.</td></tr>
 <tr><td><span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Переміщення вгору або вниз по історії усіх раніше введених команд.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">R</span></td><td></td><td>Історія Bash. Всі команди, які Ви вводите

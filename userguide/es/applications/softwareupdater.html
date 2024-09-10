@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		cafeina
  *		kervas
  *
 -->
@@ -61,7 +62,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h2><img src="../../images/apps-images/softwareupdater-icon_64.png" alt="softwareupdater-icon_64.png" width="64" height="64" />SoftwareUpdater</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -75,16 +75,16 @@
 <p>Luego de iniciarlo, SoftwareUpdater revisa por actualizaciones a paquetes y los muestra en una lista con su nueva versión y una descripción corta. Puede optar a <span class="menu">Mostrar más detalles</span> para incluir el nombre del repositorio para cada paquete y mostrar tanto la versión de paquete anterior y la nueva.</p>
 <p><span class="button">Actualizar ahora</span> iniciará la descarga de todos los paquetes y su instalación subsiguiente.</p>
 <p>Dependiendo de los paquetes que fueron actualizados, puede que deba reiniciar Haiku para completar el proceso de actualización. Las aplicaciones actualizadas normalmente sólo requieren ser reiniciadas, mientras que los cambios al propio Haiku pueden requerir reiniciar todo el sistema para que tomen efecto.</p>
-<div class="box-info"><p>Every time packages are updated, installed or uninstalled (either with SoftwareUpdater/HaikuDepot or in Terminal via <tt>pkgman</tt>), a new "state" is saved at <span class="path">/system/packages/administrative/</span>. This makes it possible to boot into any past state from the <a href="../bootloader.html">Boot Options</a>, making it easy to solve issues that may arise from having installed/updated a package that doesn't work as expected.</p>
-<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time. Until there's an option for an automatic clean-up, it's a good idea to check the size of the "administrative" folder from time to time and remove the oldest states, that you probably won't have to boot into again.</p>
+<div class="box-info"><p>Cada vez que se actualizan, instalan o desinstalan paquetes (ya sea con SoftwareUpdater/HaikuDepot o a través de Terminal con <tt>pkgman</tt>), el sistema guarda un "estado" nuevo en <span class="path">/system/packages/administrative/</span>. Esto permite arrancar en cualquier estado anterior desde las <a href="../bootloader.html">Opciones de arranque</a>, lo que hace que sea más fácil resolver problemas derivados de la instalación o actualización de un paquete que no funciona como debería.</p>
+<p>Dado que estas carpetas de "estado" almacenan copias de los paquetes actualizados o desinstalados, con el pasar del tiempo el tamaño de la carpeta "administrative" puede crecer considerablemente. Hasta que haya una opción que realice una limpieza automática, es buena idea monitorear de vez en cuando el tamaño de la carpeta "administrative" y eliminar los estados más antiguos, esos en los que probablemente no vuelva a arrancar.</p>
 </div>
 <h2>
-<a id="downgrading" name="downgrading">Downgrading to a previous Haiku revision</a></h2>
-<p>It's rare but possible that an update to the latest Haiku revision ("hrev") introduced a regression you're not willing to live with. From the boot options menu you can load a former, working state (see <a href="../bootloader.html#troubleshooting">Boot Loader - Troubleshooting</a>). Find the last working state and boot into it.</p>
-<p>To permanently downgrade to this revision, you have to point the 'Haiku' repository to that hrev. You find the current revision under "About Haiku" from the Deskbar. As example, to downgrade to hrev56231, open a Terminal and enter:</p>
+<a id="downgrading" name="downgrading">Devolver Haiku a una versión anterior</a></h2>
+<p>Si bien es raro, es posible que una actualización a la última versión de Haiku ("hrev") traiga consigo una regresión que perjudique la experiencia del usuario. En este caso, puede cargar un estado anterior que funciona correctamente desde el menú de opciones de arranque (véase <a href="../bootloader.html#troubleshooting">Cargador de arranque - Resolución de problemas</a>). Ubíquese en el último estado que funciona correctamente y arranque en él.</p>
+<p>Para regresar permanentemente a esta versión, debe configurar el repositorio Haiku para que apunte a ese hrev específico. Puede encontrar la versión actual en "Acerca de Haiku" en la barra de escritorio. Por ejemplo, para regresar a hrev56231, abra una Terminal y ejecute:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/master/$(getarch)/r1~beta3_hrev56231
 pkgman full-sync</pre>
-<p>Note, that you're now stuck with that revision, Haiku won't get any new updates. You should report the regression and help to fix it, if you can. Once fixed - watch the <a href="http://cgit.haiku-os.org/haiku/log/">commit logs</a> -  you can change back to the "current" repo with:</p>
+<p>Tenga en cuenta que ahora su sistema está retenido en esa versión y Haiku no recibirá nuevas actualizaciones. En este punto, informe la regresión y ayude a arreglarla si es posible. Una vez que se haya arreglado —puede comprobarlo al revisar los <a href="http://cgit.haiku-os.org/haiku/log/">registros de commit</a>— puede volver a la forma "actual" del repositorio ejecutando:</p>
 <pre class="terminal">pkgman add https://eu.hpkg.haiku-os.org/haiku/r1beta3/$(getarch)/current
 pkgman full-sync</pre>
 </div>

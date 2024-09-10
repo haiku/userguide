@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -81,7 +81,8 @@
 <tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">←</span>/<span class="key">→</span>/<span class="key">↑</span>/<span class="key">↓</span></td><td></td><td>Перемещение по рабочим столам. Для перемещения активного окна следует также удерживать клавишу <span class="key">SHIFT</span>.</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>Перемещайте одно окно за ярлычок к ярлычку другого и удерживайте в это время клавишу <span class="key">OPT</span> и окна соединятся.(более подробно в теме <a href="gui.html#stack-tile">Графический интерфейс</a>).</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Переключаться между открытыми окнами в пределах текущего рабочего стола.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>Cycles through stack and tiled windows.</td></tr>
+<tr><td><span class="key"> OPT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Переключаться между открытыми окнами в пределах текущего рабочего стола.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + левый щелчок мыши</td><td></td><td>Для перемещения окна щёлкните левой кнопкой мыши и потащите его. (более подробно в теме <a href="gui.html#move-resize">Графический интерфейс</a>).</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + правый щелчок мыши</td><td></td><td>Для изменения размера окна щёлкните правой кнопкой мыши и потащите его. (более подробно в теме <a href="gui.html#move-resize">Графический интерфейс</a>).</td></tr>
 <tr><td> </td></tr>
@@ -142,14 +143,14 @@
 <tr><td><span class="key">ALT</span> + left click</td><td style="width:15px;"></td><td>Left-clicking on a path or URL while holding <span class="key">ALT</span> opens it in the preferred application, e.g. folders in Tracker, pictures in ShowImage. You can limit the selected path by additionally holding <span class="key">SHIFT</span>.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td></td><td>Открыть новую сессию терминала в новом окне.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td></td><td>Открыть новую сессию терминала в новой вкладке.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span>...</td><td></td><td>Переключение между соответствующими вкладками.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">TAB</span></td><td></td><td>Переключиться к следующему окну терминала.</td></tr>
-<tr><td><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Переключение к предыдущей/следующей вкладке.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span>...</td><td></td><td>Переключение между соответствующими вкладками.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Переключение к предыдущей/следующей вкладке.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Переместить текущую вкладку влево/вправо.</td></tr>
+<tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Прокрутить содержимое терминала вверх/вниз на одну строку.</td></tr>
+<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">PageUP</span>/<span class="key">PageDOWN</span></td><td></td><td>Прокрутить содержимое терминала вверх/вниз на одну страницу.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td></td><td>Увеличить/Уменьшить размер шрифта.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Войти/покинуть полноэкранный режим.</td></tr>
-<tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">↑</span>/<span class="key">↓</span></td><td></td><td>Прокрутить содержимое терминала вверх/вниз на одну строку.</td></tr>
-<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">PageUP</span>/<span class="key">PageDOWN</span></td><td></td><td>Прокрутить содержимое терминала вверх/вниз на одну страницу.</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>После ввода нескольких букв имени файла или пути, если нажмете <span class="key">TAB</span>, то название автодополнится. Если будет более одного соответствия, то дополнение остановится в том месте, где начинается различие в названиях, и вам следует ввести ещё несколько букв. Если вы нажмете <span class="key">TAB</span> дважды, то отобразится список всех соответствий.</td></tr>
 <tr><td><span class="key">↑</span>/<span class="key">↓</span></td><td></td><td>Просмотр истории всех ранее введенных команд.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">R</span></td><td></td><td>Все ранее введенные вами команды хранятся в файле <span class="path">~/config/settings/bash_history</span>. Нажмите <span class="key">CTRL</span> <span class="key">R</span> и начните вводить команду и вам будет предоставлена первая команда из истории bash, которая соответствует введеной вами. Продолжайте нажимать <span class="key">CTRL</span> <span class="key">R</span> пока не найдете нужную. После этого нажмите <span class="key">ENTER</span> для исполнения.</td></tr>

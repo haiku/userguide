@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
 <head>
-<!-- 
+<!--
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,6 +64,17 @@
 <div id="content">
 <div>
 
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td><a href="#file">Datei</a><br />
+                <a href="#Bearbeiten">Edit</a><br />
+                <a href="#browse">Blättern</a><br />
+                  <a href="#image">Bild</a><br />
+                  <a href="#view">Ansicht</a><br />
+                  <a href="#attributes">Attribute</a><br />
+                  <a href="#shortcuts">Tastenkürzel</a></td></tr>
+</table>
+
 <h2><img src="../../images/apps-images/showimage-icon_64.png" alt="showimage-icon_64.png" width="64" height="64" />ShowImage</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><i>kein Eintrag; wird über Doppelklick auf eine entspechende Datei aufgerufen.</i></td></tr>
@@ -72,41 +83,65 @@
 </table>
 <p><br /></p>
 <p>Mit ShowImage lassen sich Bilder in allen Formaten anzeigen, die durch <a href="../preferences/datatranslations.html">Translatoren</a> unterstützt werden. Neue Formate werden automatisch erkannt, sobald ihr Translator installiert wurde. So geschah das zum Beispiel für Haikus Vektoricon-Dateien, WonderBrush-Dateien oder als WebP-Bilder weitere Verbreitung fanden.<br />
-ShowImage bietet einige der wichtigsten Bearbeitungsmöglichkeiten, wie das Beschneiden, Drehen oder Spiegeln von Bildern sowie das Speichern in verschiedenen Formaten.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Bilder anzeigen</h2>
-<img src="../images/apps-images/showimage-view.jpg" alt="showimage-view.jpg" />
+ShowImage bietet keine Bearbeitungsmöglichkeiten per se, es kann allerdings eine rechteckige Auswahl erstellt und in einem beliebigen Format abgespeichert werden. Bilder können auch gedreht und gespiegelt werden, dies verändert aber nicht das Bild an sich. Es wird nur ein Attribut an die Datei gehängt, das ShowImage anweist das Bild beim nächsten Mal entsprechend zu drehen oder zu spiegeln.</p>
+<p>Gehen wird der Reihe nach durch die Menüs, sparen uns dabei aber die offensichtlichen Menüpunkte.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="file" name="file">Datei</a></h2>
+<img src="../images/apps-images/showimage-file.png" style="float:left;margin-right:15px" alt="showimage-file.png" />
+<p>Das <span class="menu">Öffnen …</span> Untermenü zeigt die kürzlich angezeigten Bilder.<br />
+Mit dem <span class="menu">Öffnen mit …</span> Menü kann man das aktuelle Bild mit einer beliebigen Anwendung öffnen, die dessen Dateiformat unterstützt.<br />
+Aus dem <span class="menu">Speichern als …</span> Untermenü wird das Format gewählt, mit dem das aktuelle Bild gespeichert wird..<br />
+<span class="menu">Als Hintergrund verwenden …</span> öffnet die  <a href="../preferences/backgrounds.html">Hintergründe</a> Einstellungen, um das aktuelle Bild für eine oder alle Arbeitsflächen zu verwenden.</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="edit" name="edit">Bearbeiten</a></h2>
+<img src="../images/apps-images/showimage-edit.png" style="float:left;margin-right:15px" alt="showimage-edit.png" />
+<p>Ist der <span class="menu">Auswahlmodus</span> aktiv   ̵  ebenfalls wählbar mit dem gestrichelten Rechteck Icon in der Werkzeugleiste  ̵  lässt sich mit der Maus ein Auswahlrahmen aufziehen, der dann per Drag&amp;Drop auf die Arbeitsfläche oder in irgendeinen Ordner gespeichert werden kann. Macht man das Drag&amp;Drop mit der rechten Maustaste, lässt sich aus einem Menü das Dateiformat bestimmen.<br />
+Anstatt extra den Modus zu wechseln, kann man den Rahmen auch mit gehaltener <span class="key">STRG</span> Taste erstellen.</p>
+<p style="clear:left"><span class="key">ESC</span> bewirkt das gleiche wie der Menüpunkt <span class="menu">Auswahl aufheben</span>.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="browse" name="browse">Blättern</a></h2>
+<img src="../images/apps-images/showimage-browse.png" alt="showimage-browse.png" />
+<p>Nachdem ein Bild geöffnet wurde, kann man schnell alle anderen Bilder in dessen Ordner (oder Ergebnisfenster einer Query) durchsehen, indem man <span class="key">↑</span>/<span class="key">↓</span> oder <span class="key">←</span>/<span class="key">→</span> drückt. Dabei sieht man, wie sich die markierte Datei im Tracker-Fenster mit verändert.</p>
+<p>Es besteht die Möglichkeit, schnell den Ordner des aktuellen Bildes zu öffnen und sogar zu dessen übergeordneten Ordner oder Unterordnern zu navigieren. Das funktioniert genauso wie das <a href="../tracker.html#drill-down">Navigieren per Untermenüs</a> im Tracker, indem man auf den Info-Teil in der Statusleiste klickt, in dem Größe, Vergrößerungsfaktor und Dateiformat des aktuellen Bilds angezeigt werden.</p>
+<p>Unter <span class="menu">Blättern</span> findet sich eine andere Art von Bilder-Durchsehen: Einige Dateiformate, beispielweise TIFF, können mehrere Seiten in einer Datei unterbringen. Mit Befehlen wie <span class="menu">Erste Seite</span> und <span class="menu">Letzte Seite</span> lassen sich diese Seiten anspringen.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="image" name="image">Bild</a></h2>
+<img src="../images/apps-images/showimage-image.png" style="float:left;margin-right:15px" alt="showimage-image.png" /><p>Im Menü <span class="menu">Bild</span> befinden sich die wenigen für einen Bildbetrachter nötigen Befehle zur Bildbearbeitung: Rotieren und Spiegeln von Bildern. Dabei werden die eigentlichen Bilddaten jedoch nicht verändert. Es wird lediglich ein Attribut an die Datei gehängt, damit sie beim nächsten Öffnen gleich automatisch gedreht oder gespiegelt angezeigt wird.</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="view" name="view">Ansicht</a></h2>
+<img src="../images/apps-images/showimage-view.png" style="float:left;margin-right:15px" alt="showimage-view.png" />
 <p>Unter <span class="menu">Ansicht</span> lässt sich eine <span class="menu">Diashow</span> aller Bilder eines Ordners (oder dem Ergebnisfenster einer Query) starten und dafür eine <span class="menu">Verzögerung</span> zwischen 2 und 20 Sekunden einstellen.</p>
 <p>Andere Befehle beziehen sich immer auf das aktuell dargestellte Bild (ohne die Fenstergröße zu ändern):<br />
 <span class="menu">Originalgröße</span> zeigt das Bild mit einem Vergrößerungsfaktor von 100%.<br />
 <span class="menu">An Fenstergröße anpassen</span> passt das Bild an die Fenstergröße an, zum Beispiel nachdem das Bild gezoomt oder die Fenstergröße geändert wurde.<br />
 <span class="menu">Vergrößern</span> und <span class="menu">Verkleinern</span> ändert die Ansicht in 10%-Schritten. Auch mit dem Mausrad lässt sich zoomen. Ist ein Bild größer als das Fenster, lässt sich der Bildausschnitt mit der linken Maustaste verschieben.</p>
-<p>Zwei Einstellungen gelten nicht nur für das aktuell dargestellte Bild, sondern bleiben auch erhalten, wenn man mehrere Bilder durchsieht:<br />
+<p>Zwei Einstellungen gelten nicht nur für das aktuell dargestellte Bild, sondern bleiben auch beim Durchsehen mehrer Bilder erhalten:<br />
 <span class="menu">Zoomen mit hoher Qualität</span> wendet zur Bildverbesserung einen schnellen Filter an, um Stufeneffekte beim Zoom abzuschwächen.<br />
 <span class="menu">Auf Fenstergröße vergrößern</span> zieht kleinere Bilder auf Fenstergröße auf.</p>
 <p>Bilder lassen sich im <span class="menu">Vollbild</span>-Modus darstellen, die Option <span class="menu">Im Vollbild-Modus Dateinamen zeigen</span> blendet den Dateinamen immer unten im Bild ein.</p>
 <p>Mittels <span class="menu">Werkzeugleiste zeigen</span> werden die Bedienelemente aus- und eingeblendet:</p>
 <img src="../../images/apps-images/showimage-toolbar.png" alt="showimage-toolbar.png" />
-<p>Von links nach rechts: Vorheriges Bild, nächstes Bild, Diashow (im Vollbildmodus), Auswahlmodus, Originalgröße, an Fenstergröße anpassen, vergrößern, verkleinern, vorherige und nächste Seite (für Dateiformate wie TIFF, die mehrere Seiten enthalten können, siehe weiter unten).</p>
+<p>Von links nach rechts: Vorheriges Bild, nächstes Bild, Diashow (im Vollbildmodus), Auswahlmodus, Originalgröße, an Fenstergröße anpassen, vergrößern, verkleinern, vorherige und nächste Seite (für Dateiformate wie TIFF, die mehrere Seiten enthalten können).</p>
 <p>Die meisten der oft benutzten Befehle erscheinen beim Rechtsklick auf ein Bild auch in einem Kontextmenü. Das ist besonders praktisch im Vollbildmodus.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Bilder durchsehen</h2>
-<img src="../images/apps-images/showimage-browse.jpg" alt="showimage-browse.jpg" />
-<p>Nachdem ein Bild geöffnet wurde, kann man schnell alle anderen Bilder in dessen Ordner (oder Ergebnisfenster einer Query) durchsehen, indem man <span class="key">↑</span>/<span class="key">↓</span> oder <span class="key">←</span>/<span class="key">→</span> drückt. Dabei sieht man, wie sich die markierte Datei im Tracker-Fenster mit verändert.</p>
-<p>Es besteht die Möglichkeit, schnell den Ordner des aktuellen Bildes zu öffnen und sogar zu dessen übergeordneten Ordner oder Unterordnern zu navigieren. Das funktioniert genauso wie das <a href="../tracker.html#drill-down">Navigieren per Untermenüs</a> im Tracker, indem man auf den Info-Teil in der Statusleiste klickt, in dem Größe und Dateiformat des aktuellen Bilds angezeigt werden.</p>
-<p>Unter <span class="menu">Blättern</span> findet sich eine andere Art von Bilder-Durchsehen: Einige Dateiformate, beispielweise TIFF, können mehrere Seiten in einer Datei unterbringen. Mit Befehlen wie <span class="menu">Erste Seite</span> und <span class="menu">Letzte Seite</span> lassen sich diese Seiten anspringen.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Bilder bearbeiten</h2>
-<img src="../images/apps-images/showimage-edit.jpg" alt="showimage-edit.jpg" />
-<p>Unter <span class="menu">Bild</span> finden sich die wenigen für einen Bildbetrachter nötigen Befehle zur Bildbearbeitung: Rotieren und Spiegeln von Bildern. Dabei werden die eigentlichen Bilddaten jedoch nicht verändert. Es wird lediglich ein Attribut an die Datei gehängt, damit sie beim nächsten Öffnen gleich automatisch gedreht oder gespiegelt angezeigt wird.</p>
-<p><span class="menu">Als Hintergrund verwenden...</span> öffnet das Einstellungsfenster für <a href="../preferences/backgrounds.html"><acronym title="Backgrounds">Hintergründe</acronym></a>, um das aktuelle Bild als Hintergrund für Arbeitsflächen zu verwenden.</p>
-<p>Manchmal möchte man ein Bild auch auf einen Ausschnitt beschneiden. Um den Schnittrahmen zu setzen, kann man unter <span class="menu">Bearbeiten</span> in den <span class="menu">Auswahlmodus</span> wechseln und mit der linken Maustaste einen Rahmen aufziehen. Den Wechsel in den Auswahlmodus kann man sich sparen, indem man einfach <span class="key">STRG</span> gedrückt hält, bevor man den Rahmen aufzieht (sonst würde man ja maximal den Bildausschnitt verschieben).<br />
-<span class="menu">Auswahl aufheben</span> oder <span class="key">ESC</span> lässt den Rahmen wieder verschwinden.</p>
-<p>Das nächste Kapitel beschreibt wie man den so abgesteckten Bildausschnitt abspeichert.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Bilder speichern und konvertieren</h2>
-<p>Mittels <span class="menu">Speichern unter...</span> aus dem Menü <span class="menu">Datei</span> Menü, lässt sich ein Bild in einem beliebigen Format speichern. Einfach das entsprechende Format aus dem Untermenü auswählen und anschließend einen Namen vergeben.<br />
-Besonders wenn das Tracker-Fenster mit dem Speicherziel bereits geöffnet ist, geht das meist noch schneller per Drag &amp; Drop.</p>
-<img src="../images/apps-images/showimage-dnd.jpg" alt="showimage-dnd.jpg" />
-<p>Auf diese Weise bringt man auch das oben beschriebene Beschneiden zum Abschluss. Entweder man zieht wie dort beschrieben einen Rahmen auf, oder benutzt <span class="menu">Bearbeiten | Alles auswählen</span> für das gesamte Bild. Dann klickt man in den Auswahlrahmen und zieht ihn auf den Desktop oder irgendein anderes Tracker-Fenster, um einen neuen Bildausschnitt im selben Format wie das Originalbild zu erstellen.</p>
-<p>Das Speichern in einem anderen Format funktioniert genauso, nur verwendet man stattdessen die rechte Maustaste, wodurch beim Fallenlassen der Auswahl ein Kontextmenü erscheint aus dem das gewünschte Format zu wählen ist.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Tastaturkürzel</h2>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="attributes" name="attributes">Attribute</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Hier lässt sich für das aktuelle Bild eine <span class="menu">Bewertung</span> zwischen 1 und 10 vergeben, oder die <span class="menu">Bewertung zurücksetzen</span>  damit das Bild wieder als "unbewertet" (= "0") erscheint.</p>
+<p>Im Tracker wird die Bewertung in einer Attributspalte "Rating" als eine Reihe von Sternen dargestellt. Fünf Sterne repräsentieren die 10 möglichen Werte in "Halbstern" Stufen. Beispielsweise wird eine Bewertung von 7 dargestellt als 7 / 2 = 3,5 Sterne: ★★★⯪☆.<br />
+Die Bewertung lässt sich auch direkt in Tracker vornehmen: Datei auswählen, <span class="menu">Umbenennen</span> aus dem <span class="menu">Datei</span> Menü wählen und die <span class="key">TAB</span> Taste so oft drücken, bis die "Rating" Spalte erreicht ist. Nun lässt sich der numerische Wert eingeben, der zu einer Sternebewertung wird sobald man <span class="key">RETURN</span> drückt.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="shortcuts" name="shortcuts">Tastaturkürzel</a></h2>
 <p>Hier einige der nützlichsten Tastenkürzel:</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">←</span> / <span class="key">↑</span></td><td style="width:15px;"></td><td>Vorheriges Bild</td></tr>

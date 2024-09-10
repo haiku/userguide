@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="sv-SE" xml:lang="sv-SE">
 <head>
-<!-- 
+<!--
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,6 +64,17 @@
 <div>
 <div class="box-info">Översättningen av denna sida är inte komplett. Delar av innehållet kommer därför att visas på engelska.</div>
 
+<table class="index" id="index" summary="index">
+<tr class="heading"><td>Index</td></tr>
+<tr class="index"><td><a href="#file">File</a><br />
+                <a href="#edit">Edit</a><br />
+                <a href="#browse">Browse</a><br />
+                  <a href="#image">Image</a><br />
+                  <a href="#view">View</a><br />
+                  <a href="#attributes">Attributes</a><br />
+                  <a href="#shortcuts">Keyboard shortcuts</a></td></tr>
+</table>
+
 <h2><img src="../../images/apps-images/showimage-icon_64.png" alt="showimage-icon_64.png" width="64" height="64" />BildVisning</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><i>Finns ej i Deskbar. Startas normalt genom att dubbelklicka på en fil som stöds av programmet.</i></td></tr>
@@ -72,41 +83,66 @@
 </table>
 <p><br /></p>
 <p>ShowImage allows you to view images in all formats that are supported through <a href="../preferences/datatranslations.html">DataTranslators</a>. New formats are automatically recognized when their translator is added to the system. This has been done for Haiku's vector icon files, WonderBrush images or when WebP images became available, for example.<br />
-ShowImage provides minimal editing features to crop, rotate and flip images and to save them in another format.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Bildvisning</h2>
-<img src="../images/apps-images/showimage-view.jpg" alt="showimage-view.jpg" />
+ShowImage doesn't provide editing features, but it does allow you to select a rectangular area and save it in any format. You can also rotate and flip images, but these operations don't physically change images. They only add an attribute that indicate to rotate or flip the image automatically when it's opened the next time.</p>
+<p>Let's go through the menus in order, leaving out the obvious items.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="file" name="file">File</a></h2>
+<img src="../images/apps-images/showimage-file.png" style="float:left;margin-right:15px" alt="showimage-file.png" />
+<p>The <span class="menu">Open…</span> sub-menu lists the most recently viewed images.<br />
+The <span class="menu">Open with…</span> lets you open the current image in any application supporting its filetype.<br />
+The <span class="menu">Save as…</span> sub-menu lets you choose a format to save the current image.<br />
+<span class="menu">Use as background…</span> opens the <a href="../preferences/backgrounds.html">Backgrounds</a> preferences to quickly set the current image as backdrop of your workspace(s).</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="edit" name="edit">Edit</a></h2>
+<img src="../images/apps-images/showimage-edit.png" style="float:left;margin-right:15px" alt="showimage-edit.png" />
+<p>When <span class="menu">Selection mode</span> is activated ̵ also available with the dashed rectangle icon of the tool bar ̵ you can select a rectangular area of the image that you can then drag&amp;drop to the Desktop or any folder to save it. Dragging with the right mouse button will show a menu when dropping the snippet that lets you choose another image format.<br />
+If you don't want to change modes first, you can create this selection frame in "normal mode" by simply holding <span class="key">CTRL</span> while left-click-dragging.</p>
+<p style="clear:left"><span class="menu">Clear selection</span> or <span class="key">ESC</span> will remove the selection frame.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="browse" name="browse">Browse</a></h2>
+<img src="../images/apps-images/showimage-browse.png" alt="showimage-browse.png" />
+<p>After opening an image you can quickly browse through all the other images in its folder (or query result window) by pressing <span class="key">↑</span>/<span class="key">↓</span> or <span class="key">←</span>/<span class="key">→</span>. You can see the selection change accordingly in the Tracker window.</p>
+<p>There is a quick way to open the folder of the current image and even navigate to its parent and subfolders. It works just like with <a href="../tracker.html#drill-down">drill-down navigating</a> in Tracker by clicking in the info area in the status bar that shows size, zoom level and format of the current image.</p>
+<p>Looking at the <span class="menu">Browse</span> menu, shows another type of browsing: Some image formats, like TIFF, can contain several pages in one file. Commands like <span class="menu">First page</span> and <span class="menu">Next page</span> let you navigate those pages.</p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="image" name="image">Image</a></h2>
+<img src="../images/apps-images/showimage-image.png" style="float:left;margin-right:15px" alt="showimage-image.png" /><p>The <span class="menu">Image</span> menu offers the few image manipulations necessary for an image viewer: rotating and flipping the image.<br />
+Note however, that the actual image data won't be changed. Only an attribute is added to the file so it'll be shown rotated or flipped the next time you open it.</p><p style="clear:left"></p>
+
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="view" name="view">View</a></h2>
+<img src="../images/apps-images/showimage-view.png" style="float:left;margin-right:15px" alt="showimage-view.png" />
 <p>The <span class="menu">View</span> menu offers to start a <span class="menu">Slide show</span> of all images in a folder (or query result window) and set a <span class="menu">Slide delay</span> from 2 to 20 seconds.</p>
 <p>Other commands apply to the currently displayed image (without changing the size of the window):<br />
 <span class="menu">Original size</span> shows the image with a 100% zoom factor.<br />
 <span class="menu">Fit to window</span> shrinks the image back into the window frame, e.g. after having zoomed into it or after resizing the window.<br />
 <span class="menu">Zoom in</span> and <span class="menu">Zoom out</span> move into and out of the image in 10% steps. Zooming is also done with the mouse wheel; to pan an image bigger than the window, simply left-click and drag your mouse around.</p>
 <p>Two settings don't just apply to the currently displayed image and are remembered when browsing from one image to the next:<br />
-<span class="menu">High quality zooming</span> applies a very fast filter when zooming to reduce jagged lines and produce a smoother result.<br />
+<span class="menu">High-quality zooming</span> applies a very fast filter when zooming to reduce jagged lines and produce a smoother result.<br />
 <span class="menu">Stretch to window</span> will stretch smaller images to fill the current window frame.</p>
 <p>Then there's a <span class="menu">Full screen</span> mode with an option to <span class="menu">Show caption in full screen mode</span> which overlays the file name at the bottom of the image.</p>
 <p>Lastly, <span class="menu">Show tool bar</span> will show/hide the graphical controls:</p>
 <img src="../../images/apps-images/showimage-toolbar.png" alt="showimage-toolbar.png" />
-<p>From left to right: Previous image, next image, start slide show (in full screen mode), selection mode, original size, fit to window, zoom in, zoom out, previous and next page (when an image format like TIFF allows multiple pages in one file, see below).</p>
+<p>From left to right: Previous image, next image, start slide show (in full screen mode), selection mode, original size, fit to window, zoom in, zoom out, previous and next page (when an image format like TIFF allows multiple pages in one file).</p>
 <p>Most of the more often used commands are also available from a right-click context menu on the image. Convenient when in full-screen mode.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Bläddra</h2>
-<img src="../images/apps-images/showimage-browse.jpg" alt="showimage-browse.jpg" />
-<p>After opening an image you can quickly browse through all the other images in its folder (or query result window) by pressing <span class="key">↑</span>/<span class="key">↓</span> or <span class="key">←</span>/<span class="key">→</span>. You can see the selection change accordingly in the Tracker window.</p>
-<p>There is a quick way to open the folder of the current image and even navigate to its parent and subfolders. It works just like with <a href="../tracker.html#drill-down">drill-down navigating</a> in Tracker by clicking in the info area in the status bar that shows size and format of the current image.</p>
-<p>Looking at the <span class="menu">Browse</span> menu, shows another type of browsing: Some image formats, like TIFF, can contain several pages in one file. Commands like <span class="menu">First page</span> and <span class="menu">Next page</span> let you navigate those pages.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Redigera</h2>
-<img src="../images/apps-images/showimage-edit.jpg" alt="showimage-edit.jpg" />
-<p>The <span class="menu">Image</span> menu offers the few image manipulations necessary for an image viewer: rotating and flipping the image. Note however, that the actual image data won't be changed. Only an attribute is added to the file so it'll be shown rotated or flipped the next time you open it.</p>
-<p><span class="menu">Use as background…</span> will open the <a href="../preferences/backgrounds.html">Backgrounds</a> preferences to set the current picture as image for your workspaces.</p>
-<p>Cropping is another feature that's needed sometimes. To define the frame to cut to, you can switch to <span class="menu">Selection mode</span> from the <span class="menu">Edit</span> menu and drag out a box with your left mouse button. If you don't want to change modes first, you can create this box in "normal mode" by simply holding <span class="key">CTRL</span> while left-click-dragging, which otherwise would just pan the image around.<br />
-<span class="menu">Clear selection</span> or <span class="key">ESC</span> will remove the selection box.</p>
-<p>The following chapter shows how to actually save the cropped area.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Sara och konvertera</h2>
-<p>To save or convert an image into any available format, you can invoke the normal <span class="menu">Save as…</span> item from the <span class="menu">File</span> menu, select the format and choose a file name.<br />
-Often quicker, especially when the Tracker window with the destination folder is already open, is using drag &amp; drop.</p>
-<img src="../images/apps-images/showimage-dnd.jpg" alt="showimage-dnd.jpg" />
-<p>This is also how the above mentioned cropping is finalized. Either select a frame as described above, or choose <span class="menu">Edit | Select all</span> for the whole image. Then drag &amp; drop the selection onto the Desktop or any Tracker window to create a new image clipping in the same format of the original image.</p>
-<p>To save in another file format, do the dragging with the right mouse button and choose a format from the context menu when dropping the image.</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Tangentbordskombinationer</h2>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="attributes" name="attributes">Attributes</a></h2>
+<img src="../images/apps-images/showimage-attributes.png" style="float:left;margin-right:15px" alt="showimage-attributes.png" />
+<p>Here you can set a <span class="menu">Rating</span> of the current image between 1 and 10, or choose <span class="menu">Reset rating</span> to set it back to "unrated" (= "0").</p>
+<p>In Tracker, ratings are displayed in a "Rating" attribute column as a number of stars. Five stars represent the 10 possible values, resulting in half-star steps. For example, a rating of 7 is shown as 7 / 2 = 3.5 stars: ★★★⯪☆.<br />
+You can edit the rating directly in Tracker as well: Select the file, choose <span class="menu">Edit name</span> from the <span class="menu">File</span> menu and press <span class="key">TAB</span> to get into the "Rating" column. Now you can enter the new numerical value which will turn into a star rating after hitting <span class="key">ENTER</span>.</p>
+<p style="clear:left"></p>
+
+<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="shortcuts" name="shortcuts">Keyboard shortcuts</a></h2>
 <p>Här är en lista över några användbara tangentbordskombinationer:</p>
 <table summary="keycombos" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="key">←</span> / <span class="key">↑</span></td><td style="width:15px;"></td><td>Föregående bild</td></tr>

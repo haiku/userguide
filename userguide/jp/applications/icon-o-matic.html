@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -220,7 +220,11 @@
 <p>シェイプは互いに重なり合っています。可能ならばそれぞれ自身のレイヤー上にあります。重ね順を変更するには、リストで項目をドラッグ＆ドロップして異なる場所へドロップしてください。</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">シェイプのメニュー</a></h4>
-<p><span class="menu">シェイプ</span>のメニューには<span class="menu">空のシェイプを追加する</span>、<span class="menu">パスとともに追加</span>、<span class="menu">スタイルと共に追加</span>、<span class="menu">パスとスタイルつきで追加</span>、<span class="menu">複製</span>、<span class="menu">削除</span>のほかに、このような項目があります。</p>
+<p><span class="menu">シェイプ</span>のメニューは、前に説明した<span class="menu">空のシェイプを追加する、または パス / スタイル / パスとスタイル付きで</span>と<span class="menu">複製</span>または<span class="menu">削除</span>する機能を提供します。
+</p>
+<p><span class="menu">参照画像を追加 (Add reference image)</span> で、特別な種類のシェイプを作成できます。それはビットマップイメージ (例 PNG または JPEG) をロードでき、アイコン上で作業中に背景として使用します。たとえば、既存のアイコンのバクターバージョンを作成するときにとても役立ちます。参照画像はほかのシェイプのように操作 (移動、回転、リサイズ) できますが、HVIF として保存する際にはその一部として保存されません。</p>
+
+<p>次にこれらがあります。</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">変形をリセット (Reset transformation)</span></td><td style="width:15px;"></td><td>シェイプに対して行ったすべての移動、リサイズ、回転を元に戻す。</td></tr>
 <tr><td class="onelinetop"><span class="menu">変形を維持する (Freeze transformation)</span></td><td></td><td>シェイプを変形させたときに、それに割り当てられたパスは元々の場所から動きません。これは意図したことかもしれません。たぶん複数のシェイプがそのパスを使っているなら、おそらく意図的に<span class="menu">オプション | グリッドに沿う (Options | Snap to grid)</span> を使って、正確なピクセル境界に点を打つでしょう。<br />
@@ -234,6 +238,8 @@
 <tr><td><span class="menu">Min LOD</span></td><td></td><td>Level of Detail の最小値</td></tr>
 <tr><td><span class="menu">Max LOD</span></td><td></td><td>Level of Detail の最大値</td></tr>
 </table>
+<p>参照画像はその代わりに<span class="menu">アルファ値 (Alpha)</span> を持ち、透明度を (0-255) で設定できます。
+</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Level of Detail (LOD)</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -287,13 +293,16 @@ LOD によって、アイコンをサイズにあわせて見えやすくでき�
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">コンター (Contour)</span></td><td></td><td>シェイプにアウトラインを追加。</td></tr>
 <tr><td><span class="menu">ストローク (Stroke)</span></td><td></td><td>シェイプ全体にスタイルを適用させるのではなく、パスの部分のみに適用させるように変更。</td></tr>
+<tr><td><span class="menu">パースペクティブ (Perspective)</span></td><td></td><td>シェイプの 4つのコーナーを移動させて、パースペクティブの効果を作成します。</td></tr>
+
 </table>
 
 <p>それぞれの Transformer に対し、異なるプロパティセットが用意されています。</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Transformer のプロパティ</a></h4>
-<p><span class="menu">プロパティ</span>には<span class="menu">名前</span>や<span class="menu">幅</span>のほかに、以下のような項目があります。</p>
+<p><span class="menu">プロパティ</span>ビューには<span class="menu">名前</span>のほかに、以下の (タイプによって少し変わります) オプションがあります。</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">幅 (Width)</span></td><td></td><td>ストロークまたはコンターの幅です。</td></tr>
 <tr><td><span class="menu">頂点 (Caps)</span></td><td style="width:15px;"></td><td><i>ストロークのみ</i>。線の終端の形状を <span class="menu">Butt</span>、<span class="menu">Square</span>、<span class="menu">Round</span> から選択できます。 </td></tr>
 <tr><td><span class="menu">向きを検出する (Detect orient)</span></td><td></td><td><i>コンターのみ</i>。Transformer を作用させる場所をパスの内側にするか外側するか、選択できます。</td></tr>
 <tr><td><span class="menu">結合 (Joins)</span></td><td></td><td>線の接続部の形を <span class="menu">Miter</span>、<span class="menu">Round</span>、<span class="menu">Bevel</span> から選択できます:</td></tr>

@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 
 <table class="index" id="index" summary="index">
@@ -87,7 +88,9 @@ Mikä parempaa, sinun ei tarvitse kaksoisnapsauttaa kyselyn tekemiseksi uudellee
 <p>Aloitat haun kutsumalla <span class="menu">Etsi...</span>-valikkoa joko Työpöytäpalkista tai mistä tahansa Seuraaja-ikkunasta tai Työpöydältä (mikä on itse asiassa kokonäytön kokoinen Seuraaja-ikkuna). Pikanäpppäin on <span class="key">ALT</span> <span class="key">F</span>. Sinulle esitellään Haku-ikkuna:</p>
 <img src="images/queries-images/basic-query.png" alt="basic-query.png" />
 <ol>
-<li><p>Valitse nykyiset tai tallennetut kyselyt tai tallenna nykyiset hakuparametrit <a href="#query-template">Kyselymallinteena</a>.</p></li>
+<li><p>The <span class="menu">Query</span> menu allows to <span class="menu">Open</span> an existing query and <span class="menu">Save</span> the current search parameters as a query or <a href="#query-template">Query template</a>. It also gives quick access to <span class="menu">Recent queries</span>.</p></li>
+<li><p><span class="menu">Options</span> lets you include the Trash in your search.</p></li>
+<li><p><span class="menu">Templates</span> holds a list of all query templates on your system.</p></li>
 <li><p>Kavenna etsintäaluetta valikosta <span class="menu">Kaikki tiedostot ja kansiot</span> tiettyyn tiedostotyyppiin.</p></li>
 <li>Määritä hakumenetelmä:<ul>
     <li><span class="menu">Nimellä</span> - perushaku tiedosto- tai kansionimellä</li>
@@ -95,10 +98,6 @@ Mikä parempaa, sinun ei tarvitse kaksoisnapsauttaa kyselyn tekemiseksi uudellee
     <li><span class="menu">Kaavalla</span> - vieläkin edistyneempi haku, voit hienosäätää mutkikkaita hakutermejä</li></ul></li>
 <li><p>Valitse levyasema, jolta etsitään.</p></li>
 <li><p>Kirjoita hakutermi.</p></li>
-<li><p>Ota pois valintaruutu <span class="menu">Tilapäinen</span>, jos et halua kyselyn katoavan automaattisesti 7 päivän jälkeen.</p></li>
-<li><p>Valitse valintaruutu <span class="menu">Sisällytä roskakori</span>, jos haluat etsiä myös roskakorista.</p></li>
-<li><p>Valinnainen, kirjoita nimi tälle kyselylle, jos haluat tallentaa sen.</p></li>
-<li><p>Kyselyn tallentamiseksi voit raahata ja pudottaa kuvakkeen minne tahansa. Kun sen tekee hiiren kakkospainikkeella, valikko tarjoaa tallentamisen mallinteena.</p></li>
 </ol>
 
 <h2>
@@ -156,9 +155,9 @@ Hyvä tapa rajoittaa hakutulosten lukumäärää.</p>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="query-template" name="query-template">Kyselymallinteet</a></h2>
-<p>Jos kaksoisnapsautat tallennettua kyselyä, tiedostohaku käynnistyy taas kerran ja tulosikkuna avautuu välittömästi. Et ehkä kuitenkaan halua etsiä <i>tarkalleen</i> näillä hakuparametreilla, vaan käyttää sitä vain hiukan muotoillun kaavan aloituspisteenä.<br />
-Käyttämällä <span class="menu">Tallenna kysely mallinteena</span>-valikkorivillä (katso <a href="#find-window">(1) näytönkaappauksessa</a> ylhäällä) tai raahaamalla ja pudottamalla kuvakkeen (10) minne tahansa hiiren kakkospainikkeella, voit luoda juuri sellaisen mallinteen. Sen kaksoisnapsauttaminen ei avaa tulosikkunaa, vaan Etsi-paneelin, antaen mahdollisuuden nopeasti vaihtaa hakumerkkijonoja ja lisätä tai poistaa attribuutteja.</p>
-<p>Milloin valitset kyselyn tallentamisen mallinteena, ne luetellaan Etsi-paneelin äskettäisten kyselyjen valikossa.</p>
+<p>If you double click a saved query, the file search is at once started and the result window opens immediately. However, you may not want to search with these <i>exact</i> search parameters, but use it as starting point to only slightly tweak the formula.<br />
+By using the <span class="menu">Save query as template</span> menu item (see <a href="#find-window">(1) in screenshot</a> at the top), you can create just such a template. Double clicking it won't open a result window, but the Find panel, giving you the opportunity to quickly change search strings or add/remove attributes.</p>
+<p>Wherever you choose to save query templates, they'll be listed in the Find panel's <span class="menu">Templates</span> menu.</p>
 </div>
 </div>
 

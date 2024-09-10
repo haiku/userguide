@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -81,7 +81,8 @@
 <tr><td class="onelinetop"><span class="key">STRG</span> <span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span> / <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Zum Bewegen durch die Reihen und Spalten der verfügbaren Workspaces. Hält man dabei zusätzlich die <span class="key">SHIFT</span>-Taste, wird das aktive Fenster zur neuen Arbeitsfläche mitgenommen.</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>Zieht man ein Fenster bei gedrückter <span class="key">OPT</span> Taste in die Nähe von Reiter oder Rahmen eines anderen Fensters, lassen sie sich stapeln oder andocken (siehe <a href="gui.html#stack-tile">Stack &amp; Tile</a>).</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Wechselt durch alle offenen Fenster der aktuellen Arbeitsfläche.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>Wechselt durch gestapelte/angedockte Fenster ("Stack &amp; Tile).</td></tr>
+<tr><td><span class="key"> OPT</span> <span class="key">Bild↑</span> / <span class="key">Bild↓</span></td><td></td><td>Wechselt durch alle offenen Fenster der aktuellen Arbeitsfläche.</td></tr>
 <tr><td><span class="key">STRG</span> <span class="key">ALT</span> + Linksklick</td><td></td><td>Klickt und zieht man mit der linken Maustaste wird das Fenster verschoben (siehe dazu <a href="gui.html#move-resize">Haikus Benutzeroberfläche</a>).</td></tr>
 <tr><td><span class="key">STRG</span> <span class="key">ALT</span> + Rechtsklick</td><td></td><td>Klickt und zieht man mit der rechten Maustaste wird die Fenstergröße geändert (siehe dazu <a href="gui.html#move-resize">Haikus Benutzeroberfläche</a>).</td></tr>
 <tr><td> </td></tr>
@@ -142,14 +143,14 @@
 <tr><td><span class="key">ALT</span> + Linksklick</td><td style="width:15px;"></td><td>Klickt man auf einen Pfad oder URL während <span class="key">ALT</span> gedrückt wird, wird das Ziel mit der bevorzugten Anwendung geöffnet. Zum Beispiel, Ordner als Trackerfenster und Bilder in ShowImage. Der selektierte Teil des Pfads lässt mit zusätzlich gehaltenem <span class="key">SHIFT</span> einschränken.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td></td><td>Öffnet eine neue Terminal-Session in einem neuen Fenster.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td></td><td>Öffnet eine neue Terminal-Session in einem neuen Reiter.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span>...</td><td></td><td>Wechselt zum entsprechenden Reiter.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">TAB</span></td><td></td><td>Wechselt zum nächsten Terminal-Fenster.</td></tr>
-<tr><td><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Wechselt zum vorherigen/nächsten Reiter.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span>...</td><td></td><td>Wechselt zum entsprechenden Reiter.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Wechselt zum linken/rechten Reiter.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Verschiebt den aktuellen Reiter nach links/rechts.</td></tr>
+<tr><td class="onelinetop"><span class="key">STRG</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Scrollt die Terminal-Ausgabe um eine Zeile rauf/runter.</td></tr>
+<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Bild↑</span> / <span class="key">Bild↓</span></td><td></td><td> Scrollt die Terminal-Ausgabe um eine Seite rauf/runter.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td></td><td>Vergrößern/verkleinern der Schriftgröße.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">RETURN</span></td><td></td><td>Wechsel Vollbild-/Fenstermodus.</td></tr>
-<tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Scrollt die Terminal-Ausgabe um eine Zeile rauf/runter.</td></tr>
-<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Bild↑</span> / <span class="key">Bild↓</span></td><td></td><td> Scrollt die Terminal-Ausgabe um eine Seite rauf/runter.</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>Tab-Vervollständigung. Nachdem einige Zeichen eingegeben wurden, komplettiert ein Druck der
 <span class="key">TAB</span>-Taste einen Dateinamen oder Pfad. Gibt es mehr als einen Treffer, hält die Ausgabe an der Stelle an, wo sich die Treffer beginnen zu unterscheiden. Dann muss man noch einige Zeichen zur weiteren Unterscheidung nachliefern. Drückt man <span class="key">TAB</span> zweimal, werden alle Treffer aufgelistet.</td></tr>
 <tr><td><span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Zeigt die vorherigen oder nachfolgenden Befehle an, die schon eingegeben wurden.</td></tr>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009, Haiku. All rights reserved.
+ * Copyright 2009-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/apps-images/charactermap-icon_64.png" alt="charactermap-icon_64.png" width="64" height="64" />   CharacterMap (Таблиця символів)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -70,10 +71,19 @@
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/CharacterMap settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>CharacterMap (Таблиця символів) покаже Вам UTF-8 код кожного символу, який підтримує шрифт. У табличній формі відображаються всі доступні символи, які входять у вибраний шрифт.</p>
+<p>CharacterMap shows all characters of every Unicode block.</p>
+
 <img src="../images/apps-images/charactermap.png" alt="charactermap.png" />
-<p>Ліворуч, у списку представлені стандартизовані блоки разом із зручною функцією фільтра. За бажанням, Ви можете вибрати опцію <span class="menu">Відображати приватні блоки</span> в меню <span class="menu">Режим перегляду</span>. Праворуч, відображаються символи з цих блоків, які фактично входять до повного набору символів шрифту, вибраного в меню <span class="menu">Шрифт</span>. Нижче Ви зможете змінити розмір шрифту і подивитись шістнадцятковий, десятковий і UTF-8 код символу, який знаходиться під курсором миші.</p>
+
+<p>To the left you have the standardized Unicode blocks, together with a handy filter function.<br />
+The <span class="menu">View</span> menu has an option to <span class="menu">Show private blocks</span>, which are areas that are untouched by the Unicode Consortium. If you activate <span class="menu">Only show blocks contained in font</span>, blocks not part of the current font are grayed out in the blocks list at the left and not shown in the list of characters on the right.</p>
+
+<p>The right shows the actual characters in these blocks, using the font specified in the <span class="menu">Font</span> menu. You can determine if a symbol is part of that font (it's drawn in black), or if the system supplies a fall-back symbol from some other font (then it's drawn with a gray color).<br />
+Below the symbols you can change the font size. And below that, the values of the character currently under the mouse pointer are displayed in hex, decimal and UTF-8 notation.</p>
+
 <p>Методом «drag&amp;drop» символ легко перемістити з таблиці у текстовий редактор або клікнути правою кнопкою миші і вибрати пункт меню <span class="menu">Копіювати символ</span> (<span class="key">ALT</span> <span class="key">C</span>) чи <span class="menu">Копіювати як екранований рядок байтів</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">C</span>). В результаті чого отримуємо <tt>🜐</tt> або <tt>\xf0\x9f\x9c\x90</tt>.</p>
+
+<p>Clicking on a symbol shows a magnified view of it, click again to close.</p>
 
 </div>
 </div>

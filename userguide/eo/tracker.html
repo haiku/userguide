@@ -151,8 +151,8 @@ Diference de antaŭtajpa saltado la filtrado daŭros ĝis kiam vi ne presos <spa
 </ul>
 <div class="box-info">
 <p _translation_id="4341">Sometimes you just want to rearrange a few icons without doing a complete <span class="menu">Clean up</span> (<span class="key">ALT</span> <span class="key">K</span>). In that case, you select these icons and start to drag them to their new location. Before you drop them there, keep <span class="key">ALT</span> pressed. This will align the icons to the invisible grid.</p>
-<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. Normally, that's the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p>
-</div>
+<p>The first column in <span class="menu">List view</span> mode determines the icon labels in <span class="menu">Mini</span> and <span class="menu">Icon view</span> mode. That applies to the width of the labels as well: If a label gets truncated by the column width in <span class="menu">List view</span>, it'll be similarly truncated when switching to <span class="menu">Mini</span> and <span class="menu">Icon view</span>.<br />
+Normally, the first column is the file name, but you can just as well switch to <span class="menu">List view</span>, drag the <span class="menu">Size</span> column to the left and have the icons labeled with their size when switching back to <span class="menu">Icon view</span> mode. Neato!</p></div>
 <p>Aliaj funkcioj estas evidentaj.</p>
 
 <h3>
@@ -181,10 +181,12 @@ Diference de antaŭtajpa saltado la filtrado daŭros ĝis kiam vi ne presos <spa
 <p>La komandoj estas evidentaj.</p>
 <ul>
 <li><p><span class="menu">Serĉi...</span> - por serĉi dosierojn aŭ dosierujojn.. Rigardu la ĉapitron <a href="queries.html">Serĉmendoj</a> por aldona informo.</p></li>
-<li><p><span class="menu">Nova</span> - Kreas novan dosierujon aŭ iu ajn dosieron per <i>ŝablono</i>.
+<li><p><span class="menu">New</span> - Create a new folder or any other file based on a template.
 </p>
 <img src="images/tracker-images/new-menu.png" alt="new-menu.png" />
-<p>Elektinte <span class="menu">Redakti ŝablonojn...</span> vi trafos la dosierujon <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Kreado de dosiero en ĉi dosierujo donos ŝablonon kun nomo, speco kaj aliaj indikoj por la menuo <span class="menu">Nova</span>. La supra bildo montras ekzemplon: la dosiero kun nomo "text file" kaj la speco <tt>text/plain</tt>. Rigardu la ĉapitron <a href="filetypes.html">Dosierspecoj</a> por aldona informo.</p></li>
+<p>Choosing <span class="menu">Edit templates…</span> at the bottom opens the folder <span class="path">/boot/home/config/settings/Tracker/Tracker New Templates</span>. Create a file or folder there and it will appear as a template in the <span class="menu">New</span> menu. The new file/folder created by the template will have its filetype, filename, contents, and all its other attributes. In case of a folder, it'll also have its window size/position and attribute column layout.</p>
+<p>In the screenshot above, you see the custom template folders "Email folder" and "Music folder". Both will create folders with those same custom overlay icons and have the relevant attributes already set.</p>
+<p>You can also sort your templates into custom submenus. Just choose <span class="menu">Add new submenu…</span> and a new special folder gets created in <span class="path">Tracker New Templates</span> that you then rename to fit its purpose. Copy your template files there to appear in the new submenu. The screenshot above shows the submenus "C   dev files" and "Office files".</p></li>
 <li><p><span class="menu">Uzi per...</span> - submenuo kun ĉiuj programoj kapablaj prilabori ĉi dosierspecon.
 </p>
 <img src="images/tracker-images/open-with.png" alt="open-with.png" />
@@ -204,7 +206,7 @@ Diference de antaŭtajpa saltado la filtrado daŭros ĝis kiam vi ne presos <spa
 </ul>
 </li>
 <li><p><span class="menu">Redakti nomon</span>, <span class="menu">Duobligi</span> kaj <span class="menu">Movi al Rubujo</span> - evidente.</p></li>
-<li><p><span class="menu">Movi al</span>, <span class="menu">Kopii al</span> kaj <span class="menu">Krei ligilon</span> - permesas por vi movi, kopii kaj ligigi elektita(j)n dosiero(j)n uzante falmenuan manieron navigi. Kun kunpremita <span class="key">MAJUSKLIGKLAVO</span> la menuo <span class="menu">Krei ligilon</span> permesas krei relativan ligilon.</p></li>
+<li><p><span class="menu">Move to</span>, <span class="menu">Copy to</span> and <span class="menu">Create link</span> - lets you move, copy or link the selected file(s) using the submenu navigating method. Holding <span class="key">SHIFT</span> while invoking the menu offers the option to create a relative link. You recognize links by their dot-underlined icon label.</p></li>
 <li><p><span class="menu">Tondi</span>, <span class="menu">Kopii</span> kaj <span class="menu">Alglui</span> - permesas por vi manipuli dosierojn uzante la tondujon. Se premteni <span class="key">MAJUSKLIGKLAVON</span> dum ekuzo de la menuo vi povos <span class="menu">Tondi/Kopii pli</span> da dosieroj, eventuale eĉ el aliaj dosierujoj, por poste alglui ilin ĉiujn kune. Ankaŭ kun premtenata <span class="key">MAJUSKLIGKLAVO</span> vi povas alglui dosierojn el la tondujo kiel ligiloj.</p></li>
 <li><p><span class="menu">Identigi</span> - permesas rekoni specon de doseiro kaj atribui ĝin, sed ĝi ne estis atribuita antaŭe, ekzemple se vi ŝargis dosieron per la programo <span class="cli">wget</span> kiu ne atribuias dosierspecon. Kun <span class="key">MAJUSKLIGKLAVO</span> dum ekuzo de la menuo vi havos <span class="menu">Devige identigi</span> por ripari misan specon.</p></li>
 <li><p><span class="menu">Aldonaĵoj</span> - proponas apliki aldonaĵojn de la Spurilo, kiuj kapablas prilabori elektita(j)n dosiero(j)n. Rigardu la ĉapitron <a href="tracker-add-ons.html">Aldonaĵoj de la Spurilo</a> por aldona informo.</p></li>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011, Haiku. All rights reserved.
+ * Copyright 2011-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">本节的翻译还未完成。在未完成之前，所有的未完成部分都将使用英语原文。</div>
 
 <h2><img src="../../images/apps-images/bootmanager-icon_64.png" alt="bootmanager-icon_64.png" width="64" height="64" />引导管理器</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -87,6 +88,7 @@
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>只需要选择一个备份 "<tt>MBR</tt>" 文件的目录，或者使用默认路径。在点击 <span class="button">下一步</span> 之后，如果备份成功，您将会得到确认信息。</p>
+<div class="box-info">Be aware that the "<span class="path">/boot</span>" in that path is the install media (e.g. USB stick). Makes sense if something goes wrong and you need to revert immediately. For a long term backup, you should save the MBR on your new Haiku disk as well, because likely as not, you've already formatted and used your install USB stick for other things in the meantime...</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">配置引导菜单</a></h2>
@@ -100,7 +102,16 @@
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>在引导菜单写入主引导记录之前，您将会看到有关配置信息的统计，并且是最后一次取消操作的机会。但是别太担心，如果您确保了主引导记录备份的安全，您可以很容易的恢复修改。万一出现差错，您可以通过 Haiku 引导光盘或者 USB 启动盘进行引导，然后通过引导管理器恢复主引导记录。</p>
-
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a name="4-mbr" id="4-mbr">Restoring the backup of the Master Boot Record (MBR)</a></h2>
+<p>It's currently not possible to uninstall the boot menu with the BootManager application. There is a workaround however: You can use the <span class="cli">dd</span> command in Terminal to restore the backup of the MBR.</p>
+<div class="box-warning"><span class="cli">dd</span> can be a very destructive tool.<br />
+Be very careful and check especially the device path parameter!</div>
+<p>The <span class="cli">dd</span> commandline is something like this:</p>
+<pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
+<p>The input parameter ("<tt>if</tt>") is the path to the backup of the MBR.<br />
+The output parameter (<tt>"of"</tt>) is the path to the raw disk the MBR will be written to. You find all devices and their paths in the <a href="drivesetup.html">DriveSetup</a> application.</p>
 </div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -223,7 +223,10 @@
 <p>模型出于所有其他图形内容之上，如果您愿意，你可以将所有的图形都处在独自的层。如果希望重新进行排序，您可以将它们拖动到列表中的其他位置。</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">模型菜单</a></h4>
-<p><span class="menu">模型</span> 菜单提供上文提到的功能 <span class="menu">添加具有路径/样式/路径和样式的空模型</span>，以及 <span class="menu">复制</span> 或 <span class="menu">移除</span> 模型。除此还有以下功能：</p>
+<p>The <span class="menu">Shape</span> menu offers the before mentioned possibility to <span class="menu">Add empty, with path/style/path &amp; style</span> and to <span class="menu">Duplicate</span> or <span class="menu">Remove</span> a shape.</p>
+<p>With <span class="menu">Add reference image</span> you can create a special kind of shape. It lets you load any bitmap image (e.g. PNG or JPEG) to use as a background while working on the icon. Very handy when creating a vector version of an existing bitmap icon, for example. The reference image can be manipulated like any other shape (moved, rotated, resized), but will not be part of the icon when saved as HVIF.</p>
+
+<p>Then there is:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">重置转换</span></td><td style="width:15px;"></td><td>撤销所有应用于模型的移动，定义大小和翻转转换等操作。</td></tr>
 <tr><td class="onelinetop"><span class="menu">冻结转换</span></td><td></td><td>当您变换模型时，其指定路径将保持原位。这可能是有意的；可能多个模型使用那个路径，可能您希望使用 <span class="menu">选项 | Snap to Grid</span> 在像素边界上精确地绘制点。<br />
@@ -237,6 +240,7 @@
 <tr><td><span class="menu">Min LOD</span></td><td></td><td>最小细节级别</td></tr>
 <tr><td><span class="menu">Max LOD</span></td><td></td><td>最大细节级别</td></tr>
 </table>
+<p>Reference images have instead an <span class="menu">Alpha</span> value to set their transparency (0-255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">细节级别（LOD）</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -290,13 +294,16 @@
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">轮廓</span></td><td></td><td>为模型添加轮廓线。</td></tr>
 <tr><td><span class="menu">描边</span></td><td></td><td>为模型路径描边而不是填充为某种样式。</td></tr>
+<tr><td><span class="menu">Perspective</span></td><td></td><td>Allows to individually move the four corners of the shape to create the effect of perspective.</td></tr>
+
 </table>
 
 <p>根据变形种类的不同，您所取得的属性也不相同。</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">变形属性</a></h4>
-<p>除了变形的 <span class="menu">名称</span> 和实际 <span class="menu">宽度</span> ，<span class="menu">属性</span> 视图具有以下（根据其类别有些微变化）选项：</p>
+<p>Besides a <span class="menu">Name</span> the <span class="menu">Properties</span> view has these (depending on its type slightly differing) options:</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Width</span></td><td></td><td>The width of Stroke or Contour.</td></tr>
 <tr><td><span class="menu">端点形式</span></td><td style="width:15px;"></td><td><i>仅适用于描边</i>。定义线条的结束端点：<span class="menu">楔形</span>，<span class="menu">方形</span> 或 <span class="menu">圆形</span>。</td></tr>
 <tr><td><span class="menu">检测方向</span></td><td></td><td><i>仅适用于轮廓</i>。决定轮廓位于路径之外或之内。 </td></tr>
 <tr><td><span class="menu">连接形式</span></td><td></td><td>定义线与线连接方式：<span class="menu">斜线</span>，<span class="menu">圆弧</span> 或 <span class="menu">倒角</span>。</td></tr>

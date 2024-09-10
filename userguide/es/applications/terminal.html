@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2023, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -67,14 +67,14 @@
 <div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Index</td></tr>
+<tr class="heading"><td>Índice</td></tr>
 <tr class="index"><td>
-                <a href="#windows-tabs">Windows and tabs</a><br />
-                <a href="#settings">Settings</a><br />
-                <a href="#colors">Colors</a><br />
-                <a href="#shortcuts">Keyboard shortcuts</a><br />
-                <a href="#hints">Hints for working with the Terminal</a><br />
-                <a href="#customization">Bash customization</a></td></tr>
+                <a href="#windows-tabs">Ventanas y pestañas</a><br />
+                <a href="#settings">Configuración</a><br />
+                <a href="#colors">Colores</a><br />
+                <a href="#shortcuts">Atajos de teclado</a><br />
+                <a href="#hints">Pistas para trabajar con Terminal</a><br />
+                <a href="#customization">Personalización de Bash</a></td></tr>
 </table>
 
 <h2><img src="../../images/apps-images/terminal-icon_64.png" alt="terminal-icon_64.png" width="64" height="64" />Terminal</h2>
@@ -86,13 +86,13 @@
 <span class="path">~/config/settings/inputrc</span> - agrega/sobrescribe predeterminados en <span class="path">/boot/system/etc/inputrc</span></td></tr>
 </table>
 <p><br /></p>
-<p>La Terminal es la interfaz de Haiku al bash, el intérprete de comandos Bourne Again (Bourne Again Shell por sus siglas en inglés).</p>
+<p>The Terminal is Haiku's interface to the shell, by default that's bash, the Bourne Again Shell.</p>
 <p>Por favor refiérase al tema <a href="../bash-scripting.html">Scripting</a> para ver algunos enlaces a tutoriales en línea sobre trabajo en el intérprete de comandos y también vea las <a href="cli-apps.html">aplicaciones de línea de comandos de Haiku</a>. Aquí nos concentraremos en la aplicación Terminal.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="windows-tabs" name="windows-tabs">Ventanas y fichas</a></h2>
-<p>Puede abrir tantas Terminales como se necesite, cada una de ellas en su propia ventana simplemente abriendo más Terminales o con <span class="key">ALT</span> <span class="key">N</span> desde una Terminal que ya esté corriendo. O puede usar la vista por pestañas de Terminal y abrir otra pestaña con <span class="key">ALT</span> <span class="key">T</span>.</p>
+<a id="windows-tabs" name="windows-tabs">Ventanas y pestañas</a></h2>
+<p>You can open as many Terminals as needed, either each in its own window by simply launching more Terminals or with <span class="key">ALT</span> <span class="key">N</span> from an already running Terminal. Or you use Terminal's tabbed view and open more tabs with <span class="key">ALT</span> <span class="key">T</span>. You can switch to a specific tab with <span class="key">ALT</span> and its number, e.g. <span class="key">ALT</span> <span class="key">2</span> switches to the second tab, <span class="key">ALT</span> <span class="key">4</span> to the fourth etc.</p>
 <img src="../images/apps-images/terminal.png" alt="terminal.png" />
 <br />
 <p>Double-clicking into the emtpy part of the tab bar opens a new tab; onto a tab opens a dialog to rename its title. There are several %-designated variables that are explained with a tooltip when you hover the mouse over the text field.<br />
@@ -120,13 +120,13 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="colors" name="colors">Colors</a></h2>
+<a id="colors" name="colors">Colores</a></h2>
 <p><span class="menu">Settings | Colors…</span> opens a panel to configure the colors used by Terminal.</p>
 <img src="../images/apps-images/terminal-colors.png" alt="terminal-colors.png" />
 <p>From the top menu, you can choose a pre-defined <span class="menu">Color scheme</span> like <span class="menu">Midnight</span> or <span class="menu">Retro</span> or create a <span class="menu">Custom</span> one by selecting the color you want to change (<span class="menu">Text</span>, <span class="menu">Background</span>, <span class="menu">Cursor</span> etc.) and then use the color picker below.</p>
 <p>You can also configure "ANSI colors", which are the first 8 named colors in the color palette of terminal applications. You choose a color, for example "<i>ANSI red color</i>", and then adjust it with the color picker below. The effect is visible live in the open Terminal and in the preview below. The exact colors used in various places are documented at <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td class="onelinetop"><span class="button">Guardar a archivo…</span></td><td width="10"> </td><td>let's you save your custom color scheme under a name that will appear in the <span class="menu">Color scheme</span> menu at the top, if you put it in the default location <span class="path">~/config/settings/Terminal/Theme</span>.</td></tr>
+<tr><td class="onelinetop"><span class="button">Guardar a archivo…</span></td><td width="10"> </td><td>let's you save your custom color scheme under a name that will appear in the <span class="menu">Color scheme</span> menu at the top, if you put it in the default location <span class="path">~/config/settings/Terminal/Themes</span> (or its system equivalent <span class="path">/boot/system/settings/Terminal/Themes</span>).</td></tr>
 <tr><td><span class="button">Revertir</span></td><td> </td><td>brings back the colors that were active when you opened the colors panel.</td></tr>
 <tr><td><span class="button">Valores predeterminados</span></td><td> </td><td>restablece todo a los valores predeterminados.</td></tr>
 </table>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2022, Haiku. All rights reserved.
+ * Copyright 2008-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -80,7 +80,8 @@
 <tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span> / <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Navega espacialmente nas linhas/colunas dos espaços de trabalho disponíveis. Adicione <span class="key">SHIFT</span> para que uma janela ativa acompanhe.</td></tr>
 <tr><td> </td></tr>
 <tr><td><span class="key">OPT</span></td><td></td><td>Segurando <span class="key">OPT</span> enquanto arrasta uma janela próxima a outra guia de janela ou borda irá empilhar ou encaixá-las (veja capítulo <a href="gui.html#stack-tile">GUI</a>).</td></tr>
-<tr><td><span class="key">OPT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Cycles through the open windows within the current workspace.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">TAB</span></td><td></td><td>Cycles through stack and tiled windows.</td></tr>
+<tr><td><span class="key"> OPT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Cycles through the open windows within the current workspace.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + botão esquerdo do mouse</td><td></td><td>Clique e arraste com o botão esquerdo do mouse para mover uma janela (veja capítulo <a href="gui.html#move-resize">GUI</a>).</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">ALT</span> + botão direito do mouse</td><td></td><td>Clique e arraste com o botão direito do mouse para redimensionar uma janela (veja capítulo <a href="gui.html#move-resize">GUI</a>).</td></tr>
 <tr><td> </td></tr>
@@ -141,14 +142,14 @@
 <tr><td><span class="key">ALT</span> + left click</td><td style="width:15px;"></td><td>Left-clicking on a path or URL while holding <span class="key">ALT</span> opens it in the preferred application, e.g. folders in Tracker, pictures in ShowImage. You can limit the selected path by additionally holding <span class="key">SHIFT</span>.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">N</span></td><td></td><td>Abre outra sessão do Terminal em uma nova janela.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">T</span></td><td></td><td>Abre outra sessão do Terminal em uma nova guia.</td></tr>
-<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>Alterna para a guia correspondente.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">TAB</span></td><td></td><td>Alterna para a próxima janela do Terminal.</td></tr>
-<tr><td><span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Alterna para a guia da esquerda/direita.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">1</span>, <span class="key">2</span>, <span class="key">3</span> ...</td><td></td><td>Alterna para a guia correspondente.</td></tr>
+<tr><td><span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Alterna para a guia da esquerda/direita.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">SHIFT</span> <span class="key">←</span> / <span class="key">→</span></td><td></td><td>Move a guia atual para a esquerda/direita.</td></tr>
+<tr><td class="onelinetop"><span class="key">CTRL</span> <span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Rola a saída do Terminal para cima/baixo uma linha.</td></tr>
+<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Rola a saída do Terminal para cima/baixo uma página.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">+</span> / <span class="key">-</span></td><td></td><td>Aumenta/Diminui o tamanho da fonte.</td></tr>
 <tr><td><span class="key">ALT</span> <span class="key">ENTER</span></td><td></td><td>Entra/sai do modo de tela cheia.</td></tr>
-<tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Rola a saída do Terminal para cima/baixo uma linha.</td></tr>
-<tr><td class="onelinetop"><span class="key"> SHIFT</span> <span class="key">Page↑</span> / <span class="key">Page↓</span></td><td></td><td>Rola a saída do Terminal para cima/baixo uma página.</td></tr>
 <tr><td><span class="key">TAB</span></td><td></td><td>Preenchimento com a tabulação. Após inserir algumas letras, pressione <span class="key">TAB</span> uma vez para auto-completar um nome de arquivo ou caminho. Se existe mais do que uma opção, ele pára onde o nome começa a diferenciar e você tenha acrescentado mais algumas letras para distingui-los mais. Pode-se também pressionar <span class="key">TAB</span> duas vezes para ter todas as opções listadas.</td></tr>
 <tr><td><span class="key">↑</span> / <span class="key">↓</span></td><td></td><td>Move para cima ou para baixo num histórico de todos os comandos previamente inseridos.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">R</span></td><td></td><td>Bash history. All the commands you enter

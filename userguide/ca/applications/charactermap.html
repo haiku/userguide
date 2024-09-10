@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009, Haiku. All rights reserved.
+ * Copyright 2009-2024, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducció d'aquesta pàgina encara no està acabada. Fins que ho sigui, algunes part correspondrà a la versió anglesa.</div>
 
 <h2><img src="../../images/apps-images/charactermap-icon_64.png" alt="charactermap-icon_64.png" width="64" height="64" />CharacterMap</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -69,10 +70,19 @@
 <tr><td>Preferències:</td><td></td><td><span class="path">~/config/settings/CharacterMap settings</span></td></tr>
 </table>
 <p><br /></p>
-<p>CharacterMap mostra el codi UTF-8 de cada caràcter d'un tipus de lletra.</p>
+<p>CharacterMap shows all characters of every Unicode block.</p>
+
 <img src="../images/apps-images/charactermap.png" alt="charactermap.png" />
-<p>A l'esquerra teniu els blocs estàndard, juntament amb una útil funció de filtre. Opcionalment, podeu triar també <span class="menu">Mostra els blocs privats</span> al menú <span class="menu">Visualitza</span>. A la dreta es mostren els símbols reals d'aquests blocs, utilitzant el tipus de lletra indicat al menú <span class="menu">Tipus de lletra</span>. A sota d'això podeu canviar la mida del tipus de lletra. I sota d'això, els valors del símbol sobre el que teniu el punter del ratolí, que es mostra en notació hexadecimal, decimal i UTF-8.</p>
+
+<p>To the left you have the standardized Unicode blocks, together with a handy filter function.<br />
+The <span class="menu">View</span> menu has an option to <span class="menu">Show private blocks</span>, which are areas that are untouched by the Unicode Consortium. If you activate <span class="menu">Only show blocks contained in font</span>, blocks not part of the current font are grayed out in the blocks list at the left and not shown in the list of characters on the right.</p>
+
+<p>The right shows the actual characters in these blocks, using the font specified in the <span class="menu">Font</span> menu. You can determine if a symbol is part of that font (it's drawn in black), or if the system supplies a fall-back symbol from some other font (then it's drawn with a gray color).<br />
+Below the symbols you can change the font size. And below that, the values of the character currently under the mouse pointer are displayed in hex, decimal and UTF-8 notation.</p>
+
 <p>Des del mapa de caràcters podeu arrossegar un símbol i deixar-lo anar directament sobre un editor de text, o bé fer clic amb el botó dret sobre un símbol per <span class="menu">Copiar-lo</span> (<span class="key">ALT</span> <span class="key">C</span>) o bé <span class="menu">Copiar-lo com a cadena de bytes escapada</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">C</span>). Obtenint així, per exemple, ja sigui <tt>€</tt> o bé <tt>\\xe2\\x82\\xac</tt>.</p>
+
+<p>Clicking on a symbol shows a magnified view of it, click again to close.</p>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2009-2013, Haiku. All rights reserved.
+ * Copyright 2009-2023, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -12,6 +12,7 @@
  * Translators:
  *		CapitanPico
  *		Humdinger
+ *		cafeina
  *		kervas
  *		miguel~1.mx
  *
@@ -178,7 +179,7 @@ Los puntos seleccionados son eliminados al presionar <span class="key">DEL</span
 <tr><td><span class="menu">Transform</span></td><td><span class="key">T</span></td><td>(Transformar) Pone todos los puntos seleccionados en una caja de transformación, pudiendo moverlos, redimensionarlos y rotarlos todos a la vez. Funciona igualmente con formas, como se describe un poco más abajo.</td></tr>
 <tr><td><span class="menu">Split</span></td><td></td><td>(Separar) Divide los puntos seleccionados en dos, uno sobre otro.</td></tr>
 <tr><td><span class="menu">Flip</span></td><td></td><td>(Voltear) Rota los puntos seleccionados 180°. Sólo tiene efecto en los puntos del tipo Bezier.</td></tr>
-<tr><td><span class="menu">Remove</span></td><td><span class="key">DEL</span></td><td>(Remover) Elimina los puntos seleccionados</td></tr>
+<tr><td><span class="menu">Remove</span></td><td><span class="key">SUPR</span></td><td>(Remover) Elimina los puntos seleccionados</td></tr>
 </table>
 
 <h4><a id="i-o-m-path-menu" name="i-o-m-path-menu">Menú Ruta</a></h4>
@@ -222,7 +223,10 @@ Los puntos seleccionados son eliminados al presionar <span class="key">DEL</span
 <p>Las figuras descansan encima de la otra, cada una en su propia capa, si lo desea. Para reordenarlas, se arrastra y suelta su entrada en una posición diferente en la lista.</p>
 
 <h4><a id="i-o-m-shape-menu" name="i-o-m-path-menu">Menú Figuras</a></h4>
-<p>El menú <span class="menu">Shape</span>  ofrece las opciones anteriormente mencionadas de <span class="menu">Añadir Vacía, Con Ruta/Estilo/Ruta&amp;Estilo</span> y  <span class="menu">Duplicar</span> o <span class="menu">Eliminar </span>una forma. Entoces hay:</p>
+<p>El menú <span class="menu">Forma</span> ofrece las opciones anteriormente mencionadas de <span class="menu">Añadir vacía, con ruta/estilo/ruta y estilo</span> y <span class="menu">Duplicar</span> o <span class="menu">Eliminar</span> una forma.</p>
+<p>Con <span class="menu">Añadir imagen de referencia</span> puede crear un tipo de forma especial. Le permite cargar cualquier imagen de mapa de bits (como PNG o JPEG) para utilizarla como fondo mientras trabaja en el icono. Por ejemplo, es bastante útil para crear una versión vectorizada de un icono existente en mapa de bits. La imagen de referencia puede ser manejada como cualquier otra forma (moverla, rotarla, redimensionarla), pero no será parte del icono cuando sea guardado como HVIF.</p>
+
+<p>A continuación, están:</p>
 <table summary="Shape menu" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Reset Transformation</span></td><td style="width:15px;"></td><td>(Restablecer transformación) Revierte todos los movimientos, retamañados y transformaciones que se hayan aplicado a la forma.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Freeze Transformation</span></td><td></td><td>(Congelar transformación) Cuando se transforma una figura, su(s) ruta(s) asignada(s) permanecen en su posición original. Esto puede intentarse; tal vez más de una forma se use en esa ruta, tal vez intencionalmente se use <span class="menu">Options | Snap to Grid</span> (Opciones | Gradilla) para seleccionar los puntos en bordes de pixel precisos.<br />
@@ -236,6 +240,7 @@ Si no, "Freeze Transformation" aplicará la forma de transformación actual a la
 <tr><td><span class="menu">Min LOD</span></td><td></td><td>Nivel mínimo de detalle</td></tr>
 <tr><td><span class="menu">Max LOD</span></td><td></td><td>Nivel máximo de detalle</td></tr>
 </table>
+<p>Las imágenes de referencia en su lugar tienen la opción de valor <span class="menu">Alfa</span> para establecer su nivel de transparencia (de 0 a 255).</p>
 
 <h5><a id="i-o-m-shape-lod" name="i-o-m-shape-lod">Nivel de detalle</a></h5>
 <table summary="LOD example" border="0" cellpadding="10">
@@ -287,18 +292,21 @@ Por supuesto, puede mover estos indicadores para cambiar el gradiente a su gusto
 
 <h4><a id="i-o-m-transformer-menu" name="i-o-m-transformer-menu">Menú agregar Transformador</a></h4>
 <table summary=" Transformer Add menu" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Contour</span></td><td></td><td>(Contorno) Agrega una línea exterior a una figura.</td></tr>
-<tr><td><span class="menu">Stroke</span></td><td></td><td>(Trazo) Traza la ruta de una figura en lugar de rellenarla con un estilo.</td></tr>
+<tr><td><span class="menu">Contorno</span></td><td></td><td>Agrega una línea exterior a una figura.</td></tr>
+<tr><td><span class="menu">Trazo</span></td><td></td><td>Traza la ruta de una figura en lugar de rellenarla con un estilo.</td></tr>
+<tr><td><span class="menu">Perspectiva</span></td><td></td><td>Permite mover individualmente cada una de las cuatro esquinas de la forma para crear el efecto de perspectiva.</td></tr>
+
 </table>
 
 <p>Dependiendo la clase de Transformador, obtendrá una selección diferente de propiedades.</p>
 
 <h4><a id="i-o-m-transformer-properties" name="i-o-m-transformer-properties">Propiedades de Transformador</a></h4>
-<p>Además de un nombre <span class="menu">Name</span> y el ancho <span class="menu">Width</span> real para el transformador, la vista <span class="menu">Properties</span> (propiedades) tiene estas opciones (dependiendo de su ligeramente diferente tipo):</p>
+<p>Además del <span class="menu">Nombre</span> la vista de <span class="menu">Propiedades</span> tiene algunas de estas opciones (que dependerán del tipo de objeto seleccionado):</p>
 <table summary="Transformer properties" border="0" cellspacing="0" cellpadding="2">
+<tr><td><span class="menu">Ancho</span></td><td></td><td>El ancho del trazo o contorno.</td></tr>
 <tr><td><span class="menu">Caps</span></td><td style="width:15px;"></td><td>(Tapas) <i>Sólo en Trazo</i>. Define cómo tapar los finales de una línea: <span class="menu">Butt</span> (base), <span class="menu">Square</span> (cuadrado) o <span class="menu">Round</span> (redondeado).</td></tr>
 <tr><td><span class="menu">Detect Orient.</span></td><td></td><td>(Detectar contorno) <i>Sólo en Contorno</i>. Determina si el contorno está en el lado interior o exterior de la ruta.</td></tr>
-<tr><td><span class="menu">Joints</span></td><td></td><td>(Juntas) Define cómo las líneas se juntan en un punto: <span class="menu">Miter</span> (inglete), <span class="menu">Round</span> (redondeado) o <span class="menu">Bevel</span> (biselado).</td></tr>
+<tr><td><span class="menu">Uniones</span></td><td></td><td>(Juntas) Define cómo las líneas se juntan en un punto: <span class="menu">Miter</span> (inglete), <span class="menu">Round</span> (redondeado) o <span class="menu">Bevel</span> (biselado).</td></tr>
 <tr><td><span class="menu">Miter Limit</span></td><td></td><td>Sólo cuando la selección <span class="menu">Joins</span> está en "Miter" (inglete) esta selección influencia cómo luce la junta de inglete. </td></tr>
 </table>
 
@@ -307,9 +315,9 @@ Por supuesto, puede mover estos indicadores para cambiar el gradiente a su gusto
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="i-o-m-save" name="i-o-m-save">Guardar un icono</a></h3>
 <p>Allí está la barra de menú usual hasta arriba, <span class="menu">File</span> (Archivo), <span class="menu">Edit</span> (Edición), <span class="menu">Options</span> (Opciones). El uso es muy autoexplicativo, así que sólo veremos cómo guardar su trabajo.</p>
-<p><span class="menu">File | Save As...</span> (Archivo | Guardar como) guardará en un formato especial de Icon-O-Matic que retiene información adicional como los nombres de rutas, figuras y estilos. Estos se retirarán del icono una vez que se exporte al espacio de trabajo. Es buena idea respaldar el trabajo así, porque sin los objetos nombrados todo se llama "&lt;path&gt;/&lt;shape&gt;/&lt;style&gt;" lo cual hace los cambios específicos tedioso.</p>
+<p><span class="menu">Archivo | Guardar como…</span> guardará en un formato especial de Icon-O-Matic que retiene información adicional como los nombres de rutas, figuras y estilos. Estos se retirarán del icono una vez que se exporte al espacio de trabajo. Es buena idea respaldar el trabajo así, porque sin los objetos nombrados todo se llama "&lt;path&gt;/&lt;shape&gt;/&lt;style&gt;" lo cual hace los cambios específicos tedioso.</p>
 
-<p><span class="menu">File | Export As...</span> (Archivo | Exportar como) abre un familiar cuadro de diálogo guardar con un menú desplegable de formatos de archivo hasta abajo, ofreciendo estas alternativas:</p>
+<p><span class="menu">Archivo | Exportar como…</span> un cuadro de diálogo de guardar con un menú desplegable de formatos de archivo abajo, ofreciendo estas alternativas:</p>
 <table summary="file formats" border="0" cellspacing="0" cellpadding="2">
 <tr><td>HVIF</td><td style="width:15px;"></td><td>Formato de icono vectorial de Haiku</td></tr>
 <tr><td>HVIF RDef</td><td></td><td>Se guarda como recurso utilizado por programadores</td></tr>

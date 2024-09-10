@@ -11,6 +11,7 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Humdinger
+ *		cafeina
  *		miguel~1.mx
  *
 -->
@@ -62,7 +63,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 
 <table class="index" id="index" summary="index">
@@ -86,7 +86,9 @@ Incluso mejor, no tiene que darle doble clic para rehacer una consulta. Se puede
 <p>Se inicia una consulta invocando el menú <span class="menu">Find...</span> (Encontrar) tanto del menú Deskbar o de cualquier ventana del Tracker o el Escritorio (el cual realmente es una ventana de Tracker a pantalla completa). El atajo de teclado es <span class="key">ALT</span> <span class="key">F</span>. Se presenta la ventana Encontrar:</p>
 <img src="images/queries-images/basic-query.png" alt="basic-query.png" />
 <ol>
-<li><p>Seleccione consultas recientes o guardadas o guarde los parámetros de búsqueda actuales como una <a href="#query-template">Plantilla de consulta</a>.</p></li>
+<li><p>El menú <span class="menu">Consulta</span> permite <span class="menu">Abrir</span> una consulta existente y <span class="menu">Guardar</span> los parámetros de búsqueda actuales como una consulta o como una <a href="#query-template">Plantilla de consulta</a>. También muestra una lista rápida de <span class="menu">Consultas recientes</span>.</p></li>
+<li><p>En <span class="menu">Opciones</span> se puede incluir a la Papelera como una de las ubicaciones de búsqueda.</p></li>
+<li><p><span class="menu">Plantillas</span> contiene una lista de todas las plantillas de consulta en el sistema.</p></li>
 <li><p>Reducir la búsqueda de <span class="menu">All files and folders</span> (Todos los archivos y carpetas) a tipos de archivo específicos.</p></li>
 <li>Definir el método de búsqueda:<ul>
     <li><span class="menu">by Name</span> (por nombre) - una búsqueda básica por el nombre del archivo o carpeta</li>
@@ -94,10 +96,6 @@ Incluso mejor, no tiene que darle doble clic para rehacer una consulta. Se puede
     <li><span class="menu">by Formula</span> (por fórmula) - una búsqueda todavía más avanzada, se puede refinar un término de búsqueda compleja</li></ul></li>
 <li><p>Seleccione en cuáles dispositivos buscar.</p></li>
 <li><p>Ingrese el término de búsqueda.</p></li>
-<li><p>Deseleccione la casilla de verificación <span class="menu">Temporary</span> (Temporalmente) si no quiere que esta consulta se autodestruya tras 7 días.</p></li>
-<li><p>Verifique si su búsqueda debiera <span class="menu">Include trash</span> (Incluir la basura).</p></li>
-<li><p>Opcionalmente, ingrese un nombre para esta consulta si desea guardarla.</p></li>
-<li><p>Se puede arrastrar y colocar el icono en cualquier lugar para guardar una consulta. Al hacerlo con el botón derecho del ratón, se ofrece la opción de guardarla como plantilla.</p></li>
 </ol>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -130,7 +128,7 @@ Una buena manera de reducir el número de resultados de búsqueda.</p>
 <p>¿Cuál es el uso?</p>
 <ul>
 <li><p>Podría copiar y pegar la cadena dentro de un correo electrónico, foro o IRC para que otros lo usen o depuren.</p></li>
-<li><p>You can use this method to construct a query in <span class="menu">Attribute</span> mode and then switch to <span class="menu">Formula</span> mode, to comfortably generate a search string. Enclosed in single quotes, that string can then be used with the <span class="cli">query</span> command in the Terminal.</p></li>
+<li><p>Se puede usar este método para construir una consulta en modo <span class="menu">Attribute</span> (Atributo) y luego intercambiar al modo <span class="menu">Formula</span>, para generar cómodamente una cadena de búsqueda. Si se la escribe entre comillas, esa cadena de texto se puede usar con el comando <span class="cli">query</span> en la Terminal.</p></li>
 <li><p>Puede afinarse la búsqueda insertando paréntesis donde se necesite, hacer que partes de ella distingan entre mayúsculas y minúsculas o negociar combinaciones lógicas al cambiar, p. ej., "<tt>==</tt>" por "<tt>!=</tt>" para un NOT AND. Todo lo que se necesita es un entendimiento básico de <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="http://en.wikipedia.org/wiki/Regular expression">expresiones regulares</a> y tal vez algo básico de scripting.</p></li>
 </ul>
 
@@ -150,9 +148,9 @@ Una buena manera de reducir el número de resultados de búsqueda.</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="query-template" name="query-template">Plantillas de consulta</a></h2>
-<p>Si hace doble clic en una consulta guardada, la búsqueda de archivo está, se inicia e inmediatamente se abre la ventana de resultados. Sin embargo, tal vez no quiere buscar esos <i>exactos</i> parámetros de búsqueda, sino usarlos como punto de inicio para sólo ligeramente ajustar la fórmula.<br />
-Usando el elemento del menú <span class="menu">Save Query as Template</span> (Guardar búsqueda como plantilla) (véase <a href="#find-window">(1) la captura de pantalla</a> al inicio) o arrastrar y soltar el icono (10) en cualquier lugar con el botón derecho del ratón, se puede crear tal plantilla. Al darle doble clic no se abrirá la ventana de resultados, sino el panel Encontrar, dándole la oportunidad de cambiar rápidamente las cadenas de búsqueda o agregar/remover atributos.</p>
-<p>Dondesea que elija guardar las plantillas de búsqueda, se listarán en el menú del panel Encontrar de las consultas recientes.</p>
+<p>Al hacer doble clic en una consulta guardada, la búsqueda de archivos se iniciará en ese mismo momento y la ventana de los resultados de búsqueda aparecerá inmediatamente. Sin embargo, puede haber el caso en que no pretenda hacer la búsqueda <i>exactamente</i> con esos parámetros de búsqueda, sino que los va a usar como el punto de partida para personalizar la fórmula.<br />
+Para ese propósito, se puede crear una plantilla al usar la opción de menú <span class="menu">Guardar consulta como plantilla</span> (véase <a href="#find-window">(1) en la captura de pantalla</a> al principio). Al hacerle doble clic no se abrirá una ventana de resultados, sino el panel de Encontrar, que entonces permitirá rápidamente cambiar el texto de búsqueda o cambiar los atributos.</p>
+<p>Las plantillas de consulta aparecerán en el menú <span class="menu">Plantillas</span> del panel de Encontrar, independientemente de la ubicación en donde hayan sido guardadas.</p>
 </div>
 </div>
 
