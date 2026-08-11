@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2012-2022, Haiku, Inc. All rights reserved.
+ * Copyright 2012-2025, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -77,13 +77,15 @@
 <p>Bei der heutzutage üblichen permanenten Internetverbindung ist eine funktionierende Netzwerkumgebung unerlässlich. Weil es für ein so kleines Projekt wie Haiku unmöglich ist, mit der ständig neuen Hardware und ihren Treibern Schritt zu halten, verlässt sich Haiku für seine Netzwerktreiber auf eine Kompatibilitätsschicht mit <a href="http://www.freebsd.org">FreeBSD</a> und  <a href="https://www.openbsd.org/">OpenBSD</a>.<br />
 Dadurch werden eine Menge, aber natürlich nicht alle Geräte unterstützt.</p>
 
+<div class="box-warning"><p _translation_id="7026"><b>Wi-Fi Unterstützung</b><br />Durch die Verwendung der BSD-Treiber unterstützt Haiku derzeit nur Wi-Fi 6 oder niedrigere Access Points.  Mit WPA3 gesicherte Funknetzwerke werden momentan noch nicht unterstützt.</p></div>
+
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">Mit einem Funknetzwerk verbinden</a></h2>
 <p>Mit der Desktop-App <a href="desktop-applets/networkstatus.html">Networkstatus</a> lässt sich eine Verbindung zu einem Funknetzwerk aufbauen.</p>
 <p>Ein Rechtsklick auf dessen Icon in der Deskbar zeigt ein Kontextmenü, aus dem der öffentliche Name (die gesendete "SSID") des Netzwerks gewählt wird.</p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
-<p>Es öffnet sich ein Fenster, in dem die Art der Verschlüsselung gewählt (wahrscheinlich WPA/WPA2, WEP ist keine sichere Verschlüsselung mehr!) und das Kennwort für dieses Funknetzwerk eingegeben wird. Kreuzt man <span class="menu">Konfiguration speichern</span> an, werden die Eingaben gespeichert. Damit spart man sich die Dateneingabe, wenn man sich das nächste Mal mit diesem Netzwerk verbindet.<br />
+<p>Es öffnet sich ein Fenster, in dem die Art der Verschlüsselung gewählt (wahrscheinlich WPA/WPA2, WEP ist keine sichere Verschlüsselung mehr!) und das Kennwort für dieses Funknetzwerk eingegeben wird. Ein Klick auf das "Auge" Symbol macht das Kennwort lesbar, praktisch um auf Schreibfehler zu prüfen. Kreuzt man <span class="menu">Konfiguration speichern</span> an, werden die Eingaben gespeichert, um sich beim nächsten Mal die Dateneingabe zu sparen.<br />
 <span class="button">OK</span> beginnt den Login-Prozess.<br />
 Je nach verwendeter Hardware und Konfiguration kann das eine Weile dauern. Über den Fortschritt wird durch Benachrichtigungen informiert:</p>
 <img src="images/workshop-wlan-images/join-status.gif" alt="join-network.gif" />
@@ -109,7 +111,7 @@ Die Ausgabe zeigt den öffenlichen Namen (SSID), die MAC Adresse, Signalstärke 
 <a id="firmware" name="firmware">Unterstützte Hardware zum Laufen bringen</a></h2>
 <p>Alle unterstützte moderne Funknetz-Chipsätze funktionieren, ohne dass zusätzliche Firmware heruntergeladen/installiert werden muss.</p>
 
-<p>Nur einige ziemlich alte Chipsets (Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) benötigen Firmware-Module, die jedoch aus lizenzrechtlichen Gründen nicht zusammen mit Haiku geliefert werden dürfen. Um diese Funknetzkarten betreiben zu können, existiert ein Skript, das alle benötigten Dateien herunterlädt und installiert.</p>
+<p>Nur wenige, ziemlich alte Chipsets (Intel 2100/2200/2225/2915, einige Broadcom 43xx, Marvell 88w8335) benötigen Firmware-Module, die jedoch aus lizenzrechtlichen Gründen nicht zusammen mit Haiku geliefert werden dürfen. Um diese Funknetzkarten betreiben zu können, existiert ein Skript, das alle benötigten Dateien herunterlädt und installiert.</p>
 <p>Dazu gibt man im Terminal folgendes ein:</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
 <p>Es werden die entsprechenden Lizenzen angezeigt, die akzeptiert werden müssen bevor die Firmwaredateien installiert werden.</p>

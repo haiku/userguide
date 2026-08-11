@@ -13,6 +13,7 @@
  *		dill
  *		Pengphei Han
  *		Máximo Castañeda
+ *		yjwork
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -69,8 +70,8 @@
 
 <p>Haiku 的系统引导选项可以帮助您解决遇到的硬件相关问题，或者用于选择通过 Haiku 的哪种安装方式来启动，如果您有多个引导介质（可以是 CD 光驱或 USB 盘安装）。此外，如果安装了某个软件组件导致系统无法启动，请查看下述的 <a href="#troubleshooting">故障诊断</a> 。</p>
 <p>为了进入引导程序选项，您需要在 Haiku 的启动进程开始前，持续按住 <span class="key">SHIFT</span> 键。如果已经安装了启动管理软件，您可以在进入 Haiku 启动调用之前开始按下 <span class="key">SHIFT</span> 键。如果Haiku是唯一的操作系统，您可以在 BIOS 中显示启动消息时就开始按下该按键。</p>
-<div class="box-info">With some hardware, you'll have to make sure USB keyboards are enabled in the BIOS.<br />
-On computers that use UEFI for booting instead of the classic BIOS, you need to use the <span class="key">SPACEBAR</span> instead of <span class="key">SHIFT</span>.</div>
+<div class="box-info">对于某些硬件，您必须确保在BIOS中启用了USB键盘<br />
+在使用 UEFI 而不是经典 BIOS 引导的计算机上，您需要反复按 <span class="key">空格键 </span>，而不是只按住<span class="key">SHIFT键</span>。</div>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="options" name="options">引导管理器选项</a></h2>
@@ -81,34 +82,34 @@ On computers that use UEFI for booting instead of the classic BIOS, you need to 
 </td><td> </td><td>在系统引导中遇到硬件问题时，可以尝试下面的几个选项。当选择条移动到某个选项时，在屏幕底部会显示相应的简短说明。</td></tr>
 <tr><td></td><td></td><td>
 	<p><span class="menu">Safe mode</span><br />
-		Puts the system into safe mode. This can be enabled independently from the other options.</p>
+		启动系统进入安全模式。该模式可以在其他选项中单独启用。</p>
 	<p><span class="menu">Disable user add-ons</span><br />
-		Prevents all user installed add-ons from being loaded. Only the add-ons in the system directory will be used. See <a href="#troubleshooting">Troubleshooting</a> below.</p>
-	<p><span class="menu">Disable IDE DMA</span><br />
-		Disables IDE DMA, increasing IDE compatibility at the expense of performance.</p>
+		阻止加载所有用户安装的附加组件。只有 system 目录中的附加组件会被加载。详情查阅如下 <a href="#troubleshooting">故障诊断</a> 。</p>
+	<p><span class="menu">禁用 IDE DMA</span><br />
+		禁用 IDE DMA, 在损失一定性能基础上提升 IDE 兼容性。</p>
 	<p><span class="menu">Ignore memory beyond 4 GiB</span><br />
-		Ignores all memory beyond the 4 GiB address limit, overriding the setting in the kernel settings file.
+		忽略超出 4GiB 地址限制的内存，覆盖内核配置文件中的设置。
 </p>
-	<p><span class="menu">Use fail-safe graphics driver</span><br />
-		The system will use VESA mode and won't try to use any video graphics drivers.</p>
+	<p><span class="menu">Use fail-safe video mode</span><br />
+		系统将会使用 VESA 模式，并且将不会使用任何的显卡驱动。</p>
 	<p><span class="menu">Disable IO-APIC</span><br />
-		Disables using the IO APIC for interrupt routing, forcing the use of the legacy PIC instead.</p>
+		禁用用于中断例程的 IO APIC，强制使用老式的 PIC 。</p>
 	<p><span class="menu">Disable local APIC</span><br />
-		Disables using the local APIC, also disables SMP.</p>
+		禁用本地 APIC，同时禁用 SMP 。</p>
 	<p><span class="menu">Disable X2APIC</span><br />
-		Disables second generation APIC.</p>
+		禁用第二代 APIC。</p>
 	<p><span class="menu">Disable SMEP and SMAP</span><br />
-		Disables SMEP/SMAP security features of the CPU.</p>
+		禁用 CPU 的 SMEP 和 SMAP 安全功能。</p>
 	<p><span class="menu">Disable SMP</span><br />
-		Disables all but one CPU core.</p>
+		禁用其他核心，仅保留单个处理器核心。</p>
 	<p><span class="menu">Don't call the BIOS</span><br />
-		Stops the system from calling BIOS functions.</p>
+		禁止系统调用 BIOS 功能.</p>
 	<p><span class="menu">Disable APM</span><br />
-		Disables Advanced Power Management hardware support, overriding the APM setting in the kernel settings file.</p>
+		禁用高级电源管理硬件支持，同时覆盖内核配置文件中的 APM 设置。</p>
 	<p><span class="menu">Disable ACPI</span><br />
-		Disables Advanced Configuration and Power Interface hardware support, overriding the ACPI setting in the kernel settings file.</p>
+		禁用高级配置和电源接口硬件支持，覆盖内核配置文件中的 ACPI 设置。</p>
 	<p><span class="menu">Disable system components</span><br />
-		Allows to select system files that shall be ignored. Useful e.g. to disable drivers temporarily. See <a href="#troubleshooting">Troubleshooting</a> below.</p></td></tr>
+                允许选择应忽略的系统文件。例如，暂时禁用驱动程序。请参阅下面的 <a href="#troubleshooting">故障排除</a>。</p></td></tr>
 <tr><td><b>Select debug options</b><br />
 </td><td> </td><td>在这里，你会发现几个选项，它们用于调试或者获取<a href="../../welcome/zh_CN/bugreports.html">错误报告</a>的详细情况。同时，对于每个选项，在屏幕底部也都会出现相关的说明。</td></tr>
 <tr><td></td><td></td><td>
@@ -142,10 +143,10 @@ On computers that use UEFI for booting instead of the classic BIOS, you need to 
 <li><p>激活 <span class="menu">Safe mode</span> 将会阻止多数的服务，后台以及 UserBootScript 启动。 </p></li>
 <li><p>激活 <span class="menu">Disable user add-ons</span> 将会阻止所有在 Home 目录下用户目录中安装的附加组件（驱动，转换器，等）的使用。</p></li>
 <li><p>如果激活 <span class="menu">Use fail-safe graphics driver</span> 通过回退到 VESA 显卡模式解决了您的问题，您可以通过在 <span class="path">/boot/home/config/settings/kernel/drivers/kernel</span> 文本文件中移除 <i>#fail_safe_video_mode true</i> 之前的 <tt>#</tt> 注释符永久的解决该问题。 </p></li>
-<li><p>If the offending driver, add-on etc. is installed in the system hierarchy, things get a bit more complicated, because that area is read-only. Here, the <span class="menu">Disable system components</span> comes into play. With it, you can navigate through the whole system hierarchy and disable the component that's messing things up for you by checking an entry with the <span class="key">SPACE</span> or <span class="key">ENTER</span> key. <span class="key">ESC</span> returns you up one level to the parent directory.</p>
+<li><p>If the offending driver, add-on etc. is installed in the system hierarchy, things get a bit more complicated, because that area is read-only. Here, the <span class="menu">Disable system components</span> comes into play. With it, you can navigate through the whole system hierarchy and disable the component that's messing things up for you by checking an entry with the <span class="key">SPACEBAR</span> or <span class="key">RETURN</span> key. <span class="key">ESC</span> returns you up one level to the parent directory.</p>
 <p>Online, there's the guide <a href="https://www.haiku-os.org/guides/daily-tasks/blacklist-packages">Disabling components of packages</a> showing how to make that setting stick.</p></li>
-<li><p>Under <span class="menu">Select boot volume/state</span> you can specify what former "version" of Haiku to boot. Every time you un/install a package, the old state is saved and you can boot into it by choosing it from the list presented in the boot loader options.<br />
-So, if you encounter boot problems after installing some package, boot a Haiku state from before that time and uninstall the offending package. You can permanently revert to a specific Haiku revision as described in the topic <a href="applications/softwareupdater.html#downgrading">SoftwareUpdater</a>.</p></li>
+<li><p> 在 <span class="menu">Select boot volume</span> 菜单中，您可以指定希望启动的 Haiku 版本。每次在安装或者卸载系统组件时，原有状态都将保存。您可以在引导管理器选项列表中选择对应的启动状态。<br />
+因此，如果在安装完某些包之后，出现了启动引导问题，您可以选择引导在问题出现以前的 Haiku 状态，并且卸载该软件包。您可以按照<a href="applications/softwareupdater.html#downgrading">SoftwareUpdater</a>的描述永久的还原到特定Haiku版本。</p></li>
 </ul>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>

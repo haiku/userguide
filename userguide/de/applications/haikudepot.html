@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2013-2021 Haiku. All rights reserved.
+ * Copyright 2013-2025  Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -66,10 +66,10 @@
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Index</td></tr>
-<tr class="index"><td><a href="#filter">Filter</a><br />
-                <a href="#list">Paketliste</a><br />
-                <a href="#info">Infobereich</a><br />
-                <a href="#menu">HaikuDepot und Anzeigen</a><br />
+<tr class="index"><td><a href="#filter">Die Filter</a><br />
+                <a href="#list">Die Paketliste</a><br />
+                <a href="#info">Der Infobereich</a><br />
+                <a href="#menu">Die Menüs</a><br />
                 <a href="#account">Benutzerkonto einrichten</a><br />
                 <a href="#rating">Bewerten und kommentieren</a><br />
                 <a href="#logs">Diagnose-Logs</a><br />
@@ -89,18 +89,23 @@
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
 <p>Der zweite Reiter zeigt <span class="menu">Alle Pakete</span>. Die Darstellung ändert sich zu kleineren Icons. Spalten zeigen weitere Informationen an.</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
+<p>In beiden Reitern können neben dem Paketnamen zwei icons erscheinen:</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><img src="../../images/apps-images/haikudepot_installed.svg" width="20pt" /></td><td style="with:20px"></td><td>erscheint wenn ein Paket bereits installiert ist.</td></tr>
+<tr><td><img src="../../images/apps-images/haikudepot_native.svg" width="20pt" /></td><td style="with:20px"></td><td>zeigt an, dass ein Paket für Haiku entwickelt wurde, also keine Portierung von einer anderen Plattform.</td></tr>
+</table>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="filter" name="filter">Filter</a></h2>
+<a id="filter" name="filter">Die Filter</a></h2>
 <p>Ganz oben hat man einige Möglichkeiten, die Paketliste darunter zu filtern:</p>
 <ul>
 <li><p>Mit dem Menü <span class="menu">Kategorien</span> lässt sich die Liste auf bestimmte Kategorien wie "<i>Audio</i>" oder "<i>Spiele</i>" begrenzen.</p></li>
 <li><p>Die im Textfeld <span class="menu">Suchbegriffe</span> eingegebenen Zeichen filtern die Liste auf die Pakete und Anwendungen, die alle (per Leerzeichen getrennten) Wörter in ihrem Namen oder in ihrer Beschreibung haben.</p></li>
-<li><p>Im Menü <span class="menu">Paketquellen</span> wird bestimmt, welche Online-Quellen abgefragt werden sollen. "<i>Lokal</i>" sind Pakete, die aus anderen Quellen gekommen sind. Zu diesen Quellen gehören beispielsweise ein USB-Stick, eine Webseite oder auch Pakete, die man selbst erstellt hat.</p></li>
 </ul>
+<p>Mit den Menüs <span class="menu">Paketquellen</span> und <span class="menu">Anzeigen</span> kann die Paketliste noch weiter gefiltert werden. Mehr dazu weiter unten.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="list" name="list">Paketliste</a></h2>
+<a id="list" name="list">Die Paketliste</a></h2>
 <p>Wie in jedem Tracker-Fenster, lässt sich per Rechtsklick auf einen Spaltentitel auswählen, welche Spalten angezeigt werden sollen. Ein Linksklick sortiert die Liste nach der entsprechenden Spalte. Und natürlich kann man die Anordnung ändern, indem man eine Spalte an eine andere Position zieht.</p>
 <p>Die Spalte <span class="menu">Datum</span> zeigt an, wann ein Paket neu hinzugekommen ist oder aktualisiert wurde. Sortiert man danach, finden sich alle neuen oder aktualisierten Pakete ganz oben in der Paketliste.</p>
 <p>Der <span class="menu">Status</span> eines Pakets wird in der entsprechenden Spalte angezeigt:</p>
@@ -113,7 +118,7 @@
 <p>Mittels der gepunkteten Linie zwischen Paketliste und Infobereich, lässt sich die Höhe der Liste verändern.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="info" name="info">Infobereich</a></h2>
+<a id="info" name="info">Der Infobereich</a></h2>
 <p>Ganz unten befindet sich ein Bereich mit Informationen zu dem Paket, das in der Liste ausgewählt ist.<br />
 Rechts neben Paketname, Autor, Bewertung und Version findet sich ein Button, mit dem sich ein Paket – je nach aktuellem Status – <span class="button">Installieren</span> oder <span class="button">Deinstallieren</span> lässt. Ist ein Paket bereits installiert, erscheint dort ein weiterer Button, um die Anwendung zu <span class="button">öffnen</span>.</p>
 <p>Darunter befinden sich vier Reiter: Über, Bewertungen, Änderungsprotokoll und Inhalt.</p>
@@ -135,12 +140,22 @@ Mittels der kleinen Daumen-rauf/runter-Symbole rechts, kann man die einzelnen Ko
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">HaikuDepot und Anzeigen</a></h2>
+<a id="menu" name="menu">Die Menüs</a></h2>
+<h3>HaikuDepot</h3>
 <p>Im Menü von <span class="menu">HaikuDepot</span> findet sich ganz oben im Fenster der Punkt <span class="menu">Paketquellen aktualisieren</span>. Damit wird eine aktuelle Liste aller verfügbaren Pakete angefordert.<br />
 <span class="menu">Paketquellen verwalten...</span> öffnet die <a href="../preferences/repositories.html"><acronym title="Repositories">Paketquellen</acronym></a>-Einstellungen. Damit lassen sich Paketquellen hinzuzufügen, entfernen oder aktivieren/deaktivieren.<br />
 <span class="menu">Aktualisierungen suchen...</span> öffnet den <a href="../apps/softwareupdater.html">SoftwareUpdater</a> um aktualisierte Pakete zu suchen und zu installieren.<br />
 <span class="menu">Einstellungen...</span> öffnet ein Fenster mit der zur Zeit einzigen Option: <span class="menu">Anonymisierte Nutzungsdaten an den HaikuDepotServer senden</span>. Diese Daten werden zum Beispiel dafür genutzt, zu zählen, wie oft ein Paket angesehen oder installiert wurde. Das bestimmt, welche Anwendungen und Pakete in die Liste der "Empfohlenen Pakete" kommen.</p>
-<p>Im Menü <span class="menu">Anzeigen</span> gibt es die Möglichkeit <span class="menu">Entwicklungs-Pakete</span> und <span class="menu">Quellcode-Pakete</span> anzuzeigen. Für den normalen Benutzer sind sie nicht so interessant und blähen die Paketliste nur unnötig auf. Sie sind allerdings wichtig für Leute, die deren Bibliotheken, Header-Dateien oder ähnliches brauchen, um darauf aufbauend Programme zu entwickeln und zu kompilieren.</p>
+<h3>Paketquellen</h3>
+<p><p>Im Menü <span class="menu">Paketquellen</span> wird bestimmt, welche Online-Quellen abgefragt werden sollen. "<i>Lokal</i>" sind Pakete, die aus anderen Quellen gekommen sind. Zu diesen Quellen gehören beispielsweise ein USB-Stick, eine Webseite oder auch Pakete, die man selbst erstellt hat.</p></p>
+<h3>Anzeigen</h3>
+<p>Durch die Wahl von einer von drei Paketarten lässt sich die Paketliste auf die begrenzen, die für einen gerade interessant sind:</p>
+<ul><li><p><span class="menu">Desktop und nicht-Desktop Pakete</span> - Zeigt alle Paketarten, also alles von Anwendungen bis Bibliotheken, die von Entwicklern benötigt werden.</p></li>
+<li><p><span class="menu">Nur Desktop Pakete</span> - Zeigt nur 'echte' Anwendungen; die Art, die nach der Installation beicpielsweise in der Deskbar erscheinen.</p></li>
+<li><p><span class="menu">Nur native Desktop Pakete</span> - Wie zuvor, aber begrenzt auf 'native' Anwendungen. Diese wurden speziell für Haiku entwickelt und nicht von einem anderen System portiert, was üblicherweise einhergeht mit der Abhängigkeit von vielen großen Frameworks wie KDE oder Qt.</p></li>
+</ul>
+ 
+<p>Außerdem gibt es die Möglichkeit <span class="menu">Entwicklungs-Pakete</span> und <span class="menu">Quellcode-Pakete</span> anzuzeigen. Für den normalen Benutzer sind sie nicht so interessant und blähen die Paketliste nur unnötig auf. Sie sind allerdings wichtig für Leute, die deren Bibliotheken, Header-Dateien oder ähnliches brauchen, um darauf aufbauend Programme zu entwickeln und zu kompilieren.</p>
 <p>Interessanter sind da die beiden anderen Menüpunkte, um nur <span class="menu">Verfügbare Pakete</span> und <span class="menu">Installierte Pakete</span> anzuzeigen.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

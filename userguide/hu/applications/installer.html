@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2021, Haiku. All rights reserved.
+ * Copyright 2009-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -90,9 +90,9 @@ A második menüben pedig a telepítés helyét kell kiválasztanunk. Ez a lemez
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tools" name="tools">Eszközök</a></h2>
 <p>A telepítés végeztével a partíció automatikusan indítható lesz. Ugyanakkor megeshet, hogy más operációs rendszerek vagy partícionáló programok (véletlenül) felülírják a rendszertöltőt a Haiku lemezen. Ebben az esetben indítsuk el újra a telepítőt. Válasszuk ki a telepített Haiku-t a <span class="menu">Hova</span> listából, majd pedig a <span class="menu">Rendszerbetöltő írása</span> menüpontot az <span class="menu">Eszközök</span> menüből, hogy újra indíthatóvá tegyük azt.</p>
-<p>A másik elem az <span class="menu">Eszközök</span> menüben a <span class="menu">Rendszerválasztó beállítása</span>, mely a rendszertöltőben egy menüt helyez el, minek segítségével választhatunk a telepített operációs rendszerek közül indításkor. További információk a <a href="bootmanager.html">Rendszerválasztó</a> fejezetben.<br />
-Nem szükséges a <span class="app">Rendszerválasztó</span> használata, ha már használunk másik rendszerválasztót, mint például a GRUB-ot, ahol manuálisan kell hozzáadnuk a listához a Haiku-t, illetve akkor sem szükséges, ha csak Haiku fut a gépen.</p>
-
+<p>The next item in the <span class="menu">Tools</span> menu is used to <span class="menu">Set up a boot menu</span> that puts a menu in the boot sector to choose what operating system to boot. See topic <a href="bootmanager.html">BootManager</a> for more information.<br />
+ You don't need to run the <span class="app">BootManager</span> if you already use a bootmanager like GRUB, in which case you have to add Haiku manually (see above), or Haiku runs exclusively on your machine.</p>
+<p>If you use UEFI to boot your system instead of going the BIOS/MBR route, you can use <span class="menu">Install EFI loader</span> to copy the EFI loader from the boot/install medium to your prepared partition that you select from the submenu. That EFI system partition needs to be FAT32-formatted on a GPT-initialized disk with enough free space.</p>
 
 </div>
 </div>

@@ -60,6 +60,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Bu sayfanın çevrilmesi henüz tamamlanmamıştır. Tamamlanana kadar henüz bitirilmeyen kısımlar İngilizce metni kullanır.</div>
 
 <h2><img src="../../images/prefs-images/virtualmemory-icon_64.png" alt="virtualmemory-icon_64.png" width="64" height="64" />Sanal Bellek</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
@@ -70,8 +71,9 @@
 </table>
 <p>Sanal Bellek, eğer sistem belleği başka şeyler için gerekecek olursa belleği sabit diskinize takas edebilmenizi sağlar. Bu yüzden ne kadar çok belleğiniz olursa olsun sanal belleği bol tutmak her zaman yararlıdır.</p>
 <img src="../images/prefs-images/virtualmemory.png" alt="virtualmemory.png" />
-<p>Normalde, takas dosyası önyükleme bölümüne yazılır. O konumda depolama alanınız az ise  <span class="menu">Otomatik takas yönetimi</span>'ni devre dışı bırakabilir ve açılır menüden başka bir bağlanmış disk seçebilirsiniz. Takas dosyası boyutu aşağıdaki kaydırıcı ile belirlenir.<br />
-Eğer sisteminiz takas dosyasının yazımı ve okumasından dolayı takılmaya başlarsa girdi/çıktı yoğunluğunu azaltmak için sanal belleği depolamak üzere başka bir sabit disk kullanabilirsiniz. Aynı sabit disk üzerinde başka bir disk bölümü bu konuda yardımcı olamayacaktır. Elbette sistem belleğini (RAM) yükseltmek yapabileceğiniz en yerinde hareket olacaktır...</p>
+<p>Normally, the swap file is written to the boot partition. If you're running low on free memory there, you can deactivate the <span class="menu">Automatic swap management</span> and choose another mounted partition from the popup menu. The swap file size is set with the slider below.<br />
+The actual file is named <tt>swap</tt> and is located either in <span class="path">/system/var/</span> when using the default /boot partition, or directly in the root of the partition you've selected.<br />
+If you often run into disk thrashing due to the virtual memory system swapping memory in and out, you can try to use a separate harddisk for you swap file to avoid I/O congestion. Simply another partition on the same harddisk with your system/data won't help. Upgrading your RAM is of course the most effective way to go…</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="button">Öntanımlılar</span></td><td> </td><td>her şeyi öntanımlı değerlere sıfırlar.</td></tr>
 <tr><td><span class="button">Eski haline döndür</span></td><td> </td><td>Sanal Bellek tercihlerini başlattığınızdaki ayarları geri getirir.</td></tr>

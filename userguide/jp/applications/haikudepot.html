@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2013-2021 Haiku. All rights reserved.
+ * Copyright 2013-2025  Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -68,10 +68,10 @@
 <tr class="index"><td><a href="#filter">フィルター</a><br />
                 <a href="#list">リスト</a><br />
                 <a href="#info">情報エリア</a><br />
-                <a href="#menu">ツールと表示メニュー</a><br />
+                <a href="#menu">メニュー</a><br />
                 <a href="#account">ユーザーアカウントの作成</a><br />
                 <a href="#rating">評価とコメント</a><br />
-                <a href="#logs">診断ログ Logs</a><br />
+                <a href="#logs">診断ログ</a><br />
                 <a href="#tips">ヒント</a><br /></td></tr>
 </table>
 
@@ -87,6 +87,11 @@
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
 <p>2番めのタブは、<span class="menu">すべてのパッケージ (All packages)</span> を表示します。表示は小さいアイコンとより多くの情報が列に配置されるように変わります:</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
+<p>どちらのタブでも、パッケージ名の後ろに２つの小さなアイコンが誇示されることがあります。</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><img src="../../images/apps-images/haikudepot_installed.svg" width="20pt" /></td><td style="with:20px"></td><td>パッケージがインストール済の場合に表示されます。</td></tr>
+<tr><td><img src="../../images/apps-images/haikudepot_native.svg" width="20pt" /></td><td style="with:20px"></td><td>パッケージが Haiku のために作られたもので、他のプラットホームからの移植ではないことを示します。</td></tr>
+</table>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="filter" name="filter">フィルター</a></h2>
@@ -94,13 +99,13 @@
 <ul>
 <li><p> <span class="menu">カテゴリー (Category)</span> ポップアップメニューは、"<i>オーディオ</i>" や "<i>ゲーム</i>" のような特定のカテゴリーにリストを制限します。</p></li>
 <li><p><span class="menu">検索 (Search terms)</span> テキストフィールドは、リストを入力された文字列 (スペース区切り) をパッケージ名または説明に含むパッケージにフィルタリングします。</p></li>
-<li><p>メニューバーの<span class="menu">リポジトリ (Repositories)</span> メニューは、どのリポジトリが問い合わせされるかを決定します。"<i>ローカル (Local)</i>" パッケージは、オンライン以外のどこかからインストールされたものです。それらはおそらく、USB スティックからか、どこかのウェブサイトからのダウンロードか、または自分でビルドしたパッケージでしょう。</p></li>
 </ul>
+<p>パッケージリストをさらにフィルタリングする方法が、以下で述べる <span class="menu">リポジトリ (Repository)</span> および <span class="menu">表示 (Show)</span> メニューの中にあります。</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list" name="list">リスト</a></h2>
 <p>Tracker ウィンドウと同じく、コンテキストメニューから表示する列を選択するには、列見出しで右クリックします。左クリックは、列に応じてリストを並び替えます。もちろん、列を新しい位置にドラッグすれば列を再配置できます。</p>
-<p><span class="menu">日付 (Date)</span> 列は、パッケージが追加または更新された日を表示します。リストの先頭で新規または更新されたパっケージをリストの先頭で見るためには、この列で並び替えしてください。</p>
+<p><span class="menu">日付 (Date)</span> 列は、パッケージが追加または更新された日を表示します。リストの先頭で新規のまたは更新されたパっケージを見るためには、この列で並び替えしてください。</p>
 <p>パッケージの<span class="menu">状態 (status)</span> 列は、以下のうちの 1 つを取ります。</p>
 <ul>
 <li><p><span class="menu">有効 (Active)</span>: パッケージはインストール済みで、いつでも利用できます。</p></li>
@@ -119,7 +124,7 @@
 <li><p _translation_id="5252"><span class="menu">パッケージについて (About)</span></p>
 <p _translation_id="5253">最初のタブには、パッケージの詳しい説明と、スクリーンショット、および利用可能ならパッケージされたソフトウェアをメンテしているチームへの連絡用アドレスと URL が表示されています。スクリーンショットのサムネールをクリックすると、新しいウィンドウ内にフルサイズで開くでしょう。</p></li>
 <li><p _translation_id="5254"><span class="menu">評価 (Ratings)</span></p>
-<p _translation_id="5255">2番目のタブには、利用可能であれば、ユーザーの評価とコメントが表示されます。</p>
+<p _translation_id="5255">2番目のタブには、利用可能ならユーザーの評価とコメントが表示されます。</p>
 <img src="../../en/images/apps-images/haikudepot-rating-tab.png" alt="haikudepot-rating-tab.png" />
 <p _translation_id="5268">左は統計で、どれだけのユーザーから星の数 (1 ～ 5) を得られたかを示しています。<br />
 中央には、ユーザーのニックネーム、ユーザーがパッケージに与えた星の数、および評価またはコメント対象にしたバージョンとともにコメントがあります。<a href="#rating">さらに下に</a>、自身でパッケージを評価する方法について詳しい情報が見つかります。<br />
@@ -131,12 +136,22 @@
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">HaikuDepot と表示メニュー</a></h2>
+<a id="menu" name="menu">メニュー</a></h2>
+<h3>HaikuDepot</h3>
 <p>ウィンドウの一番上にある<span class="menu">HaikuDepot</span> メニュー内に、<span class="menu">リポジトリを更新 (Refresh repositories)</span> する項目があります。これは、リポジトリから利用可能なすべてのパッケージの最新リストを要求します。<br />
 もうひとつの項目は、<span class="menu">リポジトリの管理... (Manage repositories...)</span> です。それは、<a href="../preferences/repositories.html">リポジトリ</a>プレファレンスを開き、リポジトリの追加 / 削除、または有効化 / 無効化を行います。<br />
 <span class="menu">更新のチェック... (Check for updates...)</span> は、<a href="../apps/softwareupdater.html">ソフトウェアの更新 (SoftwareUpdater)</a> を開き、更新されたパッケージの検索とインストールを行います。<br />
 <span class="menu">設定... (Settings...)</span> は、現在のところ 1 つのオプション、<span class="menu">匿名使用データーをHaikuDepotServerとシェアする (Share anonymous data with HaikuDepotServer)</span> を持つウィンドウを開きます。データーは例えば、パッケージの閲覧およびインストールされた回数に関するカウンターを増やすのに使われます。これにより、パッケージを　”推奨パッケージ (Featured packages)" リストに載るように決定することができます。</p>
-<p><span class="menu">表示 (Show)</span> の下では、<span class="menu">開発用パッケージ (Develop packages)</span> および、<span class="menu">ソースパッケージ (Source packages)</span> をパッケージリスト内に表示することも選択できます。これらは通常のユーザーには興味のあるものではなく、リストをごちゃごちゃさせるだけです。しかし、パッケージのライブラリやヘッダーなどを必要とする人たちにとっては、それらに依存するプログラムの開発やコンパイルのために重要となります。</p>
+<h3>リポジトリ (Repositories)</h3>
+<p>メニューバーの<span class="menu">リポジトリ (Repositories)</span> メニューは、どのリポジトリが問い合わせされるかを決定します。"<i>ローカル (Local)</i>" パッケージは、オンラインリポジトリ以外のどこかからインストールされたものです。それらはおそらく、USB スティックからか、どこかのウェブサイトからのダウンロードか、または自分でビルドしたパッケージでしょう。</p>
+<h3>表示 (Show)</h3>
+<p><span class="menu">表示 (Show)</span> メニュー内の 3種類のパッケージのうちから 1つを選んで、パッケージのスコープを実際に興味があるものに制限できます。</p>
+<ul><li><p><span class="menu">デスクトップおよび非デスクトップパッケージ (desukutoppuDesktop and non-desktop packages)</span> - すべてのパッケージを表示します、すなわち、アプリケーションから開発者が必要とするライブラリまでのすべてです。</p></li>
+<li><p><span class="menu">デスクトップパッケージのみ (Desktop packages only)</span> - '本当の' アプリケーションだけを表示します。例として、Deskbar に表示される種類のものです。</p></li>
+<li><p><span class="menu">ネイティブデスクトップパッケージのみ (Native desktop packages only)</span> - 上と同じですが、Haiku 'ネイティブ' アプリケーションに制限されます。これらは特に Haiku のために作成され、通常、KDE や Qt frameworks のようなたくさんの重たい依存性をもたらす他のシステムからの移植ではありません。</p></li>
+</ul>
+ 
+<p>さらに、<span class="menu">開発用パッケージ (Develop packages)</span> および、<span class="menu">ソースパッケージ (Source packages)</span> をパッケージリスト内に表示することも選択できます。これらは通常のユーザーには興味のあるものではなく、リストをごちゃごちゃさせるだけです。しかし、パッケージのライブラリやヘッダーなどを必要とする人たちにとっては、それらに依存するプログラムの開発やコンパイルのために重要となります。</p>
 <p>さらに興味深いものは、<span class="menu">使用可能なパッケージ (Available packages)</span> と、<span class="menu">インストール済みパッケージ (Installed packages)</span> だけを表示するオプションです。</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

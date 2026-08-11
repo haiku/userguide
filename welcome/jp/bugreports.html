@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -99,6 +99,7 @@
 	<li><p>できる限り正しく、実際に起きた挙動を説明し、その後自分が予測した挙動と、現在の挙動の問題を説明する</p></li>
 	<li><p>再現する手順や準備。これは開発者が再現するために必要です。</p></li>
 	<li><p>その他の情報。GUI 周りのバグやアプリケーションのバグならば、<span class="key">PRINT</span> キーを押してスクリーンショットを取得してください。</p></li>
+	<li><p>できれば英語を使用してください。英語は開発チームの共通言語であり、それを使うことで、問題に対する知識のある開発者が調査しやすくなります。英語を話せない場合は、たとえば、Haiku の<a href="https://discuss.haiku-os.org/c/international">国際フォーラム (International Forum)</a> で、問題を報告するために他人の助けを求めてみてください。</p></li>
 </ul>
 	
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -117,7 +118,7 @@
 <p>カーネルのバグは、もっとも重い努力を伴うバグであり、一方それと同時に、デバッグはもっとも困難なものでしょう。以下のようなさまざまな種類の症状は、そのほとんどがカーネルやドライバーのバグを示しています:</p>
 <ul>
 <li><p>システムは kernel debugging land (KDL) に入ります。画面上部はクリアされいくつかの KDL に入る原因となった理由を含むと思われる文字列が出力されます。次に、"<i>Welcome to Kernel Debugging Land...</i>" と出力されます。その上に、KDL に入った直接の理由が表示されます。</p></li>
-<li><p>システムは自発的に再起動します。</p></li>
+<li><p>システムは勝手に再起動します。</p></li>
 <li><p>システムは完全にフリーズします。マウスを動かすこともできず、アプリケーションも停止します。<span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> (だいたいのキーボードで、<span class="key">SysReq</span> は <span class="key">PRINT</span> と同じキーです) を押して、KDL に入れます。</p></li>
 <li><p>システムは正常に起動しません。起動中に再起動するか、起動中にどこかで止まるか (たとえば、ブートスクリーンでのいくつかのアイコンで) のどちらかかもしれません。後者の場合でも、<span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> を押してみてください。</p></li>
 <li><p>システム全体または一部のハードウェアで正常な動作をしない。たとえば、動作がすごく遅い、エラーが発生する、完全に動作しない、などです。一部のハードウェアが動作しないならば、まず Haiku がそれをサポートするかどうかを確認してください (メーリングリストやフォーラムで聞いてみるなど)。</p></li>
@@ -126,7 +127,7 @@
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="kdl" name="kdl">Kernel Debugging Land - KDL</a></h3>
-<p>システムが KDL に自動で入らなかった場合、<span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> (通常、<span class="key">SysReq</span> は、<span class="key">Print</span> キーです) を押して意図的に入れます。<br />
+<p>システムが自動で KDL に入らなかった場合、<span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> (通常、<span class="key">SysReq</span> は、<span class="key">Print</span> キーです) を押して意図的に入れます。<br />
 ここで注意することは、KDL ではキーボードが動作しないかもしれないことです。PS/2 キーボードは常に動作します。USB キーボードは、USB コントローラーのタイプ (UHCI/EHCI) 次第です。通常、キーボードはハブを介さず、直接 USB ポートに接続されるべきです。少なくとも一度は、キーボードショートカット経由で KDL に入った場合、状況次第でキーボードのみ動作するでしょう。現時点では、USB OHCI はサポートされていません。</p>
 <p>KDL 自体はシェルの一種です。システム情報を出力するコマンドを実行できます。次のコマンドが役に立つでしょう:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
@@ -146,6 +147,8 @@ syslog (system log の略称) はシステムに発生した有益な情報を�
 <p>ブートローダーの <span class="menu">Debug menu</span> にある <span class="menu">Enable debug syslog</span> オプションは syslog を永続化します。<span class="menu">Save syslog from previous session during boot</span> オプションがブートローダーオプションで有効な場合 (実際デフォルトです)、最新セッションの syslog は、<span class="path">/boot/system/var/log/previous_syslog</span> に見つかるでしょう。<br />
 ブートしても、previous_syslog が得られない場合は、起動するときに <span class="key">SHIFT</span> (UFEI 起動の際は<span class="key">SPACE</span>) を押したままにしてブートローダーメニューに入る必要があります。<br />
 ブートローダーメニューにある <span class="menu">Debug menu</span> の中には <span class="menu">Display syslog from previous session</span> と <span class="menu">Save syslog from previous session</span> があります。前者は syslog を画面上に表示し、後者はディスクにファイルとして保存します。現時点では保存先に FAT32 フォーマットのみサポートされていることに注意してください。USB メモリを使用する場合は、後から接続しても認識しないので 1 度再起動し、再度ブートローダーメニューに入る必要があります。注意: 誤ってほかのオペレーションシステムを実行しないようにしてください。syslog を失ってしまいます。</p>
+<p>syslog はシステムに関する情報 (実行中のアプリケーション、およびいくつかの詳細をここにも保存するアプリケーション) を含む可能性があることに注意してください。公開したくない個人的なデータをアップロードしていないことを確認するために、syslog のチェックを推奨します。完全な syslog は時により助けになりますが、なにか削除したい場合は、必要に応じてファイルを編集できます。</p>
+<p>syslog をチケットに添付する際は、直接添付してください。zip ファイルやその他のアーカイブを<b>貼り付けないで</b>ください。</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">画面へのデバッグ出力</a></h3>
@@ -171,7 +174,7 @@ syslog (system log の略称) はシステムに発生した有益な情報を�
 <p>最初の 4 つのコマンドはターミナルに入力できます。<span class="cli">&gt; output.txt</span> をコマンドの最後に追加すると、"output.txt" というテキストファイルに出力されます。つまり、それをバグレポートやメールに添付できます。</p>
 
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="next" name="next">次はどうする</a></h2>
+<a id="next" name="next">次は?</a></h2>
 <p>バグをレポートした後は、開発者があなたの報告を見て修正を試みるでしょう。しかし忘れないでいてもらいたいのは、私たちはボランティアであるので、しばらくの間報告が放置されることもあります。情報を追加することで早くバグを修正できるようになります。しかし、説明的でないコメントを追加することはしないでください。</p>
 <p>バグのレポートはあなたの時間を無駄に消費するわけではありません。バグの報告をしたあなたは一つの Haiku の開発プロセスにあります。開発者はバグを修正するために質問をすることがあります。それを無視せず、質問には答えるようにしてください。あなたの参加は、バグが 'fixed' となるまで終わりません。</p>
 

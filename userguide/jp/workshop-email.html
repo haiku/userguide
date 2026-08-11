@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -67,9 +67,8 @@
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>インデックス</td></tr>
-<tr class="index"><td>
-	<a href="#mailsystem">Haiku のメールシステム</a><br />
-	<a href="#status">カスタムステータスを使う</a><br />
+<tr class="index"><td>	<a href="#mailsystem">Haiku のメールシステム</a><br />
+	<a href="#labels">ラベルを使う</a><br />
 	<a href="#queries">クエリを使う</a><br />
 	<a href="#tips">追加のヒント</a>
 </td></tr>
@@ -100,16 +99,18 @@
 <p>特に、Tracker とクエリを使ってメールを管理するのは強力なアイデアです。得られる経験は、ファイル操作のあらゆる問題に移行できます。それが、画像、音楽、ビデオ、コンタクト、またはほかの任意の書類でも、Tracker の使用はファイル管理のコアとなります。<br />
 同様に、これらのシステムエリアの改良は、メールだけでなく、それらを利用するすべてのアプリケーションに役立ちます。</p>
 
-<h2>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="status" name="status">カスタムステータスを使う</a></h2>
+<h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="labels" name="labels">ラベルを使う</a></h2>
 <p>新着メールをブラウズする場合、さらに詳しくそれに関して考えるように、後でそれらのうちのいくつかに戻りたいと思うかもしれません。それらを "<i>New messages</i>" クエリ中に維持するために、メールのメニュー<span class="menu">閉じる (Close and) | 「新着」のままにする (Leave as New)</span> を使用できましたが、その方法を積み重ねる傾向があります…</p>
 <p>1 つの解決法は、もちろん、単に返答を始めて下書きとして保存することです。しかし、返事を書くつもりがなく、後でメールを再度読みたいだけならば、それは理想的ではありません。</p>
-<img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>さらに良い、<span class="menu">閉じる (Close and) | ほかの属性に変更… (Set to...)</span> の使用は、新しいステータスを作成し、メールを分類するためにそれを使用するためです。たとえば、ステータスを、"<i>後で (Later)</i>" と呼ぶことができ、それから、より多くの時間が取れたときに、そのためにクエリを実行できました。<br />
-あるいは、特定のプロジェクトのために別のステータスを使用します。たとえば、ステータス "<i>HUG</i>" ("Haiku ユーザーガイド" 用) を作成し、そこに、ユーザーガイドのコンテンツに影響をおよぼすかもしれないすべてのメールを集めます。それらは、いくつかの機能を変更または導入する、コードの変更に関するコミットメッセージのようなメール、または、ユーザーガイドを改善すると感じるあらゆるメールです。<br />
-どのような場合でも、ステータス名を短くするように努めてください。その方が、常に Tracker 中で通常の幅の "Status" 列に適合します。</p>
-<p>ステータスをセットするために、<span class="app">メール</span>アプリケーションでメールを開く必要はありません。Tracker アドオン、<span class="app">Mark as Read </span> および<span class="app"> Mark as...</span> で、いくつかのメールファイルを選択し、一度にそれらのステータスを設定できます。</p>
+<img src="images/workshop-email-images/labels.png" alt="labels.png" /> 
+<p><span class="menu">ラベルを設定 (Set label)</span> を使用して、<span class="menu">Label as…</span> で新しいラベルを作成するか、既存のラベルを選択してメールを分類してください。たとえば、ラベルを、"<i>後で (Later)</i>" と呼ぶことができ、それから、より多くの時間が取れたときに、それでクエリを実行できます。<br />
+あるいは、特定のプロジェクトのために別のラベルを使用します。たとえば、ラベル "<i>HUG</i>" ("Haiku ユーザーガイド" 用) を作成し、そこに、ユーザーガイドのコンテンツに影響をおよぼすかもしれないすべてのメールを集めます。それらは、いくつかの機能を変更または導入する、コードの変更に関するコミットメッセージのようなメール、または、ユーザーガイドを改善すると感じたあらゆるメールです。<br />
+どのような場合でも、ラベル名を短くするように努めてください。そうすれば、常に Tracker 中で通常の幅の "Label" 列に収まります。</p>
+<p>メールが処理されたなら、<span class="menu">ラベルを削除 (Remove label)</span> を使って、メールのラベル属性を消去できます。</p>
+<p>ラベルは <span class="path">~/config/settings/Mail/labels</span> 中に保存されます。そこは、<span class="menu">ラベルを管理… (Manage labels…)</span> を選んだときに開くところです。ここで、ラベルの追加・削除・名前の変更ができます。都合の良いことに、それぞれのラベルファイルはクエリでもあります。つまり、それをダブルクリックしてそのラベルを持つメールに対するクエリを開始できることを意味します。必要がないと思われるラベルを削除する前の最初のチェックに便利です。</p>
+<p>ステータスを設定するために、<span class="app">メール</span>アプリケーションでメールを開く必要はありません。Tracker アドオン、<span class="app">Label as…</span> で、メールファイルをいくつか選択し、それらのラベルを一度に設定または削除できます。</p>
+<div class="box-info">BeOS - および Haiku は長い間 - email ステータス属性を <tt>MAIL:status</tt> メールのラベル付けに誤用されていました。そのようなカスタムステータスを使うなら、ラベル属性 <tt>MAIL:label</tt> への移行を推奨します。</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -117,14 +118,16 @@
 <p>確かに、メールをすべて格納するためにフォルダーを指定し、しかもそれを開けられます。そこにユーザーのメールのすべてがあります。しかし、時間とともにフォルダーは込み入ってきます。そして、すべてを表示することは何千ものファイルのようにますます長くかかり、それらの属性を解析し、並び替えしなければなりません。同様に、たいていの場合、2 年前のナイジェリアの王子たちと彼らの相続問題のメールには実際に関心がありません…</p>
 <div class="box-info">フォルダーを読み込むとき、ディスクから読み込まれたファイルを正しい並び順にし、それらをウィンドウ中に表示することに多くの時間が費やされます。非常に多くのファイルがあるフォルダーを開く必要があるならば、Tracker ウィンドウを、"不可視" にすることで待ち時間を短くできます、つまり、ウィンドウを最小化するか、あるいは別のワークスペースへ変更するかのいずれかです。それがどのように CPU 使用率に影響するか確かめるためには、<a href="desktop-applets/processcontroller.html">プロセスコントローラー</a>を観察してください。</div>
 <p>メールを探すための<a href="queries.html">クエリ</a></p>
-<p>クエリを使うことで、メールの表示範囲を絞れます。実際、Deskbar 中のメールボックスアイコンはクエリを使っています。</p>
+<p>クエリを使うことで、メールの表示範囲を絞れます。実際、Deskbar 中のメールボックスアイコンはクエリを使用しています。アイコンを右クリックすると、コンテクストメニューを開けます。</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
 <p><span class="menu">下書きを開く (Open Draft)</span> サブメニューは、ステータス "<i>Draft (下書き)</i>" に対するクエリを行います。このステータスは、メッセージを保存したときに、<span class="app">メール</span>によって、ユーザーがメッセージを保存したときにセットされます。</p>
 <p><span class="menu">Open Inbox Folder</span> および <span class="menu">Open Mail Folder</span> は、単に普通のフォルダーへのリンクです (私見ではあまり便利ではありません)。</p>
 <p><span class="menu"># 通の新着メッセージがあります (# new messages)</span> サブメニューは、ステータス "<i>New (新着)</i>" に対するクエリによって現れます (ところで、同じクエリがメールボックスにメールがあることを示すため、メールボックスアイコンを変更するのに使われます)。</p>
 
-<p>独自のクエリ (または、フォルダー、アプリケーション、スクリプトなど) をそのコンテキストメニューに追加できます。それら、またはそれらへのリンクを、<span class="path">~/config/settings/Mail/Menu Links</span> に入れてください。</p>
-<div class="box-info">クエリ、<span class="path">~/config/settings/Mail/mailbox</span> は特例です。それは、Deskbar 内のメールボックスアイコンを左クリックしたときに実行されます。その振る舞いを変えるなら、それをほかの任意のファイル (またはファイルへのリンク) に置き換えられます。単にファイル名を "<i>mailbox</i>" とするだけです。それはクエリである必要はありません。クエリのフォルダーへのリンク、スクリプト、またはアプリケーションでも同様に動作します。</div>
+<p>独自のクエリ (または、フォルダー、アプリケーション、スクリプトなど) も、そのコンテキストメニューに追加できます。それら、またはそれらへのリンクを、<span class="path">~/config/settings/Mail/Menu Links</span> に入れてください。上のスクリーンショットでは、例として、labels フォルダー (<span class="path">~/config/settings/Mail/labels</span>) がそこにリンクされていました。Deskbar のメールボックスアイコンからすばやくラベルのついたメールにアクセスするためにです。
+</p>
+
+<div class="box-info">クエリ、<span class="path">~/config/settings/Mail/mailbox</span> は特別です。それは、Deskbar 内のメールボックスアイコンを左クリックしたときに実行されます。その振る舞いを変えたいのなら、ほかの任意のファイル (またはファイルへのリンク) に置き換えられます。単にファイル名を "<i>mailbox</i>" とするだけです。それはクエリである必要はありません。クエリのフォルダーへのリンク、スクリプト、またはアプリケーションでも同様に動作します。</div>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -134,7 +137,7 @@
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /></td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /></td></tr>
 
-<tr align="center"><td>カスタムステータス "<i>Later</i>" を持つメールをすべて検索します。</td>
+<tr align="center"><td>"<i>Later</i>" ラベルがついたすべてのメールをすべて検索します。</td>
 <td>過去 2 日間のメールをすべて検索します。</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /></td>
@@ -150,7 +153,8 @@
 <ul>
 <li><p>クエリを、"<i>クエリ</i>" でなく、"<i>クエリテンプレート</i>" として保存するなら、その起動は結果ウィンドウではなく、検索…ウィンドウとなるでしょう。そのほうが、件名または送信元に対する検索文字列の交換や、たとえば、日時制限の "<i>2 days</i>" から "<i>3 days</i>" への変更が容易にできます。</p></li>
 <li><p> <a href="tracker.html#tracker-preferences">Tracker 設定</a>で、"先行入力フィルタリング (type-ahead filtering)" を有効にすると、さらにクエリの結果をよりすばやくフィルタリングできます。たいてい、すべてのメールを過去 3 日間でクエリし、そこから先行入力フィルタリングで進むだけで充分です。大きな利点は、検索する属性を正確に指定する必要がないことです。フィルタリング中は、表示されている属性がすべて考慮されます。</p></li>
-<!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
+<li><p>email をクエリを通じて管理 (どうして使わないのか?) しているときは、 <i>DefaultQueryTemplate</i> を設定するべきです。それは、クエリ結果ウィンドウで通常見たい、<i>Status</i>, <i>From</i>, <i>Subject</i>, <i>When</i> のようなすべての email 属性を表示します。<br />
+最初に、<span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates/text_x-email</span> フォルダーを作成します。次に、いつもの email クエリのひとつを実施し、表示された属性やウィンドウサイズと位置を好みに変更します。ウィンドウの<span class="menu">属性 (Attributes)</span> メニューから、<span class="menu">レイアウトのコピー (Copy layout)</span> を選び、新規に作成した <span class="path">text_x-email</span> フォルダーを開き、ここに<span class="menu">レイアウトを貼り付け (Paste layout)</span> るだけです。</p></li>
 </ul>
 
 </div>

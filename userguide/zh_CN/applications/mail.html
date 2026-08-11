@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -76,9 +76,9 @@
 <tr><td>桌面栏:</td><td style="width:15px;"></td><td><span class="menu">应用程序</span></td></tr>
 <tr><td>位置:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
 <tr><td>设置:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
-<span class="path">~/config/settings/Mail/Menu Links/</span> - 这里的内容出现在电子邮箱的上下文菜单<br />
-<span class="path">~/config/settings/Mail/signatures/</span> - 署名的保存位置<br />
-<span class="path">~/config/settings/Mail/status/</span> - 自定义状态的保存位置</td></tr>
+<span class="path">~/config/settings/Mail/Menu Links/</span> - Objects put here appear in the mailbox' context menu<br />
+<span class="path">~/config/settings/Mail/signatures/</span> - Location to store signatures<br />
+<span class="path">~/config/settings/Mail/labels/</span> - Location to store custom labels</td></tr>
 </table>
 <p><br /></p>
 <p>电子邮箱是 Haiku 默认的邮件查看器和编辑器。它与实际的邮件获取和发送没有任何关系，而后者通常由 mail_demon 完成，并且可以通过 <a href="../preferences/e-mail.html">电子邮箱</a> 首选项进行配置。</p>
@@ -93,7 +93,8 @@
 <p>多数的菜单和工具栏项目都很容易理解，因此我们主要关注高亮部分。</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>文件</h3>
-<p>当您关闭新建邮件窗口时，其状态通常会从“新邮件”切换为“已读邮件”。但是您也可以从 <span class="menu">关闭并...</span> 子菜单中设置其他状态。在哪里，您也可以通过 <span class="menu">设置为...</span> 选项创建自定义状态，然后保存到 <span class="path">~/config/settings/Mail/status/</span> 。</p>
+<p>When you close the window of a new mail, its status is normally switched from "New" to "Read". From the <span class="menu">Close and</span> submenu, though, you can choose to <span class="menu">Leave as 'New'</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">W</span>) or <span class="menu">Move to Trash</span> instead.</p>
+<p>With <span class="menu">Set label</span> you can assign a custom label that is saved under <span class="path">~/config/settings/Mail/labels/</span>.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>编辑</h3>
 <p>这里，您能够看到一个条目，用以打开电子邮件 <span class="menu">首选项...</span> （<a href="#preferences">如下</a>）以及用于管理您的 <span class="menu">账户...</span> 的快捷方式，它们将会打开 <a href="../preferences/e-mail.html">电子邮件</a> 首选项面板。</p>
@@ -114,11 +115,13 @@
 </table>
 <div class="box-info">如果在回复邮件之前，您标记了其中某一段，那么在您的回复邮件中将仅引用标记的内容。这样可以避免过度引用，而且所有人都会对此比较反感。</div>
 <p>菜单项 <span class="menu">下一封</span>, <span class="menu">重新发送</span> 和 <span class="menu">转发</span> 的作用都非常明白。</p>
-<p>当您通过文件浏览器或者查询结果窗口打开邮件时， <span class="menu">上一个</span> 和 <span class="menu">下一个</span> 将会打开列表中的前一个/下一个消息。</p>
+<p>When you've opened an email from a Tracker or query result window, <span class="menu">Previous message</span> and <span class="menu">Next message</span> (<span class="key">ALT</span> <span class="key">↑</span>/<span class="key">↓</span>) will move to the previous/next email in the list. In the <a href="#preferences">Mail settings</a> you can configure if the status of the current "New" email's status is set to "Read" automatically when moving to the previous/next email.<br />
+If you hold <span class="key">SHIFT</span> while going to the previous/next email, the status of the current email is kept. This is also works when using the up/down-arrow icons in the toolbar to move through your emails.</p>
+<p>A bit related to browsing through your emails using <span class="menu">Previous message</span> and <span class="menu">Next message</span>: If you invoke <span class="menu">Move to Trash</span>, the current email is trashed and the <i>next</i> message gets opened. If you hold <span class="key">SHIFT</span> though, the <i>previous</i> email is opened instead. Useful, if you sort your emails newest-first, open the oldest and move up from there and deleting emails on your way.</p>
 <p><span class="menu">保存地址</span> 将会在一个子菜单中保留从邮件头和邮件中搜集所有的邮件地址。选中其中一个地址就爱个哪会打开 <a href="people.html">联系人</a> 应用以便填写并保存完整的联系人信息。</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>查询</h3>
-<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all corresponding mails:</p>
+<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span>, <span class="menu">Same subject</span> or <span class="menu">Same label</span> opens a query that lists all corresponding mails:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2>
@@ -127,8 +130,8 @@
 <p>A new email is created by invoking <span class="menu">New mail message</span> of the <span class="menu">File</span> menu or the corresponding icon from the tool bar of an open email. Or you just start the Mail application or choose <span class="menu">Create new message…</span> from the context menu of the mailbox icon in the Deskbar.</p>
 <img src="../images/apps-images/mail-write.png" alt="email-write.png" /> 
 <p>该窗口和邮件阅读的窗口非常相似。菜单和工具栏项仅有轻微差别，当然，文本框中是收件人的邮箱地址，邮件主题等等。</p>
-<p><span class="menu">抄送</span> 即 Cc，是过时术语 "<i>carbon copy</i>" 的缩写，将会发送您的邮件副本到列表中的联系人。与直接将很多邮箱地址放到 "收件人" 一栏内所不同的是，您没有直接定位副本栏中的联系人，也就是表明您可能不希望得到他们的回复。<br />
-<span class="menu">密送</span> 即 Bcc，意思是 "<i>秘密抄送</i>" 其功能与抄送相一致，但是将会隐藏收件人的地址。</p>
+<p><span class="menu">Cc</span> is short for the anachronistic term "<i>carbon copy</i>" and results in copies of your mail being sent to the listed people. The difference to just listing a bunch of addresses in the "To" field is, that you don't directly address the cc'ed people, thereby signaling that you probably don't expect an answer of them.<br />
+<span class="menu">Bcc</span> means "<i>blind carbon copy</i>" which does practically the same as "Cc", but hides the recipients from each other.</p>
 <p>您可以输入多个收件人地址，地址之间以分号隔开。
 <span class="menu">收件人</span>，<span class="menu">抄送</span>，以及 <span class="menu">密送</span> 都是弹出菜单。他们包含了您的系统中所有的邮箱地址，由对 <a href="people.html">联系人</a> 文件的查找生成。 它们的 "Group" 属性将会将其列在对应的子菜单中。 </p>
 <p>接下来，我们将会关注菜单中更加有用的特性。</p>
@@ -159,7 +162,7 @@
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>查询</h3>
-<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.</p>
+<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.  You can't query for <span class="menu">Same label</span>, because while composing, there's no actual email file stored where a label-attribute could be added. The email has to be sent first.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

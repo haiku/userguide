@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -13,7 +13,7 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Зміст</td></tr>
@@ -97,6 +98,7 @@
 	<li><p>Опишіть проблему, з якою Ви зіткнулися. Намагайтеся бути якомога точнішими: опишіть фактичну поведінку та поведінку, яку Ви очікували.</p></li>
 	<li><p>Опишіть, які кроки потрібно виконати, щоб виявити (відтворити) помилку. Це допоможе розробникам відтворити баг.</p></li>
 	<li><p>Додайте якомога більше інформації. Якщо це помилка графічного інтерфейсу або помилка в одній з програм, спробуйте зробити знімок екрана натиснувши клавішу <span class="key">PRINT</span>.</p></li>
+	<li><p>Use the English language if possible. This is the common language of the development team, and using it makes it more likely that developers knowledgeable about the issue can investigate. If you do not speak English, try to get some help from other people for reporting the problem, for example at Haiku's <a href="https://discuss.haiku-os.org/c/international">International Forum</a>.</p></li>
 </ul>
 	
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -144,6 +146,8 @@ Syslog (скорочення від system log – системний журна
 <p>Опція <span class="menu">Enable debug syslog</span> меню <span class="menu">Select debug options</span> загружчика вмикає запис системного журналу на постійній основі. Якщо у параметрах відладки загружчика увімкнено опцію <span class="menu">Save syslog from previous session during boot</span> (увімкнена за замовчуванням), системний журнал Вашого останнього сеансу запишеться як файл <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
 Якщо Ви не можете загрузитися, щоб отримати доступ до «previous_syslog», Вам потрібно увійти у меню загружчика, утримуючи клавішу <span class="key">SHIFT</span> під час загрузки (або <span class="key">SPACE</span> для загрузки через UEFI).<br />
 У меню <span class="menu">Select debug options</span> загружчика Ви знайдете опції <span class="menu">Display syslog from previous session</span> і <span class="menu">Save syslog from previous session</span>. Перша опція виводить syslog на екран, друга дозволяє зберегти його у вигляді файлу на диск. Зверніть увагу, що на даний момент для збереження файлу підтримуються лише томи FAT32. Якщо Ви хочете використати USB-накопичувач, але підключили його занадто пізно і він ще не розпізнаний, Ви можете перезагрузити комп'ютер і знову увійти до меню загружчика. Примітка:  Не загрузіть випадково будь-яку іншу операційну систему, інакше дані буде втрачено.</p>
+<p>Note that the syslog may include information about the system (applications running, and some applications will also store some details here). It is recommended to check the syslog to make sure you are not uploading personal data that you wouldn't want published. A complete syslog is sometimes more helpful, but in the case you want to remove something, you can edit the file as needed.</p>
+<p>When attaching the syslog to a ticket, just attach it directly, <b>don't</b> put it inside a zipfile or other archive.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">Виведення відладочної інформації на екран</a></h3>

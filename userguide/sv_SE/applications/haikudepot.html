@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2013-2021 Haiku. All rights reserved.
+ * Copyright 2013-2025  Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -65,11 +65,11 @@
 <div class="box-info">Översättningen av denna sida är inte komplett. Delar av innehållet kommer därför att visas på engelska.</div>
 
 <table class="index" id="index" summary="index">
-<tr class="heading"><td>Index</td></tr>
+<tr class="heading"><td>Innehåll</td></tr>
 <tr class="index"><td><a href="#filter">The Filter</a><br />
                 <a href="#list">The List</a><br />
                 <a href="#info">The Info Area</a><br />
-                <a href="#menu">HaikuDepot and Show menu</a><br />
+                <a href="#menu">The Menus</a><br />
                 <a href="#account">Creating a User Account</a><br />
                 <a href="#rating">Rating and Commenting</a><br />
                 <a href="#logs">Diagnostic Logs</a><br />
@@ -89,28 +89,33 @@
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
 <p>The second tab shows <span class="menu">All packages</span>, the display changes to smaller icons and more information arranged in columns:</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
+<p>Packages of both tabs can sport two little icons after their name:</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><img src="../../images/apps-images/haikudepot_installed.svg" width="20pt" /></td><td style="with:20px"></td><td>ska visas när ett paket är installerat.</td></tr>
+<tr><td><img src="../../images/apps-images/haikudepot_native.svg" width="20pt" /></td><td style="with:20px"></td><td>ska visas när ett paket är konstruerat för Haiku, ej överfört från en annan platform.</td></tr>
+</table>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="filter" name="filter">The Filter</a></h2>
-<p>At the top we find a few means to filter the list of available packages below:</p>
+<a id="filter" name="filter">Listan</a></h2>
+<p>Ovanför vi hittar några sätt att filtrera paketlistan som ligger nedan:</p>
 <ul>
 <li><p>The <span class="menu">Category</span> pop-up menu lets you limit the list to individual categories like "<i>Audio</i>" or "<i>Games</i>".</p></li>
 <li><p>The <span class="menu">Search terms</span> text field filters the list to those packages that have all the entered (space-delimited) strings in their name or description.</p></li>
-<li><p>The <span class="menu">Repositories</span> menu of the menu bar determines which repos are being queried. "<i>Local</i>" packages are the ones that were installed from somewhere other than an online repo; maybe from a USB thumb drive or downloaded from some website or a package that you've built yourself.</p></li>
 </ul>
+<p>There are more ways to filter the list of packages in the <span class="menu">Repository</span> and <span class="menu">Show</span> menus described further down.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="list" name="list">The List</a></h2>
-<p>Like in any Tracker window, you can choose from a context menu which columns to display by right-clicking the column heading. A left-click sorts the list according to that column. Of course, you can rearrange the columns by dragging them to a new position.</p>
-<p>The <span class="menu">Date</span> column shows when a packge was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
-<p>The <span class="menu">Status</span> column of a package can have one of several states:</p>
+<a id="list" name="list">Listan</a></h2>
+<p>Lika i alla Tracker-fönster kan du välja från en kontextmeny vilka kolumner som visas genom att högerklicka på kolumnhöjden. En vänsterklick sorterar listan enligt den valda kolumnen. Naturligtvis kan du om organisera kolumner genom att dra dem till ett nytt läge.</p>
+<p>The <span class="menu">Date</span> column shows when a package was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
+<p>Menyraden <span class="menu">Status</span> för ett paket kan ha några olika tillstånd, som exempelvis:</p>
 <ul>
-<li><p><span class="menu">Active</span>: The package is currently installed and ready to be used.</p></li>
-<li><p><span class="menu">Available</span>: The package exists in that repository and can be downloaded and installed. If there are any dependencies on other packages, you'll be informed of that while installing and get the choice of downloading/installing all that's necessary.</p></li>
-<li><p><span class="menu">Pending / %</span>: <i>Pending</i> is shown for a package that is queued for download/installation. While a package is downloaded, the progress is shown as percentage.</p></li>
+<li><p><span class="menu">Active</span>: Paketet är för närvarande installerat och redo att användas.</p></li>
+<li><p><span class="menu">Available</span>: Paketet finns i det specifika arkivet och kan laddas ner och installeras. Om det finns beroenden på andra paket informeras du om det medan installeringen och du får chansen att ladda/installera alla nödvändiga delar.</p></li>
+<li><p><span class="menu">Pendande / %</span>: <i>Pendande</i>" visas för ett paket som är anmält för laddning/installation. Under tiden when det laddas ner visas fördelningen som en procentdel.</p></li>
 </ul>
-<p>The date column shows when the server system recorded the specific version of the package.  Owing to possible delays in the publishing process, this date may not be entirely accurate.</p>
-<p>You can grab the dotted line between the packages list and the info area to vertically resize the packages list.</p>
+<p>Datumkolumnen visar när serverns system noterade den specifika paketversionen. Eftersom det förekommer möjliga fördröjningar i utgivningsprocessen kan denna datum inte vara helt korrekt.</p>
+<p>Du kan dra den doterade räcket mellan paketlistan och informationsservningen för att vertikalt ställa in paketlistan.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="info" name="info">The Info Area</a></h2>
@@ -135,24 +140,34 @@ In the middle are user comments with their nickname, the number of stars they ga
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">HaikuDepot och Visa-meny</a></h2>
+<a id="menu" name="menu">The Menus</a></h2>
+<h3>HaikuDepot</h3>
 <p>In the <span class="menu">HaikuDepot</span> menu at the top of the window, you'll find an item to <span class="menu">Refresh repositories</span>. This will request an up-to-date list of all available packages from the repositories.<br />
 The second item is to <span class="menu">Manage repositories…</span>. It opens the <a href="../preferences/repositories.html">Repositories</a> preferences, to add/remove or disable and enable repositories.<br />
 <span class="menu">Check for updates…</span> opens the <a href="../apps/softwareupdater.html">SoftwareUpdater</a> to search and install updated packages.<br />
 <span class="menu">Settings…</span> opens a window with the currently only option: <span class="menu">Share anonymous usage data with HaikuDepotServer</span>. The data is used to, for example, increase a counter on how often a package is viewed and installed, which then can determine if a package is promoted to the "Featured packages" list.</p>
-<p>Under <span class="menu">Show</span> you can choose to also display <span class="menu">Develop packages</span> and <span class="menu">Source packages</span> in the packages list. For the normal user those are of no interest and would only clutter the list. They are important, however, for people who need the libraries, headers etc. of a package to develop and compile programs depending on them.</p>
+<h3>Repositories</h3>
+<p>The <span class="menu">Repositories</span> menu of the menu bar determines which repos are being queried. "<i>Local</i>" packages are the ones that were installed from somewhere other than an online repo; maybe from a USB thumb drive or downloaded from some website or a package that you've built yourself.</p>
+<h3>Show</h3>
+<p>By picking one of three kinds of packages in the <span class="menu">Show</span> menu, you can limit the scope of packages to the ones you're actually interested in:</p>
+<ul><li><p><span class="menu">Desktop and non-desktop packages</span> - Shows every kind of packages, i.e. everything from applications to libraries needed by developers.</p></li>
+<li><p><span class="menu">Desktop packages only</span> - Shows only 'real' applications; the kind you'll find in the Deskbar, for example.</p></li>
+<li><p><span class="menu">Native desktop packages only</span> - Same as above, but limited to Haiku 'native' applications. Those are created especially for Haiku and were not ported from another system, which normally means coming with lots of heavy dependencies like KDE or Qt frameworks.</p></li>
+</ul>
+ 
+<p>Furthermore, you can choose to also display <span class="menu">Develop packages</span> and <span class="menu">Source packages</span> in the packages list. For the normal user those are of no interest and would only clutter the list. They are important, however, for people who need the libraries, headers etc. of a package to develop and compile programs depending on them.</p>
 <p>Of more interest are the options to only show <span class="menu">Available packages</span> and <span class="menu">Installed packages</span>.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="account" name="account">Creating a User Account</a></h2>
+<a id="account" name="account">Skapa en användarekonto</a></h2>
 <p>To be able to rate a package, you need a user account at the <a href="http://depot.haiku-os.org">Haiku Depot Server</a> that serves all the packages and keeps track of ratings and user comments. You can create an account within the HaikuDepot application by clicking on the menu in the far right of the menu bar that shows your current status: <span class="menu">Not logged in</span>. Choosing <span class="menu">Log in…</span> opens a window with two tabs; one to enter your user name and password (once you have those) to log in, and the other to create a new account:</p>
 <img src="../images/apps-images/haikudepot-login-tab.png" alt="haikudepot-login-tab.png" /> 
-<p>To create an account you need to:</p>
-<ul><li>use an all lower-case user name without special characters</li>
-<li>use a password that's at least 8 characters long with at least 2 capitals and 2 numbers</li>
-<li>provide a valid email address (if you want a new password sent to you in case you forgot it)</li>
-<li>solve the captcha</li>
-<li>tick the checkboxes to confirm you're over 16 and have read the usage conditions linked below them.</li></ul>
+<p>För att skapa en användarekonto behöver man:</p>
+<ul><li>använd en user namn i stort sett utan stora bokstäver och särskilda tecken.</li>
+<li>använd ett lösenord som är minst 8 tecken långt med åtminstone två stora bokstäver och två siffror.</li>
+<li>Ge ett giltigt e-postadress till exempel för att få en ny lösenordssändning i fall man glömmer det.</li>
+<li>lösa captcha</li>
+<li>körka kontrolerna med kryssar för att bekräfta att du är förenad med åldrarna 16 år och har läst användningstilläggen som ligger under dem.</li></ul>
 <p>After logging in, the top-right menu of the HaikuDepot window will now say <span class="menu">Logged in as (…)</span>, showing your user name. The menu now offers you to <span class="menu">Switch account...</span> or <span class="menu">Log out</span>.</p>
 <p>As a reminder of what you actually agreed to when you ticked the above mentioned checkbox, there are menu items to <span class="menu">View latest/agreed usage conditions…</span></p>
 
@@ -165,18 +180,21 @@ After you click <span class="button">Send</span> the data is transmitted to the 
 <p>At any time, you can come back and edit your comment and re-rate it. You can also hide your rating from other users by deactivating a checkbox <span class="menu">This rating is visible to other users</span>, that appears in this window once you've rated a package.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="logs" name="logs">Diagnostic Logs</a></h2>
-<p>As HaikuDepot is used, it interacts with network as well as local services. Things can go wrong, sometimes in ways that were not anticipated when the application was written. In those cases the error message may be quite unspecific. To help diagnosing a given problem, HaikuDepot can provide a log of what the application does.</p>
-<p>An error message may suggest to view the logs to get further in-depth information or you may be asked to provide the log when you file an issue at the Haiku <a href="https://dev.haiku-os.org/">bug tracking system</a>.</p>
-<p>To see the diagnostic logs, HaikuDepot needs to be started from <a href="terminal.html">Terminal</a>:</p>
+<a id="logs" name="logs">Diagnostika Loggar</a></h2>
+<p>När HaikuDepot används interagerar det med nätverk som lokal tjänster. Då kan saker gå fel, ibland på sätt som inte förutsattes när programmet skrevs ut. I dessa fall kan felmeddelandet vara ganska obestämda. För att hjälpa till att diagnostisera ett specifikt 
+problem kan HaikuDepot ge enlogg av vad programmet gör.</p>
+<p>Om felmeddelandet föreslår att man kan titta på loggarna för att få ytterligare detaljerad information eller om man uppmuntras till att tillhandahålla loggen när man skickar in en issues på <a href="https://dev.haiku-os.org/">Haiku-buggtrackingssystemet</a>.</p>
+<p>För att se de diagnostiska loggarna behöver HaikuDepot köras från <a href="terminal.html">Terminal</a>:</p>
 <pre>HaikuDepot -v debug</pre>
-<p>The command uses the <span class="cli">-v</span> flag to control the verbosity of the diagnostic logs. Possible values are: <span class="cli">off</span>, <span class="cli">info</span>, <span class="cli">debug</span> and <span class="cli">trace</span>. Using <span class="cli">off</span> will do only a small amount of logging, while <span class="cli">trace</span> does it in the highest detail.</p>
-<p>As HaikuDepot starts up and when interacting with the application, you will see text scroll by in the Terminal window; this is the diagnostic log.</p>
+<p>Befordran används den <span class="cli">-v flagga</span> för att stävra verbositeten på diagnostiska loggarna. Möjliga värden är: <span class="cli">avstängd</span>, <span class="cli">information</span>, <span class="cli">debug</span> och <span class="cli">trace</span>. Användandet av <span class="cli">avstängd</span> gör att endast liten mängd logging sker, medan användandet av <span class="cli">trace</span> görs i högsta grad och detalj.</p>
+<p>När HaikuDepot påbörjas och när man interagerar med programmet ser man text rulla över i Terminal-fönstret; detta är diagnoslogg.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tips" name="tips">Tips</a></h2>
-<p>There is another way to keep track of new and updated packages besides sorting the <span class="menu">Date</span> column of the list of packages. For that, you need to create an RSS ATOM feed at the <a href="https://depot.haiku-os.org">Haiku Depot Server</a> website. Click the "hamburger" widget at the top right, and choose <span class="menu">Build Feed URL</span> under Data.<br />
-Most interesting of the few settings on that page: Besides getting a feed for all new/updated packages, you are also able to add just the names of the packages you're interested in. Click the <span class="button">Build Feed URL</span> button and you get an RSS URL that you can paste into an RSS feed reader like BePodder, QuiteRSS, fRiSS etc.</p>
+<p>Det finns en annan väg att hålla koll på nya och uppdaterade paket besides att sortera <span class="menu">Datum</span>-kolumnen i listan över paket. Då behöver du skapa en RSS-ATOM-försändning på <a href="https://depot.haiku-os.org">Haikus depotserver</a>-sajten. 
+Klicka på den "hamburger"-ikonheten till höger och välj <span class="menu">Byggnadsförsendnings URL</span> under Data.
+Mest spännande av de få inställningarna på den sida är att, bortsett från att få en försändning för alla nya/uppdaterade paket, även kan du lägga till bara namnen på paketen du vill hålla koll på. Klicka på <span class="button">Byggnadsförsendnings 
+URL</span>-knappen och du får ett RSS-URL som du kan klistra in i ett RSS-feedsläsare som BePodder, QuiteRSS, fRiSS med flera.</p>
 </div>
 </div>
 

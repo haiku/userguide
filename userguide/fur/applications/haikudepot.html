@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2013-2021 Haiku. All rights reserved.
+ * Copyright 2013-2025  Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,17 +62,19 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Tabele</td></tr>
-<tr class="index"><td><a href="#filter">Il filtri</a><br />
-                <a href="#list">La liste</a><br />
-                <a href="#info">La aree des informazions</a><br />
-                <a href="#menu">I menù HaikuDepot e Mostre</a><br />
-                <a href="#account">Creâ un account utent</a><br />
-                <a href="#rating">Valutâ e comentâ</a><br />
-                <a href="#logs">Regjistris di diagnostiche</a><br />
-                <a href="#tips">Sugjeriments</a><br /></td></tr>
+<tr class="index"><td><a href="#filter">The Filter</a><br />
+                <a href="#list">The List</a><br />
+                <a href="#info">The Info Area</a><br />
+                <a href="#menu">The Menus</a><br />
+                <a href="#account">Creating a User Account</a><br />
+                <a href="#rating">Rating and Commenting</a><br />
+                <a href="#logs">Diagnostic Logs</a><br />
+                <a href="#tips">Tips</a><br />
+</td></tr>
 </table>
 
 <h2><img src="../../images/apps-images/haikudepot-icon_64.png" alt="haikudepot-icon_64.png" width="64" height="64" />HaikuDepot</h2>
@@ -87,6 +89,11 @@
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
 <p>La seconde schede e mostre <span class="menu">Ducj i pachets</span>, la videade e cambie e si varà iconis plui piçulis e plui informazions metudis jù in colonis:</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
+<p>I pachets di dutis dôs lis schedis a puedin sflocjâ dôs piçulis iconis dopo dal lôr non:</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><img src="../../images/apps-images/haikudepot_installed.svg" width="20pt" /></td><td style="with:20px"></td><td>al ven visualizât cuant che un pachet al è instalât.</td></tr>
+<tr><td><img src="../../images/apps-images/haikudepot_native.svg" width="20pt" /></td><td style="with:20px"></td><td>al mostre che il pachet al è stât progjetât par Haiku e nol è stât puartât di une altre plateforme.</td></tr>
+</table>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="filter" name="filter">Il filtri</a></h2>
@@ -94,13 +101,13 @@
 <ul>
 <li><p>Il menù a tende <span class="menu">Categorie</span> ti permet di limitâ la liste a specifichis categoriis come "<i>Audio</i>" o "<i>Zûcs</i>".</p></li>
 <li><p>Il cjamp di test <span class="menu">Tiermins di ricercje</span> al filtre la liste a chei pachets che a àn la stringhe inseride (delimitade di spazi) tal lôr non o te lôr descrizion.</p></li>
-<li><p>Il menù <span class="menu">Dipuesits</span> de sbare dai menù al determine cuâi dipuesits a àn di sei interogâts. I pachets "<i>Locâl</i>" a son chei che a son stâts instalâts di cualchi altre bande rispiet ai dipuesits in rêt; forsit di une clavute USB o discjariâts di cualchi sît web opûr un pachet che tu âs costruît di bessôl.</p></li>
 </ul>
+<p>There are more ways to filter the list of packages in the <span class="menu">Repository</span> and <span class="menu">Show</span> menus described further down.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list" name="list">La liste</a></h2>
 <p>Come in ogni barcon di Tracker, tu puedis sielzi di un menù contestuâl cuale colone visualizâ, fasint clic diestri su pe intestazion de colone. Un clic di çampe al ordenarà la liste in base a chê colone. E po sì, tu puedis rangjâ lis colonis strissinantlis suntune gnove posizion.</p>
-<p>La colone <span class="menu">Date</span> e mostre cuant che un pachet al è stât zontât o inzornât. Ordene daûr di cheste colone par viodi insom de liste ce che al è gnûf o inzornât.</p>
+<p>The <span class="menu">Date</span> column shows when a package was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
 <p>La colone dal <span class="menu">Stât</span> di un pachet al pues vê un di chescj diviers stâts:</p>
 <ul>
 <li><p><span class="menu">Atîf</span>: Il pachet al è instalât e pront par jessi doprât.</p></li>
@@ -133,12 +140,22 @@ Intal mieç a stan i coments dai utents cul lôr sorenon, il numar di stelis che
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">I menù HaikuDepot e Mostre</a></h2>
+<a id="menu" name="menu">The Menus</a></h2>
+<h3>HaikuDepot</h3>
 <p>Intal menù <span class="menu">HaikuDepot</span> in alt tal barcon, tu cjatarâs l'element <span class="menu">Inzorne dipuesits</span>. Chest al domandarà ai dipuesits une liste inzornade dai pachets disponibii.<br />
 Cul secont element, <span class="menu">Gjestìs dipuesits...</span>, tu gjestissis i dipuesits. Al vierç lis preferencis dai <a href="../preferences/repositories.html">Dipuesits</a>, par zontâ/gjavâ o disabilitâ e abilitât i dipuesits.<br />
 <span class="menu">Controle inzornaments...</span> al vierç <a href="../apps/softwareupdater.html">SoftwareUpdater</a> par cirî e instalâ i pachets inzornâts.<br />
 <span class="menu">Impostazions...</span> al vierç un barcon che pal moment al à la uniche opzion: <span class="menu">Condivît dâts anonims sul ûs cun HaikuDepotServerShare</span>. I dâts a vegnin doprâts par, par esempli, incrementâ un contadôr su trop che un pachet al ven viodût e instalât. Chest al pues determinâ se un pachet al à di vignî mostrât te liste "Pachets in risalt".</p>
-<p>Sot di <span class="menu">Mostre</span> tu puedis sielzi di mostrâ ancje i <span class="menu">Pachets di svilup</span> e i <span class="menu">Pachets sorzint</span> te liste dai pachets. Pal utent normâl chei no son di nissune utilitât e dome a confusionaran la liste. Dut câs a son impuartants pes personis che a àn dibisugne des librariis e dai header (...) di un pachet par disvilupâ e compilâ programs che a dipendin di chescj.</p>
+<h3>Repositories</h3>
+<p>The <span class="menu">Repositories</span> menu of the menu bar determines which repos are being queried. "<i>Local</i>" packages are the ones that were installed from somewhere other than an online repo; maybe from a USB thumb drive or downloaded from some website or a package that you've built yourself.</p>
+<h3>Show</h3>
+<p>By picking one of three kinds of packages in the <span class="menu">Show</span> menu, you can limit the scope of packages to the ones you're actually interested in:</p>
+<ul><li><p><span class="menu">Desktop and non-desktop packages</span> - Shows every kind of packages, i.e. everything from applications to libraries needed by developers.</p></li>
+<li><p><span class="menu">Desktop packages only</span> - Shows only 'real' applications; the kind you'll find in the Deskbar, for example.</p></li>
+<li><p><span class="menu">Native desktop packages only</span> - Same as above, but limited to Haiku 'native' applications. Those are created especially for Haiku and were not ported from another system, which normally means coming with lots of heavy dependencies like KDE or Qt frameworks.</p></li>
+</ul>
+ 
+<p>Furthermore, you can choose to also display <span class="menu">Develop packages</span> and <span class="menu">Source packages</span> in the packages list. For the normal user those are of no interest and would only clutter the list. They are important, however, for people who need the libraries, headers etc. of a package to develop and compile programs depending on them.</p>
 <p>Plui interessantis a son lis opzions par mostrâ dome i <span class="menu">Pachets disponibii</span> e i <span class="menu">Pachets instalâts</span>.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

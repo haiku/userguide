@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,24 +62,27 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Hakemisto</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Työpöytäpalkkivalikko</a><br />
-	<a href="#tray">Tarjotin</a><br />
-	<a href="#list-of-apps">Käynnissä olevien ohjelmien luettelo</a></td></tr>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
+</td></tr>
 </table>
 
 <h1>Työpöytäpalkki</h1>
 
 <p>Työpöytäpalkki on pieni paneeli, joka oletuksena sijaitsee näytön oikeanpuoleisessa yläkulmassa. Se on Haikun versio Windowsin tehtäväpalkista Käynnistä-painikkeineen. Se sisältää Työpöytäpalkkivalikon, josta voit käynnistää sovellukset ja asetusohjelmat, tarjottimen kellolla ja muilla työkaluilla sen alla sekä alimmaisena parhaillaan suoritettavien ohjelmien luettelon.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>Voit siirtää Työpöytäpalkin mihin nurkkaan tahansa tai palkkina näytön ylä- tai alarajalle tarttumalla pisteviiva-alueeseen tarjottimen sivussam (katso nuolia yläpuolella) ja raahaamalla &amp; pudottamalla sen uuteen paikkaan.<br />
-Voit taittaa sen myös pienempään tilaan raahaamalla &amp; pudottamalla pisteviiva-alueen Työpöytäpalkin Lehtivalikkoon. Koska ne ovat vain tavallisen ikkunavälilehden korkuisia, niin edes koko näytön kokoiset ikkunat eivät peitä Työkalupalkkia kelloinen ja kuvakkeineen.</p>
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
+You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>Tarttumalla tarjottimen toiseen pisteviiva-alueeseen voit muuttaa Työpöytäpalkin leveyttä raahaamalla hiirtä vasemmalle tai oikealle:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>Laajempi Työpöytäpalkki sallii enemmän kuvakkeita tarjottimen yhdellä rivillä. Se myös typistää suoritettavien ohjelmien luettelon harvemmin käytettävien ohjelmien pitkät sovellusnimet, erityisesti jos käytät suuria kuvakkeita.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -98,12 +101,13 @@ Voit taittaa sen myös pienempään tilaan raahaamalla &amp; pudottamalla pistev
 <li><p><b>Sovellukset, Esittelyohjelmat, Työpöytäsovelmat, Asetusohjelmat</b> - Asennettujen sovellusten, esittelyohjelmien, sovelmien ja asetusohjelmien luettelo.<br />Voit lisätä linkin muihin ohjelmiin (tai mihin tahansa kansioon, asiakirjaan, kyselyyn jne.) laittamalla ne kansioon <span class="path">~/config/settings/deskbar/menu/</span>.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Työpöytäpalkin asetukset</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Työpöytäpalkin asetuspaneeli on jaettu kolmeen lohkoon.</p>
 
-<h4>Sovellukset</h4>
+<h3>Sovellukset</h3>
 <p>Seuraava asetus ei koske asennettuja sovelluksia, vaan suoritettavien sovellusten luettelon käyttäytymistä ja ulkonäköä.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Lajittelesovellukset nimen perusteella</span></td><td> </td><td>Lajittelee suoritettavat ohjelmat aakkosjärjestykseen.</td></tr>
@@ -114,7 +118,7 @@ Voit taittaa sen myös pienempään tilaan raahaamalla &amp; pudottamalla pistev
 <tr><td><span class="menu">Kuvakekoko</span></td><td> </td><td>Säätää suoritettavien sovellusten kuvakekoon.</td></tr>
 </table>
 
-<h4>Valikko</h4>
+<h3>Valikko</h3>
 <p>Vaikka Työpöytäpalkin pari ensimmäistä valikkoriviä ovat kiinteitä, voit räätälöidä <span class="menu">Sammuta virta...</span>-valikkorivin alla olevia.<br />
 Tässä voit asettaa Työpöytäpalkin valikossa näkyvien äskettäisten asiakirjojen, kansioiden ja sovellusten lukumäärän, tai haluatko nähdä niitä ollenkaan.<br />Painike <span class="button">Muokkaa valikkoa...</span> avaa kansion <span class="path">~/config/settings/deskbar/menu/</span>. Siitä löydät tiedostot ja kansiot, jotka ilmaantuvat Työpöytäpalkkiin, oletuksena näitä ovat <span class="menu">Sovellukset</span>, <span class="menu">Esittelyohjelmat</span>, <span class="menu">Työpöytäsovelmat</span>, ja <span class="menu">Asetusohjelmat</span>.<br />
 Voit poistaa ja lisätä kohteita kuten linkkejä sovelluksiin, asiakirjoihin tai jopa kyselyjä yksinkertaisesti kopioimalla/poistamalla niitä tästä kansiosta tai tähän kansioon.</p>
@@ -123,8 +127,9 @@ Voit poistaa ja lisätä kohteita kuten linkkejä sovelluksiin, asiakirjoihin ta
 Luo valikkoon <span class="path">menu</span>-kansio linkkipaikkaan <span class="path">~/config/settings/deskbar/</span> ja nimeä uudelleen <span class="path">menu_entries</span>. Pääteikkunassa linkki luodaan:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Ikkuna</h4>
+<h3>Ikkuna</h3>
 <p>Lopuksi Työpöytäpalkki-ikkunan asetukset.</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Aina päällimmäisenä</span></td><td> </td><td>Työpöytäpalkki pysyy aina kaikkien muiden ikkunoiden päällä.</td></tr>
 <tr><td><span class="menu">Nosta automaattisesti</span></td><td> </td><td>Työpöytäpalkki ponnahtaa päällimmäiseksi, jos hiiren kohdistin koskettaa kohtaa, jossa Työpöytäpalkki kohtaa näytön reunan, ja se siirtyy muiden näyttökomponenttien alle, kun kohdistin jättää Työpöytäalueen.</td></tr>

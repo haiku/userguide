@@ -73,12 +73,12 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="hpkg" name="hpkg">Haiku csomagok (.hpkg)</a></h2>
 <p>A csomagokat keresésére, letöltésére és telepítésére, eltávolítására a legjobb megoldás a <a href="applications/haikudepot.html">Raktár</a> használata. Ha ez nem jöhet szóba, mert máshonnan, nem nyilvános helyről származik a csomagunk, akkor egyszerűen csak a <tt>~/config/packages/</tt> mappába kell helyezni azt. </p>
-<p>You'll find the newly installed application in <tt>/system/apps/</tt> or, in case of a commandline application, in <tt>/system/bin/</tt>. All other files the program depends upon (libraries, data, add-ons, etc.) appear automatically in the right locations in the filesystem.</p>
+<p>Az újonnan telepített programokat a <tt>~/config/apps/</tt>, illetve a parancssori programokat a <tt>~/config/bin/</tt> mappában találjuk. Az összes többi fájl, amire a programnak szüksége van (funciótárak, adatok, kiegészítők, stb.) automatikusan a megfelelő helyen jelenik meg.</p>
 <p>Az <a href="deskbar.html">Asztalsáv</a> vagy az <a href="desktop-applets/launchbox.html">Indítósáv</a> leírásai tartalmaznak információkat, hogy hogyan lehet létrehozni indító ikonokat az új programokhoz.</p>
 <div class="box-info">Bár egy .hpkg fájl is ugyan úgy kicsomagolható, mint bármilyen másik csomag, a csomagkezelő nem így működik. A fájlrendszeren belül, ahol a fájlok megjelennek, valójában nincsenek ott, ugyanis nem történik meg a fájlok tényleges átmásolása. Éppen ezért olyan gyors a telepítés illetve az eltávolítás.</div>
 <p>Ha a csomagnak van valamilyen előfeltétele (funkciótár vagy egy másik csomag), akkor kapunk egy előugró ablakot, ami rákérdez a szükséges fájlok letöltésére és telepítésére.</p>
-<p>Uninstalling is just as easy: Simply find the package in HaikuDepot and click <span class="button">Uninstall</span>.</p>
-<p>If you're working in the Terminal or want to do un/installing of packages in a script, you should have a look at the command <tt>pkgman --help</tt>.</p>
+<p>Az eltávolítás egyszerű: csupán távolítsuk el a csomagot a Raktárban az <span class="button">Eltávolítás</span> gomb megnyomásával.</p>
+<p>Ha a Terminálban szeretnéd a csomagokat telepíteni/eltávolítani, hasznos lehet számodra az alábbi parancs: <tt>pkgman --help</tt>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>

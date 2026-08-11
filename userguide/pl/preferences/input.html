@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2008-2023, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -118,10 +118,32 @@
 <a id="touchpad" name="touchpad">Gładzik</a></h3>
 <img src="../images/prefs-images/touchpad.png" alt="touchpad.png" />
 <p>Przeciągając czerwone pionowe i poziome linie na reprezentacji gładzika, ustawiasz obszar przewijania (lekko czerwony na szarym tle ogólnego obszaru). Poruszanie palcem w tej części gładzika będzie odpowiednio przesuwać paski przewijania.</p>
-<p>Suwaki po prawej ustawiają przyspieszenie przewijania oraz pionową i poziomą szybkość przewijania.<br />
-Przyspieszenie określa jak szybko przewijana będzie lista przy szybkim przesunięciu palcem po obszarze przewijania. Szybkości przewijania kontrolują ogólną szybkość przewijania przy „normalnym” użytkowaniu obszaru przewijania.</p>
-<p>Below the touchpad graphic are checkboxes to enable <span class="menu">Two finger scrolling</span> for vertical and horizontal scrolling. Move two fingers in parallel vertically or horizontally to move the scrollbars of a window.<br />
-If you feel comfortable using this feature, you can dispense with setting scroll areas and instead use the whole pad for normal navigation.</p>
+<p>To the right are sliders to set the general scroll acceleration and the vertical and horizontal scrolling speed.<br />
+The acceleration setting decides how much quicker a list scrolls by if you swish over the scroll area very fast. The scrolling speeds control the general speed when using the scroll area.</p>
+<p>Below the touchpad graphics are checkboxes:</p>
+<ul>
+<li><p>If you're using single finger scrolling with the above mentioned scrolling areas, activating <span class="menu">Reverse scroll direction</span> will make scrollbars behave like scrolling on a smartphone: you move the finger up to have the contents scroll down.</p></li>
+<li><p><span class="menu">Two finger scrolling</span> enables vertical and optionally also <span class="menu">Horizontal scrolling</span> on supported devices. Moving two fingers in parallel vertically or horizontally to scroll the contents.<br />
+With <span class="menu">Natural scrolling</span>, this works just like on a smartphone. Disable the checkbox and directions reverse.</p></li>
+</ul>
+
+<p><span class="menu">Edge motion</span> controls how the system reacts when your finger hits the edge of the touchpad:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Disabled</span></td><td width="15px"> </td><td>Deactivate edge motion detection. Like with a mouse reaching the edge of the desk, you'll have to lift the finger and move it back to the touchpad center.</td></tr>
+<tr><td class="onelinetop"><span class="menu">On tap-drag only</span></td><td> </td><td>By tap-dragging you can drag a file without using the physical click buttons of the touchpad: You tap a file and, without lifting your finger, start dragging the file around.<br />
+With this setting activated, once your finger reaches an edge of the touchpad, the mouse pointer keeps moving.</td></tr>
+<tr><td class="onelinetop"><span class="menu">When dragging</span></td><td> </td><td>Same as the previous setting, but also works when dragging with the physical click buttons.</td></tr>
+<tr><td><span class="menu">Always</span></td><td> </td><td>This will always continue moving the mouse pointer when your finger hits the touchpad edge, even if you're not dragging anything.</td></tr>
+</table>
+
+<p>With <span class="menu">Finger click</span> active, you can simulate different clicks with your fingers (if your device supports that):</p>
+<ul>
+<li>1 finger = left-click</li>
+<li>2 fingers = right-click</li>
+<li>3 fingers = middle-click</li>
+</ul>
+<p>You can disable the <span class="menu">Software button areas</span> if you're comfortable with those "finger clicks", and get more surface area to use on your touchpad.</p>
+
 <p>Then comes another slider to set the <span class="menu">Tapping sensitivity</span>. If your taps keep getting ignored, increase the sensitivity. If the system registers clicks all the time, while all you want is to move the mouse pointer, try decreasing it.</p>
 <p>Finally, you can set a <span class="menu">Keyboard lock delay</span>. If you accidentally tab your touchpad while typing and thereby move the text insert cursor, try to decrease the lock delay.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">

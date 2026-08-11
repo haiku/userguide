@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -69,6 +69,7 @@
 <tr class="heading"><td>Index</td></tr>
 <tr class="index"><td>
 	<a href="#deskbar-menu">Das Deskbar-Menü</a><br />
+	<a href="#deskbar-menu">Die Deskbar-Einstellungen</a><br />
 	<a href="#tray">Das Tray</a><br />
 	<a href="#list-of-apps">Die Liste der Programme</a>
 </td></tr>
@@ -78,11 +79,11 @@
 
 <p>Die Deskbar wird standardmäßig in der oberen rechten Ecke des Desktops angezeigt. Sie ist praktisch Haikus Version von Windows' "Taskbar" und "Startmenü". Sie besteht aus dem Deskbar-Menü, von dem aus Programme und Einstellungen aufgerufen werden können. Darunter ist ein Infobereich (das "Tray") mit Uhr und Hilfsprogrammen sowie eine Liste der gerade laufenden Programme.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>Die Deskbar kann in jede der vier Ecken oder entlang des oberen oder unteren Randes des Bildschirms verschoben werden. Hierzu muss die gepunktete Linie seitlich vom Tray (siehe Pfeile oben) mit der Maus zur gewünschten Position gezogen werden.<br />
+<p>Die Deskbar kann in jede der vier Ecken oder entlang des oberen oder unteren Randes des Bildschirms verschoben werden. Hierzu muss die gepunktete Linie seitlich vom Tray (siehe Pfeile oben) mit der Maus zur gewünschten Position gezogen werden. In den <a href="#deskbar-prefs">Deskbar-Einstellungen</a> lässt sich das auch bewerkstelligen.<br />
 Man kann die Deskbar auch zu einer kompakten Darstellung zusammenschieben, indem man die gepunktete Linie auf das Deskbar Menü zieht. So ist sie nur so hoch wie ein normaler Fensterreiter, womit Uhr und Icons im Tray auch von maximierten Fenstern nicht verdeckt werden.</p>
 <p>Mit der gepunkteten Linie auf der anderen Seite des Trays, lässt sich die Breite der Deskbar ändern. Dazu zieht man sie mit der Maus nach links oder rechts:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>Eine breitere Deskbar bietet im Tray pro Zeile mehr Platz für Icons. Auch werden die Namen der Anwendungen in der Liste laufender Programme seltener verkürzt, insbesondere wenn größerer Icons verwendet werden.</p>
+<p>Eine breitere Deskbar bietet im Tray pro Zeile mehr Platz für Icons. Auch werden die Namen der Anwendungen in der Liste laufender Programme seltener verkürzt, insbesondere wenn größerer Icons verwendet werden. Die Deskbar lässt sich außerdem wie jedes andere Fenster bei gehaltenen <span class="key">ALT</span> und <span class="key">STRG</span> mit der rechten Maustaste in der Größe ändern.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -102,12 +103,13 @@ Man kann die Deskbar auch zu einer kompakten Darstellung zusammenschieben, indem
 Einträge wie Verküpfungen zu Anwendungen, Dokumenten oder sogar Query-Suchen können hinzugefügt werden, indem man sie im Ordner <span class="path">~/config/settings/deskbar/menu/</span> ablegt.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Deskbar-Einstellungen</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar-Einstellungen</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Das Fenster der Deskbar-Einstellungen ist in drei Abschnitte gegliedert.</p>
 
-<h4>Anwendungen</h4>
+<h3>Anwendungen</h3>
 <p>Folgende Einstellungen betreffen nicht etwa installierte Anwendungen, sondern das Verhalten und das Erscheinungsbild der Liste der gerade laufenden Anwendungen.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Laufende Anwendungen sortieren</span></td><td> </td><td>Ordnet die Liste laufender Programme alphabetisch.</td></tr>
@@ -118,7 +120,7 @@ Einträge wie Verküpfungen zu Anwendungen, Dokumenten oder sogar Query-Suchen k
 <tr><td><span class="menu">Icon-Größe</span></td><td> </td><td>Ändert die Icon-Größe der laufenden Anwendungen.</td></tr>
 </table>
 
-<h4>Menü</h4>
+<h3>Menü</h3>
 <p>Während die ersten paar Menüpunkte der Deskbar unveränderlich sind, lassen sich diejenigen unter <span class="menu">Herunterfahren...</span> anpassen.<br />
 Hier lässt sich die Anzahl der kürzlich geöffneten Dokumente, Ordner und Anwendungen einstellen, die in den entsprechenden Menüs der Deskbar erscheinen.<br />
 <span class="button">Im Tracker  bearbeiten...</span> öffnet den Ordner <span class="path">~/config/settings/deskbar/menu/</span>. Hier befinden sich die Dateien und Ordner aus der Deskbar, standardmäßig <span class="menu"><acronym title="Applications">Anwendungen</acronym></span>, <span class="menu">Demos</span>, <span class="menu"><acronym title="Desktop applets">Desktop-Apps</acronym></span> und <span class="menu"><acronym title="Preferences">Einstellungen</acronym></span>.<br />
@@ -128,8 +130,9 @@ Einträge wie Verküpfungen zu Anwendungen, Dokumenten oder sogar Query-Suchen k
 Man erzeugt eine Verknüpfung vom <span class="path">menu</span> Ordner in <span class="path">~/config/settings/deskbar/</span> und nennt ihn <span class="path">menu_entries</span>. Im Terminal gibt man dafür ein:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Fenster</h4>
+<h3>Fenster</h3>
 <p>Zu guter letzt die Einstellungen für das Deskbar-Fenster:</p>
+<p>Die Position der Deskbar lässt sich durch Ziehen des kleinen schwarzen Rechtecks in der Voransicht ändern: von der Standardpositionen oben rechts in eine andere Ecke, oder als Balken am oberen oder unteren Rand des Bildschirms.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">
 Immer im Vordergrund</span></td><td> </td><td>Die Deskbar bleibt immer im Vordergrund über allen anderen Fenstern.</td></tr>

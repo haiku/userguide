@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -74,14 +74,28 @@
 <p><br /></p>
 <p>Bildschirmfotos können entweder mittels der Taste <span class="key">DRUCK</span> oder durch Start der Anwendung Screenshot geschossen werden.</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>Im Screenshot Fenster kann man sich entscheiden, ob man den gesamten Bildschirminhalt oder nur das aktuelle Fenster aufnehmen will. Es ist auch einstellbar, ob dabei auch der Fensterrahmen oder der Mauszeiger mit aufgenommen werden soll. Außerdem lässt sich eine Verzögerung einstellen, nach der der Screenshot erstellt werden soll.</p>
+<p>Rechts neben der Vorschau kann man ganz oben zwischen verschiedenen Modi und Optionen wechseln:<br />
+Entweder <span class="menu">Ganzer Bildschirm</span>, oder nur  <span class="menu">Aktives Fenster</span> (falls es eins gibt, zum Zeitpunkt der Bildschirmaufnahme). Falls man nur einen Ausschnitt des Bildschirms speichern, klickt man auf <span class="button">Bereich wählen</span> unter der Vorschau (siehe weiter unten). Wurde ein Ausschnitt gewählt, wird der Modus <span class="menu">Ausgewählter Bereich</span> anklickbar und man kann nun zwischen <span class="menu">Ganzer Bildschirm</span>, <span class="menu">Aktives Fenster</span> und <span class="menu">Ausgewählter Bereich</span> wechseln.</p>
+<p>Neben diesen Modi lassen sich Bildschirmfotos mit den Optionen <span class="menu">Inklusive Fensterrahmen</span> und <span class="menu">Inklusive Mauszeiger</span> aufnehmen.</p>
 <p>Darunter kann Name, Format und Speicherort festgelegt werden, mit dem der Screenshot gespeichert wird, wenn auf <span class="button">Speichern</span> geklickt wird. Anstatt eine Datei auf die Platte zu speichern, kann man per <span class="button">In Ablage kopieren</span> auch einfach nur die Ablage benutzen und das Bild von dort direkt in eine andere Anwendung einfügen. <span class="button">Neue Aufnahme</span> schießt ein neues Bildschirmfoto.</p>
 <p>Die folgenden Tastaturkürzel sind möglich, da alle Einstellungen für den nächsten Screenshot beibehalten werden:</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="key">DRUCK</span></td><td style="width:15px;"></td><td>Schießt ein Bildschirmfoto ohne Verzögerung und öffnet das Screenshot Fenster.</td></tr>
 <tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">DRUCK</span></td><td></td><td>Schießt ein Bildschirmfoto "heimlich" (ohne das Screenshot Fenster zu öffnen), aber mit allen beim letzten Mal getroffenen Einstellungen.</td></tr>
 <tr><td><span class="key">STRG</span> <span class="key">DRUCK</span></td><td></td><td>Schießt auch ein "heimliches" Bildschirmfoto mit den letzten Einstellungen, speichert es jedoch nicht ab, sondern kopiert es nur in die Ablage.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">DRUCK</span></td><td></td><td>Schießt ein Bildschirmfoto ohne Verzögerung und wechselt gleich in den "Bereichs-Modus".</td></tr>
 </table>
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+Bereich auswählen</h3>
+<p>Bei einem Klick auf <span class="button">Bereich auswählen</span> wird das Fenster der Screenshot Anwendung ausgeblendet und man sieht den kompletten Bildschirm, leicht abgedunkelt.</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>Nun lässt sich ein Auswahlkasten aufziehen, der den Ausschnitt entsprechend hervorhebt. Macht man das mit der <i>linken</i> Maustaste, wird die Auswahl direkt angewendet sobald man den Finger von der Maustaste nimmt, und das Screenshot Fenster erscheint wieder.</p>
+<p>Erstellt man den Auswahlkasten bei gedrückter <span class="key">SHIFT</span>-Taste oder mit der <i>rechten</i> Maustaste, befinden sich in den Ecken Griffe, mit denen die Größe der Auswahl geändert werden kann. Außerdem lässt sich die Auswahl verschieben.</p>
+<p>Die Auswahl wird per Doppelklick oder mittels <span class="key">RETURN</span> übernommen.<br />
+<span class="key">ESC</span> bricht den Auswahlprozess ab.</p>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 Screenshots aus dem Terminal</h2>
@@ -107,8 +121,11 @@ OPTION
                         [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
   -c, --clipboard       Kopiert den Screenshot in die System-Ablage ohne das
                         Anwendungsfenster zu öffnen
+  -a, --area            Um einen Bereich für die Aufnahme auszuwählen
 
-Achtung: OPTION -b, --border funktioniert nur zusammen mit -w, --window</pre>
+Achtung:
+Option -b, --border funktioniert nur zusammen mit -w, --window
+Option -a, --area funktioniert nicht mit -s, --silent oder -c, --clipboard</pre>
 
 </div>
 </div>

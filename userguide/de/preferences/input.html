@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2008-2023, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -115,11 +115,33 @@
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="touchpad" name="touchpad">Touchpad</a></h3>
 <img src="../images/prefs-images/touchpad.png" alt="touchpad.png" />
-<p>Mit den vertikalen und horizontalen roten Linien der Touchpad Darstellung lässt sich ein Scroll-Bereich definieren (rötlich gefärbt gegenüber der grauen normalen Navigationsfläche). Streicht man mit dem Finger über diesen Teil des Touchpads, bewegen sich die Scrollbalken eines Fensters entsprechend.</p>
+<p>Mit den vertikalen und horizontalen roten Linien der Touchpad-Darstellung lässt sich ein Scroll-Bereich definieren (rötlich gefärbt gegenüber der grauen normalen Navigationsfläche). Streicht man mit dem Finger über diesen Teil des Touchpads, bewegen sich die Scrollbalken eines Fensters entsprechend.</p>
 <p>Mit den Schiebereglern rechts daneben lässt sich die allgemeine Scroll-Beschleunigung und die vertikalen und horizontalen Scroll-Geschwindigkeiten einstellen.<br />
 Je größer die Beschleunigung, desto schneller scrollt eine Liste wenn man den Finger ganz schnell über den Scroll-Bereich bewegt. Die Scroll-Geschwindigkeit bestimmt das Verhalten beim "normal-schnellen" Überstreichen des Bereichs.</p>
-<p>Unter der Touchpad-Grafik lässt sich <span class="menu">Zwei-Finger-Scrollen</span> für horizontales und vertikales Scrollen aktivieren. Bewegt man zwei Finger parallel in der Vertikalen oder Horizontalen, bewegen sich die Scrollbalken eines Fensters entsprechend.<br />
-Wer mit diesem Feature zurecht kommt, der kann auf Scroll-Bereiche verzichten und das gesamte Touchpad zum normalen Navigieren nutzen</p>
+<p>Unter der Touchpad-Grafik befinden sich einige Checkboxen:</p>
+<ul>
+<li><p>Nutzt man Ein-Finger-Scrollen mit den oben beschriebenen Scroll-Bereichen, kann das Verhalten von Scroll-Balken mittels <span class="menu">Scroll-Richtung umkehren</span> so geändert werden, dass sie sich wie bei einem Smartphone verhalten: Bewegt man den Finger nach oben, scrollt der Inhalt nach unten.</p></li>
+<li><p><span class="menu">Zwei-Finger-Scrollen</span> ermöglicht auf unterstützten Geräten vertikales und optional <span class="menu">Horizontales Scrollen</span>: Bewegt man zwei Finger parallel in der Vertikalen oder Horizontalen, bewegen sich die Scrollbalken eines Fensters entsprechend.<br />
+Bei aktiviertem <span class="menu">Natürliches Scrollen</span> funktioniert das wie auf einem Smartphone. Deaktiviert man die Checkbox, kehrt sicht die Scroll-Richtung um.</p></li>
+</ul>
+
+<p>Die Einstellung von <span class="menu">Bewegung Kantenbereich</span> bestimmt das Verhalten wenn der Finger den Rand des Touchpads erreicht:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Deaktiviert</span></td><td width="15px"> </td><td>Deaktiviert die Erkennung von Bewegungen im Randbereich. Kommt man an den Touchpad-Rand, muss man den Finger anheben und zur Mitte des Touchpads bewegen, so wie man das auch mit der Maus machen muss, wenn sie die Tischkante erreicht.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Nur bei Tippen-und-Ziehen</span></td><td> </td><td>Durch Tippen-und-Ziehen lässt sich eine Datei ziehen ohne die physischen Klick-Tasten des Touchpads zu benutzen: Man tippt auf eine Datei und, ohne dabei den Finger anzuheben, beginnt die Datei umherzuziehen.<br />
+Wenn diese Einstellung aktiv ist, bewegt sich der Mauszeiger einfach weiter, wenn der Finger die Touchpad-Kante erreicht.</td></tr>
+<tr><td class="onelinetop"><span class="menu">Beim Ziehen</span></td><td> </td><td>Wie die vorher beschriebene Einstellung, nur dass sich der Mauszeiger auch weiterbewegt wenn die physischen Klick-Tasten benutzt werden.</td></tr>
+<tr><td><span class="menu">Immer</span></td><td> </td><td>Hiermit bewegt sich der Mauszeiger immer weiter wenn der Finger die Touchpad-Kante erreicht, auch wenn gerade gar kein Objekt gezogen wird.</td></tr>
+</table>
+
+<p>Bei aktiviertem <span class="menu">Finger-Klick</span> werden unterschiedliche Klicks simuliert (falls das Gerät das unterstützt):</p>
+<ul>
+<li>1 Finger = Links-Klick</li>
+<li>2 Finger = Rechts-Klick</li>
+<li>3 Finger = Mittel-Klick</li>
+</ul>
+<p>Man kann die <span class="menu">Software Tasten-Bereiche</span> deaktivieren, wenn man mit dem "Finger-Klicks" zurecht kommt. Dann steht der gesamte Touchpad zum normalen Navigieren zur Verfügung.</p>
+
 <p>Es folgt ein Regler zum Einstellen der Empfindlichkeit. Werden Klicks per Antippen immer wieder ignoriert, sollte man die Empfindlichkeit erhöhen. Werden im Gegenteil immer irgendwelche Klicks registriert, obwohl eigentlich nur der Mauszeiger bewegt werden soll, sollte sie verringert werden.</p>
 <p>Der letzte Regler steuert die <span class="menu">Verzögerung der Tastatursperre</span>. Wenn man bei der Texteingabe immer wieder aus Versehen das Touchpad berührt und so die Texteingabemarke verschiebt, lässt sich das mit einer kürzeren Verzögerung verhindern.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">

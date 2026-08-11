@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2021, Haiku. All rights reserved.
+ * Copyright 2009-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -91,9 +91,9 @@
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tools" name="tools">工具</a></h2>
 <p>在安装进程的结尾，目标分区会自动的设置为可启动分区。然而，也有可能发生一些情况，其他的操作系统或者分区工具覆盖了您的Haiku磁卷的引导扇区。遇到这种情况，从您的安装光盘启动，然后打开安装器 。在 <span class="menu">Onto: Please choose target</span> 菜单中选择您的Haiku启动分区，然后从 <span class="menu">Tools</span> 菜单中选择 <span class="menu">Write boot sector</span> 来恢复分区的可引导扇区。</p>
-<p>在 <span class="menu">Tools</span> 菜单中的另一个项目是 <span class="menu">Set up a boot menu</span> ，它用于在启动扇区中建立一个菜单来选择启动的操作系统。更多信息参见主题 <a href="bootmanager.html">启动管理器</a> 。<br />
-如果您已经使用了 GRUB 之类的启动管理器或者Haiku 是机器上唯一的操作系统，就不需要运行  <span class="app">启动管理器</span> ，对于前者您只能手动的在启动管理器中添加 Haiku 启动项（参看上文）。</p>
-
+<p>The next item in the <span class="menu">Tools</span> menu is used to <span class="menu">Set up a boot menu</span> that puts a menu in the boot sector to choose what operating system to boot. See topic <a href="bootmanager.html">BootManager</a> for more information.<br />
+ You don't need to run the <span class="app">BootManager</span> if you already use a bootmanager like GRUB, in which case you have to add Haiku manually (see above), or Haiku runs exclusively on your machine.</p>
+<p>If you use UEFI to boot your system instead of going the BIOS/MBR route, you can use <span class="menu">Install EFI loader</span> to copy the EFI loader from the boot/install medium to your prepared partition that you select from the submenu. That EFI system partition needs to be FAT32-formatted on a GPT-initialized disk with enough free space.</p>
 
 </div>
 </div>

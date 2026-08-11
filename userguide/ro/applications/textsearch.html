@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -73,6 +73,7 @@
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
 <p>You enter a search string in the text box on top and hit <span class="key">ENTER</span> or click <span class="button">Search</span> to start. If <span class="menu">Show lines</span> is checked, the hits are automatically expanded to show the lines of the file containing the search string.</p>
+<p>By using the <span class="menu">File filter</span>, you can further limit the search to files with a certain name. "<tt>*</tt>" is used as wildcard, as examples "<tt>*Window.cpp</tt>" will only search in files ending in "Window.cpp", "<tt>*.h</tt>" only searches in header files.</p>
 
 <p>Only a few words on some of the otherwise self-explaining menu items:</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
@@ -85,13 +86,16 @@
 <tr><td><span class="menu">Open selection</span></td><td></td><td><span class="key">ALT</span> <span class="key">O</span></td><td></td><td>Opens the currently selected files with their preferred application (same as a double-click). If it's a text editor supporting it (like Pe), you can jump to the exact line the search string was found.</td></tr>
 <tr><td><span class="menu">Show files in Tracker</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>Opens the location of the currently selected files in Tracker.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Copy text to clipboard</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>Copies the current selection to the clipboard.</td></tr>
+<tr><td colspan="5"><p>These actions are also available from a context menu when right-clicking a result or a selection of results.</p></td></tr>
 <tr><td colspan="5"><h3>Meniu configurări</h3></td></tr>
 <tr><td colspan="3" class="onelinetop"><span class="menu">Skip folders starting with a dot</span></td><td> </td><td>This is useful when working in a "unixy" environment, where often administrative files are hidden inside "<tt>.folders/</tt>". Source versioning systems like SVN and CVS are examples of applications using this and are also widely used in Haiku.</td></tr>
-<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
+<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="https://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
 <tr><td colspan="3"><span class="menu">Doar fișiere text</span></td><td> </td><td>TextSearch is currently only useful for finding strings in plain text files. Deactivating this setting will have it look through any kind of file anyway.</td></tr>
 <tr><td colspan="3"><span class="menu">Open files in code editor</span></td><td> </td><td>Forces files to be opened in the preferred code editor (that handles text/x-source-code). Otherwise a file will be opened in whatever app is set for its filetype. Useful, for example, when editing HTML files that normally would open in your browser.</td></tr>
 <tr><td colspan="5"><h3>Meniu istoric</h3></td></tr>
-<tr><td colspan="4"></td><td>Conține șiruri de căutat recent utilizate.</td></tr>
+<tr><td colspan="4"></td><td>Contains recently used search strings. <span class="menu">Clean history</span> empties the list of previous search terms.
+<div class="box-info">You can quickly move up and down the search history by pressing <span class="key">↑</span> and <span class="key">↓</span> while the cursor is in the search text field.</div> 
+</td></tr>
 <tr><td colspan="5"><h3>Meniu codare</h3></td></tr>
 <tr><td colspan="4"></td><td>Vă permite să alegeți codări de caracter diferite dacă este necesar.</td></tr>
 </table>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Hakemisto</td></tr>
@@ -74,9 +75,9 @@
 <tr><td>Työpöytäpalkki:</td><td style="width:15px;"></td><td><span class="menu">Sovellukset</span></td></tr>
 <tr><td>Sijainti:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
 <tr><td>Asetukset:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
-<span class="path">~/config/settings/Mail/Menu Links/</span> - Tähän laitetut objektit näkyvät sähköpostiohjelman asiayhteysvalikossa<br />
-<span class="path">~/config/settings/Mail/signatures/</span> - Allekirjoitusten tallennuspaikka<br />
-<span class="path">~/config/settings/Mail/status/</span> - Omien tilojen tallennuspaikka</td></tr>
+<span class="path">~/config/settings/Mail/Menu Links/</span> - Objects put here appear in the mailbox' context menu<br />
+<span class="path">~/config/settings/Mail/signatures/</span> - Location to store signatures<br />
+<span class="path">~/config/settings/Mail/labels/</span> - Location to store custom labels</td></tr>
 </table>
 <p><br /></p>
 <p>Sähköposti on Haikun sähköpostiviestien oletuskatselin ja -muokkain. Sillä ei ole mitään tekemistä itse sähköpostiviestien noutamisen ja lähettämisen kanssa, minkä tekee mail_daemon-taustaprosessi ja se voidaan asettaa <a href="../preferences/e-mail.html">Sähköpostiasetukset</a>-ohjelmalla.</p>
@@ -91,7 +92,8 @@
 <p>Useimmat valikon ja työkalupalkin kohdat ovat itsestäänselittäviä, joten keskitymme vain huippukohtiin.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Tiedosto</h3>
-<p>Kun suljet uuden sähköpostiviestin ikkunan, sen tila vaihtuu normaalisti "Uudesta" "Luetuksi". Mutta voit asettaa myös tiloja valitsemalla tilan alivalikosta <span class="menu">Sulje ja...</span>. Sieltä löydät myös valitsimen <span class="menu">Aseta tilaan...</span>, mikä luo sinun omia tilojas, jotka tallennetaan hakemistoon <span class="path">~/config/settings/Mail/status/</span>.</p>
+<p>When you close the window of a new mail, its status is normally switched from "New" to "Read". From the <span class="menu">Close and</span> submenu, though, you can choose to <span class="menu">Leave as 'New'</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">W</span>) or <span class="menu">Move to Trash</span> instead.</p>
+<p>With <span class="menu">Set label</span> you can assign a custom label that is saved under <span class="path">~/config/settings/Mail/labels/</span>.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Muokkaa</h3>
 <p>Tästä löydät kohdan valikon <span class="menu">Asetukset...</span> (<a href="#preferences">katso alla</a>) avaamiseksi ja pikanäppäimen, jolla hallinnoit valikkokohtaa <span class="menu">Tilit...</span>, joka avaa <a href="../preferences/e-mail.html">Sähköpostiasetukset</a>-paneelin.</p>
@@ -112,11 +114,13 @@
 </table>
 <div class="box-info">Jos merkitset jakson sähköpostiviestistä ennen vastaamista siihen, merkkitty teksti lainataan vastaussähköpostiviestiisi. Kiva tapa supistaa ylimääräistä lainaamista, mitä aika moni paheksuu...</div>
 <p>Valinnat <span class="menu">Lähetä edelleen</span>, <span class="menu">Lähetä uudelleen</span> and <span class="menu">Kopioi uuteen</span> ovat taas aika itsestään selittäviä.</p>
-<p>Kun olet avannut sähköpostin Seuraajasta tai kyselytulosikkunasta, <span class="menu">Edellinen viesti</span> ja <span class="menu">Seuraava viesti</span> siirtävät edelliseen tai seuraavaan viestiin luettelossa.</p>
+<p>When you've opened an email from a Tracker or query result window, <span class="menu">Previous message</span> and <span class="menu">Next message</span> (<span class="key">ALT</span> <span class="key">↑</span>/<span class="key">↓</span>) will move to the previous/next email in the list. In the <a href="#preferences">Mail settings</a> you can configure if the status of the current "New" email's status is set to "Read" automatically when moving to the previous/next email.<br />
+If you hold <span class="key">SHIFT</span> while going to the previous/next email, the status of the current email is kept. This is also works when using the up/down-arrow icons in the toolbar to move through your emails.</p>
+<p>A bit related to browsing through your emails using <span class="menu">Previous message</span> and <span class="menu">Next message</span>: If you invoke <span class="menu">Move to Trash</span>, the current email is trashed and the <i>next</i> message gets opened. If you hold <span class="key">SHIFT</span> though, the <i>previous</i> email is opened instead. Useful, if you sort your emails newest-first, open the oldest and move up from there and deleting emails on your way.</p>
 <p><span class="menu">Tallenna osoite</span> kerää kaikki sähköpostiosoitteet otsakkeesta ja todellisesta sähköpostiviestin rungosta alivalikossa. Osoitteen valitseminen avaa <a href="people.html">Ihmiset</a>-sovelluksen, jossa voit täydentää ja tallentaa yhteystietoja.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Kyselyt</h3>
-<p>Tässä valikossa näkyy kyselyt, jotka näyttävät kaikki parhaillaan avoimena olevaan sähköpostiviestiin liittyvät sähköpostiviestit. Valinta <span class="menu">Sama vastaanottaja</span>, <span class="menu">Sama lähettäjä</span> tai <span class="menu">Sama aihe</span> avaa kyselyn, joka luettelee kaikki vastaavat sähköpostiviestit:</p>
+<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span>, <span class="menu">Same subject</span> or <span class="menu">Same label</span> opens a query that lists all corresponding mails:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2>
@@ -125,8 +129,8 @@
 <p>Uusi sähköpostiviesti luodaan kutsumalla <span class="menu">Uusi sähköpostiviesti</span>-valikkoriviä <span class="menu">Tiedosto</span>-valikosta tai vastaavaa kuvaketta avoimen sähköpostiviestin työkalupalkista. Tai voit käynnistää Sähköposti-sovelluksen tai valita <span class="menu">Luo uusi viesti...</span> Työpöytäpalkin sähköpostikuvakkeen asiayhteysvalikosta.</p>
 <img src="../images/apps-images/mail-write.png" alt="email-write.png" /> 
 <p>Ikkuna on melko samanlainen kuin se, jossa luetaan sähköpostia. Valikko ja työkalupalkki on lievästi erilainen ja teksti-ikkunat on täytetty tietysti vastaanottajien sähköpostiosoitteilla, aiheella ja niin edelleen.</p>
-<p><span class="menu">Kopio</span>-valikossa on luettelo sähköpostiviestin kopion vastaanottajista "<i>carbon copy</i>". Erona "Vastaanottaja"-kenttään on, että Kopio-luettelossa olevien vastaanottajien ei odoteta vastaavan viestiin.<br />
-<span class="menu">Piilokopio</span>-tarkoittaa viestikopiota, joka ei näy muille vastaanottajille, vaan piilottaa "Kopio"-vastaanottajat toisiltaan.</p>
+<p><span class="menu">Cc</span> is short for the anachronistic term "<i>carbon copy</i>" and results in copies of your mail being sent to the listed people. The difference to just listing a bunch of addresses in the "To" field is, that you don't directly address the cc'ed people, thereby signaling that you probably don't expect an answer of them.<br />
+<span class="menu">Bcc</span> means "<i>blind carbon copy</i>" which does practically the same as "Cc", but hides the recipients from each other.</p>
 <p>Voit kirjoittaa useita vastaanottajia erottelemalla vastaanottajat pilkulla.
 <span class="menu">Vastaanottaja</span>, <span class="menu">Kopio</span>, ja <span class="menu">Piilokopio</span> ovat ponnahdusvalikkoja. Ne sisältävät kaikki sähköpostiosoitteet, jotka sinun järjestelmässäsi löytyvät <a href="people.html">Ihmiset</a>-tiedostojen kyselyllä. Niiden "Ryhmä"-attribuutti lajittelee ne vastaaviin alivalkioihin.</p>
 <p>Keskitymme taas valikkojen mielenkiintoisimpiin ominaisuuksiin.</p>
@@ -157,7 +161,7 @@ Sellaisen sanan avaaminen hiiren kakkospainikkeella avaa asiayhteysvalikon, joka
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Kyselyt</h3>
-<p>Sähköposteja luettaessa tämä valikko sisältää kyselyt, jotka näyttävät kaikki parhaillaan avoinna olevaan sähköpostiviestiin liittyvät sähköpostiviestit. Valitsemalla <span class="menu">Sama vastaanottaja</span>, <span class="menu">Sama lähettäjä</span> tai <span class="menu">Sama aihe</span> avataan kysely, joka luettelee kaikki täsmäävät sähköpostiviestit.</p>
+<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.  You can't query for <span class="menu">Same label</span>, because while composing, there's no actual email file stored where a label-attribute could be added. The email has to be sent first.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

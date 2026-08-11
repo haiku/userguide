@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,15 +63,16 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Índice</td></tr>
 <tr class="index"><td>
-	<a href="#mailsystem">Sistema de correo de Haiku</a><br />
-	<a href="#status">Usando estados personalizados</a><br />
-	<a href="#queries">Haciendo uso de consultas</a><br />
-	<a href="#tips">Más recomendaciones</a>
+	<a href="#mailsystem">Haiku's mail system</a><br />
+	<a href="#labels">Using labels</a><br />
+	<a href="#queries">Using queries</a><br />
+	<a href="#tips">More tips</a>
 </td></tr>
 </table>
 
@@ -102,14 +103,18 @@ Además, las mejoras que existan en cualquiera de estas áreas del sistema será
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="status" name="status">Usando estados personalizados</a></h2>
+<a id="labels" name="labels">Using labels</a></h2>
 <p>Cuando revise sus mensajes recién llegados, podría querer regresar a ver algunos de ellos con más cuidado más tarde. Si bien podría usar <span class="menu">Cerrar y | Dejar como Nuevo</span> del menú de Mail para conservarlos en su consulta de "<i>Mensajes nuevos</i>", las cosas se pueden amontonar así…</p>
 <p>Una solución es iniciar un mensaje de respuesta y guardarlo como borrador. Pero si no espera escribir una respuesta, y sólo quiere volver a leer el mensaje más tarde, hacer eso no es idóneo.</p>
-<img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>En un caso así, es mejor usar <span class="menu">Cerra y  | Establecer como…</span> para crear un nuevo estado y usar eso para categorizar su correo. Por ejemplo, podría llamar el estado "<i>Más tarde</i>", y luego hacer una consulta por ello cuando tenga más tiempo.<br />
-También podría usar diferentes estados para diferentes proyectos. Por ejemplo, puede crear un estado "<i>GUH</i>" (para la "Guía de Usuario de Haiku") donde se puede recopilar todos los correos que pueden influir sobre el contenido de la guía de usuario, como los mensajes de actualización sobre cambios en el código que cambian o añaden una nueva función o cualquier otra cosa que sienta que pueda mejorar la guía.<br />
-En cualquier caso, intente conservar el nombre de estado corto. De esa manera, siempre podrá caber en una columna "Estado" en el Tracker.</p>
-<p>No es necesario abrir un mensaje con la aplicación <span class="app">Mail</span> para establecer su estado. Con los complementos del Tracker <span class="app">Marcar como leído</span> y <span class="app">Marcar como…</span> puede seleccionar algunos archivos de correo y establecer su estado sobre la marcha.</p>
+<img src="images/workshop-email-images/labels.png" alt="labels.png" /> 
+<p>Better use <span class="menu">Set label</span> to create a new label with <span class="menu">Label as…</span> or choose an existing label to categorize your mail. For example, you could call the label "<i>Later</i>", and then query for that when you find more time.<br />
+Or you use different labels for specific projects. For example, I created a label "<i>HUG</i>" (for "Haiku user guide") under which I collect every mail that may influence the contents of the user guide, like commit messages about code changes that alter or introduce some feature or anything else I feel could improve the user guide.<br />
+In any case, try to keep the label name short. That way it always fits in a normally wide "Label" column in Tracker.</p>
+<p>Once you've dealt with the email, you can use <span class="menu">Remove label</span> to clear the email's label attribute.</p>
+<p>Labels are saved in <span class="path">~/config/settings/Mail/labels</span>, which is opened when you choose <span class="menu">Manage labels…</span>. Here you can add, delete or rename your labels. Conveniently, each label file is also a query, meaning you can doubleclick it to start a query for emails with that label. Handy to check first before deleting a label that you think you don't need anymore.</p>
+<p>You don't have to open an email with the <span class="app">Mail</span> application to set its label. With the Tracker add-ons <span class="app">Label as… </span> you can select some email files and set or remove their label in one go.</p>
+<div class="box-info">BeOS - and Haiku for a long time - misused the email status attribute <tt>MAIL:status</tt> for labeling mails. If you used such custom statuses, it's recommended you migrate them to the label attribute <tt>MAIL:label</tt>.
+</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -117,13 +122,14 @@ En cualquier caso, intente conservar el nombre de estado corto. De esa manera, s
 <p>Al tener una carpeta especificada para almacenar todos sus correos, la puede abrir, y ¡listo! ahí está su correo. Sin embargo, con el tiempo la carpeta se vuelve poblada y podría tomar más y más tiempo mostrar todos los mensajes, con miles de archivos y sus atributos que deben ser analizados y ordenados. Además, generalmente no estará interesado en mensajes de hace 2 años sobre príncipes nigerianos y sus problemas de herencias…</p>
 <div class="box-info">Cuando se está poblando una carpeta para mostrarla en pantalla, mucho del tiempo es empleado en poner los archivos leídos desde el disco en el orden correcto de clasificación. En caso que deba abrir una carpeta con una cantidad inmensa de archivos, puede acortar la espera escondiendo la ventana del Tracker, como por ejemplo, minimizándola o poniéndola en otro espacio de trabajo. Puede observar el <a href="desktop-applets/processcontroller.html">ProcessController</a> para ver cómo afecta el uso del CPU.</div>
 <p>¡<a href="queries.html">Consultas</a> al rescate!</p>
-<p>Al hacer uso de la consultas, puede limitar la vista de sus correos. De hecho, el ícono del buzón de entrada en la Barra de Escritorio usa consultas.</p>
+<p>By using queries, you can narrow down the view of your mails. Actually, the mailbox icon in the Deskbar uses queries. Right-click the icon to open its context menu:</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
 <p>El submenú <span class="menu">Abrir Borrador</span> hace una consulta del estado "<i>Draft</i>" (Borrador), que es establecido por <span class="app">Mail</span> cuando guarda un mensaje.</p>
 <p><span class="menu">Abrir Carpeta de Bandeja de Entrada</span> y <span class="menu">Abrir Carpeta de Correo</span> son solamente vínculos a carpetas regulares.</p>
 <p>El submenú <span class="menu"># nuevos mensajes</span> es populado por una consulta de correo con el estado "<i>New</i>" (nuevo), esa misma consulta se utiliza para cambiar el ícono del buzón de correo para mostrar cartas en él.</p>
 
-<p>Puede añadir sus propias consultas (o carpetas, aplicaciones, scripts, etc.) a ese menú contextual, poniendoles o vínculos a ellos en <span class="path">~/config/settings/Mail/Menu Links</span>.</p>
+<p>You can add your own queries (or folders, applications, scripts etc.) to that context menu too, by putting them or links to them into <span class="path">~/config/settings/Mail/Menu Links</span>. In the screenshot above, for example, the label folder <span class="path">~/config/settings/Mail/labels</span> was linked there, to have quick access to labeled emails from the the mailbox icon of the Deskbar.</p>
+
 <div class="box-info">La consulta <span class="path">~/config/settings/Mail/mailbox</span> es un caso especial: es ejecutada cuando se hace clic izquierdo sobre el buzón de correo en la Barra de Escritorio. Si quiere cambiar ese comportamiento, puede remplazarlo con cualquier otro archivo (o acceso directo a un archivo), solamente debe nombrarlo "<i>mailbox</i>". No es necesario que sea una consulta, un acceso directo a una carpeta de consultas o un script o una aplicación también funciona bien.</div>
 
 <h3>
@@ -134,7 +140,7 @@ En cualquier caso, intente conservar el nombre de estado corto. De esa manera, s
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /></td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /></td></tr>
 
-<tr align="center"><td>Esta encuentra todos los correos con el estado personalizado "<i>Después</i>" (Later).</td>
+<tr align="center"><td>This finds all mails with the label "<i>Later</i>".</td>
 <td>Este encuentra todos los mensajes de los últimos 2 días.</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /></td>
@@ -150,7 +156,8 @@ En cualquier caso, intente conservar el nombre de estado corto. De esa manera, s
 <ul>
 <li><p>Si guarda una consulta como "<i>Plantilla de consulta</i>" (Query template) en vez de  "<i>Consulta</i>" (Query), cuando la invoque no verá la ventana con resultados, si no la ventana de Buscar… De esa manera puede intercambiar fácilmente la cadena de búsqueda por la del asunto o el remitente, por ejemplo, o cambiar el límite de tiempo de "<i>2 días</i>" a "<i>3 días</i>".</p></li>
 <li><p>Si activa el "filtro de tecleo anticipado" (type-ahead filtering) en las <a href="tracker.html#tracker-preferences">Preferencias del Tracker</a>, eso le permitirá filtrar el resultado de una consulta aún más rapidamente. A menudo es suficiente hacer una consulta por todos los correos de los últimos 3 días y luego seguir con el filtrado de tecleo anticipado a partir de ahí. La gran ventaja es que no necesita especificar exactamente cuál atributo debe buscar, pues todos los atributos mostrados son considerados cuando se está filtrando.</p></li>
-<!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
+<li><p>When you're managing your emails via queries - and why wouldn't you? - you should configure a <i>DefaultQueryTemplate</i> that shows all the email attributes you normally want to see in a query result window, like <i>Status</i>, <i>From</i>, <i>Subject</i>, <i>When</i>.<br />
+First, you create a folder <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates/text_x-email</span>. Then do one of your usual email queries and change the displayed attributes and window size and position of the result window to your liking. Now simply <span class="menu">Copy layout</span> from its <span class="menu">Attributes</span> menu, open the newly created <span class="path">text_x-email</span> folder, and <span class="menu">Paste layout</span> there.</p></li>
 </ul>
 
 </div>

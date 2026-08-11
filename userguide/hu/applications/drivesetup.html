@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Az oldal fordítása még folyamatban van. Amíg tart a fordítás, addig a lefordítatlan részek angolul jelennek meg.</div>
 
 <h2><img src="../../images/apps-images/drivesetup-icon_64.png" alt="drivesetup-icon_64.png" width="64" height="64" />Lemezkezelő (DriveSetup)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -86,7 +87,7 @@ Az ismert merevlemez, CD, USB, stb. jelölésein túl néhány ikon jelzi a leme
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
 <td>Csak olvashatóként csatolt partíció</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>Csatolt képfájl (lásd még: <a href="./cli-apps.html">diskimage</a> parancs)</td></tr>
+<td>Csatolt képfájl (lásd még lejjebb: <a href="#diskimages">Lemez-képek</a>)</td></tr>
 </table>
 <p>Csatolt partíciók esetében színes sáv jelzi a használt terület mértékét. A szín a partíció típusától függően lehet:</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
@@ -114,12 +115,22 @@ Az ismert merevlemez, CD, USB, stb. jelölésein túl néhány ikon jelzi a leme
 <p>Mielőtt használni szeretnénk az újonnan létrehozott partíciót, előtte formázni kell egy adott fájlrendszerre.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">Partíció formázása</a></h2>
+<a id="formatting" name="formatting">Partíció formázása</a></h2>
 <p>Csak leválasztott partíciókat lehet előkészíteni a <span class="menu">Partíció | Formázás</span> menü használatával. Egy <span class="menu">Be File System</span> (BFS) feltétlen szükséges a Haiku indításához illetve bármely partíciónál, amin a Haiku adatokat tárol. Kizárólag a BFS partíciók nyújtanak a Haiku számára lehetőséget a lekérdezésekhez illetve a jellemzők kezeléséhez.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>Most meg kell adnia a partíció nevét és a blokk-méretét. 2048 bájt blokkonként ajánlott, de ezen kívül kisebb és nagyobb méretet is választhatunk a felhasználástól függően.<br />
 Ha nem szeretnénk lekérdezéseket futtatni a későbbiekben, akkor ajánlott a <span class="menu">Lekérdezéstámogatás engedélyezése</span> jelölést kikapcsolni, így ezzel némi gyorsulást tapasztalhatunk majd a későbbiekben.</p>
 <div class="box-stop">A formázás minden adatot töröl a partícióról!</div>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="diskimages" name="diskimages">Lemez-képek</a></h2>
+<p>The menu <span class="menu">Disk image…</span> provides several actions related to image files of disks/partitions.</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="4">
+<tr><td class="onelinetop"><span class="menu">Un/Register disk image…</span></td><td width="20px"></td><td>Registering makes an image file available to the system; it appears as a regular volume you can mount, edit or copy files to/from it, format etc. See also the <a href="./cli-apps.html">diskimage command</a>.</td></tr>
+<tr><td><span class="menu">Save image…</span></td><td></td><td>Saves the currently selected partition as an image file. The resulting file will have the same size as the partition, so make sure the destination of the file has enough free space.</td></tr>
+<tr><td><span class="menu">Write image…</span></td><td></td><td>Lets you write an image file to the selected partition/volume.
+<div class="box-stop" _translation_id="6113">Writing an image will destroy all data on the partition/volume!</div></td></tr>
+</table>
 </div>
 </div>
 

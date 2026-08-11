@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -68,9 +68,10 @@
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Innehåll</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Deskbar's meny</a><br />
-	<a href="#tray">Verktygsfältet</a><br />
-	<a href="#list-of-apps">Listan över aktiva program</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -78,11 +79,11 @@
 
 <p>Deskbar är den lilla panelen som som standard är placerad i det övre högra hörnet på skärmen. Det är Haiku's version av Windows aktivitetsfält med startknappen. Deskbar innehåller en meny från vilken du kan starta program och inställningar, ett verktygsfält med en klocka och längst ner en lista över de program som är aktiva.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>Du kan flytta Deskbar till vilket hörn som helst, eller placera det som en list överst eller underst på Skrivbordet. Du flyttar Deskbar genom att greppa vid den knottriga fältet bredvid verktygsfältet och sedan dra och släppa Deskbar på dess nya position.<br />
-Du kan också fälla ihop Deskbar till en mer kompakt utformning genom att dra det knottriga fältet och släppa det på Deskbar's meny. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
+You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>By gripping the other knobbly widget of the tray, you can change the width of the Deskbar by dragging the mouse left or right:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -101,12 +102,13 @@ Du kan också fälla ihop Deskbar till en mer kompakt utformning genom att dra d
 <li><p><b>Applications, Demos, Deskbar applets, Preferences</b> - List of installed applications, demos, applets and preferences.<br />You can add links to other programs (or any folder, document, query etc.) by putting them into <span class="path">~/config/settings/deskbar/menu/</span>.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Deskbar's inställningar</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>The Deskbar preference panel is divided into three sections.</p>
 
-<h4>Program</h4>
+<h3>Program</h3>
 <p>The following settings don't apply to your installed applications, but to the behavior and visuals of the list of running applications.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Sortera aktiva program</span></td><td> </td><td>Sorterar listan över aktiva program i alfabetisk ordning.</td></tr>
@@ -117,7 +119,7 @@ Du kan också fälla ihop Deskbar till en mer kompakt utformning genom att dra d
 <tr><td><span class="menu">Icon size</span></td><td> </td><td>Adjusts the icon size of running applications. </td></tr>
 </table>
 
-<h4>Meny</h4>
+<h3>Meny</h3>
 <p><p><b>Meny</b><br />
 Här kan du ange hur många senaste dokument, appar och program som skall visas i Deskbar's meny, eller om du inte vill se dom över huvud taget.<br />
 Knappen <span class="button">Redigera meny...</span> öppnar mappen <span class="path">~/config/settings/deskbar/menu/</span>. I den hittar du filerna och mapparna som syns i Deskbar; <span class="menu">Program</span>, <span class="menu">Exempelprogram</span>, <span class="menu">Skrivbordsprogram</span>, och <span class="menu">Inställningar</span>.<br />
@@ -128,8 +130,9 @@ Du kan ta bort eller lägga till länkar till program, dokument eller till och m
 You create a link of the <span class="path">menu</span> folder in <span class="path">~/config/settings/deskbar/</span> and rename to <span class="path">menu_entries</span>. From Terminal that is achieved with:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Fönster</h4>
+<h3>Fönster</h3>
 <p>Finally, the preferences for the Deskbar window.</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Alltid överst</span></td><td> </td><td>Deskbar håller sig alltid högst upp bland alla andra fönster.</td></tr>
 <tr><td><span class="menu">Höj vid närkontakt</span></td><td> </td><td>Höjer upp Deskbar när musen är ovanför.</td></tr>

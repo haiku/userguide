@@ -16,7 +16,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="robots" content="all" />
-	<title>BootManager</title>
+	<title>Starthanterare</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="../../Haiku-doc.css" />
 </head>
@@ -63,50 +63,49 @@
 <div>
 <div class="box-info">Översättningen av denna sida är inte komplett. Delar av innehållet kommer därför att visas på engelska.</div>
 
-<h2><img src="../../images/apps-images/bootmanager-icon_64.png" alt="bootmanager-icon_64.png" width="64" height="64" />BootManager</h2>
+<h2><img src="../../images/apps-images/bootmanager-icon_64.png" alt="bootmanager-icon_64.png" width="64" height="64" />StartHanterare</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Deskbar:</td><td style="width:15px;"></td><td><i>No entry, normally started from Installer's <span class="menu">Tools</span> menu</i></td></tr>
+<tr><td>Deskbar:</td><td style="width:15px;"></td><td><i>Ingen inloggning, vanligtvis startad från Installatörens <span class="menu">Verktyg</span>meny</i></td></tr>
 <tr><td>Position:</td><td></td><td><span class="path">/boot/system/apps/BootManager</span></td></tr>
-<tr><td>Inställningar:</td><td></td><td><i>none</i><br />MBR backups are saved by default in <span class="path">~/config/settings/bootman/</span></td></tr>
+<tr><td>Inställningar:</td><td></td><td><i>ingen</i><br />MBR-säkerhetskopior är sparad som defaultvärde i <span class="path">~/config/settings/bootman/</span></td></tr>
 </table>
 <p><br /></p>
-<p>If you don't add the Haiku partition to an existing boot manager like GRUB, BootManager can install a small boot menu in the Master Boot Record (MBR) that looks something like this:</p>
+<p>Om man inte lägger till Haikus partition i en befintlig starthanterare som GRUB, kan Haiku StartHanterare installera ett litet starthanteringmeny i MBR-blocket som ser ut så här:</p>
 <img src="../images/apps-images/bootmenu.png" alt="bootmenu.png" />
-<div class="box-info">BootManager isn't yet tested very well and still has a few restrictions that it will complain about if they aren't met: the menu can only be installed on your first harddisk and there has to be a 2KiB space after the Master Boot Record (MBR).</div>
-<p>BootManager guides you through the installation process of the boot menu.</p>
+<div class="box-info">StartHanterare har fortfarande behov att förbättras och kan vara restriktiv. Den kan bara installeras på din första hårddisk och det måste finnas en tolv kibibytes stor utrymme efter Master Boot Record (MBR).</div>
+<p>StartHanterare leder dig genom installationsprocessen för bootmenyn.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a name="1-drives" id="1-drives">Choosing the destination drive</a></h2>
+<a name="1-drives" id="1-drives">Välj destinationhårddisk</a></h2>
 <img src="../images/apps-images/bootmanager-1.png" alt="bootmanager-1.png" />
-<p>The BootManager starts off with a list of all available drives from which you choose the destination. If there's already a boot menu on that drive, the <span class="button">Uninstall</span> button becomes active, leading you through the simple procedure to restore a formerly backed-up MBR, thereby removing the boot menu. Otherwise, choose <span class="button">Install</span> to continue.</p>
+<p>Starthanteraren börjar med en lista över alla tillgängliga hårddiskar från vilka du väljer destinationen. Om det redan finns en starthantering meny på den valda hårddisken becomes <span class="button">Avinstallera</span>-knappen aktiverad, och leder dig genom en enkel procedur för att återställa den förrådda MBR, vilket innebär att du kan ta bort starthantering menyn. Annars väljer du <span class="button">Installera</span> för att fortsätta.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="2-backup" id="2-backup">Backing up the Master Boot Record (MBR)</a></h2>
-<p>In case anything goes wrong or you want to remove the boot menu again, the Master Boot Record (MBR) is now saved. This is obviously a very important step, make sure you don't accidentally overwrite some other MBR-backup maybe from some earlier experimentation, for example!</p>
+<p>Ifall någonting går fel eller du vill ta bort starthantering menyn igen, är den Master Boot Record (MBR) nu sparad. Detta är tydligt en viktig steg, se till att du inte oavsiktligvis överkräser någon annan MBR-säkerhetskopia, till exempel från tidigare experiment!</p>
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
-<p>Just select a destination for the backup file "<tt>MBR</tt>" or leave the default path. After clicking <span class="button">Next</span> you'll get a confirmation if the backup was successful.</p>
+<p>Välj en destination för säkerhetskopiafilen "<tt>MBR</tt>". Om du vill kan du lämna fältet tomt och välja standardvägen. När du klickar på knappen <span class="button">Next</span> kommer du att få bekräftelse om om säkerhetskopian är framgångsrik.</p>
 <div class="box-info">Be aware that the "<span class="path">/boot</span>" in that path is the install media (e.g. USB stick). Makes sense if something goes wrong and you need to revert immediately. For a long term backup, you should save the MBR on your new Haiku disk as well, because likely as not, you've already formatted and used your install USB stick for other things in the meantime...</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">Configuring the boot menu</a></h2>
 <img src="../images/apps-images/bootmanager-4.png" alt="bootmanager-4.png" /> 
 <img src="../images/apps-images/bootmanager-5.png" alt="bootmanager-5.png" />
-<p>Next you're presented with a list of all partitions on the destination drive. By setting checkmarks you decide what entries will appear in the boot menu, the text boxes allow you to rename an entry.</p>
+<p>Nästa är du presenterad med en lista över alla partitioner på destinationhårddisken. Med hjälp av kontroller kan du bestämma vilka ingåenden som ska visas i starthantering menyn, och textfälten tillåter dig att ändra namn på en inläggs.</p>
 <p>After that, you pick from the pop-up menu which partition will be booted from by default and set a timeout with the slider below. Here, "<i>Immediately</i>" will skip the boot menu entirely, "<i>Never</i>" will just stop at the boot menu. You can override the timeout setting by holding <span class="key">ALT</span> while booting.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a name="4-mbr" id="4-mbr">Writing the boot menu</a></h2>
+<a name="4-mbr" id="4-mbr">Skriva in starthantering menyn.</a></h2>
 <img src="../images/apps-images/bootmanager-6.png" alt="bootmanager-6.png" /> 
 <img src="../images/apps-images/bootmanager-7.png" alt="bootmanager-7.png" />
 <p>Before the boot menu is written to the MBR, you'll get a summary of your configuration and then one last chance to abort the operation. Don't worry though, as long as you keep the MBR backup safe, you can easily revert the changes. Should things get thoroughly messed up, you can always boot from a Haiku install CD or USB stick and write back the MBR backup with BootManager.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="4-mbr" id="4-mbr">Restoring the backup of the Master Boot Record (MBR)</a></h2>
-<p>It's currently not possible to uninstall the boot menu with the BootManager application. There is a workaround however: You can use the <span class="cli">dd</span> command in Terminal to restore the backup of the MBR.</p>
-<div class="box-warning"><span class="cli">dd</span> can be a very destructive tool.<br />
-Be very careful and check especially the device path parameter!</div>
-<p>The <span class="cli">dd</span> commandline is something like this:</p>
+<p>Det är för närvarande inte möjligt att avinstallera starthantering menyn med StartHanterare applikationen. En workaround emellertid är att använda kommandot <span class="cli">dd</span> i Terminal för att återställa den bevarade kopian av MBR.</p>
+<div class="box-warning">Kommandot <span class="cli">dd</span> kan vara ett allmänt skadlig verktyg. Se alltid till med försiktighet och kontrollera särskilt det enhetsvägerhänvisning (device path) som inmatas!</div>
+<p>Kommandot <span class="cli">dd</span> är typiskt sett så här:</p>
 <pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
 <p>The input parameter ("<tt>if</tt>") is the path to the backup of the MBR.<br />
 The output parameter (<tt>"of"</tt>) is the path to the raw disk the MBR will be written to. You find all devices and their paths in the <a href="drivesetup.html">DriveSetup</a> application.</p>

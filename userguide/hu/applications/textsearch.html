@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -75,6 +75,7 @@
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
 <p>Szöveget kereshetsz a beviteli mezőbe írva, és a <span class="key">RETURN</span>-t lenyomod, vagy ha a <span class="button">Keresés</span> gombra kattintasz. Ha a <span class="menu">Sorok megjelenítése</span> be van jelölve, akkor a találatok automatikusan kibontásra kerülnek a listában.</p>
+<p>By using the <span class="menu">File filter</span>, you can further limit the search to files with a certain name. "<tt>*</tt>" is used as wildcard, as examples "<tt>*Window.cpp</tt>" will only search in files ending in "Window.cpp", "<tt>*.h</tt>" only searches in header files.</p>
 
 <p>Néhány szó az egyébként egyértelmű menüről:</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
@@ -87,13 +88,16 @@
 <tr><td><span class="menu">Kijelölés megnyitása</span></td><td></td><td><span class="key">ALT</span> <span class="key">O</span></td><td></td><td>A kijelölt fájl megnyitása a hozzá társított programmal (ugyan úgy, mint dupla-kattintásskor). Ha egy szövegszerkesztő (például a Pe) lehetőséget nyújt rá, akkor megnyitáskor a program automatikusan arra a sorra ugrik a fájlban, ahol megtalálta a keresett szöveget.</td></tr>
 <tr><td><span class="menu">Fájlok megjelenítése a Nyomkövetőben</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>A kijelölt fájl megnyitása a Nyomkövetőben.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Szöveg másolása a vágólapra</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>A jelenleg kijelölt szöveget a vágólapra másolja.</td></tr>
+<tr><td colspan="5"><p>These actions are also available from a context menu when right-clicking a result or a selection of results.</p></td></tr>
 <tr><td colspan="5"><h3>Beállítások menü</h3></td></tr>
 <tr><td colspan="3" class="onelinetop"><span class="menu">Ponttal kezdődő mappák átugrása</span></td><td> </td><td>Ez akkor lehet hasznos, ha "unix-szerű" környezetben dolgozunk, ahol gyakran a fontos fájlok egy rejtett mappában (<tt>.mappa/</tt>) találhatóak. A forráskód-kezelő rendszerek, mint például az SVN és CVS, és a Haiku esetén is találkozhatunk ilyennel.</td></tr>
-<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
+<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="https://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
 <tr><td colspan="3"><span class="menu">Csak szövegfájlokban</span></td><td> </td><td>Jelenleg a program csak a szöveges fájlokban való kereséskor hatékony. Ez az opció kikapcsolása esetén a program az összes típusú fájlban fog keresést végezni.</td></tr>
 <tr><td colspan="3"><span class="menu">Open files in code editor</span></td><td> </td><td>Forces files to be opened in the preferred code editor (that handles text/x-source-code). Otherwise a file will be opened in whatever app is set for its filetype. Useful, for example, when editing HTML files that normally would open in your browser.</td></tr>
 <tr><td colspan="5"><h3>Előzmények menü</h3></td></tr>
-<tr><td colspan="4"></td><td>Ez előzőleg használt keresési beállítások.</td></tr>
+<tr><td colspan="4"></td><td>Contains recently used search strings. <span class="menu">Clean history</span> empties the list of previous search terms.
+<div class="box-info">You can quickly move up and down the search history by pressing <span class="key">↑</span> and <span class="key">↓</span> while the cursor is in the search text field.</div> 
+</td></tr>
 <tr><td colspan="5"><h3>Kódolás menü</h3></td></tr>
 <tr><td colspan="4"></td><td>Szükség esetén választhatunk különféle karakter-kódolások közt.</td></tr>
 </table>

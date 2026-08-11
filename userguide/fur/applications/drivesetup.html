@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <h2><img src="../../images/apps-images/drivesetup-icon_64.png" alt="drivesetup-icon_64.png" width="64" height="64" />Gjestion disc</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -86,7 +87,7 @@ Di là di dutis lis iconis familiârs pai discs fis, unitâts CD e clavutis USB 
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
 <td>Une partizion montade in dome-leture</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>Un file di imagjin montât (viôt ancje il <a href="./cli-apps.html">comant diskimage</a>)</td></tr>
+<td>A mounted image file (see <a href="#diskimages">Disk images</a> below)</td></tr>
 </table>
 <p>Cuant che si à montât (une partizion/file imagjin/...), une sbare colorade e mostre il spazi doprât di une partizion. Il colôr al dipent dal gjenar di partizion:</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
@@ -114,12 +115,22 @@ Di là di dutis lis iconis familiârs pai discs fis, unitâts CD e clavutis USB 
 <p>Prime di podêle doprâ o ancje montâ, la partizion apene creade e à di jessi formatade cuntun filesystem.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">Formatâ une partizion</a></h2>
+<a id="formatting" name="formatting">Formatting a partition</a></h2>
 <p>Dome lis partizions dismontadis a puedin jessi formatadis, par fâlu si sielç un filesystem dal sot-menù di <span class="menu">Partizion | Formât</span>. Il <span class="menu">Be File System</span> (BFS) al è obligatori par une partizion di inviament di Haiku e conseât pes partizions di dâts che a àn di jessi dopradis cun Haiku. Dome lis partizions formatadis in BFS a puedin jessi interogadis e supuartâ dal dut i atribûts dai file di Haiku.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>Chi tu stabilissis il non pe partizion e la sô dimension dai blocs. La dimension dal bloc al è il spazi minim in byte che un file al ocuparà. 2048 byte par bloc a son conseâts, ma tu puedis sielzi dimensions plui grandis o piçulis se tu âs chestis necessitâts.<br />
 Se i dâts che tu metarâs te partizion no varan bisugne de interogazion, tu puedis gjavâ la crosute di <span class="menu">Abilite supuart pes interogazions</span> par sparagnâ un pôc di lavôr tal gjestî la tabele. </p>
 <div class="box-stop">Il formatâ ti disfarà ducj i dâts te partizion!</div>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="diskimages" name="diskimages">Disk images</a></h2>
+<p>The menu <span class="menu">Disk image…</span> provides several actions related to image files of disks/partitions.</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="4">
+<tr><td class="onelinetop"><span class="menu">Un/Register disk image…</span></td><td width="20px"></td><td>Registering makes an image file available to the system; it appears as a regular volume you can mount, edit or copy files to/from it, format etc. See also the <a href="./cli-apps.html">diskimage command</a>.</td></tr>
+<tr><td><span class="menu">Save image…</span></td><td></td><td>Saves the currently selected partition as an image file. The resulting file will have the same size as the partition, so make sure the destination of the file has enough free space.</td></tr>
+<tr><td><span class="menu">Write image…</span></td><td></td><td>Lets you write an image file to the selected partition/volume.
+<div class="box-stop" _translation_id="6113">Writing an image will destroy all data on the partition/volume!</div></td></tr>
+</table>
 </div>
 </div>
 

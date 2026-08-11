@@ -4,14 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Зміст</td></tr>
@@ -75,9 +76,9 @@
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications (Програми)</span></td></tr>
 <tr><td>Розташування:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
 <tr><td>Налаштування:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
-<span class="path">~/config/settings/Mail/Menu Links/</span> – Розміщені тут об’єкти з’являються у контекстному меню поштової скриньки<br />
-<span class="path">~/config/settings/Mail/signatures/</span> – Місце для зберігання підписів.<br />
-<span class="path">~/config/settings/Mail/status/</span> – Місце для зберігання статусів, які визначив користувач.</td></tr>
+<span class="path">~/config/settings/Mail/Menu Links/</span> - Objects put here appear in the mailbox' context menu<br />
+<span class="path">~/config/settings/Mail/signatures/</span> - Location to store signatures<br />
+<span class="path">~/config/settings/Mail/labels/</span> - Location to store custom labels</td></tr>
 </table>
 <p><br /></p>
 <p>Mail (Пошта) – це засіб перегляду та редактор електронних поштових повідомлень, який використовується системою Haiku за замовчуванням. Програма не має нічого спільного з власне отриманням та відправкою електронної пошти, які виконує mail_daemon, процес конфігурації якого описаний у розділі <a href="../preferences/e-mail.html">E‑mail (E‑пошта)</a>.</p>
@@ -93,7 +94,8 @@
 <p>Більшість пунктів меню та панелі інструментів є досить зрозумілими, тому ми зосередимося лише на основних моментах.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Файл</h3>
-<p>Коли Ви закриваєте вікно нового вхідного повідомлення, його статус зазвичай змінюється з «Нове» на «Прочитане». Але Ви можете встановити й інші статуси, вибравши статус у підменю <span class="menu">Закрити і…</span>. У цьому підменю Ви знайдете пункт <span class="menu">Встановити статус як…</span> для створення своїх власних статусів, які зберігаються в <span class="path">~/config/settings/Mail/status/</span>.</p>
+<p>When you close the window of a new mail, its status is normally switched from "New" to "Read". From the <span class="menu">Close and</span> submenu, though, you can choose to <span class="menu">Leave as 'New'</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">W</span>) or <span class="menu">Move to Trash</span> instead.</p>
+<p>With <span class="menu">Set label</span> you can assign a custom label that is saved under <span class="path">~/config/settings/Mail/labels/</span>.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Редагувати</h3>
 <p>У цьому меню Ви знайдете пункт, який відкриває <span class="menu">Налаштування…</span> поштової програми (<a href="#preferences">дивіться нижче</a>) та пункт <span class="menu">Облікові записи…</span>, який відкриває панель налаштувань <a href="../preferences/e-mail.html">E-mail</a> для управління Вашими акаунтами.</p>
@@ -114,11 +116,13 @@
 </table>
 <div class="box-info">Якщо виділити фрагмент листа перед тим, як відповісти на нього, у листі-відповіді буде процитовано лише виділений текст. Гарний спосіб скоротити надмірне вживання цитат, яке майже всі не схвалюють…</div>
 <p>Пункти меню <span class="menu">Переслати</span>, <span class="menu">Відіслати повторно</span> та <span class="menu">Копіювати до нового</span> знову ж таки не потребують пояснень.</p>
-<p>Коли Ви відкриваєте лист з вікна Tracker або з вікна результатів запиту, Ви зможете переходити від одного повідомлення до іншого використовуючи пункти меню <span class="menu">Попереднє повідомлення</span> і <span class="menu">Наступне повідомлення</span>.</p>
+<p>When you've opened an email from a Tracker or query result window, <span class="menu">Previous message</span> and <span class="menu">Next message</span> (<span class="key">ALT</span> <span class="key">↑</span>/<span class="key">↓</span>) will move to the previous/next email in the list. In the <a href="#preferences">Mail settings</a> you can configure if the status of the current "New" email's status is set to "Read" automatically when moving to the previous/next email.<br />
+If you hold <span class="key">SHIFT</span> while going to the previous/next email, the status of the current email is kept. This is also works when using the up/down-arrow icons in the toolbar to move through your emails.</p>
+<p>A bit related to browsing through your emails using <span class="menu">Previous message</span> and <span class="menu">Next message</span>: If you invoke <span class="menu">Move to Trash</span>, the current email is trashed and the <i>next</i> message gets opened. If you hold <span class="key">SHIFT</span> though, the <i>previous</i> email is opened instead. Useful, if you sort your emails newest-first, open the oldest and move up from there and deleting emails on your way.</p>
 <p>Пункт меню <span class="menu">Зберегти адресу</span> збирає всі адреси електронної пошти з заголовка і власне тексту листа у підменю. Вибравши у цьому підменю адресу, Ви відкриєте програму <a href="people.html">People (Контакти)</a>, щоб заповнити і зберегти контактну інформацію.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Запити</h3>
-<p>Це меню містить запити, які показують усі листи, пов'язані з поточним відкритим листом. Вибираючи пункти <span class="menu">Той самий отримувач</span>, <span class="menu">Той самий відправник</span> або <span class="menu">Та сама тема</span>, Ви отримаєте запити, які покажуть усі відповідні листи:</p>
+<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span>, <span class="menu">Same subject</span> or <span class="menu">Same label</span> opens a query that lists all corresponding mails:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2>
@@ -127,8 +131,8 @@
 <p>Нове поштове повідомлення створюється за допомогою команди <span class="menu">Нове повідомлення</span> меню <span class="menu">Файл</span> або відповідного значка на панелі інструментів відкритого листа. Або просто запустіть програму Пошта або виберіть пункт <span class="menu">Створити нове повідомлення…</span> у контекстному меню значка поштової скриньки на панелі задач Deskbar.</p>
 <img src="../images/apps-images/mail-write.png" alt="email-write.png" /> 
 <p>Вікно дуже схоже на те, що Ви бачите при читанні пошти. Пункти меню та елементи панелі інструментів дещо відрізняються, а текстові поля потрібно заповнити адресою електронної пошти одержувача, темою листа тощо.</p>
-<p><span class="menu">Cc</span> – це скорочення від анахронічного терміну «<i>carbon copy</i>», що означає, що копії Вашого листа будуть надіслані переліченим особам. Відмінність від простого переліку адрес у полі «Кому» полягає у тому, що Ви не звертаєтеся безпосередньо до людей, яким надсилаєте копії, тим самим сигналізуючи, що Ви, ймовірно, не очікуєте від них відповіді.<br />
-<span class="menu">Bcc</span> означає «<i>blind carbon copy</i>» , це практично те саме, що й «Cc», тільки одержувачі не бачать адреси один одного.</p>
+<p><span class="menu">Cc</span> is short for the anachronistic term "<i>carbon copy</i>" and results in copies of your mail being sent to the listed people. The difference to just listing a bunch of addresses in the "To" field is, that you don't directly address the cc'ed people, thereby signaling that you probably don't expect an answer of them.<br />
+<span class="menu">Bcc</span> means "<i>blind carbon copy</i>" which does practically the same as "Cc", but hides the recipients from each other.</p>
 <p>Ви можете ввести кілька одержувачів, розділяючи їхні адреси комою.
 <span class="menu">Кому</span>, <span class="menu">CC</span> і <span class="menu">BCC</span> – це списки, які розкриваються. Вони містять усі адреси електронної пошти у Вашій системі, знайдені за запитом до файлів <a href="people.html">Контакти</a>. Атрибут «Group» контактів сортує їх у відповідних підменю.</p>
 <p>Знову ж таки, ми зосередимося на найцікавіших функціях меню.</p>
@@ -159,7 +163,7 @@
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Запити</h3>
-<p>Як і при читанні листів, це меню містить запити, які показують усі листи, пов'язані з листом, який Ви зараз пишете. Вибираючи пункти <span class="menu">Той самий отримувач</span>, <span class="menu">Той самий відправник</span> або <span class="menu">Та сама тема</span>, Ви отримаєте запити, які покажуть усі відповідні листи.</p>
+<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.  You can't query for <span class="menu">Same label</span>, because while composing, there's no actual email file stored where a label-attribute could be added. The email has to be sent first.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

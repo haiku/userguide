@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -75,6 +75,7 @@
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
 <p>Entrez la chaîne à rechercher dans la zone de texte en haut, puis pressez <span Class="key">ENTRÉE</span> ou cliquez sur <span class="button">Search</span>(Rechercher) pour démarrer la recherche. Si <span class="menu">Show lines</span>(Afficher les lignes) est coché, les résultats sont automatiquement développés pour afficher les lignes du fichier contenant la chaîne de recherche.</p>
+<p>By using the <span class="menu">File filter</span>, you can further limit the search to files with a certain name. "<tt>*</tt>" is used as wildcard, as examples "<tt>*Window.cpp</tt>" will only search in files ending in "Window.cpp", "<tt>*.h</tt>" only searches in header files.</p>
 
 <p>Juste quelques mots sur les éléments de menu les moins évidents :</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
@@ -86,13 +87,16 @@
 <tr><td><span class="menu">Open selection</span></td><td></td><td><span class="key">Alt</span> <span class="key">O</span></td><td></td><td>Ouvre les fichiers sélectionnés avec leurs applications préférées (comme avec un double-clic). Si c'est un éditeur de texte qui le supporte (comme Pe), vous pouvez passer à la ligne exacte où la chaîne a été trouvé.</td></tr>
 <tr><td><span class="menu">Show files in Tracker</span></td><td></td><td><span class="key">CMD</span> <span class="key">K</span></td><td></td><td>Ouvre l'emplacement des fichiers sélectionnés dans Tracker.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Copy text to clipboard</span></td><td></td><td><span class="key">CMD</span> <span class="key">C</span></td><td></td><td>Copie la sélection actuelle dans le presse papier.</td></tr>
+<tr><td colspan="5"><p>These actions are also available from a context menu when right-clicking a result or a selection of results.</p></td></tr>
 <tr><td colspan="5"><h3>Le menu Réglage (Settings)</h3></td></tr>
 <tr><td colspan="3" class="onelinetop"><span class="menu">Skip folders starting with a dot</span></td><td> </td><td>C'est utile lorsque vous travaillez dans un environnement « à la Unix », où, souvent, les fichiers d'administration sont cachés à l'intérieur de « <tt>.dossiers/</tt> ». Par exemples, les systèmes de gestion de versions de sources comme SVN et CVS, qui sont largement utilisés dans le Haiku, utilisent cela.</td></tr>
-<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
+<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="https://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
 <tr><td colspan="3"><span class="menu">Text files only</span></td><td> </td><td>TextSearch n'est actuellement utile que pour trouver des chaînes dans les fichiers de texte brut. En désactivant ce paramètre, tous les types de fichiers seront examinées.</td></tr>
 <tr><td colspan="3"><span class="menu">Open files in code editor</span></td><td> </td><td>Forces files to be opened in the preferred code editor (that handles text/x-source-code). Otherwise a file will be opened in whatever app is set for its filetype. Useful, for example, when editing HTML files that normally would open in your browser.</td></tr>
 <tr><td colspan="5"><h3>Le menu Historique (History)</h3></td></tr>
-<tr><td colspan="4"></td><td>Contient les chaînes recherchées récemment.</td></tr>
+<tr><td colspan="4"></td><td>Contains recently used search strings. <span class="menu">Clean history</span> empties the list of previous search terms.
+<div class="box-info">You can quickly move up and down the search history by pressing <span class="key">↑</span> and <span class="key">↓</span> while the cursor is in the search text field.</div> 
+</td></tr>
 <tr><td colspan="5"><h3>Le  menu Encodage (Encoding)</h3></td></tr>
 <tr><td colspan="4"></td><td>Vous permet de choisir un jeu de caractères différents, si nécessaire.</td></tr>
 </table>

@@ -4,11 +4,12 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2023, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Daniel Marth
+ *		Diver
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Fabio Tomat
@@ -65,10 +66,10 @@
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />Liste di dutis lis aplicazions a rie di comant</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Posizion:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
+<tr><td>Posizion:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">/boot/system/non-packaged/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
 </table>
 <p><br /></p>
-<p>Dutis lis aplicazions a rie di comant dadis cun Haiku a stan in <span class="path">/boot/system/bin/</span>. Lis tôs personâls aplicazions adizionâls a rie di comant a vignaran fûr in <span class="path">~/config/bin/</span> se instaladis di un pachet .hpkg. In câs contrari tu âs di metilis in <span class="path">~/config/non-packaged/bin/</span>. Dutis chestis posizions a son part de variabile PATH e duncje a vegnin cjatadis in automatic.<br />
+<p>Dutis lis aplicazions a rie di comant dadis cun Haiku a stan in <span class="path">/boot/system/bin/</span>. Lis aplicazions a rie di comant instaladis di prionte a chês za tal sisteme a vignaran fûr lì se instaladis di un pachet .hpkg (o in <span class="path">~/config/bin/</span> se instaladis te jerarchie di home). In câs contrari tu âs di metilis in <span class="path">~/config/non-packaged/bin/</span>. Dutis chestis posizions a fasin part de variabile PATH e duncje a vegnin cjatadis in automatic.<br />
 Chi e je une liste di dutis lis aplicazions a rie di comant che a vegnin dadis cun Haiku. Ogniune cuntune curte descrizion su ce che e fâs, par vê informazions plui detaiadis su la lôr utilizazion eseguìs il comant cul parametri <tt>--help</tt>.</p>
 <p><br /></p>
 <p>Tabele:   <a href="#A">A – E</a>   ::   <a href="#F"> F – J </a>   ::   <a href="#K"> K – O </a>   ::   <a href="#P"> P – S </a>   ::   <a href="#T"> T – Z </a></p>
@@ -81,6 +82,7 @@ Chi e je une liste di dutis lis aplicazions a rie di comant che a vegnin dadis c
 <tr><td><tt>addattr</tt></td><td> </td><td>Al scrîf un atribût suntun file, tignint cont dal gjenar e convertint i valôrs di conseguence. <a href="cli-apps.html">(Specific par Haiku)</a></td></tr>
 <tr><td><tt>alert</tt></td><td> </td><td>Al mostre un messaç intun ricuadri. <a href="cli-apps.html">(Specific par Haiku)</a></td></tr>
 <tr><td><tt>arp</tt></td><td> </td><td>Al manipole la cache ARP di sisteme. </td></tr>
+<tr><td><tt>autologin</tt></td><td> </td><td>Al ative la funzionalitât di acès automatic.</td></tr>
 <tr><td><tt>awk</tt></td><td> </td><td>Viôt <tt>gawk</tt>.</td></tr>
 <tr><td><tt>base64</tt></td><td> </td><td>Codifiche e decodifiche in Base64 sul standard output. </td></tr>
 <tr><td><tt>basename</tt></td><td> </td><td>Al gjave vie la cartele e in maniere opzionâl i sufìs di une stringhe /percors/a/non_di_file.</td></tr>
@@ -94,6 +96,7 @@ Chi e je une liste di dutis lis aplicazions a rie di comant che a vegnin dadis c
 <tr><td><tt>cat</tt></td><td> </td><td>Al concatene i files e al stampe sul standard output. </td></tr>
 <tr><td><tt>catattr</tt></td><td> </td><td>Al stampe fûr i contignûts di un atribût di un file. <a href="cli-apps.html">(Specific par Haiku)</a></td></tr>
 <tr><td><tt>cc</tt></td><td> </td><td>Compiladôr par C.</td></tr>
+<tr><td><tt>cddb_lookup</tt></td><td> </td><td>Al fâs ricercjis CDDB (Compact Disc Database).</td></tr>
 <tr><td><tt>checkfs</tt></td><td> </td><td>Al controle e al comede il filesystem. <a href="cli-apps.html">(Specific par Haiku)</a></td></tr>
 <tr><td><tt>checkitout</tt></td><td> </td><td>Al controle lis sorzints semplicementri cul lôr URL dal dipuesit.</td></tr>
 <tr><td><tt>chgrp</tt></td><td> </td><td>Al cambie la apartignince al grup dai files. </td></tr>
@@ -155,6 +158,9 @@ Chi e je une liste di dutis lis aplicazions a rie di comant che a vegnin dadis c
 <tr><td><tt>gawk</tt></td><td> </td><td>Lengaç pe scansion e elaborazion di modei. </td></tr>
 <tr><td><tt>getarch</tt></td><td> </td><td>Al mostre la version dal compiladôr dal ambient. </td></tr>
 <tr><td><tt>grep</tt></td><td> </td><td>Ricercje un motîf.</td></tr>
+<tr><td><tt>groupadd</tt></td><td> </td><td>Al zonte un gnûf grup al sisteme.</td></tr>
+<tr><td><tt>groupdel</tt></td><td> </td><td>Al elimine un grup dal sisteme.</td></tr>
+<tr><td><tt>groupmod</tt></td><td> </td><td>Al modifiche lis impostazions dal grup.</td></tr>
 <tr><td><tt>groups</tt></td><td> </td><td>Al stampe la apartignince ai grups par ogni non utent. </td></tr>
 <tr><td><tt>gunzip</tt></td><td> </td><td>Viôt <tt>gzip</tt>.</td></tr>
 <tr><td><tt>gzexe</tt></td><td> </td><td>Al de/comprim i eseguibii. </td></tr>
@@ -163,6 +169,7 @@ Chi e je une liste di dutis lis aplicazions a rie di comant che a vegnin dadis c
 <tr><td><tt>head</tt></td><td> </td><td>Al stampe lis primis riis di un file.</td></tr>
 <tr><td><tt>hey</tt></td><td> </td><td>Un piçul strument par fâ scripts di aplicazions a interface grafiche.</td></tr>
 <tr><td><tt>hostname</tt></td><td> </td><td>Al stampe o al stabilìs il non dal host dal sisteme. </td></tr>
+<tr><td><tt>i2c</tt></td><td> </td><td>Al interagjìs cui dispositîfs I2C.</td></tr>
 <tr><td><tt>id</tt></td><td> </td><td>Al stampe lis informazions su utent e grup. </td></tr>
 <tr><td><tt>ifconfig</tt></td><td> </td><td>Al configure une interface di rêt.</td></tr>
 <tr><td><tt>install</tt></td><td> </td><td>Al copie i files suntune destinazion cence disfâ il sisteme in esecuzion.</td></tr>
@@ -186,6 +193,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>listarea</tt></td><td> </td><td>Al liste informazions di aree par ducj i teams in esecuzion in  chest moment. </td></tr>
 <tr><td><tt>listattr</tt></td><td> </td><td>A liste i atribûts di un file. <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
 <tr><td><tt>listdev</tt></td><td> </td><td>Al liste ducj i dispositîfs hardware.</td></tr>
+<tr><td><tt>listfont</tt></td><td> </td><td>Al liste i caratars instalâts.</td></tr>
 <tr><td><tt>listimage</tt></td><td> </td><td>Al liste informazions di imagjin par ducj i teams in esecuzion in chest moment.</td></tr>
 <tr><td><tt>listport</tt></td><td> </td><td>Al liste dutis lis puartis viertis tal sisteme organizadis par team</td></tr>
 <tr><td><tt>listres</tt></td><td> </td><td>Al liste lis risorsis dai files.</td></tr>
@@ -199,6 +207,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>logname</tt></td><td> </td><td>Al stampe il non dal utent corint.</td></tr>
 <tr><td><tt>ls</tt></td><td> </td><td>Al liste il contignût de cartele.</td></tr>
 <tr><td><tt>lsindex</tt></td><td> </td><td>Al visualize i atribûts metûts te tabele sul volum /partizion atuâl.  <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
+<tr><td><tt>mail</tt></td><td> </td><td>Un comant par mandâ e-mails.</td></tr>
 <tr><td><tt>mail2mbox</tt></td><td> </td><td>Al convertìs i files des e-mail di BeOS in files "mailbox" di Unix. </td></tr>
 <tr><td><tt>make</tt></td><td> </td><td>Utilitât GNU make.</td></tr>
 <tr><td><tt>makebootable</tt></td><td> </td><td>Al rint inviabile la partizion/dispositîf BFS specificade, scrivint il codiç di inviament intai prins doi setôrs.</td></tr>
@@ -224,6 +233,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>netstat</tt></td><td> </td><td>Al stampe lis conessions di rêt, lis tabelis di indreçament, lis statistichis des interfacis, lis conessions de mascarade e la apartignince al multicast.</td></tr>
 <tr><td><tt>nl</tt></td><td> </td><td>Al stampe ogni file cu contâts i numar di rie.</td></tr>
 <tr><td><tt>nohup</tt></td><td> </td><td>Al eseguìs un comant ignorant i segnâi par tornâ a gançâ. </td></tr>
+<tr><td><tt>notify</tt></td><td> </td><td>Al mande notifichis.  <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
 <tr><td><tt>nproc</tt></td><td> </td><td>Al stampe il numar di unitâts di elaborazion disponibilis.</td></tr>
 <tr><td><tt>od</tt></td><td> </td><td>Al scrîf une rapresentazion univoche di un file.</td></tr>
 <tr><td><tt>open</tt></td><td> </td><td>Al invie une aplicazion/document partint de shell. <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
@@ -235,6 +245,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>patch</tt></td><td> </td><td>Al apliche un file diff a un origjinâl.</td></tr>
 <tr><td><tt>pathchk</tt></td><td> </td><td>Al fâs une diagnosi dai nons di files no valits o che no si puedin (im/es)puartâ.</td></tr>
 <tr><td><tt>pc</tt></td><td> </td><td>La calcoladorie dai programadôrs.</td></tr>
+<tr><td><tt>pidof</tt></td><td> </td><td>Al cjate l'ID dal procès di un program in esecuzion.</td></tr>
 <tr><td><tt>ping</tt></td><td> </td><td>Al invie richiestis-eco-ICMP a un host di rêt.</td></tr>
 <tr><td><tt>pkgman</tt></td><td> </td><td>Al gjestìs pachets e dipuesits di pachets.</td></tr>
 <tr><td><tt>pr</tt></td><td> </td><td>Al impagjine o al incolone i files pe stampe. </td></tr>
@@ -246,6 +257,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>ptx</tt></td><td> </td><td>Al torne une tabele permutade, includût il contest, des peraulis che a son tai files di input.</td></tr>
 <tr><td><tt>pwd</tt></td><td> </td><td>Al stampe la cartele atuâl.</td></tr>
 <tr><td><tt>query</tt></td><td> </td><td>Une utilitât de shell che e emule la funzionalitât "Cjate par formule" di Tracker.  <a href="cli-apps.html">(Specific par Haiku)</a></td></tr>
+<tr><td><tt>quicktour</tt></td><td> </td><td>Al vierç la vuide rapide di Haiku.</td></tr>
 <tr><td><tt>quit</tt></td><td> </td><td>Al jes di une aplicazion.</td></tr>
 <tr><td><tt>ramdisk</tt></td><td> </td><td>Al cree un disc in ram. <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
 <tr><td><tt>rc</tt></td><td> </td><td>Compiladôr di risorsis.</td></tr>
@@ -254,6 +266,8 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>reindex</tt></td><td> </td><td>Al met i atribûts dai files esistents intune gnove tabele creade. <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
 <tr><td><tt>release</tt></td><td> </td><td>Al mole un semafar. </td></tr>
 <tr><td><tt>renice</tt></td><td> </td><td>Al altere la prioritât di un procès in esecuzion.</td></tr>
+<tr><td><tt>resattr</tt></td><td> </td><td>Al gjestìs i atribûts des risorsis dai files.</td></tr>
+<tr><td><tt>resizefs</tt></td><td> </td><td>Al ridimensione un filesystem.</td></tr>
 <tr><td><tt>rm</tt></td><td> </td><td>Al gjave files e cartelis.</td></tr>
 <tr><td><tt>rmattr</tt></td><td> </td><td>Al gjave un atribût di un file.  <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
 <tr><td><tt>rmdir</tt></td><td> </td><td>Al gjave cartelis.</td></tr>
@@ -262,10 +276,13 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>route</tt></td><td> </td><td>Al liste e al manipole i instradaments di rêt.</td></tr>
 <tr><td><tt>safemode</tt></td><td> </td><td>Al controle se il sisteme al è in esecuzion in modalitât sigure. </td></tr>
 <tr><td><tt>screen_blanker</tt></td><td> </td><td>Al fâs partî il scuriment dal visôr.</td></tr>
+<tr><td><tt>screeninfo</tt></td><td> </td><td>Al mostre informazions sul schermi.</td></tr>
 <tr><td><tt>screenmode</tt></td><td> </td><td>Al mostre/stabilìs la modalitât dal schermi. <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
+<tr><td><tt>screenshot</tt></td><td> </td><td>Al cature une schermade.</td></tr>
 <tr><td><tt>sdiff</tt></td><td> </td><td>Al mostre o al unìs lis diferencis di doi files, un dongje di chel altri.</td></tr>
 <tr><td><tt>seq</tt></td><td> </td><td>Al stampe une secuence di numars.</td></tr>
 <tr><td><tt>setarch</tt></td><td> </td><td>Al configure l'ambient a une specifiche version di compiladôr.</td></tr>
+<tr><td><tt>setcontrollook</tt></td><td> </td><td>Al configure il "control look" (aspiet) pe interface grafiche.</td></tr>
 <tr><td><tt>setdecor</tt></td><td> </td><td>Al mostre/stabilìs il decoradôr. </td></tr>
 <tr><td><tt>settype</tt></td><td> </td><td>Al configure il gjenar MIME, la firme e la aplicazion preferide di un file. </td></tr>
 <tr><td><tt>setversion</tt></td><td> </td><td>Al mostre la version di un file.</td></tr>
@@ -288,6 +305,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>sum</tt></td><td> </td><td>Al stampe la sume di control e la conte dai blocs par ogni file.</td></tr>
 <tr><td><tt>sync</tt></td><td> </td><td>Al sfuarce i blocs cambiâts sul disc, al inzorne il super-bloc. </td></tr>
 <tr><td><tt>sysinfo</tt></td><td> </td><td>Al mostre lis informazions di sisteme.</td></tr>
+<tr><td><tt>system_time</tt></td><td> </td><td>Al visualize lis informazions su la ore di sisteme.</td></tr>
 <tr><td colspan="3"><a id="T" name="T"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>T - Z</h2></a></td></tr>
 <tr><td><tt>tac</tt></td><td> </td><td>Al concatene e al stampe files, l'ultime rie par prime.</td></tr>
 <tr><td><tt>tail</tt></td><td> </td><td>Al stampe lis ultimis dîs riis di un file.</td></tr>
@@ -316,6 +334,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>unlink</tt></td><td> </td><td>Al clame la funzion unlink par gjavâ il file specificât.</td></tr>
 <tr><td><tt>unmount</tt></td><td> </td><td>Al dismonte un volum.</td></tr>
 <tr><td><tt>unrar</tt></td><td> </td><td>Al espant un archivi rar.</td></tr>
+<tr><td><tt>userdel</tt></td><td> </td><td>Al elimine un utent dal sisteme.</td></tr>
 <tr><td><tt>unshar</tt></td><td> </td><td>Al espant un archivi shar.</td></tr>
 <tr><td><tt>untrash</tt></td><td> </td><td>Viôt <tt>trash</tt>. </td></tr>
 <tr><td><tt>unzip</tt></td><td> </td><td>Al espant un archivi zip.</td></tr>
@@ -324,6 +343,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>uptime</tt></td><td> </td><td>Al stampe date e ore e ancje il timp passât di cuant che il sisteme al è stât inviât.</td></tr>
 <tr><td><tt>urlwrapper</tt></td><td> </td><td>Al fâs sù i gjenars MIME dai URLs su la rie di comant o su altris aplicazions che no ju gjestìs in maniere direte.</td></tr>
 <tr><td><tt>useradd</tt></td><td> </td><td>Al cree un gnûf utent.</td></tr>
+<tr><td><tt>userguide</tt></td><td> </td><td>Al vierç la vuide utent par Haiku.</td></tr>
 <tr><td><tt>uudecode</tt></td><td> </td><td>Al decodifiche un file codificât cun uuencode.</td></tr>
 <tr><td><tt>uuencode</tt></td><td> </td><td>Al codifiche, cu la codifiche uuencode, un file in mût di podêlu inviâ vie mail a un sisteme lontan. </td></tr>
 <tr><td><tt>vdir</tt></td><td> </td><td>Al liste lis informazions sui files.</td></tr>
@@ -332,9 +352,12 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>waitfor</tt></td><td> </td><td>Al spiete fintremai che un ciert thread al ven fûr. <a href="cli-apps.html">(specific par Haiku)</a></td></tr>
 <tr><td><tt>watch</tt></td><td> </td><td>Al eseguìs un program in maniere periodiche.</td></tr>
 <tr><td><tt>wc</tt></td><td> </td><td>Al stampe il numar di paragrafs, peraulis e caratars (bytes) di un file.</td></tr>
+<tr><td><tt>welcome</tt></td><td> </td><td>Al vierç la pagjine di Benvignût di Haiku.</td></tr>
 <tr><td><tt>wget</tt></td><td> </td><td>Strument par discjariâ vie HTTP, HTTPS o FTP.</td></tr>
 <tr><td><tt>which</tt></td><td> </td><td>Al localize un comant.</td></tr>
 <tr><td><tt>whoami</tt></td><td> </td><td>Al stampe il non utent associât cul efetîf ID utent atuâl.</td></tr>
+<tr><td><tt>WindowShade</tt></td><td> </td><td>Modifiche i colôrs predefinîts dal decoradôr dai barcons.</td></tr>
+<tr><td><tt>writembr</tt></td><td> </td><td>Al scrîf un master boot record (MBR) suntun dispositîf.</td></tr>
 <tr><td><tt>xargs</tt></td><td> </td><td>Al costruìs e al eseguìs riis di comant dal standard input.</td></tr>
 <tr><td><tt>xres</tt></td><td> </td><td>Al liste e al manipole risorsis.</td></tr>
 <tr><td><tt>yes</tt></td><td> </td><td>Al stampe fûr une stringhe in maniere ripetitive fintremai che al ven copât.</td></tr>

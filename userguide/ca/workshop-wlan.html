@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2012-2022, Haiku, Inc. All rights reserved.
+ * Copyright 2012-2025, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -78,13 +78,15 @@
 
 <p>Getting the networking to run is essential in today's need for permanent internet connection. As keeping up to date with all the different and ever changing hardware and drivers is quite impossible for a small project, Haiku relies on a compatibility layer to make use of <a href="http://www.freebsd.org">FreeBSD</a> and some <a href="https://www.openbsd.org/">OpenBSD</a> networking drivers. This ensures a massive amount of supported hardware, though probably not 100% of what's out there.</p>
 
+<div class="box-warning"><p _translation_id="7026"><b>Wi-Fi Support</b><br />Inline with our use of BSD wireless drivers, Haiku currently only supports Wi-Fi 6 or below access points.  WPA3 secured networks are not yet supported.</p></div>
+
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">Connectar a una xarxa sense fil</a></h2>
 <p>You can use the Desktop applet <a href="desktop-applets/networkstatus.html">NetworkStatus</a> to connect to a specific network.</p>
 <p>Right-click on its icon in the Deskbar and choose the network's public name (which is the "SSID" it broadcasts) from the context menu.</p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
-<p>A window opens where you enter the type of authentication (probably WPA/WPA2, WEP is not a secure encryption anymore!) and the password for that wireless network. Tick the checkbox below to <span class="menu">Store this configuration</span> so you don't have to enter all the information again next time you connect to this network.<br />
+<p>A window opens where you enter the type of authentication (probably WPA/WPA2, WEP is not a secure encryption anymore!) and the password for that wireless network. The button with the "eye" symbol shows the password as plain text, handy to check for typos. Tick the checkbox below to <span class="menu">Store this configuration</span> so you don't have to enter all the information again next time you connect to this network.<br />
 Click <span class="button">OK</span> to start the login process.<br /> Depending on your hardware and network configuration this may take a while. You'll be kept informed of the progress by notifications:</p>
 <img src="images/workshop-wlan-images/join-status.gif" alt="join-network.gif" />
 <p>Once it reads "Ready" and the NetworkStatus icon in the Deskbar shows a green round light, the connection is established. If the notifications end in "No link" and a yellow triangle, something went wrong, probably an incorrect password.</p>
@@ -109,7 +111,7 @@ The output shows the public name (SSID), MAC address, signal strength and authen
 <a id="firmware" name="firmware">Fer funcionar el maquinari compatible</a></h2>
 <p>All supported modern wireless hardware works out of the box and you don't have to download/install any additional firmware.</p>
 
-<p>Only a few quite old chipsets (Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) require binary firmware modules that Haiku cannot include due to licensing issues, though. To get these wireless cards to work, a simple script is included which will retrieve and install all of the needed proprietary bits for you.</p>
+<p>Only a few quite old chipsets (Intel 2100/2200/2225/2915, some Broadcom 43xx, Marvell 88w8335) require binary firmware modules that Haiku cannot include due to licensing issues, though. To get these wireless cards to work, a simple script is included which will retrieve and install all of the needed proprietary bits for you.</p>
 <p>Open a Terminal and type:</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
 <p>Now review the licenses and accept them to install all of the available firmware files.</p>

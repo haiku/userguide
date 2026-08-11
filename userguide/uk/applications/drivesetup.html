@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -12,7 +12,7 @@
  *		Kacper Kasper <kacperkasper@gmail.com>
  * Translators:
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/apps-images/drivesetup-icon_64.png" alt="drivesetup-icon_64.png" width="64" height="64" />   DriveSetup (Розмітчик диска)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -87,7 +88,7 @@
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
 <td>Розділ підключений у режимі «тільки для читання»</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>Змонтований файл образу (дивіться команду <a href="./cli-apps.html">diskimage</a>)</td></tr>
+<td>A mounted image file (see <a href="#diskimages">Disk images</a> below)</td></tr>
 </table>
 <p>Коли розділ змонтовано, кольоровий сегмент показує використаний простір розділу. Колір залежить від типу розділу:</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
@@ -117,13 +118,23 @@
 </p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">Форматування розділу</a></h2>
+<a id="formatting" name="formatting">Formatting a partition</a></h2>
 <p>Форматувати можна лише розділи, які ще не підключені. Виберіть файлову систему у підменю <span class="menu">Розділ | Форматувати</span>. <br />
 <span class="menu">Be File System</span> (BFS) є обов’язковою для загрузочного розділу Haiku та рекомендована для розділів даних, які використовуються з Haiku. Лише розділи у форматі BFS повністю підтримують запити та атрибути файлів Haiku.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>Тут Вам потрібно вказати ім'я розділу та розмір його блоку. Розмір блоку – це мінімальний простір у байтах, який буде виділено для файлу. Рекомендовано 2048 байт на блок, але Ви можете вибрати більший або менший розмір, якщо у Вас є особливі потреби.<br />
 Якщо майбутні дані на Вашому розділі не потребуватимуть виконання запитів, Ви можете зняти позначку з опції <span class="menu">Увімкнути підтримку запитів</span>, щоб трохи заощадити накладні витрати на управління індексом.</p>
 <div class="box-stop">Форматування знищить усі дані на розділі!</div>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="diskimages" name="diskimages">Disk images</a></h2>
+<p>The menu <span class="menu">Disk image…</span> provides several actions related to image files of disks/partitions.</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="4">
+<tr><td class="onelinetop"><span class="menu">Un/Register disk image…</span></td><td width="20px"></td><td>Registering makes an image file available to the system; it appears as a regular volume you can mount, edit or copy files to/from it, format etc. See also the <a href="./cli-apps.html">diskimage command</a>.</td></tr>
+<tr><td><span class="menu">Save image…</span></td><td></td><td>Saves the currently selected partition as an image file. The resulting file will have the same size as the partition, so make sure the destination of the file has enough free space.</td></tr>
+<tr><td><span class="menu">Write image…</span></td><td></td><td>Lets you write an image file to the selected partition/volume.
+<div class="box-stop" _translation_id="6113">Writing an image will destroy all data on the partition/volume!</div></td></tr>
+</table>
 </div>
 </div>
 

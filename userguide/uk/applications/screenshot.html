@@ -4,14 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/apps-images/screenshot-icon_64.png" alt="screenshot-icon_64.png" width="64" height="64" />   Screenshot (Знімок екрана)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -73,16 +74,31 @@
 <p><br /></p>
 <p>Скриншоти створюються при запуску програми Screenshot (Знімок екрана) або при натисканні клавіші <span class="key">PRINT</span>.</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>На панелі Screenshot (Знімок екрана) можна вибрати чи робити знімок всього екрана чи тільки активного вікна; вирішити чи включати до знімка рамку вікна і курсор миші. Ви також можете встановити затримку перед виконанням знімку.</p>
+<p>Праворуч від попереднього перегляду вгорі ви можете перемикатися між різними режимами та опціями:<br />
+Виберіть або <span class="menu">Весь екран</span>, або лише <span class="menu">Активне вікно</span> (за умови, що воно є під час створення знімка екрана). Якщо ви хочете зробити знімок лише частини екрана, натисніть <span class="button">Вибрати область</span> під попереднім переглядом (див. нижче). Після вибору режим <span class="menu">Вибрати область</span> увімкнеться, і ви зможете перемикатися між <span class="menu">Весь екран</span>, <span class="menu">Активним вікном</span> та <span class="menu">Вибраною областю</span>.</p>
+<p>Окрім цих режимів, ви також можете вибрати <span class="menu">Включити рамку вікна</span> та <span class="menu">Включити вказівник миші</span>.</p>
 <p>Нижче потрібно вказати ім'я файлу, місце розташування та формат знімка екрана, які будуть використовуватись при натисканні кнопки <span class="button">Зберегти</span>. Замість запису на диск, Ви можете обрати кнопку <span class="button">Копіювати до буфера обміну</span> з метою прямої передачі знімка до іншої програми або вибрати кнопку <span class="button">Новий знімок екрана</span>.</p>
 <p>Усі настройки будуть збережені до наступного разу, коли Ви будете робити знімок користуючись зручними комбінаціями клавіш:</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
-<tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>зробити скриншот без затримки і запустити панель Screenshot (Знімок екрана).</td></tr>
+<tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>Робить скриншот без затримки і запустить панель Screenshot (Знімок екрана).</td></tr>
 <tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">PRINT</span></td><td></td><td>Робить скриншот у тихому режимі (silent), без відкриття панелі, з крайніми настройками, зберігає його у файл.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">PRINT</span></td><td></td><td>Робить скриншот у тихому режимі (silent), без відкриття панелі, з крайніми настройками, копіює його до буфера обміну.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">PRINT</span></td><td></td><td>Робить знімок екрана без затримки та одразу переходить у режим вибору області.</td></tr>
 </table>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Створення скриншотів за допомогою програми командного рядка.</h2>
-<p>Існує спеціальна програма <span class="cli">screenshot</span> для створення знімків екрана, яку можна використовувати з терміналу або сценарію.<br /> Команда 
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+Вибір області</h3>
+<p>Коли ви натискаєте <span class="button">Вибрати область</span>, вікно програми Screenshot /Знімок екрана приховується, і ви бачите, як весь екран трохи затемнюється.</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>Тепер ви можете визначити поле вибору, яке виділятиме область знімка екрана. За допомогою лівої кнопки миші область застосовується, щойно ви відпускаєте палець від кнопки, і вікно знімка екрана знову з’являється.</p>
+<p>Якщо створити рамку виділення, утримуючи <span class="key">SHIFT</span> або натискаючи <i>праву</i> кнопку миші, у кутах рамки з’являться маркери, які дозволять змінювати розмір виділення. Ви також можете перетягувати рамку виділення.</p>
+<p>Вибір застосовується подвійним клацанням або натисканням клавіші <span class="key">ENTER</span>.<br />
+<span class="key">ESC</span> скасовує процес вибору.</p>
+
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Створення скриншотів за допомогою програми Terminal.</h2>
+<p>Існує спеціальна команда <span class="cli">screenshot</span> для створення знімків екрана, яку можна використовувати з Terminal`у або за допомогою скрипта.<br /> Команда 
 <span class="cli">screenshot --help</span> показує нам вже знайомі опції і параметри:</p>
 
 <pre class="terminal">~&gt; screenshot --help
@@ -96,12 +112,14 @@ screenshot [ОПЦІЇ] [ФАЙЛ]  створює растрове зображ
   -b, --border          включаючи рамку вікна
   -w, --window          захоплення активного вікна замість цілого екрану
   -d, --delay=seconds   зробити знімок після встановленої затримки [в секундах]
-  -s, --silent          зберігає знімок без показу вікна програми
-  -f, --format=image    задає формат зображення для збереження як
+  -s, --silent          зберегти знімок без показу вікна програми
+  -f, --format=image    задати формат зображення для збереження як
                         [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
   -c, --clipboard       копіювати знімок до системного буферу обміну без показу вікна програми
+  -a, --area            вибрати область екрана для захоплення
 
-Примітка: ОПЦІЯ -b, --border дає ефект тільки при використанні з опцією -w, --window</pre>
+Примітка: ОПЦІЯ -b, --border дає ефект тільки при використанні з опцією -w, --window
+                    ОПЦІЯ -a, --area не діє з -s, --silent або -c, --clipboard</pre>
 
 </div>
 </div>

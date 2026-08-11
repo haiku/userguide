@@ -12,6 +12,7 @@
  * Translators:
  *		Humdinger
  *		Pengphei Han
+ *		yjwork
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -62,7 +63,6 @@
 
 <div id="content">
 <div>
-<div class="box-info">本节的翻译还未完成。在未完成之前，所有的未完成部分都将使用英语原文。</div>
 
 <h1>Attributes（属性）</h1>
 
@@ -91,10 +91,10 @@
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="listattr" name="listattr">listattr</a></h3>
-<p><span class="cli">listattr</span> lists a file's attributes, but by default doesn't show the contents of the attributes. For that, you need to add the parameter <tt>-l</tt> or <tt>--long</tt>.</p>
-<pre>usage: listattr [-l|--long] 'filename' ['filename' ...]</pre>
+<p><span class="cli">listattr</span>列出了文件的属性，但默认情况下不显示属性的内容。为此，您需要添加参数 <tt>-l</tt>或者 <tt>--long</tt>。</p>
+<pre>用法: listattr [-l|--long] '文件名' ['文件名' ...]</pre>
 <p>上面我们的截图中的例子：</p>
-<pre class="terminal"> ~/people -&gt;listattr Clara\\ Botters
+<pre class="terminal"> ~/people -&gt;listattr Clara\ Botters
 File: Clara Botters
    Type         Size                 Name
 -----------  ---------  -------------------------------
@@ -129,7 +129,7 @@ MIME String         21  "BEOS:TYPE"
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="catattr" name="catattr">catattr</a></h3>
 <p><span class="cli">catattr</span> 命令显示了文件特有属性的内容。</p>
-<pre>usage: catattr [--raw|-r] attr_name file1 [file2...]</pre>
+<pre>用法: catattr [--raw|-r] attr_name file1 [file2...]</pre>
 <p>还是上面的例子：</p>
 <pre class="terminal"> ~/people -&gt;catattr META:city Clara\\ Botters
 Clara Botters : string : Whelton</pre>
@@ -146,14 +146,14 @@ Clara Botters : string : Whelton</pre>
                  or a numeric value (ie. 0x1234, 42, 'ABCD', ...)
          The default is "string"</pre>
 <p>所以当亲爱的 Clara 在跨国公司 Barkelbaer Inc.找到了工作，你就可以为原本空白的 "Company" 属性补充该数据 (而此数据也属于 "string" 类型)：</p>
-<pre class="terminal"> ~/people -&gt;addattr -t string META:company Barkelbaer\\ Inc. Clara\\ Botters</pre>
+<pre class="terminal"> ~/people -&gt;addattr -t string META:company Barkelbaer\ Inc. Clara\ Botters</pre>
 
 <h3>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="rmattr" name="rmattr">rmattr</a></h3>
 <p><span class="cli">rmattr</span> 命令用于从文件中完全移除其某一属性。</p>
 
-<pre>usage: rmattr [-p] attr filename1 [filename2...]</pre>
+<pre>用法: rmattr [-p] attr filename1 [filename2...]</pre>
 <p>即使不填写 "Fax" 属性，在实际应用中也已经足够了；所以你可以通过键入下面的命令来从 Clara 文件中完全删除它：</p>
 <pre class="terminal"> ~/people -&gt;rmattr META:fax Clara\\ Botters</pre>
 
@@ -161,7 +161,7 @@ Clara Botters : string : Whelton</pre>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="copyattr" name="copyattr">copyattr</a></h3>
 <p><span class="cli">copyattr</span> 命令用于从一些文件向另一些文件拷贝属性。默认情况下，文件的实际内容并<b>没有</b>进行拷贝。</p>
-<pre>Usage: copyattr &lt;options&gt; &lt;source&gt; [ ... ] &lt;destination&gt;</pre>
+<pre>用法: copyattr &lt;options&gt; &lt;source&gt; [ ... ] &lt;destination&gt;</pre>
 
 <p>如果您希望完全拷贝文件的属性及其数据文件，你可以在命令后添加 "<span class="cli">-d</span>" 或者 "<span class="cli">--data</span>" 来完成。</p>
 

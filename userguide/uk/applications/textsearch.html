@@ -4,14 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/apps-images/textsearch-icon_64.png" alt="textsearch-icon_64.png" width="64" height="64" />   TextSearch (Пошук тексту)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -75,6 +76,7 @@
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
 <p>Ви вводите текст, який треба знайти,  у текстовому полі зверху і натискаєте клавішу <span class="key">Enter</span> або кнопку <span class="button">Пошук</span>, щоб почати пошук. Якщо опція <span class="menu">Показати рядки</span> увімкнена, результати пошуку автоматично розгортаються, щоб показати знайдений текст разом з рядками у файлах. </p>
+<p>By using the <span class="menu">File filter</span>, you can further limit the search to files with a certain name. "<tt>*</tt>" is used as wildcard, as examples "<tt>*Window.cpp</tt>" will only search in files ending in "Window.cpp", "<tt>*.h</tt>" only searches in header files.</p>
 
 <p>Лише кілька слів про деякі з пунктів меню,  інші не потребують пояснень:</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
@@ -87,13 +89,16 @@
 <tr><td><span class="menu">Відкрити вибране</span></td><td></td><td><span class="key">ALT</span> <span class="key">O</span></td><td></td><td>Відкриває вибрані у вікні результатів пошуку файли в асоційованій програмі (те саме, що і подвійний клік миші). Якщо це текстовий редактор і він підтримує цю функцію (наприклад, Pe), Ви можете перейти до того рядка, в якому було знайдено текст пошукового запиту.</td></tr>
 <tr><td><span class="menu">Показати файли у Tracker</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>Відкриває папки з вибраними у вікні результатів пошуку файлами у файловому менеджері Tracker.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Копіювати текст до буферу обміну</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>Робить копію поточного виділення у буфері обміну.</td></tr>
+<tr><td colspan="5"><p>These actions are also available from a context menu when right-clicking a result or a selection of results.</p></td></tr>
 <tr><td colspan="5"><h3>Меню <span class="menu">Налаштування</span></h3></td></tr>
 <tr><td colspan="3" class="onelinetop"><span class="menu">Пропустити папки що починаються з крапки</span></td><td> </td><td>Це корисно при роботі у середовищі «unixy», де часто адміністративні файли приховані всередині «<tt>.folders/</tt>». Системи контролю версій вихідних кодів, такі як SVN та CVS, є прикладами програм, що використовують цю можливість а також широко застосовуються у Haiku.</td></tr>
 <tr><td colspan="3"><span class="menu">Регулярний вираз</span></td><td> </td><td>TextSearch використовує інструмент командного рядка <span class="cli">grep</span>. Для його роботи необхідно, щоб спеціальні символи, такі як <tt>'"*\$?!</tt> та пробіл, були екрановані символом <tt>\</tt>. Активація цього параметра означає, що Вам доведеться робити це самостійно, але натомість Ви отримаєте можливість використовувати <a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D0%B8%D0%B9_%D0%B2%D0%B8%D1%80%D0%B0%D0%B7" class="external free" title="Вікіпедія: Регулярний вираз" rel="nofollow">регулярні вирази</a>.</td></tr>
 <tr><td colspan="3"><span class="menu">Тільки текстові файли</span></td><td> </td><td>Пошук тексту здійснюється лише у звичайних текстових файлах. Якщо вимкнути цей параметр, програма шукатиме у файлах будь-якого типу.</td></tr>
 <tr><td colspan="3"><span class="menu">Відкривати файли в редакторі коду</span></td><td> </td><td>Дозволяє відкривати файли у вибраному редакторі коду (який обробляє сигнатуру text/x-source-code). Інакше файл буде відкритий у асоційованій для цього типу файлу програмі. Корисно, наприклад, при редагуванні HTML-файлів, які зазвичай відкриваються у браузері.</td></tr>
 <tr><td colspan="5"><h3>Меню <span class="menu">Історія</span></h3></td></tr>
-<tr><td colspan="4"></td><td>Містить нещодавно використані рядки пошукових запитів.</td></tr>
+<tr><td colspan="4"></td><td>Contains recently used search strings. <span class="menu">Clean history</span> empties the list of previous search terms.
+<div class="box-info">You can quickly move up and down the search history by pressing <span class="key">↑</span> and <span class="key">↓</span> while the cursor is in the search text field.</div> 
+</td></tr>
 <tr><td colspan="5"><h3>Меню <span class="menu">Кодування</span></h3></td></tr>
 <tr><td colspan="4"></td><td>Дозволяє вибирати різні кодування символів, при необхідності.</td></tr>
 </table>

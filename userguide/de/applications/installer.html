@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2021, Haiku. All rights reserved.
+ * Copyright 2009-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -93,7 +93,7 @@ Das zweite Auswahlmenü bestimmt das Ziel der Installation. Das Zielmedium, das 
 <p>Am Ende der Installation wird die Partition automatisch bootfähig gemacht. Durch die Installation anderer Betriebssysteme oder durch Partitionstools kann es (aus Versehen) passieren, dass der Boot-Sektor der Haiku-Partition überschrieben wird. Haiku startet dann nicht mehr. In diesem Fall kann man von der Installations-CD starten und die Partition wieder bootfähig machen: Unter <span class="menu">Nach: Bitte Zielpartition auswählen</span> die nicht mehr startfähige Haiku-Partition einstellen und im Menü <span class="menu">Werkzeuge</span> den Eintrag <span class="menu">Bootsektor schreiben</span> auswählen. Das stellt den vorherigen Zustand wieder her.</p>
 <p>Daneben kann im Menü <span class="menu">Werkzeuge</span> mit <span class="menu">Bootmenü einrichten</span> noch ein Start-Menü in den Boot-Sektor geschrieben werden. Aus dem Menü lässt sich das zu bootende Betriebssystem auswählen. Näheres dazu unter <a href="bootmanager.html">BootManager</a>.<br />
 Der Haiku <span class="app">BootManager</span> wird nicht gebraucht, wenn man bereits einen Bootmanager wie GRUB benutzt (siehe oben) oder wenn Haiku als einziges Betriebssystem auf dem Rechner installiert ist.</p>
-
+<p>Wird das System mittels UEFI gestartet anstatt per BIOS/MBR, kann mit <span class="menu">EFI Loader installieren</span>, der EFI Loader vom Boot/Installations-Medium auf die vorbereitete Partition kopiert werden, die aus dem Untermenü ausgewählt wird. Diese EFI System Partition muss mit FAT32 formatiert sein und sich auf einer GPT-initialisierten Disk mit genügend Platz befinden.</p>
 
 </div>
 </div>

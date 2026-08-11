@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2018-2022, Haiku. All rights reserved.
+ * Copyright 2018-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -72,12 +72,13 @@
 <p><br /></p>
 <p>SoftwareUpdater sucht alle aktiven Paketquellen (siehe <a href="../prefereces/repositories.html">Paketquellen</a>-Einstellungen) nach Aktualisierungen für die installierten Pakete ab, inklusive Systemupdates für Haiku selbst. Wurden Updates gefunden, werden diese in einem Rutsch heruntergeladen und installiert.</p>
 <img src="../images/apps-images/softwareupdater.png" alt="SoftwareUpdater's main window" />
-<p>Nach dem Start sucht SoftwareUpdater nach aktualisierten Paketen und zeigt sie in einer Liste mit den jeweiligen neuen Versionsnummern und einer kurzen Beschreibung an. Ist <span class="menu">Details anzeigen</span> aktiviert,  wird auch noch die jeweilige Paketquelle, sowie alte und neue Versionsnummer angezeigt.</p>
+<p>Nach dem Start sucht SoftwareUpdater nach aktualisierten Paketen und zeigt sie in einer Liste mit den jeweiligen neuen Versionsnummern und einer kurzen Beschreibung an.</p>
 <p>Mit <span class="button">Jetzt aktualisieren</span> wird der Download aller Pakete und ihre anschließende Installation gestartet.</p>
 <p>Je nachdem, welche Pakete aktualisiert wurden, kann es sein, dass Haiku neu gestartet werden muss. Erst dann wird der Update-Prozess abgeschlossen. Aktualisierte Anwendungen müssen in der Regel einfach nur neu gestartet werden, während Änderungen an Haiku selbst meist einen Neustart erfordern.</p>
 <div class="box-info"><p>Jedesmal wenn Pakete aktualisiert, installiert oder deinstalliert werden (mittels SoftwareUpdater/HaikuDepot oder im Terminal mit <tt>pkgman</tt>), wird ein neuer "state" unter <span class="path">/system/packages/administrative/</span> angelegt. Dadurch kann man von den <a href="../bootloader.html">Boot Options</a> aus einfach in einen alten "state" booten, falls mal ein installiertes/aktualisiertes Paket nicht so funktioniert wie es soll.</p>
-<p>Da diese "state" Ordner Kopien der aktualisierten/deinstallierten Pakete enthalten, kann der "administrative" Ordner mit der Zeit ordentlich anschwellen. Solange es noch keine Möglichkeit der automatischen Bereinigung gibt, empfiehlt es sich ab und an die Größe des "administrative" Ordners zu prüfen und gegebenenfalls einige alte "state" Ordner zu löschen, in die man sowieso nicht mehr booten wird.</p>
-</div>
+<p>Da diese "state" Ordner Kopien der aktualisierten/deinstallierten Pakete enthalten, kann der "administrative" Ordner mit der Zeit ordentlich anschwellen.</p></div>
+<p>Unter <span class="button">Einstellungn…</span> befindet sich eine Option um <span class="menu">Weitere Details anzuzeigen</span>. Dadurch wird zusätzlich die jeweilige Paketquelle, sowie alte und neue Versionsnummern angezeigt.</p>
+<p>Hier befindet sich auch eine Einstellung um die Größe des oben erwähnten "administrative" Ordner zu begrenzen. Man kann <span class="menu">Alte Installationsdaten automatisch entfernen</span>, um nach jeder Aktualisierung alle Daten zu löschen, die älter sind als 30 Tage. Die letzten 10 "states" bleiben jedoch immer erhalten, selbst wenn sie älter als 30 Tage sind.</p>
 <h2>
 <a id="downgrading" name="downgrading">Zurück zu früheren Haiku Versionen</a></h2>
 <p>Es kommt selten vor, aber es ist möglich, dass ein Haiku-Update Fehler enthält, mit denen man sich nicht bis zu deren Beseitigung abfinden will. Von den Bootloader-Optionen aus lässt sich in einen funktionierenden älteren Zustand booten, siehe <a href="../bootloader.html#troubleshooting">Boot Loader - Fehlersuche</a>. </p>

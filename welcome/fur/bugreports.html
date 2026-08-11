@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -60,6 +60,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Tabele</td></tr>
@@ -96,6 +97,7 @@ Dopo vê apurât che al è un erôr unic, furnìs lis informazions tal mût plui
 	<li><p>Descrîf il probleme che tu stâs riscontrant. Cîr di jessi il plui precîs pussibil: descrîf il compuartament atuâl e ce che tu ti spietavis.</p></li>
 	<li><p>Descrîf lis azions che si scugne eseguî par podê fâ vignî fûr l'erôr. Chest al judarà i svilupadôrs a riprodusi l'erôr.</p></li>
 	<li><p>Zonte plui informazions pussibilis a tô disposizion. Se al è un erôr de interface utent grafiche (GUI), o un erôr in une des aplicazions, cîr di caturâ une videade fracant il tast <span class="key">STAMPE</span>.</p></li>
+	<li><p>Use the English language if possible. This is the common language of the development team, and using it makes it more likely that developers knowledgeable about the issue can investigate. If you do not speak English, try to get some help from other people for reporting the problem, for example at Haiku's <a href="https://discuss.haiku-os.org/c/international">International Forum</a>.</p></li>
 </ul>
 	
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -143,6 +145,8 @@ Il syslog (scurte di system log, vâl a dî regjistri di sisteme) al conten info
 <p>La opzion <span class="menu">Enable debug syslog</span> tal menù <span class="menu">Debug menu</span> dal boot loader al rint persistent il regjistri di sisteme. Se la opzion <span class="menu">Save syslog from previous session during boot</span> e ven ativade intes opzions dal boot loader (come che e je la impostazion predefinide), tu cjatarâs il syslog de tô ultime session come <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
 Se no tu rivis a inviâ il sisteme par otignî il previous_syslog, tu âs di jentrâ tal menù dal boot loader tignint fracât <span class="key">MAIUSC</span> (o <span class="key">SPAZI</span> se tu inviis il sisteme midiant UEFI) intant che tu inviis il computer.<br />
 Tal <span class="menu">Debug menu</span> dal boot loader tu varessis di cjatâ lis vôs <span class="menu">Display syslog from previous session</span> e <span class="menu">Save syslog from previous session</span>. Il prin al mostre sul schermi il regjistri di sisteme, l'ultin ti permet di salvâlu come file su disc. Note che pal moment a son supuartâts pal salvament dal file dome i volums FAT32. Se tu desideris doprâ une clavute USB, ma tu le âs tacade masse tart e duncje no je stade ancjemò ricognossude, tu puedis tornâ a inviâ la machine e tornâ a jentrâ tal menù dal boot loader. Atenzion: No sta inviâ nissun sisteme operatîf o i dâts a laran pierdûts.</p>
+<p>Note that the syslog may include information about the system (applications running, and some applications will also store some details here). It is recommended to check the syslog to make sure you are not uploading personal data that you wouldn't want published. A complete syslog is sometimes more helpful, but in the case you want to remove something, you can edit the file as needed.</p>
+<p>When attaching the syslog to a ticket, just attach it directly, <b>don't</b> put it inside a zipfile or other archive.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">Jessude su schermi dal debug</a></h3>

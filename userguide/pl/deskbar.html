@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -66,9 +66,10 @@
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Indeks</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Menu Deskbara</a><br />
-	<a href="#tray">Tacka</a><br />
-	<a href="#list-of-apps">Lista uruchomionych aplikacji</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -76,11 +77,11 @@
 
 <p>Deskbar jest małym panelikiem domyślnie umieszczonym w prawym górnym rogu ekranu. Jest to odpowiednik paska zadań z przyciskiem Start w systemie Windows. Składa się on z menu Deskbara, z którego można uruchomić aplikacje i panele preferencji, tacki z zegarem i innymi narzędziami poniżej, oraz z listy uruchomionych aplikacji na samym dole.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position.<br />
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
 You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>Łapiąc uchwyt po przeciwnej stronie, można zmienić szerokość Deskbara ciągnąc w lewo lub w prawo:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>Szerszy Deskbar umożliwia wyświetlenie w tacce większej liczby ikon w rzędzie, będzie również rzadziej obcinał dłuższe nazwy uruchomionych aplikacji, zwłaszcza jeśli używane są większe ikony.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -99,12 +100,13 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <li><p><b>Aplikacje, Dema, aplety Deskbara, Preferencje</b> – lista zainstalowanych aplikacji, dem, apletów i panelów preferencji.<br />Możesz dodać dowiązania do innych programów (lub katalogów, dokumentów, zapytać itp.) umieszczając je w katalogu <span class="path">~/config/settings/deskbar/menu/</span>.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Ustawienia Deskbara</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Panel preferencji Deskbara jest podzielony na trzy sekcje.</p>
 
-<h4>Aplikacje</h4>
+<h3>Aplikacje</h3>
 <p>Poniższe ustawienia nie mają wpływu na działanie samych programów, a tylko na zachowanie i wygląd listy uruchomionych aplikacji.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Sortuj aplikacje po nazwie</span></td><td> </td><td>Sortuje alfabetycznie listę uruchomionych aplikacji.</td></tr>
@@ -115,7 +117,7 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <tr><td><span class="menu">Rozmiar ikon</span></td><td> </td><td>Dostosowuje rozmiar ikon uruchomionych aplikacji.</td></tr>
 </table>
 
-<h4>Menu</h4>
+<h3>Menu</h3>
 <p>Pierwsze kilka elementów menu Deskbara jest tam na stałe, można jednak dostosować te poniżej <span class="menu">Wyłącz komputer...</span>.<br />
 Tutaj możesz ustawić liczbę ostatnio używanych dokumentów, katalogów i aplikacji, które mają być wyświetlane w odpowiednim menu, lub całkowicie wyłączyć tę funkcjonalność.<br />
 Przycisk <span class="button">Edytuj w Trakerze...</span> otwiera katalog <span class="path">~/config/settings/deskbar/menu/</span>. Znajdziesz w nim pliki i katalogi pokazywane w Deskbarze, domyślnie są to <span class="menu">Aplikacje</span>, <span class="menu">Dema</span>, <span class="menu">Aplety Deskbara</span> oraz <span class="menu">Preferencje</span>.<br />
@@ -124,8 +126,9 @@ Możesz usuwać i dodawać wpisy – np. dowiązania do aplikacji, dokumentów, 
 <div class="box-info"><p>Programy zainstalowane z pakietów automatycznie umieszczają swój wpis w Deskbarze. W zależności od ich liczby może zrobić się w nim tłoczno. Jeżeli wolisz kompletną kontrolę i chcesz tam widzieć tylko samodzielnie umieszczone aplikacje (np. w katalogach wg kategorii), możesz to zrobić w następujący sposób: stwórz dowiązanie do katalogu <span class="path">menu</span> w <span class="path">~/config/settings/deskbar/</span> i zmień jego nazwę na <span class="path">menu_entries</span>. Z Terminala użyj następującej komendy:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Okno</h4>
+<h3>Okno</h3>
 <p>Wreszcie, ustawienia okna Deskbara:</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Zawsze na wierzchu</span></td><td> </td><td>Deskbar będzie zawsze widoczny nad innymi oknami.</td></tr>
 <tr><td><span class="menu">Autoaktywacja</span></td><td> </td><td>The Deskbar pops to the front when the mouse pointer touches where the Deskbar meets the screen edge, and is lowered when it leaves the Deskbar area.</td></tr>

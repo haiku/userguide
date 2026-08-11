@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2012-2022, Haiku, Inc. All rights reserved.
+ * Copyright 2012-2025, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -12,7 +12,7 @@
  * Translators:
  *		Humdinger
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -64,6 +64,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 
 <table class="index" id="index" summary="index">
@@ -79,6 +80,8 @@
 
 <p>Налагодження якісної роботи мережі має важливе значення у сьогоднішній потребі постійного підключення до мережі Інтернет. Оскільки для невеликого проекту неможливо бути в курсі всього різноманітного обладнання та драйверів, які до того ж постійно змінюються, Haiku покладається на рівень сумісності, який дає можливість використання мережевих драйверів <a href="http://www.freebsd.org">FreeBSD</a> та деяких мережевих драйверів <a href="https://www.openbsd.org/">OpenBSD</a>. Це забезпечує підтримку величезної кількості обладнання, хоча, ймовірно, і не на 100% від того, що існує.</p>
 
+<div class="box-warning"><p _translation_id="7026"><b>Wi-Fi Support</b><br />Inline with our use of BSD wireless drivers, Haiku currently only supports Wi-Fi 6 or below access points.  WPA3 secured networks are not yet supported.</p></div>
+
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">Під'єднання до безпровідної мережі</a></h2>
@@ -87,9 +90,8 @@
 
 </p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
-<p>Відкриється вікно, в якому потрібно ввести тип автентифікації (ймовірно, WPA/WPA2, WEP більше не є безпечним шифруванням!) і пароль для цієї безпровідної мережі. Позначте опцію <span class="menu">Зберегти цю конфігурацію</span>, щоб Вам не довелося вводити всю інформацію знову, коли Ви наступного разу будете під'єднуватися до цієї мережі.<br />
-Натисніть <span class="button">OK</span>, щоб розпочати процес входу.<br />
-Залежно від Вашого обладнання та конфігурації мережі це може зайняти деякий час. Ви будете поінформовані про хід процесу за допомогою сповіщень:</p>
+<p>A window opens where you enter the type of authentication (probably WPA/WPA2, WEP is not a secure encryption anymore!) and the password for that wireless network. The button with the "eye" symbol shows the password as plain text, handy to check for typos. Tick the checkbox below to <span class="menu">Store this configuration</span> so you don't have to enter all the information again next time you connect to this network.<br />
+Click <span class="button">OK</span> to start the login process.<br /> Depending on your hardware and network configuration this may take a while. You'll be kept informed of the progress by notifications:</p>
 <img src="images/workshop-wlan-images/join-status.gif" alt="join-network.gif" />
 <p>Коли на ньому з'явиться напис «Під'єднано» і у значку NetworkStatus на панелі задач засвітиться зелене коло, це означає, що з’єднання встановлено. Якщо у сповіщенні напис «З’єднання відсутнє» з жовтим трикутником, щось пішло не так, можливо, неправильний пароль.</p>
 
@@ -97,7 +99,7 @@
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="commandline" name="commandline">Під'єднання з командного рядка</a></h2>
 <p>Якщо Ви віддаєте перевагу використанню командного рядка або хочете скористатися скриптами або сценарієм <span class="path">~/config/settings/boot/UserBootscript</span> для автоматизації під'єднання до певної мережі під час загрузки, скористайтеся командою <tt>ifconfig</tt>.</p>
-<p>Запустіть термінал і введіть перший рядок для пошуку доступних безпровідних мереж:</p>
+<p>Запустіть Terminal і введіть перший рядок для пошуку доступних безпровідних мереж:</p>
 <pre class="terminal">ifconfig /dev/net/idualwifi7260/0 scan
 name                             address              signal  auth
 MikTikhAPI                       01:d0:19:a6:88:42        30  WPA2
@@ -106,7 +108,7 @@ vb1                              00:24:12:a8:31:e1        12  WPA2</pre>
 <p>Шлях до Вашого безпровідного мережевого адаптера, звісно, потрібно відкоригувати.<br />
 Вивод команди покаже публічну назву (SSID), MAC-адресу, рівень сигнала і метод автентифікації усіх знайдених мереж.</p>
 <p>Щоб під'єднатися до мережі, скористайтеся цим рядком і вставте відповідне публічне ім’я (SSID) і пароль:</p>
-<pre class="terminal">ifconfig /dev/net/idualwifi7260/0 join {SSID} {password}</pre>
+<pre class="terminal">ifconfig /dev/net/idualwifi7260/0 join {SSID} {пароль}</pre>
 <p>Переконайтеся, що початкова конфігурація адаптера безпровідної мережі після загрузки завершена, перш ніж вводити команди <tt>ifconfig</tt>, інакше вони можуть бути проігноровані. Залежно від апаратного забезпечення та конфігурації мережі це може зайняти деякий час. Слідкуйте за сповіщеннями…</p>
 
 <h2>
@@ -114,14 +116,14 @@ vb1                              00:24:12:a8:31:e1        12  WPA2</pre>
 <a id="firmware" name="firmware">Забезпечення працездатності обладнання</a></h2>
 <p>Усе сучасне безпровідне обладнання, яке підтримується системою, працює відразу, «з коробки», і Вам не потрібно завантажувати/інсталювати будь-яке додаткове мікропрограмне забезпечення.</p>
 
-<p>Лише деякі досить старі чіпсети (Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) потребують бінарних модулів прошивки, які Haiku не може включити через проблеми з ліцензуванням. Щоб змусити ці безпровідні карти працювати, до комплекту постачання включено простий скрипт, який витягне і встановить усі необхідні пропрієтарні біти.</p>
-<p>Відкрийте термінал і введіть:</p>
+<p>Лише деякі досить старі чіпсети (Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) потребують бінарних модулів прошивки, які Haiku не може включити через проблеми з ліцензуванням. Щоб змусити ці безпровідні карти працювати, до комплекту системи включено простий скрипт, який витягне і встановить усі необхідні пропрієтарні біти.</p>
+<p>Відкрийте Terminal та введіть:</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
 <p>Тепер перегляньте ліцензії і прийміть їх, щоб встановити усі доступні файли прошивки.</p>
 
 <p>Якщо Ви не можете отримати бінарні файли прошивок за допомогою сценарію <tt>install-wifi-firmwares.sh</tt> (наприклад, через відсутність підключення до мережі Інтернет у Haiku), Ви можете завантажити <a href="http://www.haiku-os.org/files/download-data-for-wlan-firmwares.txt">цей сценарій оболонки</a> і запустити його в іншій операційній системі, в якій встановлено <tt>wget</tt> і <tt>zip</tt><br />
 Користувачам Windows потрібно встановити <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">wget</a> і <a href="http://gnuwin32.sourceforge.net/packages/zip.htm">zip</a> для Windows у варіанті за замовчуванням і скористатися <a href="https://www.haiku-os.org/files/download-data-for-wlan-firmwares.bat">цим пакетним файлом</a>.<br />
-Сценарій завантажить необхідні файли та створить zip-файл, який потрібно розпакувати у каталог <tt>/boot</tt> системи Haiku. Після розпакування відкрийте термінал і введіть:</p>
+Сценарій завантажить необхідні файли та створить zip-файл, який потрібно розпакувати у каталог <tt>/boot</tt> системи Haiku. Після розпакування відкрийте Terminal і введіть:</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
 <p>Перегляньте ліцензії та прийміть їх, щоб встановити усі доступні файли прошивки.</p>
 

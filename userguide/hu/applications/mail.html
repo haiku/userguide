@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -75,9 +75,9 @@
 <tr><td>Asztalsáv:</td><td style="width:15px;"></td><td><span class="menu">Alkalmazások</span></td></tr>
 <tr><td>Útvonal:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
 <tr><td>Beállítások:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
-<span class="path">~/config/settings/Mail/Menu Links/</span> - a leveles láda helyi menüjének tartalma<br />
-<span class="path">~/config/settings/Mail/signatures/</span> - aláírások tárolása<br />
-<span class="path">~/config/settings/Mail/status/</span> - egyéni állapotok tárolása</td></tr>
+<span class="path">~/config/settings/Mail/Menu Links/</span> - Objects put here appear in the mailbox' context menu<br />
+<span class="path">~/config/settings/Mail/signatures/</span> - Location to store signatures<br />
+<span class="path">~/config/settings/Mail/labels/</span> - Location to store custom labels</td></tr>
 </table>
 <p><br /></p>
 <p>A levelezés a Haiku alapértelmezett levélkezelő programja. A levelek lekérdezését és küldését nem a program, hanem a mail_daemon (levelező rendszer) végzi, mely az <a href="../preferences/e-mail.html">E-mail</a> beállításainál konfigurálható.</p>
@@ -92,7 +92,8 @@
 <p>A menü elég egyértelmű, így csak a lényeges dolgokat emeljük ki.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Fájl</h3>
-<p>Az ablak bezárásakor ha az egy új levelet tartalmaz, akkor a levél állapota automatikusan olvasottra változik. Ugyanakkor a levél állapotát mi magunk is megadhatjuk a <span class="menu">Bezárás és ...</span> almenüből. Itt találunk egy <span class="menu">Megjelölés...</span> menüt, ahol több egyéni állapotot is készíthetünk, melyek a <span class="path">~/config/settings/Mail/status/</span> mappában találhatóak majd.</p>
+<p>When you close the window of a new mail, its status is normally switched from "New" to "Read". From the <span class="menu">Close and</span> submenu, though, you can choose to <span class="menu">Leave as 'New'</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">W</span>) or <span class="menu">Move to Trash</span> instead.</p>
+<p>With <span class="menu">Set label</span> you can assign a custom label that is saved under <span class="path">~/config/settings/Mail/labels/</span>.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Szerkesztés</h3>
 <p>Itt található a <span class="menu">Beállítások...</span> (<a href="#preferences">lásd lejjebb</a>) és a <span class="menu">Fiókok...</span> menü, ami megnyitja az <a href="../preferences/e-mail.html">E-mail</a> beállítások panelt.</p>
@@ -113,11 +114,13 @@
 </table>
 <div class="box-info">Ha kijelölünk egy szövegrészt a levélben mielőtt válaszolunk rá, akkor csak az adott részt fogja idézni a program a válasz levélben. Ez egy nagyon hasznos kis funkció, ha például ki akarjuk emelni a lényeget az eredeti levélből...</div>
 <p>A <span class="menu">Tovább</span>, <span class="menu">Újraküldés</span> és a <span class="menu">Másolás újba</span> magától értetődőek.</p>
-<p>Amikor egy levelet a Nyomkövetőből vagy egy lekérdezésből nyitunk meg, akkor az <span class="menu">Előző levél</span>tel és a <span class="menu">Következő levél</span>lel lépegethetünk a levelek között, amik a listában szerepelnek.</p>
+<p>When you've opened an email from a Tracker or query result window, <span class="menu">Previous message</span> and <span class="menu">Next message</span> (<span class="key">ALT</span> <span class="key">↑</span>/<span class="key">↓</span>) will move to the previous/next email in the list. In the <a href="#preferences">Mail settings</a> you can configure if the status of the current "New" email's status is set to "Read" automatically when moving to the previous/next email.<br />
+If you hold <span class="key">SHIFT</span> while going to the previous/next email, the status of the current email is kept. This is also works when using the up/down-arrow icons in the toolbar to move through your emails.</p>
+<p>A bit related to browsing through your emails using <span class="menu">Previous message</span> and <span class="menu">Next message</span>: If you invoke <span class="menu">Move to Trash</span>, the current email is trashed and the <i>next</i> message gets opened. If you hold <span class="key">SHIFT</span> though, the <i>previous</i> email is opened instead. Useful, if you sort your emails newest-first, open the oldest and move up from there and deleting emails on your way.</p>
 <p>A <span class="menu">Cím mentése</span> összegyűjti a levélben található összes e-mail címet egy almenübe. Innen egy címet kiválasztva megnyílik a <a href="people.html">Névjegyek</a> program, amiben további információkat is megadhatunk.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Lekérdezések</h3>
-<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all corresponding mails:</p>
+<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span>, <span class="menu">Same subject</span> or <span class="menu">Same label</span> opens a query that lists all corresponding mails:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2>
@@ -126,8 +129,8 @@
 <p>A new email is created by invoking <span class="menu">New mail message</span> of the <span class="menu">File</span> menu or the corresponding icon from the tool bar of an open email. Or you just start the Mail application or choose <span class="menu">Create new message…</span> from the context menu of the mailbox icon in the Deskbar.</p>
 <img src="../images/apps-images/mail-write.png" alt="email-write.png" /> 
 <p>Az ablak felépítése lényegében ugyan az, mint a levelek olvasásakor. A menü és a gombsor kicsit különböznek és a beviteli mezők (a címzettek, a címe, stb.) is szerkeszthetőek.</p>
-<p>A <span class="menu">Másolat</span> (vagy ismertebben "Cc" - <i>carbon copy</i>) mező címzettjei mind másolatot kapnak a levélből. A különbség a címzett és a másolat közt az, hogy a levél kifejezetten a címzettnek szól, a többiek számára csak informális a levél, az esetleges választ nem tőlük várjuk.<br />
-A <span class="menu">Titkos másolat</span> pedig "<i>rejtett másolatot</i>" jelent, vagyis ugyan úgy másolatot kapnak a levélből, viszont egymást nem látják a címzettek.</p>
+<p><span class="menu">Cc</span> is short for the anachronistic term "<i>carbon copy</i>" and results in copies of your mail being sent to the listed people. The difference to just listing a bunch of addresses in the "To" field is, that you don't directly address the cc'ed people, thereby signaling that you probably don't expect an answer of them.<br />
+<span class="menu">Bcc</span> means "<i>blind carbon copy</i>" which does practically the same as "Cc", but hides the recipients from each other.</p>
 <p>Több cím megadása vesszővel elválasztva történhet.
 A <span class="menu">Címzett</span>, a <span class="menu">Másolat</span>, és a <span class="menu">Titkos másolat</span> mind egy előugró menü, melyek tartalmazzák az összes e-mail címet, amik a rendszerben találhatóak. Ezeket a <a href="people.html">Névjegyek</a> fájljainak keresésével gyújti össze a program. A "Csoport" jellemzők alapján pedig a csoport tagjait egy almenüben találhatóak majd.</p>
 <p>A menükön belül pedig találhatunk még érdekes funkciókat.</p>
@@ -159,7 +162,7 @@ Itt az almenüben kiválaszthatunk egy konkrétat vagy a program <span class="me
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Lekérdezések</h3>
-<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.</p>
+<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.  You can't query for <span class="menu">Same label</span>, because while composing, there's no actual email file stored where a label-attribute could be added. The email has to be sent first.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

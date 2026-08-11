@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,13 +61,15 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Tabele</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Il menù Deskbar</a><br />
-	<a href="#tray">La guantiere</a><br />
-	<a href="#list-of-apps">La liste dai programs in esecuzion</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -75,10 +77,11 @@
 
 <p>Il Deskbar al è chel piçul panel che in maniere predefinide si cjate tal angul in alt a drete dal schermi. Al è la version di Haiku de sbare des ativitâts di Windows cul so boton Start. Al conten il menù di Deskbar di dulà che si pues inviâ aplicazions e preferencis, une guantiere cuntun orloi e sot di chel, altris struments. In bas, une liste dai programs atualmentri in esecuzion.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>Tu puedis spostâ il Deskbar in cualsisei angul o, tant che une sbare, vêlu dilunc l'ôr superiôr o inferiôr dal schermi. Par spostâlu al baste cjapâlu te aree cui groputs che e sta intune bande de guantiere (viôt la figure parose) e strissinâlu inte gnove posizion.<br /> Tu puedis ancje striçâlu intune disposizion plui compate strissinant la aree cui groputs sul menù cu la fuee dal Deskbar. Vint la altece de lenghete di un barcon regolâr, ancje i barcons slargjâts al massim no oscurin la vuantiere dal Deskbar cu lis sôs iconis e l'orloi.</p>
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
+You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>Cjapant chel altri widget cui groputs de guantiere, tu puedis cambiâ la largjece dal Deskbar strissinant il mouse a drete o a çampe:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>Un Deskbar plui larc al permet tantis plui iconis par rie te guantiere. In diplui al cjonce cetant di mancul i nons luncs des aplicazions inte liste dai programs in esecuzion, In particolâr se si dopre iconis plui grandis.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -97,12 +100,13 @@
 <li><p><b>Applications, Demos, Deskbar applets, Preferences</b> - Liste di aplicazions, dimostrazions, applet e preferencis instaladis.<br />Tu puedis zontâ colegaments a altris programs (o cualsisei cartele, document, interogazion e vie indenant) metintju in <span class="path">~/config/settings/deskbar/menu/</span>.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Preferencis di Deskbar</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Il panel des preferencis di Deskbar si divît in trê sezions.</p>
 
-<h4>Aplicazions</h4>
+<h3>Aplicazions</h3>
 <p>Lis impostazions chi sot no si aplichin aes impostazions che tu âs instalât, ma al compuartament e al aspiet de liste des aplicazions in esecuzion.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Ordene aplicazions par non</span></td><td> </td><td>Al ordene la liste dai programs in esecuzion in ordin alfabetic.</td></tr>
@@ -113,7 +117,7 @@
 <tr><td><span class="menu">Dimension icone</span></td><td> </td><td>Al adate la dimension des iconis des aplicazions in esecuzion. </td></tr>
 </table>
 
-<h4>Menù</h4>
+<h3>Menù</h3>
 <p>Infûr dai prins doi elements dal menù dal Deskbar, che a son fis, tu puedis personalizâ chei sot di <span class="menu">Jessude di Haiku...</span>.<br />
 Chi tu puedis stabilî il numar di documents resints, cartelis e aplicazions che a vegnin mostrâts intal lôr menù tal Deskbar, opûr no viodiju dal dut.<br />
 Il boton <span class="button">Modifiche in Tracker…</span> al vierç la cartele <span class="path">~/config/settings/deskbar/menu/</span>. Dentri tu cjatarâs i file e lis cartelis che a vegnin fûr tal Deskbar, come impostazion predefinide chescj a son <span class="menu">Applications</span>, <span class="menu">Demos</span>, <span class="menu">Deskbar applets</span>, e <span class="menu">Preferences</span>.<br />
@@ -123,8 +127,9 @@ Tu puedis eliminâ o zontâ vôs come colegaments a aplicazions, documents o anc
 Tu creis un colegament de cartele dal  <span class="path">menu</span> in <span class="path">~/config/settings/deskbar/</span> e i cambiis il non a <span class="path">menu_entries</span>. Dal Terminâl si rive a fâ il lavôr cun:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Barcon</h4>
+<h3>Barcon</h3>
 <p>Tal ultin, lis preferencis pal barcon dal Deskbar.</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Simpri denant</span></td><td> </td><td>Il Deskbar al starà simpri parsore dai altris barcons.</td></tr>
 <tr><td><span class="menu">Tire sù in automatic</span></td><td> </td><td>Il Deskbar al ven parât denant se il pontadôr dal mouse al va a tocjâ i ôrs dal schermi che il Deskbar al condivît e al ven parât sot cuant che il mouse al lasse la aree dal Deskbar.</td></tr>

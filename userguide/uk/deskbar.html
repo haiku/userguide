@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -12,7 +12,7 @@
  * Translators:
  *		Humdinger
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -63,13 +63,15 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Зміст</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Меню Панелі задач</a><br />
-	<a href="#tray">Системний трей</a><br />
-	<a href="#list-of-apps">Список запущених програм</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -77,11 +79,11 @@
 
 <p> Deskbar – це маленька панель, яка за замовчуванням розташована у верхньому правому куті екрана. Вона є аналогом панелі задач Windows з кнопкою «Пуск». Вона містить меню Панелі задач, з якого Ви можете запускати програми та налаштування, лоток з годинником та іншими інструментами поряд з ним (системний трей), а також список запущених програм внизу.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>Ви можете перемістити Deskbar в будь-який кут або у вигляді смуги вздовж верхньої чи нижньої межі екрана, захопивши мишею експандер з одного боку лотка (дивіться стрілки вище) і перетягнувши його в нове положення.<br />
-Ви можете згорнути панель у суперкомпактний варіант, перетягнувши трей на кнопку меню Deskbar з усім відомим листком. Оскільки висота цієї кнопки дорівнює висоті звичайного заголовка вікна, навіть вікна, які займають весь екран, не затулятимуть системний трей Deskbar з годинником і значками.</p>
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
+You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>Захопивши експандер лотка з іншого боку, Ви можете змінити ширину Deskbar, перетягнувши його мишею вліво або вправо:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>Ширша панель задач дозволяє розміщувати більше значків у системному треї в один рядок. Вона також рідше скорочує довгі назви програм у списку запущених програм, особливо якщо Ви використовуєте крупні значки.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -101,12 +103,13 @@
 Ви можете додати символьні посилання на інші програми (або будь-яку папку, документ, пошуковий запит, тощо), помістивши їх у <span class="path">~/config/settings/deskbar/menu/</span>.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Налаштування Deskbar</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Панель налаштувань Deskbar поділено на три секції.</p>
 
-<h4>Програми</h4>
+<h3>Програми</h3>
 <p>Наступні настройки стосуються не встановлених програм, а поведінки та візуального вигляду списку запущених програм.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Сортувати програми за назвою</span></td><td> </td><td>Сортує список запущених програм за алфавітом.</td></tr>
@@ -117,7 +120,7 @@
 <tr><td><span class="menu">Розмір значків</span></td><td> </td><td>Регулює розмір значків запущених програм.</td></tr>
 </table>
 
-<h4>Меню</h4>
+<h3>Меню</h3>
 <p>Хоча перші декілька пунктів меню Deskbar є фіксованими, Ви можете настроїти ті, що знаходяться під пунктом <span class="menu">Завершити роботу…</span>.<br />
 Тут Ви можете задати кількість крайніх документів, папок і програм, які будуть показані у відповідних меню Deskbar або взагалі, прибрати їх з меню панелі задач.<br />
 Кнопка <span class="button">Змінити меню у Tracker…</span> відкриває каталог <span class="path">~/config/settings/deskbar/menu/</span>. У ньому Ви побачите файли і папки, які додаються до меню Deskbar після стандартних <span class="menu">Applications</span>, <span class="menu">Demos</span>, <span class="menu">Deskbar applets</span> та <span class="menu">Preferences</span>.<br />
@@ -127,9 +130,10 @@
 Ви створюєте символьне посилання на папку <span class="path">menu</span> в <span class="path">~/config/settings/deskbar/</span> і змінюєте назву на <span class="path">menu_entries</span>. З терміналу це можна зробити за допомогою команди:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Вікно
-</h4>
+<h3>Вікно
+</h3>
 <p>Нарешті, настройки для вікна самого Deskbar.</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Завжди зверху</span></td><td> </td><td>Deskbar завжди залишається над усіма іншими вікнами.</td></tr>
 <tr><td><span class="menu">Випливати автоматично</span></td><td> </td><td>Deskbar випливає на передній план, коли курсор миші торкається місця, де панель задач стикається з верхнім краєм екрана і відходить на задній план, коли курсор залишає область Deskbar.</td></tr>

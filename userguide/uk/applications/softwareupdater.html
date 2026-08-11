@@ -4,14 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2018-2022, Haiku. All rights reserved.
+ * Copyright 2018-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/apps-images/softwareupdater-icon_64.png" alt="softwareupdater-icon_64.png" width="64" height="64" />   SoftwareUpdater (Оновлення ПЗ)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -72,12 +73,14 @@
 <p><br /></p>
 <p>Програма оновлення програмного забезпечення SoftwareUpdater перевіряє всі активні репозитарії (дивіться розділ <a href="../preferences/repositories.html">Репозитарії</a>) на наявність оновлень до встановлених пакетів, включно з системними оновленнями самої Haiku. Програма завантажує і встановлює доступні оновлення усі за один раз.</p>
 <img src="../images/apps-images/softwareupdater.png" alt="SoftwareUpdater's main window" />
-<p>Після запуску, SoftwareUpdater перевіряє наявність оновлень для пакетів і відображає їх у списку з новою версією та коротким описом. Ви можете увімкнути опцію <span class="menu">Показати деталі</span>, щоб додати назву репозитарію для кожного пакета та показати як стару, так і нову версії пакета.</p>
+<p>After launching, SoftwareUpdater checks for updates to packages and displays them in a list with their new version and a short description.</p>
 <p>Після натискання кнопки <span class="button">Оновити зараз</span> почнеться завантаження усіх пакетів зі списку і їх подальша інсталяція.</p>
 <p>Залежно від того, які пакети було оновлено, Вам доведеться перезагрузити Haiku, щоб фактично завершити процес оновлення. Оновлені програми зазвичай потрібно лише перезапустити, тоді як зміни у самій Haiku можуть вимагати перезагрузки системи, щоб вони набули чинності.</p>
-<div class="box-info"><p>Кожного разу, коли пакети оновлюються, встановлюються чи видаляються (за допомогою SoftwareUpdater/HaikuDepot або в терміналі через <tt>pkgman</tt>), новий «стан системи» зберігається в <span class="path">/system/packages/administrative/</span>. Це дає змогу загрузити систему в будь-якому попередньому стані через <a href="../bootloader.html">опції загрузки</a>, що полегшує вирішення проблем, які можуть виникнути через встановлення/оновлення пакета, який не працює так як треба.</p>
-<p>Оскільки у каталогах «станів системи» зберігаються копії оновлених/видалених пакетів, «адміністративний» каталог з часом може значно збільшитися. Доки не з'явиться можливість автоматичного очищення, варто час від часу перевіряти розмір «адміністративного» каталогу і видаляти з нього найстаріші системні стани, які Вам, найімовірніше, не знадобляться.</p>
+<div class="box-info"><p>Every time packages are updated, installed or uninstalled (either with SoftwareUpdater/HaikuDepot or in Terminal via <tt>pkgman</tt>), a new "state" is saved at <span class="path">/system/packages/administrative/</span>. This makes it possible to boot into any past state from the <a href="../bootloader.html">Boot Options</a>, making it easy to solve issues that may arise from having installed/updated a package that doesn't work as expected.</p>
+<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time.</p>
 </div>
+<p>Under <span class="button">Settings…</span> you find an option to <span class="menu">Show more details</span> to include the name of the repository for each package and show both the old and new package versions.</p>
+<p>There's also a setting to limit the size of the above mentioned "administrative" folder. You can <span class="menu">Automatically clean up old install states</span> after every update to remove all states older than 30 days. The last 10 states are always preserved, even if they were older than 30 days.</p>
 <h2>
 <a id="downgrading" name="downgrading">Пониження до попередньої ревізії Haiku</a></h2>
 <p>Рідко, але можливо, що оновлення до останньої ревізії Haiku («hrev») запровадило регресію, з якою Ви не бажаєте миритися. Використовуючи меню параметрів загрузки можна завантажити попередній робочий стан (дивіться розділ <a href="../bootloader.html#troubleshooting">Boot Loader – Вирішення проблем</a>). Знайдіть останній робочий стан і загрузіться у нього.</p>

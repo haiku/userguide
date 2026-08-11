@@ -4,14 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Sergei Reznikov
- *		Rodastahm Islamov
+ *		Rus Islamov
  *		Humdinger
  *		Vsevolod
  *		Michael Smirnov
@@ -70,9 +70,10 @@
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Содержание</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Меню</a><br />
-	<a href="#tray">Трей</a><br />
-	<a href="#list-of-apps">Список запущенных приложений</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -80,11 +81,11 @@
 
 <p>Deskbar - это маленькая панель, которая по умолчанию располагается в правом верхнем углу экрана. Это аналог панели задач с кнопкой Пуск из Windows. Она содержит меню, из которого вы можете запустить приложения и настройки, трей с часами и снизу - список запущенных приложений.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position.<br />
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
 You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>Ухватившись за шероховатую область с другой стороны трея и перетаскивая ее влево или вправо, можно менять ширину Deskbar:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>При широком Deskbar в трее в один ряд помещается большее количество значков. Также реже обрезаются имена приложений в списке запущенных приложений, особенно если вы используете крупные значки.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -103,12 +104,13 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <li><p><b>Приложения, Демо, Апплеты, Настройки</b> - список установленных приложений, демо, апплетов и настроек.<br />Вы можете добавить ссылки на другие программы (или на любую папку, документ, запрос и т.д.), поместив их в <span class="path">~/config/settings/deskbar/menu/</span>.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Настройки Deskbar</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Панель настроек Deskbar разделена на три секции.</p>
 
-<h4>Приложения</h4>
+<h3>Приложения</h3>
 <p>Эти настройки влияют не на установленные приложения, а на поведение и вид списка запущенных приложений.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Сортировать приложения по имени</span></td><td> </td><td>Сортирует список запущенных приложений по алфавиту.</td></tr>
@@ -119,7 +121,7 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <tr><td><span class="menu">Размер значков</span></td><td> </td><td>Настраивает размер значков запущенных приложений. </td></tr>
 </table>
 
-<h4>Меню</h4>
+<h3>Меню</h3>
 <p>Первые несколько пунктов меню являются фиксированными, но вы можете настроить те, что находятся ниже пункта <span class="menu">Завершение работы... (Shutdown...)</span>.<br />
 Здесь вы можете установить количество недавно открытых документов, папок и приложений, отображаемых в меню Deskbar, и выбрать, хотите ли вы вообще их видеть.<br />
 Кнопка <span class="button">Изменить меню</span> откроет папку <span class="path">~/config/settings/deskbar/menu/</span>. В ней вы найдете файлы и папки, которые отображаются в Deskbar, по умолчанию это <span class="menu">Приложения (Applications)</span>, <span class="menu">Демо (Demos)</span>, <span class="menu">Апплеты (Deskbar Applets)</span> и <span class="menu">Настройки (Preferences)</span>.<br />
@@ -129,8 +131,9 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 Создайте ссылку на папку <span class="path">menu</span> по адресу <span class="path">~/config/settings/deskbar/</span> и переименуйте ее в <span class="path">menu_entries</span>. В Терминале это можно сделать следующей командой:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Окно</h4>
+<h3>Окно</h3>
 <p>Наконец, настройки окна Deskbar.</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Всегда сверху</span></td><td> </td><td>Deskbar всегда отображается поверх всех окон.</td></tr>
 <tr><td><span class="menu">Всплывать при наведении</span></td><td> </td><td>The Deskbar pops to the front when the mouse pointer touches where the Deskbar meets the screen edge, and is lowered when it leaves the Deskbar area.</td></tr>

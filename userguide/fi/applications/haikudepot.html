@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2013-2021 Haiku. All rights reserved.
+ * Copyright 2013-2025  Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,17 +62,19 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Hakemisto</td></tr>
-<tr class="index"><td><a href="#filter">Suodatin</a><br />
-                <a href="#list">Luettelo</a><br />
-                <a href="#info">Tietoalue</a><br />
-                <a href="#menu">Työkalut ja Näytä-valikot</a><br />
-                <a href="#account">Käyttäjätilin luominen</a><br />
-                <a href="#rating">Arvosanat ja kommentointi</a><br />
-                <a href="#logs">Diagnostiikkalokitiedostot</a><br />
-<a href="#tips">Vihjeet</a><br /></td></tr>
+<tr class="index"><td><a href="#filter">The Filter</a><br />
+                <a href="#list">The List</a><br />
+                <a href="#info">The Info Area</a><br />
+                <a href="#menu">The Menus</a><br />
+                <a href="#account">Creating a User Account</a><br />
+                <a href="#rating">Rating and Commenting</a><br />
+                <a href="#logs">Diagnostic Logs</a><br />
+                <a href="#tips">Tips</a><br />
+</td></tr>
 </table>
 
 <h2><img src="../../images/apps-images/haikudepot-icon_64.png" alt="haikudepot-icon_64.png" width="64" height="64" />HaikuVarasto</h2>
@@ -87,6 +89,11 @@
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
 <p>Toinen välilehti näyttää <span class="menu">Kaikki pakkaukset</span>, näyttöön vaihtuu pienempi kuvake ja lisätiedot järjestetään sarakkeisiin:</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
+<p>Molempien välilehtien pakkaukset voivat komeilla kahdella pienellä kuvakkeella nimen jäljessä:</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><img src="../../images/apps-images/haikudepot_installed.svg" width="20pt" /></td><td style="with:20px"></td><td>näytetään, kun pakkaus on asennettu.</td></tr>
+<tr><td><img src="../../images/apps-images/haikudepot_native.svg" width="20pt" /></td><td style="with:20px"></td><td>näyttää, että pakkaus on suunniteltu Haikulle, ei siirretty toiselta alustalta.</td></tr>
+</table>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="filter" name="filter">Suodatin</a></h2>
@@ -94,13 +101,13 @@
 <ul>
 <li><p><span class="menu">Luokka</span>-ponnahdusvalikko sallii sinun rajoittaa luettelon yksittäisiksi luokiksi kuten "<i>Audio</i>" tai "<i>Pelit</i>".</p></li>
 <li><p><span class="menu">Hakusanat</span>-tekstikenttäsuodattimet luetteloivat ne pakkaukset, jotka on kirjoitettu (välilyönneillä eroteltuina) merkkijonoina niminä tai kuvauksina.</p></li>
-<li><p>Valikkopalkin <span class="menu">Tietovarastot</span>-valikko määrittää, mitkä verkkovarastot kysellään. "<i>Paikallinen</i>"-pakkaukset ovat niitä, jotka on asennettu jostain muualta kuin verkkotietovarastosta; ehkä USB-tikulta tai joltain webbisivulta ladatut tai pakkaukset, jotka olet rakentanut itse.</p></li>
 </ul>
+<p>There are more ways to filter the list of packages in the <span class="menu">Repository</span> and <span class="menu">Show</span> menus described further down.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list" name="list">Luettelo</a></h2>
 <p>Kuten missä tahansa Seuraaja-ikkunassa, voit valita asiayhteysvalikosta mitkä sarakkeet näytetään napsauttamalla sarakeotsaketta hiiren kakkospainikkeella. Ykköspainike lajittelee luettelon tuon sarakkeen mukaiseksi. Tietysti voit järjestää sarakkeet uudelleen raahaamalla ne uuteen paikkaan.</p>
-<p>Sarake <span class="menu">Päivämäärä</span> näyttää milloin pakkaus on lisätty tai päivitetty. Tämän sarakkeen lajittelulla nähdään luettelon yläpäässä, että mikä on uutta tai päivitettyä.</p>
+<p>The <span class="menu">Date</span> column shows when a package was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
 <p>Pakkauksen sarakkeessa <span class="menu">Tila</span> voi olla yksi seuraavista tiloista:</p>
 <ul>
 <li><p><span class="menu">Aktiivi</span>: Pakkaus on asennettu ja valmiina käytettäväksi.</p></li>
@@ -133,12 +140,22 @@ Keskellä on käyttäjäkommentteja käyttäjätunnuksilla, heidän antamiensa t
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">HaikuVarasto- ja Näytä-valikko</a></h2>
+<a id="menu" name="menu">The Menus</a></h2>
+<h3>HaikuVarasto</h3>
 <p><span class="menu">HaikuVarasto</span>-valikosta ikkunan yläosassa löydät rivin <span class="menu">Päivitä tietovarastot</span>. Tämä pyytää tietovarastoista ajantasaisen luettelon kaikista saatavilla olevista pakkauksista.<br />
 Toinen rivi on <span class="menu">Hallinnoi tietovarastoja...</span>. Se avaa <a href="../preferences/repositories.html">Tietovarastot</a>-asetusohjelman tietovarastojen lisäämiseksi/poistamiseksi tai tietovarastojen ottamiseksi käyttöön tai niiden poistamiseksi käytöstä.<br />
 <span class="menu">Tarkista päivitykset</span> avaa <a href="../apps/softwareupdater.html">Ohjelmistopäivittäjän</a> päivitettyjen pakkausten etsimiseksi ja asentamiseksi.<br />
 <span class="menu">Asetukset...</span> avaa ikkunan nykyisin vain yhteen valitsimeen: <span class="menu">Jaa anonyymeja käyttäjätietoja HaikuDepotServer-palvelimen kanssa</span>.  Tietoja käytetään esimerkiksi kasvattamaan laskuria siitä, että kuinka usein pakkausta katsotaan ja asennetaan, mitä voidaan silloin käyttää, jos pakkaus ylennetään "Jakeluversiopakkaukset"-luetteloon.</p>
-<p>Valikosta <span class="menu">Näytä</span> voit valita pakkausten luettelosta <span class="menu">Kehityspakkaukset</span> ja <span class="menu">Lähdekoodipakkaukset</span>. Normaalikäyttäjille ne eivät ole kiinnostavia ja vain sekoittaisivat luetteloa. Ne ovat kuitenkin tärkeitä ihmisille, jotka tarvitsevat pakkausten kirjastoja, otsaketiedostoja jne. niistä riippuvien ohjelmien kehittämiseksi ja kääntämiseksi ohjelmakielistä toimivaksi ohjelmiksi.</p>
+<h3>Repositories</h3>
+<p>The <span class="menu">Repositories</span> menu of the menu bar determines which repos are being queried. "<i>Local</i>" packages are the ones that were installed from somewhere other than an online repo; maybe from a USB thumb drive or downloaded from some website or a package that you've built yourself.</p>
+<h3>Show</h3>
+<p>By picking one of three kinds of packages in the <span class="menu">Show</span> menu, you can limit the scope of packages to the ones you're actually interested in:</p>
+<ul><li><p><span class="menu">Desktop and non-desktop packages</span> - Shows every kind of packages, i.e. everything from applications to libraries needed by developers.</p></li>
+<li><p><span class="menu">Desktop packages only</span> - Shows only 'real' applications; the kind you'll find in the Deskbar, for example.</p></li>
+<li><p><span class="menu">Native desktop packages only</span> - Same as above, but limited to Haiku 'native' applications. Those are created especially for Haiku and were not ported from another system, which normally means coming with lots of heavy dependencies like KDE or Qt frameworks.</p></li>
+</ul>
+ 
+<p>Furthermore, you can choose to also display <span class="menu">Develop packages</span> and <span class="menu">Source packages</span> in the packages list. For the normal user those are of no interest and would only clutter the list. They are important, however, for people who need the libraries, headers etc. of a package to develop and compile programs depending on them.</p>
 <p>Kiinnostavampia ovat valitsimet, jotka näyttävät vain <span class="menu">Saatavilla olevat pakkaukset</span> ja <span class="menu">Asennetut pakkaukset</span>.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Índice</td></tr>
@@ -98,6 +99,7 @@ Tras haber establecido que es un fallo nuevo, haga que su información sea lo m�
 	<li><p>Describa el problema que esté experimentando. Intente ser tan preciso como pueda: describa el comportamiento actual, y el comportamiento esperado.</p></li>
 	<li><p>Describa qué pasos necesita realizar para exponer el fallo. Esto ayudará a los desarrolladores a reproducir el fallo.</p></li>
 	<li><p>Adjunte tanta información como tenga. Si es un fallo de interfaz de usuario, o un fallo en una de las aplicaciones, intente hacer una captura de pantalla presionando la tecla <span class="key">Impr pant</span>.</p></li>
+	<li><p>Use the English language if possible. This is the common language of the development team, and using it makes it more likely that developers knowledgeable about the issue can investigate. If you do not speak English, try to get some help from other people for reporting the problem, for example at Haiku's <a href="https://discuss.haiku-os.org/c/international">International Forum</a>.</p></li>
 </ul>
 	
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -145,6 +147,8 @@ El Registro de Eventos de Sistema (o syslog, por su nombre corto en inglés) con
 <p>La opción <span class="menu">Activar registro de depuración del sistema</span> (Enable debug syslog) en el menú <span class="menu">Depuración</span> (Debug menu) del cargador de arranque hace que el registro del sistema sea persistente. Si la opción <span class="menu">Guarda registro del sistema de la sesión anterior durante el arranque</span> (Save syslog from previous session during boot) ha sido activada en las opciones del cargador de arranque (como lo está de forma predeterminada), podrá encontrar el registro del sistema de su sesión anterior en <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
 Si no puede arrancar para obtener el archivo previous_syslog, tendrá que ingresar al menú del cargador de arranque manteniendo presionada la tecla <span class="key">MAYÚS</span> (o <span class="key">ESPACIO</span> si arranca en un sistema UEFI) mientras arranca.<br />
 En el menú <span class="menu">Depuración</span> del cargador de arranque, podrá encontrar las entradas <span class="menu">Mostrar registro del sistema de la sesión anterior</span> (Display syslog from previous session) y <span class="menu">Guardar registro del sistema de la sesión anterior</span> (Save syslog from previous session). La primera muestra el registro del sistema en pantalla, mientras que la segunda le permite guardarlo como un archivo en el disco duro. Téngase en cuenta que actualmente solamente se permite guardar el archivo en volúmenes FAT32. Si quiere hacerlo en una unidad USB pero la conectó demasiado tarde, por lo que no ha sido detectada, puede reiniciar la máquina y volver a entrar en el menú del cargador de arranque. Atención: no arranque ningún sistema operativo accidentalmente o los datos se perderán.</p>
+<p>Note that the syslog may include information about the system (applications running, and some applications will also store some details here). It is recommended to check the syslog to make sure you are not uploading personal data that you wouldn't want published. A complete syslog is sometimes more helpful, but in the case you want to remove something, you can edit the file as needed.</p>
+<p>When attaching the syslog to a ticket, just attach it directly, <b>don't</b> put it inside a zipfile or other archive.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">Salida de depuración en pantalla</a></h3>

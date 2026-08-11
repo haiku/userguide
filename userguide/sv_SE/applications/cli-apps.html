@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Jorma Karvonen
  *		deejam
  *		Victor Widell
  *
@@ -74,23 +75,23 @@
 The following isn't an exhaustive list of all Haiku-specific CLI apps, it serves just to highlight a few of the most useful to give you a taste. Feel encouraged to explore what's in the <span class="path">bin/</span> folders on your own a bit. Executing an app with the parameter <tt>--help</tt> shows the usage of the command and all its various options.</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-attributes" name="cli-attributes">Relating to attributes: <span class="cli">listattr</span>, <span class="cli">catattr</span>, <span class="cli">addattr</span>, <span class="cli">rmattr</span>, <span class="cli">copyattr</span></a></h3>
+<a id="cli-attributes" name="cli-attributes">Hänvisar till egenskaper: <span class="cli">listattr</span>, <span class="cli">catattr</span>, <span class="cli">addattr</span>, <span class="cli">rmattr</span>, <span class="cli">copyattr</span></a></h3>
 <p>These commands are used to display, read out, add and remove attributes of files. Remember that these meta data are currently only available on BFS formatted volumes. Moving files onto other file systems will strip all attributes!<br />
 All these commands are described in topic <a href="../attributes.html#attributes-terminal">Attributes in Terminal</a>.</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-index" name="cli-index">Relating to the index: <span class="cli">lsindex</span>, <span class="cli">mkindex</span>, <span class="cli">reindex</span>, <span class="cli">rmindex</span></a></h3>
+<a id="cli-index" name="cli-index">Hänvisar till innehåll: <span class="cli">lsindex</span>, <span class="cli">mkindex</span>, <span class="cli">reindex</span>, <span class="cli">rmindex</span></a></h3>
 <p>With these commands you list, make, reindex and remove attributes to BFS' index. Every volume has its own index, remember that when copying files from one volume to another.<br />
 These commands are described in topic <a href="../index.html">Index</a>.</p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-pkg" name="cli-pkg">Relating to package management: <span class="cli">package</span>, <span class="cli">pkgman</span></a></h3>
+<a id="cli-pkg" name="cli-pkg">Hänvisar till pakethantering: <span class="cli">package</span>, <span class="cli">pkgman</span></a></h3>
 <p>The <span class="cli">package</span> command is used to manage HPKG packages. Have a look at the article <a href="https://www.haiku-os.org/guides/daily-tasks/install-applications">Installing applications</a> to learn the very basics. Usually the tool <a href="https://github.com/haikuports/haikuports/wiki">haikuporter</a> is used to automatically create packages from so-called recipes.</p>
 <p><span class="cli">pkgman</span> is used to search, install, update and uninstall packages. Package repositories can be added, dropped and their package lists refreshed. A special kind of update is invoked with the parameter <tt>full-sync</tt>: it is more aggressive and also downgrades or removes packages, if necessary.<br />
 For more details on a parameter, append "--help", e.g. <tt>pkgman search --help</tt></p>
 
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="cli-scripting" name="cli-scripting">Useful scripting commands</a></h3>
+<a id="cli-scripting" name="cli-scripting">Värdefulla skriptkommandon</a></h3>
 <p>Here are a few commandline tools that are especially useful for scripting (see also topic <a href="../bash-scripting.html">Bash and Scripting</a>).</p>
 <table summary="scripting cli tools" border="0" cellpadding="2" cellspacing="0"> 
 	<tr><td><p><span class="cli">alert</span></p></td><td style="width:10px;"> </td>

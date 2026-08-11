@@ -11,7 +11,7 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Iah
- *		totish
+ *		Oleksa
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/prefs-images/virtualmemory-icon_64.png" alt="virtualmemory-icon_64.png" width="64" height="64" />   VirtualMemory (Файл підкачки)</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
@@ -71,7 +72,9 @@
 </table>
 <p>Механізм управління віртуальною пам'яттю дозволяє застосувати файл підкачки на жорсткому диску, якщо оперативну пам'ять можна використовувати більш розумно для інших речей. Отже, навіть якщо у Вас багато оперативної пам'яті, ідея пустити в дію віртуальну пам'ять ніколи не буде поганою.</p>
 <img src="../images/prefs-images/virtualmemory.png" alt="virtualmemory.png" />
-<p>Як правило, файл підкачки записується на завантажувальний розділ. Якщо на ньому бракує вільного місця, Ви можете вимкнути опцію «Автоматичне обслуговування підкачки» і вибрати інший змонтований розділ зі спливаючого меню. Розмір файлу підкачки встановлюється за допомогою повзунка нижче.<br />Якщо Ви часто стикаєтеся з перевантаженням диска через те, що система віртуальної пам'яті підкачує сторінки з даними, можете спробувати використати окремий жорсткий диск для файлу підкачки, щоб уникнути перевантажень вводу/виводу. Просто ще один розділ на тому самому жорсткому диску з Вашою системою/даними не допоможе. У такому випадку, збільшення оперативної пам'яті буде найбільш ефективним виходом…</p>
+<p>Normally, the swap file is written to the boot partition. If you're running low on free memory there, you can deactivate the <span class="menu">Automatic swap management</span> and choose another mounted partition from the popup menu. The swap file size is set with the slider below.<br />
+The actual file is named <tt>swap</tt> and is located either in <span class="path">/system/var/</span> when using the default /boot partition, or directly in the root of the partition you've selected.<br />
+If you often run into disk thrashing due to the virtual memory system swapping memory in and out, you can try to use a separate harddisk for you swap file to avoid I/O congestion. Simply another partition on the same harddisk with your system/data won't help. Upgrading your RAM is of course the most effective way to go…</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="button">Типові настройки</span></td><td> </td><td>повертає все до стандартних (типових) значень.</td></tr>
 <tr><td><span class="button">Відкат змін</span></td><td> </td><td>повертає настройки, які були встановлені до запуску VirtualMemory.</td></tr>

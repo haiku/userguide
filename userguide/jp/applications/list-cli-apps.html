@@ -4,11 +4,12 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2023, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Daniel Marth
+ *		Diver
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		mt
@@ -66,11 +67,11 @@
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />コマンドラインアプリケーションの一覧</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>場所:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
+<tr><td>場所:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">/boot/system/non-packaged/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
 </table>
 <p><br /></p>
-<p>Haiku に標準装備されているコマンドラインアプリケーションは、すべて <span class="path">/boot/system/bin</span> 内に存在します。ユーザー自身が作ったコマンドラインアプリケーションや、追加インストールしたコマンドラインアプリケーションは、.hpkg パッケージからインストールされた場合 <span class="path">~/config/bin/</span> に現れます。パッケージでない場合は、<span class="path">~/config/non-packaged/bin/</span> に入れられます。これらの場所はすべて PATH 環境変数に含まれているため、自動的に検出されます。<br />
-以下は、Haiku に標準装備されているコマンドラインアプリケーションの一覧表です。それぞれの動作について、ほんの短い説明があります。使い方についてさらに詳しい情報を見るには、<tt>--help</tt> という引数を付けて実行してください。</p>
+<p>Haiku に標準装備されているコマンドラインアプリケーションは、すべて <span class="path">/boot/system/bin</span> 内に存在します。追加でインストールされたコマンドラインアプリケーションも、.hpkg パッケージからインストールされれば同じ場所に (/home階層へインストールされた場合は <span class="path">~/config/bin/</span> へ) 表示されます。それ以外は、<span class="path">~/config/non-packaged/bin/</span> に入れられます。これらの場所はすべて PATH 環境変数に含まれているため、自動的に検出されます。<br />
+以下は、Haiku に標準装備されているコマンドラインアプリケーションの一覧表です。それぞれの動作について、短い説明があります。使い方についてさらに詳しい情報を見るには、<tt>--help</tt> という引数を付けて実行してください。</p>
 <p><br /></p>
 <p>索引:   <a href="#A">A – E</a>   ::   <a href="#F"> F – J </a>   ::   <a href="#K"> K – O </a>   ::   <a href="#P"> P – S </a>   ::   <a href="#T"> T – Z </a></p>
 <p><br /></p>
@@ -82,6 +83,7 @@
 <tr><td><tt>addattr</tt></td><td> </td><td>ファイルに属性を書き込みます。その際、型を考慮して値を変換します <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>alert</tt></td><td> </td><td>メッセージボックスの表示 <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>arp</tt></td><td> </td><td>システムの ARP キャッシュを操作。</td></tr>
+<tr><td><tt>autologin</tt></td><td> </td><td>自動ログイン機能を有効にする。</td></tr>
 <tr><td><tt>awk</tt></td><td> </td><td><tt>gawk</tt> を参照。</td></tr>
 <tr><td><tt>base64</tt></td><td> </td><td>標準出力へ、Base64 のエンコード / デコードを行う。</td></tr>
 <tr><td><tt>basename</tt></td><td> </td><td>"/パス/目的の/ファイル名" (/path/to/filename) 文字列からディレクトリと、オプションで拡張子を取り除く。</td></tr>
@@ -95,6 +97,7 @@
 <tr><td><tt>cat</tt></td><td> </td><td>ファイルを連結して、標準出力へ表示。</td></tr>
 <tr><td><tt>catattr</tt></td><td> </td><td>ファイル属性の内容表示 <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>cc</tt></td><td> </td><td>C コンパイラ</td></tr>
+<tr><td><tt>cddb_lookup</tt></td><td> </td><td>CDDB (Compact Disc Database) 検索を実行。</td></tr>
 <tr><td><tt>checkfs</tt></td><td> </td><td>ファイルシステムのチェックと修復 <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>checkitout</tt></td><td> </td><td>ソースコードを、そのレポジトリの URL でチェックアウト。</td></tr>
 <tr><td><tt>chgrp</tt></td><td> </td><td>ファイルのグループオーナーシップを変更。</td></tr>
@@ -156,6 +159,9 @@
 <tr><td><tt>gawk</tt></td><td> </td><td>パターン検索および処理言語</td></tr>
 <tr><td><tt>getarch</tt></td><td> </td><td>環境のコンパイラのバージョンを表示。</td></tr>
 <tr><td><tt>grep</tt></td><td> </td><td>パターン検索。</td></tr>
+<tr><td><tt>groupadd</tt></td><td> </td><td>システムに新しいグループを追加。</td></tr>
+<tr><td><tt>groupdel</tt></td><td> </td><td>システムからグループを削除。</td></tr>
+<tr><td><tt>groupmod</tt></td><td> </td><td>グループ設定を変更。</td></tr>
 <tr><td><tt>groups</tt></td><td> </td><td>各ユーザー名に対して、グループメンバーシップを表示。</td></tr>
 <tr><td><tt>gunzip</tt></td><td> </td><td><tt>gzip</tt> を参照。</td></tr>
 <tr><td><tt>gzexe</tt></td><td> </td><td>実行ファイルの解凍 / 圧縮。</td></tr>
@@ -164,6 +170,7 @@
 <tr><td><tt>head</tt></td><td> </td><td>ファイルの先頭行を表示。</td></tr>
 <tr><td><tt>hey</tt></td><td> </td><td>GUI アプリケーションをスクリプトで操作する小さなツール。</td></tr>
 <tr><td><tt>hostname</tt></td><td> </td><td>システムのホスト名を表示または設定。</td></tr>
+<tr><td><tt>i2c</tt></td><td> </td><td>I2C デバイスと通信。</td></tr>
 <tr><td><tt>id</tt></td><td> </td><td>ユーザーおよびグループ情報を表示。</td></tr>
 <tr><td><tt>ifconfig</tt></td><td> </td><td>ネットワークインターフェースを構成。</td></tr>
 <tr><td><tt>install</tt></td><td> </td><td>実行中のシステムを中断させることなく、インストール先へファイルをコピー。</td></tr>
@@ -187,6 +194,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>listarea</tt></td><td> </td><td>現在実行中のすべてのチームに対するエリアを一覧表示。</td></tr>
 <tr><td><tt>listattr</tt></td><td> </td><td>ファイルの属性を一覧表示 <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>listdev</tt></td><td> </td><td>ハードウェアデバイスを一覧表示。</td></tr>
+<tr><td><tt>listfont</tt></td><td> </td><td>インストール済フォントの一覧を表示。</td></tr>
 <tr><td><tt>listimage</tt></td><td> </td><td>現在実行中のチームに対するイメージ情報を一覧表示。</td></tr>
 <tr><td><tt>listport</tt></td><td> </td><td>チームによってまとめられた、システム中のすべての開いているポートを一覧表示。</td></tr>
 <tr><td><tt>listres</tt></td><td> </td><td>ファイルのリソースを一覧表示。</td></tr>
@@ -200,6 +208,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>logname</tt></td><td> </td><td>現在のユーザー名を表示。</td></tr>
 <tr><td><tt>ls</tt></td><td> </td><td>ディレクトリの内容を一覧表示。</td></tr>
 <tr><td><tt>lsindex</tt></td><td> </td><td>現在のボリューム / パーティション上のインデックス付けされた属性を表示 <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
+<tr><td><tt>mail</tt></td><td> </td><td>email を送信する。</td></tr>
 <tr><td><tt>mail2mbox</tt></td><td> </td><td>BeOS の e-mail ファイルを、Unix のメールボックスファイルに変換。</td></tr>
 <tr><td><tt>make</tt></td><td> </td><td>GNU make ユーティリティ</td></tr>
 <tr><td><tt>makebootable</tt></td><td> </td><td>指定した BFS パーティション / デバイスを、最初の 2 セクタにブートコードを書きこむことで起動可能にする。</td></tr>
@@ -225,6 +234,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>netstat</tt></td><td> </td><td>ネットワークコネクション、ルーティングテーブル、インターフェース統計、マスカレードコネクション、およびマルチキャストメンバーシップを表示します。</td></tr>
 <tr><td><tt>nl</tt></td><td> </td><td>それぞれのファイルに行番号を付けて表示。</td></tr>
 <tr><td><tt>nohup</tt></td><td> </td><td>ハングアップシグナルを無視してコマンドを実行。</td></tr>
+<tr><td><tt>notify</tt></td><td> </td><td>通知を送信  <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>nproc</tt></td><td> </td><td>利用できるプロセッシングユニットの数を表示。</td></tr>
 <tr><td><tt>od</tt></td><td> </td><td>ファイルの明確な表現を書き出す。</td></tr>
 <tr><td><tt>open</tt></td><td> </td><td>シェルから、アプリケーション / ドキュメントを起動 <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
@@ -236,6 +246,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>patch</tt></td><td> </td><td>diff ファイルをオリジナルのファイルに適用。</td></tr>
 <tr><td><tt>pathchk</tt></td><td> </td><td>無効な、またはポータブルでないファイル名を診断。</td></tr>
 <tr><td><tt>pc</tt></td><td> </td><td>プログラマー用電卓</td></tr>
+<tr><td><tt>pidof</tt></td><td> </td><td>実行中プログラムの process ID を取得。</td></tr>
 <tr><td><tt>ping</tt></td><td> </td><td>ICMP エコーリクエストをネットワークホストに送信。</td></tr>
 <tr><td><tt>pkgman</tt></td><td> </td><td>パッケージとパッケージリポジトリを管理。</td></tr>
 <tr><td><tt>pr</tt></td><td> </td><td>印刷のため、ファイルをページ割付または段組。</td></tr>
@@ -247,6 +258,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>ptx</tt></td><td> </td><td>入力ファイル中の単語の、コンテキストを含む変更されたインデックスを出力。</td></tr>
 <tr><td><tt>pwd</tt></td><td> </td><td>カレントディレクトリを表示。</td></tr>
 <tr><td><tt>query</tt></td><td> </td><td>Tracker の "式で検索 (Find by formula)" 機能をエミュレートするシェルユーティリティ <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
+<tr><td><tt>quicktour</tt></td><td> </td><td>Haiku クイックツアーを開く。</td></tr>
 <tr><td><tt>quit</tt></td><td> </td><td>アプリケーションを終了。</td></tr>
 <tr><td><tt>ramdisk</tt></td><td> </td><td>ラムディスクを作成 <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>rc</tt></td><td> </td><td>リソースコンパイラ</td></tr>
@@ -255,6 +267,8 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>reindex</tt></td><td> </td><td>既存のファイルの属性を、新規に作成したインデックスに入れる <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>release</tt></td><td> </td><td>セマフォを開放。</td></tr>
 <tr><td><tt>renice</tt></td><td> </td><td>実行中プロセスの優先度を変更。</td></tr>
+<tr><td><tt>resattr</tt></td><td> </td><td>ファイルの属性を管理。</td></tr>
+<tr><td><tt>resizefs</tt></td><td> </td><td>ファイルシステムのリサイズ。</td></tr>
 <tr><td><tt>rm</tt></td><td> </td><td>ファイルやディレクトリを削除。</td></tr>
 <tr><td><tt>rmattr</tt></td><td> </td><td>ファイルから属性を削除 <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>rmdir</tt></td><td> </td><td>ディレクトリを削除。</td></tr>
@@ -263,10 +277,13 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>route</tt></td><td> </td><td>ネットワークルートを一覧表示および操作します。</td></tr>
 <tr><td><tt>safemode</tt></td><td> </td><td>システムがセーフモードで実行されているかどうかチェック。</td></tr>
 <tr><td><tt>screen_blanker</tt></td><td> </td><td>screen blanker を起動。</td></tr>
+<tr><td><tt>screeninfo</tt></td><td> </td><td>画面の情報を表示。</td></tr>
 <tr><td><tt>screenmode</tt></td><td> </td><td>スクリーンモードの表示 / 設定  <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
+<tr><td><tt>screenshot</tt></td><td> </td><td>スクリーンショットを撮る。</td></tr>
 <tr><td><tt>sdiff</tt></td><td> </td><td>隣り合ったファイルの違いを表示またはマージ。</td></tr>
 <tr><td><tt>seq</tt></td><td> </td><td>一連の数字を表示。</td></tr>
 <tr><td><tt>setarch</tt></td><td> </td><td>環境を特定のコンパイラのバージョンに設定、</td></tr>
+<tr><td><tt>setcontrollook</tt></td><td> </td><td>GUI の control look (外観) を設定。</td></tr>
 <tr><td><tt>setdecor</tt></td><td> </td><td>ウィンドウデコレーターの表示 / 設定。</td></tr>
 <tr><td><tt>settype</tt></td><td> </td><td>ファイルの MIME タイプ、シグネチャー、および優先アプリケーションを設定。</td></tr>
 <tr><td><tt>setversion</tt></td><td> </td><td>ファイルのバージョンを表示。</td></tr>
@@ -289,6 +306,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>sum</tt></td><td> </td><td>それぞれのファイルに対して、チェックサムとブロックカウントを表示。</td></tr>
 <tr><td><tt>sync</tt></td><td> </td><td>ディスクへのブロック変更を強制し、スーパーブロックを更新。</td></tr>
 <tr><td><tt>sysinfo</tt></td><td> </td><td>システム情報を表示。</td></tr>
+<tr><td><tt>system_time</tt></td><td> </td><td>システム時間情報を表示。</td></tr>
 <tr><td colspan="3"><a id="T" name="T"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>T - Z</h2></a></td></tr>
 <tr><td><tt>tac</tt></td><td> </td><td>行を逆順にして、ファイルを連結し表示。</td></tr>
 <tr><td><tt>tail</tt></td><td> </td><td>ファイルの末尾 10 行を表示。</td></tr>
@@ -317,6 +335,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>unlink</tt></td><td> </td><td>unlink 関数を呼んで、指定のファイルを削除。  </td></tr>
 <tr><td><tt>unmount</tt></td><td> </td><td>ボリュームをマウント解除。</td></tr>
 <tr><td><tt>unrar</tt></td><td> </td><td>rar アーカイブを解凍。</td></tr>
+<tr><td><tt>userdel</tt></td><td> </td><td>システムからユーザーを削除。</td></tr>
 <tr><td><tt>unshar</tt></td><td> </td><td>shar アーカイブを解凍。</td></tr>
 <tr><td><tt>untrash</tt></td><td> </td><td><tt>trash</tt> を参照。</td></tr>
 <tr><td><tt>unzip</tt></td><td> </td><td>zip アーカイブを解凍。</td></tr>
@@ -325,6 +344,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>uptime</tt></td><td> </td><td>システムが開始してからの日付と時間、および経過時間を表示。 </td></tr>
 <tr><td><tt>urlwrapper</tt></td><td> </td><td>URL MIME 形式を直接扱えないコマンドラインあるいはほかのアプリケーションを包む。  </td></tr>
 <tr><td><tt>useradd</tt></td><td> </td><td>新規ユーザーを作成。</td></tr>
+<tr><td><tt>userguide</tt></td><td> </td><td>Haiku ユーザーガイドを開く。</td></tr>
 <tr><td><tt>uudecode</tt></td><td> </td><td>uuencode されたファイルをデコード。</td></tr>
 <tr><td><tt>uuencode</tt></td><td> </td><td>離れたシステムにファイルをメールで送れるように、uuencode する。</td></tr>
 <tr><td><tt>vdir</tt></td><td> </td><td>ファイルに関する情報を一覧表示。</td></tr>
@@ -333,9 +353,12 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>waitfor</tt></td><td> </td><td>特定のスレッドが現れるまで待つ <a href="cli-apps.html">(Haiku 独自)</a>。</td></tr>
 <tr><td><tt>watch</tt></td><td> </td><td>プログラムを一定期間ごとに実行。</td></tr>
 <tr><td><tt>wc</tt></td><td> </td><td>ファイルの段落、単語、および文字 (バイト) の数を表示。</td></tr>
+<tr><td><tt>welcome</tt></td><td> </td><td>Haiku Welcome page を開く.</td></tr>
 <tr><td><tt>wget</tt></td><td> </td><td>HTTP、HTTPS、または FTP を経由してファイルをダウンロードするツール。</td></tr>
 <tr><td><tt>which</tt></td><td> </td><td>コマンドを探す。</td></tr>
 <tr><td><tt>whoami</tt></td><td> </td><td>現在の有効なユーザー ID と関係のあるユーザー名を表示。</td></tr>
+<tr><td><tt>WindowShade</tt></td><td> </td><td>ウィンドウのデコレータカラーを調整。</td></tr>
+<tr><td><tt>writembr</tt></td><td> </td><td>デバイスにマスターブートレコード (MBR) を書き込む。</td></tr>
 <tr><td><tt>xargs</tt></td><td> </td><td>標準入力からコマンドラインを構築し実行。</td></tr>
 <tr><td><tt>xres</tt></td><td> </td><td>リソースの一覧表示と操作。</td></tr>
 <tr><td><tt>yes</tt></td><td> </td><td>強制終了されるまで文字列を繰り返し表示。</td></tr>

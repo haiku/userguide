@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -76,6 +76,7 @@
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
 <p>在顶部的文本框中输入搜索的字符，然后按下<span class="key">RETURN</span> 或者点击 <span class="button">Search</span> 启动搜索。如果选中了<span class="menu">Show lines</span> ，匹配记录将会自动展开，显示包含该搜索字符的文件。</p>
+<p>By using the <span class="menu">File filter</span>, you can further limit the search to files with a certain name. "<tt>*</tt>" is used as wildcard, as examples "<tt>*Window.cpp</tt>" will only search in files ending in "Window.cpp", "<tt>*.h</tt>" only searches in header files.</p>
 
 <p>对于其他的菜单项，在下面将会给出相应的解释：</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
@@ -87,13 +88,16 @@
 <tr><td><span class="menu">Open selection</span></td><td></td><td><span class="key">ALT</span> <span class="key">O</span></td><td></td><td>在首选程序中打开当前选中文件（与双击文件相同）。 如果它支持文本编辑器（例如 Pe），您可以跳转至匹配字符所在的确切的行。</td></tr>
 <tr><td><span class="menu">Show files in Tracker</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>在 Tracker 中打开当前选中文件所在的文件夹。</td></tr>
 <tr><td class="onelinetop"><span class="menu">Copy text to clipboard</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>复制当前选中项目至剪贴板。</td></tr>
+<tr><td colspan="5"><p>These actions are also available from a context menu when right-clicking a result or a selection of results.</p></td></tr>
 <tr><td colspan="5"><h3>Settings 菜单</h3></td></tr>
 <tr><td colspan="3" class="onelinetop"><span class="menu">Skip folders starting with a dot</span></td><td> </td><td>如果处在 “unixy” 环境下，所有的管理员文件隐藏在 “<tt>.folders/</tt>” 下，它将会非常有用。 源版本控制系统 SVN 和 CVS 属于此类程序，而且在Haiku中使用非常广泛。</td></tr>
-<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="http://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
+<tr><td colspan="3"><span class="menu">Regular expression</span></td><td> </td><td>TextSearch uses the command line tool <span class="cli">grep</span>. For it, special characters like <tt>'"*\$?!</tt> and spaces have to be escaped with a <tt>\</tt>. Activating this setting means you have to do this yourself, but in exchange grants you the power of <a href="https://en.wikipedia.org/wiki/Regular_expression" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">regular expressions</a>.</td></tr>
 <tr><td colspan="3"><span class="menu">Text files only</span></td><td> </td><td>文本搜索目前仅可用于查找普通文本文件中的字符。如果撤销该设置，它将会对所有类型的文件进行搜索。</td></tr>
 <tr><td colspan="3"><span class="menu">Open files in code editor</span></td><td> </td><td>Forces files to be opened in the preferred code editor (that handles text/x-source-code). Otherwise a file will be opened in whatever app is set for its filetype. Useful, for example, when editing HTML files that normally would open in your browser.</td></tr>
 <tr><td colspan="5"><h3>History 菜单</h3></td></tr>
-<tr><td colspan="4"></td><td>包含最近查询的字符。</td></tr>
+<tr><td colspan="4"></td><td>Contains recently used search strings. <span class="menu">Clean history</span> empties the list of previous search terms.
+<div class="box-info">You can quickly move up and down the search history by pressing <span class="key">↑</span> and <span class="key">↓</span> while the cursor is in the search text field.</div> 
+</td></tr>
 <tr><td colspan="5"><h3>Encoding 菜单</h3></td></tr>
 <tr><td colspan="4"></td><td>根据需要选择不同的字符编码。</td></tr>
 </table>

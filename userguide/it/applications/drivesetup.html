@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -65,6 +65,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzione di questa pagina non è stata ancora completata. Finché non lo sarà, le parti non tradotte saranno visualizzate in inglese.</div>
 
 <h2><img src="../../images/apps-images/drivesetup-icon_64.png" alt="drivesetup-icon_64.png" width="64" height="64" />Gestione Disco</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -89,7 +90,7 @@ Oltre alle familiari icone per dischi rigidi, lettori CD, penne USB, ecc., ve ne
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
 <td>Una partizione che è stata montata in modalità sola lettura.</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>Un file immagine montato come disco (vedi anche il comando <a href="./cli-apps.html">diskimage</a>)</td></tr>
+<td>A mounted image file (see <a href="#diskimages">Disk images</a> below)</td></tr>
 </table>
 <p>Una colta montata, una barra di colore mostra quanto spazio è disponibile sulla partizione. Il colore codifica il tipo di partizione:</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
@@ -117,12 +118,22 @@ Oltre alle familiari icone per dischi rigidi, lettori CD, penne USB, ecc., ve ne
 <p>Prima di poter usare, o anche solo montare la partizione appena creata, questa deve essere formattata secondo un file system.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">Formattazione di una partizione</a></h2>
+<a id="formatting" name="formatting">Formatting a partition</a></h2>
 <p>Solo le partizioni non montate possono essere formattate scegliendo un file system dal sottomenu <span class="menu">Partizione | Formatta</span>. Il <span class="menu">Be File System</span> (BFS) è una scelta obbligata per il disco di avvio di Haiku ed è una raccomandato anche per le partizioni che ospiteranno dati da utilizzare con Haiku. Solo le partizioni formattate come BFS avranno il supporto per le interrogazioni e gli attributi dei file tipici di Haiku.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>Da qui è possibile impostare il nome per la partizione e le dimensioni di ogni blocco. Sono raccomandati 2048 byte per ciascun blocco ma, se si hanno necessità specifiche, si possono impostare valori più grandi o più piccoli.<br />
 L'inizializzazione cancellerà permanentemente ogni dato presente su quella partizione!</p>
 <div class="box-stop">La formattazione distruggerà tutti i dati presenti sulla partizione!</div>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="diskimages" name="diskimages">Disk images</a></h2>
+<p>The menu <span class="menu">Disk image…</span> provides several actions related to image files of disks/partitions.</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="4">
+<tr><td class="onelinetop"><span class="menu">Un/Register disk image…</span></td><td width="20px"></td><td>Registering makes an image file available to the system; it appears as a regular volume you can mount, edit or copy files to/from it, format etc. See also the <a href="./cli-apps.html">diskimage command</a>.</td></tr>
+<tr><td><span class="menu">Save image…</span></td><td></td><td>Saves the currently selected partition as an image file. The resulting file will have the same size as the partition, so make sure the destination of the file has enough free space.</td></tr>
+<tr><td><span class="menu">Write image…</span></td><td></td><td>Lets you write an image file to the selected partition/volume.
+<div class="box-stop" _translation_id="6113">Writing an image will destroy all data on the partition/volume!</div></td></tr>
+</table>
 </div>
 </div>
 

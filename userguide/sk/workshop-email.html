@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,15 +64,16 @@
 
 <div id="content">
 <div>
+<div class="box-info">Preklad tejto stránky zatiaľ nie je dokončený. Dovtedy sa nedokončené časti zobrazia v anglickom origináli.</div>
 
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Obsah</td></tr>
 <tr class="index"><td>
-	<a href="#mailsystem">Poštový systém Haiku</a><br />
-	<a href="#status">Používateľom definované stavy</a><br />
-	<a href="#queries">Používanie požiadaviek</a><br />
-	<a href="#tips">Ďalšie tipy</a>
+	<a href="#mailsystem">Haiku's mail system</a><br />
+	<a href="#labels">Using labels</a><br />
+	<a href="#queries">Using queries</a><br />
+	<a href="#tips">More tips</a>
 </td></tr>
 </table>
 
@@ -102,14 +103,18 @@ Keďže sú to nezávislé súbory, používanie prehliadača iného ako Haiku <
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="status" name="status">Používateľom definované stavy</a></h2>
+<a id="labels" name="labels">Using labels</a></h2>
 <p>Keď prechádzate cez vašu novú poštu, možno sa chcete vrátiť k niektorým emailom neskôr, viac o nich porozmýšľať. Hoci by ste mohli použiť menu Pošty <span class="menu"> Zavrieť a | Ponechať ako nový</span>, aby ste ich ponechali vo vašej požiadavke „<i>Nové správy</i>“, veci majú tendenciu týmto spôsobom sa hromadiť...</p>
 <p>Jedno riešenie je samozrejme začať písať odpoveď a uložiť ju v rozpísaných. Ale ak sa nechystáte poslať odpoveď a iba si chcete neskôr znovu prečítať email, nie je to ideálne.</p>
-<img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>Radšej použite <span class="menu">Zavrieť a | Nastaviť na...</span> na vytvorenie nového stavu a použite ho na kategorizovanie emailov. Napríklad, môžte stav nazvať „<i>Neskôr</i>“ a potom oň požiadať, keď si nájdete viac času .<br />
-Alebo môžete použiť rôzne stavy pre rôzne projekty. Napríklad, vytvoril som stav „<i>HUG</i>“ (pre „používateľskú príručku Haiku“) pod ktorou som zozbieral všetky emaily, ktoré môžu ovplyvniť obsah používateľskej príručky, ako začleňovacie správy o zmenách kódu, ktoré menia alebo zavádzajú nejakú funkciu alebo niečo, čo cítim že by mohlo zlepšiť používateľskú príručku.<br />
-V každom prípade, snažte sa, aby názov stavu bol krátky. Takto sa vždy zmestí do stĺpca „Stav“ s bežnou šírkou v Trackeri.</p>
-<p>Nemusíte otvárať emaily aplikáciou <span class="app">Pošta</span>, aby ste nastavili ich stav. Doplnkami Trackera  <span class="app">Označiť ako prečítané </span>a <span class="app">Označiť ako...</span> môžte označiť niektorý súbor emailu a nastaviť ich stav naraz.</p>
+<img src="images/workshop-email-images/labels.png" alt="labels.png" /> 
+<p>Better use <span class="menu">Set label</span> to create a new label with <span class="menu">Label as…</span> or choose an existing label to categorize your mail. For example, you could call the label "<i>Later</i>", and then query for that when you find more time.<br />
+Or you use different labels for specific projects. For example, I created a label "<i>HUG</i>" (for "Haiku user guide") under which I collect every mail that may influence the contents of the user guide, like commit messages about code changes that alter or introduce some feature or anything else I feel could improve the user guide.<br />
+In any case, try to keep the label name short. That way it always fits in a normally wide "Label" column in Tracker.</p>
+<p>Once you've dealt with the email, you can use <span class="menu">Remove label</span> to clear the email's label attribute.</p>
+<p>Labels are saved in <span class="path">~/config/settings/Mail/labels</span>, which is opened when you choose <span class="menu">Manage labels…</span>. Here you can add, delete or rename your labels. Conveniently, each label file is also a query, meaning you can doubleclick it to start a query for emails with that label. Handy to check first before deleting a label that you think you don't need anymore.</p>
+<p>You don't have to open an email with the <span class="app">Mail</span> application to set its label. With the Tracker add-ons <span class="app">Label as… </span> you can select some email files and set or remove their label in one go.</p>
+<div class="box-info">BeOS - and Haiku for a long time - misused the email status attribute <tt>MAIL:status</tt> for labeling mails. If you used such custom statuses, it's recommended you migrate them to the label attribute <tt>MAIL:label</tt>.
+</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -117,13 +122,14 @@ V každom prípade, snažte sa, aby názov stavu bol krátky. Takto sa vždy zme
 <p>Samozrejme, môžte si vybrať priečinok na uloženie vašej pošty, môžte ho otvoriť a voilà, tu je vaša pošta. Ale časom sa priečinok preplní a zobrazenie všetkého trvá dlhšie a dlhšie ako tisíce súborov a ich atribúty treba analyzovať a zoradiť. Väčšinou sa naozaj nestaráte o dva roky staré e-maily od nigérijských princov a ich problémy s dedičstvom...</p>
 <div class="box-info">Veľa času počas plnenia adresára sa strávi pri vkladaní súborov čítaných z disku do správneho poradia a ich zobrazenie v okne. Ak musíte otvoriť priečinok s veľkým množstvom súborov, môžte si skrátiť čakanie urobením okna Trackera „neviditeľným“ alebo ho minimalizovať alebo prepnúť na inú pracovnú plochu. Sledujte <a href="desktop-applets/processcontroller.html">Monitor aktivity</a>, aby ste videli ako to ovplyvňuje využitie CPU. </div>
 <p><a href="queries.html">Požiadavky</a>, na pomoc!</p>
-<p>Použitím požiadaviek môžte zúžiť zobrazenie vašej pošty. V podstate, ikona poštovej schránky v Paneli používa požiadavky.</p>
+<p>By using queries, you can narrow down the view of your mails. Actually, the mailbox icon in the Deskbar uses queries. Right-click the icon to open its context menu:</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
 <p><span class="menu">Otvoriť rozpísané</span> podmenu spustí požiadavku pre stavu „<i>Rozpísané</i>“, ktorá je nastavená <span class="app">Poštou</span>, keď uložíte správu.</p>
 <p><span class="menu">Otvoriť priečinok Doručené</span> a <span class="menu">Otvoriť priečinok Pošta</span> sú iba odkazy na obyčajné priečinky (a podľa mňa nie veľmi užitočné)</p>
 <p><span class="menu"># nová poštová správa</span> podmenu je obsadené požiadavkou na email so stavom „<i>Nové</i>“ (mimochodom, rovnaká požiadavka sa používa na zmenu ikony poštovej schránky, aby v sebe zobrazovala nejaké písmená)</p>
 
-<p>Do tohto kontextového menu môžte pridať aj svoje vlastné požiadavky (alebo priečinky, aplikácie, skripty atď.), ich pridaním alebo pridaním odkazov na nich do <span class="path">~/config/settings/Mail/Menu Links</span>.</p>
+<p>You can add your own queries (or folders, applications, scripts etc.) to that context menu too, by putting them or links to them into <span class="path">~/config/settings/Mail/Menu Links</span>. In the screenshot above, for example, the label folder <span class="path">~/config/settings/Mail/labels</span> was linked there, to have quick access to labeled emails from the the mailbox icon of the Deskbar.</p>
+
 <div class="box-info">Požiadavka <span class="path">~/config/settings/Mail/mailbox</span> je špeciálny prípad: Spustí sa pri kliknutí na ikonu poštovej stránky v Paneli. Ak chcete zmeniť toto správanie, môžte ho nahradiť iným súborom (alebo odkazom na súbor, jednoducho ho pomenujte „<i>mailbox</i>“. Nemusí to byť požiadavka, odkaz na priečinok požiadaviek alebo skript alebo aplikácia tiež funguje.</div>
 
 <h3>
@@ -134,7 +140,7 @@ V každom prípade, snažte sa, aby názov stavu bol krátky. Takto sa vždy zme
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /></td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /></td></tr>
 
-<tr align="center"><td>Toto nájde všetku poštu s vlastným stavom „<i>Neskôr</i>“.</td>
+<tr align="center"><td>This finds all mails with the label "<i>Later</i>".</td>
 <td>Toto nájde všetku poštu za posledné 2 dni.</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /></td>
@@ -150,7 +156,8 @@ V každom prípade, snažte sa, aby názov stavu bol krátky. Takto sa vždy zme
 <ul>
 <li><p>Ak neuložíte požiadavku ako „<i>Požiadavka</i>“ ale ako „<i>šablóna Požiadavky</i>“, nezobrazí sa výsledné okno ale okno Nájsť... Takto môžte napríklad, jednoducho vymeniť hľadaný reťazec za predmet alebo odosielateľa alebo zmeniť časový limit „<i>2 dni</i>“ na „<i>3 dni</i>“.</p></li>
 <li><p> Aktivácia, „filtra počas písania“ v <a href="tracker.html#tracker-preferences">Predvoľbách Trackera </a> povoľuje veľmi rýchle filtrovanie výsledkov požiadaviek ešte viac. Často to stačí na žiadanie všetkých mailov za posledné 3 dni a ísť tam so zadávacím filtrovaním. Veľká výhoda je, že nemusíte vyberať, ktorý atribút prehľadávate, všetky zobrazené sú zahrnuté vo vyhľadávaní. </p></li>
-<!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
+<li><p>When you're managing your emails via queries - and why wouldn't you? - you should configure a <i>DefaultQueryTemplate</i> that shows all the email attributes you normally want to see in a query result window, like <i>Status</i>, <i>From</i>, <i>Subject</i>, <i>When</i>.<br />
+First, you create a folder <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates/text_x-email</span>. Then do one of your usual email queries and change the displayed attributes and window size and position of the result window to your liking. Now simply <span class="menu">Copy layout</span> from its <span class="menu">Attributes</span> menu, open the newly created <span class="path">text_x-email</span> folder, and <span class="menu">Paste layout</span> there.</p></li>
 </ul>
 
 </div>

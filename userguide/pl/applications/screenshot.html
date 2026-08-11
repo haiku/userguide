@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tłumaczenie tej strony jest niekompletne. Nieukończone części wyświetlane są w języku angielskim.</div>
 
 <h2><img src="../../images/apps-images/screenshot-icon_64.png" alt="screenshot-icon_64.png" width="64" height="64" />Screenshot</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -72,14 +73,28 @@
 <p><br /></p>
 <p>Zrzuty ekranu można przechwytywać uruchamiając aplikację Screenshot lub wciskając klawisz <span class="key">PRINT</span>.</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>W oknie aplikacji możesz przełączyć przechwytywanie pełnego ekranu lub tylko aktywnego okna, oraz zdecydować czy obramowanie i wskaźnik myszy mają być uwzględnione. Możliwe jest również ustawienie opóźnienia przed wykonaniem zrzutu.</p>
+<p>To the right of the preview at the top, you can switch between different modes and options:<br />
+Either opt for the <span class="menu">Whole screen</span>, or just the <span class="menu">Active window</span> (provided there is one at the time you take the screenshot). If you just want to capture only a part of the screen, click <span class="button">Select area</span> under the preview (see below). Once selected, the <span class="menu">Select area</span> mode is enabled and you can now switch between <span class="menu">Whole screen</span>, <span class="menu">Active window</span>, and <span class="menu">Selected area</span>.</p>
+<p>Besides these modes, you can also decide to <span class="menu">Include window border</span> and <span class="menu">Include mouse pointer</span>.</p>
 <p>Poniżej ustawia się nazwę, format, i lokację, które będą użyte po kliknięciu przycisku <span class="button">Zapisz</span>. Zamiast zapisywania pliku możesz skopiować zrzut do schowka przyciskiem obok <span class="button">Skopiuj do schowka</span>, aby wkleić go później w innej aplikacji. Przycisk <span class="button">Nowy zrzut ekranu</span> umożliwia ponowne przechwycenie ekranu.</p>
 <p>Wszystkie ustawienia zostają zapamiętane na następny raz, dzięki czemu możliwe jest używanie wygodnych skrótów klawiszowych:</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>Wykonuje zrzut ekranu bez opóźnienia i uruchamia aplikację Screenshot.</td></tr>
 <tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">PRINT</span></td><td></td><td>Wykonuje zrzut bez otwierania okna aplikacji, korzystając z zapamiętanych ustawień.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">PRINT</span></td><td></td><td>Jak wyżej, z tą różnicą, że zrzut zostaje zapisany do schowka zamiast do pliku.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">PRINT</span></td><td></td><td>Takes a screenshot with zero delay and enters the Select area mode right away.</td></tr>
 </table>
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+Selecting an area</h3>
+<p>When you click <span class="button">Select area</span>, the window of the Screenshot app is hidden, and you'll see the whole screen slightly darkened.</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>You can now define a selection box that'll highlight the screenshot area. Done with the <i>left</i> mouse button, the area is applied as soon as you lift your finger from the button and the Screenshot window pops up again.</p>
+<p>If you create the selection box while holding <span class="key">SHIFT</span> or with the <i>right</i> mouse button, the box will have handles at the corners that'll let you resize the selection. You can also drag the selection box around.</p>
+<p>The selection is applied with a double-click or by pressing <span class="key">ENTER</span>.<br />
+<span class="key">ESC</span> cancels the selecting process.</p>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 Wykonywanie zrzutów ekranu z Terminala</h2>
@@ -106,8 +121,11 @@ OPTIONS
                         [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
   -c, --clipboard       Copies the screenshot to the system clipboard without
                         showing the application window
+  -a, --area            Select an area of the screen to capture
 
-Note: OPTION -b, --border takes only effect when used with -w, --window
+Note:
+Option -b, --border takes only effect when used with -w, --window
+Option -a, --area does not take effect with -s, --silent or -c, --clipboard
 </pre>
 
 </div>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,15 +63,16 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Tabele</td></tr>
 <tr class="index"><td>
-	<a href="#mailsystem">Sisteme de pueste in Haiku</a><br />
-	<a href="#status">Doprâ i stâts personalizâts</a><br />
-	<a href="#queries">Doprâ lis interogazions</a><br />
-	<a href="#tips">Altris sugjeriments</a>
+	<a href="#mailsystem">Haiku's mail system</a><br />
+	<a href="#labels">Using labels</a><br />
+	<a href="#queries">Using queries</a><br />
+	<a href="#tips">More tips</a>
 </td></tr>
 </table>
 
@@ -102,14 +103,18 @@ Miorâsi in cualsisei di chestis areis dal sisteme al zove no nome pe gjestion d
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="status" name="status">Doprâ i stâts personalizâts</a></h2>
+<a id="labels" name="labels">Using labels</a></h2>
 <p>Cuant che tu sgarfis tes tôs e-mails a pene rivadis, magari tu desideris tornâ a cualchidune di chês plui indenant, salacor par pensâ a fonts. Ma man a man che tu dopris il menù di Mail <span class="menu">Siere e | Lasse come Gnûf</span> par tignîlis te tô interogazion "<i>Gnûfs messaçs</i>", cul timp a lâ la robe e pues intassâsi in cheste maniere...</p>
 <p>Pal sigûr une soluzion e podarès sei chê di scomençâ une rispueste e salvâle come stampon. Ma se no tu programis di scrivi une rispueste e tu desideris dome tornâ a leile plui indenant, chest nol è ideâl.</p>
-<img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>Al è miôr doprâ <span class="menu">Siere e | Met a...</span> par creâ un gnûf stât e doprâ chel par categorizâ la tô pueste. Par esempli, tu podaressis clamâ il stât "<i>Aprofondî</i>", e cussì interogâ chel cuant che tu varâs plui timp.<br />
-Opûr tu puedis doprâ stâts diferents par specifics progjets. Par esempli, o ai creât un stât "<i>HUG</i>" (par "Haiku User Guide") e sot di chel o colezioni ogni e-mail che e pues influençâ i contignûts de vuide utent, come i messaçs di consegne (commit) su modifichis dal codiç sorzint, che magari al modifiche o al introdûs cualchi funzionalitât, o cualsisei altre robe che o sint che e podarès miorâ la vuide utent.<br />
-Dut câs, cîr di tignî il non dal stât curt. Cussì al sta simpri te largjece normâl de colone "Stât" in Tracker.</p>
-<p>No tu âs di vierzi une e-mail cu la aplicazion <span class="app">Mail</span> par cambiâ il so stât. Cui components adizionâi di Tracker <span class="app">Mark as Read </span> e <span class="app">Mark as...</span> tu puedis selezionâ cualchi file di pueste e cambiâ il lôr stât cence trai un colp.</p>
+<img src="images/workshop-email-images/labels.png" alt="labels.png" /> 
+<p>Better use <span class="menu">Set label</span> to create a new label with <span class="menu">Label as…</span> or choose an existing label to categorize your mail. For example, you could call the label "<i>Later</i>", and then query for that when you find more time.<br />
+Or you use different labels for specific projects. For example, I created a label "<i>HUG</i>" (for "Haiku user guide") under which I collect every mail that may influence the contents of the user guide, like commit messages about code changes that alter or introduce some feature or anything else I feel could improve the user guide.<br />
+In any case, try to keep the label name short. That way it always fits in a normally wide "Label" column in Tracker.</p>
+<p>Once you've dealt with the email, you can use <span class="menu">Remove label</span> to clear the email's label attribute.</p>
+<p>Labels are saved in <span class="path">~/config/settings/Mail/labels</span>, which is opened when you choose <span class="menu">Manage labels…</span>. Here you can add, delete or rename your labels. Conveniently, each label file is also a query, meaning you can doubleclick it to start a query for emails with that label. Handy to check first before deleting a label that you think you don't need anymore.</p>
+<p>You don't have to open an email with the <span class="app">Mail</span> application to set its label. With the Tracker add-ons <span class="app">Label as… </span> you can select some email files and set or remove their label in one go.</p>
+<div class="box-info">BeOS - and Haiku for a long time - misused the email status attribute <tt>MAIL:status</tt> for labeling mails. If you used such custom statuses, it's recommended you migrate them to the label attribute <tt>MAIL:label</tt>.
+</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -117,13 +122,14 @@ Dut câs, cîr di tignî il non dal stât curt. Cussì al sta simpri te largjece
 <p>Sigûr, tu specifichis une cartele dulà archiviâ dute la tô pueste, tu puedis vierzile et voilà, lì e je dute la tô pueste. Ma cul timp a lâ la cartele e devente straplene, mostrâle dute al pues tirâle a dilunc par vie di miârs di files e dai lôr atribûts che a àn di sei analizâts e ordenâts. Cun di plui, la plui part des voltis no ti impuartarà pardabon di e-mails vecjis di doi agns di princips nigerians e dai lôr problemis di ereditât...</p>
 <div class="box-info">Tal popolâ une cartele, al ven pierdût une vore di timp te operazion di meti i files lets dal disc intal just ordin e visualizâlu tal barcon. Se tu âs di vierzi une cartele cuntun grant numar di files, tu puedis scurtâ il timp di spiete rindint il barcon di Tracker "invisibil", vâl a dî o minimizâlu o spostâlu suntun altri spazi di lavôr. Bute un voli a <a href="desktop-applets/processcontroller.html">Controlôr dai procès</a> par viodi cemût che al influìs sul ûs de CPU.</div>
 <p><a href="queries.html">Interogazions</a>, in socors!</p>
-<p>Doprant lis interogazions, tu puedis strenzi la visualizazion des tôs e-mails. In realtât, la icone de cassele postâl tal Deskbar e dopre lis interogazions.</p>
+<p>By using queries, you can narrow down the view of your mails. Actually, the mailbox icon in the Deskbar uses queries. Right-click the icon to open its context menu:</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
 <p>Il sot-menù <span class="menu">Open Draft</span> al fâs une interogazion pal stât "<i>Draft</i>", Che al ven configurât di <span class="app">Mail</span> cuant che tu salvis un messaç.</p>
 <p><span class="menu">Open Inbox Folder</span> e <span class="menu">Open Mail Folder</span> a son dome colegaments a cartelis normâls (e no tant utii secont di me).</p>
 <p>Il sot-menù <span class="menu"># gnûfs messaçs</span> al è popolât di une interogazion pe pueste cul stât "<i>New</i>" vâl a dî Gnûf (a proposit, la stesse interogazion e ven doprade par cambiâ la icone de cassele di pueste, cussì di mostrâ cualchi letare dentri).</p>
 
-<p>Tu puedis ancje zontâ lis tôs interogazions personâls (o cartelis, aplicazions, scripts e v.i.) a chel menù contestuâl, metintlis o metint un lôr colegament in <span class="path">~/config/settings/Mail/Menu Links</span>.</p>
+<p>You can add your own queries (or folders, applications, scripts etc.) to that context menu too, by putting them or links to them into <span class="path">~/config/settings/Mail/Menu Links</span>. In the screenshot above, for example, the label folder <span class="path">~/config/settings/Mail/labels</span> was linked there, to have quick access to labeled emails from the the mailbox icon of the Deskbar.</p>
+
 <div class="box-info">La interogazion <span class="path">~/config/settings/Mail/mailbox</span> al è un câs speciâl: al ven eseguît cuant che si fâs un clic di çampe su la icone de cassele de pueste tal Deskbar. Se tu desideris cambiâ chel compuartament, tu puedis sostituîlu cun cualsisei altri file (o colegament a un file), al baste clamâlu "<i>mailbox</i>". Nol à di sei par fuarce une interogazion, al va ben ancje un colegament a une cartele di interogazions o un script o une aplicazion.</div>
 
 <h3>
@@ -134,7 +140,7 @@ Dut câs, cîr di tignî il non dal stât curt. Cussì al sta simpri te largjece
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /></td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /></td></tr>
 
-<tr align="center"><td>Chest al cjate dutis lis e-mails cul stât personalizât "<i>Later</i>".</td>
+<tr align="center"><td>This finds all mails with the label "<i>Later</i>".</td>
 <td>Chest al cjate dutis lis e-mails dai ultins doi dîs.</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /></td>
@@ -150,7 +156,8 @@ Dut câs, cîr di tignî il non dal stât curt. Cussì al sta simpri te largjece
 <ul>
 <li><p>Se no tu salvis une interogazion tant che "<i>Query</i>" ma come "<i>Query template</i>", se tu le clamis no tu visualizarâs il barcon dai risultâts, ma il barcon Cjate... In cheste maniere tu puedis scambiâ cun facilitât la stringhe di ricercje pal ogjet o mitent, par esempli, o cambiâil limit di timp di "<i>2 days</i>" (2 dîs) a "<i>3 days</i>".</p></li>
 <li><p>Ativant il "filtri pe ricercje datilografant" tes <a href="tracker.html#tracker-preferences">preferencis di Tracker</a> ti permet di filtrâ ancjemò di plui il risultât di une interogazion in mût svelt. Dispès al baste interogâ une ricercje des e-mails dai ultins 3 dîs e filtrâ la ricercje datilografant partint di lì. Il grant vantaç al è che no tu âs di specificâ in maniere esate cuâl atribût cirî, viodût che ducj i visualizâts a vegnin considerâts dilunc il filtrament.</p></li>
-<!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
+<li><p>When you're managing your emails via queries - and why wouldn't you? - you should configure a <i>DefaultQueryTemplate</i> that shows all the email attributes you normally want to see in a query result window, like <i>Status</i>, <i>From</i>, <i>Subject</i>, <i>When</i>.<br />
+First, you create a folder <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates/text_x-email</span>. Then do one of your usual email queries and change the displayed attributes and window size and position of the result window to your liking. Now simply <span class="menu">Copy layout</span> from its <span class="menu">Attributes</span> menu, open the newly created <span class="path">text_x-email</span> folder, and <span class="menu">Paste layout</span> there.</p></li>
 </ul>
 
 </div>

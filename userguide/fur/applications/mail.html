@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Tabele</td></tr>
@@ -74,9 +75,9 @@
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Applications</span></td></tr>
 <tr><td>Posizion:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
 <tr><td>Impostazions:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
-<span class="path">~/config/settings/Mail/Menu Links/</span> - I ogjets metûts achì a vegnin fûr tal menù contestuâl de casele de pueste<br />
-<span class="path">~/config/settings/Mail/signatures/</span> - Posizion par archiviâ lis firmis<br />
-<span class="path">~/config/settings/Mail/status/</span> - Posizion par archiviâ i stâts personalizâts</td></tr>
+<span class="path">~/config/settings/Mail/Menu Links/</span> - Objects put here appear in the mailbox' context menu<br />
+<span class="path">~/config/settings/Mail/signatures/</span> - Location to store signatures<br />
+<span class="path">~/config/settings/Mail/labels/</span> - Location to store custom labels</td></tr>
 </table>
 <p><br /></p>
 <p>Mail al è il visualizadôr e editôr predefinît di Haiku pes e-mail. Nol à nuie a ce fâ cul efetîf recupar e spedizion de pueste, che a vegnin fats dal mail_daemon e a puedin jessi configurâts gracie aes preferencis di <a href="../preferences/e-mail.html">E-mail</a>.</p>
@@ -91,7 +92,8 @@
 <p>La plui part dai elements de sbare dai strument o dal menù si spieghin di bessôi, duncje si concentrarìn dome su lis robis impuartantis.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>File</h3>
-<p>Cuant che tu sieris il barcon di une mail, il so stât al ven di norme cambiât di "New" a "Read". Ma tu puedis stabilî ancje altris stâts, sielzintju dal sot-menù <span class="menu">Siere e </span>. Lì tu puedis ancje cjatâ la opzion <span class="menu">Met a...</span> par creâ i tiei stâts personalizâts, che a vegnin salvâts sot di <span class="path">~/config/settings/Mail/status/</span>.</p>
+<p>When you close the window of a new mail, its status is normally switched from "New" to "Read". From the <span class="menu">Close and</span> submenu, though, you can choose to <span class="menu">Leave as 'New'</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">W</span>) or <span class="menu">Move to Trash</span> instead.</p>
+<p>With <span class="menu">Set label</span> you can assign a custom label that is saved under <span class="path">~/config/settings/Mail/labels/</span>.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Modifiche</h3>
 <p>Achì tu cjatarâs un element par vierzi lis <span class="menu">Preferencis...</span> di Mail (<a href="#preferences">viôt sot</a>) e une scurte par gjestî i tiei <span class="menu">Account...</span>, che e vierzarà il panel des preferencis <a href="../preferences/e-mail.html">E-mail</a>.</p>
@@ -112,11 +114,13 @@
 </table>
 <div class="box-info">Se tu evidenziis un passaç de mail prime di rispuindi, te mail di rispueste al vignarà citât dome il test evidenziât. Une maniere ninine par taiâ vie une citazion masse grande, che e da fastidi a cuasi ducj...</div>
 <p>Lis vôs <span class="menu">Mande indenant</span>, <span class="menu">Torne invie</span> e <span class="menu">Copie su gnûf</span> ancje chês si spieghin di bessolis.</p>
-<p>Cuant che tu vierzis une e-mail di un barcon di Tracker o dai risultâts di interogazion, <span class="menu">Messaç precedent</span> e <span class="menu">Messaç successîf</span> ti puartaran ae e-mail precedente/sucessive de liste.</p>
+<p>When you've opened an email from a Tracker or query result window, <span class="menu">Previous message</span> and <span class="menu">Next message</span> (<span class="key">ALT</span> <span class="key">↑</span>/<span class="key">↓</span>) will move to the previous/next email in the list. In the <a href="#preferences">Mail settings</a> you can configure if the status of the current "New" email's status is set to "Read" automatically when moving to the previous/next email.<br />
+If you hold <span class="key">SHIFT</span> while going to the previous/next email, the status of the current email is kept. This is also works when using the up/down-arrow icons in the toolbar to move through your emails.</p>
+<p>A bit related to browsing through your emails using <span class="menu">Previous message</span> and <span class="menu">Next message</span>: If you invoke <span class="menu">Move to Trash</span>, the current email is trashed and the <i>next</i> message gets opened. If you hold <span class="key">SHIFT</span> though, the <i>previous</i> email is opened instead. Useful, if you sort your emails newest-first, open the oldest and move up from there and deleting emails on your way.</p>
 <p><span class="menu">Salve direzion</span> al tire sù, suntun sot-menù, dutis lis direzions e-mail de intestazion e dal efetîf cuarp de email. Sielzint une direzion si vierzarà la aplicazion <a href="people.html">People</a> in mût di podê completâ e salvâ lis informazions dal contat.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Interogazions</h3>
-<p>Chest menù al ten dentri lis interogazions che a mostrin dutis lis e-mail coreladis ae mail cumò vierte. Selezionant <span class="menu">Stes destinatari</span>, <span class="menu">Stes mitent</span> o <span class="menu">Stes ogjet</span> si vierç une interogazion che e liste dutis lis mail corispondentis:</p>
+<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span>, <span class="menu">Same subject</span> or <span class="menu">Same label</span> opens a query that lists all corresponding mails:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2>
@@ -125,8 +129,8 @@
 <p>E ven creade une gnove e-mail invocant <span class="menu">Gnûf messaç di pueste</span> dal menù <span class="menu">File</span> o cu la icone corispondente de sbare dai struments di une e-mail vierte. Opûr al baste fâ partî la aplicazion Mail o sielzi <span class="menu">Cree gnûf messaç...</span> dal menù contestuâl de icone de buchete intal Deskbar.</p>
 <img src="../images/apps-images/mail-write.png" alt="email-write.png" /> 
 <p>Il barcon al è simil a chel des mail di lei. Il menù e la sbare dai struments a son un pôc diviers e, logjic, si scugne jemplâ i ricuadris di test cu lis direzions e-mail dai destinataris, l'ogjet e vie indenant.</p>
-<p><span class="menu">Cc</span> e je la scurtadure pal tiermin anacronistic "<i>copie cjarbon</i>" e al corispuint a vê copiis de tô mail inviadis aes personis listadis. La diference rispieta a listâ un grum di direzions tal cjamp "A" e je che no tu ti indrecis aes personis metudis in Cc, duncje segnalant che no tu ti spietis une lôr rispueste.<br />
-<span class="menu">Ccp</span> al significhe "<i>Copie cjarbon platade</i>" che al fâs la stesse robe di "Cc", ma al plate a ducj i altris destinataris di Ccp.</p>
+<p><span class="menu">Cc</span> is short for the anachronistic term "<i>carbon copy</i>" and results in copies of your mail being sent to the listed people. The difference to just listing a bunch of addresses in the "To" field is, that you don't directly address the cc'ed people, thereby signaling that you probably don't expect an answer of them.<br />
+<span class="menu">Bcc</span> means "<i>blind carbon copy</i>" which does practically the same as "Cc", but hides the recipients from each other.</p>
 <p>Tu puedis inserî plui destinataris separant lis lôr direzions cuntune virgule.
 <span class="menu">A</span>, <span class="menu">Cc</span> e <span class="menu">Ccp</span> a son menù a tende. A contegnin dutis lis direzions e-mail cajtadis sul to sisteme gracie a une interogazion ai file di <a href="people.html">People</a>. Il lôr atribût "Group" ju ordenarà tai sot-menù corispondents.</p>
 <p>Di gnûf, si concentrarìn su lis funzionalitâts tal menù plui interessantis.</p>
@@ -157,7 +161,7 @@ Fasint clic diestri su chês peraluis si vierç un menù che al da sugjeriments 
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Interogazions</h3>
-<p>Come cuant che a vegnin lets i messaçs di pueste, chest menù al ten dentri lis interogazions che a mostrin dute la pueste relative a chê che tu stâs scrivint. Selezionant <span class="menu">Stes destinatari</span>, <span class="menu">Stes mitent</span> o <span class="menu">Stes ogjet</span> e ven vierte une interogazion che e liste dutis lis e-mails corispondentis.</p>
+<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.  You can't query for <span class="menu">Same label</span>, because while composing, there's no actual email file stored where a label-attribute could be added. The email has to be sent first.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

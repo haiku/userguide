@@ -4,14 +4,14 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2021, Haiku. All rights reserved.
+ * Copyright 2009-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Sergei Reznikov
- *		Rodastahm Islamov
+ *		Rus Islamov
  *		Vsevolod
  *		mrNoisy
  *
@@ -92,9 +92,9 @@
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tools" name="tools">Инструменты</a></h2>
 <p>По окончании установки раздел автоматически помечается как загрузочный. Однако иногда случается, что другие операционные системы или программы для работы с разделами случайно переписывают загрузочный сектор вашего раздела с Haiku. В этом случае загрузите установочный CD-диск и запустите установщик. Выберите ваш раздел с Haiku в выпадающем списке <span class="menu">На диск: Пожалуйста, выберите раздел для установки</span> и выберите подменю <span class="menu">Записать загрузочный сектор</span> из меню Инструменты. Это снова сделает ваш раздел загрузочным.</p>
-<p>Еще одним пунктом меню <span class="menu">Инструменты</span> является <span class="menu">Менеджер загрузки</span>, позволяющий добавить меню выбора операционной системы на загрузочный сектор.<br />
-Однако его запуск не будет необходимым, если вы уже используете загрузочный менеджер, подобный Grub (в этом случае, вы сможете добавить Haiku в список загрузки вручную, как описано выше), или же если Haiku будет единственной операционной системой на вашем компьютере.</p>
-
+<p>The next item in the <span class="menu">Tools</span> menu is used to <span class="menu">Set up a boot menu</span> that puts a menu in the boot sector to choose what operating system to boot. See topic <a href="bootmanager.html">BootManager</a> for more information.<br />
+ You don't need to run the <span class="app">BootManager</span> if you already use a bootmanager like GRUB, in which case you have to add Haiku manually (see above), or Haiku runs exclusively on your machine.</p>
+<p>If you use UEFI to boot your system instead of going the BIOS/MBR route, you can use <span class="menu">Install EFI loader</span> to copy the EFI loader from the boot/install medium to your prepared partition that you select from the submenu. That EFI system partition needs to be FAT32-formatted on a GPT-initialized disk with enough free space.</p>
 
 </div>
 </div>

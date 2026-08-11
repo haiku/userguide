@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <h2><img src="../../images/apps-images/drivesetup-icon_64.png" alt="drivesetup-icon_64.png" width="64" height="64" />Levyasema-asetukset</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -86,7 +87,7 @@ Paitsi tuttuja kuvakkeita kiintolevyistä, CD-levyisttä ja USB-tikuista jne., n
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
 <td>Osio, joka on liitetty kirjoitussuojattuna</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>Liitetty järjestelmävedostiedosto (katso myös <a href="./cli-apps.html">Haiku-kohtaiset komentorivisovellukset</a>)</td></tr>
+<td>A mounted image file (see <a href="#diskimages">Disk images</a> below)</td></tr>
 </table>
 <p>Liitettynä väritetty palkki näyttää osion käytetyn tilan. Väri riippuu osion tyypistä:</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
@@ -114,12 +115,22 @@ Paitsi tuttuja kuvakkeita kiintolevyistä, CD-levyisttä ja USB-tikuista jne., n
 <p>Ennen kuin voit käyttää, tai edes liittää uutta luotua osiota, siihen on alustettava tiedostojärjestelmä.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">Osion alustaminen</a></h2>
+<a id="formatting" name="formatting">Formatting a partition</a></h2>
 <p>Vain liittämättömät osiot voidaan alustaa valitsemalla tiedostojärjestelmä <span class="menu">Osio | Alusta</span>-valikon alivalikosta. <span class="menu">Be File System</span> (BFS) on pakollinen Haikun käynnistysosiolle ja suositeltu käytettäväksi Haikun dataosioilla. Vain BFS-muotoiset osiot voidaan kysellä ja ne tukevat täysin Haikun tiedostoattribuutteja.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>Tässä asetat osion nimen ja sen lohkokoon. Lohkokoko on tavuina sen tilan koko, joka vähintään varataan. 2048 tavua per lohko on suositeltu, mutta voit valita laajemman tai pienemmän koon, jos sinulla on erityistarpeita.<br />
 Jos osiosi tiedot eivät vaadi tulevaisuudessa kyselyjä, voit ottaa pois <span class="menu">Ota käyttöön kyselytuki</span>-valinnan, mikä säästää hiukan tilatarvetta hakemiston hallinnassa.</p>
 <div class="box-stop">Alustaminen tuhoaa osion kaikki aiemmat tiedot!</div>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="diskimages" name="diskimages">Disk images</a></h2>
+<p>The menu <span class="menu">Disk image…</span> provides several actions related to image files of disks/partitions.</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="4">
+<tr><td class="onelinetop"><span class="menu">Un/Register disk image…</span></td><td width="20px"></td><td>Registering makes an image file available to the system; it appears as a regular volume you can mount, edit or copy files to/from it, format etc. See also the <a href="./cli-apps.html">diskimage command</a>.</td></tr>
+<tr><td><span class="menu">Save image…</span></td><td></td><td>Saves the currently selected partition as an image file. The resulting file will have the same size as the partition, so make sure the destination of the file has enough free space.</td></tr>
+<tr><td><span class="menu">Write image…</span></td><td></td><td>Lets you write an image file to the selected partition/volume.
+<div class="box-stop" _translation_id="6113">Writing an image will destroy all data on the partition/volume!</div></td></tr>
+</table>
 </div>
 </div>
 

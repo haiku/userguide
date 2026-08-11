@@ -60,6 +60,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <h2><img src="../../images/prefs-images/virtualmemory-icon_64.png" alt="virtualmemory-icon_64.png" width="64" height="64" />Virtuaalimuistiasetukset</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
@@ -70,8 +71,9 @@
 </table>
 <p>Virtuaalimuisti sallii käyttää levyn näennäismuistia, jos RAM-muistia voidaan käyttää herkemmin muihin asioihin. Jopa silloin kun RAM-muistia on runsaasti, virtuaalimuistin tarjoaminen ei ole koskaan huono ajatus.</p>
 <img src="../images/prefs-images/virtualmemory.png" alt="virtualmemory.png" />
-<p>Normaalisti näennäistiedosto kirjoitetaan alkulatausosiollesi. Jos muisti loppuu tässä, voit ottaa pois käytöstä <span class="menu">Automaattinen näennäismuistihallinta</span> ja valita toisen liitetyn osion Käytä taltiota-ponnahdusvalikosta. Näennäistiedoston koko asetetaan alapuolella liukukytkimellä.<br />
-Jos usein törmäät levyn roskaantumiseen siksi, että virtuaalimuistijärjestelmä lisää ja poistaa muistia, voit kokeilla näennäismuistille erillistä kiintolevyä, jolloin näennäistiedosto välttää siirtoruuhkan. Saman kiintolevyn toinen osio järjestelmällesi tai tiedoillesi ei yksinkertaisesti auta. RAM-muistin kasvattaminen olisi tietysti tehokkain tapa...l</p>
+<p>Normally, the swap file is written to the boot partition. If you're running low on free memory there, you can deactivate the <span class="menu">Automatic swap management</span> and choose another mounted partition from the popup menu. The swap file size is set with the slider below.<br />
+The actual file is named <tt>swap</tt> and is located either in <span class="path">/system/var/</span> when using the default /boot partition, or directly in the root of the partition you've selected.<br />
+If you often run into disk thrashing due to the virtual memory system swapping memory in and out, you can try to use a separate harddisk for you swap file to avoid I/O congestion. Simply another partition on the same harddisk with your system/data won't help. Upgrading your RAM is of course the most effective way to go…</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="button">Oletukset</span></td><td> </td><td>nollaa kaikki oletusarvoihin.</td></tr>
 <tr><td><span class="button">Palauta</span></td><td> </td><td>palauttaa takaisin asetukset, jotka olivat voimassa kun Virtuaalimuistiasetukset-sovellus käynnistettiin.</td></tr>

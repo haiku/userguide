@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -71,14 +71,28 @@
 <p><br /></p>
 <p>Capturile de ecran sunt luate fie prin pornirea aplicației Screenshot sau prin apăsarea tastei <span class="key">PRINT</span>.</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>In the Screenshot panel you can toggle between taking the whole screen or just the active window and decide if the window border and mouse pointer should be included. You can also enter a delay before a screenshot is taken.</p>
+<p>To the right of the preview at the top, you can switch between different modes and options:<br />
+Either opt for the <span class="menu">Whole screen</span>, or just the <span class="menu">Active window</span> (provided there is one at the time you take the screenshot). If you just want to capture only a part of the screen, click <span class="button">Select area</span> under the preview (see below). Once selected, the <span class="menu">Select area</span> mode is enabled and you can now switch between <span class="menu">Whole screen</span>, <span class="menu">Active window</span>, and <span class="menu">Selected area</span>.</p>
+<p>Besides these modes, you can also decide to <span class="menu">Include window border</span> and <span class="menu">Include mouse pointer</span>.</p>
 <p>Below that you set the name, format and location for the screenshot that will be used when you click <span class="button">Save</span>. Instead of saving the file to disk you can also decide to <span class="button">Copy to clipboard</span> to be able to paste the shot directly into another application, or take a <span class="button">New screenshot</span>.</p>
 <p>All settings are remembered the next time you take a screenshot, enabling these convenient keyboard shortcuts:</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>Takes a screenshot with zero delay and launches the Screenshot panel.</td></tr>
 <tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">PRINT</span></td><td></td><td>Takes a screenshot silently (without opening the panel), while still respecting the last used settings.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">PRINT</span></td><td></td><td>Also takes a screenshot silently with the saved settings, but instead of saving it as a file, it's just copied to the clipboard.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">PRINT</span></td><td></td><td>Takes a screenshot with zero delay and enters the Select area mode right away.</td></tr>
 </table>
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+Selecting an area</h3>
+<p>When you click <span class="button">Select area</span>, the window of the Screenshot app is hidden, and you'll see the whole screen slightly darkened.</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>You can now define a selection box that'll highlight the screenshot area. Done with the <i>left</i> mouse button, the area is applied as soon as you lift your finger from the button and the Screenshot window pops up again.</p>
+<p>If you create the selection box while holding <span class="key">SHIFT</span> or with the <i>right</i> mouse button, the box will have handles at the corners that'll let you resize the selection. You can also drag the selection box around.</p>
+<p>The selection is applied with a double-click or by pressing <span class="key">ENTER</span>.<br />
+<span class="key">ESC</span> cancels the selecting process.</p>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 Luarea unei capturi de ecran din Terminal</h2>
@@ -105,8 +119,11 @@ OPTIONS
                         [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
   -c, --clipboard       Copies the screenshot to the system clipboard without
                         showing the application window
+  -a, --area            Select an area of the screen to capture
 
-Note: OPTION -b, --border takes only effect when used with -w, --window
+Note:
+Option -b, --border takes only effect when used with -w, --window
+Option -a, --area does not take effect with -s, --silent or -c, --clipboard
 </pre>
 
 </div>

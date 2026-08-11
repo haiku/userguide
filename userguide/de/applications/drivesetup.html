@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -90,7 +90,7 @@ Neben den bekannten Symbolen für Festplatten, CD-Laufwerken, USB-Sticks und so 
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
 <td>Eine schreibgeschützt eingehägte Partition</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>Eine eingehängte Image-Datei (siehe dazu den <a href="./cli-apps.html">diskimage Befehl</a>)</td></tr>
+<td>Ein eingehängtes Datenträgerabbild (siehe <a href="#diskimages">unten)</a> </td></tr>
 </table>
 <p>Ein farbiger Balken zeigt den belegten Speicherplatz einer eingehängten Partition. Die verwendete Farbe  hängt von der Art der Partition ab:</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
@@ -118,12 +118,22 @@ Neben den bekannten Symbolen für Festplatten, CD-Laufwerken, USB-Sticks und so 
 <p>Um eine neu angelegte Partition verwenden oder ins System einbinden zu können, muss sie zuerst mit einem Dateisystem formatiert werden.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">Formatierung einer Partition</a></h2>
+<a id="formatting" name="formatting">Formatierung einer Partition</a></h2>
 <p>Mit dem Untermenü <span class="menu">Partition | Formatieren</span> kann eine Partition formatiert werden. Dafür darf sie nicht im System eingehängt sein. Das <span class="menu">Be File System</span> (BFS) ist zwingend für die Haiku Boot-Partition nötig. Es empfiehlt sich auch, für Datenpartition mit denen unter Haiku gearbeitet werden soll, BFS zu nutzen. Nur BFS-formatierte Partitionen können per Queries durchsucht werden und unterstützen Haikus Dateiattribute.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>Beim Formatieren muss ein Name für die Partition und die Blockgröße angegeben werden. Ein "Block" ist dabei der Speicherplatz in Bytes, den eine Datei auf dem Datenträger mindestens belegt. Den vorgeschlagenen Wert von 2048 sollte man am besten beibehalten, außer man ist seiner wirklich sicher.<br />
 Falls die zukünftigen Daten auf der Partition nicht per Queries durchsucht werden sollen, kann die Option <span class="menu">Query-Unterstützung aktivieren</span> ausgeschaltet werden, um ein kleines bisschen 'Overhead' für das Verwalten des Index zu sparen.</p>
 <div class="box-stop">Das Formatieren zerstört sämliche Daten auf der Partition!</div>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="diskimages" name="diskimages">Datenträgerabbilder</a></h2>
+<p>Im Menü <span class="menu">Datenträgerabbild …</span> befinden sich diverse Aktionen zu Image-Dateien von Datenträgern/Partitionen.</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="4">
+<tr><td class="onelinetop"><span class="menu">Datenträgerabbild an/abmelden …</span></td><td width="20px"></td><td>Um im System verfügbar zu sein, muss ein Abbild angemeldet werden. Danach erscheint es als normaler Datenträger, der eingehängt, formatiert und bearbeitet werden kann, Dateien hin und her kopiert werden können, etc. Siehe dazu auch den <a href="./cli-apps.html">diskimage Befehl</a>. </td></tr>
+<tr><td><span class="menu">Abbild speichern …</span></td><td></td><td>Speichert die gerade ausgewählte Partition als Datenträgerabbild. Die dabei erzeugte Datei ist so groß wie die gewählte Partition, man sollte also sicher sein genügend freien Platz zu haben.</td></tr>
+<tr><td><span class="menu">Abbild schreiben …</span></td><td></td><td>Schreibt eine Image-Datei auf die ausgewählte Partition/Datenträger.
+<div class="box-stop" _translation_id="6113">Das Schreiben einer Image-Datei zerstört alle Daten auf der gewählten Partition/Datenträger!</div></td></tr>
+</table>
 </div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2008-2023, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Índice</td></tr>
@@ -115,10 +116,32 @@
 <a id="touchpad" name="touchpad">Panel táctil</a></h3>
 <img src="../images/prefs-images/touchpad.png" alt="touchpad.png" />
 <p>Al arrastrar las líneas vertical u horizontal rojas en la ilustración de un panel táctil, puede establecer el área de desplazamiento (el área táctil ligeramente rojiza sobre un fondo gris oscuro). Al mover su dedo sobre esa parte del panel, moverá las barras de desplazamiento de una ventana consecuentemente.</p>
-<p>A la derecha hay deslizadores para establecer la aceleración general de desplazamiento y la velocidad de desplazamiento vertical y horizontal.<br />
-Los ajustes de aceleración determinan cuán temprano se desplaza una lista al pasar sobre el área de desplazamiento muy rápido. La velocidad de desplazamiento controla la velocidad general al usar el área de desplazamiento de una manera "normal".</p>
-<p>Debajo de la ilustración de un panel táctil hay unas casillas de verificación <span class="menu">Desplazamiento con dos dedos</span> para desplazarse vertical y horizontalmente. Mover con dos dedos en paralelo verticalmente u horizontalmente permitirá mover las barras de desplazamiento de una ventana.<br />
-Si se siente cómodo al usar esta característica, puede prescindir de establecer las áreas de desplazamiento y en su lugar usar todo el panel para la navegación normal.</p>
+<p>To the right are sliders to set the general scroll acceleration and the vertical and horizontal scrolling speed.<br />
+The acceleration setting decides how much quicker a list scrolls by if you swish over the scroll area very fast. The scrolling speeds control the general speed when using the scroll area.</p>
+<p>Below the touchpad graphics are checkboxes:</p>
+<ul>
+<li><p>If you're using single finger scrolling with the above mentioned scrolling areas, activating <span class="menu">Reverse scroll direction</span> will make scrollbars behave like scrolling on a smartphone: you move the finger up to have the contents scroll down.</p></li>
+<li><p><span class="menu">Two finger scrolling</span> enables vertical and optionally also <span class="menu">Horizontal scrolling</span> on supported devices. Moving two fingers in parallel vertically or horizontally to scroll the contents.<br />
+With <span class="menu">Natural scrolling</span>, this works just like on a smartphone. Disable the checkbox and directions reverse.</p></li>
+</ul>
+
+<p><span class="menu">Edge motion</span> controls how the system reacts when your finger hits the edge of the touchpad:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">Disabled</span></td><td width="15px"> </td><td>Deactivate edge motion detection. Like with a mouse reaching the edge of the desk, you'll have to lift the finger and move it back to the touchpad center.</td></tr>
+<tr><td class="onelinetop"><span class="menu">On tap-drag only</span></td><td> </td><td>By tap-dragging you can drag a file without using the physical click buttons of the touchpad: You tap a file and, without lifting your finger, start dragging the file around.<br />
+With this setting activated, once your finger reaches an edge of the touchpad, the mouse pointer keeps moving.</td></tr>
+<tr><td class="onelinetop"><span class="menu">When dragging</span></td><td> </td><td>Same as the previous setting, but also works when dragging with the physical click buttons.</td></tr>
+<tr><td><span class="menu">Always</span></td><td> </td><td>This will always continue moving the mouse pointer when your finger hits the touchpad edge, even if you're not dragging anything.</td></tr>
+</table>
+
+<p>With <span class="menu">Finger click</span> active, you can simulate different clicks with your fingers (if your device supports that):</p>
+<ul>
+<li>1 finger = left-click</li>
+<li>2 fingers = right-click</li>
+<li>3 fingers = middle-click</li>
+</ul>
+<p>You can disable the <span class="menu">Software button areas</span> if you're comfortable with those "finger clicks", and get more surface area to use on your touchpad.</p>
+
 <p>Más abajo se halla otro deslizador para establecer la <span class="menu">Sensibilidad de toque</span>. Si ve que sus toques están siendo ignorados, aumente la sensibilidad. Si el sistema registra clics todo el tiempo cuando lo que intentaba hacer era mover el puntero del ratón, intente disminuirla.</p>
 <p>Por último, puede establecer un <span class="menu">Retraso del bloqueo de teclado</span>. Si roza accidentalmente su panel táctil mientras está escribiendo y por ello termina moviendo el cursor de inserción de texto, intente disminuir el retraso de bloqueo.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">

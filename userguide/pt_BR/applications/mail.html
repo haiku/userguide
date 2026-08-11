@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -76,9 +76,9 @@
 <tr><td>Deskbar:</td><td style="width:15px;"></td><td><span class="menu">Aplicativos</span></td></tr>
 <tr><td>Localização:</td><td></td><td><span class="path">/boot/system/apps/Mail</span></td></tr>
 <tr><td>Definições:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
-<span class="path">~/config/settings/Mail/Menu Links/</span> - Objetos colocados aqui aparecem no menu de contexto da caixa de correio<br />
-<span class="path">~/config/settings/Mail/signatures/</span> - Local para armazenar assinaturas<br />
-<span class="path">~/config/settings/Mail/status/</span> - Local para armazenar estados personalizados</td></tr>
+<span class="path">~/config/settings/Mail/Menu Links/</span> - Objects put here appear in the mailbox' context menu<br />
+<span class="path">~/config/settings/Mail/signatures/</span> - Location to store signatures<br />
+<span class="path">~/config/settings/Mail/labels/</span> - Location to store custom labels</td></tr>
 </table>
 <p><br /></p>
 <p>Correio é o visualizador padrão e editor de correios eletrônicos do Haiku. ele nada tem a ver com busca e envio de correios, que é feito pelo daemon de correio e pode ser configurado através das preferências de <a href="../preferences/e-mail.html">Correio Eletrônico</a>.</p>
@@ -92,7 +92,8 @@
 <p>Se existem arquivos anexados a um correio eletrônico, eles são listados ao fim da mensagem. Um clique com o botão direito do mouse em um arquivo abre um menu de contexto para <span class="menu">Salvar anexo...</span> ou <span class="menu">Abrir anexo</span>. Pode-se também arrastar e soltar diretamente para a Área de Trabalho ou outra janela do Rastreador.</p>
 <p>A mairia dos itens do menu e da barra de ferramentas são bastante auto-explicativos, então nos concentraremos apenas nos destaques.</p>
 <h3><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Arquivo</h3>
-<p>Quando fecha a janela de uma nova mensagem, seu estado é normalmente alterado de "Novo" para "Lido". Mas pode-se definir outros estados, selecionando do submenu <span class="menu">Fechar e ...</span> Lá encontra-se também a opção <span class="menu">Definir para...</span> para criar seus próprios estados personalizados, os quais são salvos em <span class="path">~/config/settings/Mail/status/</span>.</p>
+<p>When you close the window of a new mail, its status is normally switched from "New" to "Read". From the <span class="menu">Close and</span> submenu, though, you can choose to <span class="menu">Leave as 'New'</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">W</span>) or <span class="menu">Move to Trash</span> instead.</p>
+<p>With <span class="menu">Set label</span> you can assign a custom label that is saved under <span class="path">~/config/settings/Mail/labels/</span>.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Editar</h3>
 <p>Aqui encontrará um ítem para abrir as <span class="menu">Preferências...</span> do Correio (<a href="#preferences">ver abaixo</a>) e um atalho para gerenciar suas <span class="menu">Contas...</span>, o qual abrirá a janela de diálogo de preferências do <a href="../preferences/e-mail.html">Correio Eletrônico</a>.</p>
@@ -113,11 +114,13 @@
 </table>
 <div class="box-info">Se marcar uma passagem na mensagem antes de respondê-la, apenas o texto marcado será citado na sua mensagem de resposta. Um modo agradável para reduzir uma citação extensa, o qual é desaprovado pela maioria das pessoas...</div>
 <p>Os itens de <span class="menu">Encaminhar</span>, <span class="menu">Reenviar</span> e <span class="menu">Copiar para nova</span> são novamente bastante auto-explicativas.</p>
-<p>Quando tiver aberto uma mensagem a partir de um Rastreador ou janela de resultado de consulta, <span class="menu">Mensagem anterior</span> e <span class="menu">Próxima mensagem</span> irá mover para a anterior/próxima mensagem na lista.</p>
+<p>When you've opened an email from a Tracker or query result window, <span class="menu">Previous message</span> and <span class="menu">Next message</span> (<span class="key">ALT</span> <span class="key">↑</span>/<span class="key">↓</span>) will move to the previous/next email in the list. In the <a href="#preferences">Mail settings</a> you can configure if the status of the current "New" email's status is set to "Read" automatically when moving to the previous/next email.<br />
+If you hold <span class="key">SHIFT</span> while going to the previous/next email, the status of the current email is kept. This is also works when using the up/down-arrow icons in the toolbar to move through your emails.</p>
+<p>A bit related to browsing through your emails using <span class="menu">Previous message</span> and <span class="menu">Next message</span>: If you invoke <span class="menu">Move to Trash</span>, the current email is trashed and the <i>next</i> message gets opened. If you hold <span class="key">SHIFT</span> though, the <i>previous</i> email is opened instead. Useful, if you sort your emails newest-first, open the oldest and move up from there and deleting emails on your way.</p>
 <p><span class="menu">Salvar endereço</span> coleta todos os endereços de correio eletrônico do cabeçalho e o corpo da mensagem em um submenu. Escolhendo um endereço abrirá o aplicativo <a href="people.html">Pessoas</a> de maneira a completar e salvar a informação do contato.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Consultas</h3>
-<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all corresponding mails:</p>
+<p>This menu holds queries that show all mails related to the currently open mail. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span>, <span class="menu">Same subject</span> or <span class="menu">Same label</span> opens a query that lists all corresponding mails:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2>
@@ -126,8 +129,8 @@
 <p>A new email is created by invoking <span class="menu">New mail message</span> of the <span class="menu">File</span> menu or the corresponding icon from the tool bar of an open email. Or you just start the Mail application or choose <span class="menu">Create new message…</span> from the context menu of the mailbox icon in the Deskbar.</p>
 <img src="../images/apps-images/mail-write.png" alt="email-write.png" /> 
 <p>A janela é muito similar ao da leitura de mensagens. Os ítens do menu e da barra de ferramentas são ligeiramente diferentes e as caixas de texto devem ser preenchidas com o endereço do destinatário, assunto e assim por diante, naturalmente.</p>
-<p><span class="menu">Cc</span> é uma abreviatura para o termo anacrônico "<i>com cópia</i>" e resulta em cópias da sua mensagem sendo enviadas para as pessoas listadas. A diferença de apenas listar uma floresta de endereços no campo "Para" é que não se endereça diretamente para as pessoasi copiadas, assim sinalizando que provavelmente não espera uma resposta deles.<br />
-<span class="menu">Cco</span> significa "<i>com cópia oculta</i>" o qual faz praticamente o mesmo que "Cc", mas oculta os destinatários dos demais.</p>
+<p><span class="menu">Cc</span> is short for the anachronistic term "<i>carbon copy</i>" and results in copies of your mail being sent to the listed people. The difference to just listing a bunch of addresses in the "To" field is, that you don't directly address the cc'ed people, thereby signaling that you probably don't expect an answer of them.<br />
+<span class="menu">Bcc</span> means "<i>blind carbon copy</i>" which does practically the same as "Cc", but hides the recipients from each other.</p>
 <p>Pode-se inserir vários destinatários separando seus endereços com uma vírgula.
 <span class="menu">Para</span>, <span class="menu">CC</span>, e <span class="menu">CCO</span> são menus pop-up. Eles contém todos os endereços de correio eletrônico no seu sistema encontrados por uma consulta aos arquivos do <a href="people.html">Pessoas</a>. Seus atributos de "Grupo" os ordenarão em submenus correspondentes.</p>
 <p>Novamente, iremos focar nas funcionalidades mais interessantes nos menus.</p>
@@ -157,7 +160,7 @@ Clicar com o botão direito do mouse numa palavra abre um menu de contexto ofere
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Consultas</h3>
-<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.</p>
+<p>As when reading mails, this menu holds queries that show all mails related to the one you are currently composing. Selecting <span class="menu">Same recipient</span>, <span class="menu">Same sender</span> or <span class="menu">Same subject</span> opens a query that lists all matching mails.  You can't query for <span class="menu">Same label</span>, because while composing, there's no actual email file stored where a label-attribute could be added. The email has to be sent first.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

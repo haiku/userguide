@@ -67,12 +67,12 @@
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Innehåll</td></tr>
 <tr class="index"><td>
-	<a href="#creating">Creating a new e-mail account</a><br />
-	<a href="#account-settings">Account settings</a><br />
-	<a href="#incoming">Setting up incoming e-mail</a><br />
-	<a href="#outgoing">Setting up outgoing e-mail</a><br />
-	<a href="#filters">Notifications and e-mail filters</a><br />
-	<a href="#settings">Setting up the Mail Service</a>
+	<a href="#creating">Skapa ett nytt e-post konto</a><br />
+	<a href="#account-settings">Kontoinställningar</a><br />
+	<a href="#incoming">Mera inställningar för inkommande e-post</a><br />
+	<a href="#outgoing">Mera inställningar för utgående e-post</a><br />
+	<a href="#filters">Skräppostfilter och Reglerfilter</a><br />
+	<a href="#settings">Konfiguera e-posttjänst</a>
 </td></tr>
 </table>
 
@@ -82,15 +82,20 @@
 <tr><td>Position:</td><td></td><td><span class="path">/boot/system/preferences/E-mail</span></td></tr>
 <tr><td>Inställningar:</td><td></td><td><span class="path">~/config/settings/Mail/*</span></td></tr>
 </table>
-<p>Haiku provides a system that retrieves e-mail regularly via a Mail Service (also known as mail_daemon) and saves each mail as a single text file. It parses the mail and fills its attributes with all necessary header information, like from, to, subject and its unread status. Now it can be queried by you or any application. This system also makes switching e-mail clients easy as all the data and your configuration stays the same.<br />
-The configuration is done in the E-Mail preference panel.</p>
+<p>Haiku tillhandahåller en system som hämtar e-post regelbundet via en Mail 
+Service (även känd som mail_daemon) och sparas varje e-post som ett 
+enskilt textdokument. Det förbereder posten och fyller in dess attribut 
+med alla nödvändiga hedersinformation, såsom från, till, ämne och obestämd 
+status. Nu kan du eller någon annan programvara hämta den. Detta system 
+gör också det enkelt att byta e-postklienter eftersom all data och konfigurationen återställs.<br />
+Konfigureringen görs i E-Mail-preferenspanelen.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="creating" name="creating">
-Skapa ett nytt e-post konto</a></h2>
-<p>Let's go through the process of setting up an e-mail account.<br />
-You start by clicking the <span class="button">Add</span> button to create a new, unnamed account. This opens a panel where you fill in your account info:</p>
+<a id="creating" name="creating">Skapa ett nytt e-post konto</a></h2>
+<p>Låt oss gå igenom processen för att skapa en e-postkontonhet.<br />
+Du börjar med att klicka på <span class="button">Lägg till</span>-knappen 
+för att skapa ett nytt, obestämt konton. Denna öppnar en panel där du fyller i ditt kontoinformation:</p>
 <img src="../images/prefs-images/e-mail-new-account.png" alt="e-mail-new-account.png" />
 <p>First, you set how you get your mail, via <span class="menu">POP3</span> or <span class="menu">IMAP</span>.</p>
 <p>Now you enter your <i>E-mail address</i>, <i>Login name</i> and <i>Password</i>, give an <i>Account name</i> under which it will be known under Haiku and your <i>Real name</i>.</p>
@@ -138,7 +143,10 @@ Currently there are three <span class="menu">Incoming mail filters</span> you ca
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 Skräppostfilter (AGMS Bayesian)</h3>
 <img src="../images/prefs-images/e-mail-filter-spam.png" alt="e-mail-filter-spam.png" />
-<p>The spam filter uses statistical methods to classify a mail as unwanted spam. It assigns a value between 0 and 1 to it and you can decide what are the limits for a genuine mail and what will be considered spam.<br />
+<p>Spamfiltern använder statistiska metoder för att klassificera en post som 
+oönskade spam. Det tilldelar en värde mellan 0 och 1 till den och du kan 
+bestämma vad som är gränserna för en autentisk e-post och vad som ska 
+betraktas som spam.<br />
 You can have that spam rating added to the start of the subject.<br />
 Also, the spam filter can learn from all incoming e-mail. Of course, you'll have to teach it by sorting out the false positives, mails that were mistakenly marked as spam. You'll find more on that when we discuss the application <span class="app">Mail</span>.</p>
 <p>Together with the following <span class="menu">Rule filter</span>, you're able to automatically sort out detected spam mails.</p>
@@ -150,25 +158,25 @@ Reglerfilter</h3>
 <p>This filter compares the mail header to a search pattern and performs some action according to the rules you set up.<br />
  With the first text field you specify which header to check against. These are available:</p>
 <table summary="match header" border="0" cellpadding="2" cellspacing="0"> 
-	<tr><td><span class="menu">Name</span></td><td style="width:5px;"> </td>
+	<tr><td><span class="menu">Namn</span></td><td style="width:5px;"> </td>
 		<td>the name of the sender</td></tr>
-	<tr><td><span class="menu">From</span></td><td> </td>
+	<tr><td><span class="menu">Från</span></td><td> </td>
 		<td>the e-mail address of the sender</td></tr>
-	<tr><td><span class="menu">To</span></td><td> </td>
+	<tr><td><span class="menu">Till</span></td><td> </td>
 		<td>your e-mail address (different for each e-mail account)</td></tr>
-	<tr><td><span class="menu">Reply to</span></td><td> </td>
+	<tr><td><span class="menu">Svara till</span></td><td> </td>
 		<td>the e-mail address replies are sent to</td></tr>
 	<tr><td><span class="menu">When</span></td><td> </td>
 		<td>the date and time the mail was received</td></tr>
-	<tr><td><span class="menu">Subject</span></td><td> </td>
-		<td>the subject line</td></tr>
+	<tr><td><span class="menu">Ämne</span></td><td> </td>
+		<td>ämnesrad</td></tr>
 	<tr><td><span class="menu">Cc</span></td><td> </td>
 		<td>addresses of anyone receiving a carbon copy (Cc)</td></tr>
-	<tr><td><span class="menu">Account</span></td><td> </td>
+	<tr><td><span class="menu">Konto</span></td><td> </td>
 		<td>the name of the e-mail's account</td></tr>
 	<tr><td><span class="menu">Status</span></td><td> </td>
 		<td>The current status of the e-mail. Normally, this can be "Read", "Replied", "Sent", "Forwarded", "New", or anything you have defined yourself. However, unless you change it yourself in a filter, it will always be "New" after the Mail Service fetched the mail.</td></tr>
-	<tr><td><span class="menu">Priority</span></td><td> </td>
+	<tr><td><span class="menu">Prioritet</span></td><td> </td>
 		<td>is set by the sender's e-mail program (e.g. "urgent")</td></tr>
 	<tr><td><span class="menu">Thread</span></td><td> </td>
 		<td>essentially the same as "Subject", but without things like Re: or Fwd:</td></tr>

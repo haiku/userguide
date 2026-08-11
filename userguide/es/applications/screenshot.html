@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h2><img src="../../images/apps-images/screenshot-icon_64.png" alt="screenshot-icon_64.png" width="64" height="64" />Screenshot</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -74,37 +75,59 @@
 <p><br /></p>
 <p>Las capturas de pantallan se toman ya sea con la aplicación Captura de Pantalla o presionando la tecla <span class="key">Impr Pant</span>,</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>En el panel de Captura de Pantalla puede intercambiar entre capturar la pantalla completa o sólo la ventana activa, y puede decidir si se debe incluir el borde de la ventana y el puntero del ratón. También puede establecer una demora antes que se tome la captura.</p>
+<p>To the right of the preview at the top, you can switch between different modes and options:<br />
+Either opt for the <span class="menu">Whole screen</span>, or just the <span class="menu">Active window</span> (provided there is one at the time you take the screenshot). If you just want to capture only a part of the screen, click <span class="button">Select area</span> under the preview (see below). Once selected, the <span class="menu">Select area</span> mode is enabled and you can now switch between <span class="menu">Whole screen</span>, <span class="menu">Active window</span>, and <span class="menu">Selected area</span>.</p>
+<p>Besides these modes, you can also decide to <span class="menu">Include window border</span> and <span class="menu">Include mouse pointer</span>.</p>
 <p>Debajo de eso, puede definir el nombre, formato y ubicación que se usará para la captura de pantalla cuando haga clic en el botón <span class="button">Guardar</span>. En vez de guardar el archivo a disco también puede decidir <span class="button">Copiar al portapapeles</span> para poder pegar la captura directamente en otra aplicación, o tomar una <span class="button">Nueva captura</span>.</p>
 <p>Todos los ajustes serán recordados la próxima vez que tome una captura, permitiéndole usar las siguientes combinaciones de teclado:</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>Toma una captura de pantalla sin ninguna demora e inicia el panel de Captura de Pantalla.</td></tr>
 <tr><td class="onelinetop"><span class="key">MAYÚSCULAS</span> <span class="key">PRINT</span></td><td></td><td>Toma una captura de pantalla de manera silenciosa (sin abrir el panel), pero respetando los ajustes anteriores.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">PRINT</span></td><td></td><td>También toma una captura de pantalla de manera silenciosa con los ajustes guardados, pero en vez de guardarlo como un archivo, se copia al portapapeles.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">PRINT</span></td><td></td><td>Takes a screenshot with zero delay and enters the Select area mode right away.</td></tr>
 </table>
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+Selecting an area</h3>
+<p>When you click <span class="button">Select area</span>, the window of the Screenshot app is hidden, and you'll see the whole screen slightly darkened.</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>You can now define a selection box that'll highlight the screenshot area. Done with the <i>left</i> mouse button, the area is applied as soon as you lift your finger from the button and the Screenshot window pops up again.</p>
+<p>If you create the selection box while holding <span class="key">SHIFT</span> or with the <i>right</i> mouse button, the box will have handles at the corners that'll let you resize the selection. You can also drag the selection box around.</p>
+<p>The selection is applied with a double-click or by pressing <span class="key">ENTER</span>.<br />
+<span class="key">ESC</span> cancels the selecting process.</p>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 Tomar una captura de pantalla desde la Terminal</h2>
 <p>Hay una aplicación especial <span class="cli">screenshot</span> que se puede usar desde la Terminal o un script.<br />
 <span class="cli">Screenshot --help</span> muestra las opciones familiarizadas como parámetros:</p>
 
-<pre class="terminal">~&gt; Screenshot --help
+<pre class="terminal">~&gt; screenshot --help
 
-Screenshot [OPTION]… Crea un mapa de bits de la pantalla actual
+screenshot [OPTIONS] [FILE]  Creates a bitmap of the current screen
 
-OPTION
-  -o, --options         Muestra la pantalla de opciones primero
-  -m, --mouse-pointer   Incluye el puntero del ratón
-  -b, --border          Incluye el borde de la ventana
-  -w, --window          Captura la venana activa en lugar de la pantalla completa
-  -d, --delay=seconds   Toma una captura luego de una demora especificada [en segundos]
-  -s, --silent          Guarda la captura sin mostrar la ventana de la aplicación
-  -f, --format=image    Especifica el formato de imagen que quiere guardar como 
+FILE is the optional output path / filename used in silent mode. An exisiting
+file with the same name will be overwritten without warning. If FILE is not
+given the screenshot will be saved to a file with the default filename in the
+user's home directory.
+
+OPTIONS
+  -m, --mouse-pointer   Include the mouse pointer
+  -b, --border          Include the window border
+  -w, --window          Capture the active window instead of the entire screen
+  -d, --delay=seconds   Take screenshot after the specified delay [in seconds]
+  -s, --silent          Saves the screenshot without showing the application
+                        window
+  -f, --format=image    Give the image format you like to save as
                         [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
-  -c, --clipboard       Copia la captura de pantalla al portapapeles del sistema sin
-                        mostrar la ventana de la aplicación
+  -c, --clipboard       Copies the screenshot to the system clipboard without
+                        showing the application window
+  -a, --area            Select an area of the screen to capture
 
-Note: OPTION -b, --border sólo toma efecto si se utiliza junto a -w, --window
+Note:
+Option -b, --border takes only effect when used with -w, --window
+Option -a, --area does not take effect with -s, --silent or -c, --clipboard
 </pre>
 
 </div>

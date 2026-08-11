@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2021, Haiku. All rights reserved.
+ * Copyright 2009-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/apps-images/installer-icon_64.png" alt="installer-icon_64.png" width="64" height="64" />   Installer (Інсталятор)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -89,9 +90,9 @@
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tools" name="tools">Інструменти</a></h2>
 <p>Після завершення процедури інсталяції цільовий розділ автоматично стає загрузочним. Однак може статися так, що якась інша операційна система або програма настройки дисків (випадково) перезапише загрузочний сектор розділу/тому з системою Haiku. У цьому випадку загрузіться з інсталяційного компакт-диска і запустіть інсталятор. Виберіть загрузочний розділ Haiku у списку <span class="menu">На: Виберіть розділ</span> і виберіть пункт <span class="menu">Записати сектор загрузки</span> у меню <span class="menu">Інструменти</span>, щоб знову зробити його загрузочним.</p>
-<p>Пункт <span class="menu">Встановити меню загрузки…</span> у меню <span class="menu">Інструменти</span> призначено для встановлення у загрузочному секторі загрузчика <span class="app">BootManager</span>, за допомогою якого можна обирати операційну систему для загрузки. Докладнішу інформацію наведено у розділі <a href="bootmanager.html">BootManager (Менеджер загрузки)</a>.<br />
- Вам не потрібно встановлювати <span class="app">BootManager</span>, якщо Ви вже використовуєте загрузчик, наприклад, GRUB. У цьому випадку Вам доведеться додати Haiku вручну (дивіться вище), або Haiku буде основною системою на Вашому комп'ютері.</p>
-
+<p>The next item in the <span class="menu">Tools</span> menu is used to <span class="menu">Set up a boot menu</span> that puts a menu in the boot sector to choose what operating system to boot. See topic <a href="bootmanager.html">BootManager</a> for more information.<br />
+ You don't need to run the <span class="app">BootManager</span> if you already use a bootmanager like GRUB, in which case you have to add Haiku manually (see above), or Haiku runs exclusively on your machine.</p>
+<p>If you use UEFI to boot your system instead of going the BIOS/MBR route, you can use <span class="menu">Install EFI loader</span> to copy the EFI loader from the boot/install medium to your prepared partition that you select from the submenu. That EFI system partition needs to be FAT32-formatted on a GPT-initialized disk with enough free space.</p>
 
 </div>
 </div>

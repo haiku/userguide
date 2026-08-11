@@ -77,17 +77,18 @@
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="fonts" name="fonts">Fonts</a></h2>
+<a id="fonts" name="fonts">Fonter</a></h2>
 <img src="../images/prefs-images/appearance-fonts.png" alt="appearance-fonts.png" />
-<p>Haiku defines three standard fonts for different purposes. You set plain, bold and fixed font types and sizes that will be used throughout the system. Besides these, there's also a separate setting for the font used in menus.</p>
+<p>Haiku definierar tre standardtyper av tecken som ska användas till olika ändamål. Du ställer in en platt, bultad och fäst typ och storleksnivå som ska användas över hela systemet. Utöver dessa finns också ett separat inställningskort för fonten som ska användas i 
+menyrader:</p>
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="installing_fonts" name="installing_fonts">Installing new fonts</a></h3>
-<p>New fonts that don't come as part of a regular .hpkg package, can be installed by copying them into a subfolder according to the font type (<tt>otfonts</tt>, <tt>psfonts</tt> or <tt>ttfonts</tt>) into their respective <tt>non-packaged</tt> folder (see topic <a href="../filesystem-layout.html">Filesystem layout</a>). For TrueType fonts that would be:</p>
+<a id="installing_fonts" name="installing_fonts">Installera nya fonter.</a></h3>
+<p>Nya fonter som inte finns som en del av ett vanlig .hpkg -paket, kan installeras genom att kopia dem till en undermapp enligt ett typsnitt (<tt>otfonts</tt>, <tt>psfonts</tt> eller <tt>ttfonts</tt>) i den respektive <tt>non-packaged</tt>-mappen (se ämnet <a href="../filesystem-layout.html">Filsystemlayout</a>). För TrueType-fonten som exempelvis skulle vara:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td> for fonts available to every user.</td></tr>
-<tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td> for fonts only available to yourself.</td></tr>
+<tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>för alla användare tillgängliga fonter.</td></tr>
+<tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>för personliga fonter endast till ditt egen konto.</td></tr>
 </table>
 
 <h2>
@@ -98,7 +99,7 @@
 <p>If you activate the checkmark to <span class="menu">Automatically pick secondary colors</span>, the list of user interface colors gets reduced to:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="menu">Panel background</span></td><td style="width:15px;"></td><td>default: gray</td></tr>
-<tr><td><span class="menu">Status bar</span></td><td></td><td>default: blue, used e.g. to outline the active widget like a button or list</td></tr>
+<tr><td><span class="menu">Progress bar</span></td><td></td><td>default: blue, also used e.g. to outline the active widget like a button or list</td></tr>
 <tr><td><span class="menu">Window tab</span></td><td></td><td>default: the iconic yellow window tab</td></tr>
 </table>
 <p>With this setting all the other colors are set automatically. For example, the text color becomes white if you choose a dark panel color.</p>

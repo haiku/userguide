@@ -4,11 +4,12 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2023, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Daniel Marth
+ *		Diver
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Iah
@@ -62,14 +63,15 @@
 
 <div id="content">
 <div>
+<div class="box-info">Переклад сторінки ще триває, тому частково Ви бачите англійський варіант. </div>
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />   Список програм командного рядка</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Розташування:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
+<tr><td>Розташування:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">/boot/system/non-packaged/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
 </table>
 <p><br /></p>
-<p>Усі програми командного рядка, з дистрибутиву Haiku, знаходяться в каталозі <span class="path">/boot/system/bin/</span>. Програми командного рядка, які Ви розробили або встановили самостійно, поміщаються в каталог <span class="path">~/config/bin/</span> при умові їх встановлення з пакета .hpkg. Якщо програми встановлюються не з пакета, Ви можете помістити їх у каталог <span class="path">~/config/non-packaged/bin/</span>. Усі ці каталоги є частиною змінної середовища PATH, тому програми будуть автоматично знайдені при виконанні команди.<br />
-Нижче наведено список усіх програм командного рядка, які входять до дистрибутиву Haiku. Кожна з них має лише стислий опис того, що вона робить. Для отримання більш детальної інформації про її використання виконайте команду з параметром <tt>--help</tt>.</p>
+<p>All commandline applications shipped with Haiku are in <span class="path">/boot/system/bin/</span>. Additionally installed commandline apps will appear there as well (or in <span class="path">~/config/bin/</span> if installed in the home-hierarchy) when installed from a .hpkg package. Otherwise you can put them into <span class="path">~/config/non-packaged/bin/</span>. All these locations are part of the PATH variable and are therefore automatically found.<br />
+Here's a list of all commandline applications that are shipped with Haiku. Each with only a short description of what it does, for more detailed information on its usage execute the command with the parameter <tt>--help</tt>.</p>
 <p><br /></p>
 <p>Покажчик:   <a href="#A">A – E</a>   ::   <a href="#F"> F – J </a>   ::   <a href="#K"> K – O </a>   ::   <a href="#P"> P – S </a>   ::   <a href="#T"> T – Z </a></p>
 <p><br /></p>
@@ -81,6 +83,7 @@
 <tr><td><tt>addattr</tt></td><td> </td><td>Записує атрибут у файл, враховуючи тип і відповідно конвертуючи значення. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>alert</tt></td><td> </td><td>Показує вікно повідомлення. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>arp</tt></td><td> </td><td>Маніпулює системним кешем ARP. </td></tr>
+<tr><td><tt>autologin</tt></td><td> </td><td>Enables automatic login functionality.</td></tr>
 <tr><td><tt>awk</tt></td><td> </td><td>Дивіться <tt>gawk</tt>.</td></tr>
 <tr><td><tt>base64</tt></td><td> </td><td>Кодування або декодування Base64 до стандартного виводу. </td></tr>
 <tr><td><tt>basename</tt></td><td> </td><td>Прибирає імена каталогів і (як опцію) суфікс з рядка «/шлях/до/ім'я_файлу». Повертає «ім'я_файлу».</td></tr>
@@ -95,6 +98,7 @@
 <tr><td><tt>cat</tt></td><td> </td><td>Об'єднує файли і виводить на стандартний вивод.</td></tr>
 <tr><td><tt>catattr</tt></td><td> </td><td>Виводить вміст атрибутів файлу. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>cc</tt></td><td> </td><td>Компілятор C.</td></tr>
+<tr><td><tt>cddb_lookup</tt></td><td> </td><td>Performs CDDB (Compact Disc Database) lookups.</td></tr>
 <tr><td><tt>checkfs</tt></td><td> </td><td>Перевіряє та виправляє файлову систему. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>checkitout</tt></td><td> </td><td>Обгортка командного рядка для MIME-типів URL-адреси SCM (Системи керування версіями), щоб одержати зміни з репозитарію просто за адресою ресурсу.<br />
 MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «application/x-vnd.Be.URL.cvs».</td></tr>
@@ -162,6 +166,9 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>gawk</tt></td><td> </td><td>GNU реалізація мови програмування AWK. Використовується для аналізу та обробки вхідних даних (наприклад, текстового файлу) за заданим шаблоном.</td></tr>
 <tr><td><tt>getarch</tt></td><td> </td><td>Показує версію компілятора середовища (архітектуру).</td></tr>
 <tr><td><tt>grep</tt></td><td> </td><td>Пошук за шаблоном.</td></tr>
+<tr><td><tt>groupadd</tt></td><td> </td><td>Adds a new group to the system.</td></tr>
+<tr><td><tt>groupdel</tt></td><td> </td><td>Deletes a group from the system.</td></tr>
+<tr><td><tt>groupmod</tt></td><td> </td><td>Modifies group settings.</td></tr>
 <tr><td><tt>groups</tt></td><td> </td><td>Виводить членство в групах для кожного імені користувача. </td></tr>
 <tr><td><tt>gunzip</tt></td><td> </td><td>Дивіться <tt>gzip</tt>.</td></tr>
 <tr><td><tt>gzexe</tt></td><td> </td><td>Розпаковує/стискає виконувані файли. </td></tr>
@@ -170,6 +177,7 @@ MIME-типи SCM: cvs, git, rsync, svn, svn+ssh; наприклад, «applicat
 <tr><td><tt>head</tt></td><td> </td><td>Виводить перші рядки файлу.</td></tr>
 <tr><td><tt>hey</tt></td><td> </td><td>Невеликий інструмент для написання сценаріїв програм з графічним інтерфейсом.</td></tr>
 <tr><td><tt>hostname</tt></td><td> </td><td>Виводить або встановлює ім'я хоста системи. </td></tr>
+<tr><td><tt>i2c</tt></td><td> </td><td>Interacts with I2C devices.</td></tr>
 <tr><td><tt>id</tt></td><td> </td><td>Виводить інформацію про користувача та групу.</td></tr>
 <tr><td><tt>ifconfig</tt></td><td> </td><td>Налаштовує мережевий інтерфейс. </td></tr>
 <tr><td><tt>install</tt></td><td> </td><td>Копіює файли до місця призначення, не порушуючи роботу запущеної системи.</td></tr>
@@ -194,6 +202,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>listarea</tt></td><td> </td><td>Виводить списки команд (teams) для всіх запущених процесів з інформацією про використані ресурси та розподіл пам'яті. </td></tr>
 <tr><td><tt>listattr</tt></td><td> </td><td>Виводить список атрибутів файлу. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>listdev</tt></td><td> </td><td>Виводить список всіх пристроїв апаратного забезпечення в системі.</td></tr>
+<tr><td><tt>listfont</tt></td><td> </td><td>Lists installed fonts.</td></tr>
 <tr><td><tt>listimage</tt></td><td> </td><td>Виводить списки команд (teams) для всіх запущених процесів з інформацією про їх образи. </td></tr>
 <tr><td><tt>listport</tt></td><td> </td><td>Виводить списки команд (teams) для всіх запущених процесів з інформацією про відкриті ними порти. </td></tr>
 <tr><td><tt>listres</tt></td><td> </td><td>Виводить список ресурсів файлу.</td></tr>
@@ -207,6 +216,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>logname</tt></td><td> </td><td>Виводить ім'я поточного користувача. </td></tr>
 <tr><td><tt>ls</tt></td><td> </td><td>Показує вміст каталогу. </td></tr>
 <tr><td><tt>lsindex</tt></td><td> </td><td>Відображає проіндексовані атрибути поточного тому/розділу.  <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
+<tr><td><tt>mail</tt></td><td> </td><td>A command to send email.</td></tr>
 <tr><td><tt>mail2mbox</tt></td><td> </td><td>Конвертує файли електронної пошти BeOS у файли поштових скриньок Unix. </td></tr>
 <tr><td><tt>make</tt></td><td> </td><td>Утиліта GNU make.</td></tr>
 <tr><td><tt>makebootable</tt></td><td> </td><td>Робить вказані розділи/пристрої BFS завантажувальними, записуючи завантажувальний код у перші два сектори. </td></tr>
@@ -232,6 +242,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>netstat</tt></td><td> </td><td>Друкує мережеві з'єднання, таблиці маршрутизації, статистику інтерфейсів, маскарадингові з'єднання і членство в багатоадресній розсилці. </td></tr>
 <tr><td><tt>nl</tt></td><td> </td><td>Виводить файл з додаванням номерів рядків. </td></tr>
 <tr><td><tt>nohup</tt></td><td> </td><td>Виконує задану команду, ігноруючи сигнали зависання, щоб команда могла продовжувати працювати у фоновому режимі після того, як Ви вийшли з системи.</td></tr>
+<tr><td><tt>notify</tt></td><td> </td><td>Sends notifications.  <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>nproc</tt></td><td> </td><td>Виводить кількість доступних процесорів.</td></tr>
 <tr><td><tt>od</tt></td><td> </td><td>Запис файлів у вісімковому або інших форматах. Виводить однозначне представлення кожного файлу («-» означає стандартний ввод), або стандартний ввод, якщо файл не задано.</td></tr>
 <tr><td><tt>open</tt></td><td> </td><td>Запускає програму/документ із оболонки командного рядка. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
@@ -243,6 +254,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>patch</tt></td><td> </td><td>Застосовує diff-файл до оригіналу. </td></tr>
 <tr><td><tt>pathchk</tt></td><td> </td><td>Діагностує недійсні або такі, які не можна перенести імена файлів.</td></tr>
 <tr><td><tt>pc</tt></td><td> </td><td>Калькулятор програміста.</td></tr>
+<tr><td><tt>pidof</tt></td><td> </td><td>Finds the process ID of a running program.</td></tr>
 <tr><td><tt>ping</tt></td><td> </td><td>Відправляє ICMP-echo-запит на мережевий хост. </td></tr>
 <tr><td><tt>pkgman</tt></td><td> </td><td>Управляє пакетами та репозитаріями пакетів.</td></tr>
 <tr><td><tt>pr</tt></td><td> </td><td>Розділяє на сторінки або розбиває на колонки файли для друку. </td></tr>
@@ -254,6 +266,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>ptx</tt></td><td> </td><td>Виводить покажчик, включаючи контекст, з вхідного файлу.</td></tr>
 <tr><td><tt>pwd</tt></td><td> </td><td>Виводить на екран поточний каталог. </td></tr>
 <tr><td><tt>query</tt></td><td> </td><td>Утиліта командного рядка, яка емулює функцію Tracker «Знайти за формулою».  <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
+<tr><td><tt>quicktour</tt></td><td> </td><td>Opens the Quick Tour of Haiku.</td></tr>
 <tr><td><tt>quit</tt></td><td> </td><td>Закриває програму.</td></tr>
 <tr><td><tt>ramdisk</tt></td><td> </td><td>Створює ram-диск. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>rc</tt></td><td> </td><td>Компілятор ресурсів.</td></tr>
@@ -262,6 +275,8 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>reindex</tt></td><td> </td><td>Розміщує атрибути існуючих файлів у новостворених індексах. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>release</tt></td><td> </td><td>Виставляє семафор. </td></tr>
 <tr><td><tt>renice</tt></td><td> </td><td>Змінює пріоритет запущеного процесу.</td></tr>
+<tr><td><tt>resattr</tt></td><td> </td><td>Manages resource attributes of files.</td></tr>
+<tr><td><tt>resizefs</tt></td><td> </td><td>Resizes a filesystem.</td></tr>
 <tr><td><tt>rm</tt></td><td> </td><td>Видаляє файли та каталоги.</td></tr>
 <tr><td><tt>rmattr</tt></td><td> </td><td>Вилучає атрибут із файлу.  <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>rmdir</tt></td><td> </td><td>Видаляє каталоги.</td></tr>
@@ -270,10 +285,13 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>route</tt></td><td> </td><td>Веде списки та управляє мережевими маршрутами. </td></tr>
 <tr><td><tt>safemode</tt></td><td> </td><td>Перевіряє, чи працює система у безпечному режимі (safemode). </td></tr>
 <tr><td><tt>screen_blanker</tt></td><td> </td><td>Гасить екран або запускає екранну заставку.</td></tr>
+<tr><td><tt>screeninfo</tt></td><td> </td><td>Displays information about the screen.</td></tr>
 <tr><td><tt>screenmode</tt></td><td> </td><td>Показує/встановлює режим екрану. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
+<tr><td><tt>screenshot</tt></td><td> </td><td>Captures screenshots.</td></tr>
 <tr><td><tt>sdiff</tt></td><td> </td><td>Показує або об’єднує відмінності двох файлів у вигляді таблиці порівняння по рядкам.</td></tr>
 <tr><td><tt>seq</tt></td><td> </td><td>Виводить послідовність чисел.</td></tr>
 <tr><td><tt>setarch</tt></td><td> </td><td>Встановлює середовище (оточення) для певної версії компілятора (архітектури).</td></tr>
+<tr><td><tt>setcontrollook</tt></td><td> </td><td>Sets the control look (appearance) for the GUI.</td></tr>
 <tr><td><tt>setdecor</tt></td><td> </td><td>Показує/налаштовує декоратор. </td></tr>
 <tr><td><tt>settype</tt></td><td> </td><td>Встановлює MIME-тип, сигнатуру і програму за замовчуванням для файлу.</td></tr>
 <tr><td><tt>setversion</tt></td><td> </td><td>Показує версію файлу.</td></tr>
@@ -296,6 +314,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>sum</tt></td><td> </td><td>Виводить контрольну суму та кількість блоків для кожного файлу. </td></tr>
 <tr><td><tt>sync</tt></td><td> </td><td>Примусово переносить змінені блоки на диск, оновлює суперблок.</td></tr>
 <tr><td><tt>sysinfo</tt></td><td> </td><td>Показує інформацію про систему.</td></tr>
+<tr><td><tt>system_time</tt></td><td> </td><td>Displays system time information.</td></tr>
 <tr><td colspan="3"><a id="T" name="T"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>T - Z</h2></a></td></tr>
 <tr><td><tt>tac</tt></td><td> </td><td>Об'єднує та друкує файли, починаючи з останнього рядка. </td></tr>
 <tr><td><tt>tail</tt></td><td> </td><td>Виводить останні десять рядків файлу.</td></tr>
@@ -324,6 +343,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>unlink</tt></td><td> </td><td>Викликає функцію «unlink», щоб видалити вказаний файл.</td></tr>
 <tr><td><tt>unmount</tt></td><td> </td><td>Відключає (розмонтує) том.</td></tr>
 <tr><td><tt>unrar</tt></td><td> </td><td>Розпаковує архів rar.</td></tr>
+<tr><td><tt>userdel</tt></td><td> </td><td>Deletes a user from the system.</td></tr>
 <tr><td><tt>unshar</tt></td><td> </td><td>Розпаковує архів shar.</td></tr>
 <tr><td><tt>untrash</tt></td><td> </td><td>Дивіться <tt>trash</tt>. </td></tr>
 <tr><td><tt>unzip</tt></td><td> </td><td>Розпаковує архів zip.</td></tr>
@@ -332,6 +352,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>uptime</tt></td><td> </td><td>Виводить дату і час, а також час, що минув з моменту запуску системи. </td></tr>
 <tr><td><tt>urlwrapper</tt></td><td> </td><td>Обгортка командного рядка для MIME-типів URL-адрес або інших програм, які не обробляють їх безпосередньо. </td></tr>
 <tr><td><tt>useradd</tt></td><td> </td><td>Створює нового користувача.</td></tr>
+<tr><td><tt>userguide</tt></td><td> </td><td>Opens the Haiku User Guide.</td></tr>
 <tr><td><tt>uudecode</tt></td><td> </td><td>Декодує файл, закодований «uuencode».</td></tr>
 <tr><td><tt>uuencode</tt></td><td> </td><td>Кодує файл в «uuencode», щоб його можна було надіслати поштою до віддаленої системи.</td></tr>
 <tr><td><tt>vdir</tt></td><td> </td><td>Виводить інформацію про файли.</td></tr>
@@ -340,9 +361,12 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>waitfor</tt></td><td> </td><td>Чекає, доки не з’явиться певний потік. <a href="cli-apps.html">(специфічно для Haiku)</a></td></tr>
 <tr><td><tt>watch</tt></td><td> </td><td>Періодично запускає програму.</td></tr>
 <tr><td><tt>wc</tt></td><td> </td><td>Виводить кількість абзаців, слів та символів (байт) у файлі. </td></tr>
+<tr><td><tt>welcome</tt></td><td> </td><td>Opens the Haiku Welcome page.</td></tr>
 <tr><td><tt>wget</tt></td><td> </td><td>Інструмент для завантаження через HTTP, HTTPS або FTP.</td></tr>
 <tr><td><tt>which</tt></td><td> </td><td>Знаходить команду.</td></tr>
 <tr><td><tt>whoami</tt></td><td> </td><td>Виводить ім'я користувача, пов'язане з поточним діючим ідентифікатором користувача.</td></tr>
+<tr><td><tt>WindowShade</tt></td><td> </td><td>Tweak the default window decorator colors.</td></tr>
+<tr><td><tt>writembr</tt></td><td> </td><td>Writes a master boot record (MBR) to a device.</td></tr>
 <tr><td><tt>xargs</tt></td><td> </td><td>Створює та виконує командні рядки зі стандартного вводу.</td></tr>
 <tr><td><tt>xres</tt></td><td> </td><td>Веде список ресурсів та управляє ними.</td></tr>
 <tr><td><tt>yes</tt></td><td> </td><td>Виводить рядок до тих пір, поки його не буде примусово завершено.</td></tr>

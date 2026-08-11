@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2024, Haiku. All rights reserved.
+ * Copyright 2008-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -91,7 +91,8 @@
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="windows-tabs" name="windows-tabs">窗口与标签</a></h2>
-<p>You can open as many Terminals as needed, either each in its own window by simply launching more Terminals or with <span class="key">ALT</span> <span class="key">N</span> from an already running Terminal. Or you use Terminal's tabbed view and open more tabs with <span class="key">ALT</span> <span class="key">T</span>. You can switch to a specific tab with <span class="key">ALT</span> and its number, e.g. <span class="key">ALT</span> <span class="key">2</span> switches to the second tab, <span class="key">ALT</span> <span class="key">4</span> to the fourth etc.</p>
+<p>You can open as many Terminals as needed, either each in its own window by simply launching more Terminals or with <span class="key">ALT</span> <span class="key">N</span> from an already running Terminal. Or you use Terminal's tabbed view and open more tabs with <span class="key">ALT</span> <span class="key">T</span>. You can switch to a specific tab with <span class="key">ALT</span> and its number, e.g. <span class="key">ALT</span> <span class="key">2</span> switches to the second tab, <span class="key">ALT</span> <span class="key">4</span> to the fourth etc.<br />
+Spatial tab switching works as well: <span class="key">ALT</span> <span class="key">←</span> / <span class="key">→</span> switches to the tab to the left/right.</p>
 <img src="../images/apps-images/terminal.png" alt="terminal.png" />
 <br />
 <p>Double-clicking into the emtpy part of the tab bar opens a new tab; onto a tab opens a dialog to rename its title. There are several %-designated variables that are explained with a tooltip when you hover the mouse over the text field.<br />
@@ -113,8 +114,8 @@ Hover your mouse over the "formulas" for naming tab and window titles to get too
 Activate the checkbox to <span class="menu">Confirm exit if active programs exist</span> and you'll be warned when trying to close a Terminal window while an app is still being executed.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="button">保存为...</span></td><td width="10"> </td><td>让您可以将不同的设置保存为独立文件，基于此，双击之后可以打看对应配置文件的终端窗口。</td></tr>
-<tr><td><span class="button">取消</span></td><td> </td><td>撤销设置为最近打开设置面板时的状态。</td></tr>
-<tr><td><span class="button">Defaults</span></td><td> </td><td>重置所有设置未默认值。</td></tr>
+<tr><td><span class="button">恢复</span></td><td> </td><td>撤销设置为最近打开设置面板时的状态。</td></tr>
+<tr><td><span class="button">默认</span></td><td> </td><td>重置所有设置未默认值。</td></tr>
 </table>
 
 <h2>
@@ -126,8 +127,8 @@ Activate the checkbox to <span class="menu">Confirm exit if active programs exis
 <p>You can also configure "ANSI colors", which are the first 8 named colors in the color palette of terminal applications. You choose a color, for example "<i>ANSI red color</i>", and then adjust it with the color picker below. The effect is visible live in the open Terminal and in the preview below. The exact colors used in various places are documented at <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">Wikipedia</a>.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="button">保存为...</span></td><td width="10"> </td><td>let's you save your custom color scheme under a name that will appear in the <span class="menu">Color scheme</span> menu at the top, if you put it in the default location <span class="path">~/config/settings/Terminal/Themes</span> (or its system equivalent <span class="path">/boot/system/settings/Terminal/Themes</span>).</td></tr>
-<tr><td><span class="button">取消</span></td><td> </td><td>brings back the colors that were active when you opened the colors panel.</td></tr>
-<tr><td><span class="button">Defaults</span></td><td> </td><td>重置所有设置未默认值。</td></tr>
+<tr><td><span class="button">恢复</span></td><td> </td><td>brings back the colors that were active when you opened the colors panel.</td></tr>
+<tr><td><span class="button">默认</span></td><td> </td><td>重置所有设置未默认值。</td></tr>
 </table>
 
 <h2>

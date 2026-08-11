@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -98,6 +98,7 @@ Nach dieser Überprüfung sollte man so genau wie möglich den Fehler beschreibe
 	<li><p>Der Fehler sollte so präzise wie möglich beschrieben werden. Welches Verhalten wurde erwartet und was wurde stattdessen beobachtet?</p></li>
 	<li><p>Wann tritt der Fehler auf? Nur mit einer Schritt-für-Schritt Anleitung können die Entwickler den Bug nachstellen und beheben.</p></li>
 	<li><p>An den Fehlerbericht sollten so viele Informationen wie möglich angehängt werden. Handelt es sich um einen Bug in der grafischen Oberfläche oder einer der Anwendungen, ist ein Bildschirmfoto mittels der <span class="key">DRUCK</span> Taste hilfreich.</p></li>
+	<li><p>Bugreports sollten auf Englisch erstellt werden, die gemeinsame Sprache des Entwicklerteams. Schreibt man auf Englisch, ist wahrscheinlicher, dass sich ein Entwickler mit Erfahrung in dem Bereich der Sache annimmt. Wer kein Englisch spricht, sollte sich für den Bugreport Hilfe von anderen suchen, z. B. in Haikus <a href="https://discuss.haiku-os.org/c/international">Internationalem Forum</a>.</p></li>
 </ul>
 	
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -146,6 +147,8 @@ Das Syslog (kurz für System Log) enthält wertvolle Infos darüber, was im Syst
 Ist die Einstellung <span class="menu">Save syslog from previous session during boot</span> in den Bootloader Optionen aktiviert (wie es standardmäßig der Fall ist), findet man das Syslog der letzten Sitzung unter <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
 Gelingt das Booten nicht, um an das previous_syslog zu kommen, muss man beim Neustart das Bootloader Menü mittels gedrückter <span class="key">SHIFT</span> Taste (bzw. <span class="key">LEERTASTE</span> wenn per UEFI gebootet wird) aufrufen.<br />
 Dort sollte man im <span class="menu">Debug menu</span> die Einträge <span class="menu">Display syslog from previous session</span> und <span class="menu">Save syslog from previous session</span> sehen. Ersterer zeigt das Syslog direkt auf dem Bildschirm an, mit letzterem lässt es sich speichern. Momentan geht das nur auf FAT32 formatierten Medien. Möchte man dafür einen USB-Stick benutzen, den man allerdings erst zu spät reingesteckt hat und der deswegen nicht erkannt wurde, kann man den Rechner nochmals resetten und das Bootloader-Menü erneut aufrufen. Es gilt aber immer noch: Bootet man aus Versehen ein Betriebssystem, sind die Syslog-Daten weg.</p>
+<p>Das Syslog enthält viele Informationen über das System, beispielsweise welche Anwendungen laufen, und einige Anwendungen geben hier auch noch andere Details preis. Bevor man sein Syslog hochlädt, ist es empfehlenswert sicherzustellen, dass es keine persönlichen Daten enthält, die man nicht veröffentlicht sehen will. Ein vollständiges Syslog ist manchmal hilfreich, aber falls man einige Daten entfernen möchte, kann man die Datei vorher bearbeiten.</p>
+<p>Lädt man ein Syslog als Anhang an ein Ticket hoch, muss es direkt angehängt werden, <b>nicht</b> als ZIP oder ähnliches Archiv.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">Debug Ausgabe auf den Bildschirm</a></h3>

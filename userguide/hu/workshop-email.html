@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,15 +63,16 @@
 
 <div id="content">
 <div>
+<div class="box-info">Az oldal fordítása még folyamatban van. Amíg tart a fordítás, addig a lefordítatlan részek angolul jelennek meg.</div>
 
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Index</td></tr>
 <tr class="index"><td>
-	<a href="#mailsystem">A Haiku levelező rendszere</a><br />
-	<a href="#status">Egyéni állapotok használata</a><br />
-	<a href="#queries">Lekérdezések használata</a><br />
-	<a href="#tips">További tippek</a>
+	<a href="#mailsystem">Haiku's mail system</a><br />
+	<a href="#labels">Using labels</a><br />
+	<a href="#queries">Using queries</a><br />
+	<a href="#tips">More tips</a>
 </td></tr>
 </table>
 
@@ -102,14 +103,18 @@ Ugyanakkor a fájlrendszer bármely területén történő fejlesztés nem csak 
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="status" name="status">Egyéni állapotok használata</a></h2>
+<a id="labels" name="labels">Using labels</a></h2>
 <p>Amikor az újonnan érkezett levelek közt böngészel, akkor megeshet, hogy valamelyikkel majd csak később akarsz komolyabban foglalkozni. Ekkor a Levelezés <span class="menu">Bezár és... | Hagyja Újként</span> menüjét választva a levél megmarad az "<i>Új levelek</i>" között...</p>
 <p>De, ha nem akarunk válaszolni a levélre, ez nem a legjobb megoldás.</p>
-<img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>Sokkal jobb megoldás az, ha a <span class="menu">Bezárás és... | Megjelöl...</span> menüben létrehozunk egy új állapotot, és azt haszánljuk a levelek kategorizálására. Például, adhatunk a levélnek egy "<i>Később</i>" állapotot, és ha lesz több időnk, akkor majd rákeresünk erre az állapotra.<br />
-Esetleg egyedi állapotot adhatunk a különféle munkákkal kapcsolatos leveleknek is. Például, készíthetünk egy "<i>HUG</i>" állaptot (a "Haiku user guide" rövidítéseként), ami minden, a Haiku felhasználói útmutatóval kapcsolatos levélnek megadható.<br />
-Minden esetben próbáljunk rövid állapot-nevet megadni, így a Nyomkövető ablak állapot oszlopában mindig el fog férni.</p>
-<p>Nem szükséges megnyitni a leveleket a <span class="app">Levelezés</span> programban az állapotuk módosításához. A <span class="app">Mark as Read </span> (Olvasottnak jelöl) és a <span class="app">Mark as...</span> (Megjelöl, mint...) Nyomkövető kiegészítőket használhatjuk a kijelölt leveleken, és egy lépésben módosítható azok állapota.</p>
+<img src="images/workshop-email-images/labels.png" alt="labels.png" /> 
+<p>Better use <span class="menu">Set label</span> to create a new label with <span class="menu">Label as…</span> or choose an existing label to categorize your mail. For example, you could call the label "<i>Later</i>", and then query for that when you find more time.<br />
+Or you use different labels for specific projects. For example, I created a label "<i>HUG</i>" (for "Haiku user guide") under which I collect every mail that may influence the contents of the user guide, like commit messages about code changes that alter or introduce some feature or anything else I feel could improve the user guide.<br />
+In any case, try to keep the label name short. That way it always fits in a normally wide "Label" column in Tracker.</p>
+<p>Once you've dealt with the email, you can use <span class="menu">Remove label</span> to clear the email's label attribute.</p>
+<p>Labels are saved in <span class="path">~/config/settings/Mail/labels</span>, which is opened when you choose <span class="menu">Manage labels…</span>. Here you can add, delete or rename your labels. Conveniently, each label file is also a query, meaning you can doubleclick it to start a query for emails with that label. Handy to check first before deleting a label that you think you don't need anymore.</p>
+<p>You don't have to open an email with the <span class="app">Mail</span> application to set its label. With the Tracker add-ons <span class="app">Label as… </span> you can select some email files and set or remove their label in one go.</p>
+<div class="box-info">BeOS - and Haiku for a long time - misused the email status attribute <tt>MAIL:status</tt> for labeling mails. If you used such custom statuses, it's recommended you migrate them to the label attribute <tt>MAIL:label</tt>.
+</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -117,13 +122,14 @@ Minden esetben próbáljunk rövid állapot-nevet megadni, így a Nyomkövető a
 <p>A levelek számára meg kell adni egy mappát, így minden levelünk egy helyen lesz majd. Csakhogy idővel a mappa túlzsúfolttá válhat, és a levelek betöltése, rendezése is hosszabb ideig tarthat. Ezen kívül pedig általában nem is törődünk a 2 évvel ezelőtti levelekkel...</p>
 <div class="box-info">A sok fájlt tartalmazó mappák beolvasása hosszú ideig tarthat, és a fájlok rendezése is időbe telhet. Ha meg akarsz nyitni egy sok fájlt tartalmazó mappát, akkor lerövidítheted a várakozási időt, ha közben a Nyomkövető ablakot "eltünteted", például elrejted vagy egy másik munkaasztalra rakod át. A <a href="desktop-applets/processcontroller.html">Folyamatkezelő</a>vel a processzor használata is megfigyelhető.</div>
 <p>A <a href="queries.html">Lekérdezések</a> a megmentőink!</p>
-<p>A lekérdezések használatával leszűkíthetjük a levelek listáját. Például az Asztalsávon megjelenő ikon is lekérdezéseket használ.</p>
+<p>By using queries, you can narrow down the view of your mails. Actually, the mailbox icon in the Deskbar uses queries. Right-click the icon to open its context menu:</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
 <p>Az <span class="menu">Open Draft</span> (Piszkozatok) almenüben találhatóak azok a levelek, melyek állapota "<i>Draft</i>" (piszkozat), amit a <span class="app">Levelezés</span> adott meg, amikor elmentettük a levelet.</p>
 <p>Az <span class="menu">Open Inbox Folder</span> (Bejövő levelek) és az <span class="menu">Open Mail Folder</span> (levelek mappájának megnyitása) mindössze egy hivatkozás.</p>
 <p>A <span class="menu"># új levél</span> almenü egy lekérdezés azokra a levelekre, melyek állapota "<i>New</i>" (Új). Ugyan ez a lekérdezés adja meg az új levelek számát is a menü nevében..</p>
 
-<p>Egyéni lekérdezés illetve mappa is hozzáadható a menühöz, ha azt a <span class="path">~/config/settings/Mail/Menu Links</span> mappába másoljuk, vagy ha ide készítünk egy hivatkozást.</p>
+<p>You can add your own queries (or folders, applications, scripts etc.) to that context menu too, by putting them or links to them into <span class="path">~/config/settings/Mail/Menu Links</span>. In the screenshot above, for example, the label folder <span class="path">~/config/settings/Mail/labels</span> was linked there, to have quick access to labeled emails from the the mailbox icon of the Deskbar.</p>
+
 <div class="box-info">A <span class="path">~/config/settings/Mail/mailbox</span> lekérdezés egy speciális eset: ez myílik meg, amikor a bal gombbal kattintunk a postaláda ikonon az Asztalsávon. Ha ezt meg akarjuk változtatni, akkor csak cseréljük ki egy másik fájlal (vagy a fájl hivatkozásával), és nevezzük el "<i>mailbox</i>"-nak. Nem fontos, hogy lekérdezés legyen. Lehet akár egy program hivatkozása is.</div>
 
 <h3>
@@ -134,7 +140,7 @@ Minden esetben próbáljunk rövid állapot-nevet megadni, így a Nyomkövető a
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /></td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /></td></tr>
 
-<tr align="center"><td>Egyéni ("<i>Másolat</i>") állapottal rendelkező levelek.</td>
+<tr align="center"><td>This finds all mails with the label "<i>Later</i>".</td>
 <td>A legutóbbi két nap levelei.</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /></td>
@@ -150,7 +156,8 @@ Minden esetben próbáljunk rövid állapot-nevet megadni, így a Nyomkövető a
 <ul>
 <li><p>Ha egy lekérdezést "<i>Keresés</i>ként", helyett inkább "<i>Keresési sablon</i>ként" mentünk el, akkor a megnyitásakor nem a találat ablak fog megjelenni, hanem a kereső ablak. Ezzel a megoldással a keresés könnyedén módosítható, például a keresés idejét "<i>2 days</i>" (2 napról) "<i>3 days</i>" (3 napra).</p></li>
 <li><p>A "gépelés közbeni szűrő" engedélyezésekor (a <a href="tracker.html#tracker-preferences">Nyomkövető</a> beállításainál) lehetőségünk van arra, hogy a keresés eredményei között még nyorsabban megtaláljuk azt, amit akarunk. Gyakran elég lekérdezni az utóbbi 3 nap leveleit és abban használni a gépelés közbeni szűrést, így még hatékonyabban tudjuk azt használi. A lényeg az, hogy nem kell megadnunk, hogy mely jellemzőben keressünk, ugyanis így az összes megjelenített mezőben keresni tudunk.</p></li>
-<!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
+<li><p>When you're managing your emails via queries - and why wouldn't you? - you should configure a <i>DefaultQueryTemplate</i> that shows all the email attributes you normally want to see in a query result window, like <i>Status</i>, <i>From</i>, <i>Subject</i>, <i>When</i>.<br />
+First, you create a folder <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates/text_x-email</span>. Then do one of your usual email queries and change the displayed attributes and window size and position of the result window to your liking. Now simply <span class="menu">Copy layout</span> from its <span class="menu">Attributes</span> menu, open the newly created <span class="path">text_x-email</span> folder, and <span class="menu">Paste layout</span> there.</p></li>
 </ul>
 
 </div>

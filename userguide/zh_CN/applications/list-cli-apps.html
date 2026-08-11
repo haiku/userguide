@@ -4,11 +4,12 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2023, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Daniel Marth
+ *		Diver
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Pengphei Han
@@ -66,11 +67,11 @@
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />所有命令行程序列表</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>位置:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
+<tr><td>位置:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">/boot/system/non-packaged/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
 </table>
 <p><br /></p>
-<p>所有与 Haiku 集成的命令行程序放置在 <span class="path">/boot/system/bin</span>。您自己的或者额外安装的通过 .hpkg 安装的命令行程序应该放置于 <span class="path">~/config/bin</span>，而且，您也可以将他们放置在 <span class="path">~/config/non-packaged/bin/</span> 。所有这些位置是 PATH 变量的一部分，因此会自动被发现。<br />
-下面是与 Haiku 集成的所有命令行程序列表。每个程序都有一个简短的功能描述，关于用法的更多详细信息，请使用 <tt>--help</tt> 参数运行该命令。</p>
+<p>All commandline applications shipped with Haiku are in <span class="path">/boot/system/bin/</span>. Additionally installed commandline apps will appear there as well (or in <span class="path">~/config/bin/</span> if installed in the home-hierarchy) when installed from a .hpkg package. Otherwise you can put them into <span class="path">~/config/non-packaged/bin/</span>. All these locations are part of the PATH variable and are therefore automatically found.<br />
+Here's a list of all commandline applications that are shipped with Haiku. Each with only a short description of what it does, for more detailed information on its usage execute the command with the parameter <tt>--help</tt>.</p>
 <p><br /></p>
 <p>索引:   <a href="#A">A – E</a>   ::   <a href="#F"> F – J </a>   ::   <a href="#K"> K – O </a>   ::   <a href="#P"> P – S </a>   ::   <a href="#T"> T – Z </a></p>
 <p><br /></p>
@@ -82,6 +83,7 @@
 <tr><td><tt>addattr</tt></td><td> </td><td>写入属性到文件，包括类型和相应值的转换。<a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>alert</tt></td><td> </td><td>显示一个消息对话框。<a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>arp</tt></td><td> </td><td>管理系统缓冲区。</td></tr>
+<tr><td><tt>autologin</tt></td><td> </td><td>Enables automatic login functionality.</td></tr>
 <tr><td><tt>awk</tt></td><td> </td><td>查看 <tt>gawk</tt> 说明。</td></tr>
 <tr><td><tt>base64</tt></td><td> </td><td>标准输出的 Base64 编码或解码。</td></tr>
 <tr><td><tt>basename</tt></td><td> </td><td>从 /path/to/filename 字符串中去除目录和可选的文件名后缀。</td></tr>
@@ -95,6 +97,7 @@
 <tr><td><tt>cat</tt></td><td> </td><td>连接文件，并将其打印到标准输出。</td></tr>
 <tr><td><tt>catattr</tt></td><td> </td><td>打印文件的属性内容。 <a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>cc</tt></td><td> </td><td>C 编译器</td></tr>
+<tr><td><tt>cddb_lookup</tt></td><td> </td><td>Performs CDDB (Compact Disc Database) lookups.</td></tr>
 <tr><td><tt>checkfs</tt></td><td> </td><td>检查和修复文件系统。<a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>checkitout</tt></td><td> </td><td>使用版本库的网址（URL）检验源文件。</td></tr>
 <tr><td><tt>chgrp</tt></td><td> </td><td>修改文件组。 </td></tr>
@@ -156,6 +159,9 @@
 <tr><td><tt>gawk</tt></td><td> </td><td>模式匹配和处理程序。 </td></tr>
 <tr><td><tt>getarch</tt></td><td> </td><td>显示环境信息，编译器版本。</td></tr>
 <tr><td><tt>grep</tt></td><td> </td><td>模式搜索。</td></tr>
+<tr><td><tt>groupadd</tt></td><td> </td><td>Adds a new group to the system.</td></tr>
+<tr><td><tt>groupdel</tt></td><td> </td><td>Deletes a group from the system.</td></tr>
+<tr><td><tt>groupmod</tt></td><td> </td><td>Modifies group settings.</td></tr>
 <tr><td><tt>groups</tt></td><td> </td><td>打印每个用户名的组别。</td></tr>
 <tr><td><tt>gunzip</tt></td><td> </td><td>查看 <tt>gzip</tt> 说明。</td></tr>
 <tr><td><tt>gzexe</tt></td><td> </td><td>解/压缩可执行文件。</td></tr>
@@ -164,6 +170,7 @@
 <tr><td><tt>head</tt></td><td> </td><td>打印文件的首行。</td></tr>
 <tr><td><tt>hey</tt></td><td> </td><td>用于 GUI 应用程序脚本的小工具。</td></tr>
 <tr><td><tt>hostname</tt></td><td> </td><td>打印或设置系统主机名。 </td></tr>
+<tr><td><tt>i2c</tt></td><td> </td><td>Interacts with I2C devices.</td></tr>
 <tr><td><tt>id</tt></td><td> </td><td>打印用户和用户组信息。 </td></tr>
 <tr><td><tt>ifconfig</tt></td><td> </td><td>配置网络接口。 </td></tr>
 <tr><td><tt>install</tt></td><td> </td><td>复制文件到目标路径，而不中断运行系统。</td></tr>
@@ -187,6 +194,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>listarea</tt></td><td> </td><td>列出所有当前运行组的区域信息。 </td></tr>
 <tr><td><tt>listattr</tt></td><td> </td><td>列出文件属性。 <a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>listdev</tt></td><td> </td><td>列出所有硬件设备。 </td></tr>
+<tr><td><tt>listfont</tt></td><td> </td><td>Lists installed fonts.</td></tr>
 <tr><td><tt>listimage</tt></td><td> </td><td>列出所有当前运行组的图像信息。</td></tr>
 <tr><td><tt>listport</tt></td><td> </td><td>以组的形式列出所有系统中的开放端口。 </td></tr>
 <tr><td><tt>listres</tt></td><td> </td><td>列出文件资源。</td></tr>
@@ -200,6 +208,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>logname</tt></td><td> </td><td>打印当前用户的名称。 </td></tr>
 <tr><td><tt>ls</tt></td><td> </td><td>列出目录内容。 </td></tr>
 <tr><td><tt>lsindex</tt></td><td> </td><td>显示当前卷/分区的索引属性。 <a href="cli-apps.html">（Haiku 专用）</a></td></tr>
+<tr><td><tt>mail</tt></td><td> </td><td>A command to send email.</td></tr>
 <tr><td><tt>mail2mbox</tt></td><td> </td><td>转换 BeOS 电子邮件文件为 Unix 邮箱文件。 </td></tr>
 <tr><td><tt>make</tt></td><td> </td><td>GNU make 套件。</td></tr>
 <tr><td><tt>makebootable</tt></td><td> </td><td>通过写入引导代码到头部的两个扇区，创建指定的 BFS 分区/可引导设备。</td></tr>
@@ -225,6 +234,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>netstat</tt></td><td> </td><td>打印网络连接，路由表，接口统计信息，伪装连接以及组播成员等信息。</td></tr>
 <tr><td><tt>nl</tt></td><td> </td><td>打印每个文件并添加相应的行号。</td></tr>
 <tr><td><tt>nohup</tt></td><td> </td><td>运行命令，而忽略挂起的信号。 </td></tr>
+<tr><td><tt>notify</tt></td><td> </td><td>Sends notifications.  <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>nproc</tt></td><td> </td><td>打印可用运算器的编号。</td></tr>
 <tr><td><tt>od</tt></td><td> </td><td>写入文件的清晰表述。</td></tr>
 <tr><td><tt>open</tt></td><td> </td><td>从 Shell 载入应用程序或者文档。 <a href="cli-apps.html">（Haiku 专用）</a></td></tr>
@@ -236,6 +246,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>patch</tt></td><td> </td><td>应用修改文件到原文件。 </td></tr>
 <tr><td><tt>pathchk</tt></td><td> </td><td>判断无效或者不可移植的文件名。 </td></tr>
 <tr><td><tt>pc</tt></td><td> </td><td>程序员计算器。</td></tr>
+<tr><td><tt>pidof</tt></td><td> </td><td>Finds the process ID of a running program.</td></tr>
 <tr><td><tt>ping</tt></td><td> </td><td>发送 ICMP回应请求 到网络主机。 </td></tr>
 <tr><td><tt>pkgman</tt></td><td> </td><td>管理软件包和软件仓库。</td></tr>
 <tr><td><tt>pr</tt></td><td> </td><td>为文件编制页码或者组合以便打印。 </td></tr>
@@ -247,6 +258,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>ptx</tt></td><td> </td><td>输出输入文件中词语的排列索引，包括上下文。</td></tr>
 <tr><td><tt>pwd</tt></td><td> </td><td>打印当前目录。 </td></tr>
 <tr><td><tt>query</tt></td><td> </td><td>效仿 Tracker "Find by formula" 功能的Shell套件。  <a href="cli-apps.html">（Haiku 专用）</a></td></tr>
+<tr><td><tt>quicktour</tt></td><td> </td><td>Opens the Quick Tour of Haiku.</td></tr>
 <tr><td><tt>quit</tt></td><td> </td><td>退出应用程序。 </td></tr>
 <tr><td><tt>ramdisk</tt></td><td> </td><td>创建内存磁盘，即 ramdisk <a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>rc</tt></td><td> </td><td>资源编译器</td></tr>
@@ -255,6 +267,8 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>reindex</tt></td><td> </td><td>把已存在文件的属性放置到新建的索引。 <a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>release</tt></td><td> </td><td>发布一个信号。</td></tr>
 <tr><td><tt>renice</tt></td><td> </td><td>修改运行进程的优先级。</td></tr>
+<tr><td><tt>resattr</tt></td><td> </td><td>Manages resource attributes of files.</td></tr>
+<tr><td><tt>resizefs</tt></td><td> </td><td>Resizes a filesystem.</td></tr>
 <tr><td><tt>rm</tt></td><td> </td><td>删除文件和目录。 </td></tr>
 <tr><td><tt>rmattr</tt></td><td> </td><td>删除文件属性。 <a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>rmdir</tt></td><td> </td><td>删除目录。</td></tr>
@@ -263,10 +277,13 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>route</tt></td><td> </td><td>列出并修改网络路由。</td></tr>
 <tr><td><tt>safemode</tt></td><td> </td><td>检查系统是否运行于安全模式。 </td></tr>
 <tr><td><tt>screen_blanker</tt></td><td> </td><td>启动屏幕关闭。</td></tr>
+<tr><td><tt>screeninfo</tt></td><td> </td><td>Displays information about the screen.</td></tr>
 <tr><td><tt>screenmode</tt></td><td> </td><td>Show/sets the screen mode. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
+<tr><td><tt>screenshot</tt></td><td> </td><td>Captures screenshots.</td></tr>
 <tr><td><tt>sdiff</tt></td><td> </td><td>显示或者并行合并文件。</td></tr>
 <tr><td><tt>seq</tt></td><td> </td><td>打印数字序列。</td></tr>
 <tr><td><tt>setarch</tt></td><td> </td><td>将环境信息设置为指定的编译器版本。</td></tr>
+<tr><td><tt>setcontrollook</tt></td><td> </td><td>Sets the control look (appearance) for the GUI.</td></tr>
 <tr><td><tt>setdecor</tt></td><td> </td><td>显示/设置 装饰器。</td></tr>
 <tr><td><tt>settype</tt></td><td> </td><td>设置文件的 MIME类型，署名以及首选程序。 </td></tr>
 <tr><td><tt>setversion</tt></td><td> </td><td>显示文件版本信息。</td></tr>
@@ -289,6 +306,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>sum</tt></td><td> </td><td>打印每个文件的校验码和数据块数量。 </td></tr>
 <tr><td><tt>sync</tt></td><td> </td><td>强制写入修改磁盘数据块，更新超级块。</td></tr>
 <tr><td><tt>sysinfo</tt></td><td> </td><td>显示系统信息。 </td></tr>
+<tr><td><tt>system_time</tt></td><td> </td><td>Displays system time information.</td></tr>
 <tr><td colspan="3"><a id="T" name="T"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>T - Z</h2></a></td></tr>
 <tr><td><tt>tac</tt></td><td> </td><td>连接文件并打印，尾行在前。</td></tr>
 <tr><td><tt>tail</tt></td><td> </td><td>打印文件的最后十行。</td></tr>
@@ -317,6 +335,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>unlink</tt></td><td> </td><td>调用 unlink 功能删除指定文件。 </td></tr>
 <tr><td><tt>unmount</tt></td><td> </td><td>卸载卷。</td></tr>
 <tr><td><tt>unrar</tt></td><td> </td><td>展开 rar 档案。 </td></tr>
+<tr><td><tt>userdel</tt></td><td> </td><td>Deletes a user from the system.</td></tr>
 <tr><td><tt>unshar</tt></td><td> </td><td>展开 shar 档案。</td></tr>
 <tr><td><tt>untrash</tt></td><td> </td><td>查阅 <tt>trash</tt> 说明。 </td></tr>
 <tr><td><tt>unzip</tt></td><td> </td><td>展开 zip 档案。</td></tr>
@@ -325,6 +344,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>uptime</tt></td><td> </td><td>打印时间和日期，如系统启动后经过的时间。</td></tr>
 <tr><td><tt>urlwrapper</tt></td><td> </td><td>对命令行或其他程序等，隐藏 URL 的MIME类型。 </td></tr>
 <tr><td><tt>useradd</tt></td><td> </td><td>创建一个新用户。 </td></tr>
+<tr><td><tt>userguide</tt></td><td> </td><td>Opens the Haiku User Guide.</td></tr>
 <tr><td><tt>uudecode</tt></td><td> </td><td>解码未解码的文件。</td></tr>
 <tr><td><tt>uuencode</tt></td><td> </td><td>译码文件，使其可以发送到远程系统。 </td></tr>
 <tr><td><tt>vdir</tt></td><td> </td><td>列出文件信息。 </td></tr>
@@ -333,9 +353,12 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>waitfor</tt></td><td> </td><td>等待直到某个线程出现。<a href="cli-apps.html">（Haiku 专用）</a></td></tr>
 <tr><td><tt>watch</tt></td><td> </td><td>按时运行某个程序。</td></tr>
 <tr><td><tt>wc</tt></td><td> </td><td>打印文件中的段落数，字数以及字符（字节）数。 </td></tr>
+<tr><td><tt>welcome</tt></td><td> </td><td>Opens the Haiku Welcome page.</td></tr>
 <tr><td><tt>wget</tt></td><td> </td><td>用于使用 HTTP，HTTPS 或 FTP进行下载的工具。 </td></tr>
 <tr><td><tt>which</tt></td><td> </td><td>定位一个命令。 </td></tr>
 <tr><td><tt>whoami</tt></td><td> </td><td>打印关联于当前有效用户ID的用户名。 </td></tr>
+<tr><td><tt>WindowShade</tt></td><td> </td><td>Tweak the default window decorator colors.</td></tr>
+<tr><td><tt>writembr</tt></td><td> </td><td>Writes a master boot record (MBR) to a device.</td></tr>
 <tr><td><tt>xargs</tt></td><td> </td><td>从标准输入构建和运行命令行。 </td></tr>
 <tr><td><tt>xres</tt></td><td> </td><td>列出并操作资源。 </td></tr>
 <tr><td><tt>yes</tt></td><td> </td><td>重复打印字符串直到被进程被杀死。 </td></tr>

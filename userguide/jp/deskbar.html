@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -70,8 +70,9 @@
 <tr class="heading"><td>インデックス</td></tr>
 <tr class="index"><td>
 	<a href="#deskbar-menu">Deskbar メニュー</a><br />
+	<a href="#deskbar-prefs">Deskbar 設定</a><br />
 	<a href="#tray">トレイ</a><br />
-	<a href="#list-of-apps">実行中プログラムの一覧</a>
+	<a href="#list-of-apps">実行中プログラム一覧</a>
 </td></tr>
 </table>
 
@@ -79,11 +80,11 @@
 
 <p>Deskbar は小さなパネルで、初期設定では画面右上隅に配置されています。これは、Windows でのスタートボタンを備えたタスクバーの Haiku 版です。アプリケーションや設定を開くための Deskbar メニューと、時計やその他のツールを表示するトレイを持ち、実行中のプログラムの一覧をその下に表示します。</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>トレイの片側にある凸の部分をつかんで (上図の矢印を見てください) 新しい位置にドラッグ＆ドロップすると、画面の四隅、または上下に Deskbar を移動できます。<br />
-Deskbar メニューに凸の部分をドラッグ＆ドロップすれば、バーを小さく折りたたむこともできます。それは普通のウィンドウのタブの高さであるため、スクリーン全体を占めるウィンドウでも、時計とアイコンを備えた Deskbarトレイを隠しません。</p>
-<p>トレイのもう一方の凸の部分をつまんで、マウスを左右に動かすと、Deskbar の幅を変更できます。</p>
+<p>トレイの片側にある凹凸部分をつかんで (上図の矢印を見てください) 新しい位置にドラッグ＆ドロップすると、画面の四隅、またはバーとして上下に Deskbar を移動できます。<a href="#deskbar-prefs">Deskbar 設定</a> は、違うやり方を提供します。<br />
+Deskbar の葉っぱメニューに凹凸部分をドラッグ＆ドロップすれば、バーを小さく折りたたむこともできます。それは普通のウィンドウのタブの高さであるため、スクリーン全体を占めるウィンドウでも、時計とアイコンを備えた Deskbarトレイを隠しません。</p>
+<p>トレイのもう一方の凹凸部分をつまんで、マウスを左右に動かすと、Deskbar の幅を変更できます。</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>幅のより広い Deskbar は、トレイ内の 1 行により多くのアイコンを置けます。それほどよくあることではありませんが、特に大きなアイコンを使用している場合、それはまた、実行中プログラム一覧内の長いアプリケーション名を切り詰めます。</p>
+<p>幅のより広い Deskbar は、トレイ内の 1 行により多くのアイコンを置けます。それほどあることではないですが、特に大きなアイコンを使用している場合、それはまた、実行中プログラム一覧内の長いアプリケーション名を切り詰めます。ほかのウィンドウと同じく、<span class="key">ALT</span> と <span class="key">CTRL</span> を押しながら右マウスボタンを押してドラッグすることで、Deskbar の大きさを変えることができます。</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -102,13 +103,13 @@ Deskbar メニューに凸の部分をドラッグ＆ドロップすれば、バ
 <li><p><b>Applications、Demos、Deskbar Applets、Preferences</b> - インストール済のアプリケーション、デモ、アプレットと設定の一覧です。<br />ほかのプログラム (またはフォルダー、ドキュメント、クエリなど) へのリンクを追加するには、それらを <span class="path">~/config/settings/deskbar/menu/</span> に入れます。</p></li>
 </ul>
 
-<h3>
-
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Deskbar 設定</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar 設定</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Deskbar 設定パネルは、3 つのセクションに分かれます。</p>
 
-<h4>アプリケーション</h4>
+<h3>アプリケーション</h3>
 <p>以下の設定は、インストール済アプリケーションには適用されませんが、実行中アプリケーションリストの動作や見た目に適用されます。</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">実行中のアプリケーションを名前順に並び換える (Sort running applications)</span></td><td> </td><td>実行中アプリケーションリストをアルファベット順に並べ替えます。</td></tr>
@@ -119,7 +120,7 @@ Deskbar メニューに凸の部分をドラッグ＆ドロップすれば、バ
 <tr><td><span class="menu">アイコンサイズ (Icon size)</span></td><td> </td><td>実行中アプリケーションのアイコンサイズを調整します。</td></tr>
 </table>
 
-<h4>メニュー (Menu)</h4>
+<h3>メニュー (Menu)</h3>
 <p>Deskbar の最初の 2 つのメニューは固定されていますが、ユーザーは、<span class="menu">シャットダウン… (Shutdown...)</span> より下のメニューをカスタマイズできます。<br />
 ここでは、Deskbar メニューに表示する、最近利用したドキュメント、フォルダー、アプリケーションの数を指定できます。または、それらを表示させないかどうかを設定できます。<br />
 <span class="button">Tracker で編集… (Edit in Tracker...)</span>  ボタンは <span class="path">~/config/settings/deskbar/menu/</span> フォルダーを開きます。そこには、Deskbar で表示されるファイルとフォルダーが見つかるでしょう。初期設定では、<span class="menu">アプリケーション (Applications)</span>、<span class="menu">デモ (Demos)</span>、<span class="menu">デスクトップアプレット (Deskbar Applets)</span>、<span class="menu">環境設定 (Preferences)</span> となっています。<br />
@@ -130,8 +131,9 @@ Deskbar メニューに凸の部分をドラッグ＆ドロップすれば、バ
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre>
 </div>
 
-<h4>Window (ウィンドウ)</h4>
+<h3>ウィンドウ (Window)</h3>
 <p>最後に、Deskbar ウィンドウの設定があります。</p>
+<p>小さな黒い四角形をデフォルトの右上から四隅へドラッグし、またはスクリーンの上下端に沿わせることで Deskbar の他の位置を選べます。</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">常に手前に (Always on top)</span></td><td> </td><td>Deskbar は常にほかのすべてのウィンドウより前面にいます。</td></tr>
 <tr><td><span class="menu">マウスオーバーで手前に (Auto-raise)</span></td><td> </td><td>マウスのポインターが Deskbar とスクリーンの境に触れたときに、Deskbar は最前面に出てきます。また、デスクトップから離れると背面に移動します。</td></tr>

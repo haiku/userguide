@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -69,7 +69,7 @@
 <tr class="heading"><td>Index</td></tr>
 <tr class="index"><td>
 	<a href="#mailsystem">E-mails unter Haiku</a><br />
-	<a href="#status">Eigene Status nutzen</a><br />
+	<a href="#labels">Eigene Labels nutzen</a><br />
 	<a href="#queries">Queries nutzen</a><br />
 	<a href="#tips">Weitere Tipps</a></td></tr>
 </table>
@@ -101,14 +101,18 @@ Und wird eine dieser Systemkomponenten verbessert, profiteren alle Anwendungen d
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="status" name="status">Eigene Status nutzen</a></h2>
+<a id="labels" name="labels">Eigene Labels nutzen</a></h2>
 <p>Während man seine E-Mails durchsieht, kommt es öfters vor, dass man sich mit einigen erst später in Ruhe befassen möchte. Durch Mails Befehl <span class="menu">Schließen und | Status "New" belassen</span> würde die E-Mail in der Query für "<i>Neue Nachrichten</i>" bleiben, aber so sammeln sich schnell eine Menge ungelesener E-Mails an...</p>
 <p>Eine Möglichkeit wäre natürlich, einfach eine Antwort anzufangen und diese als Entwurf zu speichern. Aber wenn man eigentlich gar nicht antworten, sondern nur die E-Mail später nochmals lesen möchte, wäre auch das nicht ideal.</p>
-<img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>Am besten nutzt man <span class="menu">Schließen und | Status setzen...</span>, um einen neuen Status anzulegen  mit dem sich E-Mails kategorisieren lassen. Man könnte so einen Status beispielsweise "<i>Später</i>" nennen und dann ein Query danach starten, wenn man mehr Zeit hat.<br />
-Oder man legt sich für bestimmte Projekte jeweils einen eigenen Status an. Ich habe z. B. einen namens "<i>HUG</i>" (für "Haiku User Guide") angelegt, unter dem ich alle E-mails sammle, die den Inhalt des Userguides betreffen könnten, wie Commit-Mails über Codeänderungen, die ein Feature ändern oder neu einführen oder sonstige Mails, die den Userguide verbessern könnten.<br />
-Man sollte den Namen des Status auf alle Fälle kurz halten, damit er in die übliche Breite der Statusspalte im Tracker passt.</p>
-<p>Um den Status einer E-Mail zu ändern, muss sie nicht unbedingt mit dem <span class="app">E-Mail</span> Programm geöffnet werden. Mit den Tracker Add-Ons <span class="app">Mark as Read </span> ("Auf 'Gelesen' setzen") und <span class="app">Mark as...</span> ("Setzen auf...") kann der Status der markierte E-Mails in einem Rutsch gesetzt werden.</p>
+<img src="images/workshop-email-images/labels.png" alt="labels.png" /> 
+<p>Besser man nutzt <span class="menu">Label setzen...</span>, um ein neues Label anzulegen oder man wählt ein bestehendes Label, um E-Mails zu kategorisieren. Man könnte so ein Label beispielsweise "<i>Später</i>" nennen und dann ein Query danach starten, wenn man mehr Zeit hat.<br />
+Oder man legt sich für bestimmte Projekte jeweils ein eigenes Label an. Ich habe z. B. ein "<i>HUG</i>" (für "Haiku User Guide") angelegt, unter dem ich alle E-mails sammle, die den Inhalt des Userguides betreffen könnten, wie Commit-Mails über Codeänderungen, die ein Feature ändern oder neu einführen oder sonstige E-Mails, die den Userguide verbessern könnten.<br />
+Man sollte den Namen des Labels auf alle Fälle kurz halten, damit er in die übliche Breite der Label-Spalte im Tracker passt.</p>
+<p>Hat man die E-Mail abgearbeitet, kann man mittels <span class="menu">Label entfernen</span> ihr Label-Attribute zurücksetzen.</p>
+<p>Labels werden im Ordner <span class="path">~/config/settings/Mail/labels</span> gespeichert, der per <span class="menu">Labels verwalten …</span> geöffnet werden kann. Hier lassen sich Labels hizufügen, löschen oder umbenennen. Praktischerweise ist jede Label-Datei eine Query. Man kann sie also mit einem Doppelklick ausführen, um eine Suche nach allen E-Mails mit dem entsprechenden Label zu starten. Sollte man machen, bevor man ein Label löscht, das man vermeintlich nicht mehr benötigt.</p>
+<p>Um das Label einer E-Mail zu ändern, muss sie nicht unbedingt mit dem <span class="app">E-Mail</span> Programm geöffnet werden. Mit den Tracker Add-Ons <span class="app">Label as …</span> kann das Label der markierten E-Mails in einem Rutsch gesetzt werden.</p>
+<div class="box-info">BeOS - und für lange Zeit auch Haiku- haben das Status-Attribut <tt>MAIL:status</tt> zum labeln von Emails missbraucht. Wenn man solche eigenen Statuse benutzt hat, ist es empfehlenswert sie auf das Label-Attribute <tt>MAIL:label</tt> umzuziehen.
+</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -116,13 +120,14 @@ Man sollte den Namen des Status auf alle Fälle kurz halten, damit er in die üb
 <p>Alle E-Mails werden in einem vom Benutzer angegebenen Ordner gespeichert. Der lässt sich natürlich öffnen, et voilà, schon sieht man alle seine E-Mails. Doch mit der Zeit wird dieser Ordner immer voller und es dauert immer länger, bis tausende Dateien und ihre Attribute eingelesen und sortiert sind. Außerdem kümmern einen nur selten zwei Jahre alte E-Mails von nigerianischen Prinzen und ihren Erbschaftsangelegenheiten...</p>
 <div class="box-info">Eine Menge Zeit beim Einlesen eines Ordners geht beim Sortieren und Anzeigen der von der Platte gelesenen Dateien drauf. Möchte man wirklich einen Ordner mit einer riesigen Zahl an Dateien öffnen, kann man die Sache beschleunigen, indem man das Trackerfenster "unsichtbar" macht: Es also entweder minimiert oder auf eine andere Arbeitsfläche wechselt. Der <a href="desktop-applets/processcontroller.html">Systemmonitor</a> zeigt den Einfluss auf die CPU-Last an.</div>
 <p><a href="queries.html">Query</a> hilf!</p>
-<p>Mit dem Einsatz von Queries lässt sich die Anzahl der dargestellten E-Mails einschränken. Sie werden übrigens auch vom Mailbox-Symbol in der Deskbar benutzt.</p>
+<p>Mit dem Einsatz von Queries lässt sich die Anzahl der dargestellten E-Mails einschränken. Sie werden übrigens auch vom Mailbox-Symbol in der Deskbar benutzt. Ein Rechtsklick auf das Icon öffnet ein Kontextmenü:</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
 <p>Das Untermenü <span class="menu">Open Draft</span> ("Entwurf öffnen") führt eine Query nach dem Status "<i>Draft</i>" aus, der vom <span class="app">E-Mail</span> Programm beim Speichern einer Nachricht vergeben wird.</p>
 <p><span class="menu">Open Inbox Folder</span> ("Posteingang öffnen") und <span class="menu">Open Mail Folder</span> ("E-Mail Ordner öffnen") sind einfach nur Verknüpfungen zu regulären Ordnern (und nicht mal wirklich nützlich...).</p>
 <p>Das Untermenü von <span class="menu"># neue Nachrichten</span> wird durch eine Query nach dem Status "<i>New</i>" befüllt.  (Die gleiche Query wird übrigens benutzt, um das Mailbox-Symbol mit Briefen gefüllt zu zeigen.)</p>
 
-<p>In <span class="path">~/config/settings/Mail/Menu Links</span> können eigene Queries (oder Ordner, Anwendungen, Skripts etc.) abgelegt oder verlinkt werden, die dann im Mailbox-Kontextmenü auftauchen.</p>
+<p>In <span class="path">~/config/settings/Mail/Menu Links</span> können eigene Queries (oder Ordner, Anwendungen, Skripts etc.) abgelegt oder verlinkt werden, die dann im Mailbox-Kontextmenü auftauchen. Im Beispiel-Bild oben wurde der Label-Ordner <span class="path">~/config/settings/Mail/labels</span> dorthin verlinkt, um schnellen Zugriff auf gelabelte E-Mails zu haben.</p>
+
 <div class="box-info">Die Query <span class="path">~/config/settings/Mail/mailbox</span> ist ein Sonderfall: Sie wird bei einem Linksklick auf das Mailbox-Symbol ausgeführt. Dieses Verhalten kann geändert werden, indem man sie mit einer anderen Datei (oder Verknüpfung zu einer Datei) ersetzt. Es muss keine Query sein, eine Verknüpfung auf einen Ordner mit Queries oder ein Skript oder eine Anwendung geht genauso. Nur der Name muss "<i>mailbox</i>" bleiben.</div>
 
 <h3>
@@ -133,7 +138,7 @@ Man sollte den Namen des Status auf alle Fälle kurz halten, damit er in die üb
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /></td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /></td></tr>
 
-<tr align="center"><td>Findet alle E-Mails mit dem Status "<i>Later</i>".</td>
+<tr align="center"><td>Findet alle E-Mails mit dem Label "<i>Später</i>".</td>
 <td>Findet alle E-Mails der letzten 2 Tage.</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /></td>
@@ -149,7 +154,8 @@ Man sollte den Namen des Status auf alle Fälle kurz halten, damit er in die üb
 <ul>
 <li><p>Wird eine Query nicht als "<i>Query</i>", sondern als "<i>Query Vorlage</i>" gespeichert, erscheint beim Aufruf nicht gleich das Ergebnisfenster, sondern das "Suchen..."-Fenster. So lässt sich einfach der Suchbegriff für Betreff oder Absender ändern oder beispielsweise ein Zeitraum von "<i>2 days</i>" auf "<i>3 days</i>" verlängern.</p></li>
 <li><p>Mit aktiviertem "Filtern während der Eingabe" in den <a href="tracker.html#tracker-preferences">Tracker Einstellungen</a> lassen sich Query-Ergebnisse sehr schnell noch weiter filtern. Oft reicht es, eine Query nach allen E-Mails der letzten 3 Tage zu erstellen, und den Rest einfach per Eingabe zu filtern. Der große Vorteil dabei: Man muss nicht exakt vorgeben, welche Attribute durchsucht werden sollen. Beim Filtern werden alle eingeblendeten berücksichtigt.</p></li>
-<!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
+<li><p>Managed man seine E-Mails mit Queries wie es sich gehört, sollte man ein <i>DefaultQueryTemplate</i> anlegen  um alle E-Mail-Attribute anzuzeigen, die man im Query-Ergenisfenster sehen möchte: <i>Status</i>, <i>Von</i>, <i>Betreff</i>, <i>Wann</i>, etc.<br />
+Dazu erstellt man zuerst einen Ordner <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates/text_x-email</span>. Nun macht man eine der üblichen E-Mail-Queries und passt Fenstergröße und -position und die angezeigten Attribute an, wie man's gern hätte. Dannach wählt man einfach <span class="menu">Layout kopieren</span> aus dem <span class="menu">Attribute</span> Menü, öffnet den neu angelegten Ordner <span class="path">text_x-email</span>, und wählt dort <span class="menu">Layout einfügen</span> aus.</p></li>
 </ul>
 
 </div>

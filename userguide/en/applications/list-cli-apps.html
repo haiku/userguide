@@ -4,11 +4,12 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2023, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
  *		Daniel Marth
+ *		Diver
  *		Humdinger <humdingerb@gmail.com>
  *
 -->
@@ -63,10 +64,10 @@
 
 <h2><img src="../../images/apps-images/cli-app-icon_64.png" alt="cli-app-icon_64.png" width="64" height="64" />List of all commandline applications</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td>Location:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
+<tr><td>Location:</td><td style="width:15px;"></td><td><span class="path">/boot/system/bin/</span><br /><span class="path">/boot/system/non-packaged/bin/</span><br /><span class="path">~/config/bin/</span><br /><span class="path">~/config/non-packaged/bin/</span></td></tr>
 </table>
 <p><br /></p>
-<p>All commandline applications shipped with Haiku are in <span class="path">/boot/system/bin/</span>. Your own or additionally installed commandline apps will appear in <span class="path">~/config/bin/</span> when installed from a .hpkg package. Otherwise you can put them into <span class="path">~/config/non-packaged/bin/</span>. All these locations are part of the PATH variable and are therefore automatically found.<br />
+<p>All commandline applications shipped with Haiku are in <span class="path">/boot/system/bin/</span>. Additionally installed commandline apps will appear there as well (or in <span class="path">~/config/bin/</span> if installed in the home-hierarchy) when installed from a .hpkg package. Otherwise you can put them into <span class="path">~/config/non-packaged/bin/</span>. All these locations are part of the PATH variable and are therefore automatically found.<br />
 Here's a list of all commandline applications that are shipped with Haiku. Each with only a short description of what it does, for more detailed information on its usage execute the command with the parameter <tt>--help</tt>.</p>
 <p><br /></p>
 <p>Index:   <a href="#A">A – E</a>   ::   <a href="#F"> F – J </a>   ::   <a href="#K"> K – O </a>   ::   <a href="#P"> P – S </a>   ::   <a href="#T"> T – Z </a></p>
@@ -79,6 +80,7 @@ Here's a list of all commandline applications that are shipped with Haiku. Each 
 <tr><td><tt>addattr</tt></td><td> </td><td>Writes an attribute to a file, taking the type into account and converting the values accordingly. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>alert</tt></td><td> </td><td>Shows a message box. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>arp</tt></td><td> </td><td>Manipulates the system ARP cache. </td></tr>
+<tr><td><tt>autologin</tt></td><td> </td><td>Enables automatic login functionality.</td></tr>
 <tr><td><tt>awk</tt></td><td> </td><td>See <tt>gawk</tt>.</td></tr>
 <tr><td><tt>base64</tt></td><td> </td><td>Base64 encode or decode to standard output. </td></tr>
 <tr><td><tt>basename</tt></td><td> </td><td>Strips directory and optionally suffix from a /path/to/filename string.</td></tr>
@@ -92,6 +94,7 @@ Here's a list of all commandline applications that are shipped with Haiku. Each 
 <tr><td><tt>cat</tt></td><td> </td><td>Concatenates files and prints to standard output. </td></tr>
 <tr><td><tt>catattr</tt></td><td> </td><td>Prints out the contents of an attribute of a file. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>cc</tt></td><td> </td><td>C-Compiler.</td></tr>
+<tr><td><tt>cddb_lookup</tt></td><td> </td><td>Performs CDDB (Compact Disc Database) lookups.</td></tr>
 <tr><td><tt>checkfs</tt></td><td> </td><td>Checks and repairs the file system. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>checkitout</tt></td><td> </td><td>Checks out sources simply with their repository's URL.</td></tr>
 <tr><td><tt>chgrp</tt></td><td> </td><td>Changes group ownership of files. </td></tr>
@@ -153,6 +156,9 @@ Here's a list of all commandline applications that are shipped with Haiku. Each 
 <tr><td><tt>gawk</tt></td><td> </td><td>Pattern scanning and processing language. </td></tr>
 <tr><td><tt>getarch</tt></td><td> </td><td>Shows the environment's compiler version. </td></tr>
 <tr><td><tt>grep</tt></td><td> </td><td>Search for a pattern.</td></tr>
+<tr><td><tt>groupadd</tt></td><td> </td><td>Adds a new group to the system.</td></tr>
+<tr><td><tt>groupdel</tt></td><td> </td><td>Deletes a group from the system.</td></tr>
+<tr><td><tt>groupmod</tt></td><td> </td><td>Modifies group settings.</td></tr>
 <tr><td><tt>groups</tt></td><td> </td><td>Prints group memberships for each username. </td></tr>
 <tr><td><tt>gunzip</tt></td><td> </td><td>See <tt>gzip</tt>.</td></tr>
 <tr><td><tt>gzexe</tt></td><td> </td><td>De/Compresses executables. </td></tr>
@@ -161,6 +167,7 @@ Here's a list of all commandline applications that are shipped with Haiku. Each 
 <tr><td><tt>head</tt></td><td> </td><td>Prints the first lines of a file.</td></tr>
 <tr><td><tt>hey</tt></td><td> </td><td>A small tool for scripting GUI apps.</td></tr>
 <tr><td><tt>hostname</tt></td><td> </td><td>Prints or sets the hostname of the system. </td></tr>
+<tr><td><tt>i2c</tt></td><td> </td><td>Interacts with I2C devices.</td></tr>
 <tr><td><tt>id</tt></td><td> </td><td>Prints user and group information. </td></tr>
 <tr><td><tt>ifconfig</tt></td><td> </td><td>Configures a network interface. </td></tr>
 <tr><td><tt>install</tt></td><td> </td><td>Copies files to a destination without disrupting the running system.</td></tr>
@@ -184,6 +191,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>listarea</tt></td><td> </td><td>Lists area info for all currently running teams. </td></tr>
 <tr><td><tt>listattr</tt></td><td> </td><td>Lists the attributes of a file. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>listdev</tt></td><td> </td><td>Lists all hardware devices.</td></tr>
+<tr><td><tt>listfont</tt></td><td> </td><td>Lists installed fonts.</td></tr>
 <tr><td><tt>listimage</tt></td><td> </td><td>Lists image info for all currently running teams. </td></tr>
 <tr><td><tt>listport</tt></td><td> </td><td>Lists all open ports in the system organized by team. </td></tr>
 <tr><td><tt>listres</tt></td><td> </td><td>Lists resources of files. </td></tr>
@@ -197,6 +205,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>logname</tt></td><td> </td><td>Prints the name of the current user. </td></tr>
 <tr><td><tt>ls</tt></td><td> </td><td>Lists directory content. </td></tr>
 <tr><td><tt>lsindex</tt></td><td> </td><td>Displays the indexed attributes on the current volume/partition.  <a href="cli-apps.html">(Haiku specific)</a></td></tr>
+<tr><td><tt>mail</tt></td><td> </td><td>A command to send email.</td></tr>
 <tr><td><tt>mail2mbox</tt></td><td> </td><td>Converts BeOS e-mail files to Unix mailbox files. </td></tr>
 <tr><td><tt>make</tt></td><td> </td><td>GNU make utility.</td></tr>
 <tr><td><tt>makebootable</tt></td><td> </td><td>Makes the specified BFS partitions/devices bootable by writing boot code into the first two sectors. </td></tr>
@@ -222,6 +231,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>netstat</tt></td><td> </td><td>Prints network connections, routing tables, interface statistics, masquerade connections and multicast memberships. </td></tr>
 <tr><td><tt>nl</tt></td><td> </td><td>Prints each file with line numbers added. </td></tr>
 <tr><td><tt>nohup</tt></td><td> </td><td>Runs a command ignoring hangup signals. </td></tr>
+<tr><td><tt>notify</tt></td><td> </td><td>Sends notifications.  <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>nproc</tt></td><td> </td><td>Prints the number of available processing units.</td></tr>
 <tr><td><tt>od</tt></td><td> </td><td>Writes an unambiguous representation of a file.</td></tr>
 <tr><td><tt>open</tt></td><td> </td><td>Launches an application/document from the shell. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
@@ -233,6 +243,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>patch</tt></td><td> </td><td>Applies a diff file to an original. </td></tr>
 <tr><td><tt>pathchk</tt></td><td> </td><td>Diagnoses invalid or unportable file names. </td></tr>
 <tr><td><tt>pc</tt></td><td> </td><td>Programmer's calculator.</td></tr>
+<tr><td><tt>pidof</tt></td><td> </td><td>Finds the process ID of a running program.</td></tr>
 <tr><td><tt>ping</tt></td><td> </td><td>Sends ICMP-echo-request to network host. </td></tr>
 <tr><td><tt>pkgman</tt></td><td> </td><td>Manages packages and package repositories.</td></tr>
 <tr><td><tt>pr</tt></td><td> </td><td>Paginates or columnates files for printing. </td></tr>
@@ -244,6 +255,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>ptx</tt></td><td> </td><td>Outputs a permuted index, including context, of the words in the input files.</td></tr>
 <tr><td><tt>pwd</tt></td><td> </td><td>Prints current directory. </td></tr>
 <tr><td><tt>query</tt></td><td> </td><td>A shell utility emulating Tracker's "Find by formula" functionality.  <a href="cli-apps.html">(Haiku specific)</a></td></tr>
+<tr><td><tt>quicktour</tt></td><td> </td><td>Opens the Quick Tour of Haiku.</td></tr>
 <tr><td><tt>quit</tt></td><td> </td><td>Quits an application. </td></tr>
 <tr><td><tt>ramdisk</tt></td><td> </td><td>Creates a ramdisk. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>rc</tt></td><td> </td><td>Resource compiler.</td></tr>
@@ -252,6 +264,8 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>reindex</tt></td><td> </td><td>Puts attributes of existing files into newly created indexes. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>release</tt></td><td> </td><td>Releases a semaphore. </td></tr>
 <tr><td><tt>renice</tt></td><td> </td><td>Alters the priority of a running process. </td></tr>
+<tr><td><tt>resattr</tt></td><td> </td><td>Manages resource attributes of files.</td></tr>
+<tr><td><tt>resizefs</tt></td><td> </td><td>Resizes a filesystem.</td></tr>
 <tr><td><tt>rm</tt></td><td> </td><td>Removes files and directories. </td></tr>
 <tr><td><tt>rmattr</tt></td><td> </td><td>Removes an attribute from a file.  <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>rmdir</tt></td><td> </td><td>Removes directories.</td></tr>
@@ -260,10 +274,13 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>route</tt></td><td> </td><td>Lists and manipulates network routes. </td></tr>
 <tr><td><tt>safemode</tt></td><td> </td><td>Checks if the system is running in safemode. </td></tr>
 <tr><td><tt>screen_blanker</tt></td><td> </td><td>Starts the screen blanker.</td></tr>
+<tr><td><tt>screeninfo</tt></td><td> </td><td>Displays information about the screen.</td></tr>
 <tr><td><tt>screenmode</tt></td><td> </td><td>Show/sets the screen mode. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
+<tr><td><tt>screenshot</tt></td><td> </td><td>Captures screenshots.</td></tr>
 <tr><td><tt>sdiff</tt></td><td> </td><td>Shows or merges differences of two files side-by-side.</td></tr>
 <tr><td><tt>seq</tt></td><td> </td><td>Prints a sequence of numbers.</td></tr>
 <tr><td><tt>setarch</tt></td><td> </td><td>Sets the environment to a specific compiler version. </td></tr>
+<tr><td><tt>setcontrollook</tt></td><td> </td><td>Sets the control look (appearance) for the GUI.</td></tr>
 <tr><td><tt>setdecor</tt></td><td> </td><td>Shows/sets the decorator. </td></tr>
 <tr><td><tt>settype</tt></td><td> </td><td>Sets the MIME type, signature and preferred application of a file. </td></tr>
 <tr><td><tt>setversion</tt></td><td> </td><td>Shows the version of a file.</td></tr>
@@ -286,6 +303,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>sum</tt></td><td> </td><td>Prints checksum and block counts for each file. </td></tr>
 <tr><td><tt>sync</tt></td><td> </td><td>Forces changed blocks to disk, updates the superblock. </td></tr>
 <tr><td><tt>sysinfo</tt></td><td> </td><td>Shows system info. </td></tr>
+<tr><td><tt>system_time</tt></td><td> </td><td>Displays system time information.</td></tr>
 <tr><td colspan="3"><a id="T" name="T"><h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>T - Z</h2></a></td></tr>
 <tr><td><tt>tac</tt></td><td> </td><td>Concatenates and prints files, last line first. </td></tr>
 <tr><td><tt>tail</tt></td><td> </td><td>Prints the last ten lines of a file.</td></tr>
@@ -314,6 +332,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>unlink</tt></td><td> </td><td>Calls the unlink function to remove the specified file. </td></tr>
 <tr><td><tt>unmount</tt></td><td> </td><td>Unmounts a volume.</td></tr>
 <tr><td><tt>unrar</tt></td><td> </td><td>Expands a rar archive.</td></tr>
+<tr><td><tt>userdel</tt></td><td> </td><td>Deletes a user from the system.</td></tr>
 <tr><td><tt>unshar</tt></td><td> </td><td>Expands a shar archive.</td></tr>
 <tr><td><tt>untrash</tt></td><td> </td><td>See <tt>trash</tt>. </td></tr>
 <tr><td><tt>unzip</tt></td><td> </td><td>Expands a zip archive.</td></tr>
@@ -322,6 +341,7 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>uptime</tt></td><td> </td><td>Prints date and time, as well as the time elapsed since the system was started. </td></tr>
 <tr><td><tt>urlwrapper</tt></td><td> </td><td>Wraps URL MIME types around command line or other apps that don't handle them directly. </td></tr>
 <tr><td><tt>useradd</tt></td><td> </td><td>Creates a new user. </td></tr>
+<tr><td><tt>userguide</tt></td><td> </td><td>Opens the Haiku User Guide.</td></tr>
 <tr><td><tt>uudecode</tt></td><td> </td><td>Decodes a uuencoded file.</td></tr>
 <tr><td><tt>uuencode</tt></td><td> </td><td>Uuencodes a file so it can be mailed to a remote system. </td></tr>
 <tr><td><tt>vdir</tt></td><td> </td><td>Lists information about files. </td></tr>
@@ -330,9 +350,12 @@ Intel ipw2100, ipw2200/2225/2915 | Broadcom 43xx | Marvell 88W8335</td></tr>
 <tr><td><tt>waitfor</tt></td><td> </td><td>Waits until a certain thread appears. <a href="cli-apps.html">(Haiku specific)</a></td></tr>
 <tr><td><tt>watch</tt></td><td> </td><td>Executes a program periodically. </td></tr>
 <tr><td><tt>wc</tt></td><td> </td><td>Prints the number of paragraphs, words and characters (bytes) of a file. </td></tr>
+<tr><td><tt>welcome</tt></td><td> </td><td>Opens the Haiku Welcome page.</td></tr>
 <tr><td><tt>wget</tt></td><td> </td><td>Tool for downloading via HTTP, HTTPS or FTP.</td></tr>
 <tr><td><tt>which</tt></td><td> </td><td>Locates a command. </td></tr>
 <tr><td><tt>whoami</tt></td><td> </td><td>Prints user name associated with the current effective user ID. </td></tr>
+<tr><td><tt>WindowShade</tt></td><td> </td><td>Tweak the default window decorator colors.</td></tr>
+<tr><td><tt>writembr</tt></td><td> </td><td>Writes a master boot record (MBR) to a device.</td></tr>
 <tr><td><tt>xargs</tt></td><td> </td><td>Builds and executes command lines from standard input. </td></tr>
 <tr><td><tt>xres</tt></td><td> </td><td>Lists and manipulates resources. </td></tr>
 <tr><td><tt>yes</tt></td><td> </td><td>Prints out a string repeatedly until killed. </td></tr>

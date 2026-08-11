@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,13 +61,15 @@
 
 <div id="content">
 <div>
+<div class="box-info">Bu sayfanın çevrilmesi henüz tamamlanmamıştır. Tamamlanana kadar henüz bitirilmeyen kısımlar İngilizce metni kullanır.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>İçindekiler</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Masaüstü Çubuğu Menüsü</a><br />
-	<a href="#tray">Tepsi</a><br />
-	<a href="#list-of-apps">Çalışan uygulamalar listesi</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -75,11 +77,11 @@
 
 <p>Masaüstü Çubuğu, ekranın öntanımlı olarak sağ üst köşesinde bulunan araç takımının adıdır. Onu Windows Başlat Menüsü'nün Haiku sürümü olarak da düşünebilirsiniz. İçinde uygulamaları ve tercihleri başlatabileceğiniz Masaüstü Çubuğu Menüsü'nü, saati ve diğer araçları koyabileceğiniz bir tepsiyi ve şu anda çalışmakta olan uygulamaların bir listesini barındırır.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>Kenarındaki tırtıklı bölümden tutup çekerek Masaüstü Çubuğu'nu istediğiniz bir köşeye getirip (yukarıdaki oklara dikkat edin) bırakabilirsiniz.<br />
-Ek olarak tırtıklı bölümü Masaüstü Çubuğu Menüsü'nün üzerine sürükleyip bırakarak daha ufak bir yerleşime sahip olabilirsiniz. Yalnızca bir pencere sekmesi yüksekliğinde olduğundan, tam ekran yapılan pencereler Masaüstü Çubuğu'nun üzerini kapatmazlar.</p>
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
+You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>Diğer tırtıklı bölümden tutup sağa/sola çekerek Masaüstü Çubuğu'nun genişliğini ayarlayabilirsiniz.</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>Geniş bir Masaüstü Çubuğu tek bir sırada daha fazla simge görüntülenebilmesini sağlar. Ayrıca uzun uygulama adları bu biçimde daha az kısaltılırlar.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -98,12 +100,13 @@ Ek olarak tırtıklı bölümü Masaüstü Çubuğu Menüsü'nün üzerine sür�
 <li><p><b>Uygulamalar, Demolar, Masaüstü gereçleri, Tercihler</b> - Yüklü olan uygulamalar, demolar, gereçler ve sistem tercihlerinin bir listesi.<br />Herhangi bir uygulamanın (veya klasör, belge, sorgu vb.) bağlantısını eklemek için onları <span class="path">~/config/settings/deskbar/menu/</span> konumuna yerleştirin.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Masaüstü Çubuğu tercihleri</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Masaüstü Çubuğu tercihleri üç bölüme ayrılmıştır.</p>
 
-<h4>Uygulamalar</h4>
+<h3>Uygulamalar</h3>
 <p>Aşağıdaki ayarlar yüklü uygulamalar için geçerli olmayıp çalışmakta olan uygulamaların davranışlarını ve görünümlerini etkiler.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Uygulamaları ada göre sırala</span></td><td> </td><td>Çalışan uygulamaları abecesel sıraya dizer.</td></tr>
@@ -114,7 +117,7 @@ Ek olarak tırtıklı bölümü Masaüstü Çubuğu Menüsü'nün üzerine sür�
 <tr><td><span class="menu">Simge boyutu</span></td><td> </td><td>Çalışan uygulamaların simgelerinin boyutlarını ayarlar.</td></tr>
 </table>
 
-<h4>Menü</h4>
+<h3>Menü</h3>
 <p>Masaüstü Çubuğu menü girdilerinden ilk birkaçı sabit olmasına rağmen <span class="menu">Bilgisayarı kapat...</span> girdisinin altındakileri özelleştirebilirsiniz.<br />
 Buradan görüntülenecek son kullanılan belgelerin, klasörlerin ve uygulamaların Masaüstü Çubuğu'nda görüntülenecek öge sayısını ayarlayabilir veya görünüp görünmeyeceğine karar verebilirsiniz.<br />
 <span class="button">İzleyici'de düzenle...</span> düğmesi <span class="path">~/config/settings/deskbar/menu/</span> klasörünü açar. İçinde Masaüstü Çubuğu'nda öntanımlı olarak görüntülenecek dosyaları ve klasörleri görebilirsiniz; öntanımlı olarak bunlar: <span class="menu">Uygulamalar</span>, <span class="menu">Demolar</span>, <span class="menu">Masaüstü araçları</span> ve <span class="menu">Tercihler</span> klasörleridir.<br />
@@ -124,8 +127,9 @@ Bu klasöre kopyalarak veya içinden silerek görüntülenecek uygulamaları, be
 <span class="path">menu</span> klasörüne <span class="path">~/config/settings/deskbar/</span> içinde bir bağ oluşturabilir ve onu <span class="path">menu_entries</span> olarak adlandırabilirsiniz. Bunu Uçbirim'den yapmak için şu komutu girin:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Pencere</h4>
+<h3>Pencere</h3>
 <p>Son olarak, Masaüstü Çubuğu tercihleri:</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Her zaman üstte</span></td><td> </td><td>Masaüstü Çubuğu her zaman diğer pencerelerin üzerinde kalır.</td></tr>
 <tr><td><span class="menu">Kendiliğinden one getir</span></td><td> </td><td>Masaüstü Çubuğu'nun ekran sınırı ile buluştuğu noktaya imleç dokunduğu anda Masaüstü Çubuğu öne gelir ve geri çekildiğinde aşağı alınır.</td></tr>

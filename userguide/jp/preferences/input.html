@@ -4,7 +4,7 @@
 <head>
 <!--
  *
- * Copyright 2008-2023, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -115,10 +115,32 @@
 <a id="touchpad" name="touchpad">タッチパッド (Touchpad)</a></h3>
 <img src="../images/prefs-images/touchpad.png" alt="touchpad.png" />
 <p>縦横の赤線を移動させることで、スクロール領域 (灰色の部分をタッチパッドとした際の赤い部分) を設定できます。設定した領域で指を動かすとスクロールします。</p>
-<p>右側のスライドバーでは、全体のスクロール加速度、水平方向スクロール速度、および垂直方向スクロール速度を設定できます。<br />
-加速度設定は、ユーザーがスクロールエリアをすばやく擦った時、リストがすばやくスクロールする量を決定します。スクロール速度設定は、スクロールエリアを "通常の" 方法で使用した際の速度をコントロールします。</p>
-<p>タッチパッドの絵の下は、垂直および水平方向のスクロールのために<span class="menu">2 本指スクロール (Two finger scrolling)</span>を有効にするチェックボックスです。タッチパッド上で 2 本の指を垂直または水平方向に平行にスライドさせると、その方向にウィンドウのスクロールバーも動きます。<br />
-この機能に満足しているなら、スクロール領域を設定しなくてもタッチパッド全体で通常のナビゲーションができます。</p>
+<p>右側のスライドバーでは、全体のスクロール加速度、水平方向および垂直方向のスクロール速度を設定できます。<br />
+加速度設定は、ユーザーがスクロールエリアをすばやく擦った時、リストがすばやくスクロールする量を決定します。スクロール速度設定は、スクロールエリアを使用した際の通常の速度をコントロールします。</p>
+<p>タッチパッドの絵の下は、以下のチェックボックスです:</p>
+<ul>
+<li><p>上記のスクロールエリアでの 1本指スクロールを使用しているなら、<span class="menu">スクロール方向を逆にする (Reverse scroll direction)</span> を有効にすれば、スマートフォンのようなスクロールバーの動きを得られるでしょう: コンテンツをスクロールダウンするために、指を上に移動します。</p></li>
+<li><p><span class="menu">2本指スクロール (Two finger scrolling)</span> は、垂直および (サポートされたデバイス上では) オプションで<span class="menu">水平スクロール (Horizontal scrolling)</span> も有効にします。２つの指を平行に垂直または水平に動かしてコンテンツをスクロールします。<br />
+<span class="menu">ナチュラルスクロール (Natural scrolling)</span> は、ちょうどスマートフォンのように動作します。チェックボックスをオフにすると、方向は逆になります。</p></li>
+</ul>
+
+<p><span class="menu">エッジモーション (Edge motion)</span> は、指がタッチパッドの端に達した時のシステムの振る舞いをコントロールします:</p>
+<table summary="layout" border="0" cellpadding="2" cellspacing="0">
+<tr><td><span class="menu">無効 (Disabled)</span></td><td width="15px"> </td><td>エッジモーション検出を無効にします。マウスが机の端に到達したときのように、指を上げてタッチパッドの中心に移動する必要があります。</td></tr>
+<tr><td class="onelinetop"><span class="menu">タップドラッグ時のみ (On tap-drag only)</span></td><td> </td><td>タップドラッグによって、タッチパッドの物理クリックボタンを使わずにファイルをドラッグできます。ファイルをタップして指を持ち上げずにファイルを中心としてドラッグを始めます。<br />
+この設定を有効にすると、指がタッチパッドの端に達した場合もマウスポインターは動き続けます。</td></tr>
+<tr><td class="onelinetop"><span class="menu">ドラッグ時 (When dragging)</span></td><td> </td><td>上の設定と同じですが、物理クリックボタンを押しながらドラッグしても動作します。</td></tr>
+<tr><td><span class="menu">常に (Always)</span></td><td> </td><td>この設定は指がタッチパッドの端に達したとき、何もドラッグしていなくても常にマウスポインターを動かし続けます。</td></tr>
+</table>
+
+<p><span class="menu">フィンガークリック (Finger click)</span> を有効にすると、(デバイスがサポートしていれば) 指でさまざまなクリックをシミュレートできます:</p>
+<ul>
+<li>1本指 = 左クリック</li>
+<li>2本指 = 右クリック</li>
+<li>3本指 = 中クリック</li>
+</ul>
+<p>これらの ”フィンガークリック” に満足していて、タッチパッドの表面エリアをより使いたいなら、<span class="menu">ソフトウェアボタン領域(Software button areas)</span> を無効にできます。</p>
+
 <p>次に、下のスライドバーで<span class="menu">タップクリックの感度</span>を調整できます。タップクリックを認識しにくいなら感度を上げ、マウスポインターを移動したいのにシステムがクリックとして認識してしまうなら感度を下げてみてください。</p>
 <p>最後に、<span class="menu">キーボードがロックするまでの時間 (Keyboard lock delay)</span> を設定できます。タイプ中に偶然タッチパッドを触ってしまったときにテキストカーソルが移動してしまうなら、ロックするまでの時間を減らしてみてください。</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">

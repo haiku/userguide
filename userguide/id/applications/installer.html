@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2021, Haiku. All rights reserved.
+ * Copyright 2009-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -91,9 +91,9 @@ Menu pop-up kedua menentukan target untuk instalasi. Partisi / volume target ini
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tools" name="tools">Perkakas</a></h2>
 <p>Pada akhir prosedur instalasi, partisi secara otomatis dibuat dapat di-boot. Namun, dapat terjadi bahwa beberapa sistem operasi atau alat pemartisi lain (tanpa sengaja) menimpa sektor boot volume Haiku Anda. Dalam hal ini, boot CD instalasi Anda dan mulai Installer. Pilih partisi boot Haiku Anda dari <span class="menu">ke: Silakan pilih target </span> menu and select <span class="menu">Write boot sector</span> dari menu <span class="menu">perkakas</span> menu untuk membuatnya bisa boot lagi.</p>
-<p>Item lain di menu <span class="menu">Tools</span> digunakan untuk <span class="menu">mengatur menu boot</span>yang menempatkan menu di sektor boot untuk memilih sistem operasi apa yang akan di-boot. Lihat topik <a href="bootmanager.html">BootManager</a> funtuk informasi lebih lanjut.<br />
- Anda tidak perlu menjalankan <span class="app">BootManager</span>jika Anda sudah menggunakan bootmanager seperti GRUB, dalam hal ini Anda harus menambahkan Haiku secara manual (lihat di atas), atau Haiku berjalan secara eksklusif di mesin Anda.</p>
-
+<p>The next item in the <span class="menu">Tools</span> menu is used to <span class="menu">Set up a boot menu</span> that puts a menu in the boot sector to choose what operating system to boot. See topic <a href="bootmanager.html">BootManager</a> for more information.<br />
+ You don't need to run the <span class="app">BootManager</span> if you already use a bootmanager like GRUB, in which case you have to add Haiku manually (see above), or Haiku runs exclusively on your machine.</p>
+<p>If you use UEFI to boot your system instead of going the BIOS/MBR route, you can use <span class="menu">Install EFI loader</span> to copy the EFI loader from the boot/install medium to your prepared partition that you select from the submenu. That EFI system partition needs to be FAT32-formatted on a GPT-initialized disk with enough free space.</p>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2012-2022, Haiku, Inc. All rights reserved.
+ * Copyright 2012-2025, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -76,6 +76,8 @@
 
 <p>ネットワークを開始することは、今日のインターネット常時接続の要求上必要不可欠なことです。小規模のプロジェクトにとって、さまざまな絶え間なく変化するハードウェアとドライバーについていくことはとても困難なことです。Haiku は<a href="http://www.freebsd.org">FreeBSD</a> といくつかの <a href="https://www.openbsd.org/">OpenBSD</a> ネットワークドライバーを利用する互換レイヤーに依存しています。これは、大量のハードウェアのサポートを確保します。しかし、それらの 100% がサポートされるわけではありません。</p>
 
+<div class="box-warning"><p _translation_id="7026"><b>Wi-Fi サポート</b><br />BSD ワイヤレスドライバーの使用に従い、Haiku は現在 Wi-Fi 6 以下のアクセスポイントをサポートします。WPA3 暗号化ネットワークはまさサポートされていません。</p></div>
+
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">ワイヤレスネットワークに接続する</a></h2>
@@ -84,7 +86,7 @@
 <p>Deskbar 内のネットワークの状態アイコンを右クリックして、ネットワークの公開名 (public name) を選択します (それはネットワークが送信する "SSID" です)。
 </p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
-<p>ウィンドウが開きます。そこに、認証方式 (たぶん、WPA か WPA2 のどちらか。WEP はもはやセキュアな暗号ではありません!) とそのパスワードを入力します。次回このネットワークに再接続したときに同じ情報をすべて入れなくていいように、その下の <span class="menu">この構成を保存 (Store this configuration)</span> チェックボックスにチェックを入れます。<br />
+<p>ウィンドウが開くので、そこへ認証方式 (たぶん、WPA か WPA2 のどちらか。WEP はもはやセキュアな暗号ではありません!) とそのワイヤレスネットワークのパスワードを入力します。"目" のボタンはパスワードを平文で表示します、これは間違いを確認するのに便利です。次回このネットワークに再接続したときに同じ情報をすべて入れなくていいように、その下の <span class="menu">この構成を保存 (Store this configuration)</span> チェックボックスにチェックを入れます。<br />
 <span class="button">OK</span> を押して、ログインプロセスを開始します。<br />ハードウェアとネットワーク構成によっては、これはしばらくかかるかもしれません。通知ウィンドウで情報が提示されるでしょう。
 </p>
 <img src="images/workshop-wlan-images/join-status.gif" alt="join-network.gif" />
@@ -110,7 +112,7 @@ ArcorInternet123                 00:20:12:a4:29:e1        15  WPA</pre>
 <a id="firmware" name="firmware">サポートされているハードウェアを動くようにする</a></h2>
 <p>サポートされた最新のワイヤレスハードウェアはそのままで動作するので、追加のファームウェアをダウンロード/インストールする必要はありません。</p>
 
-<p>少数のかなり古いチップセット (Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) は、バイナリハードウェアモジュールを必要とします。しかし、ライセンス上の理由から Haiku はそれらを含められません。これらのワイヤレスカードを動作させるために、必要なすべてのプロエタリなバイナリを取得してインストールする小さなスクリプトが含まれています。</p>
+<p>少数のかなり古いチップセット (Intel 2100/2200/2225/2915, Broadcom 43xx のいくつか, Marvell 88w8335) は、バイナリハードウェアモジュールを必要とします。しかし、ライセンス上の理由から Haiku はそれらを含められません。これらのワイヤレスカードを動作させるために、必要なすべてのプロエタリなバイナリを取得してインストールする小さなスクリプトが含まれています。</p>
 <p>ターミナルを立ち上げて、次のように入力します。</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
 <p>ライセンスを見なおして承認後、利用できるファームウェアファイルをすべてインストールします。</p>

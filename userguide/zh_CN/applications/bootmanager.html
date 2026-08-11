@@ -11,6 +11,7 @@
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
  *		Pengphei Han
+ *		yjwork
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -73,7 +74,7 @@
 <p><br /></p>
 <p>如果您没有将 Haiku 分区添加到已存在的引导管理器，如 GRUB，引导管理器可以在主引导记录中安装一个小的引导菜单，如下所示：</p>
 <img src="../images/apps-images/bootmenu.png" alt="bootmenu.png" />
-<div class="box-info">引导管理器还未进行严格的测试，仍然有一些限制，它需要满足一些条件：菜单仅能够安装在您的第一个磁盘，并且在主引导记录之后必须有 2KiB 的空间。</div>
+<div class="box-info">引导管理器还未进行严格的测试，仍然有一些限制，它需要满足一些条件：菜单仅能够安装在您的第一个磁盘，并且在主引导记录 (MBR)之后必须有 2KiB 的空间。</div>
 <p>引导管理器引导将您完成引导菜单的安装过程。</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -88,7 +89,7 @@
 <img src="../images/apps-images/bootmanager-2.png" alt="bootmanager-2.png" /> 
 <img src="../images/apps-images/bootmanager-3.png" alt="bootmanager-3.png" />
 <p>只需要选择一个备份 "<tt>MBR</tt>" 文件的目录，或者使用默认路径。在点击 <span class="button">下一步</span> 之后，如果备份成功，您将会得到确认信息。</p>
-<div class="box-info">Be aware that the "<span class="path">/boot</span>" in that path is the install media (e.g. USB stick). Makes sense if something goes wrong and you need to revert immediately. For a long term backup, you should save the MBR on your new Haiku disk as well, because likely as not, you've already formatted and used your install USB stick for other things in the meantime...</div>
+<div class="box-info">请注意，该路径中的 "<span class="path">/boot</span>" 是安装介质（例如 U盘）。如果出现问题需要立即恢复，这是有意义的。对于长期备份，您还应该将 MBR 保存到新安装的 Haiku 磁盘上，因为很可能在此期间您已经格式化并用安装U盘做了其他事情。</div>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="3-menu" id="3-menu">配置引导菜单</a></h2>
@@ -105,13 +106,13 @@
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a name="4-mbr" id="4-mbr">Restoring the backup of the Master Boot Record (MBR)</a></h2>
-<p>It's currently not possible to uninstall the boot menu with the BootManager application. There is a workaround however: You can use the <span class="cli">dd</span> command in Terminal to restore the backup of the MBR.</p>
-<div class="box-warning"><span class="cli">dd</span> can be a very destructive tool.<br />
-Be very careful and check especially the device path parameter!</div>
-<p>The <span class="cli">dd</span> commandline is something like this:</p>
+<p>目前无法使用 BootManager 应用程序卸载启动菜单。但是有一个解决方法：您可以在终端中使用 <span class="cli">dd</span> 命令来还原 MBR 的备份。</p>
+<div class="box-warning"><span class="cli">dd</span> 是一个极具破坏性的工具<br /> 
+要非常小心，尤其要检查设备路径参数！</div>
+<p><span class="cli">dd</span> 命令行示例如下：</p>
 <pre class="terminal">dd if=/boot/home/config/settings/bootman/MBR of=/dev/disk/[...]/raw</pre>
-<p>The input parameter ("<tt>if</tt>") is the path to the backup of the MBR.<br />
-The output parameter (<tt>"of"</tt>) is the path to the raw disk the MBR will be written to. You find all devices and their paths in the <a href="drivesetup.html">DriveSetup</a> application.</p>
+<p>输入参数 ("<tt>if</tt>") 是 MBR备份的路径。 
+输出参数 (<tt>"of"</tt>) 是 MBR 即将写入的原始磁盘的路径。您可以在 <a href="drivesetup.html">DriveSetup</a> 应用程序中找到所有设备及其路径。</p>
 </div>
 </div>
 

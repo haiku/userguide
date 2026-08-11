@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2013-2021 Haiku. All rights reserved.
+ * Copyright 2013-2025  Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -66,7 +66,7 @@
 <tr class="index"><td><a href="#filter">The Filter</a><br />
                 <a href="#list">The List</a><br />
                 <a href="#info">The Info Area</a><br />
-                <a href="#menu">HaikuDepot and Show menu</a><br />
+                <a href="#menu">The Menus</a><br />
                 <a href="#account">Creating a User Account</a><br />
                 <a href="#rating">Rating and Commenting</a><br />
                 <a href="#logs">Diagnostic Logs</a><br />
@@ -86,6 +86,11 @@
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
 <p>The second tab shows <span class="menu">All packages</span>, the display changes to smaller icons and more information arranged in columns:</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
+<p>Packages of both tabs can sport two little icons after their name:</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><img src="../../images/apps-images/haikudepot_installed.svg" width="20pt" /></td><td style="with:20px"></td><td>is displayed when a package is installed.</td></tr>
+<tr><td><img src="../../images/apps-images/haikudepot_native.svg" width="20pt" /></td><td style="with:20px"></td><td>shows that the package was designed for Haiku, not a port of another plattform.</td></tr>
+</table>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="filter" name="filter">The Filter</a></h2>
@@ -93,13 +98,13 @@
 <ul>
 <li><p>The <span class="menu">Category</span> pop-up menu lets you limit the list to individual categories like "<i>Audio</i>" or "<i>Games</i>".</p></li>
 <li><p>The <span class="menu">Search terms</span> text field filters the list to those packages that have all the entered (space-delimited) strings in their name or description.</p></li>
-<li><p>The <span class="menu">Repositories</span> menu of the menu bar determines which repos are being queried. "<i>Local</i>" packages are the ones that were installed from somewhere other than an online repo; maybe from a USB thumb drive or downloaded from some website or a package that you've built yourself.</p></li>
 </ul>
+<p>There are more ways to filter the list of packages in the <span class="menu">Repository</span> and <span class="menu">Show</span> menus described further down.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list" name="list">The List</a></h2>
 <p>Like in any Tracker window, you can choose from a context menu which columns to display by right-clicking the column heading. A left-click sorts the list according to that column. Of course, you can rearrange the columns by dragging them to a new position.</p>
-<p>The <span class="menu">Date</span> column shows when a packge was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
+<p>The <span class="menu">Date</span> column shows when a package was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
 <p>The <span class="menu">Status</span> column of a package can have one of several states:</p>
 <ul>
 <li><p><span class="menu">Active</span>: The package is currently installed and ready to be used.</p></li>
@@ -132,12 +137,22 @@ In the middle are user comments with their nickname, the number of stars they ga
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">HaikuDepot and Show menu</a></h2>
+<a id="menu" name="menu">The Menus</a></h2>
+<h3>HaikuDepot</h3>
 <p>In the <span class="menu">HaikuDepot</span> menu at the top of the window, you'll find an item to <span class="menu">Refresh repositories</span>. This will request an up-to-date list of all available packages from the repositories.<br />
 The second item is to <span class="menu">Manage repositories…</span>. It opens the <a href="../preferences/repositories.html">Repositories</a> preferences, to add/remove or disable and enable repositories.<br />
 <span class="menu">Check for updates…</span> opens the <a href="../apps/softwareupdater.html">SoftwareUpdater</a> to search and install updated packages.<br />
 <span class="menu">Settings…</span> opens a window with the currently only option: <span class="menu">Share anonymous usage data with HaikuDepotServer</span>. The data is used to, for example, increase a counter on how often a package is viewed and installed, which then can determine if a package is promoted to the "Featured packages" list.</p>
-<p>Under <span class="menu">Show</span> you can choose to also display <span class="menu">Develop packages</span> and <span class="menu">Source packages</span> in the packages list. For the normal user those are of no interest and would only clutter the list. They are important, however, for people who need the libraries, headers etc. of a package to develop and compile programs depending on them.</p>
+<h3>Repositories</h3>
+<p>The <span class="menu">Repositories</span> menu of the menu bar determines which repos are being queried. "<i>Local</i>" packages are the ones that were installed from somewhere other than an online repo; maybe from a USB thumb drive or downloaded from some website or a package that you've built yourself.</p>
+<h3>Show</h3>
+<p>By picking one of three kinds of packages in the <span class="menu">Show</span> menu, you can limit the scope of packages to the ones you're actually interested in:</p>
+<ul><li><p><span class="menu">Desktop and non-desktop packages</span> - Shows every kind of packages, i.e. everything from applications to libraries needed by developers.</p></li>
+<li><p><span class="menu">Desktop packages only</span> - Shows only 'real' applications; the kind you'll find in the Deskbar, for example.</p></li>
+<li><p><span class="menu">Native desktop packages only</span> - Same as above, but limited to Haiku 'native' applications. Those are created especially for Haiku and were not ported from another system, which normally means coming with lots of heavy dependencies like KDE or Qt frameworks.</p></li>
+</ul>
+ 
+<p>Furthermore, you can choose to also display <span class="menu">Develop packages</span> and <span class="menu">Source packages</span> in the packages list. For the normal user those are of no interest and would only clutter the list. They are important, however, for people who need the libraries, headers etc. of a package to develop and compile programs depending on them.</p>
 <p>Of more interest are the options to only show <span class="menu">Available packages</span> and <span class="menu">Installed packages</span>.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

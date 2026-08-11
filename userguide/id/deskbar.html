@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -66,9 +66,10 @@
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Indeks</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Menu Deskbar </a><br />
-	<a href="#tray">Tray</a><br />
-	<a href="#list-of-apps">Daftar aplikasi yang berjalan</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -76,11 +77,11 @@
 
 <p>Deskbar adalah panel kecil yang secara default terletak di sudut kanan atas layar. Ini adalah versi taskbar Windows Haiku dengan tombol Start-nya. Ini berisi menu Deskbar dari mana Anda dapat memulai aplikasi dan preferensi, baki dengan jam dan alat-alat lain di bawahnya dan daftar program yang sedang berjalan di bagian bawah.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>Anda dapat memindahkan Deskbar ke sudut mana pun atau sebagai bilah di sepanjang batas atas atau bawah layar dengan memegang area knobbly di satu sisi baki (lihat panah di atas) dan drag &amp; drop ke posisi yang baru.<br />
-Anda juga dapat melipatnya menjadi tata letak yang lebih ringkas dengan drag &amp; dropping knobbly ke menu Leaf Deskbar. Menjadi hanya ketinggian tab jendela biasa, bahkan jendela yang mengambil seluruh layar tidak akan mengaburkan baki Deskbar dengan jamnya dan ikon.</p>
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
+You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>Dengan memegang widget knobbly lainnya dari baki, Anda dapat mengubah lebar Deskbar dengan menyeret mouse ke kiri atau kanan:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>Deskbar yang lebih luas memungkinkan lebih banyak ikon dalam baki dalam satu baris, tetapi juga lebih jarang memotong nama aplikasi dalam daftar program yang sedang berjalan, terutama jika Anda menggunakan ikon yang lebih besar.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -101,12 +102,13 @@ Anda juga dapat melipatnya menjadi tata letak yang lebih ringkas dengan drag &am
 </li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>preferensi Deskbar</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>Panel preferensi Deskbar dibagi menjadi tiga bagian.</p>
 
-<h4>Aplikasi</h4>
+<h3>Aplikasi</h3>
 <p>Pengaturan berikut tidak berlaku untuk aplikasi yang Anda instal, tetapi untuk perilaku dan visual dari daftar aplikasi yang berjalan.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Urutkan aplikasi yang sedang berjalan</span></td><td> </td><td>Urutkan daftar program yang sedang berjalan berdasarkan abjad.</td></tr>
@@ -117,7 +119,7 @@ Anda juga dapat melipatnya menjadi tata letak yang lebih ringkas dengan drag &am
 <tr><td><span class="menu">Ukuran ikon</span></td><td> </td><td>Menyesuaikan ukuran ikon dari aplikasi yang sedang berjalan.</td></tr>
 </table>
 
-<h4>Menu</h4>
+<h3>Menu</h3>
 <p>Meskipun beberapa item menu Deskbar sudah diperbaiki, Anda dapat menyesuaikan yang di bawah <span class="menu">Shutdown...</span>.<br />
 Di sini Anda dapat mengatur jumlah dokumen, folder, dan aplikasi terbaru yang ditampilkan di menu mereka di Deskbar, atau jika Anda ingin melihatnya sama sekali.<br />
 Tombol <span class="button">Edit di Tracker...</span> membuka folder <span class="path">~/config/settings/deskbar/menu/</span>. Di dalamnya Anda akan menemukan file dan folder yang muncul di Deskbar, secara default ini adalah <span class="menu">Applications</span>, <span class="menu">Demo</span>, <span class="menu">Deskbar applets</span>, and <span class="menu">Preferensi</span>.<br />
@@ -127,8 +129,9 @@ Anda dapat menghapus atau menambahkan entri seperti tautan ke aplikasi, dokumen,
 Anda membuat tautan <span class="path">menu</span> folder di<span class="path">~/config/settings/deskbar/</span> dan ganti nama ke <span class="path">menu_entries</span>. Dari Terminal yang dicapai dengan:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Window</h4>
+<h3>Window</h3>
 <p>Akhirnya, preferensi untuk jendela Deskbar.</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Selalu di atas</span></td><td> </td><td>Deskbar selalu berada di atas semua jendela lainnya.</td></tr>
 <tr><td><span class="menu">Auto-muncul</span></td><td> </td><td>The Deskbar pops to the front when the mouse pointer touches where the Deskbar meets the screen edge, and is lowered when it leaves the Deskbar area.</td></tr>

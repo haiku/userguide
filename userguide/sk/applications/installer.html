@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2021, Haiku. All rights reserved.
+ * Copyright 2009-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -90,9 +90,9 @@ Druhé vysúvacie menu špecifikuje cieľ inštalácie. Cieľová oblasť/disk b
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tools" name="tools">Nástroje</a></h2>
 <p>Na konci inštalačnej procedúry je oblasť automaticky nastavená ako zavádzacia. Avšak, môže sa stať, že nejaký iný operačný systém alebo nástroj na správu oblastí (náhodou) prepíše zavádzací sektor vášho disku s Haiku. V tom prípade, použite vaše inštalačné CD a spustite Inštalátor. Vyberte vašu zavádzaciu oblasť Haiku z menu <span class="menu">Na: Prosím, vyberte cieľ</span> a vyberte <span class="menu">Zapísať zavádzací sektor</span> z menu <span class="menu">Nástroje</span> aby ste ho opäť označili ako zavádzací.</p>
-<p>Druhá položka v menu <span class="menu">Nástroje</span> sa používa, keď chcete <span class="menu">Nastaviť zavádzacie menu</span>, ktoré uloží do zavádzacieho sektora menu, z ktorého si môžete vybrať, ktorý operačný systém zaviesť. Ďalšie informácie nájdete v téme <a href="bootmanager.html">Správca zavádzania</a>.<br />
- Nemusíte používať <span class="app">Správcu zavádzania</span>, ak už používate iný podobný program, ako napríklad GRUB, v tomto prípade musíte Haiku pridať ručne (pozrite vyššie), alebo ak je Haiku jediný operačný systém na vašom počítači.</p>
-
+<p>The next item in the <span class="menu">Tools</span> menu is used to <span class="menu">Set up a boot menu</span> that puts a menu in the boot sector to choose what operating system to boot. See topic <a href="bootmanager.html">BootManager</a> for more information.<br />
+ You don't need to run the <span class="app">BootManager</span> if you already use a bootmanager like GRUB, in which case you have to add Haiku manually (see above), or Haiku runs exclusively on your machine.</p>
+<p>If you use UEFI to boot your system instead of going the BIOS/MBR route, you can use <span class="menu">Install EFI loader</span> to copy the EFI loader from the boot/install medium to your prepared partition that you select from the submenu. That EFI system partition needs to be FAT32-formatted on a GPT-initialized disk with enough free space.</p>
 
 </div>
 </div>

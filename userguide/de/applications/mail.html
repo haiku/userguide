@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -79,7 +79,7 @@
 <tr><td>Einstellungen:</td><td></td><td><span class="path">~/config/settings/Mail/</span><br />
 <span class="path">~/config/settings/Mail/Menu Links/</span> - Objekte in diesem Ordner erscheinen im Kontextmenü der Mailbox in der Deskbar<br />
 <span class="path">~/config/settings/Mail/signatures/</span> - Speicherort von Signaturen<br />
-<span class="path">~/config/settings/Mail/status/</span> - Speicherort für eigene Status</td></tr>
+<span class="path">~/config/settings/Mail/labels/</span> - Speicherort für eigene Labels</td></tr>
 </table>
 <p><br /></p>
 <p>Mail ist Haikus Standardprogramm zum Lesen und Verfassen von E-Mails. Mit dem eigentlichen Abrufen und Versenden hat Mail nichts zu tun. Das geschieht mit dem mail_daemon, der mit den <a href="../preferences/e-mail.html">E-Mail</a>-Einstellungen konfiguriert wird.</p>
@@ -94,7 +94,8 @@
 <p>Weil die meisten Befehle in Menü und Werkzeugleiste selbsterklärend sind, nachfolgend nur das Wichtigste.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Datei</h3>
-<p>Wird das Fenster einer neuen E-mail geschlossen, wechselt dessen Status normalerweise von "New" ("<i>Neu</i>") auf "Read" ("<i>Gelesen</i>"). Mit den Untermenüs von <span class="menu">Schließen und...</span> lassen sich jedoch auch beliebige andere Status setzen. Dort findet sich auch die Option <span class="menu">Setzen auf...</span>, um einen eigenen Status zu erstellen, der unter <span class="path">~/config/settings/Mail/status/</span> gespeichert wird.</p>
+<p>Wird das Fenster einer neuen E-mail geschlossen, wechselt dessen Status normalerweise von "New" ("<i>Neu</i>") auf "Read" ("<i>Gelesen</i>"). Mit den Untermenüs von <span class="menu">Schließen und</span> lässt sich jedoch auch der <span class="menu">Status 'New' belassen</span> (<span class="key">SHIFT</span> <span class="key">ALT</span> <span class="key">W</span>) oder die Mail <span class="menu">In den Papierkorb verschieben</span>.</p>
+<p>Mit <span class="menu">Label setzen</span> kann man ein eigenes Label vergeben, welches unter <span class="path">~/config/settings/Mail/labels/</span> gespeichert wird.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Bearbeiten</h3>
 <p>Von hier lassen sich Mails <span class="menu">Einstellungen...</span> (<a href="#preferences">siehe weiter unten</a>) und per <span class="menu">Konten...</span> das Fenster der <a href="../preferences/e-mail.html">E-Mail</a>-Einstellungen öffnen.</p>
@@ -115,11 +116,13 @@
 </table>
 <div class="box-info">Markiert man vor dem Antworten einen Textabschnitt in der Original-Mail, wird nur dieser Text in der Antwort-Mail zitiert. So lassen sich einfach Zitat-Orgien eindämmen, die wohl niemand gern sieht...</div>
 <p>DIe Befehle zum <span class="menu">Weiterleiten</span>, <span class="menu">Nochmals senden</span> und <span class="menu">In neue Nachricht kopieren</span> sind wieder ziemlich selbsterklärend.</p>
-<p>Wurde eine E-Mail aus einem Trackerfenster oder Query-Ergebnisfenster geöffnet, springt <span class="menu">Vorherige Nachricht</span> und <span class="menu">Nächste Nachricht</span> zur vorigen/nächsten E-Mail in der Liste.</p>
+<p>Wurde eine E-Mail aus einem Trackerfenster oder Query-Ergebnisfenster geöffnet, springt <span class="menu">Vorherige Nachricht</span> und <span class="menu">Nächste Nachricht</span> (<span class="key">ALT</span> <span class="key">↑</span>/<span class="key">↓</span>)  zur vorigen/nächsten E-Mail in der Liste. In den <a href="#preferences">E-Mail-Einstellungen</a> kann man festlegen, ob dabei der Status der aktuellen E-Mail automatisch auf gelesen ("Read") gesetzt wird, wenn sie vorher ungelesen ("New") war.<br />
+Hält man <span class="key">SHIFT</span> beim Springen zur vorigen/nächsten E-Mail  gedrückt, wird der Status der aktuellen E-Mail beibehalten. Das funktioniert auch wenn man die Rauf/Runter-Pfeilicons aus der Werkzeugleiste dafür benutzt.</p>
+<p>Apropos Emails Durchblättern per <span class="menu">Vorige Nachricht</span> and <span class="menu">Nächste Nachricht</span>: Wählt man <span class="menu">In den Papierkorb verschieben</span>, wird die aktuelle Email entsorgt und die <i>nächste</i> Email geöffnet. Hält man dabei aber <span class="key">SHIFT</span> gedrückt, wird stattdessen die <i>vorige</i> Email geöffnet. Nützlich wenn man seine Emails so sortiert, dass die neuesten oben sind, man die älteste öffnet und sich nach oben durch die Liste bewegt, und dabei Emails löschen will.</p>
 <p>Im Untermenü von <span class="menu">Adresse speichern</span> werden alle E-Mail-Adressen aus den Kopfdaten und dem Text der E-Mail gesammelt. Wird eine Adresse aus dem Menü gewählt, öffnet sich die Anwendung <a href="people.html">Kontakte</a>, in der sich die Informationen vervollständigen und abspeichern lassen.</p>
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Queries</h3>
-<p>In diesem Menü befinden sich Queries für alle E-Mails, die einen Bezug zu der gerade offene E-Mail haben. Wählt man <span class="menu">Selber Empfänger</span>, <span class="menu">Selber Absender</span> oder <span class="menu">Selbes Betreff</span>, öffnet sich eine Liste aller entsprechenden E-Mails:</p>
+<p>In diesem Menü befinden sich Queries für alle E-Mails, die einen Bezug zu der gerade offenen E-Mail haben. Wählt man <span class="menu">Selber Empfänger</span>, <span class="menu">Selber Absender</span>, <span class="menu">Selbes Betreff</span> oder <span class="menu">Selbes Label</span>, öffnet sich eine Liste aller entsprechenden E-Mails:</p>
 <img src="../images/apps-images/mail-query.png" alt="mail-query.png" /> 
 
 <h2>
@@ -160,7 +163,7 @@ Ein Rechtsklick auf ein so markiertes Wort öffnet ein Kontextmenü mit Korrektu
 
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>Queries</h3>
-<p>Genau wie beim Lesen von E-Mails, befinden sich in diesem Menü Queries für alle E-Mails, die einen Bezug zu der haben, die gerade verfasst wird. Wählt man <span class="menu">Selber Empfänger</span>, <span class="menu">Selber Absender</span> oder <span class="menu">Selbes Betreff</span>, öffnet sich eine Liste aller entsprechenden E-Mails.</p>
+<p>Genau wie beim Lesen von E-Mails, befinden sich in diesem Menü Queries für alle E-Mails, die einen Bezug zu der haben, die gerade verfasst wird. Wählt man <span class="menu">Selber Empfänger</span>, <span class="menu">Selber Absender</span> oder <span class="menu">Selbes Betreff</span>, öffnet sich eine Liste aller entsprechenden E-Mails. Nach <span class="menu">Selbes Label</span> lässt sich nicht suchen, weil die Email während dem Verfassen nicht als Datei vorliegt, dem ein Label-Attribute angehängt werden könnte. Dazu muss sie erst gesendet werden.</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

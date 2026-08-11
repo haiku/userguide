@@ -60,6 +60,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzione di questa pagina non è stata ancora completata. Finché non lo sarà, le parti non tradotte saranno visualizzate in inglese.</div>
 
 <h2><img src="../../images/prefs-images/virtualmemory-icon_64.png" alt="virtualmemory-icon_64.png" width="64" height="64" />Memoria Virtuale</h2>
 <table summary="quickinfo" border="0" cellspacing="0" cellpadding="2">
@@ -70,8 +71,9 @@
 </table>
 <p>Memoria Virtuale consente al sistema di trasferire i dati dalla memoria al disco rigido e viceversa, nell'eventualità in cui la RAM debba essere utilizzata per operazioni più sensibili o che richiedano migliori prestazioni. Pertanto, anche se il tuo computer dispone di un grande quantitativo di memoria RAM, assicurarsi di avere anche la memoria virtuale non è mai una cattiva idea.</p>
 <img src="../images/prefs-images/virtualmemory.png" alt="virtualmemory.png" />
-<p>In genere, il file di scambio è scritto sulla partizione di avvio. Se non hai a disposizione abbastanza spazio su questa partizione, puoi attivare la funzione <span class="menu">Gestione automatica del file di swap</span> e scegliere un'altra partizione tra quelle montate tramite il menu popup. La dimensione del file di scambio è modificabile tramite lo slider subito sotto.<br />
-Se dovessi riscontrare eccessiva attività disco, dovuta a continui scambi di dati tra RAM e memoria virtuale, puoi provare a utilizzare un disco rigido separato per il file di scambio, così da ridurre la congestione I/O. Una differente partizione sullo stesso disco non risolverà il problema. Aumentare la RAM installata è, però, senza alcun dubbio la cosa migliore da fare in questo caso...</p>
+<p>Normally, the swap file is written to the boot partition. If you're running low on free memory there, you can deactivate the <span class="menu">Automatic swap management</span> and choose another mounted partition from the popup menu. The swap file size is set with the slider below.<br />
+The actual file is named <tt>swap</tt> and is located either in <span class="path">/system/var/</span> when using the default /boot partition, or directly in the root of the partition you've selected.<br />
+If you often run into disk thrashing due to the virtual memory system swapping memory in and out, you can try to use a separate harddisk for you swap file to avoid I/O congestion. Simply another partition on the same harddisk with your system/data won't help. Upgrading your RAM is of course the most effective way to go…</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="button">Predefiniti</span></td><td> </td><td>ripristina tutto ai valori predefiniti</td></tr>
 <tr><td><span class="button">Ripristina</span></td><td> </td><td>ripristina ai valori delle impostazini al momento in cui stato lanciato il pannello VirtualMemory.</td></tr>

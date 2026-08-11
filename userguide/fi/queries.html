@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2023, Haiku. All rights reserved.
+ * Copyright 2008-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -88,16 +88,17 @@ Mikä parempaa, sinun ei tarvitse kaksoisnapsauttaa kyselyn tekemiseksi uudellee
 <p>Aloitat haun kutsumalla <span class="menu">Etsi...</span>-valikkoa joko Työpöytäpalkista tai mistä tahansa Seuraaja-ikkunasta tai Työpöydältä (mikä on itse asiassa kokonäytön kokoinen Seuraaja-ikkuna). Pikanäpppäin on <span class="key">ALT</span> <span class="key">F</span>. Sinulle esitellään Haku-ikkuna:</p>
 <img src="images/queries-images/basic-query.png" alt="basic-query.png" />
 <ol>
-<li><p>The <span class="menu">Query</span> menu allows to <span class="menu">Open</span> an existing query and <span class="menu">Save</span> the current search parameters as a query or <a href="#query-template">Query template</a>. It also gives quick access to <span class="menu">Recent queries</span>.</p></li>
-<li><p><span class="menu">Options</span> lets you include the Trash in your search.</p></li>
-<li><p><span class="menu">Templates</span> holds a list of all query templates on your system.</p></li>
+<li><p><span class="menu">Kysely</span>-valikko sallii olemassa olevan kyselyn <span class="menu">Avaa</span>-komennon ja <span class="menu">Tallenna</span>-komento tallentaa nykyiset hakuparametrit kyselynä tai <a href="#query-template">Kyselymallinne</a>-mallinteena. Se antaa myös nopean pääsyn <span class="menu">Äskettäiset kyselyt</span>-valintaan.</p></li>
+<li><p><span class="menu">Valinnat</span>-valikko antaa sinulle mahdollisuuden lisätä Roskakori hakuusi.</p></li>
+<li><p><span class="menu">Mallinteet</span>-valikko sisältää luettelon kaikista järjestelmäsi kyselymallinteista.</p></li>
 <li><p>Kavenna etsintäaluetta valikosta <span class="menu">Kaikki tiedostot ja kansiot</span> tiettyyn tiedostotyyppiin.</p></li>
 <li>Määritä hakumenetelmä:<ul>
     <li><span class="menu">Nimellä</span> - perushaku tiedosto- tai kansionimellä</li>
     <li><span class="menu">Attribuutilla</span> - edistynyt haku, määritä hakutermeiksi yksi tai useampia attribuutteja</li>
     <li><span class="menu">Kaavalla</span> - vieläkin edistyneempi haku, voit hienosäätää mutkikkaita hakutermejä</li></ul></li>
-<li><p>Valitse levyasema, jolta etsitään.</p></li>
+<li><p>Select which drives to search on.  The menu item <span class="menu">Select folders…</span> lets you limit the query to one or more folders.</p></li>
 <li><p>Kirjoita hakutermi.</p></li>
+<li>You can drag &amp; drop the icon into a Tracker window (or the Desktop) to save a query. Use the right mouse button to get a context menu when dropping the icon to choose to save as <span class="menu">Query</span> or <span class="menu">Query template</span>.</li>
 </ol>
 
 <h2>
@@ -155,9 +156,9 @@ Hyvä tapa rajoittaa hakutulosten lukumäärää.</p>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="query-template" name="query-template">Kyselymallinteet</a></h2>
-<p>If you double click a saved query, the file search is at once started and the result window opens immediately. However, you may not want to search with these <i>exact</i> search parameters, but use it as starting point to only slightly tweak the formula.<br />
-By using the <span class="menu">Save query as template</span> menu item (see <a href="#find-window">(1) in screenshot</a> at the top), you can create just such a template. Double clicking it won't open a result window, but the Find panel, giving you the opportunity to quickly change search strings or add/remove attributes.</p>
-<p>Wherever you choose to save query templates, they'll be listed in the Find panel's <span class="menu">Templates</span> menu.</p>
+<p>Jos kaksoisnapsautat tallennettua kyselyä, tiedostohaku käynnistyy heti ja tulosikkuna avautuu välittömästi. Et ehkä kuitenkaan halua etsiä <i>tarkalleen</i> näillä hakuparametreilla, vaan käyttää sitä vain hiukan muotoillun kaavan aloituspisteenä.<br />
+Käyttämällä <span class="menu">Tallenna kysely mallinteena</span>-valikkoriviä (katso <a href="#find-window">(1) näytönkaappauksessa</a> ylhäällä) voit luoda juuri sellaisen mallinteen. Sen kaksoisnapsauttaminen ei avaa tulosikkunaa, vaan Etsi-paneelin, mikä antaa mahdollisuuden vaihtaa nopeasti hakumerkkijonoja ja lisätä tai poistaa attribuutteja. </p>
+<p>Milloin valitset kyselyn tallentamisen mallinteena, ne luetellaan Etsi-paneelin <span class="menu">Mallinteet</span>-valikossa.</p>
 </div>
 </div>
 

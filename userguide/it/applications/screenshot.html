@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzione di questa pagina non è stata ancora completata. Finché non lo sarà, le parti non tradotte saranno visualizzate in inglese.</div>
 
 <h2><img src="../../images/apps-images/screenshot-icon_64.png" alt="screenshot-icon_64.png" width="64" height="64" />Istantanea dello Schermo</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -72,14 +73,28 @@
 <p><br /></p>
 <p>Le istantanee dello schermo sono generati attraverso l'applicazione omonima oppure attraverso la pressione del tasto <span class="key">STAMPA</span>.</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>Tramite il pannello dell'applicazione puoi decidere se catturare l'intero schermo oppure la sola finestra attiva e decidere se includere nell'immagine i bordi della finestra stessa e il puntatore del mouse. Puoi anche impostare un ritardo (in secondi) da attendere prima che l'effettiva istantanea sia catturata.</p>
+<p>To the right of the preview at the top, you can switch between different modes and options:<br />
+Either opt for the <span class="menu">Whole screen</span>, or just the <span class="menu">Active window</span> (provided there is one at the time you take the screenshot). If you just want to capture only a part of the screen, click <span class="button">Select area</span> under the preview (see below). Once selected, the <span class="menu">Select area</span> mode is enabled and you can now switch between <span class="menu">Whole screen</span>, <span class="menu">Active window</span>, and <span class="menu">Selected area</span>.</p>
+<p>Besides these modes, you can also decide to <span class="menu">Include window border</span> and <span class="menu">Include mouse pointer</span>.</p>
 <p>Più in basso, è possibile definire il nome, il formato e il percorso in cui l'immagine contenente l'istantanea verrà salvato alla pressione del pulsante <span class="button">Salva</span>. In alternativa al salvataggio su file, con il pulsante <span class="button">Copia negli appunti</span> l'immagine sarà salvata negli appunti, così da poter essere inviata rapidamente a un'altra applicazione.  È, infine, possibile anche prendere una <span class="button">Nuova istantanea</span>.</p>
 <p>Tutte le impostazioni sono mantenute per la prossima volta che lancerai l'applicazione, rendendo possibile l'uso di queste pratiche scorciatoie da tastiera:</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="key">STAMPA</span></td><td style="width:15px;"></td><td>Cattura un'istantanea immediatamente e lancia il pannello Istantanee.</td></tr>
 <tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">STAMPA</span></td><td></td><td>Cattura un'immagine silenziosamente (senza aprire il pannello), rispettando le ultime impostazioni utilizzate.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">STAMPA</span></td><td></td><td>Crea un'istantanea usando le ultime impostazioni utilizzate, ma invece di salvarlo come file, l'immagine è copiata negli appunti.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">PRINT</span></td><td></td><td>Takes a screenshot with zero delay and enters the Select area mode right away.</td></tr>
 </table>
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+Selecting an area</h3>
+<p>When you click <span class="button">Select area</span>, the window of the Screenshot app is hidden, and you'll see the whole screen slightly darkened.</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>You can now define a selection box that'll highlight the screenshot area. Done with the <i>left</i> mouse button, the area is applied as soon as you lift your finger from the button and the Screenshot window pops up again.</p>
+<p>If you create the selection box while holding <span class="key">SHIFT</span> or with the <i>right</i> mouse button, the box will have handles at the corners that'll let you resize the selection. You can also drag the selection box around.</p>
+<p>The selection is applied with a double-click or by pressing <span class="key">ENTER</span>.<br />
+<span class="key">ESC</span> cancels the selecting process.</p>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 Catrurare un'istantanea da Terminale</h2>
@@ -106,8 +121,11 @@ OPTIONS
                         [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
   -c, --clipboard       Copies the screenshot to the system clipboard without
                         showing the application window
+  -a, --area            Select an area of the screen to capture
 
-Note: OPTION -b, --border takes only effect when used with -w, --window
+Note:
+Option -b, --border takes only effect when used with -w, --window
+Option -a, --area does not take effect with -s, --silent or -c, --clipboard
 </pre>
 
 </div>

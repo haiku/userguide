@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -68,9 +68,10 @@
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>索引</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">桌面栏菜单</a><br />
-	<a href="#tray">系统托盘</a><br />
-	<a href="#list-of-apps">运行程序列表</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -78,11 +79,11 @@
 
 <p>桌面栏是默认放置在屏幕右上角的小面板，类似于 windows 的带着开始菜单的任务栏。它包含了桌面栏菜单，通过它您可以启动应用程序和首选项，时钟托盘和其他系统工具，以及底部运行中的程序列表。</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position.<br />
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
 You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>By gripping the other knobbly widget of the tray, you can change the width of the Deskbar by dragging the mouse left or right:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -102,13 +103,14 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <br />您也可以把其他的程序（或者任何其他的目录，文档，查询等） 放置到 <span class="path">~/config/settings/deskbar/menu/</span> ，将它们显示到菜单栏。</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>桌面栏首选项</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>桌面栏首选项面板分为三个部分。</p>
 
-<h4>应用程序
-</h4>
+<h3>应用程序
+</h3>
 <p>下面的设置并不会对您所安装的程序有任何影响，而将会改变所运行应用程序列表的行为和外观。</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">排列运行程序</span></td><td> </td><td>按字母顺序排列运行程序列表。</td></tr>
@@ -119,7 +121,7 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <tr><td><span class="menu">图标大小</span></td><td> </td><td>调整运行程序图标大小。</td></tr>
 </table>
 
-<h4>菜单</h4>
+<h3>菜单</h3>
 <p>While the first couple of menu items of the Deskbar are fixed, you can customize the ones below <span class="menu">Shutdown…</span>.<br />
 Here you can set the number of recent documents, folders and applications that are shown in their menu in the Deskbar, or if you want to see them at all.<br />
 The button <span class="button">Edit in Tracker...</span> opens the folder <span class="path">~/config/settings/deskbar/menu/</span>. In it you'll find the files and folders that appear in the Deskbar, by default these are <span class="menu">Applications</span>, <span class="menu">Demos</span>, <span class="menu">Deskbar applets</span>, and <span class="menu">Preferences</span>.<br />
@@ -129,9 +131,10 @@ You can delete or add entries like links to applications, documents or even quer
 You create a link of the <span class="path">menu</span> folder in <span class="path">~/config/settings/deskbar/</span> and rename to <span class="path">menu_entries</span>. From Terminal that is achieved with:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>窗口
-</h4>
+<h3>窗口
+</h3>
 <p>最后是，桌面栏窗口首选项。</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">置顶</span></td><td> </td><td>桌面栏位于所有窗口之上。</td></tr>
 <tr><td><span class="menu">自动提升</span></td><td> </td><td>The Deskbar pops to the front when the mouse pointer touches where the Deskbar meets the screen edge, and is lowered when it leaves the Deskbar area.</td></tr>

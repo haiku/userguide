@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -72,16 +72,31 @@
 <tr><td>設定ファイル:</td><td></td><td><span class="path">~/config/settings/screenshot</span></td></tr>
 </table>
 <p><br /></p>
-<p>スクリーンショットは、スクリーンショットアプリケーションを起動するか、<span class="key">PRINT</span> キーを押すことで撮ることができます。</p>
+<p>スクリーンショットは、スクリーンショットアプリケーションを起動するか、<span class="key">PRINT</span> キーを押すことで撮れます。</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>スクリーンショットパネルでは、スクリーン全体を撮るかアクティブなウィンドウだけを撮るか選べ、ウィンドウの枠とマウスポインターを含めるかどうか選べます。さらにスクリーンショットを撮るまでの時間も設定できます。</p>
+<p>プレビューの右側の上で、様々なモードやオプションを切り替えられます:<br />
+ <span class="menu">画面全体 (Whole screen)</span>、または <span class="menu">アクティブウィンドウ (Active window)</span> (スクリーンショットを撮るときにウィンドウが存在する場合に限る) を選びます。画面の一部だけをキャプチャーしたい場合は、プレビューの下の <span class="button">範囲を選択 (Select area)</span> (下を見てください)をクリックします。選択されると、<span class="menu">範囲選択</span> モードが有効となり、<span class="menu">画面全体 (Whole screen)</span>、 <span class="menu">アクティブウィンドウ (Active window)</span>、および <span class="menu">選択範囲 (Selected area)</span> を切り替えられるようになります。
+</p>
+<p>これらのモード以外に、<span class="menu">ウィンドウ境界線も取り込む (Include window border)</span> や <span class="menu">マウスポインターも取り込む (Include mouse pointer)</span> ことを決められます。</p>
 <p>その下に名前、フォーマットの設定と、<span class="button">保存 (Save)</span> をクリックしたときの保存場所を指定します。ファイルをディスクに保存せず、<span class="button">クリップボードにコピー (Copy to clipboard)</span> してほかのアプリケーションに直接貼り付けるか、<span class="button">新しいスクリーンショット (New screenshot)</span> を撮ることもできます。</p>
-<p>設定はすべて記憶されるので、次にスクリーンショットを撮る時に以下の便利なキーボードショートカットを使えます。</p>
+<p>次にスクリーンショットを撮る時に設定はすべて記憶されるので、以下の便利なキーボードショートカットが使えます。</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
-<tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>すぐにスクリーンショットを撮り、スクリーンショットパネルを開く。</td></tr>
+<tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>遅延無しでスクリーンショットを撮り、スクリーンショットパネルを開く。</td></tr>
 <tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">PRINT</span></td><td></td><td>最後に用いた設定を引き継いで、(パネルを開かずに) スクリーンショットを撮影。</td></tr>
-<tr><td><span class="key">CTRL</span> <span class="key">PRINT</span></td><td></td><td>同様に保存された設定で静かにスクリーンショットを撮影するが、それをファイルとして保存する代わりに、クリップボードにコピーする。</td></tr>
+<tr><td><span class="key">CTRL</span> <span class="key">PRINT</span></td><td></td><td>同様に保存された設定で静かにスクリーンショットを撮影するが、それをファイルとして保存する代わりにクリップボードにコピーする。</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">PRINT</span></td><td></td><td>遅延無しでスクリーンショットを取り、すぐに範囲選択モードへ移行します。</td></tr>
 </table>
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+範囲選択</h3>
+<p><span class="button">範囲を選択 (Select area)</span> をクリックすると、スクリーンショットアプリのウィンドウは隠れて画面全体が少し暗くなります。</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>すぐにスクリーンショット範囲をハイライトする選択ボックスを定義できます。<i>左</i>マウスボタンで実行し、ボタンから指を離すとすぐに範囲が適用され、スクリーンショットウィンドウが再びポップアップします。</p>
+<p><span class="key">SHIFT</span> か、<i>右</i> マウスボタンを押しながら選択ボックスを作成すれば、範囲をリサイズできるハンドルがボックスの四隅に現れるでしょう。また、選択ボックスをあちこちにドラッグすることもできます。</p>
+<p>選択はダブルクリックまたは <span class="key">ENTER</span> で適用されます。<br />
+<span class="key">ESC</span> は選択を解除します。</p>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 ターミナルからスクリーンショットを撮る</h2>
@@ -90,21 +105,25 @@
 
 <pre class="terminal">~&gt; screenshot --help
 
-screenshot [OPTIONS] [FILE]  スクリーンのビットマップを作成します
+screenshot [OPTIONS] [FILE]  現在のスクリーンのビットマップを作成します
 
-FILE は、silent mode のときに使われる保存場所 / ファイル名です。存在するファイルは警告無しに上書きされます。
+FILE は、silent mode のときに使われる出力パス / ファイル名です。存在するファイルは警告無しに上書きされます。
 FILE が指定されてない場合、スクリーンショットはユーザーのホームディレクトリにデフォルトの名前で保存されます。
 
 オプション
   -m, --mouse-pointer   マウスポインターを含める
   -b, --border          ウィンドウ境界を含める
   -w, --window          アクティブなウィンドウのみを撮る
-  -d, --delay=seconds   指定された時間の後、スクリーンショットを撮ります [秒]
-  -s, --silent          アプリケーションウィンドウを表示することなくスクリーンショットを保存します
-  -f, --format=image    フォーマットを指定します: [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
-  -c, --clipboard       スクリーンショットをアプリケーションウィンドウを表示することなくシステムクリップボードに保存します。
+  -d, --delay=seconds   指定された時間 [秒] の後、スクリーンショットを撮る
+  -s, --silent          アプリケーションウィンドウを表示することなくスクリーンショットを保存する
+  -f, --format=image    保存する画像フォーマットを指定します: [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
+  -c, --clipboard       スクリーンショットをアプリケーションウィンドウを表示することなくシステムクリップボードに保存する。
+  -a, --area            キャプチャーする画面の範囲を選択する。
 
-注: オプション -b, --border は -w, --window と共に使用したときのみ有効です。</pre>
+注: 
+オプション -b, --border は -w, --window と共に使用したときのみ有効です。
+オプション -a, --area は -s, --silent または -c, --clipboard と併用できません。
+</pre>
 
 </div>
 </div>

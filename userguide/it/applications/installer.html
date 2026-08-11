@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2021, Haiku. All rights reserved.
+ * Copyright 2009-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -91,9 +91,9 @@ Nel secondo menù a cascata è specificata la destinazione dell'installazione. Q
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="tools" name="tools">Strumenti</a></h2>
 <p>Dopo la procedura d'installazione, la partizione viene automaticamente resa avviabile. Tuttavia, può capitare che qualche altro sistema operativo o qualche applicazione di partizionamento sovrascriva (accidentalmente) il boot sector del volume di Haiku. In questo caso, avviare il CD di installazione e far partire l'Installer. Selezionare la propria partizione di boot di Haiku dal menù <span class="menu">Su: Scegli destinazione</span> e selezionare <span class="menu">Scrivi settore d'avvio</span> dal menù <span class="menu">Strumenti</span> per renderla nuovamente avviabile.</p>
-<p>L'altro elemento che si trova nel menù <span class="menu">Strumenti</span> è <span class="menu">Boot Manager</span> che crea un menù nel settore di avvio dal quale scegliere quale sistema operativo avviare. Consulta la guida al capitolo <a href="bootmanager.html">BootManager</a> per ulteriori informazioni.<br />
-Non c'è bisogno di eseguire <span class="app">Boot Manager</span> se Haiku è l'unico sistema installato sulla macchina oppure si sta già utilizzando un bootmanager come Grub, in questo caso bisognerebbe aggiungere manualmente Haiku (si veda sopra).</p>
-
+<p>The next item in the <span class="menu">Tools</span> menu is used to <span class="menu">Set up a boot menu</span> that puts a menu in the boot sector to choose what operating system to boot. See topic <a href="bootmanager.html">BootManager</a> for more information.<br />
+ You don't need to run the <span class="app">BootManager</span> if you already use a bootmanager like GRUB, in which case you have to add Haiku manually (see above), or Haiku runs exclusively on your machine.</p>
+<p>If you use UEFI to boot your system instead of going the BIOS/MBR route, you can use <span class="menu">Install EFI loader</span> to copy the EFI loader from the boot/install medium to your prepared partition that you select from the submenu. That EFI system partition needs to be FAT32-formatted on a GPT-initialized disk with enough free space.</p>
 
 </div>
 </div>

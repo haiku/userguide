@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2012-2022, Haiku, Inc. All rights reserved.
+ * Copyright 2012-2025, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,6 +63,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 
 <table class="index" id="index" summary="index">
@@ -77,13 +78,15 @@
 
 <p>Tener conectividad de red es esencial para las necesidades de hoy en día de una conexión permanente a internet. Dado que estar al corriente con todas las diferentes opciones de hardware y controladores que están cambiando constantemente es casi imposible para un proyecto pequeño,  por lo que Haiku depende de una capa de compatibilidad para hacer uso de los controladores de red de <a href="http://www.freebsd.org">FreeBSD</a> y algunos de <a href="https://www.openbsd.org/">OpenBSD</a>. Esto garantiza un soporte considerable de hardware, aunque no la totalidad de lo que hay en el mercado.</p>
 
+<div class="box-warning"><p _translation_id="7026"><b>Wi-Fi Support</b><br />Inline with our use of BSD wireless drivers, Haiku currently only supports Wi-Fi 6 or below access points.  WPA3 secured networks are not yet supported.</p></div>
+
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">Como unirse a una red inalámbrica</a></h2>
 <p>Puede usar el accesorio de escritorio <a href="desktop-applets/networkstatus.html">NetworkStatus</a> para conectarse a una red determinada.</p>
 <p>Dele un clic derecho en el ícono de la Barra de Escritorio y seleccione el nombre público de la red (que es la "SSID" que difunde) desde el menú contextual.</p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
-<p>Se abrirá una ventana en donde podrá establecer el tipo de autenticación (probablemente WPA/WPA2, porque WEP ya no es un método seguro de cifrado) y la contraseña de esa red inalámbrica. Active la casilla de verificación debajo para <span class="menu">Guardar esta configuración</span> así ya no tiene que ingresar toda esta información de nuevo la próxima vez que se conecte a esta red.<br />
+<p>Se abrirá una ventana en donde podrá establecer el tipo de autenticación (probablemente WPA/WPA2, porque WEP ya no es un método seguro de cifrado) y la contraseña de esa red inalámbrica. El botón con un símbolo de un "ojo" permite mostrar la contraseña como texto visible, para verificar que esté bien escrita. Active la casilla de verificación debajo para <span class="menu">Guardar esta configuración</span> así ya no tiene que ingresar toda esta información de nuevo la próxima vez que se conecte a esta red.<br />
 Al hacer clic en <span class="button">Aceptar</span> comenzará el proceso de autenticación.<br /> Esto podría tomar un momento dependiendo de su hardware y de la configuración de red. Será informado del progreso mediante notificaciones:</p>
 <img src="images/workshop-wlan-images/join-status.gif" alt="join-network.gif" />
 <p>Una vez que aparezca "Listo" y el ícono NetworkStatus de la Barra de Escritorio muestre una luz verde, la conexión estará establecida. Si las notificaciones terminan en "Sin conexión" y un triángulo amarillo, algo salió mal, tal vez una contraseña incorrecta.</p>
@@ -108,7 +111,7 @@ La salida muestra el nombre público (SSID), dirección MAC, intensidad de la se
 <a id="firmware" name="firmware">Como hacer funcionar hardware compatible</a></h2>
 <p>Todo el hardware de comunicación inalámbrica soportado funciona de forma predeterminada y no va a ser necesario descargar o instalar algún archivo de firmware suplementario.</p>
 
-<p>Sólo algunos circuitos integrados o «chipsets» (como Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) necesitan módulos de firmware binarios que sin embargo Haiku no puede incluir por cuestiones legales. Para hacer que estas tarjetas de inalámbricas funcionen, existe un comando sencillo que descargará e instalará en su lugar todos estos archivos propietarios.</p>
+<p>Sólo algunos circuitos integrados o «chipsets» antiguos (como Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) necesitan módulos de firmware binarios que Haiku no puede incluir por cuestiones legales. Para hacer que estas tarjetas de inalámbricas funcionen, existe un comando sencillo que descargará e instalará en su lugar todos estos archivos propietarios.</p>
 <p>Abra una Terminal y escriba:</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
 <p>Ahora lea la licencia y acéptela si está de acuerdo para instalar todos los archivos de firmware disponibles.</p>

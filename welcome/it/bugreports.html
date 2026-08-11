@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2020, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -97,6 +97,7 @@ Una volta stabilito che il bug non sia già stato segnalato, assicurati di forni
 	<li><p>Descrivi il problema che hai riscontrato. Cerca di essere il più accurato possibile: descrivi il comportamento riscontrato e quello atteso.</p></li>
 	<li><p>Riporta tutti i passaggi che è necessario compiere per esporre il bug. Questo aiuterà gli sviluppatori a riprodurlo.</p></li>
 	<li><p>Allega quante più informazioni possibilli. Se il problema riguarda l'interfaccia grafica, o un'applicazione particolare, allega alla segnalazione un'istantanea dello schermo, se possibile, premendo il tasto <span class="key">STAMPA</span>.</p></li>
+	<li><p>Use the English language if possible. This is the common language of the development team, and using it makes it more likely that developers knowledgeable about the issue can investigate. If you do not speak English, try to get some help from other people for reporting the problem, for example at Haiku's <a href="https://discuss.haiku-os.org/c/international">International Forum</a>.</p></li>
 </ul>
 	
 <h2><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -124,7 +125,7 @@ Depending on what exactly crashed, you can try to save a crash report on the Des
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="kdl" name="kdl">Kernel Debugging Land - KDL</a></h3>
-<p>If the system hasn't entered KDL by itself, you can do that intentionally by invoking the keyboard shortcut <span class="key">ALT</span> <span class="key">SysReq</span> <span class="key">D</span> (<span class="key">SysReq</span> being the <span class="key">Print</span> key, normally).<br />
+<p>If the system hasn't entered KDL by itself, you can do that intentionally by invoking the keyboard shortcut <span class="key">ALT</span> <span class="key">SYSREQ</span> <span class="key">D</span> (<span class="key">SYSREQ</span> being the <span class="key">PRINT</span> key, normally).<br />
 Note that in KDL your keyboard may not work. PS/2 keyboards always do, with USB keyboards it depends on the type of USB controller (UHCI/EHCI). Generally, the keyboard should be plugged into the port directly, not via any hubs. In some circumstances, the keyboard only works if one has entered KDL via the keyboard shortcut at least once. USB OHCI is not supported at the moment.</p>
 <p>KDL itself is a kind of a shell. One can execute commands that print information about the system. The following commands might be of interest:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
@@ -142,13 +143,15 @@ Note that in KDL your keyboard may not work. PS/2 keyboards always do, with USB 
 <p><b>This is the preferred method for extracting information from a non-booting system.</b><br />
 The syslog (short for system log) contains valuable information about what has happened in your system, including the output of KDL sessions. It's usually a good idea to attach it to the kernel related Trac ticket. The syslog is written to the file <span class="path">/boot/system/var/log/syslog</span>. Since writing to a file requires a working system, the most recent output might not have made it to the syslog when a kernel problem occurs (particularly on spontaneous reboots or uncontinuable KDL sessions).</p>
 <p>The option <span class="menu">Enable debug syslog</span> in the boot loader's <span class="menu">Debug menu</span> makes the syslog persistent. If the option <span class="menu">Save syslog from previous session during boot</span> is activated in the boot loader options (as it is by default), you'll find the syslog of your last session as <span class="path">/boot/system/var/log/previous_syslog</span>.<br />
-If you're not able to boot to get to the previous_syslog, you have to enter the boot loader menu by holding down <span class="key">SHIFT</span> (or <span class="key">SPACE</span> when booting via UEFI) while booting.<br />
+If you're not able to boot to get to the previous_syslog, you have to enter the boot loader menu by holding down <span class="key">SHIFT</span> (or the <span class="key">SPACEBAR</span> when booting via UEFI) while booting.<br />
 In the boot loader's <span class="menu">Debug menu</span> you should find the entries <span class="menu">Display syslog from previous session</span> and <span class="menu">Save syslog from previous session</span>. The former displays the syslog on screen, the latter allows you to save it as a file to disk. Note that at the moment only FAT32 volumes are supported for saving the file. If you want to use a USB stick, but have plugged it in too late so that it isn't recognized yet, you can reset the machine and re-enter the boot loader menu. Note: Don't accidentally boot any operating system or the data will be lost.</p>
+<p>Note that the syslog may include information about the system (applications running, and some applications will also store some details here). It is recommended to check the syslog to make sure you are not uploading personal data that you wouldn't want published. A complete syslog is sometimes more helpful, but in the case you want to remove something, you can edit the file as needed.</p>
+<p>When attaching the syslog to a ticket, just attach it directly, <b>don't</b> put it inside a zipfile or other archive.</p>
 
 <h3><a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="onscreen" name="onscreen">On screen debug output</a></h3>
 <p><b>The on-screen debug output is useful only for debugging very specific issues and is known to have (timing) issues. Don't use it, if you don't have to.</b><br />
-This is only relevant when Haiku fails to boot on your machine and the <span class="menu">Debug syslog</span> option doesn't work for some reason. Before the Haiku boot logo appears, hold <span class="key">SHIFT</span> (or <span class="key">SPACE</span> when booting via UEFI) to enter the boot loader menu. Select <span class="menu">Select debug options</span>. Near the bottom, <span class="menu">Enable on screen debug output</span> will be listed. (Note: The other options could be enabled in an attempt to boot Haiku. If Haiku will boot only when one or more options are activated, be sure to mention which ones.)<br />
+This is only relevant when Haiku fails to boot on your machine and the <span class="menu">Debug syslog</span> option doesn't work for some reason. Before the Haiku boot logo appears, hold <span class="key">SHIFT</span> (or the <span class="key">SPACEBAR</span> when booting via UEFI) to enter the boot loader menu. Select <span class="menu">Select debug options</span>. Near the bottom, <span class="menu">Enable on screen debug output</span> will be listed. (Note: The other options could be enabled in an attempt to boot Haiku. If Haiku will boot only when one or more options are activated, be sure to mention which ones.)<br />
 Finally select <span class="menu">Return to main menu</span> and then <span class="menu">Continue booting</span>.<br />
 One or more pages of text will display on the screen, only the last few lines need to be included on your ticket. There's more information on the <a href="../../userguide/it/bootloader.html">Boot Loader</a>.</p>
 

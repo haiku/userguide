@@ -67,7 +67,7 @@
 
 <p>Haikun käynnistyslataaja voi auttaa kun koet laitteistopulmia tai haluat valita, minkä Haiku-asennuksen käynnistät, jos sinulla on useampia kuin yksi asennettu järjestelmä (ehkä asennus-CD:ltä tai USB-tikulta). Se on myös kätevä kun olet asentanut ohjelmistokomponentin, joka oireilee ja estää sinua käynnistämästä järjestelmää uudelleen komponentin poistamiseksi, katso alla <a href="#troubleshooting">Vianjäljitys</a>.</p>
 <p>Käynnistyslataajan valitsimiin pääsemiseksi sinun on painettava ja pidettävä alhaalla  <span class="key">VAIHTO</span>-näppäintä ennen Haikun käynnistysprosessin alkamista. Jos käynnistyshallinta on asennettu, voit aloittaa pitämällä <span class="key">VAIHTO</span>-näppäintä alhaalla ennen Haikun käynnistysrivin valintaa. Jos Haiku on ainoa koneeseen asennettu käyttöjärjestelmä, voit aloittaa näppäimen pitämisen alhaalla jo silloin, kun näet näytölläsi BIOS-käynnistysviestit.</p>
-<div class="box-info">Joissakin laitteissa sinun on varmistuttava, että USB-näppäimistö on käytössä BIOS:issa.<br />Niissä tietokoneissa, joissa käytetään UEFI:a käynnistämiseen klassisen BIOS:in sijasta, sinun on käytettävä <span class="key">VÄLILYÖNTI</span>-näppäintä <span class="key">VAIHTO</span>-näppäimen sijasta.</div>
+<div class="box-info">Joissakin laitteissa sinun on varmistettava, että USB-näppäimistö on käytössä BIOS:issa.<br />Niissä tietokoneissa, joissa käytetään UEFI:a käynnistämiseen klassisen BIOS:in sijasta, sinun on käytettävä <span class="key">VÄLILYÖNTI</span>-näppäintä <span class="key">VAIHTO</span>-näppäimen sijasta.</div>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="options" name="options">Käynnistyslataajavalitsimet</a></h2>
@@ -75,7 +75,7 @@
 <table summary="bootloader menus" border="0" cellspacing="0" cellpadding="2">
 <tr><td><b>Valitse käynnistyslevytaltio/tila</b></td><td> </td><td>Valitse, minkä Haiku-asennuksen/version käynnistät (katso <a href="#troubleshooting">Vianjäljitys</a> alla).</td></tr>
 <tr><td><b>Valitse turvatilavalitsimet</b>
-</td><td> </td><td>Laitteistopulmien tapahtuessa voit kokeilla useita valitsimia tai jos järjestelmä tulee epästabiiliksi tai sitä ei pysty käynnistämään huonosti käyttäytyvän lisäosan vuoksi. Kun valintapalkin siirtää valitsimelle, niin näytön alalaitaan ilmaantuu lyhyt selite.</td></tr>
+</td><td> </td><td>Laitteistopulmien tapahtuessa voit kokeilla useita valitsimia tai jos järjestelmä tulee epästabiiliksi tai kun sitä ei pysty käynnistämään huonosti käyttäytyvän lisäosan vuoksi. Kun valintapalkin siirtää valitsimelle, niin näytön alalaitaan ilmaantuu lyhyt selite.</td></tr>
 <tr><td></td><td></td><td>
 	<p><span class="menu">Turvatila</span><br />
 		Laittaa järjestelmän turvatilaan. Tämä voidaan ottaa käyttöön riippumatta muista valitsimista.</p>
@@ -117,7 +117,7 @@
 		Ottaa pois käytöstä sivutuksen, kun vianjäljitystulostus on otettu käyttöön.</p>
 	<p><span class="menu">Ota käyttöön vianjäljitysjärjestelmäloki</span><br />
 		Ottaa käyttöön erityisen muistissa olevan järjestelmälokipuskurin tälle istunnolle, johon käynnistyslataaja pääsee käsiksi uudelleenkäynnistyksen jälkeen.</p>
-	<p><span class="menu">Näytä nykyinen käynnistyslatajaloki</span><br />
+	<p><span class="menu">Näytä nykyinen käynnistyslataajaloki</span><br />
 		Näyttää käynnistyslataajan kirjaamat vianjäljitystiedot (poistu lokista painamalla näppäintä <span class="key">Q</span>)</p>
 	<p><span class="menu">Lisää edistynyt vianjäljitysvalitsin</span><br />
 		Sallii edistyneiden vianjäljitysvalitsimien kirjoittamisen suoraan.</p></td></tr>
@@ -133,8 +133,8 @@
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="troubleshooting" name="troubleshooting">Vianjäljitys</a></h2>
-<p>Jos Haiku kieltäytyy käynnistymästä aivan alusta, yritä asettaa eri valitsimia valikosta <span class="menu">Valitse turvatilavalitsimet</span>. Harkitse joka tapauksessa <a href="../../welcome/fi/bugreports.html">vikailmoitus</a>-raportin täyttämistä.</p>
-<p>Toisaalta, jos Haiku äkkiä vain häiriököi, kun olet asentanut jonkin ohjelmiston, erityisesti laitteistoajurin, sinulla on useita valitsimia käytettävissä saadaksesi Haikun taas käynnistymään poistamalla häiritsevän pakkauksen asennuksen:</p>
+<p>Jos Haiku kieltäytyy käynnistymästä aivan alusta, yritä asettaa eri valitsimia valikosta <span class="menu">Valitse turvatilavalitsimet</span>. Harkitse joka tapauksessa <a href="../../welcome/fi/bugreports.html">vikailmoitus</a>-ilmoituksen täyttämistä.</p>
+<p>Toisaalta, jos Haiku äkkiä vain häiriököi, kun olet asentanut jonkin ohjelmiston, erityisesti laitteistoajurin, sinulla on useita valitsimia käytettävissä saadaksesi Haikun taas käynnistymään niin että voit poistaa häiritsevän pakkauksen asennuksen:</p>
 <ul>
 <li><p><span class="menu">Turvatila</span>-aktivointi estää useimpien palvelin-, taustaprosessi- ja KäyttäjäKäynnistysSkriptien käynnistymisen.</p></li>
 <li><p><span class="menu">Ota pois käytöstä käyttäjälisäosat</span>-aktivointi estää kaikkien lisäosien käytön (ajurit, kääntäjät, jne.), jotka olet asentanut kotikansion alaiseen hierarkkiaan.</p></li>
@@ -142,7 +142,7 @@
 <li><p>Jos häiritsevä ajuri, lisäosa jne. on asennettu järjestelmähierarkiaan, asiat ovat hiukan mutkikkaampia, koska se alue on kirjoitussuojattu. Tässä <span class="menu">Poista järjestelmäkomponentteja käytöstä</span> voi näytellä tärkeää roolia. Sen avulla voit navigoida läpi koko järjestelmähierarkian ja ottaa pois käytöstä komponentit, jotka sotkevat järjestelmää merkitsemällä kohteita <span class="key">VÄLILYÖNTI</span>-näppäimellä tai <span class="key">RETURN</span>-näppäimellä. <span class="key">ESC</span>-näppäin palauttaa sinut yhden tason ylöspäin ylempään hakemistoon.</p>
 <p>Verkossa oleva artikkeli <a href="https://www.haiku-os.org/guides/daily-tasks/blacklist-packages">Poistetaan pakkausten komponentteja käytöstä</a> näyttää, kuinka tästä asetuksesta tekee pysyvän.</p></li>
 <li><p>Kohdasta <span class="menu">Valitse käynnistyslevytaltio/tila</span> voit määritellä, että minkä aikaisemman Haikun ”version” käynnistät. Joka kerta kun asennat pakkauksen tai poistat sen, vanha tila tallennetaan ja voit käynnistää järjestelmän siihen tilaan valitsemalla sen käynnistyslatausvalitsimissa esitetystä luettelosta.<br />
-Joten jos kohtaat käynnistyspulmia jonkun pakkauksen asentamisen jälkeen, käynnistä Haiku-versioon ennen sitä aikaa ja poista haittallinen pakkaus. Voit palata pysyvästi määrättyyn Haiku-versioon kuten kuvaillaan kohdassa <a href="application/softwareupdater.html#donwgrading">Ohjelmistopäivittäjä</a>.</p></li>
+Joten jos kohtaat käynnistyspulmia jonkun pakkauksen asentamisen jälkeen, käynnistä Haiku-versioon ennen sitä aikaa ja poista haittallinen pakkaus. Voit palata pysyvästi määrättyyn Haiku-versioon kuten kuvaillaan kohdassa <a href="applications/softwareupdater.html#downgrading">Ohjelmistopäivittäjä</a>.</p></li>
 </ul>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -152,11 +152,11 @@ Joten jos kohtaat käynnistyspulmia jonkun pakkauksen asentamisen jälkeen, käy
 
 <p>Jos kaikki toimii normaalisti, symboli toisensa jälkeen syttyy.<br />Erilaiset symbolit vastaavat likimain näitä käynnistyslatausvaiheita:</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0"> 
-	<tr><td><b>Atomi</b></td><td style="width:10px;"> </td><td>Moduulien alustaminen</td></tr>
+	<tr><td><b>Atomi</b></td><td style="width:10px;"> </td><td>Moduulien alustaminen.</td></tr>
 	<tr><td><b>Levy + suurentaja</b></td><td> </td><td>Luodaan rootfs (<span class="path">/</span>) ja liitetään devfs (<span class="path">/dev</span>).</td></tr>
-	<tr><td><b>Lisäosakortti</b></td><td> </td><td>Alustetaan laitehallintaa</td></tr>
-	<tr><td><b>Käynnistetään levy</b></td><td> </td><td>Liitetään käynnistyslevy</td></tr>
-	<tr><td><b>Mikropiirit</b></td><td> </td><td>Ladataan prosessorikohtaiset moduulit</td></tr>
+	<tr><td><b>Lisäosakortti</b></td><td> </td><td>Alustetaan laitehallintaa.</td></tr>
+	<tr><td><b>Käynnistetään levy</b></td><td> </td><td>Liitetään käynnistyslevy.</td></tr>
+	<tr><td><b>Mikropiirit</b></td><td> </td><td>Ladataan prosessorikohtaiset moduulit.</td></tr>
 	<tr><td><b>Kansio</b></td><td> </td><td>Alijärjestelmien loppualustus.</td></tr>
 	<tr><td><b>Raketti</b></td><td> </td><td>Käynnistystaustaohjelma on käynnistänyt järjestelmän.</td></tr>
 </table>

@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -87,7 +87,7 @@
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
 <td>読み取り専用でマウントされたパーティション</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>マウントされたイメージファイル (<a href="./cli-apps.html">diskimage コマンド</a>も参照ください)</td></tr>
+<td>マウントされたイメージファイル (下の<a href="./cli-apps.html">ディスクイメージ</a>を参照ください)</td></tr>
 </table>
 <p>マウントされると、カラーバーがパーティションの使用領域を表示します。パーティションの状態によって色が決まります。</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
@@ -113,13 +113,25 @@
 <p>ダイアログでパーティションのサイズとタイプを調節してください。パーティションを Haiku のインストールに用いる場合、または Haiku の特徴的な属性やクエリを使用する場合は、<span class="menu">Be File System</span> をパーティションタイプに設定してください。また、<span class="menu">Be File System</span> のパーティションは、ほかの OS からアクセスできないことにご注意ください。</p>
 <p>よくある、拡張パーティションの中の論理パーティション作成の代わりにプライマリパーティションを作成した時のみ、ダイアログに、<span class="menu">アクティブパーティション (Active partition)</span> チェックボックスが使えます。パーティションを Haiku のブートディスクとして利用するつもりなら、チェックする必要があるでしょう。</p>
 <p>新しく作成されたパーティションを使用する前、またはマウントする前でも、ファイルシステムでフォーマットする必要があります。</p>
-<h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">パーティションをフォーマットする</a></h2>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="formatting" name="formatting">パーティションのフォーマット</a></h2>
 <p>アンマウントされたパーティションだけが、<span class="menu">パーティション | 初期化 (Partition | Initialize)</span> からファイルシステムを選択することで初期化できます。The <span class="menu">Be File System</span> (BFS) は、Haiku のブートパーティションには必須のものです。また、Haiku で使用するデータパーティションに推奨されるものです。BFS でフォーマットされたパーティションだけが、クエリを実行でき、Haikuのファイル属性のフルサポートが可能です。</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>ダイアログで、パーティションの名前とブロックサイズを入力します。ブロックサイズはファイルが最小限に割り当てるスペースのバイト数です。ブロック当たり 2048 が推奨されますが、特に必要なら大きなサイズにも小さなサイズにも設定できます。<br />
 パーティション上のデータが将来クエリを全く必要としないなら、<span class="menu">Enable query support (クエリのサポートを有効にする)</span>のチェックを外して、インデックスを管理するオーバーヘッドを少し減らせます。</p>
-<div class="box-stop">フォーマットはドライブ上のすべてのデータを破壊します!</div>
+<div class="box-stop">フォーマットはパーティション上のすべてのデータを破壊します!</div>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="diskimages" name="diskimages">ディスクイメージ</a></h2>
+<p><span class="menu">ディスクイメージ… (Disk image…)</span> メニューは、ディスク / パーティションのイメージファイルに関するいくつかのアクションを提供します。</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="4">
+<tr><td class="onelinetop"><span class="menu">ディスクイメージを登録/登録解除… (Un/Register disk image…)</span></td><td width="20px"></td><td>登録は、イメージファイルをシステムで使用可能にします。ファイルは、マウント、編集、ファイルコピー、フォーマットなどができる通常のボリュームとして現れます。<a href="./cli-apps.html">diskimage コマンド</a>も参照ください。</td></tr>
+<tr><td><span class="menu">イメージを保存… (Save image…)</span></td><td></td><td>現在選択されたパーティションをイメージファイルに保存します。できたファイルはパーティションと同じサイズになるので、ファイルの保存先に充分な空きスペースがあることを確認してください。</td></tr>
+<tr><td><span class="menu">イメージを書き込み… (Write image…)</span></td><td></td><td>選択したパーティション / ボリュームにイメージファイルを書き込みます。
+<div class="box-stop" _translation_id="6113">イメージの書き込みはパーティション / ヴォリューム上のすべてのデータを破壊します!</div>
+</td></tr>
+</table>
 </div>
 </div>
 

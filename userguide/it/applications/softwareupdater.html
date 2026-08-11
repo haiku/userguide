@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2018-2022, Haiku. All rights reserved.
+ * Copyright 2018-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -72,13 +72,15 @@
 <p><br /></p>
 <p>SoftwareUpdater controlla tutti i repository attivi (consulta <a href="../preferences/repositories.html">Impostazioni Repository</a> per ulteriori dettagli) alla ricerca di aggiornamenti dei pacchetti installati, inclusi aggiornamenti di sistema di Haiku. Si occupa, poi, di scaricare e di installare tutti gli aggiornamenti automaticamente.</p>
 <img src="../images/apps-images/softwareupdater.png" alt="SoftwareUpdater's main window" />
-<p>All'avvio, SoftwareUpdater controlla alla ricerca di aggiornamenti ai pacchetti e ne mostra una sintesi in una lista, con la versione trovata e una breve descrizione. La casella di spunta <span class="menu">Mostra ulteriori dettagli</span> per mostrare, oltre ai dettagli sopracitati, sia la vecchia che la nuova versione di ogni pacchetto.</p>
+<p>After launching, SoftwareUpdater checks for updates to packages and displays them in a list with their new version and a short description.</p>
 <p><span class="button">Aggiorna</span> inizia il download dei pacchetti da aggiornare per poi procedere con l'installazione.</p>
 <p>A seconda di ciò che hai aggiornato, potrebbe essere necessario riavviare Haiku affinché 
 il processo di aggiornamento possa essere completato. Per ciò che concerne le applicazioni, invece, esse in genere hanno solo bisogno di essere riavviate, mentre gli aggiornamenti di Haiku in genere richiedono il riavvio.</p>
 <div class="box-info"><p>Every time packages are updated, installed or uninstalled (either with SoftwareUpdater/HaikuDepot or in Terminal via <tt>pkgman</tt>), a new "state" is saved at <span class="path">/system/packages/administrative/</span>. This makes it possible to boot into any past state from the <a href="../bootloader.html">Boot Options</a>, making it easy to solve issues that may arise from having installed/updated a package that doesn't work as expected.</p>
-<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time. Until there's an option for an automatic clean-up, it's a good idea to check the size of the "administrative" folder from time to time and remove the oldest states, that you probably won't have to boot into again.</p>
+<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time.</p>
 </div>
+<p>Under <span class="button">Settings…</span> you find an option to <span class="menu">Show more details</span> to include the name of the repository for each package and show both the old and new package versions.</p>
+<p>There's also a setting to limit the size of the above mentioned "administrative" folder. You can <span class="menu">Automatically clean up old install states</span> after every update to remove all states older than 30 days. The last 10 states are always preserved, even if they were older than 30 days.</p>
 <h2>
 <a id="downgrading" name="downgrading">Downgrading to a previous Haiku revision</a></h2>
 <p>It's rare but possible that an update to the latest Haiku revision ("hrev") introduced a regression you're not willing to live with. From the boot options menu you can load a former, working state (see <a href="../bootloader.html#troubleshooting">Boot Loader - Troubleshooting</a>). Find the last working state and boot into it.</p>

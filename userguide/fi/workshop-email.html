@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,15 +63,17 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Hakemisto</td></tr>
 <tr class="index"><td>
-	<a href="#mailsystem">Haikun sähköpostijärjestelmä</a><br />
-	<a href="#status">Käytetään omia tiloja</a><br />
-	<a href="#queries">Käytetään kyselyjä</a><br />
-	<a href="#tips">Lisävihjeitä</a></td></tr>
+	<a href="#mailsystem">Haiku's mail system</a><br />
+	<a href="#labels">Using labels</a><br />
+	<a href="#queries">Using queries</a><br />
+	<a href="#tips">More tips</a>
+</td></tr>
 </table>
 
 <h1>Työpaja: Sähköpostin hallinta</h1>
@@ -100,14 +102,18 @@ Parannukset kaikkiin näihin järjestelmiin eivät koske vain sähköpostien lä
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="status" name="status">Käytetään omia tiloja</a></h2>
+<a id="labels" name="labels">Using labels</a></h2>
 <p>Kun selaat äskettäin saapunutta sähköpostia, haluat palata joihinkin niihin myöhemmin ajatellaksesi niitä perusteellisemmin. Vaikka voisit käyttää sähköpostiohjelman valikon <span class="menu">Sulje ja | Jätä uutena</span> pitämään ne sähköpostiviesteinäsi ”<i>Uudet viestit</i>”-kyselyllä, asioilla on tapana kasaantua sillä tavoin...</p>
 <p>Yksi ratkaisu olisi tietysti aloittaa vastaus ja tallentaa se luonnoksena. Mutta sinun ei odoteta kirjoittavan vastausta ja vain haluavan lukea sähköposti uudelleen myöhemmin, se ei ole ideaalitilanne.</p>
-<img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>Käytä uusien tilojen parempaan luomiseen ja sähköpostien luokitteluun valikkoja <span class="menu">Sulje ja | Aseta arvoon...</span>. Voit esimerkiksi kutsua tilaa ”<i>Myöhemmin</i>”, ja kysellä sitä sitten, kun sinulla on enemmän aikaa.<br />
-Tai voit käyttää eri tiloja tietyille projekteille. Esimerkiksi loin tilan ”<i>HUG</i>” (”Haiku user guide”), jonka alla kerään jokaisen sähköpostiviestin, joka voi vaikuttaa käyttöopasteiden sisältöön, kuten versionhallinnan commit-viestit lähdekoodimuutoksista, jotka muuttavat tai esittelevät joitakin ominaisuuksia tai jotakin muuta mitä haluaisin muuttaa käyttöopasteissa.<br />
-Yritkä kaikissa tapauksissa pitää tilanimi lyhyenä. Sillä tavalla se sopii aina Seuraajan ”Tila”-sarakkeen normaaliin leveyteen.</p>
-<p>Sinun ei tarvitse avata sähköpostiviesti sovelluksella <span class="app">Sähköposti</span> sen tilan asettamiseksi. Seuraaja-liitännäisellä <span class="app">Merkitse luetuksi</span> ja <span class="app">Merkitse tilana...</span> voit valita joitakin sähköpostitiedostoja ja asettaa niiden tilan yhdellä kerralla.</p>
+<img src="images/workshop-email-images/labels.png" alt="labels.png" /> 
+<p>Better use <span class="menu">Set label</span> to create a new label with <span class="menu">Label as…</span> or choose an existing label to categorize your mail. For example, you could call the label "<i>Later</i>", and then query for that when you find more time.<br />
+Or you use different labels for specific projects. For example, I created a label "<i>HUG</i>" (for "Haiku user guide") under which I collect every mail that may influence the contents of the user guide, like commit messages about code changes that alter or introduce some feature or anything else I feel could improve the user guide.<br />
+In any case, try to keep the label name short. That way it always fits in a normally wide "Label" column in Tracker.</p>
+<p>Once you've dealt with the email, you can use <span class="menu">Remove label</span> to clear the email's label attribute.</p>
+<p>Labels are saved in <span class="path">~/config/settings/Mail/labels</span>, which is opened when you choose <span class="menu">Manage labels…</span>. Here you can add, delete or rename your labels. Conveniently, each label file is also a query, meaning you can doubleclick it to start a query for emails with that label. Handy to check first before deleting a label that you think you don't need anymore.</p>
+<p>You don't have to open an email with the <span class="app">Mail</span> application to set its label. With the Tracker add-ons <span class="app">Label as… </span> you can select some email files and set or remove their label in one go.</p>
+<div class="box-info">BeOS - and Haiku for a long time - misused the email status attribute <tt>MAIL:status</tt> for labeling mails. If you used such custom statuses, it's recommended you migrate them to the label attribute <tt>MAIL:label</tt>.
+</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -115,13 +121,14 @@ Yritkä kaikissa tapauksissa pitää tilanimi lyhyenä. Sillä tavalla se sopii 
 <p>Tietysti voit määritellä kansion kaiken sähköpostisi tallentamiseen. Voit avata sen ja siellä on kaikki sähköpostisi. Mutta ajan mittaan kansio tulee täyteen ja viestien näyttäminen kestää yhä kauemmin, koska tuhansien tiedostojen ja niiden attribuuttien jäsentämiseen kuluu aikaa. Enimmäkseen et todella välitä kaksi vuotta vanhoista sähköpostiviesteistä nigerialaisesta prinssistä ja heidän perintöpulmista ...</p>
 <div class="box-info">Paljon kansioiden kansoittamisajasta menee tiedostojen lukemiseen levyltä oikeaan lajittelujärjestyksen ja niiden näyttämiseen ikkunassa. Jos sinun on avattava kansio, jossa on valtava määrä tiedostoja, voit lyhentää odottamisaikaa muuttamalla Seuraaja-ikkunan tilaksi ”näkymätön", ts. joko minimoimalla sen tai vaihtamalla toiseen työtilaan. Katso <a href="desktop-applets/processcontroller.html">Prosessivalvonta</a> nähdäksesi, mitä se vaikuttaa suoritinkäyttöön.</div>
 <p><a href="queries.html">Kyselyt</a> pelastukseksi!</p>
-<p>Kyselyjä käyttämällä voit kaventaa sähköpostiviestisi näkymäaluetta. Itse asiassa Työpöytäpalkin sähköpostikuvake käyttää kyselyjä.</p>
+<p>By using queries, you can narrow down the view of your mails. Actually, the mailbox icon in the Deskbar uses queries. Right-click the icon to open its context menu:</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
 <p>Alivalikko <span class="menu">Avaa luonnos</span> kyselee tilaa ”<i>Luonnos</i>”, jonka <span class="app">Sähköposti</span>-sovellus asettin viestiä tallentaessasi.</p>
 <p><span class="menu">Avaa ulevan sähköpostin kansio</span> ja <span class="menu">Avaa sähköpostikansio</span> ovat vain linkkejä tavallisiin kansioihin (ja mielestäni ne eivät ole kovin hyödyllisiä).</p>
 <p>Alivalikko <span class="menu"># new messages</span> kansoitetaan kyselemällä sähköpostiviestien ”<i>Uusi</i>”-tilaa (kysely on muuten sama, kuin se, jota käytetään vaihtamaan sähköpostikuvake näyttämään joitakin kirjaimia).</p>
 
-<p>Voit myös lisätä omia kyselyjä (tai kansioita, sovelluksia, skriptejä jne.) asiayhteysvalikkoon laittemalla niitä tai linkkejä niihin kansioon <span class="path">~/config/settings/Mail/Menu Links</span>.</p>
+<p>You can add your own queries (or folders, applications, scripts etc.) to that context menu too, by putting them or links to them into <span class="path">~/config/settings/Mail/Menu Links</span>. In the screenshot above, for example, the label folder <span class="path">~/config/settings/Mail/labels</span> was linked there, to have quick access to labeled emails from the the mailbox icon of the Deskbar.</p>
+
 <div class="box-info">Kysely <span class="path">~/config/settings/Mail/mailbox</span> on erikoistapaus: Se suoritetaan napsauttamalla hiiren ykköspainikkeella Työpöytäpalkissa. Jos haluat muuttaa tuota käyttäytymistä, voit korvata sen millä tahansa muulla tiedostolla (tai linkillä tiedostoon), nimeä se vain nimellä ”<i>mailbox</i>”. Sen ei tarvitse olla kysely, sillä linkki kansioon, skripti tai sovelIus toimii aivan yhtä hyvin.</div>
 
 <h3>
@@ -132,7 +139,7 @@ Yritkä kaikissa tapauksissa pitää tilanimi lyhyenä. Sillä tavalla se sopii 
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /></td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /></td></tr>
 
-<tr align="center"><td>Tämä löytää kaikki sähköpostiviestit omalla tilalla "<i>Myöhemmin</i>".</td>
+<tr align="center"><td>This finds all mails with the label "<i>Later</i>".</td>
 <td>Tämä löytää kaikki sähköpostiviestit viimeisen 2 päivän ajalta.</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /></td>
@@ -148,7 +155,8 @@ Yritkä kaikissa tapauksissa pitää tilanimi lyhyenä. Sillä tavalla se sopii 
 <ul>
 <li><p>Jos et tallenna kyselyä tilaksi ”<i>Kysely</i>” vaan tilaksi ”<i>Kyselymallinne</i>”, sen kutsuminen ei näytä tulosikkunaa, vaan sen sijaan Etsi... -ikkunan. Sillä tavalla voit helposti vaihtaa esimerkiksi aiheen tai lähettäjän etsintämerkkijonon, tai vaihtaa "<i>2 päivää</i>" aikarajan ajaksi "<i>3 päivää</i>".</p></li>
 <li><p>Aktivoimalla "type-ahead filtering"-suodatus <a href="tracker.html#tracker-preferences">Seuraaja-asetuksissa</a> sallii sinun nopeasti suodattaa kyselytuloksia vielä edelleen. Usein ei riitä kysyä kaikkia sähköpostiviestejä viimeisen 3 päivän ajalta ja tehdä niille sieltä type-ahead-suodatus. Suuri etu on, että sinun ei tarvitse tarkkaan määritellä, mitä attribuuttia etsitään, koska kaikki näytetyt käsitellään suodatuksen yhteydessä.</p></li>
-<!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
+<li><p>When you're managing your emails via queries - and why wouldn't you? - you should configure a <i>DefaultQueryTemplate</i> that shows all the email attributes you normally want to see in a query result window, like <i>Status</i>, <i>From</i>, <i>Subject</i>, <i>When</i>.<br />
+First, you create a folder <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates/text_x-email</span>. Then do one of your usual email queries and change the displayed attributes and window size and position of the result window to your liking. Now simply <span class="menu">Copy layout</span> from its <span class="menu">Attributes</span> menu, open the newly created <span class="path">text_x-email</span> folder, and <span class="menu">Paste layout</span> there.</p></li>
 </ul>
 
 </div>

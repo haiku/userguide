@@ -12,6 +12,7 @@
  * Translators:
  *		Humdinger
  *		Pengphei Han
+ *		yjwork
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -81,7 +82,7 @@
 <h3>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="installing_fonts" name="installing_fonts">安装字体</a></h3>
-<p>New fonts that don't come as part of a regular .hpkg package, can be installed by copying them into a subfolder according to the font type (<tt>otfonts</tt>, <tt>psfonts</tt> or <tt>ttfonts</tt>) into their respective <tt>non-packaged</tt> folder (see topic <a href="../filesystem-layout.html">Filesystem layout</a>). For TrueType fonts that would be:</p>
+<p>不包含在常规的.hpkg 包中的新字体，可以通过将其复制到相应的子文件夹中进行安装，该文件夹根据字体类型(<tt>otfonts</tt>, <tt>psfonts</tt> 或 <tt>ttfonts</tt>)进行组织，并放入名为<tt>non-packaged</tt>的文件夹中（有关详细信息，请参见主题<a href="../filesystem-layout.html">文件系统布局</a>）。对于TrueType字体，该文件夹位于：</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>用于对所有用户都可用的字体。</td></tr>
 <tr><td><span class="path">/boot/home/config/non-packaged/data/fonts/ttfonts/</span></td><td>   </td><td>用于仅对自己可用的字体。</td></tr>
@@ -91,15 +92,15 @@
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="colors" name="colors">颜色</a></h2>
 <img src="../images/prefs-images/appearance-colors.png" alt="appearance-colors.png" />
-<p>在 <span class="menu">颜色</span> 标签页中，您可以对用户界面不同部分的颜色做出修改。当然，这些颜色也支持拖拽操作；您从其他程序选取颜色，例如：<span class="app">WonderBrush</span>，<span class="app">图标套件</span> 或者 <span class="app">背景</span> 面板。</p>
-<p>If you activate the checkmark to <span class="menu">Automatically pick secondary colors</span>, the list of user interface colors gets reduced to:</p>
+<p>在 <span class="menu">颜色</span> 标签页中，您可以对用户界面不同部分的颜色做出修改。当然，这些颜色也支持拖拽操作；您从其他程序选取颜色，例如：<span class="app">神笔画具</span>，<span class="app">图标套件</span> 或者 <span class="app">背景</span> 面板。</p>
+<p>如果将复选标记激活为<span class="menu">自动选择次要颜色</span>，则用户界面颜色列表将减少为：</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
-<tr><td><span class="menu">Panel background</span></td><td style="width:15px;"></td><td>default: gray</td></tr>
-<tr><td><span class="menu">Status bar</span></td><td></td><td>default: blue, used e.g. to outline the active widget like a button or list</td></tr>
-<tr><td><span class="menu">Window tab</span></td><td></td><td>default: the iconic yellow window tab</td></tr>
+<tr><td><span class="menu">面板背景</span></td><td style="width:15px;"></td><td>默认: 灰色</td></tr>
+<tr><td><span class="menu">Progress bar</span></td><td></td><td>default: blue, also used e.g. to outline the active widget like a button or list</td></tr>
+<tr><td><span class="menu">窗口选项</span></td><td></td><td>默认设置：标志性的黄色窗口选项卡</td></tr>
 </table>
-<p>With this setting all the other colors are set automatically. For example, the text color becomes white if you choose a dark panel color.</p>
-<p>You can also choose those three primary colors first and have the system set the secondary colors accordingly, then remove the checkmark and fine-tune individual colors.</p>
+<p>通过此设置，所有其他颜色都会自动设置。例如，如果选择深色面板颜色，文本颜色将变为白色。</p>
+<p>您也可以先选择这三种原色，让系统相应地设置次要颜色，然后删除复选标记并微调各个颜色。</p>
 
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -135,15 +136,15 @@
 <tr><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-off.png" alt="appearance-glyph-off.png" /><br />灰度，微调：关闭</td><td style="width:15px;"></td><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-subpixel.png" alt="appearance-subpixel.png" /><br />LCD 亚像素，微调：关闭</td></tr>
 </table>
 <p>基于亚像素的抗锯齿技术给其对象添加了轻微的色彩亮度，但不是所有的人都能够忍受这种渲染。在 Haiku 中，你可以混合使用这两种方法，并且可以通过调节滑动条找出适合自己的配置方案。</p>
-<p>This is how hinting with <span class="menu">LCD subpixel</span> compares to Grayscale:</p>
+<p>这就是<span class="menu">LCD 亚像素</span> 组合渲染与灰度的比较：</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-on.png" alt="appearance-glyph-on.png" /><br />灰度，微调：开启</td><td style="width:15px;"></td><td style="text-align:center; font-style:italic"><img src="../images/prefs-images/appearance-glyph-on-subpixel.png" alt="appearance-glyph-on-subpixel.png" /><br />LCD 亚像素，微调：开启</td></tr>
 </table>
 <p><br /></p>
 <p>在本面板底部有两个按钮：</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
-<tr><td><span class="button">Defaults</span></td><td> </td><td>重置所有设置未默认值。</td></tr>
-<tr><td><span class="button">取消</span></td><td> </td><td>取消设置，恢复到打开外观首选项前的设置状态。</td></tr>
+<tr><td><span class="button">默认</span></td><td> </td><td>重置所有设置未默认值。</td></tr>
+<tr><td><span class="button">恢复</span></td><td> </td><td>取消设置，恢复到打开外观首选项前的设置状态。</td></tr>
 </table>
 
 </div>

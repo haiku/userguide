@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,6 +64,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <h2><img src="../../images/apps-images/textsearch-icon_64.png" alt="textsearch-icon_64.png" width="64" height="64" />TextSearch (Buscador de texto)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -77,6 +78,7 @@
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
 <p>Se introduce la cadena a buscar en la caja de texto de la parte superior y se pulsa <span class="key">RETURN</span> o se hace clic en <span class="button">Buscar</span> para comenzar. Si <span class="menu">Mostrar líneas</span> está marcado, las coincidencias son expandidas automáticamente para mostrar las líneas del fichero que contiene la cadena de búsqueda.</p>
+<p>By using the <span class="menu">File filter</span>, you can further limit the search to files with a certain name. "<tt>*</tt>" is used as wildcard, as examples "<tt>*Window.cpp</tt>" will only search in files ending in "Window.cpp", "<tt>*.h</tt>" only searches in header files.</p>
 
 <p>Sólo unas palabras acerca de ciertos elementos del menú que más allá de eso se explican por si mismos:</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
@@ -88,13 +90,16 @@
 <tr><td><span class="menu">Abrir selección</span></td><td></td><td><span class="key">ALT</span> <span class="key">O</span></td><td></td><td>Abre los archivos actualmente seleccionados con su aplicación designada (igual que darles doble clic). Si es un editor de texto el que lo soporta (como Pe), puede saltar a la línea exacta de la cadena de búsqueda encontrada.</td></tr>
 <tr><td><span class="menu">Mostrar archivos en Tracker</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>Abre en Tracker la ubicación de los archivos seleccionados actualmente.</td></tr>
 <tr><td class="onelinetop"><span class="menu">Copiar texto al portapapeles</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>Copia la selección actual al portapapeles.</td></tr>
+<tr><td colspan="5"><p>These actions are also available from a context menu when right-clicking a result or a selection of results.</p></td></tr>
 <tr><td colspan="5"><h3>Menú de configuración</h3></td></tr>
 <tr><td colspan="3" class="onelinetop"><span class="menu">Saltarse las carpetas que inician con un punto</span></td><td> </td><td>Este ajuste es útil cuando está trabajando en un ambiente estilo UNIX, donde normalmente los archivos administrativos se encuentran escondidos en "<tt>.carpetas/</tt>". Sistemas de control de versiones como SVN y CVS son ejemplos de aplicaciones que utilizan esta característica y son ampliamente usadas en Haiku.</td></tr>
 <tr><td colspan="3"><span class="menu">Expresiones regulares</span></td><td> </td><td>TextSearch utiliza la herramienta de línea de comandos <span class="cli">grep</span>. Para ello, los caracteres especiales como <tt>'"*\\$?!</tt> y los espacios deben ser definidos con un caracter de escape con un <tt>\</tt>. Activar esta opción supone tener que hacer esta operación por sí mismo, pero a cambio otorga la potencia de las <a href="https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular" class="external free" title="Wikipedia: Expresiones regulares" rel="nofollow">expresiones regulares</a>.</td></tr>
 <tr><td colspan="3"><span class="menu">Sólo archivos de texto</span></td><td> </td><td>Actualmente TextSearch sólo es útil para encontrar cadenas de texto en archivos de texto sin formato. Si desactiva esta opción, realizará la búsqueda en cualquier tipo de archivo de cualquier manera.</td></tr>
 <tr><td colspan="3"><span class="menu">Abrir archivos en el editor de código</span></td><td> </td><td>Hace que los archivos se abran en el editor de código preferido (que tenga asignado text/x-source-code). De otro modo, el archivo se abrirá con la aplicación que tenga asignada ese tipo de archivo. Es útil, por ejemplo, para editar archivos HTML que normalmente se abrirían en el navegador web.</td></tr>
 <tr><td colspan="5"><h3>Menú de historial</h3></td></tr>
-<tr><td colspan="4"></td><td>Contiene las cadenas recientes de búsquedas.</td></tr>
+<tr><td colspan="4"></td><td>Contiene las búsquedas recientes. <span class="menu">Limpiar historial</span> vacía la lista de términos de búsqueda pasados.
+<div class="box-info">Es posible moverse hacia arriba y abajo al presionar las teclas <span class="key">↑</span> y <span class="key">↓</span> mientras el cursor esté en el campo del texto de búsqueda.</div> 
+</td></tr>
 <tr><td colspan="5"><h3>Menú de codificaciones</h3></td></tr>
 <tr><td colspan="4"></td><td>Le permite escoger diferentes codificaciones de caracteres de ser necesario.</td></tr>
 </table>

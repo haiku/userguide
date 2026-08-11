@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,6 +64,7 @@
 <tr class="heading"><td>Index</td></tr>
 <tr class="index"><td>
 	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
 	<a href="#tray">The Tray</a><br />
 	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
@@ -73,11 +74,11 @@
 
 <p>The Deskbar is the little panel that by default is located in the upper right corner of the screen. It's Haiku's version of Windows' taskbar with its Start button. It contains the Deskbar menu from where you can start applications and preferences, a tray with a clock and other tools below that and a list of currently running programs at the bottom.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position.<br />
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
 You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>By gripping the other knobbly widget of the tray, you can change the width of the Deskbar by dragging the mouse left or right:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -96,12 +97,13 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <li><p><b>Applications, Demos, Deskbar applets, Preferences</b> - List of installed applications, demos, applets and preferences.<br />You can add links to other programs (or any folder, document, query etc.) by putting them into <span class="path">~/config/settings/deskbar/menu/</span>.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Deskbar Preferences</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>The Deskbar preference panel is divided into three sections.</p>
 
-<h4>Applications</h4>
+<h3>Applications</h3>
 <p>The following settings don't apply to your installed applications, but to the behavior and visuals of the list of running applications.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Sort running applications</span></td><td> </td><td>Sorts the list of running programs alphabetically.</td></tr>
@@ -112,7 +114,7 @@ You can also fold it into a more compact layout by drag &amp; dropping the knobb
 <tr><td><span class="menu">Icon size</span></td><td> </td><td>Adjusts the icon size of running applications. </td></tr>
 </table>
 
-<h4>Menu</h4>
+<h3>Menu</h3>
 <p>While the first couple of menu items of the Deskbar are fixed, you can customize the ones below <span class="menu">Shutdown…</span>.<br />
 Here you can set the number of recent documents, folders and applications that are shown in their menu in the Deskbar, or if you want to see them at all.<br />
 The button <span class="button">Edit in Tracker...</span> opens the folder <span class="path">~/config/settings/deskbar/menu/</span>. In it you'll find the files and folders that appear in the Deskbar, by default these are <span class="menu">Applications</span>, <span class="menu">Demos</span>, <span class="menu">Deskbar applets</span>, and <span class="menu">Preferences</span>.<br />
@@ -122,8 +124,9 @@ You can delete or add entries like links to applications, documents or even quer
 You create a link of the <span class="path">menu</span> folder in <span class="path">~/config/settings/deskbar/</span> and rename to <span class="path">menu_entries</span>. From Terminal that is achieved with:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Window</h4>
+<h3>Window</h3>
 <p>Finally, the preferences for the Deskbar window.</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Always on top</span></td><td> </td><td>The Deskbar always stays above all other windows.</td></tr>
 <tr><td><span class="menu">Auto-raise</span></td><td> </td><td>The Deskbar pops to the front when the mouse pointer touches where the Deskbar meets the screen edge, and is lowered when it leaves the Deskbar area.</td></tr>

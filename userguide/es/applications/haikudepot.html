@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2013-2021 Haiku. All rights reserved.
+ * Copyright 2013-2025  Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -63,17 +63,18 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traducción de esta página aún no está completa. Hasta que lo esté, las partes sin traducir se muestran en el original en inglés.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Índice</td></tr>
-<tr class="index"><td><a href="#filter">Filtro</a><br />
-                <a href="#list">Lista</a><br />
-                <a href="#info">Área informativa</a><br />
-                <a href="#menu">Menús HaikuDepot y Mostrar</a><br />
-                <a href="#account">Creación de una cuenta de usuario</a><br />
-                <a href="#rating">Valoración y comentarios</a><br />
-                <a href="#logs">Registros de diagnóstico</a><br />
-                <a href="#tips">Sugerencias</a><br />
+<tr class="index"><td><a href="#filter">The Filter</a><br />
+                <a href="#list">The List</a><br />
+                <a href="#info">The Info Area</a><br />
+                <a href="#menu">The Menus</a><br />
+                <a href="#account">Creating a User Account</a><br />
+                <a href="#rating">Rating and Commenting</a><br />
+                <a href="#logs">Diagnostic Logs</a><br />
+                <a href="#tips">Tips</a><br />
 </td></tr>
 </table>
 
@@ -89,6 +90,11 @@
 <img src="../images/apps-images/haikudepot.png" alt="haikudepot.png" />
 <p>La segunda pestaña muestra <span class="menu">todos los paquetes</span>, que cambia la vista a una con íconos de menor tamaño y se muestra más información, organizada en columnas:</p>
 <img src="../images/apps-images/haikudepot_all.png" alt="haikudepot.png" />
+<p>Los paquetes en ambas pestañas pueden mostrar dos pequeños iconos a continuación de su nombre:</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="2">
+<tr><td><img src="../../images/apps-images/haikudepot_installed.svg" width="20pt" /></td><td style="with:20px"></td><td>indica que el paquete está instalado.</td></tr>
+<tr><td><img src="../../images/apps-images/haikudepot_native.svg" width="20pt" /></td><td style="with:20px"></td><td>indica que es un paquete diseñado para Haiku y que no es un software portado de otra plataforma.</td></tr>
+</table>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="filter" name="filter">Filtro</a></h2>
@@ -96,13 +102,13 @@
 <ul>
 <li><p>El menú emergente <span class="menu">Categoría</span> le permite limitar la lista a categorias individuales como "<i>Audio</i>" o "<i>Juegos</i>".</p></li>
 <li><p>El campo de texto de los <span class="menu">Términos de búsqueda</span> filtra la lista a sólo esos paquetes que tienen todas los términos ingresados (separados por espacios) en su nombre o descripción.</p></li>
-<li><p>El menú <span class="menu">Repositorios</span> de la barra de menú determina cuales repositorios serán consultados. Los paquetes "<i>locales</i>" son aquellos que fueron instalados desde lugares diferentes a un repositorio en línea; tal vez desde una unidad USB o descargados de algún sitio web o un paquete que Ud. mismo creó.</p></li>
 </ul>
+<p>There are more ways to filter the list of packages in the <span class="menu">Repository</span> and <span class="menu">Show</span> menus described further down.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="list" name="list">Lista</a></h2>
 <p>Al igual que cualquier ventana de Tracker, puede elegir desde un menú contextual cuales columnas mostrar haciendo clic con el botón derecho en el encabezado de la columna. Un clic izquierdo ordenará la lista de acuerdo a esa columna. Desde luego, puede reordenar las columnas arrastrándolas a una nueva posición.</p>
-<p>La columna <span class="menu">Fecha</span> muestra cuándo un paquete fue añadido o actualizado. Ordene por esta columna para ver en la parte superior de la lista qué hay de nuevo o qué se ha actualizado.</p>
+<p>The <span class="menu">Date</span> column shows when a package was added or updated. Sort by this column to see what's new or updated at the top of the list.</p>
 <p>La columna <span class="menu">Estado</span> de un paquete puede presentar uno de varios estados:</p>
 <ul>
 <li><p><span class="menu">Activo</span>: El paquete está instalado actualmente y listo para ser usado.</p></li>
@@ -135,12 +141,22 @@ En el medio hay comentarios de usuarios con su seudónimo, cuantas estrellas le 
 </ul>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="menu" name="menu">Menús HaikuDepot y Mostrar</a></h2>
+<a id="menu" name="menu">The Menus</a></h2>
+<h3>HaikuDepot</h3>
 <p>En el menú de <span class="menu">HaikuDepot</span> en la parte superior de la ventana, encontrará un elemento para <span class="menu">Actualizar repositorios</span>. Esta opción descargará una lista actualizada de todos los paquetes disponibles en los repositorios.<br />
 El segundo elemento es <span class="menu">Administrar repositorios...</span>. Abre las preferencias de <a href="../preferences/repositories.html">Repositorios</a>, para añadir, quitar, activar o desactivar repositorios.<br />
 <span class="menu">Buscar actualizaciones...</span> abre <a href="../apps/softwareupdater.html">SoftwareUpdater</a> para buscar e instalar actualizaciones de los paquetes.
 <span class="menu">Configuración...</span> abre una ventana que actualmente cuenta con una sola opción: <span class="menu">Compartir datos de uso anónimos con HaikuDepotServer</span>. Los datos se usan, por ejemplo, para aumentar la cuenta de cuán seguido se visualiza e instala un paquete, lo que luego ayuda a determinar si un paquete es promovido a la lista de "Paquetes destacados".</p>
-<p>Bajo <span class="menu">Mostrar</span> puede escoger ver los display <span class="menu">Paquetes de desarrollo</span> y <span class="menu">Paquetes fuente</span> en la lista de paquetes. Para el usuario normal estos no son de ningún interés y solamente sobrecargaría la lista. No obstante, son importantes para quienes necesitan las bibliotecas, encabezados, etc. de un paquete para desarrollar y compilar programas que dependan de ellos.</p>
+<h3>Repositories</h3>
+<p>The <span class="menu">Repositories</span> menu of the menu bar determines which repos are being queried. "<i>Local</i>" packages are the ones that were installed from somewhere other than an online repo; maybe from a USB thumb drive or downloaded from some website or a package that you've built yourself.</p>
+<h3>Show</h3>
+<p>By picking one of three kinds of packages in the <span class="menu">Show</span> menu, you can limit the scope of packages to the ones you're actually interested in:</p>
+<ul><li><p><span class="menu">Desktop and non-desktop packages</span> - Shows every kind of packages, i.e. everything from applications to libraries needed by developers.</p></li>
+<li><p><span class="menu">Desktop packages only</span> - Shows only 'real' applications; the kind you'll find in the Deskbar, for example.</p></li>
+<li><p><span class="menu">Native desktop packages only</span> - Same as above, but limited to Haiku 'native' applications. Those are created especially for Haiku and were not ported from another system, which normally means coming with lots of heavy dependencies like KDE or Qt frameworks.</p></li>
+</ul>
+ 
+<p>Furthermore, you can choose to also display <span class="menu">Develop packages</span> and <span class="menu">Source packages</span> in the packages list. For the normal user those are of no interest and would only clutter the list. They are important, however, for people who need the libraries, headers etc. of a package to develop and compile programs depending on them.</p>
 <p>De mayor interés son las opciones para sólo mostrar <span class="menu">Paquetes disponibles</span> y <span class="menu">Paquetes instalados</span>.</p>
 
 <h2><a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>

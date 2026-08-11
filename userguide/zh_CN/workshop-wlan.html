@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2012-2022, Haiku, Inc. All rights reserved.
+ * Copyright 2012-2025, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -12,6 +12,7 @@
  * Translators:
  *		Humdinger
  *		Pengphei Han
+ *		yjwork
  *
 -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -69,23 +70,24 @@
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>索引</td></tr>
 <tr class="index"><td>
-	<a href="#gui">Joining a wireless network</a><br />
-	<a href="#commandline">Joining from the command line</a><br />
-	<a href="#firmware">Getting supported hardware to work</a>
-</td></tr>
+	<a href="#gui">无线网络连接</a><br />
+	<a href="#commandline">命令行连接</a><br />
+	<a href="#firmware">添加支持硬件</a><br /></td></tr>
 </table>
 
 <h1>操作练习：无线网络</h1>
 
 <p>Getting the networking to run is essential in today's need for permanent internet connection. As keeping up to date with all the different and ever changing hardware and drivers is quite impossible for a small project, Haiku relies on a compatibility layer to make use of <a href="http://www.freebsd.org">FreeBSD</a> and some <a href="https://www.openbsd.org/">OpenBSD</a> networking drivers. This ensures a massive amount of supported hardware, though probably not 100% of what's out there.</p>
 
+<div class="box-warning"><p _translation_id="7026"><b>Wi-Fi Support</b><br />Inline with our use of BSD wireless drivers, Haiku currently only supports Wi-Fi 6 or below access points.  WPA3 secured networks are not yet supported.</p></div>
+
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="gui" name="gui">无线网络连接</a></h2>
-<p>You can use the Desktop applet <a href="desktop-applets/networkstatus.html">NetworkStatus</a> to connect to a specific network.</p>
+<p>您能够使用桌面小工具 <a href="desktop-applets/networkstatus.html">网络状态</a>连接到指定网络。</p>
 <p>右键点击桌面栏图标，然后从菜单中选择网络公开名称（也就是其广播的“SSID”）。</p>
 <img src="images/workshop-wlan-images/join-network.png" alt="join-network.png" />
-<p>A window opens where you enter the type of authentication (probably WPA/WPA2, WEP is not a secure encryption anymore!) and the password for that wireless network. Tick the checkbox below to <span class="menu">Store this configuration</span> so you don't have to enter all the information again next time you connect to this network.<br />
+<p>A window opens where you enter the type of authentication (probably WPA/WPA2, WEP is not a secure encryption anymore!) and the password for that wireless network. The button with the "eye" symbol shows the password as plain text, handy to check for typos. Tick the checkbox below to <span class="menu">Store this configuration</span> so you don't have to enter all the information again next time you connect to this network.<br />
 Click <span class="button">OK</span> to start the login process.<br /> Depending on your hardware and network configuration this may take a while. You'll be kept informed of the progress by notifications:</p>
 <img src="images/workshop-wlan-images/join-status.gif" alt="join-network.gif" />
 <p>当其状态显示为 "Ready" 时，桌面栏中的网络状态显示为圆浅绿色，网络连接也已建立。。如果通知显示为 "No link" ，网络状态图标将会显示为三角黄色，这也就意味着网络连接出现错误，有可能是密码错误。</p>
@@ -108,9 +110,9 @@ ArcorInternet123                 00:20:12:a4:29:e1        15  WPA</pre>
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="firmware" name="firmware">添加支持硬件</a></h2>
-<p>All supported modern wireless hardware works out of the box and you don't have to download/install any additional firmware.</p>
+<p>所有支持的现代无线硬件都可以直接使用，无需下载或安装任何额外的固件。</p>
 
-<p>Only a few quite old chipsets (Intel 2100/2200/2225/2915, Broadcom 43xx, Marvell 88w8335) require binary firmware modules that Haiku cannot include due to licensing issues, though. To get these wireless cards to work, a simple script is included which will retrieve and install all of the needed proprietary bits for you.</p>
+<p>Only a few quite old chipsets (Intel 2100/2200/2225/2915, some Broadcom 43xx, Marvell 88w8335) require binary firmware modules that Haiku cannot include due to licensing issues, though. To get these wireless cards to work, a simple script is included which will retrieve and install all of the needed proprietary bits for you.</p>
 <p>打开终端，输入：</p>
 <pre class="terminal">install-wifi-firmwares.sh</pre>
 <p>接下来查看授权协议，然后接受协议并安装所有可用的固件文件。</p>

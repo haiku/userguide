@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2019, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Bu sayfanın çevrilmesi henüz tamamlanmamıştır. Tamamlanana kadar henüz bitirilmeyen kısımlar İngilizce metni kullanır.</div>
 
 <h2><img src="../../images/apps-images/drivesetup-icon_64.png" alt="drivesetup-icon_64.png" width="64" height="64" />Disk İzlencesi</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -86,7 +87,7 @@ Aşina olduğumuz sabit disk, CD sürücü veya USB bellek simgelerinin dışın
 <tr><td><img src="../../images/apps-images/drivesetup-icon_read-only.png" alt="drivesetup-icon_read-only.png" width="16" height="16" /></td><td> </td>
 <td>Saltokunur bağlanmış bir bölüm</td></tr>
 <tr><td><img src="../../images/apps-images/drivesetup-icon_virtual.png" alt="drivesetup-icon_virtual.png" width="16" height="16" /></td><td> </td>
-<td>Bağlanmış bir yansı dosyası (ayrıca bkz. <a href="./cli-apps.html">diskimage komutu</a>)</td></tr>
+<td>A mounted image file (see <a href="#diskimages">Disk images</a> below)</td></tr>
 </table>
 <p>Bağlandığında, renkli bir çubuk bölümün kullanılan alanını belirtir. Renk, bölüm türüne göre değişiklik gösterir:</p>
 <table summary="layout" border="0" cellspacing="2" cellpadding="4">
@@ -114,12 +115,22 @@ Aşina olduğumuz sabit disk, CD sürücü veya USB bellek simgelerinin dışın
 <p>Yeni oluşturulmuş bölümü kullanmadan önce onu bir dosya sistemi ile biçimlendirmeniz gerekir.</p>
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="initializing" name="formatting">Bir bölümü biçimlendirme</a></h2>
+<a id="formatting" name="formatting">Formatting a partition</a></h2>
 <p>Yalnızca bağlantısı kesilmiş bölümler <span class="menu">Bölüm | Biçimlendir</span> menüsünden bir dosya sistemi seçerek biçimlendirilebilir. <span class="menu">Be Dosya Sistemi</span> (BFS), bir Haiku önyükleme bölümü için zorunludur ve Haiku ile kullanılacak veri bölümleri için de kesinlikle önerilir. Yalnızca BFS ile biçimlendirilmiş bölümler sorgulanabilir ve Haiku'nun dosya öznitelikleri özelliklerini tam olarak destekler.</p>
 <img src="../images/apps-images/drivesetup-initialize.png" alt="drivesetup-initialize.png" />
 <p>Burada bölüm adını ve blok boyutunu ayarlayabilirsiniz. Blok boyutu, bir dosyanın en az kullanacağı alanın bayt türünden gösterimidir. Blok başına 2048 bayt önerilir; ancak özel gereksinimleriniz varsa istediğiniz başka bir değeri de girebilirsiniz.<br />
 Kullanacağınız veride sorgulama özelliklerini kullanmayacaksanız <span class="menu">Sorgu desteğini etkinleştir</span> onay kutusunu kaldırarak indeks için kullanılacak veriyi azaltabilirsiniz.</p>
 <div class="box-stop">Diski biçimlendirmek disk üzerindeki tüm veriyi yok eder!</div>
+<h2>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="diskimages" name="diskimages">Disk images</a></h2>
+<p>The menu <span class="menu">Disk image…</span> provides several actions related to image files of disks/partitions.</p>
+<table summary="layout" border="0" cellspacing="0" cellpadding="4">
+<tr><td class="onelinetop"><span class="menu">Un/Register disk image…</span></td><td width="20px"></td><td>Registering makes an image file available to the system; it appears as a regular volume you can mount, edit or copy files to/from it, format etc. See also the <a href="./cli-apps.html">diskimage command</a>.</td></tr>
+<tr><td><span class="menu">Save image…</span></td><td></td><td>Saves the currently selected partition as an image file. The resulting file will have the same size as the partition, so make sure the destination of the file has enough free space.</td></tr>
+<tr><td><span class="menu">Write image…</span></td><td></td><td>Lets you write an image file to the selected partition/volume.
+<div class="box-stop" _translation_id="6113">Writing an image will destroy all data on the partition/volume!</div></td></tr>
+</table>
 </div>
 </div>
 

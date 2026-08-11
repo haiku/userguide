@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2018-2022, Haiku. All rights reserved.
+ * Copyright 2018-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">La traduzion di cheste pagjine no je ancjemò finide. Spietant che lu sedi, pes parts che no son finidis, dopre la version origjinâl par Inglês.</div>
 
 <h2><img src="../../images/apps-images/softwareupdater-icon_64.png" alt="softwareupdater-icon_64.png" width="64" height="64" />SoftwareUpdater</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -71,12 +72,14 @@
 <p><br /></p>
 <p>SoftwareUpdater al controle in ducj i dipuesits atîfs (viôt <a href="../preferences/repositories.html">preferencis dai Dipuesits</a>) inzornaments pai pachets instalâts, includûts i inzornaments dal sisteme Haiku. Al discjarie e al instale i inzornaments disponibii intun colp sôl.</p>
 <img src="../images/apps-images/softwareupdater.png" alt="SoftwareUpdater's main window" />
-<p>Dopo che si lu à inviât, SoftwareUpdater al controle se a esistin inzornaments pai pachets e ju mostre intune  cu lis lôr gnovis versions e une curte descrizion. Tu puedis dîsi: <span class="menu">Mostre plui detais</span> par includi il non dal dipuesit par ogni pachet e mostrâ dutis dôs lis versions dai pachets, chê vecje e chê gnove.</p>
+<p>After launching, SoftwareUpdater checks for updates to packages and displays them in a list with their new version and a short description.</p>
 <p><span class="button">Inzorne cumò</span> al tacarà a discjariâ ducj i pachets e la lôr consecuente instalazion.</p>
 <p>In base ai pachets che a son stâts inzornâts, si varà di tornâ a inviâ Haiku par fâ in mût che si completi il procès di inzornament. Par ce che al rivuarde lis aplicazions, al baste dome tornâ a inviâlis, invezit lis modifichis a Haiku stes par deventâ efetivis, a podaressin vê bisugne che il sisteme si torni a inviâ.</p>
-<div class="box-info"><p>Ogni volte che i pachets a vegnin inzornâts, instalâts o disinstalâts (o cun SoftwareUpdater/HaikuDepot o tal Terminâl vie <tt>pkgman</tt>), al ven salvât un gnûf "stât" su <span class="path">/system/packages/administrative/</span>. Chest al rint pussibil inviâ il sisteme intun cualsisei stât precedent da lis <a href="../bootloader.html">Opzions di inviament</a>, rindint plui sempliç risolvi problemis che a puedin vignî fûr dal vê instalât/Inzornât un pachet che nol funzione in regule.</p>
-<p>Viodût che cheste cartele di "stât" e ten copiis dai pachets inzornâts/disinstalâts, cul lâ dal timp la cartele "administrative" e pues cressi in maniere significative. Fintremai che no varìn une funzion par une netisie automatiche, e je une buine idee chê di controlâ ogni tant la dimension de cartele "administrative" e gjavâ vie i stâts plui vielis, che cun plui probabilitât no tu varâs plui di inviâju.</p>
+<div class="box-info"><p>Every time packages are updated, installed or uninstalled (either with SoftwareUpdater/HaikuDepot or in Terminal via <tt>pkgman</tt>), a new "state" is saved at <span class="path">/system/packages/administrative/</span>. This makes it possible to boot into any past state from the <a href="../bootloader.html">Boot Options</a>, making it easy to solve issues that may arise from having installed/updated a package that doesn't work as expected.</p>
+<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time.</p>
 </div>
+<p>Under <span class="button">Settings…</span> you find an option to <span class="menu">Show more details</span> to include the name of the repository for each package and show both the old and new package versions.</p>
+<p>There's also a setting to limit the size of the above mentioned "administrative" folder. You can <span class="menu">Automatically clean up old install states</span> after every update to remove all states older than 30 days. The last 10 states are always preserved, even if they were older than 30 days.</p>
 <h2>
 <a id="downgrading" name="downgrading">Regredî a une revision precedente di Haiku</a></h2>
 <p>Al è râr ma al è pussibil che un inzornament a une ultime revision di Haiku ("hrev") al introdusedi un regression che ti da fastidi. Dal menù des opzions di inviament tu puedis cjamâ un stât precedent che al funzionave (Viôt <a href="../bootloader.html#troubleshooting">Il Boot Loader - Risoluzion dai problemis</a>). Cjate l'ultin stât funzionant e inviilu.</p>

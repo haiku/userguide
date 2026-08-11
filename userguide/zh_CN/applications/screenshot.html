@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -62,6 +62,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">本节的翻译还未完成。在未完成之前，所有的未完成部分都将使用英语原文。</div>
 
 <h2><img src="../../images/apps-images/screenshot-icon_64.png" alt="screenshot-icon_64.png" width="64" height="64" />屏幕截图</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -73,14 +74,28 @@
 <p><br /></p>
 <p>您可以通过启动屏幕截图软件或者按下 <span class="key">PRINT</span> 键来进行屏幕截图。</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>在屏幕截图面板中，您可以在全屏截图和窗口截图之间进行切换，然后决定是否要在截图中包括窗口的边界和鼠标指针。您也可以在屏幕截图之前加入时间延迟。</p>
+<p>To the right of the preview at the top, you can switch between different modes and options:<br />
+Either opt for the <span class="menu">Whole screen</span>, or just the <span class="menu">Active window</span> (provided there is one at the time you take the screenshot). If you just want to capture only a part of the screen, click <span class="button">Select area</span> under the preview (see below). Once selected, the <span class="menu">Select area</span> mode is enabled and you can now switch between <span class="menu">Whole screen</span>, <span class="menu">Active window</span>, and <span class="menu">Selected area</span>.</p>
+<p>Besides these modes, you can also decide to <span class="menu">Include window border</span> and <span class="menu">Include mouse pointer</span>.</p>
 <p>在下面，您可以对文件名，格式和截图的位置，在您按下 <span class="button">Save</span>时，这些设置将会被使用。除了可以将文件保存到本地磁盘外，您也可以使用 <span class="button">Copy to clipboard</span> 将截图直接复制到其他的程序，或者开始 <span class="button">New screenshot</span>。</p>
 <p>所有的设置在您下次进行屏幕截图的时候将会被记住，您需要激活下面的快捷键：</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>零延迟屏幕截图，并且打开屏幕截图面板。</td></tr>
 <tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">PRINT</span></td><td></td><td>安静的执行屏幕截图（不打开截图面板），但是使用最近的设置。</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">PRINT</span></td><td></td><td>使用最近的设置进行屏幕截图，但是不保存为文件，而是保存到剪切板。</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">PRINT</span></td><td></td><td>Takes a screenshot with zero delay and enters the Select area mode right away.</td></tr>
 </table>
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+Selecting an area</h3>
+<p>When you click <span class="button">Select area</span>, the window of the Screenshot app is hidden, and you'll see the whole screen slightly darkened.</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>You can now define a selection box that'll highlight the screenshot area. Done with the <i>left</i> mouse button, the area is applied as soon as you lift your finger from the button and the Screenshot window pops up again.</p>
+<p>If you create the selection box while holding <span class="key">SHIFT</span> or with the <i>right</i> mouse button, the box will have handles at the corners that'll let you resize the selection. You can also drag the selection box around.</p>
+<p>The selection is applied with a double-click or by pressing <span class="key">ENTER</span>.<br />
+<span class="key">ESC</span> cancels the selecting process.</p>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 终端屏幕截图</h2>
@@ -107,8 +122,11 @@ OPTIONS
                         [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
   -c, --clipboard       Copies the screenshot to the system clipboard without
                         showing the application window
+  -a, --area            Select an area of the screen to capture
 
-Note: OPTION -b, --border takes only effect when used with -w, --window
+Note:
+Option -b, --border takes only effect when used with -w, --window
+Option -a, --area does not take effect with -s, --silent or -c, --clipboard
 </pre>
 
 </div>

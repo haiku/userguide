@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2018-2022, Haiku. All rights reserved.
+ * Copyright 2018-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Tämän sivun kotoistaminen ei ole vielä täydellinen. Siihen asti keskeneräiset osat käyttävät englanninkielistä alkuperäistekstiä.</div>
 
 <h2><img src="../../images/apps-images/softwareupdater-icon_64.png" alt="softwareupdater-icon_64.png" width="64" height="64" />Ohjelmistopäivittäjä</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -71,12 +72,14 @@
 <p><br /></p>
 <p>Ohjelmistopäivittäjä tarkistaa kaikista aktiivisista tietovarastoista (katso <a href="../prefereces/repositories.html">Tietovarastoasetukset</a>) päivitykset asennetuille pakkauksille mukaan lukien järjestelmäpäivitykset itse Haikulle. Se lataa ja asentaa käytettävissä olevat päivitykset yhdellä kertaa.</p>
 <img src="../images/apps-images/softwareupdater.png" alt="SoftwareUpdater's main window" />
-<p>Käynnistämisen jälkeen Ohjelmistopäivittäjä tarkistaa pakkausten päivitykset ja näyttää ne luettelossa, jossa on niiden uusi versio ja lyhyt kuvaus. Voit valita valikosta <span class="menu">Näytä lisää yksityiskohtia</span> sisällyttämään jokaisen pakkauksen tietovaraston nimen ja näyttämään sekä vanhan että uuden pakkausversion.</p>
+<p>After launching, SoftwareUpdater checks for updates to packages and displays them in a list with their new version and a short description.</p>
 <p><span class="button">Päivitä nyt</span> käynnistää kaikkien pakkausten latauksen ja sitä seuraavan asennuksen.</p>
 <p>Päivitettävästä pakkauksesta riippuen sinun on ehkä käynnistettävä Haiku uudelleen päivitysprosessin saattamiseksi loppuun. Päivitetyt sovellukset tarvitsee tavallisesti vain käynnistää uudelleen kun taas muutokset itse Haikuun saattavat vaatia järjestelmän uudelleenkäynnistyksen, jotta muutokset astuvat voimaan.</p>
-<div class="box-info"><p>Joka kerta kun pakkauksia päivitetään, asennetaan tai poistetaan (joko Ohjelmistopäivittäjällä/HaikuVarastolla tai Pääteikkunassa komennolla <tt>pkgman</tt>), uusi "tila" tallennetaan osoitteeseen <span class="path">/system/packages/administrative/</span>. Tämä mahdollistaa käynnistämiseen kaikkiin aikaisempiin tiloihin <a href="../bootloader.html">Käynnistyvalinnoista</a>, mikä helpottaa ratkaisemaan pakkausten asentamisen/päivittämisen aiheuttamia pulmia silloin kun pakkaukset eivät toimi odotetulla tavalla.</p>
-<p>Koska nämä "tila"-kansiot pitävät kopioita päivitetyistä/poistetuista pakkauksista, "administrative"-kansio voi kasvaa ajan mittaa merkittävästi. Ellei tämä valinta ole automaattisesti siivottu, on hyvä tarkistaa "administrative"-kansion koko aika ajoin ja poistaa vanhimmat tilat, joita ei todennäköisesti enää tarvitse käynnistämiseen.</p>
+<div class="box-info"><p>Every time packages are updated, installed or uninstalled (either with SoftwareUpdater/HaikuDepot or in Terminal via <tt>pkgman</tt>), a new "state" is saved at <span class="path">/system/packages/administrative/</span>. This makes it possible to boot into any past state from the <a href="../bootloader.html">Boot Options</a>, making it easy to solve issues that may arise from having installed/updated a package that doesn't work as expected.</p>
+<p>As these "state" folders hold copies of the updated/uninstalled packages, the "administrative" folder can grow quite significantly over time.</p>
 </div>
+<p>Under <span class="button">Settings…</span> you find an option to <span class="menu">Show more details</span> to include the name of the repository for each package and show both the old and new package versions.</p>
+<p>There's also a setting to limit the size of the above mentioned "administrative" folder. You can <span class="menu">Automatically clean up old install states</span> after every update to remove all states older than 30 days. The last 10 states are always preserved, even if they were older than 30 days.</p>
 <h2>
 <a id="downgrading" name="downgrading">Päivitä aikaisempaan Haiku-versioon</a></h2>
 <p>On harvinaista, mutta mahdollista, että päivitys viimeisimpään Haiku-versioon ("hrev") esittelee taantumisen, jonka kanssa et halua elää. Käynnistysvalikoista voi ladata aikaisemman, toimivan tilan (katso <a href="../bootloader.html#troubleshooting">Käynnistyslataaja - Vianetsintä</a>). Etsi viimeinen toimiva tila ja käynnistä siihen.</p>

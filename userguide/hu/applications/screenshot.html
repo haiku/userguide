@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2009-2010, Haiku. All rights reserved.
+ * Copyright 2009-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,6 +61,7 @@
 
 <div id="content">
 <div>
+<div class="box-info">Az oldal fordítása még folyamatban van. Amíg tart a fordítás, addig a lefordítatlan részek angolul jelennek meg.</div>
 
 <h2><img src="../../images/apps-images/screenshot-icon_64.png" alt="screenshot-icon_64.png" width="64" height="64" />Képernyőkép (Screenshot)</h2>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
@@ -72,14 +73,28 @@
 <p><br /></p>
 <p>Ezzel a programmal képernyőképek készíthetőek, mely a <span class="key">PRINT</span> billentyűvel is előhívható.</p>
 <p><img id="sreenshot" src="../images/apps-images/screenshot.png" alt="screenshot.png" /></p>
-<p>Választhatunk, hogy a teljes képernyőről, vagy csak egy adott ablakról készítünk képet, az ablak kerete is szerepeljen a képen, vagy csak annak tartalma, illetve az is megadható, hogy az egér kurzorja is a képen legyen-e. Továbbá késleltetést is adhatunk meg másodpercben.</p>
+<p>To the right of the preview at the top, you can switch between different modes and options:<br />
+Either opt for the <span class="menu">Whole screen</span>, or just the <span class="menu">Active window</span> (provided there is one at the time you take the screenshot). If you just want to capture only a part of the screen, click <span class="button">Select area</span> under the preview (see below). Once selected, the <span class="menu">Select area</span> mode is enabled and you can now switch between <span class="menu">Whole screen</span>, <span class="menu">Active window</span>, and <span class="menu">Selected area</span>.</p>
+<p>Besides these modes, you can also decide to <span class="menu">Include window border</span> and <span class="menu">Include mouse pointer</span>.</p>
 <p>Ezen kívül a készítendő fájl nevét, formátumát és a mentésének helyét is ki tudjuk választani, ami a <span class="button">Mentés</span> gombra kattintáskor lényeges. A mentésen kívül a kép a vágólapra is helyezhető a <span class="button">Másolás a vágólapra</span> megnyomásakor, amit majd egy másik programba beilleszthetünk. Ezen kívül pedig <span class="button">Új képernyőkép</span> is készíthető.</p>
 <p>Minden beállítást megjegyez a program, így azokat fogja használni az alábbi kombinációk használatok is:</p>
 <table summary="shortcuts" border="0" cellspacing="0" cellpadding="4">
 <tr><td><span class="key">PRINT</span></td><td style="width:15px;"></td><td>Késleltetés nélkül készít egy képet, majd megnyitja a program ablakát.</td></tr>
 <tr><td class="onelinetop"><span class="key">SHIFT</span> <span class="key">PRINT</span></td><td></td><td>Képernyőképet készít "csendes módban" (az ablak nem jelenik meg), miközben figyelembe veszi a legutóbbi beállításokat.</td></tr>
 <tr><td><span class="key">CTRL</span> <span class="key">PRINT</span></td><td></td><td>Szintén "csendes módban" készíti el a képernyőképet, azonban a képet nem menti el, csak a vágólapra másolja azt.</td></tr>
+<tr><td><span class="key">OPT</span> <span class="key">PRINT</span></td><td></td><td>Takes a screenshot with zero delay and enters the Select area mode right away.</td></tr>
 </table>
+
+<h3>
+<a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
+Selecting an area</h3>
+<p>When you click <span class="button">Select area</span>, the window of the Screenshot app is hidden, and you'll see the whole screen slightly darkened.</p>
+<p><img id="sreenshot-area" src="../images/apps-images/screenshot-area.png" alt="screenshot-area.png" /></p>
+<p>You can now define a selection box that'll highlight the screenshot area. Done with the <i>left</i> mouse button, the area is applied as soon as you lift your finger from the button and the Screenshot window pops up again.</p>
+<p>If you create the selection box while holding <span class="key">SHIFT</span> or with the <i>right</i> mouse button, the box will have handles at the corners that'll let you resize the selection. You can also drag the selection box around.</p>
+<p>The selection is applied with a double-click or by pressing <span class="key">ENTER</span>.<br />
+<span class="key">ESC</span> cancels the selecting process.</p>
+
 <h2>
 <a href="#"><img src="../../images/up.png" style="border:none;float:right" alt="index" /></a>
 Képernyőkép készítése a Terminálból</h2>
@@ -88,23 +103,29 @@ A <span class="cli">screenshot --help</span> kiadásával kapunk egy kis segíts
 
 <pre class="terminal">~&gt; screenshot --help
 
-screenshot [OPCIÓK] [FÁJL]  Egy képet készít a jelenlegi képernyőről.
+screenshot [OPTIONS] [FILE]  Creates a bitmap of the current screen
 
-A FÁJL egy kiegészítő opció, mellyel megadható a fájl illetve az útvonal csendes módban.
-Egy, már létező fájl felülírása előtt kapunk majd egy figyelemztetést. Ha nincs FÁJL megadva,
-akkor a fájl egy alapértelmezett néven lesz eltárolva a Saját mappában.
+FILE is the optional output path / filename used in silent mode. An exisiting
+file with the same name will be overwritten without warning. If FILE is not
+given the screenshot will be saved to a file with the default filename in the
+user's home directory.
 
-OPCIÓK
-  -m, --mouse-pointer   Az egér-kurzor is megjelenik a képen.
-  -b, --border          Az ablak kerete is a képre kerül.
-  -w, --window          Csak a készítés pillanatában aktív ablakról készít képet.
-  -d, --delay=másodperc   Késleltetés megadása [másodpercben].
-  -s, --silent          A program ablakának megnyitása nélkül készíti el a képet (csendes mód).
-  -f, --format=formátum    Az elmentendő kép formátumát tudjuk megadni, mely lehet
+OPTIONS
+  -m, --mouse-pointer   Include the mouse pointer
+  -b, --border          Include the window border
+  -w, --window          Capture the active window instead of the entire screen
+  -d, --delay=seconds   Take screenshot after the specified delay [in seconds]
+  -s, --silent          Saves the screenshot without showing the application
+                        window
+  -f, --format=image    Give the image format you like to save as
                         [bmp], [gif], [jpg], [png], [ppm], [tga], [tif]
-  -c, --clipboard       Az elkészített képet a vágólapra másolja, de az ablakot nem jeleníti meg
+  -c, --clipboard       Copies the screenshot to the system clipboard without
+                        showing the application window
+  -a, --area            Select an area of the screen to capture
 
-Megjegyzés: a -b, --border opció csak akkor működik, ha a -w, --window is meg van adva.
+Note:
+Option -b, --border takes only effect when used with -w, --window
+Option -a, --area does not take effect with -s, --silent or -c, --clipboard
 </pre>
 
 </div>

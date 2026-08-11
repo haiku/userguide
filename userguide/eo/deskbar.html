@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2008-2021, Haiku. All rights reserved.
+ * Copyright 2008-2026, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -61,13 +61,15 @@
 
 <div id="content">
 <div>
+<div class="box-info">The translation of this page isn't yet complete. Until it is, unfinished parts use the English original.</div>
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>Enhavtabelo</td></tr>
 <tr class="index"><td>
-	<a href="#deskbar-menu">Menuo de la Laborstrio</a><br />
-	<a href="#tray">La pleto</a><br />
-	<a href="#list-of-apps">La listo de rulantaj programoj</a>
+	<a href="#deskbar-menu">The Deskbar Menu</a><br />
+	<a href="#deskbar-prefs">The Deskbar Preferences</a><br />
+	<a href="#tray">The Tray</a><br />
+	<a href="#list-of-apps">The list of running programs</a>
 </td></tr>
 </table>
 
@@ -75,11 +77,11 @@
 
 <p>La Laborstrio estas malgranda panelo kiu dekomence lokiĝas en supra dekstra angulo de ekrano. Tio estas versio de Hajko por la Taskostrio de Vindozo kun ĝia butono "Lanĉi". Ĝi entenas menuon de la Laborstrio per kiu vi povas lanĉi programojn kaj agordilojn, pleton kun horloĝo kaj aliaj rimedoj, kaj sube lokiĝas listo de nun rulantaj programoj.</p>
 <img src="images/deskbar-images/positions.png" alt="positions" />
-<p>Vi povas movi la Laborstrion en iun ajn angulon aŭ kiel lineo lokigi laŭlonge de suba aŭ supra ekrana limo. Kroĉu aspran areon ĉe maldekstra flanko de la pleto (rigardu sagetojn supre) kaj trenu &amp; ĵetu la Laborstrion sur deziratan lokon.<br />
-Ankaŭ vi povas faldi ĝin en kompaktan formon. Trenu la aspran areon sur menuon de la Laborstrio. Alto de panelo egalos al alto de titollangeto, do fenestroj de programoj en plenekrana reĝimo ne ŝirmos la Laborstrion kun la pleto kun horloĝo kaj piktogramoj.</p>
+<p>You can move the Deskbar to any corner or as a bar along the upper or lower border of the screen by gripping the knobbly area on one side of the tray (see arrows above) and drag &amp; drop it into the new position. The <a href="#deskbar-prefs">Deskbar preferences</a> provide another means to do the same.<br />
+You can also fold it into a more compact layout by drag &amp; dropping the knobbly area onto Deskbar's Leaf menu. Being only the height of a regular window tab, even windows that take up the whole screen won't obscure the Deskbar tray with its clock and icons.</p>
 <p>Kroĉante aliflankan aspran areon kaj trenante ĝin horizontale vi povas ŝanĝi vaston de la Laborstrio:</p>
 <img src="images/deskbar-images/width.png" alt="width" />
-<p>Pli vasta la Laborstrio permesas havi pli da piktogramoj en la pleto per sola ĉeno. Ankaŭ tio permesas eviti stumpigon de longaj nomoj de programoj, precipe se vi uzas grandajn piktoramojn.</p>
+<p>A wider Deskbar allows for more icons in the tray on a single row. It also truncates longer application names in the list of running programs less often, especially if you use larger icons. Like any other window, you can resize the Deskbar also by dragging with the right mouse button while holding <span class="key">ALT</span> and <span class="key">CTRL</span>.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -98,12 +100,13 @@ Ankaŭ vi povas faldi ĝin en kompaktan formon. Trenu la aspran areon sur menuon
 <li><p><b>Applications, Demos, Deskbar applets, Preferences</b> - Listoj de instalitaj programoj, demonstraĵoj, programetoj kaj agordiloj.<br />Vi povas aldoni ĉi tien ligilojn al aliaj programoj aŭ dosierujoj, dokumentoj, informpetoj k.t.p.metante ilin en dosierujon <span class="path">~/config/settings/deskbar/menu/</span>.</p></li>
 </ul>
 
-<h3>
-<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>Agordo de la Laborstrio</h3>
+<h2>
+<a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
+<a id="deskbar-prefs" name="deskbar-prefs">Deskbar Preferences</a></h2>
 <img src="images/deskbar-images/prefs-deskbar.png" alt="prefs-deskbar.png" />
 <p>La panelo de agordo de la Laborstrio havas tri fakojn.</p>
 
-<h4>Programoj</h4>
+<h3>Programoj</h3>
 <p>La menciitaj atributoj neniel influas instalitajn programojn, influas nur aspekton kaj konduton de la listo de rulantaj programoj.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td><span class="menu">Ordigi programojn laŭnome</span></td><td> </td><td>Ordigas la liston de rulantaj programoj alfabete.</td></tr>
@@ -114,7 +117,7 @@ Ankaŭ vi povas faldi ĝin en kompaktan formon. Trenu la aspran areon sur menuon
 <tr><td><span class="menu">Piktograma grando</span></td><td> </td><td>Atribuas piktograman grandon por rulantaj programoj.</td></tr>
 </table>
 
-<h4>Menuo</h4>
+<h3>Menuo</h3>
 <p>Dum komencaj elementoj de menuo estas fiksitaj, vi licas ĝustigi la elementojn post <span class="menu">Ĉesi laboron...</span>.<br />
 Tie vi povas atribui nombrojn de ĵusaj dokumentoj, dosierujoj kaj programoj montrataj en la submenuoj de la Laborstrio aŭ decidi ĉu vi volas vidi ilin entute.<br />
 La butono <span class="button">Redakti per la Spurilo...</span> malfermos la fenestron kun doserujo <span class="path">~/config/settings/deskbar/menu/</span>. Tie vi povas trovi dosierojn kaj dosierujojn, kiuj aperas en la menuo de la Laborstrio, dekomence tio estas <span class="menu">Applications</span> (Programoj), <span class="menu">Demos</span> (Demonstraĵoj), <span class="menu">Deskbar applets</span> (Kromprogramoj), kaj <span class="menu">Preferences</span> (Agordiloj).<br />
@@ -124,8 +127,9 @@ Vi povas forigi la elementojn aŭ aldoni ligilojn al programoj aŭ dokumentoj, a
 Krei ligilon al dosierujoj <span class="path">menu</span> en la dosierujoj <span class="path">~/config/settings/deskbar/</span> kaj renomigi ĝin en <span class="path">menu_entries</span>. Per la Terminalo vi povas fari tion per komando:</p>
 <pre class="terminal">ln -s ~/config/settings/deskbar/menu ~/config/settings/deskbar/menu_entries</pre></div>
 
-<h4>Fenestro</h4>
+<h3>Fenestro</h3>
 <p>Finfine, la agordo por fenestro de la Laborstrio.</p>
+<p>You can choose another position for the Deskbar by dragging the small black rectangle from the default at the top right to any other corner or alongside the top or bottom screen edge.</p>
 <table summary="layout" border="0" cellpadding="2" cellspacing="0">
 <tr><td class="onelinetop"><span class="menu">Ĉiam videbla</span></td><td> </td><td>La Laborstrio ĉiam estas antaŭ ĉiuj aliaj fenestroj.</td></tr>
 <tr><td><span class="menu">Aŭtomate antaŭigi</span></td><td> </td><td>La Laborstrio antaŭiĝas se musa montrilo tuŝos ĝin kaj dronas kiam musa montrilo lasos areon de la Laborstrio.</td></tr>

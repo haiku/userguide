@@ -10,6 +10,7 @@
  * Authors:
  *		Humdinger <humdingerb@gmail.com>
  * Translators:
+ *		Jorma Karvonen
  *		Victor Widell
  *
 -->
@@ -65,7 +66,8 @@
 
 <h1>Filesystem layout</h1>
 
-<p>Haiku's filesystem layout is quite transparent, trying to always use non-cryptic names for files and folders, that don't leave the user guessing. Files and folders that are important for the system to function properly, are protected from accidental tempering by showing one of these alerts:</p>
+<p>Haikus filsystemlayout är relativt tydlig, försöker alltid använda icke-kryptiska namn för filer och mappar, som inte lämnar användaren rådösa. Fil och mappenamn som är viktiga för systemets funktionshälsa, skyddas från oavsiktlig korruption genom att visa en av 
+dessa varningar:</p>
 <img src="images/filesystem-layout-images/achtung-user.png" alt="achtung-user.png" /> 
 <img src="images/filesystem-layout-images/achtung-system.png" alt="achtung-system.png" />
 <p>The second alert pops up if you try to rename or delete something in the system hierarchy. Here, the "<span class="button">Rename</span>" button will only become clickable when you're holding down the <span class="key">SHIFT</span> key.</p>
@@ -74,13 +76,15 @@
 <tr><td><span class="path">/boot/system/</span></td><td> </td><td>Contains system files and applications/packages shared by all users.</td></tr>
 <tr><td><span class="path">/boot/home/</span></td><td> </td><td>This is your personal folder where you keep your data and settings and the applications/packages that are <i>not</i> shared by all users.</td></tr>
 </table>
-<p>As long as Haiku isn't multi-user, this distinction between shared and not-shared applications/packages has no apparent effect, as there's only one user with one home folder. But since there will be support for more users than one eventually, it makes sense to learn the right way from the start.</p>
+<p>Som länge Haiku inte är multi-användar, har denna skillnad mellan delade och icke-delade programapplikationer/paket ingen tydlig effekt, eftersom det bara finns en användare med en hemmapp. Men eftersom det med tiden kommer att finnas stöd för flera användare 
+än en, är det rimligt att lär sig rätt sätt från början.</p>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
 <a id="system" name="system">The system folder - <span class="path">/boot/system/</span></a></h2>
-<p>Under Haiku's predecessor BeOS, this folder was named <span class="path">/boot/beos/</span>. You may still find it in some older documentation (e.g. in the original BeBook).<br />
-Most of the folders inside <span class="path">/boot/system/</span> are read-only, which is sensible as they contain the files necessary for Haiku to function correctly and therefore have to be safe from (accidental) alteration. To indicate the write-protection of a folder, its Tracker window has a gray background. The only user-writable folders are:</p>
+<p>Under Haikus företrädare BeOS var denna mapp namngetyckt <span class="path">/boot/beos/</span>. Du kan fortfarande hitta den i några äldre dokumentation (t.ex. i det ursprungliga BeBook).<br />
+Många av mapparna inuti <span class="path">/boot/system/</span> är läseskydda, vilket är rimligt eftersom de innehåller filer som krävs för att Haiku ska fungera rätt och därför måste vara säkra från (olycklig) ändringar. För att indikera skyddet av en mapp med ett 
+läs- och skrivskydd, har Tracker-fönster en grå bakgrund färg. De enda mappar som är skrivbara är:</p>
 <table summary="layout" border="0" cellspacing="0" cellpadding="2">
 <tr><td><span class="path">/boot/system/cache/</span></td><td> </td><td>Contains cached files and the temporary folder linked to <span class="path">/tmp/</span>.</td></tr>
 <tr><td class="onelinetop"><span class="path">/boot/system/non-packaged/</span></td><td> </td><td>Contains a hierarchy for files that aren't part of a .hpkg (probably from old BeOS archives).</td></tr>
@@ -100,7 +104,7 @@ Files that you'd like to share with other users in a future multi-user environme
 <tr><td><span class="path">~/Desktop/</span></td><td style="width:10px;"> </td>
 <td>Holds the files of your desktop. Double-clicking won't open it, as it is already always visible. When your files happen to be obscured by open windows, just switch quickly to another <a href="workspaces.html">Workspace</a>. Of course, <a href="tracker.html#drill-down">drilling</a> down by right-clicking is also possible.</td></tr>
 <tr><td><span class="path">~/mail/</span></td><td style="width:10px;"> </td>
-<td>This is the default location for your mails.</td></tr>
+<td>Denna är standardplatsen för dina mejl.</td></tr>
 <tr><td><span class="path">~/people/</span></td><td style="width:10px;"> </td>
 <td>This is the default location for you contact files, see <a href="applications/people.html">People</a>.</td></tr>
 <tr><td><span class="path">~/queries/</span></td><td style="width:10px;"> </td>

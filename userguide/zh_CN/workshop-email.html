@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2011-2023, Haiku, Inc. All rights reserved.
+ * Copyright 2011-2026, Haiku, Inc. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -64,15 +64,16 @@
 
 <div id="content">
 <div>
+<div class="box-info">本节的翻译还未完成。在未完成之前，所有的未完成部分都将使用英语原文。</div>
 
 
 <table class="index" id="index" summary="index">
 <tr class="heading"><td>索引</td></tr>
 <tr class="index"><td>
-	<a href="#mailsystem">Haiku 邮件系统</a><br />
-	<a href="#status">自定义状态</a><br />
-	<a href="#queries">使用查询</a><br />
-	<a href="#tips">更多帮助</a>
+	<a href="#mailsystem">Haiku's mail system</a><br />
+	<a href="#labels">Using labels</a><br />
+	<a href="#queries">Using queries</a><br />
+	<a href="#tips">More tips</a>
 </td></tr>
 </table>
 
@@ -103,15 +104,18 @@
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
-<a id="status" name="status">自定义状态</a></h2>
+<a id="labels" name="labels">Using labels</a></h2>
 <p>在您检查自己的新邮件时，您可能希望之后在仔细的进行阅读。您可以使用电子邮件菜单的<span class="menu">关闭且保留为新邮件</span> ，让它们仍然保留在您的 “<i>新邮件</i>” 查询中，以这种方式让任务保留起来。</p>
 <p>当然另一种方式是撰写回复并保存为草稿。但是如果您不希望编写回复，而只是留待以后再次阅读，这样就不大方便。</p>
-<img src="images/workshop-email-images/status.png" alt="status.png" /> 
-<p>您最好使用 <span class="menu">关闭 | 标记为...</span> 来创建一个新状态，为您的邮件分类。比如，您可以为其命名为"<i>待阅</i>"，在您空闲的时候再查询该状态的邮件，阅读即可。<br />
-
-或者，你可以为指定项目使用不同状态。例如，我创建了 "<i>HUG</i>"（表示 "Haiku user guide"，即 Haiku 用户指南）状态，然后在其下放置所有可能会影响用户指南内容的邮件，如有关代码更改提醒，新功能引入，或者任何我觉得能够增强用户指南的提交邮件。<br />
-但是，请务必保证状态名称的简洁。最好能够完整显示在文件浏览器的 “状态” 栏宽度内。</p>
-<p>您不一定要使用 <span class="app">电子邮箱</span> 程序打开邮件进行状态设置。您也可以选中某些邮件文件，然后使用文件浏览器的 <span class="app">标记为已读 </span> 或 <span class="app">标记为...</span> 附加组件来一次性设置它们的状态。</p>
+<img src="images/workshop-email-images/labels.png" alt="labels.png" /> 
+<p>Better use <span class="menu">Set label</span> to create a new label with <span class="menu">Label as…</span> or choose an existing label to categorize your mail. For example, you could call the label "<i>Later</i>", and then query for that when you find more time.<br />
+Or you use different labels for specific projects. For example, I created a label "<i>HUG</i>" (for "Haiku user guide") under which I collect every mail that may influence the contents of the user guide, like commit messages about code changes that alter or introduce some feature or anything else I feel could improve the user guide.<br />
+In any case, try to keep the label name short. That way it always fits in a normally wide "Label" column in Tracker.</p>
+<p>Once you've dealt with the email, you can use <span class="menu">Remove label</span> to clear the email's label attribute.</p>
+<p>Labels are saved in <span class="path">~/config/settings/Mail/labels</span>, which is opened when you choose <span class="menu">Manage labels…</span>. Here you can add, delete or rename your labels. Conveniently, each label file is also a query, meaning you can doubleclick it to start a query for emails with that label. Handy to check first before deleting a label that you think you don't need anymore.</p>
+<p>You don't have to open an email with the <span class="app">Mail</span> application to set its label. With the Tracker add-ons <span class="app">Label as… </span> you can select some email files and set or remove their label in one go.</p>
+<div class="box-info">BeOS - and Haiku for a long time - misused the email status attribute <tt>MAIL:status</tt> for labeling mails. If you used such custom statuses, it's recommended you migrate them to the label attribute <tt>MAIL:label</tt>.
+</div>
 
 <h2>
 <a href="#"><img src="../images/up.png" style="border:none;float:right" alt="index" /></a>
@@ -119,13 +123,14 @@
 <p>当然，您指定目录储存邮件，您打开这个目录，里面就是您所有的邮件。时间久了，这个目录难免会变得拥挤不堪，由于有上千个文件，并且它们属性需要解析和分类，其中全部内容的显示需要很长的时间。并且，通常您并不关心两年前有关尼日利亚和它们遗留问题的古老邮件...</p>
 <div class="box-info">在获取目录时，大部分时间都花费在从磁盘读入文件，正确排序之后显示在窗口。如果您确实需要打开具有大量文件的目录，您可以将文件浏览器窗口隐藏来缩短等待时间，例如，将其最小化，或者切换到其他工作空间。您可以查看 <a href="desktop-applets/processcontroller.html">进程管理器</a> 获取其对处理器的占用情况。</div>
 <p><a href="queries.html">查询</a>，大救星！</p>
-<p>使用查询，您可以浏览查看邮件。实际上，桌面栏上的电子邮箱图标就是用了查询。</p>
+<p>By using queries, you can narrow down the view of your mails. Actually, the mailbox icon in the Deskbar uses queries. Right-click the icon to open its context menu:</p>
 <img src="images/workshop-email-images/daemon-in-deskbar.png" alt="daemon-in-deskbar.png" /> 
 <p><span class="menu">打开草稿</span> 就是对 “<i>草稿</i>” 状态的查询，也就是您在使用 <span class="app">电子邮箱</span> 保存邮件时所设置的状态。</p>
 <p><span class="menu">打开收件箱</span> 和 <span class="menu">打开邮件目录</span> 都是常规目录的链接（在我看来，并没有很大用处）。</p>
 <p><span class="menu"># 新消息</span> 子菜单由对状态为 "<i>新邮件</i>" 的邮件的一次查询实现。（当然，也使用了同样的查询来修改邮箱图标上的邮件数量）。</p>
 
-<p>您可以在上述菜单中加入自己的查询（如目录、程序和脚本等）中，也就是把它们或者它们的链接放入目录 <span class="path">~/config/settings/Mail/Menu Links</span> 。</p>
+<p>You can add your own queries (or folders, applications, scripts etc.) to that context menu too, by putting them or links to them into <span class="path">~/config/settings/Mail/Menu Links</span>. In the screenshot above, for example, the label folder <span class="path">~/config/settings/Mail/labels</span> was linked there, to have quick access to labeled emails from the the mailbox icon of the Deskbar.</p>
+
 <div class="box-info"><span class="path">~/config/settings/Mail/mailbox</span> 查询比较特殊：左键单击桌面栏中邮箱图标时，它将被执行。如果您想修改它的行为，您可以将其替换为其他文件（或者文件链接），并命名为 “<i>mailbox</i> ”。它并不一定要是一个查询，比如查询目录的链接，脚本或者其他程序都能够胜任。
 </div>
 
@@ -137,7 +142,7 @@
 <tr align="center"><td><img src="images/workshop-email-images/query-1.png" alt="query-1.png" /></td>
 <td><img src="images/workshop-email-images/query-2.png" alt="query-2.png" /></td></tr>
 
-<tr align="center"><td>查询具有自定义状态 "<i>Later</i> " 的所有邮件。</td>
+<tr align="center"><td>This finds all mails with the label "<i>Later</i>".</td>
 <td>查询过去两天的所有邮件。</td></tr>
 
 <tr align="center"><td><img src="images/workshop-email-images/query-3.png" alt="query-3.png" /></td>
@@ -154,7 +159,8 @@
 <li><p>如果您没有将查询保存为 "<i>Query</i>" 而是 "<i>Query template</i>"，那么使用它并不会显示结果窗口，而是 查询... 窗口。 通过这种方式，你可以轻松地修改搜索邮件的主题和发送者的字符。比如将时间 "<i>2 天</i>" 限制在 "<i>3 天</i>"。</p></li>
 <li><p>在 <a href="tracker.html#tracker-preferences">文件浏览器首选项</a> 中激活 “实时过滤” 将允许您进一步的筛选查询结果。通常情况下，在使用实施过滤的情况下查询最近三天的邮件就已经足够了。
 这种方式最大的优点在于，您不需要准确的指定所要搜索的属性，因为在过滤时已经将所有显示属性包括在内。</p></li>
-<!-- <li _translation_id="4718"><p><a href="http://haikuware.com/directory/view-details/utilities/desktop-accessories/relatedmail">RelatedMail</a> is a nifty little application that will query for all mails with the same subject/sender/time-frame etc. of a dropped email. Kind of what the <span class="menu">Queries</span> menu in the <span class="app">Mail</span> app is supposed to do.</p></li> -->
+<li><p>When you're managing your emails via queries - and why wouldn't you? - you should configure a <i>DefaultQueryTemplate</i> that shows all the email attributes you normally want to see in a query result window, like <i>Status</i>, <i>From</i>, <i>Subject</i>, <i>When</i>.<br />
+First, you create a folder <span class="path">/boot/home/config/settings/Tracker/DefaultQueryTemplates/text_x-email</span>. Then do one of your usual email queries and change the displayed attributes and window size and position of the result window to your liking. Now simply <span class="menu">Copy layout</span> from its <span class="menu">Attributes</span> menu, open the newly created <span class="path">text_x-email</span> folder, and <span class="menu">Paste layout</span> there.</p></li>
 </ul>
 
 </div>
@@ -162,9 +168,9 @@
 
 <div class="nav">
 <div class="inner"><span>
- «  <a href="workshop-filetypes+attributes.html">Workshop: Attributes</a> 
+ «  <a href="workshop-filetypes+attributes.html">操作练习：属性</a> 
 ::  <a href="contents.html" class="uplink">内容</a> 
-::  <a href="workshop-wlan.html">Workshop: Wlan</a>  »
+::  <a href="workshop-wlan.html">操作联系: Wlan</a>  »
 </span></div>
 </div>
 

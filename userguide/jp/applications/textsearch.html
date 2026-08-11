@@ -4,7 +4,7 @@
 <head>
 <!-- 
  *
- * Copyright 2010-2019, Haiku. All rights reserved.
+ * Copyright 2010-2025, Haiku. All rights reserved.
  * Distributed under the terms of the MIT License.
  *
  * Authors:
@@ -75,6 +75,8 @@
 <img src="../images/apps-images/textsearch.png" alt="textsearch.png" />
 
 <p>上のテキストボックスに検索する文字列を入力し、<span class="key">RETURN</span> を押すか、<span class="button">検索開始 (Search)</span> をクリックして開始します。<span class="menu">行を表示 (Show lines)</span> がチェックされていた場合、検索結果は検索内容が入っているファイルの行を表示するため自動的に拡大されます。</p>
+<p><span class="menu">ファイルフィルター (File filter)</span> を使って、さらに検索を特定の名前のファイルに制限できます。"<tt>*</tt>" はワイルドカードとして使えます、例として "<tt>*Window.cpp</tt>" は、"Window.cpp" で終わるファイル内のみを検索し、"<tt>*.h</tt>" はヘッダーファイル内のみを検索します。
+</p>
 
 <p>見ればわかるメニューアイテムについて少し。</p>
 <table summary="menus" border="0" cellpadding="2" cellspacing="0">
@@ -86,13 +88,15 @@
 <tr><td><span class="menu">選択部を開く (Open selection)</span></td><td></td><td><span class="key">ALT</span> <span class="key">O</span></td><td></td><td>現在選択しているファイルを標準のアプリケーションで開く (ダブルクリックと同じ)。Pe などのテキストエディターが開かれた場合、検索文字列が見つかった行にジャンプする。</td></tr>
 <tr><td><span class="menu">ファイルの場所を表示 (Show files in Tracker)</span></td><td></td><td><span class="key">ALT</span> <span class="key">K</span></td><td></td><td>現在選択しているファイルの場所を Tracker で開く。</td></tr>
 <tr><td class="onelinetop"><span class="menu">テキストをクリップボードにコピー (Copy text to clipboard)</span></td><td></td><td><span class="key">ALT</span> <span class="key">B</span></td><td></td><td>選択部分をクリップボードにコピー。</td></tr>
+<tr><td colspan="5"><p>これらのアクションは、検索結果や結果を複数選択したものを右クリックしたときのコンテキストメニューからも利用できます。</p></td></tr>
 <tr><td colspan="5"><h3>設定メニュー</h3></td></tr>
 <tr><td colspan="3" class="onelinetop"><span class="menu">ドットで始まるフォルダーを無視する (Skip folders starting with a dot)</span></td><td> </td><td>これは管理用ファイルが "<tt>.folders/</tt>" フォルダーの中に隠されている "unix 的" な環境で作業している時に便利です。このフォルダーは SVN や CVS などのソースバージョン管理システムに使用されていて、Haiku でも広く使われています。</td></tr>
 <tr><td colspan="3"><span class="menu">正規表現 (Regular expression)</span></td><td> </td><td>テキスト検索は、コマンドラインツール <span class="cli">grep</span> を使用します。そのため、<tt>'"*\\$?!</tt> およびスペースなどの特別な文字は <tt>\</tt> でエスケープする必要があります。この設定を有効にすると、自分でそれを行わなければいけませんが、引き換えに<a href="http://ja.wikipedia.org/wiki/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE" class="external free" title="Wikipedia: Regular expressions" rel="nofollow">正規表現</a>のパワーを手に入れられます。</td></tr>
 <tr><td colspan="3"><span class="menu">テキストファイルのみ (Text files only)</span></td><td> </td><td>テキスト検索はいまのところテキストファイル中の文字列検索だけに有効です。この設定を無効にするとすべてのファイルの内容をチェックします。</td></tr>
 <tr><td colspan="3"><span class="menu">コードエディターでファイルを開く (Open files in code editor)</span></td><td> </td><td>ファイルを推奨のコードエディター (text/x-source-codeを扱えるもの) で強制的に開きます。言い方を変えれば、ファイルはファイルタイプにどんなアプリが設定されていてもエディターで開けます。たとえば、通常ブラウザーで開く HTML ファイルを編集するときに便利です。</td></tr>
 <tr><td colspan="5"><h3>検索履歴 (History) メニュー</h3></td></tr>
-<tr><td colspan="4"></td><td>最近検索した文字列が含まれています。</td></tr>
+<tr><td colspan="4"></td><td>最近検索した文字列が含まれています。<span class="menu">履歴を消去 (Clean history)</span> は、以前の検索文字列のリストを消去します。
+<div class="box-info">カーソルがテキストフィールド内にあるときに <span class="key">↑</span> および <span class="key">↓</span> を押すことで、検索履歴をすばやく行ったり来たりできます。</div></td></tr>
 <tr><td colspan="5"><h3>文字コード (Encoding) メニュー</h3></td></tr>
 <tr><td colspan="4"></td><td>必要なら、別の文字コードを選択できます。</td></tr>
 </table>
